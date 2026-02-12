@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Unlock Tracker | Anchor & Pre-IPO Lock-ins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="icon">🔓</span>
+                <h1>IPO Unlock Tracker</h1>
+            </div>
+            <div class="header-actions">
+                <button id="refreshBtn" class="refresh-btn">
+                    <span class="icon">↻</span> Refresh Data
+                </button>
+                <div class="last-updated">
+                    Updated: <span id="lastUpdated">--</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats-grid">
+            <div class="stat-card highlight">
+                <h3>Unlocks This Week</h3>
+                <div class="stat-value" id="countThisWeek">0</div>
+                <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-card">
+                <h3>Upcoming (Next 30 Days)</h3>
+                <div class="stat-value" id="countUpcoming">0</div>
+                <div class="stat-label">Events</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Tracked</h3>
+                <div class="stat-value" id="countTotal">0</div>
+                <div class="stat-label">IPOs (2025-26)</div>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="controls">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="week">This Week</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="all">All History</button>
+            </div>
+
+            <div class="filter-group">
+                <button class="type-filter-btn active" data-type="all">All Types</button>
+                <button class="type-filter-btn" data-type="Mainboard">Mainboard</button>
+                <button class="type-filter-btn" data-type="SME">SME</button>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search company...">
+            </div>
+
+            <div class="toggle-group">
+                <label class="toggle">
+                    <input type="checkbox" id="showAnchor" checked>
+                    <span class="toggle-label">Anchor</span>
+                </label>
+                <label class="toggle">
+                    <input type="checkbox" id="showPreIPO" checked>
+                    <span class="toggle-label">Pre-IPO</span>
+                </label>
+            </div>
+
+        </section>
+
+        <!-- Main Data Table -->
+        <div class="table-container">
+            <table id="unlockTable">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Company</th>
+                        <th style="width: 15%">Listing Date</th>
+                        <th style="width: 15%">30-Day Unlock</th>
+                        <th style="width: 15%">90-Day Unlock</th>
+                        <th style="width: 25%">Pre-IPO Lock-in</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Fetching Unlock Data...</p>
+            </div>
+            <div id="noData" class="no-data hidden">
+                <p>No unlock events found matching your criteria.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/cdn.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
