@@ -105,6 +105,50 @@
         </div>
     </div>
 
+    <!-- Pre-IPO Details Modal -->
+    <div id="preIPOModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2 id="modalCompanyName"></h2>
+                <div id="modalBadge" class="modal-badge"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info-grid">
+                    <div class="modal-info-item">
+                        <span class="modal-label">Lock-in Type</span>
+                        <span class="modal-value" id="modalLockType"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-label">Listing Date</span>
+                        <span class="modal-value" id="modalListingDate"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-label">Lock-in Expiry</span>
+                        <span class="modal-value" id="modalExpiryDate"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-label">Status</span>
+                        <span class="modal-value" id="modalStatus"></span>
+                    </div>
+                </div>
+                <div class="modal-divider"></div>
+                <p class="modal-hint">Find full shareholder lock-in details (Annexure-I) on:</p>
+                <div class="modal-actions">
+                    <a id="bseLink" href="#" target="_blank" class="modal-btn modal-btn-bse">
+                        <span class="btn-icon">🏛️</span> BSE Notices
+                    </a>
+                    <a id="nseLink" href="#" target="_blank" class="modal-btn modal-btn-nse">
+                        <span class="btn-icon">📊</span> NSE Circulars
+                    </a>
+                </div>
+                <button id="copyNameBtn" class="modal-copy-btn">
+                    📋 Copy Company Name
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/cdn.min.js"></script>
     <script src="app.js"></script>

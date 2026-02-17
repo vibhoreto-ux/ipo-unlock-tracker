@@ -308,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const col30 = createDateCell(company.anchor30);
             const col90 = createDateCell(company.anchor90);
             const colPre = createDateCell(company.preIPO);
+            const companyIdx = allCompanies.indexOf(company);
 
             row.innerHTML = `
                 <td>
@@ -319,10 +320,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td><span class="date-text text-muted">${listingDateDisplay}</span></td>
                 <td class="col-anchor">${col30}</td>
                 <td class="col-anchor">${col90}</td>
-                <td class="col-preipo">${colPre}</td>
+                <td class="col-preipo">${company.preIPO ? `<div class="preipo-clickable" data-company-idx="${companyIdx}">${colPre}</div>` : colPre}</td>
             `;
 
             tableBody.appendChild(row);
+        });
+
+        // Attach click handlers to preipo-clickable cells
+        document.querySelectorAll('.preipo-clickable').forEach(el => {
+            el.addEventListener('click', () => {
+                const idx = parseInt(el.getAttribute('data-company-idx'));
+                if (!isNaN(idx) && allCompanies[idx]) {
+                    openPreIPOModal(allCompanies[idx]);
+                }
+            });
         });
 
         // Re-apply visibility to new rows
@@ -427,4 +438,110 @@ document.addEventListener('DOMContentLoaded', () => {
             day: '2-digit', month: 'short', year: 'numeric'
         });
     }
+
+    // ===== Pre-IPO Details Modal =====
+    const modal = document.getElementById('preIPOModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalCompanyName = document.getElementById('modalCompanyName');
+    const modalBadge = document.getElementById('modalBadge');
+    const modalLockType = document.getElementById('modalLockType');
+    const modalListingDate = document.getElementById('modalListingDate');
+    const modalExpiryDate = document.getElementById('modalExpiryDate');
+    const modalStatus = document.getElementById('modalStatus');
+    const bseLink = document.getElementById('bseLink');
+    const nseLink = document.getElementById('nseLink');
+    const copyNameBtn = document.getElementById('copyNameBtn');
+
+    function openPreIPOModal(company) {
+        if (!company || !modal) return;
+
+        // Company name & badge
+        modalCompanyName.textContent = company.companyName;
+        const isSME = company.issueType && company.issueType.toLowerCase().includes('sme');
+        modalBadge.innerHTML = isSME
+            ? '<span class="badge badge-sme">SME</span>'
+            : '<span class="badge badge-main">Mainboard</span>';
+
+        // Lock-in type
+        modalLockType.textContent = company.preIPO ? company.preIPO.type : '--';
+
+        // Listing date
+        if (company.allotmentDate) {
+            const dateStr = company.allotmentDate.adjusted || company.allotmentDate.original;
+            modalListingDate.textContent = formatDateSimple(dateStr);
+        } else {
+            modalListingDate.textContent = '--';
+        }
+
+        // Expiry date
+        if (company.preIPO) {
+            const expiryStr = company.preIPO.expiryDate || company.preIPO.originalDate;
+            modalExpiryDate.textContent = formatDateSimple(expiryStr);
+
+            // Status (days remaining or passed)
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const expiry = new Date(expiryStr);
+            expiry.setHours(0, 0, 0, 0);
+            const diffDays = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 0) {
+                modalStatus.innerHTML = '<span style="color:#94a3b8">Unlocked (' + Math.abs(diffDays) + 'd ago)</span>';
+            } else if (diffDays === 0) {
+                modalStatus.innerHTML = '<span style="color:#ef4444;font-weight:700">\u26a0\ufe0f Unlocking Today!</span>';
+            } else if (diffDays <= 7) {
+                modalStatus.innerHTML = '<span style="color:#c2410c;font-weight:600">in ' + diffDays + ' day' + (diffDays > 1 ? 's' : '') + '</span>';
+            } else {
+                modalStatus.innerHTML = '<span style="color:#64748b">in ' + diffDays + ' days</span>';
+            }
+        } else {
+            modalExpiryDate.textContent = '--';
+            modalStatus.textContent = '--';
+        }
+
+        // BSE link — use segment based on type
+        const bseSegment = isSME ? 'SME' : 'Equity';
+        bseLink.href = 'https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx?id=0&txtscripcd=&pagecont=&subject=';
+        bseLink.title = 'Search BSE with Segment: ' + bseSegment + ', Dept: Listing Operations';
+
+        // NSE link
+        nseLink.href = 'https://www.nseindia.com/resources/exchange-communication-circulars#';
+        nseLink.title = 'Filter by: Listing, then search company name';
+
+        // Copy button reset
+        copyNameBtn.textContent = '\ud83d\udccb Copy Company Name';
+        copyNameBtn.classList.remove('copied');
+        copyNameBtn.onclick = () => {
+            navigator.clipboard.writeText(company.companyName).then(() => {
+                copyNameBtn.textContent = '\u2705 Copied!';
+                copyNameBtn.classList.add('copied');
+                setTimeout(() => {
+                    copyNameBtn.textContent = '\ud83d\udccb Copy Company Name';
+                    copyNameBtn.classList.remove('copied');
+                }, 2000);
+            });
+        };
+
+        // Show modal
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    // Close handlers
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
 });
