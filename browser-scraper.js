@@ -59,6 +59,7 @@ async function fetchIPOList(year) {
             if (!companyName || seen.has(companyName)) continue;
             seen.add(companyName);
 
+
             const exchange = rec['Listing at'] || '';
             const issueType = exchange.includes('SME') ? 'SME' : 'Mainboard';
 
@@ -189,7 +190,7 @@ function mergeData(ipoList, anchorData, year) {
 
         if (anchor) {
             matchCount++;
-            if (anchor.allotmentDate) {
+            if (anchor.allotmentDate && !ipo.allotmentDate) {
                 ipo.allotmentDate = anchor.allotmentDate;
             }
         }

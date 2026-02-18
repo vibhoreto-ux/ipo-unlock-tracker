@@ -1,0 +1,880 @@
+[
+  {
+    "companyName": "PNGS Reva Diamond Jewellery Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-03-04T00:00:00.000Z",
+      "adjusted": "2026-03-04T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2026-09-04T00:00:00.000Z",
+      "originalDate": "2026-09-04T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Accord Transformer & Switchgear Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-03-02T00:00:00.000Z",
+      "adjusted": "2026-03-02T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-03-02T00:00:00.000Z",
+      "originalDate": "2027-03-02T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Mobilise App Lab Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-03-02T00:00:00.000Z",
+      "adjusted": "2026-03-02T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-03-02T00:00:00.000Z",
+      "originalDate": "2027-03-02T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Clean Max Enviro Energy Solutions Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-03-02T00:00:00.000Z",
+      "adjusted": "2026-03-02T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2026-09-02T00:00:00.000Z",
+      "originalDate": "2026-09-02T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Shree Ram Twistex Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-03-02T00:00:00.000Z",
+      "adjusted": "2026-03-02T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2026-09-02T00:00:00.000Z",
+      "originalDate": "2026-09-02T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Kiaasa Retail Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-03-02T00:00:00.000Z",
+      "adjusted": "2026-03-02T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-03-02T00:00:00.000Z",
+      "originalDate": "2027-03-02T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Gaudium IVF & Women Health Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-02-27T00:00:00.000Z",
+      "adjusted": "2026-02-27T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2026-08-27T00:00:00.000Z",
+      "originalDate": "2026-08-27T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Manilam Industries India Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-02-27T00:00:00.000Z",
+      "adjusted": "2026-02-27T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-03-01T00:00:00.000Z",
+      "originalDate": "2027-02-27T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Yashhtej Industries (India) Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-25T00:00:00.000Z",
+      "adjusted": "2026-02-25T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-02-25T00:00:00.000Z",
+      "originalDate": "2027-02-25T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Fractal Industries Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-23T00:00:00.000Z",
+      "adjusted": "2026-02-23T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-21T00:00:00.000Z",
+      "adjusted": "2026-03-23T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-05-20T00:00:00.000Z",
+      "adjusted": "2026-05-20T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-23T00:00:00.000Z",
+      "originalDate": "2027-02-23T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Marushika Technology Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-02-19T00:00:00.000Z",
+      "adjusted": "2026-02-19T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-19T00:00:00.000Z",
+      "adjusted": "2026-03-19T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-18T00:00:00.000Z",
+      "adjusted": "2026-05-18T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-19T00:00:00.000Z",
+      "originalDate": "2027-02-19T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Aye Finance Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-02-16T00:00:00.000Z",
+      "adjusted": "2026-02-17T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor30": {
+      "original": "2026-03-13T00:00:00.000Z",
+      "adjusted": "2026-03-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-12T00:00:00.000Z",
+      "adjusted": "2026-05-12T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2026-08-17T00:00:00.000Z",
+      "originalDate": "2026-08-17T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Fractal Analytics Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-02-16T00:00:00.000Z",
+      "adjusted": "2026-02-17T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor30": {
+      "original": "2026-03-13T00:00:00.000Z",
+      "adjusted": "2026-03-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-12T00:00:00.000Z",
+      "adjusted": "2026-05-12T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2026-08-17T00:00:00.000Z",
+      "originalDate": "2026-08-17T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Biopol Chemicals Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-02-13T00:00:00.000Z",
+      "adjusted": "2026-02-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-02-15T00:00:00.000Z",
+      "originalDate": "2027-02-13T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "PAN HR Solutions Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-13T00:00:00.000Z",
+      "adjusted": "2026-02-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-14T00:00:00.000Z",
+      "adjusted": "2026-03-16T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-05-14T00:00:00.000Z",
+      "adjusted": "2026-05-14T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-15T00:00:00.000Z",
+      "originalDate": "2027-02-13T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Grover Jewells Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-02-11T00:00:00.000Z",
+      "adjusted": "2026-02-11T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-13T00:00:00.000Z",
+      "adjusted": "2026-03-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-12T00:00:00.000Z",
+      "adjusted": "2026-05-12T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-11T00:00:00.000Z",
+      "originalDate": "2027-02-11T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Brandman Retail Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-02-11T00:00:00.000Z",
+      "adjusted": "2026-02-11T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-10T00:00:00.000Z",
+      "adjusted": "2026-03-10T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-09T00:00:00.000Z",
+      "adjusted": "2026-05-11T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-11T00:00:00.000Z",
+      "originalDate": "2027-02-11T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "CKK Retail Mart Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-02-06T00:00:00.000Z",
+      "adjusted": "2026-02-06T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-05T00:00:00.000Z",
+      "adjusted": "2026-03-05T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-04T00:00:00.000Z",
+      "adjusted": "2026-05-04T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-08T00:00:00.000Z",
+      "originalDate": "2027-02-06T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Accretion Nutraveda Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-04T00:00:00.000Z",
+      "adjusted": "2026-02-04T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-03T00:00:00.000Z",
+      "adjusted": "2026-03-04T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-05-02T00:00:00.000Z",
+      "adjusted": "2026-05-04T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-04T00:00:00.000Z",
+      "originalDate": "2027-02-04T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Kanishk Aluminium India Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-04T00:00:00.000Z",
+      "adjusted": "2026-02-04T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-02-04T00:00:00.000Z",
+      "originalDate": "2027-02-04T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Msafe Equipments Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-04T00:00:00.000Z",
+      "adjusted": "2026-02-04T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-03-06T00:00:00.000Z",
+      "adjusted": "2026-03-06T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-05-05T00:00:00.000Z",
+      "adjusted": "2026-05-05T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-04T00:00:00.000Z",
+      "originalDate": "2027-02-04T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Kasturi Metal Composite Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-03T00:00:00.000Z",
+      "adjusted": "2026-02-03T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-28T00:00:00.000Z",
+      "adjusted": "2026-03-02T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-29T00:00:00.000Z",
+      "adjusted": "2026-04-29T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-03T00:00:00.000Z",
+      "originalDate": "2027-02-03T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Hannah Joseph Hospital Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-02-01T00:00:00.000Z",
+      "adjusted": "2026-02-02T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor30": {
+      "original": "2026-02-27T00:00:00.000Z",
+      "adjusted": "2026-02-27T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-04-28T00:00:00.000Z",
+      "adjusted": "2026-04-28T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-02-02T00:00:00.000Z",
+      "originalDate": "2027-02-02T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Shayona Engineering Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-30T00:00:00.000Z",
+      "adjusted": "2026-01-30T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-02-01T00:00:00.000Z",
+      "originalDate": "2027-01-30T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "KRM Ayurveda Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-01-29T00:00:00.000Z",
+      "adjusted": "2026-01-29T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-21T00:00:00.000Z",
+      "adjusted": "2026-02-23T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-22T00:00:00.000Z",
+      "adjusted": "2026-04-22T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-29T00:00:00.000Z",
+      "originalDate": "2027-01-29T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Digilogic Systems Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-28T00:00:00.000Z",
+      "adjusted": "2026-01-28T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-21T00:00:00.000Z",
+      "adjusted": "2026-02-23T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-22T00:00:00.000Z",
+      "adjusted": "2026-04-22T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-28T00:00:00.000Z",
+      "originalDate": "2027-01-28T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Shadowfax Technologies Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-01-28T00:00:00.000Z",
+      "adjusted": "2026-01-28T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-21T00:00:00.000Z",
+      "adjusted": "2026-02-23T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-22T00:00:00.000Z",
+      "adjusted": "2026-04-22T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2026-07-28T00:00:00.000Z",
+      "originalDate": "2026-07-28T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Aritas Vinyl Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-23T00:00:00.000Z",
+      "adjusted": "2026-01-23T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-01-25T00:00:00.000Z",
+      "originalDate": "2027-01-23T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Armour Security India Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-01-22T00:00:00.000Z",
+      "adjusted": "2026-01-22T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-01-22T00:00:00.000Z",
+      "originalDate": "2027-01-22T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Amagi Media Labs Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-01-21T00:00:00.000Z",
+      "adjusted": "2026-01-21T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-17T00:00:00.000Z",
+      "adjusted": "2026-02-17T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-04-18T00:00:00.000Z",
+      "adjusted": "2026-04-20T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "preIPO": {
+      "expiryDate": "2026-07-21T00:00:00.000Z",
+      "originalDate": "2026-07-21T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "INDO SMC Ltd",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-21T00:00:00.000Z",
+      "adjusted": "2026-01-21T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-15T00:00:00.000Z",
+      "adjusted": "2026-02-17T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-16T00:00:00.000Z",
+      "adjusted": "2026-04-16T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-21T00:00:00.000Z",
+      "originalDate": "2027-01-21T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "GRE Renew Enertech Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-21T00:00:00.000Z",
+      "adjusted": "2026-01-21T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-18T00:00:00.000Z",
+      "adjusted": "2026-02-18T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-04-19T00:00:00.000Z",
+      "adjusted": "2026-04-20T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-21T00:00:00.000Z",
+      "originalDate": "2027-01-21T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Narmadesh Brass Industries Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-21T00:00:00.000Z",
+      "adjusted": "2026-01-21T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-01-21T00:00:00.000Z",
+      "originalDate": "2027-01-21T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Avana Electrosystems Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-01-20T00:00:00.000Z",
+      "adjusted": "2026-01-20T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-14T00:00:00.000Z",
+      "adjusted": "2026-02-17T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-15T00:00:00.000Z",
+      "adjusted": "2026-04-15T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-20T00:00:00.000Z",
+      "originalDate": "2027-01-20T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Bharat Coking Coal Ltd.",
+    "issueType": "Mainboard",
+    "exchange": "BSE, NSE",
+    "allotmentDate": {
+      "original": "2026-01-19T00:00:00.000Z",
+      "adjusted": "2026-01-19T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-12T00:00:00.000Z",
+      "adjusted": "2026-02-12T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor90": {
+      "original": "2026-04-13T00:00:00.000Z",
+      "adjusted": "2026-04-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2026-07-20T00:00:00.000Z",
+      "originalDate": "2026-07-19T00:00:00.000Z",
+      "isAdjusted": true,
+      "type": "Mainboard Pre-IPO (6 Mo)"
+    }
+  },
+  {
+    "companyName": "Defrail Technologies Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-19T00:00:00.000Z",
+      "adjusted": "2026-01-19T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-15T00:00:00.000Z",
+      "adjusted": "2026-02-17T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-16T00:00:00.000Z",
+      "adjusted": "2026-04-16T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-19T00:00:00.000Z",
+      "originalDate": "2027-01-19T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Victory Electric Vehicles International Ltd.",
+    "issueType": "SME",
+    "exchange": "NSE SME",
+    "allotmentDate": {
+      "original": "2026-01-14T00:00:00.000Z",
+      "adjusted": "2026-01-14T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-01-14T00:00:00.000Z",
+      "originalDate": "2027-01-14T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Yajur Fibres Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-14T00:00:00.000Z",
+      "adjusted": "2026-01-14T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": null,
+    "anchor90": null,
+    "preIPO": {
+      "expiryDate": "2027-01-14T00:00:00.000Z",
+      "originalDate": "2027-01-14T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  },
+  {
+    "companyName": "Gabion Technologies India Ltd.",
+    "issueType": "SME",
+    "exchange": "BSE SME",
+    "allotmentDate": {
+      "original": "2026-01-13T00:00:00.000Z",
+      "adjusted": "2026-01-13T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "anchor30": {
+      "original": "2026-02-07T00:00:00.000Z",
+      "adjusted": "2026-02-09T00:00:00.000Z",
+      "isAdjusted": true
+    },
+    "anchor90": {
+      "original": "2026-04-08T00:00:00.000Z",
+      "adjusted": "2026-04-08T00:00:00.000Z",
+      "isAdjusted": false
+    },
+    "preIPO": {
+      "expiryDate": "2027-01-13T00:00:00.000Z",
+      "originalDate": "2027-01-13T00:00:00.000Z",
+      "isAdjusted": false,
+      "type": "SME Pre-IPO (1 Yr)"
+    }
+  }
+]

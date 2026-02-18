@@ -131,9 +131,14 @@ async function scrapeIPOList(year) {
             const listingAt = $(tds[6]).text().trim();
             const issueType = (listingAt.includes('SME')) ? 'SME' : 'Mainboard';
 
-            // Col 1: Close Date (proxy for allotment)
-            const dateStr = $(tds[1]).text().trim();
-            const date = parseDate(dateStr);
+            // Col 1: Close Date (fallback)
+            const closeDateStr = $(tds[1]).text().trim();
+            const closeDate = parseDate(closeDateStr);
+            const listingDate = parseDate(listingDateStr); // defined above
+
+            // Prefer Listing Date, else Close Date
+            const date = listingDate || closeDate;
+
             let finalDateObj = null;
 
             if (date) {
