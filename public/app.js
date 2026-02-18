@@ -125,7 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 refreshBtn.innerHTML = '<span class="icon spinner-icon">↻</span> Refreshing...';
             }
 
-            const url = forceRefresh ? '/api/unlock-data?refresh=true' : '/api/unlock-data';
+            const url = forceRefresh
+                ? `/api/unlock-data?refresh=true&t=${Date.now()}`
+                : `/api/unlock-data?t=${Date.now()}`;
             const response = await fetch(url);
             const result = await response.json();
 
