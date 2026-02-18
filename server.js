@@ -331,7 +331,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         // Check cache first
         if (circularCache.has(companyName)) {
             const cached = circularCache.get(companyName);
-            return res.json({ ...cached, source: 'cache' });
+            return res.json({ ...cached, fromCache: true });
         }
 
         // Find the company in DB to get exchange and listing date
@@ -349,15 +349,15 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             return res.status(400).json({ error: 'No listing date available for this company' });
         }
 
-        console.log(`\n📄 Fetching BSE circular for: ${companyName} (${exchange}, listed: ${listingDate.substring(0, 10)})`);
+        console.log(`\n📄 Fetching circular for: ${companyName} (${exchange}, listed: ${listingDate.substring(0, 10)})`);
 
-        // Fetch from BSE
+        // Fetch from NSE first, then BSE fallback
         const result = await getUnlockPercentages(companyName, exchange, listingDate);
 
         if (!result) {
             // Cache the "not found" result too (to avoid re-scanning)
             circularCache.set(companyName, { found: false });
-            return res.json({ found: false, message: 'No BSE circular data found for this company' });
+            return res.json({ found: false, message: 'No circular data found for this company' });
         }
 
         // Cache the result

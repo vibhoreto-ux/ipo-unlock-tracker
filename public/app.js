@@ -447,8 +447,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCompanyName = document.getElementById('modalCompanyName');
     const modalBadge = document.getElementById('modalBadge');
     const modalExchangeBadge = document.getElementById('modalExchangeBadge');
-    const bseLink = document.getElementById('bseLink');
-    const nseLink = document.getElementById('nseLink');
     const copyNameBtn = document.getElementById('copyNameBtn');
 
     function getDateStatus(dateStr) {
@@ -531,10 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timelineEl.className = 'timeline-item ' + status.class;
         });
 
-        // BSE link
-        bseLink.href = 'https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx?id=0&txtscripcd=&pagecont=&subject=';
-        // NSE link
-        nseLink.href = 'https://www.nseindia.com/resources/exchange-communication-circulars#';
+
 
         // Copy button
         copyNameBtn.textContent = '📋 Copy Company Name';
@@ -586,9 +581,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Show the details section
+            // Show the details section with correct source label
             if (detailsSection) detailsSection.style.display = '';
-            if (detailsNotice) detailsNotice.textContent = `Notice: ${data.noticeId || '—'}`;
+            const detailsTitle = document.getElementById('unlockDetailsTitle');
+            const isNSE = data.source === 'NSE';
+            if (detailsTitle) {
+                detailsTitle.textContent = isNSE
+                    ? '📊 NSE Circular Details'
+                    : '📊 BSE Annexure-I Details';
+            }
+            if (detailsNotice) {
+                const sourceLabel = isNSE ? 'NSE' : 'BSE';
+                detailsNotice.textContent = `${sourceLabel}: ${data.noticeId || data.circNumber || '—'}`;
+            }
 
             // Build bar chart HTML
             let html = '';

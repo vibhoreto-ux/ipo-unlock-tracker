@@ -8,15 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
     <div class="app-container">
-        <!-- ... -->
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/cdn.min.js"></script>
-        <script src="app.js?v=2"></script>
         <!-- Header -->
         <header>
             <div class="logo">
@@ -160,27 +156,17 @@
                         </div>
                     </div>
                 </div>
-                <!-- Unlock Details from BSE Annexure-I -->
+                <!-- Unlock Details from Annexure-I -->
                 <div id="unlockDetailsSection" class="unlock-details" style="display:none;">
                     <div class="unlock-details-header">
-                        <span class="unlock-details-title">📊 BSE Annexure-I Details</span>
+                        <span id="unlockDetailsTitle" class="unlock-details-title">📊 Lock-in Details</span>
                         <span id="unlockDetailsNotice" class="unlock-notice-id"></span>
                     </div>
                     <div id="unlockDetailsContent"></div>
                 </div>
                 <div id="unlockDetailsLoading" class="unlock-loading" style="display:none;">
                     <div class="loader-spinner"></div>
-                    <span>Fetching BSE circular data...</span>
-                </div>
-                <div class="modal-divider"></div>
-                <p class="modal-hint">Find full shareholder lock-in details (Annexure-I) on:</p>
-                <div class="modal-actions">
-                    <a id="bseLink" href="#" target="_blank" class="modal-btn modal-btn-bse">
-                        <span class="btn-icon">🏛️</span> BSE Notices
-                    </a>
-                    <a id="nseLink" href="#" target="_blank" class="modal-btn modal-btn-nse">
-                        <span class="btn-icon">📊</span> NSE Circulars
-                    </a>
+                    <span>Fetching lock-in data...</span>
                 </div>
                 <button id="copyNameBtn" class="modal-copy-btn">
                     📋 Copy Company Name
@@ -191,7 +177,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/cdn.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=3"></script>
 </body>
 
 </html>
