@@ -478,10 +478,11 @@ function parseBSEFormat(norm) {
         const beforeText = norm.substring(prevPos, pos);
         const afterText = norm.substring(pos, nextPos);
 
-        const isNotLocked = /Not Under Lock-in|Lock-in Not A/i.test(afterText);
-        const isLocked = /Under Lock-in/i.test(afterText) && !isNotLocked;
+        const isNotLocked = /Not Under Lock|Lock-in Not A|Not.?Locked|Lock.?in.?Not/i.test(afterText);
+        const isLocked = /Under Lock|Locked.?in|Lock.?in.?Period|Lock.?in.?Appli/i.test(afterText) && !isNotLocked;
 
-        if (!isLocked && !isNotLocked) continue;
+        // If neither pattern found, treat as not-locked (many SME PDFs omit explicit status)
+        const effectiveNotLocked = !isLocked;
 
         let cleanBefore = beforeText.replace(/\d{1,2}-\w{3,}-\d{4}/g, '');
         cleanBefore = cleanBefore.replace(/(?<![,\d])\b\d{1,2}\b(?![,\d])/g, '');
@@ -503,7 +504,7 @@ function parseBSEFormat(norm) {
         if (shares <= 0) continue;
         totalSharesParsed += shares;
 
-        if (isNotLocked) {
+        if (effectiveNotLocked) {
             lockInEntries.push({ shares, isLocked: false, unlockDate: null });
             continue;
         }

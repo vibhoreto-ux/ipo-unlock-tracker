@@ -355,8 +355,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         const result = await getUnlockPercentages(companyName, exchange, listingDate);
 
         if (!result) {
-            // Cache the "not found" result too (to avoid re-scanning)
-            circularCache.set(companyName, { found: false });
+            // Don't cache "not found" — allow retry on next click
             return res.json({ found: false, message: 'No circular data found for this company' });
         }
 
