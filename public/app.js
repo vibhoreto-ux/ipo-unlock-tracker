@@ -168,7 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateStats() {
         if (!countTotal) return;
 
-        countTotal.textContent = allCompanies.length;
+        // Only count companies with 2025+ listing dates
+        const cutoff = new Date('2025-01-01').getTime();
+        const relevantCompanies = allCompanies.filter(c => {
+            const d = c.allotmentDate?.adjusted || c.allotmentDate?.original;
+            return d && new Date(d).getTime() >= cutoff;
+        });
+        countTotal.textContent = relevantCompanies.length;
 
         let thisWeekCount = 0;
         let upcomingCount = 0;
@@ -447,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCompanyName = document.getElementById('modalCompanyName');
     const modalBadge = document.getElementById('modalBadge');
     const modalExchangeBadge = document.getElementById('modalExchangeBadge');
-    const copyNameBtn = document.getElementById('copyNameBtn');
+
 
     function getDateStatus(dateStr) {
         if (!dateStr) return { class: 'tl-na', badge: '<span class="tl-badge tl-badge-na">N/A</span>' };
@@ -531,19 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-        // Copy button
-        copyNameBtn.textContent = '📋 Copy Company Name';
-        copyNameBtn.classList.remove('copied');
-        copyNameBtn.onclick = () => {
-            navigator.clipboard.writeText(company.companyName).then(() => {
-                copyNameBtn.textContent = '✅ Copied!';
-                copyNameBtn.classList.add('copied');
-                setTimeout(() => {
-                    copyNameBtn.textContent = '📋 Copy Company Name';
-                    copyNameBtn.classList.remove('copied');
-                }, 2000);
-            });
-        };
+
 
         // Reset unlock details
         const detailsSection = document.getElementById('unlockDetailsSection');
