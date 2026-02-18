@@ -393,15 +393,15 @@ tr:hover {
     }
 }
 
-/* Clickable Pre-IPO cells */
-.preipo-clickable {
+/* Clickable date cells */
+.date-clickable {
     cursor: pointer;
     border-radius: 8px;
     padding: 0.4rem 0.6rem;
     transition: background 0.2s, box-shadow 0.2s;
 }
 
-.preipo-clickable:hover {
+.date-clickable:hover {
     background: var(--accent-light);
     box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
 }
@@ -492,8 +492,28 @@ tr:hover {
     line-height: 1.4;
 }
 
-.modal-badge {
+.modal-header-badges {
+    display: flex;
+    gap: 0.5rem;
     margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.modal-badge {
+    display: inline-block;
+}
+
+.modal-exchange-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: #e0e7ff;
+    color: #3730a3;
 }
 
 /* Modal Body */
@@ -501,30 +521,131 @@ tr:hover {
     padding: 1.25rem 1.5rem 1.5rem;
 }
 
-.modal-info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+/* Timeline */
+.unlock-timeline {
+    position: relative;
+    padding-left: 1.5rem;
 }
 
-.modal-info-item {
+.unlock-timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+    top: 1rem;
+    bottom: 1rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+    border-radius: 2px;
+}
+
+.timeline-item {
     display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    position: relative;
 }
 
-.modal-label {
-    font-size: 0.7rem;
+.timeline-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.timeline-item.tl-completed .timeline-icon {
+    border-color: var(--success-text);
+    background: var(--success-bg);
+}
+
+.timeline-item.tl-today .timeline-icon {
+    border-color: #d97706;
+    background: #fffbeb;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(217, 119, 6, 0);
+    }
+}
+
+.timeline-item.tl-upcoming .timeline-icon {
+    border-color: var(--accent);
+    background: var(--accent-light);
+}
+
+.timeline-item.tl-na .timeline-icon {
+    border-color: var(--border);
+    background: #f8fafc;
+    opacity: 0.6;
+}
+
+.timeline-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline-label {
+    font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-secondary);
 }
 
-.modal-value {
+.timeline-date {
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
+    margin-top: 0.1rem;
+}
+
+.timeline-status {
+    margin-top: 0.2rem;
+}
+
+.timeline-status .tl-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.tl-badge-unlocked {
+    background: var(--success-bg);
+    color: var(--success-text);
+}
+
+.tl-badge-today {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.tl-badge-upcoming {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+.tl-badge-na {
+    background: #f1f5f9;
+    color: var(--text-secondary);
 }
 
 .modal-divider {
@@ -611,4 +732,128 @@ tr:hover {
     background: var(--success-bg);
     color: var(--success-text);
     border-color: rgba(22, 101, 52, 0.3);
+}
+
+/* Timeline Sub Labels (unlock %) */
+.timeline-sub {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.timeline-sub:empty {
+    display: none;
+}
+
+/* Unlock Details Section */
+.unlock-details {
+    background: #f0f4ff;
+    border: 1px solid rgba(79, 70, 229, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.unlock-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.unlock-details-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.unlock-notice-id {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+}
+
+.unlock-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.unlock-bar-label {
+    min-width: 90px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.unlock-bar-container {
+    flex: 1;
+    height: 18px;
+    background: #e2e8f0;
+    border-radius: 9px;
+    overflow: hidden;
+    position: relative;
+}
+
+.unlock-bar-fill {
+    height: 100%;
+    border-radius: 9px;
+    transition: width 0.6s ease;
+    min-width: 2px;
+}
+
+.unlock-bar-fill.fill-unlocked {
+    background: linear-gradient(90deg, #34d399, #059669);
+}
+
+.unlock-bar-fill.fill-locked {
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.unlock-bar-fill.fill-free {
+    background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.unlock-bar-pct {
+    min-width: 40px;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+}
+
+.unlock-bar-shares {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Loading spinner */
+.unlock-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.loader-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e2e8f0;
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

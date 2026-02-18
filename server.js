@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { scrapeUnlockData } = require('./scraper');
+const { scrapeWithBrowser } = require('./browser-scraper');
 const { readDB, writeDB, mergeCompanies } = require('./db');
 
 const app = express();
@@ -197,12 +198,23 @@ app.get('/api/unlock-data', async (req, res) => {
         }
 
         // Refresh: scrape and merge
-        console.log('Fetching fresh unlock data...');
+        console.log('Fetching fresh unlock data via browser scraper...');
 
-        const [data2025, data2026] = await Promise.all([
-            scrapeUnlockData(2025),
-            scrapeUnlockData(2026)
-        ]);
+        let data2025, data2026;
+        try {
+            // Try browser scraper first (Puppeteer)
+            [data2025, data2026] = await Promise.all([
+                scrapeWithBrowser(2025),
+                scrapeWithBrowser(2026)
+            ]);
+            console.log('Browser scraper succeeded');
+        } catch (browserErr) {
+            console.log('Browser scraper failed, falling back to HTTP scraper:', browserErr.message);
+            [data2025, data2026] = await Promise.all([
+                scrapeUnlockData(2025),
+                scrapeUnlockData(2026)
+            ]);
+        }
 
         // Combine scraped data
         let newData = [...data2025, ...data2026];
@@ -300,3 +312,63 @@ app.listen(PORT, () => {
         console.log('📭 No data yet — click "Refresh Data" to fetch');
     }
 });
+
+// ----- BSE Circular / Unlock Details -----
+const { getUnlockPercentages } = require('./circular-scraper');
+
+// In-memory cache for circular data (persists across requests until server restart)
+const circularCache = new Map();
+
+/**
+ * GET /api/unlock-details/:companyName
+ * Fetches lock-in details from BSE Annexure-I for the given company.
+ * Results are cached in memory.
+ */
+app.get('/api/unlock-details/:companyName', async (req, res) => {
+    try {
+        const companyName = decodeURIComponent(req.params.companyName);
+
+        // Check cache first
+        if (circularCache.has(companyName)) {
+            const cached = circularCache.get(companyName);
+            return res.json({ ...cached, source: 'cache' });
+        }
+
+        // Find the company in DB to get exchange and listing date
+        const db = readDB();
+        const company = db.companies.find(c => c.companyName === companyName);
+
+        if (!company) {
+            return res.status(404).json({ error: 'Company not found in database' });
+        }
+
+        const exchange = company.exchange || '';
+        const listingDate = company.allotmentDate?.adjusted || company.allotmentDate?.original;
+
+        if (!listingDate) {
+            return res.status(400).json({ error: 'No listing date available for this company' });
+        }
+
+        console.log(`\n📄 Fetching BSE circular for: ${companyName} (${exchange}, listed: ${listingDate.substring(0, 10)})`);
+
+        // Fetch from BSE
+        const result = await getUnlockPercentages(companyName, exchange, listingDate);
+
+        if (!result) {
+            // Cache the "not found" result too (to avoid re-scanning)
+            circularCache.set(companyName, { found: false });
+            return res.json({ found: false, message: 'No BSE circular data found for this company' });
+        }
+
+        // Cache the result
+        const response = { found: true, ...result };
+        circularCache.set(companyName, response);
+
+        res.json(response);
+
+    } catch (error) {
+        console.error('Unlock details error:', error.message);
+        res.status(500).json({ error: 'Failed to fetch unlock details' });
+    }
+});
+

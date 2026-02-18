@@ -105,32 +105,68 @@
         </div>
     </div>
 
-    <!-- Pre-IPO Details Modal -->
+    <!-- Unlock Timeline Modal -->
     <div id="preIPOModal" class="modal-overlay hidden">
         <div class="modal-card">
             <button class="modal-close" id="modalClose">&times;</button>
             <div class="modal-header">
                 <h2 id="modalCompanyName"></h2>
-                <div id="modalBadge" class="modal-badge"></div>
+                <div class="modal-header-badges">
+                    <div id="modalBadge" class="modal-badge"></div>
+                    <div id="modalExchangeBadge" class="modal-exchange-badge"></div>
+                </div>
             </div>
             <div class="modal-body">
-                <div class="modal-info-grid">
-                    <div class="modal-info-item">
-                        <span class="modal-label">Lock-in Type</span>
-                        <span class="modal-value" id="modalLockType"></span>
+                <!-- Timeline -->
+                <div class="unlock-timeline">
+                    <div class="timeline-item" id="timelineListing">
+                        <div class="timeline-icon">📅</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Listing Date</div>
+                            <div class="timeline-date" id="tlListingDate">—</div>
+                            <div class="timeline-sub" id="tlListingSub"></div>
+                            <div class="timeline-status" id="tlListingStatus"></div>
+                        </div>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-label">Listing Date</span>
-                        <span class="modal-value" id="modalListingDate"></span>
+                    <div class="timeline-item" id="timelineAnchor30">
+                        <div class="timeline-icon">🔓</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">1-Month Anchor Unlock</div>
+                            <div class="timeline-date" id="tlAnchor30Date">—</div>
+                            <div class="timeline-sub" id="tlAnchor30Sub"></div>
+                            <div class="timeline-status" id="tlAnchor30Status"></div>
+                        </div>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-label">Lock-in Expiry</span>
-                        <span class="modal-value" id="modalExpiryDate"></span>
+                    <div class="timeline-item" id="timelineAnchor90">
+                        <div class="timeline-icon">🔐</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">3-Month Anchor Unlock</div>
+                            <div class="timeline-date" id="tlAnchor90Date">—</div>
+                            <div class="timeline-sub" id="tlAnchor90Sub"></div>
+                            <div class="timeline-status" id="tlAnchor90Status"></div>
+                        </div>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-label">Status</span>
-                        <span class="modal-value" id="modalStatus"></span>
+                    <div class="timeline-item" id="timelinePreIPO">
+                        <div class="timeline-icon">🚀</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Pre-IPO Lock-in Expiry</div>
+                            <div class="timeline-date" id="tlPreIPODate">—</div>
+                            <div class="timeline-sub" id="tlPreIPOSub"></div>
+                            <div class="timeline-status" id="tlPreIPOStatus"></div>
+                        </div>
                     </div>
+                </div>
+                <!-- Unlock Details from BSE Annexure-I -->
+                <div id="unlockDetailsSection" class="unlock-details" style="display:none;">
+                    <div class="unlock-details-header">
+                        <span class="unlock-details-title">📊 BSE Annexure-I Details</span>
+                        <span id="unlockDetailsNotice" class="unlock-notice-id"></span>
+                    </div>
+                    <div id="unlockDetailsContent"></div>
+                </div>
+                <div id="unlockDetailsLoading" class="unlock-loading" style="display:none;">
+                    <div class="loader-spinner"></div>
+                    <span>Fetching BSE circular data...</span>
                 </div>
                 <div class="modal-divider"></div>
                 <p class="modal-hint">Find full shareholder lock-in details (Annexure-I) on:</p>

@@ -79,6 +79,7 @@ function mergeCompanies(existing, incoming) {
             if (company.preIPO) existing.preIPO = company.preIPO;
             if (company.allotmentDate) existing.allotmentDate = company.allotmentDate;
             if (company.issueType) existing.issueType = company.issueType;
+            if (company.exchange) existing.exchange = company.exchange;
             map.set(key, existing);
             updateCount++;
         } else {

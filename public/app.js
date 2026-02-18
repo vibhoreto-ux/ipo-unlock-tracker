@@ -317,21 +317,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${typeBadge}
                     </div>
                 </td>
-                <td><span class="date-text text-muted">${listingDateDisplay}</span></td>
-                <td class="col-anchor">${col30}</td>
-                <td class="col-anchor">${col90}</td>
-                <td class="col-preipo">${company.preIPO ? `<div class="preipo-clickable" data-company-idx="${companyIdx}">${colPre}</div>` : colPre}</td>
+                <td><span class="date-text text-muted date-clickable" data-company-idx="${companyIdx}">${listingDateDisplay}</span></td>
+                <td class="col-anchor"><div class="date-clickable" data-company-idx="${companyIdx}">${col30}</div></td>
+                <td class="col-anchor"><div class="date-clickable" data-company-idx="${companyIdx}">${col90}</div></td>
+                <td class="col-preipo"><div class="date-clickable" data-company-idx="${companyIdx}">${colPre}</div></td>
             `;
 
             tableBody.appendChild(row);
         });
 
-        // Attach click handlers to preipo-clickable cells
-        document.querySelectorAll('.preipo-clickable').forEach(el => {
+        // Attach click handlers to all date-clickable cells
+        document.querySelectorAll('.date-clickable').forEach(el => {
             el.addEventListener('click', () => {
                 const idx = parseInt(el.getAttribute('data-company-idx'));
                 if (!isNaN(idx) && allCompanies[idx]) {
-                    openPreIPOModal(allCompanies[idx]);
+                    openUnlockModal(allCompanies[idx]);
                 }
             });
         });
@@ -439,92 +439,237 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== Pre-IPO Details Modal =====
+    // ===== Unlock Timeline Modal =====
     const modal = document.getElementById('preIPOModal');
     const modalClose = document.getElementById('modalClose');
     const modalCompanyName = document.getElementById('modalCompanyName');
     const modalBadge = document.getElementById('modalBadge');
-    const modalLockType = document.getElementById('modalLockType');
-    const modalListingDate = document.getElementById('modalListingDate');
-    const modalExpiryDate = document.getElementById('modalExpiryDate');
-    const modalStatus = document.getElementById('modalStatus');
+    const modalExchangeBadge = document.getElementById('modalExchangeBadge');
     const bseLink = document.getElementById('bseLink');
     const nseLink = document.getElementById('nseLink');
     const copyNameBtn = document.getElementById('copyNameBtn');
 
-    function openPreIPOModal(company) {
+    function getDateStatus(dateStr) {
+        if (!dateStr) return { class: 'tl-na', badge: '<span class="tl-badge tl-badge-na">N/A</span>' };
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const date = new Date(dateStr);
+        date.setHours(0, 0, 0, 0);
+        const diffDays = Math.ceil((date - today) / (1000 * 60 * 60 * 24));
+
+        if (diffDays < 0) {
+            return { class: 'tl-completed', badge: `<span class="tl-badge tl-badge-unlocked">✅ Unlocked ${Math.abs(diffDays)}d ago</span>` };
+        } else if (diffDays === 0) {
+            return { class: 'tl-today', badge: '<span class="tl-badge tl-badge-today">⚠️ Today!</span>' };
+        } else if (diffDays <= 7) {
+            return { class: 'tl-upcoming', badge: `<span class="tl-badge tl-badge-upcoming">in ${diffDays}d</span>` };
+        } else {
+            return { class: 'tl-upcoming', badge: `<span class="tl-badge tl-badge-upcoming">in ${diffDays}d</span>` };
+        }
+    }
+
+    function openUnlockModal(company) {
         if (!company || !modal) return;
 
-        // Company name & badge
+        // Company name & badges
         modalCompanyName.textContent = company.companyName;
         const isSME = company.issueType && company.issueType.toLowerCase().includes('sme');
         modalBadge.innerHTML = isSME
             ? '<span class="badge badge-sme">SME</span>'
             : '<span class="badge badge-main">Mainboard</span>';
 
-        // Lock-in type
-        modalLockType.textContent = company.preIPO ? company.preIPO.type : '--';
-
-        // Listing date
-        if (company.allotmentDate) {
-            const dateStr = company.allotmentDate.adjusted || company.allotmentDate.original;
-            modalListingDate.textContent = formatDateSimple(dateStr);
+        // Exchange badge
+        const exchange = company.exchange || '';
+        if (exchange) {
+            modalExchangeBadge.textContent = exchange;
+            modalExchangeBadge.style.display = '';
         } else {
-            modalListingDate.textContent = '--';
+            modalExchangeBadge.style.display = 'none';
         }
 
-        // Expiry date
-        if (company.preIPO) {
-            const expiryStr = company.preIPO.expiryDate || company.preIPO.originalDate;
-            modalExpiryDate.textContent = formatDateSimple(expiryStr);
+        // Timeline items
+        const items = [
+            { id: 'Listing', dateObj: company.allotmentDate, label: 'Listing Date' },
+            { id: 'Anchor30', dateObj: company.anchor30, label: '1-Month Anchor Unlock' },
+            { id: 'Anchor90', dateObj: company.anchor90, label: '3-Month Anchor Unlock' },
+            { id: 'PreIPO', dateObj: company.preIPO, label: 'Pre-IPO Lock-in Expiry' }
+        ];
 
-            // Status (days remaining or passed)
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            const expiry = new Date(expiryStr);
-            expiry.setHours(0, 0, 0, 0);
-            const diffDays = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+        items.forEach(item => {
+            const dateEl = document.getElementById(`tl${item.id}Date`);
+            const statusEl = document.getElementById(`tl${item.id}Status`);
+            const timelineEl = document.getElementById(`timeline${item.id}`);
+            const subEl = document.getElementById(`tl${item.id}Sub`);
 
-            if (diffDays < 0) {
-                modalStatus.innerHTML = '<span style="color:#94a3b8">Unlocked (' + Math.abs(diffDays) + 'd ago)</span>';
-            } else if (diffDays === 0) {
-                modalStatus.innerHTML = '<span style="color:#ef4444;font-weight:700">\u26a0\ufe0f Unlocking Today!</span>';
-            } else if (diffDays <= 7) {
-                modalStatus.innerHTML = '<span style="color:#c2410c;font-weight:600">in ' + diffDays + ' day' + (diffDays > 1 ? 's' : '') + '</span>';
-            } else {
-                modalStatus.innerHTML = '<span style="color:#64748b">in ' + diffDays + ' days</span>';
+            let dateStr = null;
+            if (item.dateObj) {
+                if (item.id === 'PreIPO') {
+                    dateStr = item.dateObj.expiryDate || item.dateObj.originalDate;
+                } else {
+                    dateStr = item.dateObj.adjusted || item.dateObj.original;
+                }
             }
-        } else {
-            modalExpiryDate.textContent = '--';
-            modalStatus.textContent = '--';
-        }
 
-        // BSE link — use segment based on type
-        const bseSegment = isSME ? 'SME' : 'Equity';
+            if (dateStr) {
+                dateEl.textContent = formatDateSimple(dateStr);
+                if (item.dateObj && item.dateObj.isAdjusted) {
+                    dateEl.textContent += ' *';
+                }
+            } else {
+                dateEl.textContent = '—';
+            }
+
+            const status = getDateStatus(dateStr);
+            statusEl.innerHTML = status.badge;
+
+            // Clear sub-labels (will be populated from BSE data)
+            if (subEl) subEl.textContent = '';
+
+            // Set class on timeline item
+            timelineEl.className = 'timeline-item ' + status.class;
+        });
+
+        // BSE link
         bseLink.href = 'https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx?id=0&txtscripcd=&pagecont=&subject=';
-        bseLink.title = 'Search BSE with Segment: ' + bseSegment + ', Dept: Listing Operations';
-
         // NSE link
         nseLink.href = 'https://www.nseindia.com/resources/exchange-communication-circulars#';
-        nseLink.title = 'Filter by: Listing, then search company name';
 
-        // Copy button reset
-        copyNameBtn.textContent = '\ud83d\udccb Copy Company Name';
+        // Copy button
+        copyNameBtn.textContent = '📋 Copy Company Name';
         copyNameBtn.classList.remove('copied');
         copyNameBtn.onclick = () => {
             navigator.clipboard.writeText(company.companyName).then(() => {
-                copyNameBtn.textContent = '\u2705 Copied!';
+                copyNameBtn.textContent = '✅ Copied!';
                 copyNameBtn.classList.add('copied');
                 setTimeout(() => {
-                    copyNameBtn.textContent = '\ud83d\udccb Copy Company Name';
+                    copyNameBtn.textContent = '📋 Copy Company Name';
                     copyNameBtn.classList.remove('copied');
                 }, 2000);
             });
         };
 
+        // Reset unlock details
+        const detailsSection = document.getElementById('unlockDetailsSection');
+        const detailsLoading = document.getElementById('unlockDetailsLoading');
+        const detailsContent = document.getElementById('unlockDetailsContent');
+        const detailsNotice = document.getElementById('unlockDetailsNotice');
+
+        if (detailsSection) detailsSection.style.display = 'none';
+        if (detailsLoading) detailsLoading.style.display = 'flex';
+
         // Show modal
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+
+        // Fetch BSE Annexure-I unlock details (async, non-blocking)
+        fetchUnlockDetails(company.companyName, items);
+    }
+
+    // Fetch and display BSE unlock details
+    async function fetchUnlockDetails(companyName, timelineItems) {
+        const detailsSection = document.getElementById('unlockDetailsSection');
+        const detailsLoading = document.getElementById('unlockDetailsLoading');
+        const detailsContent = document.getElementById('unlockDetailsContent');
+        const detailsNotice = document.getElementById('unlockDetailsNotice');
+
+        try {
+            const resp = await fetch(`/api/unlock-details/${encodeURIComponent(companyName)}`);
+            const data = await resp.json();
+
+            if (detailsLoading) detailsLoading.style.display = 'none';
+
+            if (!data.found || !data.unlockEvents) {
+                // No data — hide section
+                if (detailsSection) detailsSection.style.display = 'none';
+                return;
+            }
+
+            // Show the details section
+            if (detailsSection) detailsSection.style.display = '';
+            if (detailsNotice) detailsNotice.textContent = `Notice: ${data.noticeId || '—'}`;
+
+            // Build bar chart HTML
+            let html = '';
+            for (const event of data.unlockEvents) {
+                if (event.percentage < 0.1) continue; // Skip negligible entries
+
+                let label = event.label || '';
+                let fillClass = 'fill-locked';
+                if (event.date === null) {
+                    label = label || 'Not locked';
+                    fillClass = 'fill-free';
+                } else {
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    const eventDate = new Date(event.date);
+                    if (eventDate <= today) {
+                        fillClass = 'fill-unlocked';
+                        label = '✅ ' + formatDateSimple(event.date + 'T00:00:00.000Z');
+                    } else {
+                        label = formatDateSimple(event.date + 'T00:00:00.000Z');
+                    }
+                }
+
+                html += `
+                    <div class="unlock-bar-row">
+                        <span class="unlock-bar-label">${label}</span>
+                        <div class="unlock-bar-container">
+                            <div class="unlock-bar-fill ${fillClass}" style="width: ${Math.max(event.percentage, 1)}%"></div>
+                        </div>
+                        <span class="unlock-bar-pct">${event.percentage}%</span>
+                        <span class="unlock-bar-shares">${event.shares.toLocaleString()}</span>
+                    </div>
+                `;
+            }
+
+            if (detailsContent) detailsContent.innerHTML = html;
+
+            // Match unlock events to timeline items and show % as sub-labels
+            matchUnlockToTimeline(data.unlockEvents, timelineItems);
+
+        } catch (err) {
+            console.error('Failed to fetch unlock details:', err);
+            if (detailsLoading) detailsLoading.style.display = 'none';
+        }
+    }
+
+    // Match BSE unlock events to timeline items based on date proximity
+    function matchUnlockToTimeline(unlockEvents, timelineItems) {
+        const datedEvents = unlockEvents.filter(e => e.date && e.percentage >= 0.5);
+
+        for (const tlItem of timelineItems) {
+            if (tlItem.id === 'Listing') continue; // Listing date doesn't have unlock %
+
+            let dateStr = null;
+            if (tlItem.dateObj) {
+                if (tlItem.id === 'PreIPO') {
+                    dateStr = tlItem.dateObj.expiryDate || tlItem.dateObj.originalDate;
+                } else {
+                    dateStr = tlItem.dateObj.adjusted || tlItem.dateObj.original;
+                }
+            }
+            if (!dateStr) continue;
+
+            const tlDate = new Date(dateStr);
+            tlDate.setHours(0, 0, 0, 0);
+
+            // Find closest BSE unlock event within 5 days
+            let bestMatch = null;
+            let bestDiff = Infinity;
+            for (const event of datedEvents) {
+                const eventDate = new Date(event.date);
+                const diff = Math.abs(tlDate - eventDate) / (1000 * 60 * 60 * 24);
+                if (diff < bestDiff && diff <= 5) {
+                    bestDiff = diff;
+                    bestMatch = event;
+                }
+            }
+
+            if (bestMatch) {
+                const subEl = document.getElementById(`tl${tlItem.id}Sub`);
+                if (subEl) subEl.textContent = `${bestMatch.percentage}% unlock`;
+            }
+        }
     }
 
     function closeModal() {
