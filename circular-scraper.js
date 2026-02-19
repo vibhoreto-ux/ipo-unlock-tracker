@@ -231,7 +231,7 @@ function formatDateForNotice(date) {
 
 async function scanNoticesOnDate(dateStr, normalizedSearch) {
     const BATCH_SIZE = 10;
-    const MAX_ID = 60;
+    const MAX_ID = 100; // BSE can have 80+ notices per day (e.g., notice 20241129-72)
 
     for (let start = 1; start <= MAX_ID; start += BATCH_SIZE) {
         const batch = [];
@@ -312,7 +312,7 @@ async function scanNoticesWithBrowser(dateStr, normalizedSearch) {
         return null;
     }
 
-    const MAX_ID = 30; // Check fewer IDs with Puppeteer (slower)
+    const MAX_ID = 80; // BSE can have 80+ notices per day
 
     for (let i = 1; i <= MAX_ID; i++) {
         const noticeId = `${dateStr}-${i}`;
