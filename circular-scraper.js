@@ -13,10 +13,6 @@ const cheerio = require('cheerio');
 const pdf = require('pdf-parse');
 const AdmZip = require('adm-zip');
 
-// Puppeteer for BSE WAF bypass (lazy-loaded)
-let puppeteer;
-try { puppeteer = require('puppeteer'); } catch (e) { /* Optional dependency */ }
-
 const HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -162,17 +158,78 @@ async function downloadNSEAnnexure(zipUrl) {
     return zip.readFile(annexurePdf);
 }
 
-// ─── BSE Scraper (Fallback) ────────────────────────────────────────────────────
+// ─── BSE Session Management ────────────────────────────────────────────────────
 
 const BSE_BASE = 'https://www.bseindia.com/markets/MarketInfo';
 
+// Full browser-like headers for BSE requests
+const BSE_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Connection': 'keep-alive',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    'Cache-Control': 'max-age=0'
+};
+
+// Session cookies from BSE homepage
+let bseCookies = null;
+let bseCookieTime = 0;
+const BSE_COOKIE_TTL = 10 * 60 * 1000; // 10 minutes
+
+/**
+ * Get a fresh BSE session by visiting the homepage.
+ * Stores cookies for subsequent notice page requests.
+ */
+async function getBSESession() {
+    const now = Date.now();
+    if (bseCookies && (now - bseCookieTime) < BSE_COOKIE_TTL) {
+        return bseCookies;
+    }
+
+    console.log('[BSE] Obtaining fresh session cookies from BSE homepage...');
+    try {
+        const resp = await axios.get('https://www.bseindia.com/', {
+            headers: {
+                ...BSE_HEADERS,
+                'Sec-Fetch-Site': 'none',
+                'Referer': ''
+            },
+            timeout: 15000,
+            maxRedirects: 5,
+            validateStatus: () => true // Accept any status
+        });
+
+        // Extract Set-Cookie headers
+        const setCookies = resp.headers['set-cookie'];
+        if (setCookies && setCookies.length > 0) {
+            bseCookies = setCookies.map(c => c.split(';')[0]).join('; ');
+            bseCookieTime = now;
+            console.log(`[BSE] Got session cookies (${setCookies.length} cookies)`);
+        } else {
+            // Use empty cookies if none returned
+            bseCookies = '';
+            bseCookieTime = now;
+            console.log('[BSE] No cookies from homepage (may still work)');
+        }
+
+        return bseCookies;
+    } catch (err) {
+        console.error(`[BSE] Failed to get session: ${err.message}`);
+        bseCookies = '';
+        bseCookieTime = now;
+        return bseCookies;
+    }
+}
+
 /**
  * Find a BSE listing notice by scanning notice IDs near the listing date.
- * Used as fallback for BSE-only companies not on NSE.
- * 
- * @param {string} companyName - Company name
- * @param {string} listingDateISO - ISO listing date
- * @returns {{ noticeId: string, annexureUrl: string, title: string } | null}
+ * Uses session cookies from BSE homepage for WAF bypass.
  */
 async function findBSENotice(companyName, listingDateISO) {
     if (!companyName || !listingDateISO) return null;
@@ -188,34 +245,29 @@ async function findBSENotice(companyName, listingDateISO) {
 
     console.log(`[BSE] Searching for "${normalizedSearch}" near ${listDate.toISOString().slice(0, 10)}`);
 
-    // Scan ±10 days around listing date
+    // Get session cookies first
+    await getBSESession();
+
+    // Scan ±10 days around listing date (prioritize before listing)
     const datesToScan = [];
     for (let offset = 0; offset <= 10; offset++) {
-        const d = new Date(listDate);
-        d.setDate(d.getDate() + offset);
-        datesToScan.push(formatDateForNotice(d));
         if (offset > 0) {
+            // Check BEFORE listing date first (notices usually published before listing)
             const d2 = new Date(listDate);
             d2.setDate(d2.getDate() - offset);
             datesToScan.push(formatDateForNotice(d2));
         }
+        const d = new Date(listDate);
+        d.setDate(d.getDate() + offset);
+        datesToScan.push(formatDateForNotice(d));
     }
 
     const uniqueDates = [...new Set(datesToScan)];
 
-    // First try HTTP-based scanning (fast, works if BSE isn't blocking)
     for (const dateStr of uniqueDates) {
+        console.log(`[BSE] Scanning notices for date: ${dateStr}`);
         const result = await scanNoticesOnDate(dateStr, normalizedSearch);
         if (result) return result;
-    }
-
-    // If HTTP failed (likely 403 from Akamai), try Puppeteer-based approach
-    if (puppeteer) {
-        console.log(`[BSE] HTTP scanning failed, trying Puppeteer browser approach...`);
-        for (const dateStr of uniqueDates.slice(0, 5)) { // Limit to 5 dates with Puppeteer (slower)
-            const result = await scanNoticesWithBrowser(dateStr, normalizedSearch);
-            if (result) return result;
-        }
     }
 
     console.log(`[BSE] No listing notice found for "${companyName}"`);
@@ -253,156 +305,28 @@ async function scanNoticesOnDate(dateStr, normalizedSearch) {
     return null;
 }
 
-// ─── Puppeteer-based BSE Scanner (WAF bypass) ──────────────────────────────────
-
-let bseBrowser = null;
-let bseBrowserCloseTimer = null;
-
-/**
- * Get or launch a shared Puppeteer browser for BSE scraping.
- * Auto-closes after 5 minutes of inactivity.
- */
-async function getBSEBrowser() {
-    if (bseBrowser && bseBrowser.connected) {
-        // Reset idle timer
-        if (bseBrowserCloseTimer) clearTimeout(bseBrowserCloseTimer);
-        bseBrowserCloseTimer = setTimeout(closeBSEBrowser, 5 * 60 * 1000);
-        return bseBrowser;
-    }
-
-    console.log('[BSE] Launching Puppeteer browser for BSE WAF bypass...');
-    bseBrowser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--single-process'
-        ]
-    });
-
-    // Auto-close after 5 min idle
-    bseBrowserCloseTimer = setTimeout(closeBSEBrowser, 5 * 60 * 1000);
-    return bseBrowser;
-}
-
-async function closeBSEBrowser() {
-    if (bseBrowserCloseTimer) {
-        clearTimeout(bseBrowserCloseTimer);
-        bseBrowserCloseTimer = null;
-    }
-    if (bseBrowser) {
-        try { await bseBrowser.close(); } catch (e) { /* ignore */ }
-        bseBrowser = null;
-        console.log('[BSE] Browser closed');
-    }
-}
-
-/**
- * Scan BSE notices for a given date using Puppeteer (bypasses Akamai WAF).
- * Checks notice IDs 1-30 for the given date.
- */
-async function scanNoticesWithBrowser(dateStr, normalizedSearch) {
-    let browser;
-    try {
-        browser = await getBSEBrowser();
-    } catch (err) {
-        console.error('[BSE] Failed to launch Puppeteer:', err.message);
-        return null;
-    }
-
-    const MAX_ID = 80; // BSE can have 80+ notices per day
-
-    for (let i = 1; i <= MAX_ID; i++) {
-        const noticeId = `${dateStr}-${i}`;
-        const url = `${BSE_BASE}/DispNewNoticesCirculars.aspx?page=${noticeId}`;
-
-        let page;
-        try {
-            page = await browser.newPage();
-            await page.setUserAgent(HEADERS['User-Agent']);
-
-            const response = await page.goto(url, {
-                waitUntil: 'domcontentloaded',
-                timeout: 15000
-            });
-
-            // Skip 404s or error pages
-            if (!response || response.status() >= 400) {
-                await page.close();
-                continue;
-            }
-
-            // Wait a moment for any dynamic content
-            await page.waitForSelector('body', { timeout: 5000 }).catch(() => { });
-
-            const bodyText = await page.evaluate(() => document.body.innerText.toUpperCase());
-
-            const isListing = bodyText.includes('LISTING OF EQUITY SHARES') ||
-                bodyText.includes('LISTING OF THE EQUITY SHARES');
-
-            if (!isListing) {
-                await page.close();
-                continue;
-            }
-
-            const normalizedBody = bodyText.replace(/[^A-Z0-9 ]/g, '');
-            if (!normalizedBody.includes(normalizedSearch)) {
-                await page.close();
-                continue;
-            }
-
-            // Found matching notice! Extract Annexure PDF link
-            const annexureUrl = await page.evaluate(() => {
-                const links = Array.from(document.querySelectorAll('a'));
-                for (const link of links) {
-                    const text = (link.textContent || '').trim().toLowerCase();
-                    const href = link.getAttribute('href') || '';
-                    // Check all annexure patterns
-                    if (text.includes('annexure-i') && !text.includes('annexure-ii')) return href;
-                    if (text === 'annexure-i.pdf') return href;
-                    if (text.includes('annexure') && href.includes('.pdf') && !text.includes('annexure-ii') && !text.includes('annexure_')) return href;
-                    if ((text.includes('annexure i') || text.includes('annexure 1')) && !text.includes('annexure ii') && href.includes('.pdf')) return href;
-                }
-                return null;
-            });
-
-            let title = '';
-            const titleMatch = bodyText.match(/LISTING OF (?:THE )?EQUITY SHARES OF ([A-Z\s]+(?:LIMITED|LTD))/);
-            if (titleMatch) title = titleMatch[1].trim();
-
-            await page.close();
-
-            if (!annexureUrl) {
-                console.log(`[BSE/Puppeteer] Found notice ${noticeId} but no annexure PDF link`);
-                continue;
-            }
-
-            console.log(`[BSE/Puppeteer] Found notice ${noticeId}: ${title} (annexure: YES)`);
-            return { noticeId, annexureUrl, title };
-
-        } catch (err) {
-            if (page) await page.close().catch(() => { });
-            // Continue to next notice ID
-        }
-    }
-
-    return null;
-}
-
 async function checkNotice(noticeId, normalizedSearch) {
     try {
         const url = `${BSE_BASE}/DispNewNoticesCirculars.aspx?page=${noticeId}`;
         const resp = await axios.get(url, {
             headers: {
-                ...HEADERS,
+                ...BSE_HEADERS,
                 'Referer': 'https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx',
-                'Origin': 'https://www.bseindia.com'
+                ...(bseCookies ? { 'Cookie': bseCookies } : {})
             },
             timeout: 10000,
-            insecureHTTPParser: true
+            maxRedirects: 5,
+            validateStatus: (status) => status < 500 // Accept 200-499
         });
+
+        // Skip if BSE returned 403 (WAF blocked) or other non-200
+        if (resp.status === 403) {
+            if (noticeId.endsWith('-1')) {
+                console.log(`[BSE] Access denied (403) for notices on ${noticeId.split('-')[0]} — BSE may be blocking automated access`);
+            }
+            return null;
+        }
+        if (resp.status >= 400) return null;
 
         const $ = cheerio.load(resp.data);
         const bodyText = $('body').text().toUpperCase();
@@ -449,6 +373,17 @@ async function checkNotice(noticeId, normalizedSearch) {
             });
         }
 
+        // Also check for BSE's DownloadAttach.aspx pattern (dynamic PDF downloads)
+        if (!annexureUrl) {
+            $('a').each((_, el) => {
+                const text = $(el).text().trim().toLowerCase();
+                const href = $(el).attr('href') || '';
+                if ((text.includes('annexure') || text.includes('annex')) && !text.includes('annexure-ii') && !text.includes('annexure ii') && href.includes('DownloadAttach')) {
+                    annexureUrl = href;
+                }
+            });
+        }
+
         if (!annexureUrl) return null;
 
         const titleMatch = bodyText.match(/LISTING OF (?:THE )?EQUITY SHARES OF ([A-Z\s]+(?:LIMITED|LTD))/);
@@ -459,13 +394,6 @@ async function checkNotice(noticeId, normalizedSearch) {
         return { noticeId, annexureUrl, title };
 
     } catch (err) {
-        // Log first failure (likely 403 from Akamai WAF)
-        if (err.response && err.response.status === 403) {
-            // Only log once per batch to avoid noise
-            if (noticeId.endsWith('-1')) {
-                console.log(`[BSE] Access denied (403) for notices on ${noticeId.split('-')[0]} — BSE may be blocking automated access`);
-            }
-        }
         return null;
     }
 }
@@ -474,8 +402,9 @@ async function downloadBSEPDF(pdfUrl) {
     console.log(`[BSE] Downloading PDF: ${pdfUrl.substring(0, 100)}...`);
     const resp = await axios.get(pdfUrl, {
         headers: {
-            ...HEADERS,
-            'Referer': 'https://www.bseindia.com/'
+            ...BSE_HEADERS,
+            'Referer': 'https://www.bseindia.com/',
+            ...(bseCookies ? { 'Cookie': bseCookies } : {})
         },
         responseType: 'arraybuffer',
         timeout: 30000
