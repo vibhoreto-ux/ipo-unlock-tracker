@@ -169,11 +169,6 @@ const BSE_HEADERS = {
     'Accept-Language': 'en-US,en;q=0.9',
     'Accept-Encoding': 'gzip, deflate, br',
     'Connection': 'keep-alive',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'same-origin',
-    'Sec-Fetch-User': '?1',
-    'Upgrade-Insecure-Requests': '1',
     'Cache-Control': 'max-age=0'
 };
 
@@ -195,29 +190,21 @@ async function getBSESession() {
     console.log('[BSE] Obtaining fresh session cookies from BSE homepage...');
     try {
         const resp = await axios.get('https://www.bseindia.com/', {
-            headers: {
-                ...BSE_HEADERS,
-                'Sec-Fetch-Site': 'none',
-                'Referer': ''
-            },
+            headers: BSE_HEADERS,
             timeout: 15000,
             maxRedirects: 5,
-            validateStatus: () => true // Accept any status
+            validateStatus: () => true
         });
 
-        // Extract Set-Cookie headers
         const setCookies = resp.headers['set-cookie'];
         if (setCookies && setCookies.length > 0) {
             bseCookies = setCookies.map(c => c.split(';')[0]).join('; ');
             bseCookieTime = now;
             console.log(`[BSE] Got session cookies (${setCookies.length} cookies)`);
         } else {
-            // Use empty cookies if none returned
             bseCookies = '';
             bseCookieTime = now;
-            console.log('[BSE] No cookies from homepage (may still work)');
         }
-
         return bseCookies;
     } catch (err) {
         console.error(`[BSE] Failed to get session: ${err.message}`);
@@ -228,14 +215,14 @@ async function getBSESession() {
 }
 
 /**
- * Find a BSE listing notice by scanning notice IDs near the listing date.
- * Uses session cookies from BSE homepage for WAF bypass.
+ * Find a BSE listing notice for a company.
+ * 
+ * Strategy:
+ *   1. Search bsesme.com notice list (NOT blocked by Akamai WAF)
+ *   2. Fall back to brute-force ID scanning on bseindia.com
  */
 async function findBSENotice(companyName, listingDateISO) {
     if (!companyName || !listingDateISO) return null;
-
-    const listDate = new Date(listingDateISO);
-    if (isNaN(listDate.getTime())) return null;
 
     const normalizedSearch = companyName
         .toUpperCase()
@@ -243,16 +230,24 @@ async function findBSENotice(companyName, listingDateISO) {
         .replace(/[^A-Z0-9 ]/g, '')
         .trim();
 
-    console.log(`[BSE] Searching for "${normalizedSearch}" near ${listDate.toISOString().slice(0, 10)}`);
+    const searchWords = normalizedSearch.split(/\s+/).filter(w => w.length >= 3);
 
-    // Get session cookies first
+    console.log(`[BSE] Searching for "${normalizedSearch}" (words: ${searchWords.join(', ')})`);
+
+    // ── Strategy 1: Search bsesme.com notice list ──
+    const smeResult = await searchBSESMENotices(searchWords);
+    if (smeResult) return smeResult;
+
+    // ── Strategy 2: Brute-force ID scanning on bseindia.com ──
+    console.log(`[BSE] SME search failed, trying ID scan near listing date...`);
     await getBSESession();
 
-    // Scan ±10 days around listing date (prioritize before listing)
+    const listDate = new Date(listingDateISO);
+    if (isNaN(listDate.getTime())) return null;
+
     const datesToScan = [];
-    for (let offset = 0; offset <= 10; offset++) {
+    for (let offset = 0; offset <= 5; offset++) {
         if (offset > 0) {
-            // Check BEFORE listing date first (notices usually published before listing)
             const d2 = new Date(listDate);
             d2.setDate(d2.getDate() - offset);
             datesToScan.push(formatDateForNotice(d2));
@@ -262,9 +257,7 @@ async function findBSENotice(companyName, listingDateISO) {
         datesToScan.push(formatDateForNotice(d));
     }
 
-    const uniqueDates = [...new Set(datesToScan)];
-
-    for (const dateStr of uniqueDates) {
+    for (const dateStr of [...new Set(datesToScan)]) {
         console.log(`[BSE] Scanning notices for date: ${dateStr}`);
         const result = await scanNoticesOnDate(dateStr, normalizedSearch);
         if (result) return result;
@@ -272,6 +265,69 @@ async function findBSENotice(companyName, listingDateISO) {
 
     console.log(`[BSE] No listing notice found for "${companyName}"`);
     return null;
+}
+
+/**
+ * Search the BSE SME notices page for a company's listing notice.
+ * bsesme.com is NOT protected by Akamai WAF.
+ * 
+ * @param {string[]} searchWords - Normalized company name words
+ * @returns {{ noticeId: string, annexureUrl: string|null, title: string } | null}
+ */
+async function searchBSESMENotices(searchWords) {
+    try {
+        console.log('[BSE] Searching bsesme.com notice list...');
+        const resp = await axios.get('https://www.bsesme.com/NoticesnCirculars/Notices.aspx', {
+            headers: {
+                ...BSE_HEADERS,
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+            },
+            timeout: 15000
+        });
+
+        const $ = cheerio.load(resp.data);
+        const links = [];
+
+        // Collect all notice links
+        $('a').each((_, el) => {
+            const text = ($(el).text() || '').trim();
+            const href = $(el).attr('href') || '';
+            if (href.includes('DispNewNoticesCirculars.aspx?page=') && text.toUpperCase().includes('LISTING')) {
+                links.push({ text, href });
+            }
+        });
+
+        console.log(`[BSE] Found ${links.length} listing notices on bsesme.com`);
+
+        // Find matching company
+        for (const link of links) {
+            const normalizedText = link.text.toUpperCase().replace(/[^A-Z0-9 ]/g, '');
+            const matchCount = searchWords.filter(w => normalizedText.includes(w)).length;
+
+            if (matchCount >= Math.min(searchWords.length, 2)) {
+                // Extract notice ID from URL
+                const pageMatch = link.href.match(/page=([^&]+)/);
+                if (!pageMatch) continue;
+
+                const noticeId = pageMatch[1];
+                console.log(`[BSE/SME] Found matching notice: ${noticeId} — "${link.text}"`);
+
+                // Now get the notice page to find Annexure PDF
+                await getBSESession();
+                const noticeResult = await checkNotice(noticeId, ''); // Skip name check, we already matched
+                if (noticeResult) return noticeResult;
+
+                // If checkNotice failed (WAF block), return with just the notice ID
+                // The caller can try to download the annexure directly
+                return { noticeId, annexureUrl: null, title: link.text };
+            }
+        }
+
+        return null;
+    } catch (err) {
+        console.error(`[BSE] bsesme.com search error: ${err.message}`);
+        return null;
+    }
 }
 
 function formatDateForNotice(date) {
@@ -283,7 +339,7 @@ function formatDateForNotice(date) {
 
 async function scanNoticesOnDate(dateStr, normalizedSearch) {
     const BATCH_SIZE = 10;
-    const MAX_ID = 100; // BSE can have 80+ notices per day (e.g., notice 20241129-72)
+    const MAX_ID = 100;
 
     for (let start = 1; start <= MAX_ID; start += BATCH_SIZE) {
         const batch = [];
@@ -334,10 +390,12 @@ async function checkNotice(noticeId, normalizedSearch) {
         const isListing = bodyText.includes('LISTING OF EQUITY SHARES') ||
             bodyText.includes('LISTING OF THE EQUITY SHARES');
 
-        if (!isListing) return null;
-
-        const normalizedBody = bodyText.replace(/[^A-Z0-9 ]/g, '');
-        if (!normalizedBody.includes(normalizedSearch)) return null;
+        // Skip checks if normalizedSearch is empty (already matched via SME search)
+        if (normalizedSearch) {
+            if (!isListing) return null;
+            const normalizedBody = bodyText.replace(/[^A-Z0-9 ]/g, '');
+            if (!normalizedBody.includes(normalizedSearch)) return null;
+        }
 
         let annexureUrl = null;
         let title = '';
