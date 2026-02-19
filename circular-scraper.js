@@ -13,6 +13,10 @@ const cheerio = require('cheerio');
 const pdf = require('pdf-parse');
 const AdmZip = require('adm-zip');
 
+// Puppeteer for BSE WAF bypass (lazy-loaded)
+let puppeteer;
+try { puppeteer = require('puppeteer'); } catch (e) { /* Optional dependency */ }
+
 const HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -199,10 +203,19 @@ async function findBSENotice(companyName, listingDateISO) {
 
     const uniqueDates = [...new Set(datesToScan)];
 
+    // First try HTTP-based scanning (fast, works if BSE isn't blocking)
     for (const dateStr of uniqueDates) {
-        console.log(`[BSE] Scanning notices for date: ${dateStr}`);
         const result = await scanNoticesOnDate(dateStr, normalizedSearch);
         if (result) return result;
+    }
+
+    // If HTTP failed (likely 403 from Akamai), try Puppeteer-based approach
+    if (puppeteer) {
+        console.log(`[BSE] HTTP scanning failed, trying Puppeteer browser approach...`);
+        for (const dateStr of uniqueDates.slice(0, 5)) { // Limit to 5 dates with Puppeteer (slower)
+            const result = await scanNoticesWithBrowser(dateStr, normalizedSearch);
+            if (result) return result;
+        }
     }
 
     console.log(`[BSE] No listing notice found for "${companyName}"`);
@@ -234,6 +247,144 @@ async function scanNoticesOnDate(dateStr, normalizedSearch) {
             if (result.status === 'fulfilled' && result.value) {
                 return result.value;
             }
+        }
+    }
+
+    return null;
+}
+
+// ─── Puppeteer-based BSE Scanner (WAF bypass) ──────────────────────────────────
+
+let bseBrowser = null;
+let bseBrowserCloseTimer = null;
+
+/**
+ * Get or launch a shared Puppeteer browser for BSE scraping.
+ * Auto-closes after 5 minutes of inactivity.
+ */
+async function getBSEBrowser() {
+    if (bseBrowser && bseBrowser.connected) {
+        // Reset idle timer
+        if (bseBrowserCloseTimer) clearTimeout(bseBrowserCloseTimer);
+        bseBrowserCloseTimer = setTimeout(closeBSEBrowser, 5 * 60 * 1000);
+        return bseBrowser;
+    }
+
+    console.log('[BSE] Launching Puppeteer browser for BSE WAF bypass...');
+    bseBrowser = await puppeteer.launch({
+        headless: 'new',
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--single-process'
+        ]
+    });
+
+    // Auto-close after 5 min idle
+    bseBrowserCloseTimer = setTimeout(closeBSEBrowser, 5 * 60 * 1000);
+    return bseBrowser;
+}
+
+async function closeBSEBrowser() {
+    if (bseBrowserCloseTimer) {
+        clearTimeout(bseBrowserCloseTimer);
+        bseBrowserCloseTimer = null;
+    }
+    if (bseBrowser) {
+        try { await bseBrowser.close(); } catch (e) { /* ignore */ }
+        bseBrowser = null;
+        console.log('[BSE] Browser closed');
+    }
+}
+
+/**
+ * Scan BSE notices for a given date using Puppeteer (bypasses Akamai WAF).
+ * Checks notice IDs 1-30 for the given date.
+ */
+async function scanNoticesWithBrowser(dateStr, normalizedSearch) {
+    let browser;
+    try {
+        browser = await getBSEBrowser();
+    } catch (err) {
+        console.error('[BSE] Failed to launch Puppeteer:', err.message);
+        return null;
+    }
+
+    const MAX_ID = 30; // Check fewer IDs with Puppeteer (slower)
+
+    for (let i = 1; i <= MAX_ID; i++) {
+        const noticeId = `${dateStr}-${i}`;
+        const url = `${BSE_BASE}/DispNewNoticesCirculars.aspx?page=${noticeId}`;
+
+        let page;
+        try {
+            page = await browser.newPage();
+            await page.setUserAgent(HEADERS['User-Agent']);
+
+            const response = await page.goto(url, {
+                waitUntil: 'domcontentloaded',
+                timeout: 15000
+            });
+
+            // Skip 404s or error pages
+            if (!response || response.status() >= 400) {
+                await page.close();
+                continue;
+            }
+
+            // Wait a moment for any dynamic content
+            await page.waitForSelector('body', { timeout: 5000 }).catch(() => { });
+
+            const bodyText = await page.evaluate(() => document.body.innerText.toUpperCase());
+
+            const isListing = bodyText.includes('LISTING OF EQUITY SHARES') ||
+                bodyText.includes('LISTING OF THE EQUITY SHARES');
+
+            if (!isListing) {
+                await page.close();
+                continue;
+            }
+
+            const normalizedBody = bodyText.replace(/[^A-Z0-9 ]/g, '');
+            if (!normalizedBody.includes(normalizedSearch)) {
+                await page.close();
+                continue;
+            }
+
+            // Found matching notice! Extract Annexure PDF link
+            const annexureUrl = await page.evaluate(() => {
+                const links = Array.from(document.querySelectorAll('a'));
+                for (const link of links) {
+                    const text = (link.textContent || '').trim().toLowerCase();
+                    const href = link.getAttribute('href') || '';
+                    // Check all annexure patterns
+                    if (text.includes('annexure-i') && !text.includes('annexure-ii')) return href;
+                    if (text === 'annexure-i.pdf') return href;
+                    if (text.includes('annexure') && href.includes('.pdf') && !text.includes('annexure-ii') && !text.includes('annexure_')) return href;
+                    if ((text.includes('annexure i') || text.includes('annexure 1')) && !text.includes('annexure ii') && href.includes('.pdf')) return href;
+                }
+                return null;
+            });
+
+            let title = '';
+            const titleMatch = bodyText.match(/LISTING OF (?:THE )?EQUITY SHARES OF ([A-Z\s]+(?:LIMITED|LTD))/);
+            if (titleMatch) title = titleMatch[1].trim();
+
+            await page.close();
+
+            if (!annexureUrl) {
+                console.log(`[BSE/Puppeteer] Found notice ${noticeId} but no annexure PDF link`);
+                continue;
+            }
+
+            console.log(`[BSE/Puppeteer] Found notice ${noticeId}: ${title} (annexure: YES)`);
+            return { noticeId, annexureUrl, title };
+
+        } catch (err) {
+            if (page) await page.close().catch(() => { });
+            // Continue to next notice ID
         }
     }
 
