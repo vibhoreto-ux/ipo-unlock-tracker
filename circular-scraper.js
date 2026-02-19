@@ -244,7 +244,11 @@ async function checkNotice(noticeId, normalizedSearch) {
     try {
         const url = `${BSE_BASE}/DispNewNoticesCirculars.aspx?page=${noticeId}`;
         const resp = await axios.get(url, {
-            headers: HEADERS,
+            headers: {
+                ...HEADERS,
+                'Referer': 'https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx',
+                'Origin': 'https://www.bseindia.com'
+            },
             timeout: 10000,
             insecureHTTPParser: true
         });
@@ -304,6 +308,13 @@ async function checkNotice(noticeId, normalizedSearch) {
         return { noticeId, annexureUrl, title };
 
     } catch (err) {
+        // Log first failure (likely 403 from Akamai WAF)
+        if (err.response && err.response.status === 403) {
+            // Only log once per batch to avoid noise
+            if (noticeId.endsWith('-1')) {
+                console.log(`[BSE] Access denied (403) for notices on ${noticeId.split('-')[0]} — BSE may be blocking automated access`);
+            }
+        }
         return null;
     }
 }
@@ -664,12 +675,12 @@ async function getUnlockPercentages(companyName, exchange, listingDateISO) {
             }
         }
 
-        // ── Fall back to BSE ──
-        if (exchange && exchange.includes('BSE')) {
-            console.log(`[Scraper] NSE failed, trying BSE fallback for ${companyName}`);
+        // ── Fall back to BSE (try for ALL companies where NSE failed) ──
+        console.log(`[Scraper] NSE failed, trying BSE fallback for ${companyName}`);
 
-            const bseNotice = await findBSENotice(companyName, listingDateISO);
-            if (bseNotice && bseNotice.annexureUrl) {
+        const bseNotice = await findBSENotice(companyName, listingDateISO);
+        if (bseNotice && bseNotice.annexureUrl) {
+            try {
                 const pdfBuffer = await downloadBSEPDF(bseNotice.annexureUrl);
                 const lockInData = await parseLockInData(pdfBuffer);
 
@@ -679,6 +690,8 @@ async function getUnlockPercentages(companyName, exchange, listingDateISO) {
                     noticeId: bseNotice.noticeId,
                     fetchedAt: new Date().toISOString()
                 };
+            } catch (bseErr) {
+                console.error(`[BSE] Error processing circular: ${bseErr.message}`);
             }
         }
 
