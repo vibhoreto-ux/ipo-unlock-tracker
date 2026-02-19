@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { scrapeUnlockData } = require('./scraper');
 const { scrapeWithBrowser } = require('./browser-scraper');
-const { readDB, writeDB, mergeCompanies } = require('./db');
+const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
 
 const app = express();
 const PORT = 3001;
@@ -316,22 +316,35 @@ app.listen(PORT, () => {
 // ----- BSE Circular / Unlock Details -----
 const { getUnlockPercentages } = require('./circular-scraper');
 
-// In-memory cache for circular data (persists across requests until server restart)
+// In-memory hot cache for circular data (backed by DB for persistence across restarts)
 const circularCache = new Map();
 
 /**
  * GET /api/unlock-details/:companyName
- * Fetches lock-in details from BSE Annexure-I for the given company.
- * Results are cached in memory.
+ * Fetches lock-in details from BSE/NSE Annexure-I for the given company.
+ * Results are cached in DB (persists across server restarts).
+ * Use ?force=true to bypass cache and re-fetch fresh data.
  */
 app.get('/api/unlock-details/:companyName', async (req, res) => {
     try {
         const companyName = decodeURIComponent(req.params.companyName);
+        const forceRefresh = req.query.force === 'true';
 
-        // Check cache first
-        if (circularCache.has(companyName)) {
-            const cached = circularCache.get(companyName);
-            return res.json({ ...cached, fromCache: true });
+        // Check caches (skip if force refresh)
+        if (!forceRefresh) {
+            // 1. Check in-memory hot cache
+            if (circularCache.has(companyName)) {
+                const cached = circularCache.get(companyName);
+                return res.json({ ...cached, fromCache: true });
+            }
+
+            // 2. Check DB persistent cache
+            const dbCached = getCircularData(companyName);
+            if (dbCached) {
+                // Warm the in-memory cache
+                circularCache.set(companyName, dbCached);
+                return res.json({ ...dbCached, fromCache: true });
+            }
         }
 
         // Find the company in DB to get exchange and listing date
@@ -349,7 +362,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             return res.status(400).json({ error: 'No listing date available for this company' });
         }
 
-        console.log(`\n📄 Fetching circular for: ${companyName} (${exchange}, listed: ${listingDate.substring(0, 10)})`);
+        console.log(`\n📄 Fetching circular for: ${companyName} (${exchange}, listed: ${listingDate.substring(0, 10)})${forceRefresh ? ' [FORCE REFRESH]' : ''}`);
 
         // Fetch from NSE first, then BSE fallback
         const result = await getUnlockPercentages(companyName, exchange, listingDate);
@@ -359,9 +372,10 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             return res.json({ found: false, message: 'No circular data found for this company' });
         }
 
-        // Cache the result
+        // Cache the result in both memory and DB
         const response = { found: true, ...result };
         circularCache.set(companyName, response);
+        saveCircularData(companyName, response);
 
         res.json(response);
 

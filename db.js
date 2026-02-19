@@ -26,13 +26,14 @@ function readDB() {
             return {
                 companies: data.companies || [],
                 lastUpdated: data.lastUpdated || null,
-                lastScraped: data.lastScraped || {}
+                lastScraped: data.lastScraped || {},
+                circularData: data.circularData || {}
             };
         }
     } catch (err) {
         console.error('Error reading DB:', err.message);
     }
-    return { companies: [], lastUpdated: null, lastScraped: {} };
+    return { companies: [], lastUpdated: null, lastScraped: {}, circularData: {} };
 }
 
 /**
@@ -104,4 +105,25 @@ function normalizeKey(name) {
         .trim();
 }
 
-module.exports = { readDB, writeDB, mergeCompanies };
+/**
+ * Get cached circular data for a company
+ * @param {string} companyName
+ * @returns {Object|null}
+ */
+function getCircularData(companyName) {
+    const db = readDB();
+    return db.circularData[companyName] || null;
+}
+
+/**
+ * Save circular data for a company to DB
+ * @param {string} companyName
+ * @param {Object} data - The circular response data
+ */
+function saveCircularData(companyName, data) {
+    const db = readDB();
+    db.circularData[companyName] = data;
+    writeDB(db);
+}
+
+module.exports = { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData };

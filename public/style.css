@@ -488,8 +488,47 @@ tr:hover {
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-primary);
-    padding-right: 2rem;
+    padding-right: 0;
     line-height: 1.4;
+}
+
+.modal-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 2rem;
+}
+
+.modal-refresh-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.modal-refresh-btn:hover:not(:disabled) {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.modal-refresh-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.modal-refresh-btn.spinning .refresh-icon {
+    display: inline-block;
+    animation: spin 0.8s linear infinite;
 }
 
 .modal-header-badges {

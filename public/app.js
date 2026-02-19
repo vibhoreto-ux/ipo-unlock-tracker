@@ -453,6 +453,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCompanyName = document.getElementById('modalCompanyName');
     const modalBadge = document.getElementById('modalBadge');
     const modalExchangeBadge = document.getElementById('modalExchangeBadge');
+    const modalRefreshBtn = document.getElementById('modalRefreshBtn');
+
+    // Track current modal company for refresh
+    let currentModalCompany = null;
+    let currentModalTimelineItems = null;
+
+    // Wire modal refresh button
+    if (modalRefreshBtn) {
+        modalRefreshBtn.addEventListener('click', () => {
+            if (!currentModalCompany || modalRefreshBtn.disabled) return;
+            modalRefreshBtn.disabled = true;
+            modalRefreshBtn.classList.add('spinning');
+
+            // Reset and show loading
+            const detailsSection = document.getElementById('unlockDetailsSection');
+            const detailsLoading = document.getElementById('unlockDetailsLoading');
+            if (detailsSection) detailsSection.style.display = 'none';
+            if (detailsLoading) detailsLoading.style.display = 'flex';
+
+            fetchUnlockDetails(currentModalCompany.companyName, currentModalTimelineItems, true)
+                .finally(() => {
+                    modalRefreshBtn.disabled = false;
+                    modalRefreshBtn.classList.remove('spinning');
+                });
+        });
+    }
 
 
     function getDateStatus(dateStr) {
@@ -552,19 +578,24 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
 
+        // Store for refresh button
+        currentModalCompany = company;
+        currentModalTimelineItems = items;
+
         // Fetch BSE Annexure-I unlock details (async, non-blocking)
         fetchUnlockDetails(company.companyName, items);
     }
 
     // Fetch and display BSE unlock details
-    async function fetchUnlockDetails(companyName, timelineItems) {
+    async function fetchUnlockDetails(companyName, timelineItems, force = false) {
         const detailsSection = document.getElementById('unlockDetailsSection');
         const detailsLoading = document.getElementById('unlockDetailsLoading');
         const detailsContent = document.getElementById('unlockDetailsContent');
         const detailsNotice = document.getElementById('unlockDetailsNotice');
 
         try {
-            const resp = await fetch(`/api/unlock-details/${encodeURIComponent(companyName)}`);
+            const url = `/api/unlock-details/${encodeURIComponent(companyName)}${force ? '?force=true' : ''}`;
+            const resp = await fetch(url);
             const data = await resp.json();
 
             if (detailsLoading) detailsLoading.style.display = 'none';
