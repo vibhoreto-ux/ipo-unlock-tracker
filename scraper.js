@@ -153,6 +153,7 @@ async function scrapeIPOList(year) {
             results.push({
                 companyName,
                 issueType,
+                exchange: listingAt,
                 allotmentDate: finalDateObj
             });
         });

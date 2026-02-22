@@ -219,8 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Type Filter
             if (currentType !== 'all') {
-                if (company.issueType !== currentType) {
-                    return false;
+                if (currentType === 'BSE SME') {
+                    if (company.issueType !== 'SME' || !(company.exchange || '').toUpperCase().includes('BSE')) return false;
+                } else if (currentType === 'NSE SME') {
+                    if (company.issueType !== 'SME' || !(company.exchange || '').toUpperCase().includes('NSE')) return false;
+                } else {
+                    if (company.issueType !== currentType) {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -299,9 +305,20 @@ document.addEventListener('DOMContentLoaded', () => {
         filtered.forEach(company => {
             const row = document.createElement('tr');
 
-            // Company Info
+            // Company Info — exchange-specific badge
             const isSME = company.issueType && company.issueType.toLowerCase().includes('sme');
-            const typeBadge = isSME ? '<span class="badge badge-sme">SME</span>' : '<span class="badge badge-main">Mainboard</span>';
+            const exchangeStr = (company.exchange || '').toUpperCase();
+            let exchangeLabel = '';
+            if (exchangeStr.includes('NSE') && exchangeStr.includes('BSE')) {
+                exchangeLabel = 'NSE/BSE';
+            } else if (exchangeStr.includes('BSE')) {
+                exchangeLabel = 'BSE';
+            } else if (exchangeStr.includes('NSE')) {
+                exchangeLabel = 'NSE';
+            }
+            const typeLabel = isSME ? 'SME' : 'Mainboard';
+            const badgeClass = isSME ? 'badge-sme' : 'badge-main';
+            const typeBadge = `<span class="badge ${badgeClass}">${typeLabel} ${exchangeLabel}</span>`;
 
             // Listing Date Display
             const listingObj = company.allotmentDate;
@@ -506,14 +523,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Company name & badges
         modalCompanyName.textContent = company.companyName;
         const isSME = company.issueType && company.issueType.toLowerCase().includes('sme');
+        const exStr = (company.exchange || '').toUpperCase();
+        let exLabel = '';
+        if (exStr.includes('NSE') && exStr.includes('BSE')) {
+            exLabel = 'NSE/BSE';
+        } else if (exStr.includes('BSE')) {
+            exLabel = 'BSE';
+        } else if (exStr.includes('NSE')) {
+            exLabel = 'NSE';
+        }
+        const modalTypeLabel = isSME ? 'SME' : 'Mainboard';
         modalBadge.innerHTML = isSME
-            ? '<span class="badge badge-sme">SME</span>'
-            : '<span class="badge badge-main">Mainboard</span>';
+            ? `<span class="badge badge-sme">${modalTypeLabel}</span>`
+            : `<span class="badge badge-main">${modalTypeLabel}</span>`;
 
         // Exchange badge
-        const exchange = company.exchange || '';
-        if (exchange) {
-            modalExchangeBadge.textContent = exchange;
+        if (exLabel) {
+            modalExchangeBadge.textContent = exLabel;
             modalExchangeBadge.style.display = '';
         } else {
             modalExchangeBadge.style.display = 'none';
@@ -596,7 +622,25 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const url = `/api/unlock-details/${encodeURIComponent(companyName)}${force ? '?force=true' : ''}`;
             const resp = await fetch(url);
-            const data = await resp.json();
+            let data = await resp.json();
+
+            // If server needs client-side BSE fetch (WAF bypass)
+            if (data.needsClientFetch && data.bseNoticeId) {
+                console.log(`[BSE/Client] Server needs client fetch for notice: ${data.bseNoticeId}`);
+                if (detailsLoading) {
+                    detailsLoading.innerHTML = '<span class="spinner"></span> Fetching from BSE...';
+                }
+                data = await clientFetchBSENotice(companyName, data.bseNoticeId);
+            }
+
+            // If server needs client-side BSE search (both bsesme.com and bseindia.com blocked)
+            if (data.needsBSESearch && data.listingDate) {
+                console.log(`[BSE/Client] Server needs client search near ${data.listingDate}`);
+                if (detailsLoading) {
+                    detailsLoading.innerHTML = '<span class="spinner"></span> Searching BSE notices...';
+                }
+                data = await clientSearchBSENotice(companyName, data.listingDate);
+            }
 
             if (detailsLoading) detailsLoading.style.display = 'none';
 
@@ -662,6 +706,182 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (err) {
             console.error('Failed to fetch unlock details:', err);
             if (detailsLoading) detailsLoading.style.display = 'none';
+        }
+    }
+
+    /**
+     * Client-side BSE notice fetching.
+     * Browsers bypass BSE's Akamai WAF, so we fetch the notice page directly,
+     * extract the Annexure-I PDF link, download it, and send to server for parsing.
+     */
+    async function clientFetchBSENotice(companyName, noticeId) {
+        try {
+            const noticeUrl = `https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=${noticeId}`;
+            console.log(`[BSE/Client] Fetching notice page: ${noticeUrl}`);
+
+            const pageResp = await fetch(noticeUrl);
+            if (!pageResp.ok) {
+                console.error(`[BSE/Client] Notice page returned ${pageResp.status}`);
+                return { found: false };
+            }
+
+            const html = await pageResp.text();
+
+            // Parse HTML to find Annexure-I link
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            let annexureUrl = null;
+
+            doc.querySelectorAll('a').forEach(a => {
+                const text = (a.textContent || '').trim().toLowerCase();
+                const href = a.getAttribute('href') || '';
+
+                if (text.includes('annexure') && (text.includes('ii') || text.includes(' 2'))) {
+                    return; // Skip Annexure II entirely
+                }
+
+                // Match Annexure-I but not Annexure-II
+                if (text.includes('annexure-i') || text.includes('annexure - i')) {
+                    if (!annexureUrl) annexureUrl = href;
+                } else if (text === 'annexure-i.pdf' || text === 'annexure - i.pdf') {
+                    if (!annexureUrl) annexureUrl = href;
+                } else if (text.includes('annexure') && text.includes('.pdf') && !text.includes('annexure_')) {
+                    if (!annexureUrl) annexureUrl = href;
+                } else if ((text.includes('annexure i') || text.includes('annexure 1'))) {
+                    if (!annexureUrl) annexureUrl = href;
+                } else if ((text.includes('annexure') || text.includes('annex')) && href.includes('DownloadAttach')) {
+                    if (!annexureUrl) annexureUrl = href;
+                }
+            });
+
+            if (!annexureUrl) {
+                console.error('[BSE/Client] No Annexure-I link found on notice page');
+                return { found: false };
+            }
+
+            // Make URL absolute if needed
+            if (annexureUrl.startsWith('/')) {
+                annexureUrl = 'https://www.bseindia.com' + annexureUrl;
+            } else if (!annexureUrl.startsWith('http')) {
+                annexureUrl = 'https://www.bseindia.com/markets/MarketInfo/' + annexureUrl;
+            }
+
+            console.log(`[BSE/Client] Downloading PDF: ${annexureUrl}`);
+
+            // Download the PDF
+            const pdfResp = await fetch(annexureUrl);
+            if (!pdfResp.ok) {
+                console.error(`[BSE/Client] PDF download returned ${pdfResp.status}`);
+                return { found: false };
+            }
+
+            const pdfBuffer = await pdfResp.arrayBuffer();
+            console.log(`[BSE/Client] PDF downloaded: ${(pdfBuffer.byteLength / 1024).toFixed(1)} KB`);
+
+            // Send PDF to server for parsing
+            const parseResp = await fetch(
+                `/api/parse-bse-pdf?company=${encodeURIComponent(companyName)}&noticeId=${encodeURIComponent(noticeId)}`,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/octet-stream' },
+                    body: pdfBuffer
+                }
+            );
+
+            return await parseResp.json();
+
+        } catch (err) {
+            console.error('[BSE/Client] Error:', err);
+            return { found: false };
+        }
+    }
+
+    /**
+     * Client-side BSE notice search.
+     * Brute-force scans notice IDs around the listing date from the browser.
+     * Format: YYYYMMDD-N where N is 1-100
+     */
+    async function clientSearchBSENotice(companyName, listingDateISO) {
+        try {
+            const listDate = new Date(listingDateISO);
+            if (isNaN(listDate.getTime())) return { found: false };
+
+            // Normalize company name for matching
+            const normalized = companyName
+                .toUpperCase()
+                .replace(/ (LTD|LIMITED|INDIA|PRIVATE|PVT)\.?/g, '')
+                .replace(/[^A-Z0-9 ]/g, '')
+                .trim();
+            const words = normalized.split(/\s+/).filter(w => w.length >= 3);
+
+            console.log(`[BSE/Client] Searching for "${normalized}" near ${listingDateISO.substring(0, 10)}`);
+
+            // Generate dates to scan: day before listing through day after
+            const dates = [];
+            for (let offset = -1; offset <= 1; offset++) {
+                const d = new Date(listDate);
+                d.setDate(d.getDate() + offset);
+                const y = d.getFullYear();
+                const m = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                dates.push(`${y}${m}${day}`);
+            }
+
+            // Scan each date, checking notice IDs in batches
+            for (const dateStr of dates) {
+                console.log(`[BSE/Client] Scanning date: ${dateStr}`);
+
+                for (let start = 1; start <= 80; start += 5) {
+                    const batch = [];
+                    for (let i = start; i < start + 5 && i <= 80; i++) {
+                        batch.push(`${dateStr}-${i}`);
+                    }
+
+                    const results = await Promise.allSettled(
+                        batch.map(async (noticeId) => {
+                            const url = `https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=${noticeId}`;
+                            try {
+                                const resp = await fetch(url);
+                                if (!resp.ok) return null;
+                                const html = await resp.text();
+                                if (html.length < 5000) return null; // Error/empty page
+
+                                const upper = html.toUpperCase();
+
+                                // Check if this is a listing notice
+                                if (!upper.includes('LISTING') && !upper.includes('SHARES ADMITTED')) return null;
+
+                                // Check if company name matches
+                                const matchCount = words.filter(w => upper.includes(w)).length;
+                                if (matchCount < Math.min(words.length, 2)) return null;
+
+                                // MUST have an annexure pdf link to be the actual listing circular we need
+                                if (!upper.includes('ANNEXURE') || !upper.includes('.PDF')) {
+                                    return null;
+                                }
+
+                                console.log(`[BSE/Client] Found match: ${noticeId} (${matchCount}/${words.length} words)`);
+                                return noticeId;
+                            } catch {
+                                return null;
+                            }
+                        })
+                    );
+
+                    for (const r of results) {
+                        if (r.status === 'fulfilled' && r.value) {
+                            // Found the notice! Now fetch annexure
+                            return await clientFetchBSENotice(companyName, r.value);
+                        }
+                    }
+                }
+            }
+
+            console.log('[BSE/Client] No matching notice found');
+            return { found: false };
+        } catch (err) {
+            console.error('[BSE/Client] Search error:', err);
+            return { found: false };
         }
     }
 

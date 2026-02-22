@@ -84,6 +84,7 @@ app.post('/api/import-data', (req, res) => {
             companies.push({
                 companyName: name,
                 issueType,
+                exchange: listingAt,
                 allotmentDate,
                 anchor30,
                 anchor90,
@@ -102,6 +103,7 @@ app.post('/api/import-data', (req, res) => {
 
             let issueType = anchor.issueType || 'Mainboard';
             if (issueType === 'Mainline') issueType = 'Mainboard';
+            const exchange = anchor.exchange || '';
             const allotDate = parseImportDate(anchor.allotmentDate);
             let allotmentDate = null;
             if (allotDate) {
@@ -128,6 +130,7 @@ app.post('/api/import-data', (req, res) => {
             companies.push({
                 companyName: name,
                 issueType,
+                exchange,
                 allotmentDate,
                 anchor30,
                 anchor90,
@@ -314,7 +317,7 @@ app.listen(PORT, () => {
 });
 
 // ----- BSE Circular / Unlock Details -----
-const { getUnlockPercentages } = require('./circular-scraper');
+const { getUnlockPercentages, parseLockInData } = require('./circular-scraper');
 
 // In-memory hot cache for circular data (backed by DB for persistence across restarts)
 const circularCache = new Map();
@@ -372,6 +375,21 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             return res.json({ found: false, message: 'No circular data found for this company' });
         }
 
+        // If result needs client-side fetch, return immediately without caching
+        if (result.needsClientFetch) {
+            return res.json({ found: false, needsClientFetch: true, bseNoticeId: result.bseNoticeId });
+        }
+
+        // If result needs client-side BSE search (server couldn't find notice at all)
+        if (result.needsBSESearch) {
+            return res.json({
+                found: false,
+                needsBSESearch: true,
+                listingDate: result.listingDate,
+                companyName: result.companyName
+            });
+        }
+
         // Cache the result in both memory and DB
         const response = { found: true, ...result };
         circularCache.set(companyName, response);
@@ -385,3 +403,43 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
     }
 });
 
+/**
+ * POST /api/parse-bse-pdf
+ * Client-assisted BSE PDF parsing.
+ * The client browser fetches the BSE annexure PDF (bypassing WAF) and sends the raw binary here.
+ */
+app.post('/api/parse-bse-pdf', express.raw({ type: '*/*', limit: '10mb' }), async (req, res) => {
+    try {
+        const companyName = req.query.company;
+        const noticeId = req.query.noticeId;
+        const pdfBuffer = req.body;
+
+        if (!pdfBuffer || pdfBuffer.length < 100) {
+            return res.status(400).json({ error: 'No PDF data received' });
+        }
+
+        console.log(`[BSE/Client] Received PDF from client for ${companyName}: ${(pdfBuffer.length / 1024).toFixed(1)} KB`);
+
+        const lockInData = await parseLockInData(pdfBuffer);
+
+        const response = {
+            found: true,
+            ...lockInData,
+            source: 'BSE',
+            noticeId: noticeId || 'client-fetched',
+            fetchedAt: new Date().toISOString()
+        };
+
+        // Cache the result
+        if (companyName) {
+            circularCache.set(companyName, response);
+            saveCircularData(companyName, response);
+        }
+
+        res.json(response);
+
+    } catch (error) {
+        console.error('[BSE/Client] PDF parse error:', error.message);
+        res.status(500).json({ error: 'Failed to parse PDF' });
+    }
+});
