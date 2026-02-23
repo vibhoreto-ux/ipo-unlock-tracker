@@ -93,12 +93,23 @@ async function fetchIPOList(year) {
                 }
             }
 
+            // Parse Issue Price, picking the upper band if it's a range (e.g. "71.00 to 72.00")
+            const issuePriceStr = rec['Issue Price (Rs.)'] || '';
+            let issuePrice = null;
+            if (issuePriceStr) {
+                const matches = issuePriceStr.match(/(\d+\.?\d*)/g);
+                if (matches && matches.length > 0) {
+                    issuePrice = parseFloat(matches[matches.length - 1]);
+                }
+            }
+
             processed.push({
                 companyName,
                 issueType,
                 exchange,
                 allotmentDate,
-                chittorgarhUrl
+                chittorgarhUrl,
+                issuePrice
             });
         }
 

@@ -321,7 +321,9 @@ app.listen(PORT, () => {
 });
 
 // ----- BSE Circular / Unlock Details -----
+// ----- BSE Circular / Unlock Details -----
 const { getUnlockPercentages, parseLockInData } = require('./circular-scraper');
+const { getLivePrice } = require('./price-scraper');
 
 // In-memory hot cache for circular data (backed by DB for persistence across restarts)
 const circularCache = new Map();
@@ -337,12 +339,18 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         const companyName = decodeURIComponent(req.params.companyName);
         const forceRefresh = req.query.force === 'true';
 
+        // Common helper to inject live price before returning
+        const respondWithPrices = async (basePayload) => {
+            const liveData = await getLivePrice(companyName);
+            return res.json({ ...basePayload, liveMarketPrice: liveData });
+        };
+
         // Check caches (skip if force refresh)
         if (!forceRefresh) {
             // 1. Check in-memory hot cache
             if (circularCache.has(companyName)) {
                 const cached = circularCache.get(companyName);
-                return res.json({ ...cached, fromCache: true });
+                return await respondWithPrices({ ...cached, fromCache: true });
             }
 
             // 2. Check DB persistent cache
@@ -350,7 +358,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             if (dbCached) {
                 // Warm the in-memory cache
                 circularCache.set(companyName, dbCached);
-                return res.json({ ...dbCached, fromCache: true });
+                return await respondWithPrices({ ...dbCached, fromCache: true });
             }
         }
 
@@ -376,17 +384,17 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
 
         if (!result) {
             // Don't cache "not found" — allow retry on next click
-            return res.json({ found: false, message: 'No circular data found for this company' });
+            return await respondWithPrices({ found: false, message: 'No circular data found for this company' });
         }
 
         // If result needs client-side fetch, return immediately without caching
         if (result.needsClientFetch) {
-            return res.json({ found: false, needsClientFetch: true, bseNoticeId: result.bseNoticeId });
+            return await respondWithPrices({ found: false, needsClientFetch: true, bseNoticeId: result.bseNoticeId });
         }
 
         // If result needs client-side BSE search (server couldn't find notice at all)
         if (result.needsBSESearch) {
-            return res.json({
+            return await respondWithPrices({
                 found: false,
                 needsBSESearch: true,
                 listingDate: result.listingDate,
@@ -399,7 +407,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         circularCache.set(companyName, response);
         saveCircularData(companyName, response);
 
-        res.json(response);
+        await respondWithPrices(response);
 
     } catch (error) {
         console.error('Unlock details error:', error.message);

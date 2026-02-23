@@ -585,6 +585,17 @@ document.addEventListener('DOMContentLoaded', () => {
             modalExchangeBadge.style.display = 'none';
         }
 
+        // Set Issue Price and resetting Live Price
+        const issuePriceEl = document.getElementById('modalIssuePrice');
+        if (issuePriceEl) {
+            issuePriceEl.textContent = company.issuePrice ? '₹' + company.issuePrice.toFixed(2) : '—';
+        }
+        const livePriceEl = document.getElementById('modalLivePrice');
+        if (livePriceEl) {
+            livePriceEl.textContent = 'Loading...';
+            livePriceEl.className = 'price-value'; // reset classes
+        }
+
         // Timeline items
         const items = [
             { id: 'Listing', dateObj: company.allotmentDate, label: 'Listing Date' },
@@ -683,6 +694,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (detailsLoading) detailsLoading.style.display = 'none';
+
+            // Update Live Price
+            const liveEl = document.getElementById('modalLivePrice');
+            if (liveEl) {
+                if (data.liveMarketPrice && data.liveMarketPrice.price) {
+                    liveEl.textContent = '₹' + data.liveMarketPrice.price.toFixed(2);
+                    // Add subtle color context
+                    if (company.issuePrice) {
+                        if (data.liveMarketPrice.price > company.issuePrice) {
+                            liveEl.style.color = 'var(--success-text)';
+                        } else if (data.liveMarketPrice.price < company.issuePrice) {
+                            liveEl.style.color = 'var(--warning-text)';
+                        }
+                    }
+                } else {
+                    liveEl.textContent = 'Unlisted';
+                    liveEl.style.color = 'var(--text-muted)';
+                }
+            }
 
             if (!data.found || !data.unlockEvents) {
                 // No data — hide section
