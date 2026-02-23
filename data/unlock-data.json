@@ -18367,6 +18367,81 @@
       "source": "BSE",
       "noticeId": "client-fetched",
       "fetchedAt": "2026-02-22T14:52:46.809Z"
+    },
+    "Shanmuga": {
+      "found": true,
+      "totalShares": 13613000,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 13613000,
+          "percentage": 100,
+          "label": "Not under lock-in"
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20250220-33",
+      "fetchedAt": "2026-02-23T02:50:40.910Z"
+    },
+    "Shanmuga Hospital Ltd.": {
+      "found": true,
+      "totalShares": 13613000,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 3818000,
+          "percentage": 28,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-02-27",
+          "shares": 7072400,
+          "percentage": 52
+        },
+        {
+          "date": "2028-02-27",
+          "shares": 2722600,
+          "percentage": 20
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20250220-33",
+      "fetchedAt": "2026-02-23T03:03:12.491Z"
+    },
+    "H.M.Electro Mech Ltd.": {
+      "found": true,
+      "totalShares": 13699200,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 2646400,
+          "percentage": 19.3,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-02-27",
+          "shares": 524800,
+          "percentage": 3.8
+        },
+        {
+          "date": "2025-04-28",
+          "shares": 528000,
+          "percentage": 3.9
+        },
+        {
+          "date": "2026-02-03",
+          "shares": 7260000,
+          "percentage": 53
+        },
+        {
+          "date": "2028-02-03",
+          "shares": 2740000,
+          "percentage": 20
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20250130-45",
+      "fetchedAt": "2026-02-23T03:04:02.625Z"
     }
   }
 }

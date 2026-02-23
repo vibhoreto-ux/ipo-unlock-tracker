@@ -232,8 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         });
 
-        // 3. Apply Date Filter (This Week / Upcoming)
+        // 3. Apply Date Filter (This Week / This Month / Last Month / Upcoming)
         const { start: weekStart, end: weekEnd } = getThisWeekRange();
+        const { start: monthStart, end: monthEnd } = getThisMonthRange();
+        const { start: lastMonthStart, end: lastMonthEnd } = getLastMonthRange();
+
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         const next30 = new Date();
@@ -250,6 +253,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentFilter === 'week') {
                 return dates.some(d => d >= weekStart && d <= weekEnd);
             }
+            if (currentFilter === 'thisMonth') {
+                return dates.some(d => d >= monthStart && d <= monthEnd);
+            }
+            if (currentFilter === 'lastMonth') {
+                return dates.some(d => d >= lastMonthStart && d <= lastMonthEnd);
+            }
             if (currentFilter === 'upcoming') {
                 return dates.some(d => d >= today && d <= next30);
             }
@@ -262,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Extract date based on currentSort.column
             if (currentSort.column === 'listing') {
-                dateA = a.allotmentDate ? new Date(a.allotmentDate) : new Date(0);
-                dateB = b.allotmentDate ? new Date(b.allotmentDate) : new Date(0);
+                dateA = companyListingDate(a.allotmentDate);
+                dateB = companyListingDate(b.allotmentDate);
             } else if (currentSort.column === 'anchor30') {
                 dateA = getDateFromObj(a.anchor30);
                 dateB = getDateFromObj(b.anchor30);
@@ -288,6 +297,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!obj) return currentSort.direction === 'asc' ? new Date(8640000000000000) : new Date(0);
 
             const s = obj.adjusted || obj.expiryDate || obj.original || obj.originalDate;
+            return s ? new Date(s) : (currentSort.direction === 'asc' ? new Date(8640000000000000) : new Date(0));
+        }
+
+        // Helper specifically for fixing the nested Listing Date object
+        function companyListingDate(obj) {
+            if (!obj) return currentSort.direction === 'asc' ? new Date(8640000000000000) : new Date(0);
+            const s = obj.adjusted || obj.original;
             return s ? new Date(s) : (currentSort.direction === 'asc' ? new Date(8640000000000000) : new Date(0));
         }
 
@@ -450,6 +466,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const end = new Date(start);
         end.setDate(start.getDate() + 6);
+        end.setHours(23, 59, 59, 999);
+
+        return { start, end };
+    }
+
+    // Helper: This Month Range (1st to last day)
+    function getThisMonthRange() {
+        const now = new Date();
+        const start = new Date(now.getFullYear(), now.getMonth(), 1);
+        start.setHours(0, 0, 0, 0);
+
+        const end = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+        end.setHours(23, 59, 59, 999);
+
+        return { start, end };
+    }
+
+    // Helper: Last Month Range
+    function getLastMonthRange() {
+        const now = new Date();
+        const start = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+        start.setHours(0, 0, 0, 0);
+
+        const end = new Date(now.getFullYear(), now.getMonth(), 0);
         end.setHours(23, 59, 59, 999);
 
         return { start, end };
