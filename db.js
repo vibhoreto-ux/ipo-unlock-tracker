@@ -125,6 +125,49 @@ function getCircularData(companyName) {
 function saveCircularData(companyName, data) {
     const db = readDB();
     db.circularData[companyName] = data;
+
+    // --- Update Pre-IPO Date from Annexure ---
+    if (data && data.found && data.unlockEvents && data.unlockEvents.length > 0) {
+        const company = db.companies.find(c => c.companyName === companyName);
+        if (company && company.allotmentDate) {
+            const isSME = company.issueType && company.issueType.toLowerCase().includes('sme');
+            const targetMonths = isSME ? 12 : 6;
+
+            const listingDateSrc = company.allotmentDate.adjusted || company.allotmentDate.original;
+            if (listingDateSrc) {
+                const listingDate = new Date(listingDateSrc);
+                const targetDate = new Date(listingDate);
+                targetDate.setMonth(targetDate.getMonth() + targetMonths);
+
+                let closestEvent = null;
+                let minDiff = Infinity;
+
+                for (const event of data.unlockEvents) {
+                    if (!event.date) continue;
+                    const eventDate = new Date(event.date);
+                    const diffDays = Math.abs((eventDate - targetDate) / (1000 * 60 * 60 * 24));
+
+                    if (diffDays < minDiff) {
+                        minDiff = diffDays;
+                        closestEvent = event;
+                    }
+                }
+
+                // Allow up to 90 days variance because lock-in calculations can drift significantly from raw allotment dates depending on allotment rules
+                if (closestEvent && minDiff <= 90) {
+                    if (!company.preIPO) {
+                        company.preIPO = {};
+                    }
+                    company.preIPO.expiryDate = closestEvent.date;
+                    company.preIPO.isAdjusted = true;
+                    if (!company.preIPO.type) {
+                        company.preIPO.type = `${isSME ? 'SME' : 'Mainboard'} Pre-IPO`;
+                    }
+                }
+            }
+        }
+    }
+
     writeDB(db);
 }
 
