@@ -701,10 +701,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.liveMarketPrice && data.liveMarketPrice.price) {
                     liveEl.textContent = '₹' + data.liveMarketPrice.price.toFixed(2);
                     // Add subtle color context
-                    if (company.issuePrice) {
-                        if (data.liveMarketPrice.price > company.issuePrice) {
+                    if (currentModalCompany && currentModalCompany.issuePrice) {
+                        if (data.liveMarketPrice.price > currentModalCompany.issuePrice) {
                             liveEl.style.color = 'var(--success-text)';
-                        } else if (data.liveMarketPrice.price < company.issuePrice) {
+                        } else if (data.liveMarketPrice.price < currentModalCompany.issuePrice) {
                             liveEl.style.color = 'var(--warning-text)';
                         }
                     }
