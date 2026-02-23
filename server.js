@@ -420,7 +420,7 @@ app.post('/api/parse-bse-pdf', express.raw({ type: '*/*', limit: '10mb' }), asyn
 
         console.log(`[BSE/Client] Received PDF from client for ${companyName}: ${(pdfBuffer.length / 1024).toFixed(1)} KB`);
 
-        const lockInData = await parseLockInData(pdfBuffer);
+        const lockInData = await parseLockInData(pdfBuffer, 'BSE');
 
         const response = {
             found: true,

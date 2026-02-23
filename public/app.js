@@ -810,7 +810,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const normalized = companyName
                 .toUpperCase()
                 .replace(/ (LTD|LIMITED|INDIA|PRIVATE|PVT)\.?/g, '')
-                .replace(/[^A-Z0-9 ]/g, '')
+                .replace(/[^A-Z0-9]/g, ' ') // replace punctuation with spaces so acronyms dont glue (H.M. -> H M)
                 .trim();
             const words = normalized.split(/\s+/).filter(w => w.length >= 3);
 

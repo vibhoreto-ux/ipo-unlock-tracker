@@ -49,7 +49,7 @@ async function findNSECircular(companyName, listingDateISO) {
         .toUpperCase()
         .replace(/ (LTD|LIMITED|INDIA|PRIVATE|PVT)\.?$/g, '')
         .replace(/ (LTD|LIMITED|INDIA|PRIVATE|PVT)\.? /g, ' ')
-        .replace(/[^A-Z0-9 ]/g, '')
+        .replace(/[^A-Z0-9]/g, ' ')
         .trim();
 
     // Extract key words (skip very short ones)
@@ -87,7 +87,7 @@ async function findNSECircular(companyName, listingDateISO) {
             if (!sub.includes('LISTING OF EQUITY SHARES')) return false;
 
             // Check if company name words appear in subject
-            const normalizedSub = sub.replace(/[^A-Z0-9 ]/g, '');
+            const normalizedSub = sub.replace(/[^A-Z0-9]/g, ' ');
             const matchCount = searchWords.filter(w => normalizedSub.includes(w)).length;
             return matchCount >= Math.min(searchWords.length, 2); // At least 2 words match (or all if < 2)
         });
@@ -276,7 +276,7 @@ async function findBSENotice(companyName, listingDateISO) {
     const normalizedSearch = companyName
         .toUpperCase()
         .replace(/ (LTD|LIMITED|INDIA|PRIVATE|PVT)\.?/g, '')
-        .replace(/[^A-Z0-9 ]/g, '')
+        .replace(/[^A-Z0-9]/g, ' ')
         .trim();
 
     const searchWords = normalizedSearch.split(/\s+/).filter(w => w.length >= 3);
@@ -350,7 +350,7 @@ async function searchBSESMENotices(searchWords) {
 
         // Find matching company
         for (const link of links) {
-            const normalizedText = link.text.toUpperCase().replace(/[^A-Z0-9 ]/g, '');
+            const normalizedText = link.text.toUpperCase().replace(/[^A-Z0-9]/g, ' ');
             const matchCount = searchWords.filter(w => normalizedText.includes(w)).length;
 
             if (matchCount >= Math.min(searchWords.length, 2)) {
@@ -467,7 +467,7 @@ function parseNoticeHTML(html, noticeId, normalizedSearch) {
     // Skip checks if normalizedSearch is empty (already matched via SME search)
     if (normalizedSearch) {
         if (!isListing) return null;
-        const normalizedBody = bodyText.replace(/[^A-Z0-9 ]/g, '');
+        const normalizedBody = bodyText.replace(/[^A-Z0-9]/g, ' ');
         if (!normalizedBody.includes(normalizedSearch)) return null;
     }
 
@@ -587,7 +587,7 @@ async function downloadBSEPDF(pdfUrl) {
  * @param {Buffer} pdfBuffer - PDF file buffer
  * @returns {{ totalShares: number, unlockEvents: Array }}
  */
-async function parseLockInData(pdfBuffer) {
+async function parseLockInData(pdfBuffer, expectedExchange = null) {
     const data = await pdf(pdfBuffer);
     let text = data.text;
 
@@ -601,8 +601,15 @@ async function parseLockInData(pdfBuffer) {
     const norm = text.replace(/\s+/g, ' ');
 
     // Detect format: NSE has "Lock in up to" header, BSE uses "Fully Paid" segments
-    // Actually we will just try the Universal Mathematical Parser for BSE.
-    const isNSEFormat = norm.includes('Lock in up to') || norm.includes('Lock in upto');
+    // Many BSE companies coincidentally use "Lock in upto", so strictly bypass heuristic if exchange is known
+    let isNSEFormat = false;
+    if (expectedExchange === 'BSE') {
+        isNSEFormat = false;
+    } else if (expectedExchange === 'NSE') {
+        isNSEFormat = true;
+    } else {
+        isNSEFormat = norm.includes('Lock in up to') || norm.includes('Lock in upto');
+    }
 
     if (isNSEFormat) {
         return parseNSEFormat(norm);
@@ -905,12 +912,9 @@ function parseUniversalBSEFormat(norm) {
 
 function findDateNear(text, startIndex, range) {
     // For BSE Math Parser, dates are usually immediately following the "To" distinctive number.
-    // Restrict range to prevent bleeding into the next row if newlines are missing.
-    let chunk = text.substring(startIndex, startIndex + Math.min(range, 60));
-    const newlineIdx = chunk.indexOf('\n');
-    if (newlineIdx > 0) {
-        chunk = chunk.substring(0, newlineIdx);
-    }
+    // We limit chunk to 55 characters to safely capture wrapped dates on the next line without bleeding into the next row entirely.
+    let chunk = text.substring(startIndex, startIndex + Math.min(range, 55));
+
     const dateRegex = /(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})/g;
     let match;
     const dates = [];
@@ -1073,7 +1077,7 @@ async function getUnlockPercentages(companyName, exchange, listingDateISO) {
             try {
                 const pdfBuffer = await downloadNSEAnnexure(nseCircular.zipUrl);
                 if (pdfBuffer) {
-                    const lockInData = await parseLockInData(pdfBuffer);
+                    const lockInData = await parseLockInData(pdfBuffer, 'NSE');
                     if (lockInData.unlockEvents.length > 0) {
                         return {
                             ...lockInData,
@@ -1095,7 +1099,7 @@ async function getUnlockPercentages(companyName, exchange, listingDateISO) {
         if (bseNotice && bseNotice.annexureUrl) {
             try {
                 const pdfBuffer = await downloadBSEPDF(bseNotice.annexureUrl);
-                const lockInData = await parseLockInData(pdfBuffer);
+                const lockInData = await parseLockInData(pdfBuffer, 'BSE');
 
                 return {
                     ...lockInData,
