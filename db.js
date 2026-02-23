@@ -81,6 +81,8 @@ function mergeCompanies(existing, incoming) {
             if (company.allotmentDate) existing.allotmentDate = company.allotmentDate;
             if (company.issueType) existing.issueType = company.issueType;
             if (company.exchange) existing.exchange = company.exchange;
+            if (company.chittorgarhUrl) existing.chittorgarhUrl = company.chittorgarhUrl;
+            if (company.rhpUrl) existing.rhpUrl = company.rhpUrl;
             map.set(key, existing);
             updateCount++;
         } else {

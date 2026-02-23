@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { scrapeUnlockData } = require('./scraper');
 const { scrapeWithBrowser } = require('./browser-scraper');
+const { autoFetchMissingRHP } = require('./auto-rhp');
 const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
 
 const app = express();
@@ -250,6 +251,9 @@ app.get('/api/unlock-data', async (req, res) => {
 
         // Save to DB
         writeDB(updatedDB);
+
+        // Trigger background RHP completion auto-healer
+        autoFetchMissingRHP().catch(err => console.error('[Auto-RHP] Error:', err.message));
 
         res.json({
             data: merged,

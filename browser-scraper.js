@@ -53,12 +53,14 @@ async function fetchIPOList(year) {
             // Extract company name from HTML link
             const rawName = rec['Company'] || '';
             const $ = cheerio.load(rawName);
-            let companyName = $('a').text().trim() || rawName.replace(/<[^>]+>/g, '').trim();
+            const anchor = $('a');
+            let companyName = anchor.text().trim() || rawName.replace(/<[^>]+>/g, '').trim();
             companyName = companyName.replace(/\s+IPO\s*$/i, '').trim();
+
+            const chittorgarhUrl = anchor.attr('href') || null;
 
             if (!companyName || seen.has(companyName)) continue;
             seen.add(companyName);
-
 
             const exchange = rec['Listing at'] || '';
             const issueType = exchange.includes('SME') ? 'SME' : 'Mainboard';
@@ -95,7 +97,8 @@ async function fetchIPOList(year) {
                 companyName,
                 issueType,
                 exchange,
-                allotmentDate
+                allotmentDate,
+                chittorgarhUrl
             });
         }
 
@@ -124,8 +127,11 @@ async function fetchAnchorData(year) {
             // Extract company name from HTML link
             const rawName = rec['Company'] || '';
             const $ = cheerio.load(rawName);
-            let companyName = $('a').text().trim() || rawName.replace(/<[^>]+>/g, '').trim();
+            const anchor = $('a');
+            let companyName = anchor.text().trim() || rawName.replace(/<[^>]+>/g, '').trim();
             companyName = companyName.replace(/\s+IPO\s*$/i, '').trim();
+
+            const chittorgarhUrl = anchor.attr('href') || null;
 
             const rawIssueType = rec['Issue Type'] || '';
             const issueType = rawIssueType === 'Mainline' ? 'Mainboard' : rawIssueType;
@@ -145,6 +151,7 @@ async function fetchAnchorData(year) {
             return {
                 companyName,
                 issueType,
+                chittorgarhUrl,
                 allotmentDate: allotDate ? {
                     original: allotDate.toISOString(),
                     adjusted: getNextBusinessDay(allotDate).toISOString(),
