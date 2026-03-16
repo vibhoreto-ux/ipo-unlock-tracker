@@ -10,7 +10,24 @@
 
 const axios = require('axios');
 const cheerio = require('cheerio');
-const pdf = require('pdf-parse');
+// pdf-parse compat shim: works with both v1 (function) and v2 (PDFParse class)
+const _pdfParseLib = require('pdf-parse');
+async function pdf(buffer) {
+    // v1 API: pdf-parse exports a function directly
+    if (typeof _pdfParseLib === 'function') return _pdfParseLib(buffer);
+    // v2 API: pdf-parse exports { PDFParse } class — needs a file URL not a buffer
+    const { PDFParse } = _pdfParseLib;
+    const _path = require('path'); const _fs = require('fs');
+    // Write to app directory (system tmp may be sandbox-blocked)
+    const tmpFile = _path.join(__dirname, `.pdfparse_tmp_${Date.now()}.pdf`);
+    _fs.writeFileSync(tmpFile, buffer);
+    try {
+        const parser = new PDFParse({ url: `file://${tmpFile}` });
+        const result = await parser.getText();
+        return { text: result.text || result.content || '', numpages: result.pages?.length || 0 };
+    } finally { try { _fs.unlinkSync(tmpFile); } catch (e) { } }
+}
+
 const AdmZip = require('adm-zip');
 const { execSync } = require('child_process');
 
@@ -591,7 +608,13 @@ async function parseLockInData(pdfBuffer, expectedExchange = null) {
     const data = await pdf(pdfBuffer);
     let text = data.text;
 
+    require('fs').writeFileSync('debug_bse_pdf.txt', text);
     console.log(`[Parser] PDF text length: ${text.length} chars, ${data.numpages} pages`);
+
+    if (text.trim().length < 150) {
+        console.log('[Parser] PDF text is famously empty (< 150 chars). Aborting as Scanned Image.');
+        return { totalShares: 0, unlockEvents: [], isScannedPDF: true };
+    }
 
     // Normalize: join line-broken dates (e.g., "12-\nFeb-2026")
     text = text.replace(/(\d{1,2})-\s*\n\s*(\w{3,})-\s*\n?\s*(\d{4})/g, '$1-$2-$3');
@@ -728,8 +751,8 @@ function parseUniversalBSEFormat(norm) {
     let textForNums = text.replace(/(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})/g, match => ' '.repeat(match.length));
 
     // Extract all numbers with their string indices, include glued long numbers
-    // Fix: Match numbers bounded by NON-DIGITS natively, rather than relying on word boundaries that break on letters ("333F")
-    const numRegex = /(?<![\d,])(\d{1,3}(?:,\d{2,3})+|\d+)(?![\d,])/g;
+    // Allow any sequence of digits and commas to capture totally fused table rows
+    const numRegex = /(?<![\d,])([\d,]+)(?![\d,])/g;
     const nums = [];
     let m;
     while ((m = numRegex.exec(textForNums)) !== null) {
@@ -882,7 +905,7 @@ function parseUniversalBSEFormat(norm) {
     // Fallback: if triplet math failed entirely, try a simpler approach finding shares next to dates
     if (lockInEntries.length === 0) {
         console.log('[Parser] Mathematical fallback to proximity parsing');
-        const dateRegex = /(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})/g;
+        const dateRegex = /(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})|(\d{1,2})\s*(?:st|nd|rd|th)?\s+([a-zA-Z]+),?\s*(\d{4})/g;
         let dm;
         while ((dm = dateRegex.exec(text)) !== null) {
             const dateStr = dm[0];
@@ -915,7 +938,7 @@ function findDateNear(text, startIndex, range) {
     // We limit chunk to 55 characters to safely capture wrapped dates on the next line without bleeding into the next row entirely.
     let chunk = text.substring(startIndex, startIndex + Math.min(range, 55));
 
-    const dateRegex = /(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})/g;
+    const dateRegex = /(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})|(\d{1,2})\s*(?:st|nd|rd|th)?\s+([a-zA-Z]+),?\s*(\d{4})/g;
     let match;
     const dates = [];
     while ((match = dateRegex.exec(chunk)) !== null) {
@@ -1003,6 +1026,16 @@ function parseBSEDate(dateStr) {
         'jul': 6, 'aug': 7, 'sep': 8, 'oct': 9, 'nov': 10, 'dec': 11
     };
 
+    const textMatch = dateStr.match(/(\d{1,2})\s*(?:st|nd|rd|th)?\s+([a-zA-Z]+),?\s*(\d{4})/i);
+    if (textMatch) {
+        let day = parseInt(textMatch[1], 10);
+        let monthStr = textMatch[2].toLowerCase().substring(0, 3);
+        let year = parseInt(textMatch[3], 10);
+        if (months[monthStr] !== undefined) {
+            return new Date(Date.UTC(year, months[monthStr], day));
+        }
+    }
+
     let match = dateStr.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})|(\d{1,2})\/(\d{1,2})\/(\d{4})|(\d{1,2})-(\w{3,}|\d{1,2})-(\d{4})/);
     if (match) {
         const dayStr = match[1] || match[4] || match[7];
@@ -1083,6 +1116,7 @@ async function getUnlockPercentages(companyName, exchange, listingDateISO) {
                             ...lockInData,
                             source: 'NSE',
                             noticeId: nseCircular.displayNo,
+                            pdfUrl: nseCircular.zipUrl,
                             fetchedAt: new Date().toISOString()
                         };
                     }
@@ -1105,6 +1139,7 @@ async function getUnlockPercentages(companyName, exchange, listingDateISO) {
                     ...lockInData,
                     source: 'BSE',
                     noticeId: bseNotice.noticeId,
+                    pdfUrl: bseNotice.annexureUrl,
                     fetchedAt: new Date().toISOString()
                 };
             } catch (bseErr) {

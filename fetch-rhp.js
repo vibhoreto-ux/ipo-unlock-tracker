@@ -25,9 +25,12 @@ async function fetchRHPForCompany(company) {
             const txt = $(el).text().toLowerCase();
             const href = $(el).attr('href');
 
-            if (txt.includes('rhp') || (href && href.toLowerCase().includes('rhp'))) {
-                // Ensure absolute URL
-                if (href) {
+            if (!href) return;
+
+            // We specifically want PDF files related to RHP/DRHP
+            if (href.toLowerCase().endsWith('.pdf') && (txt.includes('rhp') || txt.includes('drhp') || href.toLowerCase().includes('rhp') || href.toLowerCase().includes('drhp'))) {
+                // Ignore anchor allocation reports
+                if (!href.toLowerCase().includes('anchor')) {
                     rhpLink = href.startsWith('http') ? href : `https://www.chittorgarh.com${href}`;
                 }
             }
@@ -55,13 +58,16 @@ async function runBackfill() {
         const batch = companies.slice(i, i + BATCH_SIZE);
 
         const promises = batch.map(async (company) => {
-            if (company.rhpUrl) return; // already have it
             if (!company.chittorgarhUrl) return; // cannot fetch
+            // Force re-fetch if previously saved generic keyword link or null
+            if (company.rhpUrl && company.rhpUrl.endsWith('.pdf')) return; // already have legit PDF
 
             const link = await fetchRHPForCompany(company);
             if (link) {
                 company.rhpUrl = link;
                 successCount++;
+            } else if (company.rhpUrl && !company.rhpUrl.endsWith('.pdf')) {
+                company.rhpUrl = null;
             }
             processedCount++;
         });

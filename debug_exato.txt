@@ -1,0 +1,466 @@
+
+
+1.Name of Listed Entity:EXATO TECHNOLOGIES LIMITED
+2.Scrip Code/Name of Scrip/Class of Security:,,EQUITY SHARES  
+3.Share Holding Pattern Filed under: Reg. 31(1)(a)
+a. if under 31(1)(b) then indicate the report for quarter ending 03/12/2025
+b. if under 31(1)(c) then indicate date of allotment/extinguishment
+4.Declaration : The Listed entity is required to submit the following declaration to the extent of submission of information:
+ParticularsYES*NO*
+aWhether the Listed Entity has issued any partly paid up sharesNO*
+bWhether the Listed Entity has issued any Convertible Securities or Warrants?NO*
+cWhether the Listed Entity has any shares against which depository receipts are issued?NO*
+dWhether the Listed Entity has any shares in locked-in?YES*
+eWhether any shares held by promoters are pledge or otherwise encumbered?NO*
+*if the Listed Entity selectes the option 'NO' for the questions above, the columns for the partly paid up shares, Outstanding Convertible
+Securities/Warrants,    depository    receipts,    locked-in     shares,   No of  shares  pledged  or  otherwise   encumbered  by  promoters,  as
+applicable,  shall  not  be  displayed  at  the time of dissemination on the Stock Exchange website. Also wherever there is 'No'  declared
+by  Listed  entity  in above  table the values will be considered as 'Zero' by default on submission of  the  format of  holding  of  specified
+securities.
+5The tabular format for disclosure of holding of specified securities is as follows:
+Format of Holding of Specified securities
+
+Table I - Summary Statement holding of specified securities
+Category 
+Category of Shareholder
+No of 
+Shareholders
+No of fully paid up 
+equity shares held
+No of Partly paid-
+up equity shares 
+held
+No of Shares 
+Underlying 
+Depository 
+Receipts
+Total No of Shares 
+Held (VII) = 
+(IV)+(V)+(VI)
+Shareholding as a 
+% of total no of 
+shares (As a % of 
+(A+B+C2))
+No of Shares 
+Underlying 
+Outstanding 
+converttible 
+securities 
+Total No of shares on 
+fully diluted basis 
+(including warrants, 
+ESOP, Convertible 
+Securities etc.) 
+Shareholding as a % 
+assuming full 
+conversion of 
+convertible Securities 
+(as a percentage of 
+Number of equity 
+shares held in 
+dematerialized 
+form
+Total as a % 
+of (A+B+C)
+No.As a % of 
+total Shares 
+No.
+As a % of 
+total Shares No.
+As a % of 
+total Shares No.
+As a % of 
+total Shares No.
+As a % of 
+total Shares 
+Class XClass YTotal
+(I)(II)(III)(IV)(V)(VI)(VII)(VIII)(X)(XI)(XII)(XVIII)
+(A)
+Promoter & Promoter Group3550892400550892454.7355089240550892454.730550892454.735508924100.0000.0000.0000.0000.005508924
+(B)Public736455644700455644745.2745564470455644745.270455644745.27264244757.99NANANANANANANANA4556447
+(C)Non Promoter-Non Public
+(C1)Shares underlying DRs00000NA0000.0000NA00.00NANANANANANANANA0
+(C2)Shares held by Employes Trusts000000.000000.00000.0000.00NANANANANANANANA0
+Total:739
+100653710
+010065371100.0010065371010065371100.00010065371100.00815137180.980
+0.000
+0.00
+00.00
+00.00
+10065371
+Total Numberof 
+Sharesencumbered(XVII) 
+=(XIV+XV+XVI)
+No of Voting Rights
+(IX)(XIII)(XIV)(XV)(XVI)(XVII)
+Other encumbrances, if anyNumber of Voting Rights held in each class of securities
+Number of Locked in SharesNumber of Shares pledged
+Non-Disposal Undertaking
+
+Table II - Statement showing shareholding pattern of the Promoter and Promoter Group
+Category Category & Name of the ShareholderEntity type 
+Promoter or 
+Promoter 
+group 
+(Promoter 
+group would 
+exclude 
+promoters)
+PANNo of 
+Shareholders
+No of fully paid up 
+equity shares held
+No of Partly paid-
+up equity shares 
+held
+No of Shares 
+Underlying 
+Depository 
+Receipts
+Total No of 
+Shares Held 
+(IV+V+VI)
+Shareholding 
+as a % of 
+total no of 
+shares 
+(calculated as 
+per SCRR, 
+1957 (VIII) As 
+a % of 
+(A+B+C2
+No of Shares Underlying 
+Outstanding 
+converttible securities 
+(Including Warrants, 
+ESOP etc.)
+Total No of 
+shares on 
+fully diluted 
+basis 
+(including 
+warrants, 
+ESOP, 
+Convertible 
+Securities 
+etc.) 
+(XII)=(VIII+XI)
+Shareholding   a                                                                                  
+Number 
+of equity 
+shares 
+held in 
+demateri
+alized 
+form
+Total as a % of (A+B+C)
+No.As a % of total 
+Shares held
+No.
+As a % of 
+total No.
+As a % of 
+total No.
+As a % of 
+total No.
+As a % of 
+total 
+Class XClass Y
+Total
+(I)(II)(III)(IV)(V)(VI)(VII)(VIII)(IX)(XI)(XII)(XIII)(XIX)
+(1)Indian
+(a)Individuals/Hindu undivided Family3550892400550892454.7355089240550892454.730550892454.735508924100.0000.0000.0000.0000.005508924
+ABHIJEET SINHA                                                                                                                                        17052800705280.70705280705280.700705280.7070528100.0000.0000.0000.0000.0070528
+APPUORV K SINHA                                                                                                                                       1543288600543288653.9854328860543288653.980543288653.985432886100.0000.0000.0000.0000.005432886
+SWATI  SINHA                                                                                                                                          155100055100.055510055100.05055100.055510100.0000.0000.0000.0000.005510
+(b)Central Government/State Government(s)000000.000000.00000.0000.0000.0000.0000.0000.000
+(c)Financial Institutions/Banks000000.000000.00000.0000.0000.0000.0000.0000.000
+(d)Any Other000000.000000.00000.0000.0000.0000.0000.0000.000
+Sub-Total (A)(1)3550892400550892454.7355089240550892454.730550892454.735508924100.0000.0000.0000.0000.005508924
+(2)Foreign
+(a)
+Individuals (Non-Resident Individuals/Foreign Individuals000000.000000.00000.0000.0000.0000.0000.0000.000
+(b)Government000000.000000.00000.0000.0000.0000.0000.0000.000
+(c)Institutions000000.000000.00000.0000.0000.0000.0000.0000.000
+(d)Foreign Portfolio Investor000000.000000.00000.0000.0000.0000.0000.0000.000
+(e)Any Other 000000.000000.00000.0000.0000.0000.0000.0000.000
+Sub-Total (A)(2)000000.000000.00000.0000.0000.0000.0000.0000.000
+Total Shareholding of Promoter and Promoter Group (A)=(A)(1)+(A)(2)35508924
+0
+0550892454.7355089240550892454.730550892454.735508924100.0000.0000.0000.0000.005508924
+(XVIII)
+No of Voting Rights
+(X)(XIV)(XV)(XVI)(XVII)
+Total Number of 
+Shares encumbered 
+(XVIII) = 
+(XV+XVI+XVII)
+Number of Voting Rights held in each class of securitiesNumber of Locked in SharesNumber of Shares pledged Non-Disposal 
+Undertaking
+Other 
+encumbrances,if any
+
+Table III - Statement showing shareholding pattern of the Public shareholder
+Category Category & Name of the ShareholderPANNo of ShareholdersNo of fully paid up 
+equity shares held
+No of Partly paid-
+up equity shares 
+held
+No of Shares 
+Underlying 
+Depository 
+Receipts
+Total No of Shares 
+Held (IV+V+VI)
+Shareholding 
+as a % of total 
+no of shares 
+(A+B+C2)
+No of Shares 
+Underlying Outstanding 
+converttible securities 
+(Including Warrants, 
+ESOP etc.)
+Total No of shares on 
+fully diluted basis 
+(including warrants, 
+ESOP, Convertible 
+Securities etc.) 
+(XI)=(VII+X)
+Shareholding 
+as a % 
+assuming full 
+conversion of 
+convertible 
+Securities (as 
+a percentage 
+of diluted 
+share capital)
+Number 
+of equity 
+shares 
+held in 
+demateri
+alized 
+form
+Total as a % 
+of (A+B+C)
+No.As a % of total 
+Shares held
+No.
+As a % of total 
+Shares held
+No.
+As a % of total 
+Shares held
+No.
+               
+total 
+Shares 
+No.
+               
+total 
+Shares 
+Class XClass YTotalSubcate
+gory (i)
+Subcate
+gory (ii)
+Subcate
+gory (iii)
+(I)(II)(III)(IV)(V)(VI)(VII)(VIII)(X)(XI)(XII)(XVIII)
+(1)Institutions (Domestic)
+(a)Mutual Funds23200000320000.32320000320000.320320000.3200.00NANANANANANANANA32000000
+(b)Venture Capital Funds000000.000000.00000.0000.00NANANANANANANANA0000
+(c)Alternate Investment Funds50997374009973749.9199737409973749.9109973749.9179237479.45NANANANANANANANA997374000
+NINE ALPS TRUST-NINE ALPS OPPORTUNITY FUND                                                                                                            1694160006941606.9069416006941606.9006941606.9069116099.57NANANANANANANANA694160000
+(d)Banks73500000350000.35350000350000.350350000.3500.00NANANANANANANANA35000000
+(e)Insurance Companies130000030000.033000030000.03030000.0300.00NANANANANANANANA3000000
+(f)Provident Funds/Pension Funds000000.000000.00000.0000.00NANANANANANANANA0000
+(g)Asset Reconstruction Companies000000.000000.00000.0000.00NANANANANANANANA0000
+(h)Soveregin Wealth Funds42200000220000.22220000220000.220220000.2200.00NANANANANANANANA22000000
+(i)
+NBFC Registered with RBI21000000100000.10100000100000.100100000.1000.00NANANANANANANANA10000000
+(j)Other Financial Insutitions130000030000.033000030000.03030000.0300.00NANANANANANANANA3000000
+(k)Any Other
+Sub Total (B)(1)67110237400110237410.9511023740110237410.950110237410.9579237471.88NANANANANANANANA1102374000
+(2)Institutions (Foreign)
+(a)Foreign Direct Investment000000.000000.00000.0000.00NANANANANANANANA0000
+(b)Foreign Venture Capital000000.000000.00000.0000.00NANANANANANANANA0000
+(c)Sovereign Wealth Funds000000.000000.00000.0000.00NANANANANANANANA0000
+(d)Foreign Portfolio Investors Category I36217000002170002.1621700002170002.1602170002.167500034.56NANANANANANANANA217000000
+(e)Foreign Portfolio Investors Category II140000040000.044000040000.04040000.0400.00NANANANANANANANA4000000
+(f)Overseas Depositories (holding DRs) (balancing figure)000000.000000.00000.0000.00NANANANANANANANA0000
+(g)Any Other
+Sub Total (B)(2)37221000002210002.2022100002210002.2002210002.207500033.94NANANANANANANANA221000000
+(3)Central Government/State Government(s)/President of India
+(a)Central Government / President of India000000.000000.00000.0000.00NANANANANANANANA0000
+(b)State Government / Governor000000.000000.00000.0000.00NANANANANANANANA0000
+(c)
+Shareholding by Companies or Bodies Corporate where Central / State Governm        000000.000000.00000.0000.00NANANANANANANANA0000
+Sub Total (B)(3)000000.000000.00000.000#DIV/0!NANANANANANANANA0000
+(4)Non-Institutions
+(a)Associate companies / Subsidiaries000000.000000.00000.0000.00NANANANANANANANA0000
+(b)
+Directors and their relatives (excluding independent directors and nominee dire000000.000000.00000.0000.00NANANANANANANANA0000
+(c)Key Managerial Personnel000000.000000.00000.0000.00NANANANANANANANA0000
+(d)
+Relatives of promoters (other than ‘immediate relatives’ of promoters disclose        000000.000000.00000.0000.00NANANANANANANANA0000
+(e)
+Trusts where any person belonging to 'Promoter and Promoter Group' category                   000000.000000.00000.0000.00NANANANANANANANA0000
+(f)Investor Education and Protection Fund (IEPF)000000.000000.00000.0000.00NANANANANANANANA0000
+(g)
+Resident Individuals holding nominal share capital up to Rs. 2 lakhs568141339400141339414.0414133940141339414.040141339414.0425239417.86NANANANANANANANA1413394000
+(h)Resident Individuals holding nominal share capital in excess of Rs. 2 lakhs3646874006468746.4364687406468746.4306468746.43646874100.00NANANANANANANANA646874000
+VIJAY KISHANLAL KEDIA                                                                                                                                 1350436003504363.4835043603504363.4803504363.48350436100.00NANANANANANANANA350436000
+SHEELA BASKAR SUBRAMANIAN                                                                                                                             1201666002016662.0020166602016662.0002016662.00201666100.00NANANANANANANANA201666000
+(i)Non Resident Indians (NRIs)120000020000.022000020000.02020000.0200.00NANANANANANANANA2000000
+(j)Foreign Nationals3363660003636603.6136366003636603.6103636603.61363660100.00NANANANANANANANA363660000
+MITCHELL SALLY ANNE ELIZABETH                                                                                                                         1121220001212201.2012122001212201.2001212201.20121220100.00NANANANANANANANA121220000
+SHIVAKUMAR K                                                                                                                                          1121220001212201.2012122001212201.2001212201.20121220100.00NANANANANANANANA121220000
+ASHEESH SHRIVASTAV                                                                                                                                    1121220001212201.2012122001212201.2001212201.20121220100.00NANANANANANANANA121220000
+(k)Foreign Companies)000000.000000.00000.0000.00NANANANANANANANA0000
+(l)Bodies Corporate15698145006981456.9469814506981456.9406981456.9451214573.36NANANANANANANANA698145000
+GIRIRAJ STOCK BROKING PRIVATE LIMITED .-PROP                                                                                                          1134000001340001.3313400001340001.3301340001.3300.00NANANANANANANANA134000000
+ECOCARE  INFRATECH SOLUTIONS PRIVATE LIMITED                                                                                                          1461187004611874.5846118704611874.5804611874.58461187100.00NANANANANANANANA461187000
+(m)Any Other
+H U F                                             42109000001090001.0810900001090001.0801090001.0800.00NANANANANANANANA109000000
+Sub Total (B)(4)632323307300323307332.1232330730323307332.120323307332.12177507354.903233073000
+Total Public Shareholding (B) = (B)(1)+(B)(2)+(B)(3)+(B)(4)73645564470
+0
+455644745.2745564470455644745.270455644745.27264244757.99455644700
+0
+Sub-categorization of shares
+No of Voting Rights
+Shareholding (No. of shares) 
+under
+(IX)(XIII)(XIV)(XV)(XVI)(XVII)(XVIII)
+Number of Voting Rights held in each class of securitiesNumber of Locked in SharesNumber of Shares pledged Non-Disposal Undertaking) Otherencumbrances,if any Total Number of 
+Shares encumbered 
+(XVII) = 
+(XIV+XV+XVI)
+
+Table IV - Statement showing shareholding pattern of the Non Promoter - Non Public Shareholder
+Category 
+Category & Name of the ShareholderPAN
+No of Shareholders
+No of fully paid up 
+equity shares held
+No of Partly paid-
+up equity shares 
+held
+No of Shares 
+Underlying 
+Depository 
+Receipts
+Total No of Shares 
+Held (IV+V+VI)
+Shareholding 
+as a % of total 
+no of shares 
+(A+B+C2)
+No of Shares Underlying 
+Outstanding 
+converttible securities 
+(Including Warrants, 
+ESOP etc.)
+Total No of shares on 
+fully diluted basis 
+(including warrants, 
+ESOP, Convertible 
+Securities 
+etc.)(XI)=(VII+X)
+Shareholding as a % 
+assuming full 
+conversion of 
+convertible Securities 
+(as a percentage of 
+diluted share capital)
+Number of 
+equity shares 
+held in 
+dematerialize
+d form
+Total as a % of 
+(A+B+C)
+No.As a % of total 
+Shares held
+No.
+As a % of total 
+Shares held
+No.
+As a % of total 
+Shares held
+No.
+As a % of total 
+Shares held
+No.
+As a % of total 
+Shares held
+Class X
+Class YTotal
+(I)(II)(III)(IV)(V)(VI)
+(VII)(VIII)
+(X)(XI)(XII)(XVIII)
+(1)Custodian/DR Holder000
+00
+0.00
+00
+00.00
+000.0000.00NANANANANANANANA0
+(2)Employee Benefit Trust (under SEBI (Share based Employee Benefit) Regula 000
+00
+0.00
+00
+00.00
+000.0000.00NANANANANANANANA0
+Total Non-Promoter-Non Public Shareholding (C) = (C)(1)+(C)(2)000
+00
+0.00
+00
+00.00
+000.0000
+(XVII)
+No of Voting Rights
+(IX)(XIII)(XIV)(XV)(XVI)
+Total Numberof 
+Sharesencumbered(XVII) 
+=(XIV+XV+XVI)
+Number of Voting Rights held in each class of securitiesNumber of Locked in SharesNumber of Shares pledgedNon-DisposalUndertakingOtherencumbrances,if any
+
+Details of the shareholders acting as persons in Concert including their Shareholding:
+Name of ShareholderName of PACNo of sharesHolding%
+Total:00
+
+No of ShareholdersNo of shares
+00
+Details of Shares which remain unclaimed may be given hear along with details such as number of shareholders, 
+
+Sno
+Date of 
+creation/acquisition of 
+significant beneficial 
+interest
+ 
+IV
+Sr NoNamePANNationalityNamePANNationalityNumber of Shares
+Shareholding as a % of 
+total no of shares 
+(Calculated as per SCRR 
+1957) As a % of (A+B+C2) 
+1  NA    NA  
+  NA    NA    NA    NA    NA    NA    NA  
+Table V - Statement showing details of Significant Beneficial Owners (SBOs)
+Details of the significant beneficial ownerDetails of the registered owner 
+Particulars of the shares in which significant beneficial 
+interest is held by the beneficial owner
+IIIIII
+
+Table VI - Statement showing foreign ownership limits
+Board approved limitsLimits utilizedDate
+As on shareholding date100%4.67%28-11-2025
+As on the end of previous 1st quarter100%
+4.78%30-09-2025
+As on the end of previous 2nd quarter100%4.78%30-06-2025
+As on the end of previous 3rd quarter100%4.78%31-03-2025
+As on the end of previous 4th quarter100%5.17%31-12-2024

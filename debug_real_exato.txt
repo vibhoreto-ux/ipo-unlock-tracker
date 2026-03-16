@@ -1,0 +1,102 @@
+
+
+Number   of
+Securities
+Distinctive 
+Numbers From
+To
+Type of 
+Security (F & 
+L, F & IPO)
+Lock-in Date FromTo
+Physical/
+Demat
+201307512013075IPO
+28
+th
+ November 2025  6
+th
+ December 2028
+DEMAT
+174792520130763761000IPO
+28
+th
+ November 2025  6
+th
+ December 2027
+DEMAT
+NameofAIF
+investor 
+No. of 
+securities
+Date of allotment
+NINEALPS
+TRUST-NINE 
+ALPS 
+OPPORTUNITY 
+FUND
+160
+29
+th
+ March 2025
+NINEALPS
+TRUST-NINE 
+ALPS 
+OPPORTUNITY 
+FUND
+88000
+14
+th
+ June 2025
+AVORA  SME
+FUND 1
+5357
+12
+th
+ November 2025
+ROYAL ALPHA
+OPPORTUNITY 
+FUND
+12857
+12
+th
+ November 2025
+DEMAT
+289131043926887283997IPO
+28
+th
+ November 2025  6
+th
+ December 2026
+DEMAT
+63168737610014392687IPO
+28
+th
+ November 2025 5
+th
+ December 2026
+DEMAT
+160*73719987372157IPO
+28
+th
+ November 20251
+st
+ April 2026
+DEMAT
+88000*72839987371997IPO
+28
+th
+ November 2025    16
+th
+ June 2025
+DEMAT
+*Note:  These securities are held by Pre-IPO investors classified under the AIF category. Accordingly, the lock in period for the 
+same is considered as one year from the respective date of allotment, in accordance with the Securities and Exchange Board 
+of India (Alternative Investment Funds) Regulations, 2012. The names of the AIF investors and date of allotment of securities 
+held by them are as under: 
+18214*73721587390371IPO
+28
+th
+ November 2025  16
+th
+ November 2026

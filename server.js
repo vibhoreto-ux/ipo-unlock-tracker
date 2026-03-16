@@ -4,17 +4,91 @@ const { scrapeUnlockData } = require('./scraper');
 const { scrapeWithBrowser } = require('./browser-scraper');
 const { autoFetchMissingRHP } = require('./auto-rhp');
 const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
+const { scanPreferential } = require('./preferential-scraper');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.static('public'));
 app.use(express.json({ limit: '10mb' }));
 
 const { getNextBusinessDay, calculatePreIPOLockin } = require('./holidays');
+const axios = require('axios');
+const unzipper = require('unzipper');
 
 /**
+ * GET /api/nse-pdf
+ * Downloads an NSE ZIP file on the fly, extracts the primary CML*.pdf document containing lock-in data,
+ * and streams it directly to the browser to view natively instead of downloading a ZIP.
+ */
+app.get('/api/nse-pdf', async (req, res) => {
+    try {
+        const zipUrl = req.query.url;
+        if (!zipUrl) {
+            return res.status(400).send('Missing url parameter');
+        }
+
+        console.log(`[NSE Proxy] Fetching ZIP from: ${zipUrl}`);
+
+        // Setup axios to get stream
+        const response = await axios({
+            method: 'get',
+            url: zipUrl,
+            responseType: 'stream',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'application/zip',
+                'Referer': 'https://www.nseindia.com/'
+            },
+            timeout: 30000
+        });
+
+        // Parse ZIP directly from stream
+        response.data.pipe(unzipper.Parse())
+            .on('entry', function (entry) {
+                const fileName = entry.path;
+
+                // CMLxxxx.pdf is the NSE lock-in circular. Ignore SHP_*.pdf
+                if (fileName.toLowerCase().startsWith('cml') && fileName.toLowerCase().endsWith('.pdf')) {
+                    console.log(`[NSE Proxy] Extracting and serving PDF: ${fileName}`);
+                    res.setHeader('Content-Type', 'application/pdf');
+                    res.setHeader('Content-Disposition', `inline; filename="${fileName}"`);
+                    entry.pipe(res);
+                } else if (fileName.toLowerCase().endsWith('.pdf') && !res.headersSent) {
+                    // Fallback to any PDF if no CML is found
+                    console.log(`[NSE Proxy] Fallback: serving PDF: ${fileName}`);
+                    res.setHeader('Content-Type', 'application/pdf');
+                    res.setHeader('Content-Disposition', `inline; filename="${fileName}"`);
+                    entry.pipe(res);
+                } else {
+                    entry.autodrain(); // Skip other files
+                }
+            })
+            .on('close', () => {
+                if (!res.headersSent) {
+                    // If ZIP finished but no PDF was returned
+                    if (!res.writableEnded) res.status(404).send('No valid PDF found inside ZIP');
+                }
+            })
+            .on('error', err => {
+                console.error(`[NSE Proxy] Unzip error:`, err);
+                if (!res.headersSent && !res.writableEnded) {
+                    res.status(500).send('Error extracting ZIP');
+                }
+            });
+
+    } catch (error) {
+        console.error(`[NSE Proxy] Error fetching zip: ${error.message}`);
+        if (!res.headersSent && !res.writableEnded) {
+            if (error.response && error.response.status === 404) {
+                res.status(404).send('NSE ZIP archive no longer available (404 Not Found)');
+            } else {
+                res.status(500).send(`Error downloading NSE Zip: ${error.message}`);
+            }
+        }
+    }
+});/**
  * POST /api/import-data
  * Accepts scraped anchor + IPO data from browser, processes it, merges into DB
  * Body: { anchorData: [...], ipoData: [...], year: number }
@@ -177,6 +251,54 @@ function parseImportDate(dateStr) {
     const d = new Date(dateStr);
     return isNaN(d.getTime()) ? null : d;
 }
+
+// ---------- Async preferential scan job system ----------
+let prefScanJob = { status: 'idle', results: [], error: null, startedAt: null, message: '' };
+
+// GET to load cached data instantly (no scan) — used on tab switch / page load
+app.get('/api/pref-cache', (req, res) => {
+    const _fs = require('fs');
+    const _path = require('path');
+    const COMBINED_CACHE = _path.join(__dirname, 'pref-cache.json');
+    try {
+        if (_fs.existsSync(COMBINED_CACHE)) {
+            const raw = JSON.parse(_fs.readFileSync(COMBINED_CACHE, 'utf8'));
+            return res.json({ status: 'ok', results: raw.results || [], savedAt: raw.savedAt });
+        }
+    } catch (e) { console.error('[pref-cache]', e.message); }
+    return res.json({ status: 'empty', results: [] });
+});
+
+
+// POST to kick off a DELTA background scan (or force full refresh with ?force=true)
+app.post('/api/scan-preferential/start', (req, res) => {
+    if (prefScanJob.status === 'running') {
+        return res.json({ status: 'running', message: 'Scan already in progress' });
+    }
+    // Start scan in background — delta by default, full if force=true
+    const force = req.query.force === 'true';
+    prefScanJob = { status: 'running', results: [], error: null, startedAt: Date.now(), message: 'Scanning...' };
+    scanPreferential(force).then(results => {
+        prefScanJob = { status: 'done', results, error: null, startedAt: prefScanJob.startedAt };
+        console.log(`[PREF] Scan complete: ${results.length} results`);
+    }).catch(err => {
+        prefScanJob = { status: 'error', results: [], error: err.message, startedAt: prefScanJob.startedAt };
+        console.error('[PREF] Scan error:', err.message);
+    });
+    res.json({ status: 'running', message: force ? 'Full scan started' : 'Delta scan started' });
+});
+
+// GET to poll scan status
+app.get('/api/scan-preferential/status', (req, res) => {
+    res.json({
+        status: prefScanJob.status,
+        count: prefScanJob.results.length,
+        results: prefScanJob.status === 'done' ? prefScanJob.results : [],
+        error: prefScanJob.error,
+        message: prefScanJob.message || ''
+    });
+});
+
 
 /**
  * GET /api/unlock-data
@@ -362,13 +484,18 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             }
         }
 
-        // Find the company in DB to get exchange and listing date
+        // Find the company in DB — use fuzzy match: case-insensitive, ignore trailing dots/spaces
         const db = readDB();
-        const company = db.companies.find(c => c.companyName === companyName);
+        const normQ = companyName.toLowerCase().replace(/[\.\s]+$/, '');
+        const company = db.companies.find(c =>
+            c.companyName === companyName ||
+            (c.companyName || '').toLowerCase().replace(/[\.\s]+$/, '') === normQ
+        );
 
         if (!company) {
             return res.status(404).json({ error: 'Company not found in database' });
         }
+
 
         const exchange = company.exchange || '';
         const listingDate = company.allotmentDate?.adjusted || company.allotmentDate?.original;
@@ -424,6 +551,7 @@ app.post('/api/parse-bse-pdf', express.raw({ type: '*/*', limit: '10mb' }), asyn
     try {
         const companyName = req.query.company;
         const noticeId = req.query.noticeId;
+        const pdfUrl = req.query.pdfUrl;
         const pdfBuffer = req.body;
 
         if (!pdfBuffer || pdfBuffer.length < 100) {
@@ -439,6 +567,7 @@ app.post('/api/parse-bse-pdf', express.raw({ type: '*/*', limit: '10mb' }), asyn
             ...lockInData,
             source: 'BSE',
             noticeId: noticeId || 'client-fetched',
+            pdfUrl: pdfUrl || null,
             fetchedAt: new Date().toISOString()
         };
 

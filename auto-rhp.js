@@ -17,16 +17,28 @@ async function fetchRHPForCompany(company) {
     try {
         const res = await axios.get(targetUrl, { headers: HEADERS, timeout: 15000 });
         const $ = cheerio.load(res.data);
-        let rhpLink = null;
-        
+        const candidates = [];
         $('a').each((i, el) => {
-            const txt = $(el).text().toLowerCase();
-            const href = $(el).attr('href');
-            if (txt.includes('rhp') || (href && href.toLowerCase().includes('rhp'))) {
-                if (href) rhpLink = href.startsWith('http') ? href : `https://www.chittorgarh.com${href}`;
+            const href = $(el).attr('href') || '';
+            const text = $(el).text().toLowerCase().trim();
+            if (!href) return;
+            if (href.startsWith('http') && href.toLowerCase().endsWith('.pdf')) {
+                const isPdf = href.toLowerCase().endsWith('.pdf');
+                const isRHP = text.includes('rhp') || text.includes('red herring') || href.toLowerCase().includes('rhp');
+                const isDRHP = text.includes('drhp') || href.toLowerCase().includes('drhp');
+                const isBSESME = href.includes('bsesme.com');
+                const isBSE = href.includes('bseindia.com');
+                if (isPdf && (isRHP || isDRHP)) {
+                    let basePriority = (isRHP && !isDRHP) ? 10 : 20; // Final RHP beats DRHP
+                    let domainPriority = isBSESME ? 1 : isBSE ? 2 : 3;
+                    candidates.push({ href, priority: basePriority + domainPriority });
+                }
             }
         });
-        return rhpLink;
+
+        if (candidates.length === 0) return null;
+        candidates.sort((a, b) => a.priority - b.priority);
+        return candidates[0].href;
     } catch (e) {
         return null;
     }

@@ -165,6 +165,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Silent data loader — fetches company data WITHOUT touching Tracker UI elements.
+    // Used by tabs (Upcoming IPOs) that share allCompanies but have their own refresh UI.
+    async function loadCompanyData() {
+        try {
+            const url = `/api/unlock-data?t=${Date.now()}`;
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const result = await response.json();
+            allCompanies = result.data || [];
+            if (result.lastRefreshed && lastUpdated) {
+                lastUpdated.textContent = new Date(result.lastRefreshed).toLocaleString();
+            }
+            updateStats();
+            // Do NOT call renderTable() — Tracker tab is not active
+        } catch (err) {
+            console.error('[loadCompanyData] Failed:', err);
+            throw err; // re-throw so .catch() in caller shows the error message
+        }
+    }
+
     function updateStats() {
         if (!countTotal) return;
 
@@ -352,16 +372,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const companyIdx = allCompanies.indexOf(company);
 
             row.innerHTML = `
-                <td>
+                <td data-label="Company">
                     <span class="company-name">${company.companyName}</span>
                     <div class="company-meta">
                         ${typeBadge}
                     </div>
                 </td>
-                <td><span class="date-text text-muted date-clickable" data-company-idx="${companyIdx}">${listingDateDisplay}</span></td>
-                <td class="col-anchor"><div class="date-clickable" data-company-idx="${companyIdx}">${col30}</div></td>
-                <td class="col-anchor"><div class="date-clickable" data-company-idx="${companyIdx}">${col90}</div></td>
-                <td class="col-preipo"><div class="date-clickable" data-company-idx="${companyIdx}">${colPre}</div></td>
+                <td data-label="Listing Date"><span class="date-text text-muted date-clickable" data-company-idx="${companyIdx}">${listingDateDisplay}</span></td>
+                <td class="col-anchor" data-label="30-Day Unlock"><div class="date-clickable" data-company-idx="${companyIdx}">${col30}</div></td>
+                <td class="col-anchor" data-label="90-Day Unlock"><div class="date-clickable" data-company-idx="${companyIdx}">${col90}</div></td>
+                <td class="col-preipo" data-label="Pre-IPO Lock-in"><div class="date-clickable" data-company-idx="${companyIdx}">${colPre}</div></td>
             `;
 
             tableBody.appendChild(row);
@@ -585,6 +605,17 @@ document.addEventListener('DOMContentLoaded', () => {
             modalExchangeBadge.style.display = 'none';
         }
 
+        const rhpSection = document.getElementById('rhpSection');
+        const btnViewRhp = document.getElementById('btnViewRhp');
+        if (rhpSection && btnViewRhp) {
+            if (company.rhpUrl && company.rhpUrl.endsWith('.pdf')) {
+                btnViewRhp.href = company.rhpUrl;
+                rhpSection.style.display = '';
+            } else {
+                rhpSection.style.display = 'none';
+            }
+        }
+
         // Set Issue Price and resetting Live Price
         const issuePriceEl = document.getElementById('modalIssuePrice');
         if (issuePriceEl) {
@@ -714,6 +745,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            if (data.isScannedPDF || (data.found && data.unlockEvents && data.unlockEvents.length === 0)) {
+                if (detailsSection) detailsSection.style.display = 'block';
+                const detailsTitle = document.getElementById('unlockDetailsTitle');
+                if (detailsTitle) detailsTitle.textContent = '⚠️ Scanned Document Viewer';
+                if (detailsNotice) detailsNotice.textContent = 'Displaying original Annexure PDF';
+
+                if (detailsContent) {
+                    let pdfHtml = '';
+                    if (data.localPdfUrl) {
+                        pdfHtml = `<iframe src="${data.localPdfUrl}#view=FitH" width="100%" height="450px" style="border: 1px solid #ccc; border-radius: 8px; margin-top: 15px; display: block; background: #fff;"></iframe>`;
+                    } else if (data.noticeId && data.source === 'BSE') {
+                        // Cached response without blob: Button to fetch it securely via browser
+                        pdfHtml = `
+                            <button id="btnFetchPdfViewer" class="filter-btn" style="margin-top: 15px; font-weight: bold; padding: 10px 20px; background: var(--accent-light); color: var(--primary); border: none; border-radius: 4px; cursor: pointer;">
+                                Load Embedded PDF Viewer
+                            </button>
+                        `;
+                    } else {
+                        pdfHtml = `<a href="https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=${data.noticeId}" target="_blank" style="display:inline-block; margin-top: 15px; font-weight: bold;">View Notice on BSE</a>`;
+                    }
+
+                    detailsContent.innerHTML = `
+                        <div style="text-align: center; padding: 20px; color: var(--warning-text); background: rgba(239, 154, 154, 0.1); border-radius: 8px;">
+                            The Annexure PDF for this company is an image scan and cannot be parsed autonomously. Please verify its lock-in dates manually from the embedded document below.
+                            ${pdfHtml}
+                        </div>
+                    `;
+
+                    if (!data.localPdfUrl && data.noticeId && data.source === 'BSE') {
+                        const btnFetch = document.getElementById('btnFetchPdfViewer');
+                        if (btnFetch) {
+                            btnFetch.addEventListener('click', async (e) => {
+                                e.target.textContent = 'Downloading PDF securely...';
+                                e.target.style.opacity = '0.7';
+                                e.target.style.cursor = 'wait';
+                                e.target.disabled = true;
+                                try {
+                                    const freshData = await clientFetchBSENotice(companyName, data.noticeId);
+                                    if (freshData && freshData.localPdfUrl) {
+                                        const newIframe = document.createElement('iframe');
+                                        newIframe.src = freshData.localPdfUrl + '#view=FitH';
+                                        newIframe.width = '100%';
+                                        newIframe.height = '450px';
+                                        newIframe.style.cssText = 'border: 1px solid #ccc; border-radius: 8px; margin-top: 15px; display: block; background: #fff;';
+                                        e.target.parentNode.replaceChild(newIframe, e.target);
+                                    } else {
+                                        e.target.textContent = 'Failed to load PDF view. Check internet connection.';
+                                    }
+                                } catch (err) {
+                                    e.target.textContent = 'Error securely downloading PDF.';
+                                    e.target.style.cursor = 'pointer';
+                                    e.target.disabled = false;
+                                }
+                            });
+                        }
+                    }
+                }
+                return;
+            }
+
             if (!data.found || !data.unlockEvents) {
                 // No data — hide section
                 if (detailsSection) detailsSection.style.display = 'none';
@@ -723,11 +814,47 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show the details section with correct source label
             if (detailsSection) detailsSection.style.display = '';
             const detailsTitle = document.getElementById('unlockDetailsTitle');
-            const isNSE = data.source === 'NSE';
+
+            let isNSE = data.source === 'NSE';
+            let isBSE = data.source === 'BSE';
+
+            // Explicitly force inference from actual company exchange if available to correct bad cache labels
+            if (currentModalCompany && currentModalCompany.exchange) {
+                const ex = currentModalCompany.exchange.toUpperCase();
+                if (ex === 'BSE SME' || ex === 'BSE') {
+                    isNSE = false;
+                    isBSE = true;
+                } else if (ex === 'NSE SME' || ex === 'NSE') {
+                    isNSE = true;
+                    isBSE = false;
+                } else {
+                    // Hybrid or generic fallback
+                    if (ex.includes('NSE')) isNSE = true;
+                    else if (ex.includes('BSE')) isBSE = true;
+                }
+            }
+
+            // Figure out the source document link (direct PDF takes priority)
+            let linkHref = '';
+            if (data.pdfUrl) {
+                if (data.pdfUrl.toLowerCase().endsWith('.zip')) {
+                    // Pipe NSE ZIP files through the backend proxy to extract the PDF on-the-fly
+                    linkHref = `/api/nse-pdf?url=${encodeURIComponent(data.pdfUrl)}`;
+                } else {
+                    linkHref = data.pdfUrl;
+                }
+            } else if ((isBSE || data.source === 'BSE') && data.noticeId) {
+                linkHref = `https://www.bseindia.com/markets/MarketInfo/DispNewNoticesCirculars.aspx?page=${data.noticeId}`;
+            }
+
             if (detailsTitle) {
-                detailsTitle.textContent = isNSE
-                    ? '📊 NSE Circular Details'
-                    : '📊 BSE Annexure-I Details';
+                const titleText = isNSE ? '📊 NSE Circular Details' : '📊 BSE Circular Details';
+
+                if (linkHref) {
+                    detailsTitle.innerHTML = `<a href="${linkHref}" target="_blank" style="text-decoration:none; color:inherit; border-bottom: 2px solid var(--accent); padding-bottom: 2px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">${titleText}</a>`;
+                } else {
+                    detailsTitle.textContent = titleText;
+                }
             }
             if (detailsNotice) {
                 const sourceLabel = isNSE ? 'NSE' : 'BSE';
@@ -850,7 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Send PDF to server for parsing
             const parseResp = await fetch(
-                `/api/parse-bse-pdf?company=${encodeURIComponent(companyName)}&noticeId=${encodeURIComponent(noticeId)}`,
+                `/api/parse-bse-pdf?company=${encodeURIComponent(companyName)}&noticeId=${encodeURIComponent(noticeId)}&pdfUrl=${encodeURIComponent(annexureUrl)}`,
                 {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/octet-stream' },
@@ -858,7 +985,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             );
 
-            return await parseResp.json();
+            const result = await parseResp.json();
+
+            try {
+                // Generate a local ObjectURL matching the raw bytes to bypass BSE X-Frame-Options DOM restrictions
+                const blob = new Blob([pdfBuffer], { type: 'application/pdf' });
+                result.localPdfUrl = URL.createObjectURL(blob);
+            } catch (blobErr) {
+                console.warn('[BSE/Client] Local Blob assignment failed:', blobErr);
+            }
+
+            return result;
 
         } catch (err) {
             console.error('[BSE/Client] Error:', err);
@@ -1007,8 +1144,367 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === modal) closeModal();
         });
     }
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
+    // --- Views Logic ---
+    const navTrackerBtn = document.getElementById('navTrackerBtn');
+    const navUpcomingBtn = document.getElementById('navUpcomingBtn');
+    const navPreferentialBtn = document.getElementById('navPreferentialBtn');
+
+    const viewTracker = document.getElementById('viewTracker');
+    const viewUpcomingIPOs = document.getElementById('viewUpcomingIPOs');
+    const viewPreferentialUnlock = document.getElementById('viewPreferentialUnlock');
+    const upcomingList = document.getElementById('upcomingList');
+
+    function switchView(activeNav, activeView) {
+        if (navTrackerBtn) navTrackerBtn.classList.remove('active');
+        if (navUpcomingBtn) navUpcomingBtn.classList.remove('active');
+        if (navPreferentialBtn) navPreferentialBtn.classList.remove('active');
+        if (activeNav) activeNav.classList.add('active');
+
+        if (viewTracker) { viewTracker.classList.remove('active'); viewTracker.classList.add('hidden'); }
+        if (viewUpcomingIPOs) { viewUpcomingIPOs.classList.remove('active'); viewUpcomingIPOs.classList.add('hidden'); }
+        if (viewPreferentialUnlock) { viewPreferentialUnlock.classList.remove('active'); viewPreferentialUnlock.classList.add('hidden'); }
+        if (activeView) { activeView.classList.add('active'); activeView.classList.remove('hidden'); }
+    }
+
+    if (navTrackerBtn) {
+        navTrackerBtn.addEventListener('click', () => {
+            switchView(navTrackerBtn, viewTracker);
+            renderTable(); // ensure main table renders
+        });
+    }
+
+    if (navUpcomingBtn) {
+        navUpcomingBtn.addEventListener('click', () => {
+            switchView(navUpcomingBtn, viewUpcomingIPOs);
+            // If data not yet loaded, fetch silently (no Tracker UI changes) then render
+            if (allCompanies.length === 0) {
+                upcomingList.innerHTML = '<div class="no-data"><p>Loading IPO data...</p></div>';
+                loadCompanyData().then(() => renderUpcomingIPOs()).catch(() => {
+                    upcomingList.innerHTML = '<div class="no-data"><p style="color:var(--danger)">Failed to load data.</p></div>';
+                });
+            } else {
+                renderUpcomingIPOs();
+            }
+        });
+    }
+
+    // Wire Upcoming IPO refresh button — silent reload, no Tracker UI changes
+    const refreshUpcomingBtn = document.getElementById('refreshUpcomingBtn');
+    if (refreshUpcomingBtn) {
+        refreshUpcomingBtn.addEventListener('click', () => {
+            upcomingList.innerHTML = '<div class="no-data"><p>Refreshing...</p></div>';
+            loadCompanyData().then(() => renderUpcomingIPOs()).catch(() => {
+                upcomingList.innerHTML = '<div class="no-data"><p style="color:var(--danger)">Failed to refresh.</p></div>';
+            });
+        });
+    }
+
+    if (navPreferentialBtn) {
+        navPreferentialBtn.addEventListener('click', () => {
+            switchView(navPreferentialBtn, viewPreferentialUnlock);
+            // Auto-load from cache on tab switch (no scan)
+            loadPrefFromCache();
+        });
+    }
+
+    // --- Preferential Unlock Logic ---
+    let preferentialDataLoaded = false;
+    let prefAllResults = [];       // merged NSE + BSE results
+    let prefSortMode = 'expiry';   // 'expiry' | 'recent'
+
+    const refreshPrefBtn = document.getElementById('refreshPrefBtn');
+    const prefSearchInput = document.getElementById('prefSearch');
+
+    // Wire sort buttons (only 2 now: expiry, recent)
+    ['prefSortExpiry', 'prefSortRecent'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) {
+            btn.addEventListener('click', () => {
+                prefSortMode = btn.dataset.sort;
+                ['prefSortExpiry', 'prefSortRecent'].forEach(b => {
+                    const el = document.getElementById(b);
+                    if (el) el.classList.remove('active');
+                });
+                btn.classList.add('active');
+                applyPrefFilter();
+            });
+        }
     });
+
+    if (prefSearchInput) prefSearchInput.addEventListener('input', applyPrefFilter);
+
+    function applyPrefFilter() {
+        const query = (prefSearchInput ? prefSearchInput.value : '').toLowerCase().trim();
+
+        let data = prefAllResults.filter(item => {
+            if (!query) return true;
+            return (item.company || '').toLowerCase().includes(query) ||
+                (item.symbol || '').toLowerCase().includes(query);
+        });
+
+        data = [...data].sort((a, b) => {
+            if (prefSortMode === 'recent') {
+                const da = a.broadcast_dt || '';
+                const db = b.broadcast_dt || '';
+                return db.localeCompare(da); // most recent first
+            }
+            // expiry: unknown dates go last
+            const da = a.unlock_date || '9999-12-31';
+            const db = b.unlock_date || '9999-12-31';
+            return da.localeCompare(db);
+        });
+
+        const prefNoData = document.getElementById('prefNoData');
+        if (!data.length) {
+            if (prefNoData) {
+                prefNoData.classList.remove('hidden');
+                prefNoData.innerHTML = query
+                    ? `<p>No results matching "<strong>${query}</strong>".</p>`
+                    : '<p>No trading approvals found in the last 365 days.</p>';
+            }
+        } else {
+            if (prefNoData) prefNoData.classList.add('hidden');
+            renderPreferentialTable(data);
+        }
+    }
+
+    if (refreshPrefBtn) {
+        // Refresh = delta scan (not force)
+        refreshPrefBtn.addEventListener('click', () => triggerPrefScan());
+    }
+
+    // Load cached data from disk — called on tab switch, no NSE/BSE scan
+    async function loadPrefFromCache() {
+        if (preferentialDataLoaded) return; // already loaded this session
+        const prefLoading = document.getElementById('prefLoading');
+        const prefNoData = document.getElementById('prefNoData');
+        const prefTableBody = document.getElementById('prefTableBody');
+        const prefLastUpdated = document.getElementById('prefLastUpdated');
+        if (!prefTableBody) return;
+
+        prefLoading.classList.remove('hidden');
+        const loadingP = prefLoading.querySelector('p');
+        if (loadingP) loadingP.textContent = 'Loading saved data...';
+
+        try {
+            const resp = await fetch('/api/pref-cache');
+            const data = await resp.json();
+            prefLoading.classList.add('hidden');
+            if (data.results && data.results.length) {
+                prefAllResults = data.results;
+                preferentialDataLoaded = true;
+                if (prefLastUpdated) prefLastUpdated.textContent = data.savedAt ? new Date(data.savedAt).toLocaleString() : '--';
+                const prefCountEl = document.getElementById('prefCountNum');
+                if (prefCountEl) prefCountEl.textContent = prefAllResults.length;
+                applyPrefFilter();
+            } else {
+                // No cache yet — show prompt to scan
+                prefNoData.classList.remove('hidden');
+                prefNoData.innerHTML = '<p>No saved data yet. Click <strong>Refresh Data</strong> to scan.</p>';
+            }
+        } catch (e) {
+            prefLoading.classList.add('hidden');
+            prefNoData.classList.remove('hidden');
+            prefNoData.innerHTML = '<p style="color:var(--danger)">Error loading cache.</p>';
+        }
+    }
+
+    // Trigger a delta scan (Refresh button) — fetches only new data since last scan
+    async function triggerPrefScan() {
+        const prefLoading = document.getElementById('prefLoading');
+        const prefNoData = document.getElementById('prefNoData');
+        const prefTableBody = document.getElementById('prefTableBody');
+        const prefLastUpdated = document.getElementById('prefLastUpdated');
+        if (!prefTableBody || !prefLoading || !prefNoData) return;
+
+        prefLoading.classList.remove('hidden');
+        prefNoData.classList.add('hidden');
+        if (refreshPrefBtn) refreshPrefBtn.disabled = true;
+        const loadingP = prefLoading.querySelector('p');
+        if (loadingP) loadingP.textContent = 'Starting delta scan...';
+
+        try {
+            const startResp = await fetch('/api/scan-preferential/start', { method: 'POST' });
+            const startData = await startResp.json();
+
+            // Poll until done
+            let dots = 0;
+            const pollInterval = setInterval(async () => {
+                dots = (dots % 3) + 1;
+                try {
+                    const st = await fetch('/api/scan-preferential/status');
+                    const sd = await st.json();
+                    if (loadingP) loadingP.textContent = sd.message || `Scanning${'.'.repeat(dots)}`;
+                    if (sd.status === 'done') {
+                        clearInterval(pollInterval);
+                        prefAllResults = sd.results || [];
+                        preferentialDataLoaded = true;
+                        prefLoading.classList.add('hidden');
+                        if (prefLastUpdated) prefLastUpdated.textContent = new Date().toLocaleString();
+                        const prefCountEl2 = document.getElementById('prefCountNum');
+                        if (prefCountEl2) prefCountEl2.textContent = prefAllResults.length;
+                        if (!prefAllResults.length) {
+                            prefNoData.classList.remove('hidden');
+                            prefNoData.innerHTML = '<p>No trading approvals found.</p>';
+                        } else {
+                            applyPrefFilter();
+                        }
+                        if (refreshPrefBtn) refreshPrefBtn.disabled = false;
+                    } else if (sd.status === 'error') {
+                        clearInterval(pollInterval);
+                        prefLoading.classList.add('hidden');
+                        prefNoData.classList.remove('hidden');
+                        prefNoData.innerHTML = `<p style="color:var(--danger)">Scan failed: ${sd.error || 'Unknown'}</p>`;
+                        if (refreshPrefBtn) refreshPrefBtn.disabled = false;
+                    }
+                } catch (e) { /* keep polling */ }
+            }, 3000);
+        } catch (error) {
+            prefLoading.classList.add('hidden');
+            prefNoData.classList.remove('hidden');
+            prefNoData.innerHTML = '<p style="color:var(--danger)">Error connecting to server.</p>';
+            if (refreshPrefBtn) refreshPrefBtn.disabled = false;
+        }
+    }
+
+    function renderPreferentialTable(data) {
+        const prefTableBody = document.getElementById('prefTableBody');
+        if (!prefTableBody) return;
+        prefTableBody.innerHTML = '';
+
+        data.forEach(item => {
+            const row = document.createElement('tr');
+            const isBSE = item.source === 'BSE';
+
+            // Exchange badge
+            const exchBadge = isBSE
+                ? '<span class="badge" style="background:#e65c00;color:#fff;font-size:10px;padding:2px 6px;">BSE</span>'
+                : '<span class="badge" style="background:#0066a1;color:#fff;font-size:10px;padding:2px 6px;">NSE</span>';
+
+            // Notice / Listing Date: use listing_date for NSE, broadcast_dt for BSE
+            let listingHtml = '<span class="text-muted">--</span>';
+            const noticeDate = item.listing_date || (isBSE ? item.broadcast_dt : null);
+            if (noticeDate) {
+                listingHtml = `<span class="date-text">${formatDateSimple(noticeDate)}</span>`;
+            }
+
+            // Lock-in Expiry
+            let unlockHtml = '<span class="text-muted">Pending</span>';
+            if (item.unlock_date) {
+                const isPast = new Date(item.unlock_date) < new Date();
+                unlockHtml = `<div class="date-cell">
+                    <span class="date-text ${isPast ? 'text-past' : ''}">${formatDateSimple(item.unlock_date)}</span>
+                    ${getStatusBadge(item.unlock_date)}
+                </div>`;
+            }
+
+            // PDF link
+            let linkHtml = '<span class="text-muted">—</span>';
+            if (item.pdf_url) {
+                linkHtml = `<a href="${item.pdf_url}" target="_blank" class="badge badge-main" style="text-decoration:none;padding:4px 10px;font-size:11px;">View PDF</a>`;
+            }
+
+            row.innerHTML = `
+                <td data-label="Company"><strong>${item.company || item.symbol || '--'}</strong></td>
+                <td data-label="Symbol">${exchBadge} <span class="badge badge-main" style="margin-left:2px;">${item.symbol || item.scrip_cd || '--'}</span></td>
+                <td data-label="Shares">${item.shares ? item.shares.toLocaleString('en-IN') : '--'}</td>
+                <td data-label="Notice / Listing Date">${listingHtml}</td>
+                <td data-label="Lock-in Expiry">${unlockHtml}</td>
+                <td data-label="Circular">${linkHtml}</td>
+            `;
+            prefTableBody.appendChild(row);
+        });
+    }
+
+    function renderUpcomingIPOs() {
+        if (!upcomingList) return;
+        upcomingList.innerHTML = '';
+
+        // Guard: data not yet loaded
+        if (allCompanies.length === 0) {
+            upcomingList.innerHTML = '<div class="no-data"><p>No data loaded yet. Click <strong>Refresh</strong>.</p></div>';
+            return;
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const upcomingIPOs = allCompanies.filter(c => {
+            // Exclude InvIT entries — they're not real IPOs
+            if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
+
+            const listDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
+            if (!listDateStr) return true;
+            const listDate = new Date(listDateStr);
+            listDate.setHours(0, 0, 0, 0);
+            return listDate >= today;
+        });
+
+        if (upcomingIPOs.length === 0) {
+            upcomingList.innerHTML = '<div class="no-data"><p>No upcoming IPOs found in database.</p></div>';
+            return;
+        }
+
+        const fmtDate = (obj) => {
+            if (!obj) return 'TBD';
+            const finalStr = obj.adjusted || obj.original;
+            if (!finalStr) return 'TBD';
+            let formatted = formatDateSimple(finalStr);
+            if (obj.adjusted) formatted += '*';
+            return formatted;
+        };
+
+        upcomingIPOs.forEach(ipo => {
+            const item = document.createElement('div');
+            item.className = 'upcoming-item';
+
+            const badgeCls = ipo.issueType === 'SME' ? 'label-sme' : 'label-mainboard';
+            const exc = ipo.exchange ? ` - ${ipo.exchange}` : '';
+
+            // --- Compact summary line: IPO@110, 9.15lk anc., 23.36lk pub. U1 Apr 15, U2 Jun 14 ---
+            const pricePart = ipo.issuePrice ? `@₹${ipo.issuePrice}` : ' — Price TBD';
+
+            // Format shares in lakhs (1 lakh = 100,000)
+            const toLk = (n) => n ? (n / 100000).toFixed(2) + 'lk' : null;
+
+            let sharesPart = '';
+            if (ipo.anchorShares && ipo.totalShares) {
+                // Has both anchor and total → show breakdown
+                const ancLk = toLk(ipo.anchorShares);
+                const pubLk = toLk(ipo.totalShares - ipo.anchorShares);
+                sharesPart = `, ${ancLk} anc., ${pubLk} pub.`;
+            } else if (ipo.totalShares) {
+                // Only total shares, no anchors → all shares are public
+                sharesPart = `, ${toLk(ipo.totalShares)} total shares`;
+            }
+
+            const d30Str = fmtDate(ipo.anchor30);
+            const d90Str = fmtDate(ipo.anchor90);
+            const unlockPart = (d30Str !== 'TBD' || d90Str !== 'TBD')
+                ? `U1 ${d30Str}, U2 ${d90Str}.`
+                : '';
+
+            // Anchor + Pre-IPO investor names — always show anchor status
+            let anchorNamesStr = '';
+            if (ipo.anchorInvestors && ipo.anchorInvestors.length) {
+                anchorNamesStr = `<strong style="color:var(--success)">Anchors (${ipo.anchorInvestors.length}):</strong> ${ipo.anchorInvestors.join(', ')}.`;
+            } else {
+                anchorNamesStr = `<span style="color:var(--text-muted); font-style:italic;">No anchors yet</span>`;
+            }
+            const preIpoNamesStr = (ipo.preIpoInvestors && ipo.preIpoInvestors.length) 
+                ? `<strong>Pre-IPO:</strong> ${ipo.preIpoInvestors.join(', ')}.` 
+                : '';
+
+            item.innerHTML = `
+                <div class="upcoming-summary-text">
+                    <span class="upcoming-label ${badgeCls}">${ipo.issueType}${exc}</span>
+                    <strong>${ipo.companyName} IPO</strong>${pricePart}${sharesPart}<br>
+                    <span style="font-size: 0.9em; color: var(--text-secondary);">${unlockPart}</span><br>
+                    <span style="font-size: 0.85em;">${anchorNamesStr} ${preIpoNamesStr}</span>
+                </div>
+            `;
+            upcomingList.appendChild(item);
+        });
+    }
 
 });

@@ -443,38 +443,31 @@ tr:hover {
     }
 }
 
-/* Price Stats (Added in Phase 4) */
-.modal-price-stats {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.price-stat-box {
-    background: var(--bg-body);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.price-label {
+/* Price Stats (Added in Phase 4 - Updated to Header Badges) */
+.header-price-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 6px;
     font-size: 0.75rem;
+    font-weight: 600;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+.header-price-badge .price-label {
     color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-weight: 600;
 }
 
-.price-value {
-    font-size: 1.1rem;
+.header-price-badge .price-value {
+    color: var(--text-primary);
     font-weight: 700;
-    color: var(--text-main);
 }
 
 /* Modal Card */
@@ -928,5 +921,243 @@ tr:hover {
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* Tabs & Viewer Layout */
+.header-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem;
+    border-radius: 12px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    opacity: 0.7;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.nav-btn:hover {
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn.active {
+    opacity: 1;
+    background: white;
+    color: var(--accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.view-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Upcoming IPOs List */
+.upcoming-header {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.upcoming-header h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.upcoming-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.upcoming-item {
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.upcoming-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent-light);
+}
+
+.upcoming-summary-text {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.upcoming-summary-text strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.upcoming-label {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.label-sme {
+    background: var(--warning-bg);
+    color: var(--warning-text);
+}
+
+.label-mainboard {
+    background: var(--success-bg);
+    color: var(--success-text);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 1rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-actions {
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group,
+    .toggle-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    /* Transform Table to Cards */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    td {
+        padding: 0.5rem 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        margin-bottom: 0.1rem;
+    }
+
+    tr:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Make Modal responsive */
+    .modal-card {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .timeline-content {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+
+    #rhpSection {
+        margin-left: 0 !important;
+        margin-top: 0.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
     }
 }

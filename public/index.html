@@ -8,7 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=19">
+    <!-- PWA Setup -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon.svg">
 </head>
 
 <body>
@@ -19,97 +25,183 @@
                 <span class="icon">🔓</span>
                 <h1>IPO Unlock Tracker</h1>
             </div>
+            <div class="header-nav">
+                <button id="navTrackerBtn" class="nav-btn active">Tracker</button>
+                <button id="navPreferentialBtn" class="nav-btn">Preferential Unlock</button>
+                <button id="navUpcomingBtn" class="nav-btn">Upcoming IPOs</button>
+            </div>
             <div class="header-actions">
-                <button id="refreshBtn" class="refresh-btn">
-                    <span class="icon">↻</span> Refresh Data
-                </button>
                 <div class="last-updated">
                     Updated: <span id="lastUpdated">--</span>
                 </div>
             </div>
         </header>
 
-        <!-- Stats Section -->
-        <section class="stats-grid">
-            <div class="stat-card highlight">
-                <h3>Unlocks This Week</h3>
-                <div class="stat-value" id="countThisWeek">0</div>
-                <div class="stat-label">Companies</div>
-            </div>
-            <div class="stat-card">
-                <h3>Upcoming (Next 30 Days)</h3>
-                <div class="stat-value" id="countUpcoming">0</div>
-                <div class="stat-label">Events</div>
-            </div>
-            <div class="stat-card">
-                <h3>Total Tracked</h3>
-                <div class="stat-value" id="countTotal">0</div>
-                <div class="stat-label">IPOs (2025-26)</div>
-            </div>
-        </section>
+        <!-- View 1: Tracker View -->
+        <div id="viewTracker" class="view-panel active">
+            <!-- Stats Section -->
+            <section class="stats-grid">
+                <div class="stat-card highlight">
+                    <h3>Unlocks This Week</h3>
+                    <div class="stat-value" id="countThisWeek">0</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Upcoming (Next 30 Days)</h3>
+                    <div class="stat-value" id="countUpcoming">0</div>
+                    <div class="stat-label">Events</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Tracked</h3>
+                    <div class="stat-value" id="countTotal">0</div>
+                    <div class="stat-label">IPOs (2025-26)</div>
+                    <button id="refreshBtn" class="refresh-btn"
+                        style="margin-top:10px;font-size:12px;padding:6px 12px;">
+                        <span class="icon">↻</span> Refresh Data
+                    </button>
+                </div>
+            </section>
 
-        <!-- Filters -->
-        <section class="controls">
-            <div class="filter-group">
-                <button class="filter-btn active" data-filter="week">This Week</button>
-                <button class="filter-btn" data-filter="thisMonth">This Month</button>
-                <button class="filter-btn" data-filter="lastMonth">Last Month</button>
-                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
-                <button class="filter-btn" data-filter="all">All History</button>
-            </div>
+            <!-- Filters -->
+            <section class="controls">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="week">This Week</button>
+                    <button class="filter-btn" data-filter="thisMonth">This Month</button>
+                    <button class="filter-btn" data-filter="lastMonth">Last Month</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-btn" data-filter="all">All History</button>
+                </div>
 
-            <div class="filter-group">
-                <button class="type-filter-btn active" data-type="all">All Types</button>
-                <button class="type-filter-btn" data-type="Mainboard">Mainboard</button>
-                <button class="type-filter-btn" data-type="SME">SME</button>
-                <button class="type-filter-btn" data-type="BSE SME">BSE SME</button>
-                <button class="type-filter-btn" data-type="NSE SME">NSE SME</button>
-            </div>
+                <div class="filter-group">
+                    <button class="type-filter-btn active" data-type="all">All Types</button>
+                    <button class="type-filter-btn" data-type="Mainboard">Mainboard</button>
+                    <button class="type-filter-btn" data-type="SME">SME</button>
+                    <button class="type-filter-btn" data-type="BSE SME">BSE SME</button>
+                    <button class="type-filter-btn" data-type="NSE SME">NSE SME</button>
+                </div>
 
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search company...">
-            </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search company...">
+                </div>
 
-            <div class="toggle-group">
-                <label class="toggle">
-                    <input type="checkbox" id="showAnchor" checked>
-                    <span class="toggle-label">Anchor</span>
-                </label>
-                <label class="toggle">
-                    <input type="checkbox" id="showPreIPO" checked>
-                    <span class="toggle-label">Pre-IPO</span>
-                </label>
-            </div>
+                <div class="toggle-group">
+                    <label class="toggle">
+                        <input type="checkbox" id="showAnchor" checked>
+                        <span class="toggle-label">Anchor</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="showPreIPO" checked>
+                        <span class="toggle-label">Pre-IPO</span>
+                    </label>
+                </div>
+            </section>
 
-        </section>
-
-        <!-- Main Data Table -->
-        <div class="table-container">
-            <table id="unlockTable">
-                <thead>
-                    <tr>
-                        <th style="width: 30%">Company</th>
-                        <th style="width: 15%">Listing Date</th>
-                        <th style="width: 15%">30-Day Unlock</th>
-                        <th style="width: 15%">90-Day Unlock</th>
-                        <th style="width: 25%">Pre-IPO Lock-in</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Data will be injected here -->
-                </tbody>
-            </table>
-            <div id="loading" class="loading">
-                <div class="spinner"></div>
-                <p>Fetching Unlock Data...</p>
-            </div>
-            <div id="noData" class="no-data hidden">
-                <p>No unlock events found matching your criteria.</p>
+            <!-- Main Data Table -->
+            <div class="table-container">
+                <table id="unlockTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%">Company</th>
+                            <th style="width: 15%">Listing Date</th>
+                            <th style="width: 15%">30-Day Unlock</th>
+                            <th style="width: 15%">90-Day Unlock</th>
+                            <th style="width: 25%">Pre-IPO Lock-in</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Fetching Unlock Data...</p>
+                </div>
+                <div id="noData" class="no-data hidden">
+                    <p>No unlock events found matching your criteria.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Unlock Timeline Modal -->
+        <!-- View Preferential Unlock -->
+        <div id="viewPreferentialUnlock" class="view-panel hidden">
+            <div class="upcoming-header">
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                    <div>
+                        <h2>Preferential Unlocks</h2>
+                        <p>NSE &amp; BSE trading approvals for preferential issues (last 12 months).</p>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div class="last-updated" style="font-size:12px;">Updated: <span id="prefLastUpdated">--</span>
+                        </div>
+                        <div id="prefTrackedCount" style="font-size:13px; font-weight:600; color:var(--primary); padding:4px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:8px;">
+                            Tracked: <span id="prefCountNum">--</span>
+                        </div>
+                        <button id="refreshPrefBtn" class="refresh-btn">
+                            <span class="icon">↻</span> Refresh Data
+                        </button>
+                    </div>
+                </div>
+
+                <div class="controls"
+                    style="margin-top:12px; display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+                    <div class="search-box" style="flex:1; min-width:200px; max-width:320px;">
+                        <input type="text" id="prefSearch" placeholder="Search company or symbol...">
+                    </div>
+                    <div class="filter-group" style="margin-left:auto;">
+                        <span style="font-size:12px; color:var(--text-muted); padding:0 6px;">Sort:</span>
+                        <button class="filter-btn active" id="prefSortExpiry" data-sort="expiry">🔒 Lock-in Expiry
+                            ↑</button>
+                        <button class="filter-btn" id="prefSortRecent" data-sort="recent">🗓 Most Recent</button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="prefTable">
+                        <thead>
+                            <tr>
+                                <th style="width:22%">Company</th>
+                                <th style="width:12%">Symbol</th>
+                                <th style="width:14%">Shares</th>
+                                <th style="width:16%">Notice / Listing Date</th>
+                                <th style="width:18%">Lock-in Expiry ↑</th>
+                                <th style="width:18%">Circular</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prefTableBody">
+                            <!-- Data injected here -->
+                        </tbody>
+                    </table>
+                    <div id="prefLoading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Loading cached data...</p>
+                    </div>
+                    <div id="prefNoData" class="no-data hidden">
+                        <p>No preferential unlock data found. Click <strong>Refresh Data</strong> to scan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Upcoming IPOs -->
+        <div id="viewUpcomingIPOs" class="view-panel hidden">
+            <div class="upcoming-header">
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                    <div>
+                        <h2>Upcoming Unlisted IPOs</h2>
+                        <p>Tracking latest filings with automatically extracted NLP data from Chittorgarh.</p>
+                    </div>
+                    <button id="refreshUpcomingBtn" class="refresh-btn">
+                        <span class="icon">↻</span> Refresh
+                    </button>
+                </div>
+            </div>
+            <div id="upcomingList" class="upcoming-list">
+                <!-- One-line summaries injected here -->
+            </div>
+        </div>
+    </div><!-- end app-container -->
+
+    <!-- Unlock Timeline Modal (outside all view panels so it always overlays) -->
     <div id="preIPOModal" class="modal-overlay hidden">
         <div class="modal-card">
             <button class="modal-close" id="modalClose">&times;</button>
@@ -123,22 +215,17 @@
                 <div class="modal-header-badges">
                     <div id="modalBadge" class="modal-badge"></div>
                     <div id="modalExchangeBadge" class="modal-exchange-badge"></div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <!-- Price Stats Header -->
-                <div class="modal-price-stats">
-                    <div class="price-stat-box">
-                        <span class="price-label">Issue Price</span>
+                    <div class="header-price-badge">
+                        <span class="price-label">Issue:</span>
                         <span class="price-value" id="modalIssuePrice">—</span>
                     </div>
-                    <div class="price-stat-box">
-                        <span class="price-label">Last Close</span>
+                    <div class="header-price-badge">
+                        <span class="price-label">Close:</span>
                         <span class="price-value" id="modalLivePrice">—</span>
                     </div>
                 </div>
-
-                <!-- Timeline -->
+            </div>
+            <div class="modal-body">
                 <div class="unlock-timeline">
                     <div class="timeline-item" id="timelineListing">
                         <div class="timeline-icon">📅</div>
@@ -169,15 +256,23 @@
                     </div>
                     <div class="timeline-item" id="timelinePreIPO">
                         <div class="timeline-icon">🚀</div>
-                        <div class="timeline-content">
-                            <div class="timeline-label">Pre-IPO Lock-in Expiry</div>
-                            <div class="timeline-date" id="tlPreIPODate">—</div>
-                            <div class="timeline-sub" id="tlPreIPOSub"></div>
-                            <div class="timeline-status" id="tlPreIPOStatus"></div>
+                        <div class="timeline-content"
+                            style="display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <div class="timeline-label">Pre-IPO Lock-in Expiry</div>
+                                <div class="timeline-date" id="tlPreIPODate">—</div>
+                                <div class="timeline-sub" id="tlPreIPOSub"></div>
+                                <div class="timeline-status" id="tlPreIPOStatus"></div>
+                            </div>
+                            <div id="rhpSection" style="display:none;margin-left:10px;">
+                                <a id="btnViewRhp" href="#" target="_blank"
+                                    style="text-decoration:none;padding:6px 10px;border-radius:6px;font-size:11px;font-weight:bold;background:var(--accent);color:#fff;display:inline-flex;align-items:center;gap:5px;transition:opacity 0.2s;white-space:nowrap;box-shadow:0 2px 4px rgba(79,70,229,0.2);">
+                                    <span>📜 Pre-IPO Data</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Unlock Details from Annexure-I -->
                 <div id="unlockDetailsSection" class="unlock-details" style="display:none;">
                     <div class="unlock-details-header">
                         <span id="unlockDetailsTitle" class="unlock-details-title">📊 Lock-in Details</span>
@@ -195,7 +290,17 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/cdn.min.js"></script>
-    <script src="app.js?v=3"></script>
+    <script src="app.js?v=19"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('SW registered!', reg.scope))
+                    .catch(err => console.log('SW failed', err));
+            });
+        }
+    </script>
+
 </body>
 
 </html>

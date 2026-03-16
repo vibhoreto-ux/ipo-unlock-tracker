@@ -1,0 +1,43 @@
+
+
+Number    of
+Securities
+Distinctive 
+Numbers From
+To
+Type of Security 
+(F & L, F & 
+IPO)
+Date up to 
+which securities 
+are under lock-
+in
+Physical/Demat
+           45,71,070     145,71,070
+Fully Paid up & 
+Lock In
+January 26, 2029   Demat
+           45,39,465   45,71,071    91,10,535
+Fully Paid up & 
+Lock In
+January 26, 2028   Demat
+           75,73,815   91,10,536   1,66,84,350
+Fully Paid up & 
+Lock In
+January 26, 2027   Demat
+Fully Paid up – 
+Anchor
+Lock in
+Fully Paid up – 
+Anchor
+Lock in
+           44,15,000   1,84,40,351   2,28,55,350
+Fully Paid up - 
+IPO
+Demat
+2,28,55,350      TOTAL
+             8,82,000   1,75,58,351   1,84,40,350April 18, 2026   Demat
+             8,74,000   1,66,84,351   1,75,58,350
+February 17, 
+2026
+Demat

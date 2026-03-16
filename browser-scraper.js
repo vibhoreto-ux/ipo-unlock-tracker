@@ -23,7 +23,7 @@ async function scrapeWithBrowser(year) {
             fetchAnchorData(year)
         ]);
 
-        const merged = mergeData(ipoList, anchorData, year);
+        const merged = await mergeData(ipoList, anchorData, year);
         console.log(`[API Scraper] Done: ${merged.length} companies for ${year}`);
         return merged;
 
@@ -192,7 +192,7 @@ async function fetchAnchorData(year) {
 /**
  * Merge IPO list with Anchor data
  */
-function mergeData(ipoList, anchorData, year) {
+async function mergeData(ipoList, anchorData, year) {
     console.log(`[Merge] ${ipoList.length} IPOs, ${anchorData.length} anchors for ${year}`);
     let matchCount = 0;
 
@@ -248,8 +248,188 @@ function mergeData(ipoList, anchorData, year) {
         }
     }
 
+    // Enrich upcoming IPOs with Anchor Investor names + Pre-IPO Investor names
+    try {
+        const { execSync } = require('child_process');
+
+        const now = new Date();
+        for (const ipo of merged) {
+            const ipoDate = ipo.allotmentDate ? parseDate(ipo.allotmentDate.original) : null;
+            const isUpcoming = !ipoDate || ipoDate > now;
+
+            if (isUpcoming) {
+                // --- 1. Anchor Investors: scrape from Chittorgarh subscription page HTML ---
+                if (ipo.chittorgarhUrl) {
+                    try {
+                        const anchorData = await fetchAnchorInvestorNames(ipo.chittorgarhUrl);
+                        ipo.anchorInvestors = anchorData.investors;
+                        ipo.anchorShares = anchorData.anchorShares;
+                        ipo.totalShares = anchorData.totalShares;
+                        console.log(`[Anchor] ${ipo.companyName}: ${ipo.anchorInvestors.length} investors, ${ipo.anchorShares} anchor shares, ${ipo.totalShares} total shares`);
+                    } catch (e) {
+                        console.warn(`[Anchor] Could not fetch for ${ipo.companyName}: ${e.message}`);
+                        ipo.anchorInvestors = [];
+                    }
+                } else {
+                    ipo.anchorInvestors = [];
+                }
+
+                // --- 2. Pre-IPO Investors: extract from RHP PDF via Python pdfplumber ---
+                let rhpUrl = '';
+                if (ipo.chittorgarhUrl) {
+                    try {
+                        rhpUrl = await fetchRHPUrl(ipo.chittorgarhUrl);
+                    } catch (e) {
+                        console.warn(`[NLP] Could not fetch RHP for ${ipo.companyName}: ${e.message}`);
+                    }
+                }
+
+                if (rhpUrl) {
+                    try {
+                        const path = require('path');
+                        const venvPython = path.join(__dirname, '..', 'unlock-tracker', 'venv', 'bin', 'python');
+                        const pyScript = path.join(__dirname, 'nlp_extractor.py');
+                        const pyCmd = `${venvPython} ${pyScript} --rhp "${rhpUrl}"`;
+                        console.log(`[NLP] Extracting Pre-IPO from RHP: ${ipo.companyName}`);
+                        const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
+                        const nlpData = JSON.parse(out.trim());
+                        ipo.preIpoInvestors = nlpData.preIpoInvestors || [];
+                    } catch (e) {
+                        console.error(`[NLP] Pre-IPO failed on ${ipo.companyName}:`, e.message);
+                        ipo.preIpoInvestors = [];
+                    }
+                    ipo.rhpUrl = rhpUrl;
+                } else {
+                    ipo.preIpoInvestors = [];
+                }
+            }
+        }
+    } catch (e) {
+        console.error("[NLP] Encountered error initializing enrichment", e);
+    }
+
+
     console.log(`[Merge] Result: ${merged.length} total, ${matchCount} anchor matches`);
     return merged;
+}
+
+/**
+ * Scrape the Chittorgarh subscription page to get per-IPO anchor investor names,
+ * anchor share count, and total share count.
+ * Converts /ipo/slug/id/ -> /ipo_subscription/slug/id/ and reads #anchorinvestorlist.
+ * Returns { investors: string[], anchorShares: number, totalShares: number }
+ */
+async function fetchAnchorInvestorNames(chittorgarhUrl) {
+    const empty = { investors: [], anchorShares: 0, totalShares: 0 };
+    if (!chittorgarhUrl) return empty;
+    try {
+        // Convert IPO page URL to subscription page URL
+        const subUrl = chittorgarhUrl.replace('/ipo/', '/ipo_subscription/');
+        const resp = await axios.get(subUrl, {
+            headers: { ...HEADERS, 'Referer': 'https://www.chittorgarh.com/' },
+            timeout: 15000
+        });
+        const $ = cheerio.load(resp.data);
+
+        // Extract investor names from #anchorinvestorlist table
+        const investors = [];
+        const anchorSection = $('#anchorinvestorlist');
+        if (anchorSection.length) {
+            anchorSection.find('table tr').each((j, row) => {
+                const cells = $(row).find('td');
+                if (cells.length >= 4) {
+                    // Column 1 = #, Column 2 = Anchor name, Column 3 = Group Entity
+                    const investorName = $(cells.eq(1)).text().trim();
+                    if (investorName && !investorName.match(/^(total|#|sr|s\.no|\d+$)/i)) {
+                        investors.push(investorName);
+                    }
+                }
+            });
+        }
+
+        // Extract anchor shares and total shares from the shares offered table
+        let anchorShares = 0;
+        let totalShares = 0;
+        $('table').each((i, t) => {
+            const text = $(t).text().toLowerCase();
+            if (text.includes('shares offered') && text.includes('total') && text.includes('anchor')) {
+                $(t).find('tr').each((j, row) => {
+                    const cells = $(row).find('td');
+                    if (cells.length >= 2) {
+                        const category = $(cells.eq(0)).text().trim().toLowerCase();
+                        const sharesText = $(cells.eq(1)).text().trim().replace(/,/g, '');
+                        const shares = parseInt(sharesText);
+                        if (category === 'anchor' && !isNaN(shares)) {
+                            anchorShares = shares;
+                        }
+                        if (category === 'total' && !isNaN(shares)) {
+                            totalShares = shares;
+                        }
+                    }
+                });
+            }
+        });
+
+        // Fallback: try embedded JSON data for shares
+        if (!anchorShares || !totalShares) {
+            const body = $('body').text();
+            if (!anchorShares) {
+                const m = body.match(/shares_offered_anchor_investor.*?(\d+)/);
+                if (m) anchorShares = parseInt(m[1]);
+            }
+            if (!totalShares) {
+                const m = body.match(/total_shares_offered.*?(\d+)/);
+                if (m) totalShares = parseInt(m[1]);
+            }
+        }
+
+        return { investors, anchorShares, totalShares };
+    } catch (e) {
+        console.warn(`[Anchor] Error fetching subscription page: ${e.message}`);
+        return empty;
+    }
+}
+
+
+/**
+ * Scrape a Chittorgarh IPO page to find the best direct RHP/DRHP PDF URL.
+ * Prefers: bsesme.com DRHP PDF > bseindia.com RHP zip > chittorgarh.net anchor PDF
+ */
+async function fetchRHPUrl(chittorgarhUrl) {
+    if (!chittorgarhUrl) return '';
+    try {
+        const resp = await axios.get(chittorgarhUrl, {
+            headers: { ...HEADERS, 'Referer': 'https://www.chittorgarh.com/' },
+            timeout: 15000
+        });
+        const $ = cheerio.load(resp.data);
+
+        const candidates = [];
+        $('a').each((i, el) => {
+            const href = $(el).attr('href') || '';
+            const text = $(el).text().toLowerCase().trim();
+            if (!href) return;
+            // Only consider direct PDF links (not zip, not relative)
+            if (href.startsWith('http') && href.toLowerCase().endsWith('.pdf')) {
+                const isPdf = href.toLowerCase().endsWith('.pdf');
+                const isRHP = text.includes('rhp') || text.includes('red herring') || href.toLowerCase().includes('rhp');
+                const isDRHP = text.includes('drhp') || href.toLowerCase().includes('drhp');
+                const isBSESME = href.includes('bsesme.com');
+                const isBSE = href.includes('bseindia.com');
+                if (isPdf && (isRHP || isDRHP)) {
+                    let basePriority = (isRHP && !isDRHP) ? 10 : 20; // Final RHP always beats DRHP
+                    let domainPriority = isBSESME ? 1 : isBSE ? 2 : 3;
+                    candidates.push({ href, priority: basePriority + domainPriority });
+                }
+            }
+        });
+
+        if (candidates.length === 0) return '';
+        candidates.sort((a, b) => a.priority - b.priority);
+        return candidates[0].href;
+    } catch (e) {
+        return '';
+    }
 }
 
 function parseDate(dateStr) {
