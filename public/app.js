@@ -167,9 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Silent data loader — fetches company data WITHOUT touching Tracker UI elements.
     // Used by tabs (Upcoming IPOs) that share allCompanies but have their own refresh UI.
-    async function loadCompanyData() {
+    async function loadCompanyData(forceRefresh = false) {
         try {
-            const url = `/api/unlock-data?t=${Date.now()}`;
+            const url = forceRefresh 
+                ? `/api/unlock-data?refresh=true&t=${Date.now()}` 
+                : `/api/unlock-data?t=${Date.now()}`;
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const result = await response.json();
@@ -1192,8 +1194,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const refreshUpcomingBtn = document.getElementById('refreshUpcomingBtn');
     if (refreshUpcomingBtn) {
         refreshUpcomingBtn.addEventListener('click', () => {
-            upcomingList.innerHTML = '<div class="no-data"><p>Refreshing...</p></div>';
-            loadCompanyData().then(() => renderUpcomingIPOs()).catch(() => {
+            upcomingList.innerHTML = '<div class="no-data"><p>Refreshing (this may take up to 60s)...</p></div>';
+            loadCompanyData(true).then(() => renderUpcomingIPOs()).catch(() => {
                 upcomingList.innerHTML = '<div class="no-data"><p style="color:var(--danger)">Failed to refresh.</p></div>';
             });
         });
