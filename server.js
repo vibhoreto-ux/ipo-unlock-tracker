@@ -330,8 +330,8 @@ app.get('/api/unlock-data', async (req, res) => {
         try {
             // Try browser scraper first (Puppeteer)
             [data2025, data2026] = await Promise.all([
-                scrapeWithBrowser(2025),
-                scrapeWithBrowser(2026)
+                scrapeWithBrowser(2025, db.companies),
+                scrapeWithBrowser(2026, db.companies)
             ]);
             console.log('Browser scraper succeeded');
         } catch (browserErr) {

@@ -14,7 +14,7 @@ const HEADERS = {
 /**
  * Main: scrape IPO list + anchor data for a given year via Chittorgarh API
  */
-async function scrapeWithBrowser(year) {
+async function scrapeWithBrowser(year, existingCompanies = []) {
     try {
         console.log(`[API Scraper] Starting for year ${year}...`);
 
@@ -23,7 +23,7 @@ async function scrapeWithBrowser(year) {
             fetchAnchorData(year)
         ]);
 
-        const merged = await mergeData(ipoList, anchorData, year);
+        const merged = await mergeData(ipoList, anchorData, year, existingCompanies);
         console.log(`[API Scraper] Done: ${merged.length} companies for ${year}`);
         return merged;
 
@@ -192,7 +192,7 @@ async function fetchAnchorData(year) {
 /**
  * Merge IPO list with Anchor data
  */
-async function mergeData(ipoList, anchorData, year) {
+async function mergeData(ipoList, anchorData, year, existingCompanies = []) {
     console.log(`[Merge] ${ipoList.length} IPOs, ${anchorData.length} anchors for ${year}`);
     let matchCount = 0;
 
@@ -275,6 +275,15 @@ async function mergeData(ipoList, anchorData, year) {
                 }
 
                 // --- 2. Pre-IPO Investors: extract from RHP PDF via Python pdfplumber ---
+                // Only read pre ipo investor data for new additions
+                const existingCompany = existingCompanies.find(c => c.companyName === ipo.companyName);
+                if (existingCompany && existingCompany.preIpoInvestors !== undefined && existingCompany.preIpoInvestors != null) {
+                    console.log(`[NLP] Skipping RHP read for ${ipo.companyName} (already exists)`);
+                    ipo.preIpoInvestors = existingCompany.preIpoInvestors;
+                    ipo.rhpUrl = existingCompany.rhpUrl || '';
+                    continue;
+                }
+
                 let rhpUrl = '';
                 if (ipo.chittorgarhUrl) {
                     try {

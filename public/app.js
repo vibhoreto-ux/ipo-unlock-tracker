@@ -1439,7 +1439,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!listDateStr) return true;
             const listDate = new Date(listDateStr);
             listDate.setHours(0, 0, 0, 0);
-            return listDate >= today;
+            return listDate > today;
         });
 
         if (upcomingIPOs.length === 0) {
