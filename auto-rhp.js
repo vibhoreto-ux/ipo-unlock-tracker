@@ -45,26 +45,61 @@ async function fetchRHPForCompany(company) {
 }
 
 async function autoFetchMissingRHP() {
-    const db = readDB();
-    const missing = db.companies.filter(c => c.chittorgarhUrl && !c.rhpUrl);
-    if (missing.length === 0) return;
-    
-    console.log(`[Auto-RHP] Found ${missing.length} companies missing RHP links. Fetching in background...`);
+    let db = readDB();
+    const missingURL = db.companies.filter(c => c.chittorgarhUrl && !c.rhpUrl);
     
     let updated = 0;
-    // Process top 10 at a time
-    for (const company of missing.slice(0, 10)) {
-        const link = await fetchRHPForCompany(company);
-        if (link) {
-            company.rhpUrl = link;
-            updated++;
+    if (missingURL.length > 0) {
+        console.log(`[Auto-RHP] Found ${missingURL.length} companies missing RHP links. Fetching in background...`);
+        for (const company of missingURL.slice(0, 10)) {
+            const link = await fetchRHPForCompany(company);
+            if (link) {
+                company.rhpUrl = link;
+                updated++;
+            }
+            await new Promise(r => setTimeout(r, 500));
         }
-        await new Promise(r => setTimeout(r, 500));
+        
+        if (updated > 0) {
+            writeDB(db);
+            console.log(`[Auto-RHP] Saved ${updated} new RHP links to database.`);
+        }
     }
+
+    // Phase 2: Missing NLP Pre-IPO Extractions
+    db = readDB(); // refresh db reference safely
+    const missingNLP = db.companies.filter(c => c.rhpUrl && c.preIpoInvestors === undefined);
     
-    if (updated > 0) {
-        writeDB(db);
-        console.log(`[Auto-RHP] Saved ${updated} new RHP links to database.`);
+    if (missingNLP.length > 0) {
+        console.log(`[Auto-RHP] Found ${missingNLP.length} companies missing Pre-IPO NLP data. Executing Python queue...`);
+        const { execSync } = require('child_process');
+        const path = require('path');
+        // Point to the dedicated venv python executable
+        const venvPython = path.join(__dirname, 'venv', 'bin', 'python');
+        const pyScript = path.join(__dirname, 'nlp_extractor.py');
+        
+        let nlpUpdated = 0;
+        // Restrict to 5 so we process sequentially without memory blowouts in the background
+        for (const company of missingNLP.slice(0, 5)) {
+            try {
+                const pyCmd = `${venvPython} ${pyScript} --rhp "${company.rhpUrl}"`;
+                console.log(`[Auto-RHP] Extracting Pre-IPO from RHP: ${company.companyName}`);
+                const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
+                const nlpData = JSON.parse(out.trim());
+                company.preIpoInvestors = nlpData.preIpoInvestors || [];
+                nlpUpdated++;
+            } catch (e) {
+                console.error(`[Auto-RHP] Pre-IPO failed on ${company.companyName}:`, e.message);
+                // Assign empty array to prevent an infinite loop failure trap 
+                company.preIpoInvestors = [];
+                nlpUpdated++;
+            }
+        }
+        
+        if (nlpUpdated > 0) {
+            writeDB(db);
+            console.log(`[Auto-RHP] Saved ${nlpUpdated} new NLP Pre-IPO extractions to database.`);
+        }
     }
 }
 

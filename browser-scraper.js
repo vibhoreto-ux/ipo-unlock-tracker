@@ -258,8 +258,15 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = []) {
             const isUpcoming = !ipoDate || ipoDate > now;
 
             if (isUpcoming) {
+                // Pre-fetch fast path cache
+                const existingCompany = existingCompanies.find(c => c.companyName === ipo.companyName);
+
                 // --- 1. Anchor Investors: scrape from Chittorgarh subscription page HTML ---
-                if (ipo.chittorgarhUrl) {
+                if (existingCompany && existingCompany.anchorInvestors !== undefined) {
+                    ipo.anchorInvestors = existingCompany.anchorInvestors;
+                    ipo.anchorShares = existingCompany.anchorShares || 0;
+                    ipo.totalShares = existingCompany.totalShares || 0;
+                } else if (ipo.chittorgarhUrl) {
                     try {
                         const anchorData = await fetchAnchorInvestorNames(ipo.chittorgarhUrl);
                         ipo.anchorInvestors = anchorData.investors;
@@ -274,42 +281,15 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = []) {
                     ipo.anchorInvestors = [];
                 }
 
-                // --- 2. Pre-IPO Investors: extract from RHP PDF via Python pdfplumber ---
-                // Only read pre ipo investor data for new additions
-                const existingCompany = existingCompanies.find(c => c.companyName === ipo.companyName);
+                // --- 2. Pre-IPO Investors: Async Extraction Delegate ---
+                // Fast-path: bridge existing database cache
                 if (existingCompany && existingCompany.preIpoInvestors !== undefined && existingCompany.preIpoInvestors != null) {
-                    console.log(`[NLP] Skipping RHP read for ${ipo.companyName} (already exists)`);
                     ipo.preIpoInvestors = existingCompany.preIpoInvestors;
                     ipo.rhpUrl = existingCompany.rhpUrl || '';
-                    continue;
-                }
-
-                let rhpUrl = '';
-                if (ipo.chittorgarhUrl) {
-                    try {
-                        rhpUrl = await fetchRHPUrl(ipo.chittorgarhUrl);
-                    } catch (e) {
-                        console.warn(`[NLP] Could not fetch RHP for ${ipo.companyName}: ${e.message}`);
-                    }
-                }
-
-                if (rhpUrl) {
-                    try {
-                        const path = require('path');
-                        const venvPython = path.join(__dirname, '..', 'unlock-tracker', 'venv', 'bin', 'python');
-                        const pyScript = path.join(__dirname, 'nlp_extractor.py');
-                        const pyCmd = `${venvPython} ${pyScript} --rhp "${rhpUrl}"`;
-                        console.log(`[NLP] Extracting Pre-IPO from RHP: ${ipo.companyName}`);
-                        const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
-                        const nlpData = JSON.parse(out.trim());
-                        ipo.preIpoInvestors = nlpData.preIpoInvestors || [];
-                    } catch (e) {
-                        console.error(`[NLP] Pre-IPO failed on ${ipo.companyName}:`, e.message);
-                        ipo.preIpoInvestors = [];
-                    }
-                    ipo.rhpUrl = rhpUrl;
                 } else {
-                    ipo.preIpoInvestors = [];
+                    // Tell the background auto-healer bot to extract this asynchronously so we dont freeze the API
+                    ipo.preIpoInvestors = undefined;
+                    ipo.rhpUrl = '';
                 }
             }
         }
