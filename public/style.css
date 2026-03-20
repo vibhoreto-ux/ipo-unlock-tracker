@@ -1002,9 +1002,32 @@ tr:hover {
 }
 
 .upcoming-list {
+    display: block;
+}
+
+.upcoming-split-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.upcoming-column {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.upcoming-col-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .upcoming-item {
@@ -1057,6 +1080,11 @@ tr:hover {
 @media (max-width: 768px) {
     .app-container {
         padding: 1rem;
+    }
+
+    .upcoming-split-view {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     header {

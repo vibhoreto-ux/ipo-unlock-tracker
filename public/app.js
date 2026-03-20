@@ -1456,7 +1456,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return formatted;
         };
 
-        upcomingIPOs.forEach(ipo => {
+        const smeIpos = upcomingIPOs.filter(c => c.issueType === 'SME');
+        const mainIpos = upcomingIPOs.filter(c => c.issueType !== 'SME');
+
+        const splitView = document.createElement('div');
+        splitView.className = 'upcoming-split-view';
+
+        const createCard = (ipo) => {
             const item = document.createElement('div');
             item.className = 'upcoming-item';
 
@@ -1505,8 +1511,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="font-size: 0.85em;">${anchorNamesStr} ${preIpoNamesStr}</span>
                 </div>
             `;
-            upcomingList.appendChild(item);
-        });
+            return item;
+        };
+
+        const createColumn = (title, count, badgeCls, ipos) => {
+            const col = document.createElement('div');
+            col.className = 'upcoming-column';
+            
+            const header = document.createElement('h3');
+            header.className = 'upcoming-col-title';
+            header.innerHTML = `${title} <span class="badge ${badgeCls}">${count}</span>`;
+            col.appendChild(header);
+
+            if (ipos.length === 0) {
+                const noData = document.createElement('div');
+                noData.className = 'no-data';
+                noData.innerHTML = `<p>No upcoming ${title} currently listed.</p>`;
+                col.appendChild(noData);
+            } else {
+                ipos.forEach(ipo => col.appendChild(createCard(ipo)));
+            }
+            return col;
+        };
+
+        splitView.appendChild(createColumn('Mainboard', mainIpos.length, 'label-mainboard', mainIpos));
+        splitView.appendChild(createColumn('SME', smeIpos.length, 'label-sme', smeIpos));
+
+        upcomingList.appendChild(splitView);
     }
 
 });
