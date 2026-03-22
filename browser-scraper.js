@@ -14,7 +14,7 @@ const HEADERS = {
 /**
  * Main: scrape IPO list + anchor data for a given year via Chittorgarh API
  */
-async function scrapeWithBrowser(year, existingCompanies = []) {
+async function scrapeWithBrowser(year, existingCompanies = [], forceRefresh = false) {
     try {
         console.log(`[API Scraper] Starting for year ${year}...`);
 
@@ -23,7 +23,7 @@ async function scrapeWithBrowser(year, existingCompanies = []) {
             fetchAnchorData(year)
         ]);
 
-        const merged = await mergeData(ipoList, anchorData, year, existingCompanies);
+        const merged = await mergeData(ipoList, anchorData, year, existingCompanies, forceRefresh);
         console.log(`[API Scraper] Done: ${merged.length} companies for ${year}`);
         return merged;
 
@@ -192,8 +192,8 @@ async function fetchAnchorData(year) {
 /**
  * Merge IPO list with Anchor data
  */
-async function mergeData(ipoList, anchorData, year, existingCompanies = []) {
-    console.log(`[Merge] ${ipoList.length} IPOs, ${anchorData.length} anchors for ${year}`);
+async function mergeData(ipoList, anchorData, year, existingCompanies = [], forceRefresh = false) {
+    console.log(`[Merge] ${ipoList.length} IPOs, ${anchorData.length} anchors for ${year} (Force: ${forceRefresh})`);
     let matchCount = 0;
 
     const normalize = name => name.toLowerCase().replace(/ ltd\.?| limited| india| private/g, '').trim();
@@ -262,7 +262,12 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = []) {
                 const existingCompany = existingCompanies.find(c => c.companyName === ipo.companyName);
 
                 // --- 1. Anchor Investors: scrape from Chittorgarh subscription page HTML ---
-                if (existingCompany && existingCompany.anchorInvestors !== undefined) {
+                const hasValidCache = existingCompany && existingCompany.anchorInvestors && existingCompany.anchorInvestors.length > 0;
+                const hasEmptyCache = existingCompany && existingCompany.anchorInvestors && existingCompany.anchorInvestors.length === 0;
+                
+                // If it has a valid populated cache, use it always.
+                // If it has an empty cache, only use it if we are NOT force-refreshing.
+                if (hasValidCache || (hasEmptyCache && !forceRefresh)) {
                     ipo.anchorInvestors = existingCompany.anchorInvestors;
                     ipo.anchorShares = existingCompany.anchorShares || 0;
                     ipo.totalShares = existingCompany.totalShares || 0;
@@ -282,8 +287,11 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = []) {
                 }
 
                 // --- 2. Pre-IPO Investors: Async Extraction Delegate ---
+                const hasValidNLPCache = existingCompany && existingCompany.preIpoInvestors && existingCompany.preIpoInvestors.length > 0;
+                const hasEmptyNLPCache = existingCompany && existingCompany.preIpoInvestors && existingCompany.preIpoInvestors.length === 0;
+                
                 // Fast-path: bridge existing database cache
-                if (existingCompany && existingCompany.preIpoInvestors !== undefined && existingCompany.preIpoInvestors != null) {
+                if (hasValidNLPCache || (hasEmptyNLPCache && !forceRefresh)) {
                     ipo.preIpoInvestors = existingCompany.preIpoInvestors;
                     ipo.rhpUrl = existingCompany.rhpUrl || '';
                 } else {

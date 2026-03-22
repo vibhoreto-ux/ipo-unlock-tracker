@@ -325,13 +325,14 @@ app.get('/api/unlock-data', async (req, res) => {
 
         // Refresh: scrape and merge
         console.log('Fetching fresh unlock data via browser scraper...');
+        const forceRefresh = req.query.refresh === 'true';
 
         let data2025, data2026;
         try {
             // Try browser scraper first (Puppeteer)
             [data2025, data2026] = await Promise.all([
-                scrapeWithBrowser(2025, db.companies),
-                scrapeWithBrowser(2026, db.companies)
+                scrapeWithBrowser(2025, db.companies, forceRefresh),
+                scrapeWithBrowser(2026, db.companies, forceRefresh)
             ]);
             console.log('Browser scraper succeeded');
         } catch (browserErr) {
