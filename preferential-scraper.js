@@ -1,5 +1,5 @@
 const axios = require('axios');
-const pdf = require('/Users/v1/Antigravity_my/unlock-tracker/node_modules/pdf-parse');
+const pdf = require('pdf-parse');
 const { format, subDays, addDays, isBefore, parseISO } = require('date-fns');
 const fs = require('fs');
 const path = require('path');
