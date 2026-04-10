@@ -138,8 +138,8 @@ async function autoFetchMissingRHP() {
         console.log(`[Auto-RHP] Found ${missingNLP.length} companies missing Pre-IPO NLP data. Executing Python queue...`);
         const { execSync } = require('child_process');
         const path = require('path');
-        // Point to the dedicated venv python executable
-        const venvPython = path.join(__dirname, 'venv', 'bin', 'python');
+        // Use system python3 (Render installs deps globally via build command)
+        const pythonBin = process.env.PYTHON_BIN || 'python3';
         const pyScript = path.join(__dirname, 'nlp_extractor.py');
         
         let nlpUpdated = 0;
@@ -148,7 +148,7 @@ async function autoFetchMissingRHP() {
             try {
                 console.log(`Extracting Pre-IPO from RHP: ${company.rhpUrl}...`);
                 const safelyEscapedName = company.companyName.replace(/"/g, '\\"');
-                const pyCmd = `venv/bin/python nlp_extractor.py --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
+                const pyCmd = `${pythonBin} ${pyScript} --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
                 const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
                 const nlpData = JSON.parse(out.trim());
                 company.preIpoInvestors = nlpData.preIpoInvestors || [];

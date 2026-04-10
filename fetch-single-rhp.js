@@ -68,8 +68,9 @@ async function run() {
     if (company.rhpUrl) {
         try {
             console.log(`[Priority-Fetch] Extracting NLP for ${targetName}...`);
+            const pythonBin = process.env.PYTHON_BIN || 'python3';
             const safelyEscapedName = targetName.replace(/"/g, '\\"');
-            const pyCmd = `venv/bin/python nlp_extractor.py --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
+            const pyCmd = `${pythonBin} nlp_extractor.py --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
             const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
             const nlpData = JSON.parse(out.trim());
             company.preIpoInvestors = nlpData.preIpoInvestors || [];
