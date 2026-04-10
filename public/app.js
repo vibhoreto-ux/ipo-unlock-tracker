@@ -579,7 +579,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+// Helper to dynamically poll if the RHP is extracting
+let pollTimer = null;
+function pollForNLP(companyName, attempts = 0) {
+    if (pollTimer) clearTimeout(pollTimer);
+    if (attempts > 15) return; // Stop after ~75 seconds
+    
+    pollTimer = setTimeout(async () => {
+        try {
+            const res = await fetch(`/api/unlock-details/${encodeURIComponent(companyName)}`);
+            const updatedCompany = await res.json();
+            if (updatedCompany && updatedCompany.preIpoInvestors !== undefined) {
+                // Extractor finished!
+                const index = unlockData.findIndex(c => c.companyName === companyName);
+                if (index !== -1) unlockData[index] = updatedCompany;
+                
+                const titleEl = document.getElementById('modalTitle');
+                if (titleEl && titleEl.textContent === companyName) {
+                    openUnlockModal(updatedCompany);
+                }
+            } else {
+                pollForNLP(companyName, attempts + 1);
+            }
+        } catch (e) {
+            console.error('Polling error:', e);
+        }
+    }, 5000);
+}
+
     function openUnlockModal(company) {
+        // Clear any existing timer just in case
+        if (pollTimer) clearTimeout(pollTimer);
         if (!company || !modal) return;
 
         // Company name & badges
@@ -616,6 +646,36 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 rhpSection.style.display = 'none';
             }
+        }
+
+        // Render Pre-IPO details
+        const preIpoBlock = document.getElementById('preIpoDetailsBlock');
+        if (preIpoBlock) {
+            let preIpoNamesStr = '';
+            if (!company.rhpUrl && company.preIpoInvestors === undefined) {
+                preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for RHP PDF... (may take ~45s)</span>`;
+                pollForNLP(company.companyName);
+            } else if (company.preIpoInvestors === undefined) {
+                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning RHP... (may take ~45s)</span>`;
+                pollForNLP(company.companyName);
+            } else if (company.preIpoInvestors && company.preIpoInvestors.length > 0) {
+                let listItems = company.preIpoInvestors.map(i => `<li style="margin-bottom:4px;">${i}</li>`).join('');
+                let wacaHtml = company.preIpoWaca ? `<div style="margin-top: 8px; font-size: 0.9em; font-weight: 500; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success);">₹${company.preIpoWaca}</span></div>` : '';
+                preIpoNamesStr = `
+                    <details>
+                        <summary style="cursor:pointer; font-weight:600; color:var(--text); list-style-position: inside;">View Pre-IPO Investors (${company.preIpoInvestors.length})</summary>
+                        <ul style="margin-top:10px; padding-left:22px; color:var(--text-muted); font-size:0.95em; max-height: 160px; overflow-y: auto; overflow-x: hidden; padding-right: 10px;">
+                            ${listItems}
+                        </ul>
+                    </details>
+                    ${wacaHtml}
+                `;
+            } else {
+                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Pre-IPO Investors recorded.</span>`;
+            }
+            // Use line-height to ensure it looks uniform whether expanded or not
+            preIpoBlock.innerHTML = `<div style="font-size: 13px; color: var(--text); line-height: 1.4;">${preIpoNamesStr}</div>`;
+            preIpoBlock.style.display = 'block';
         }
 
         // Set Issue Price and resetting Live Price
@@ -1473,17 +1533,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const pricePart = ipo.issuePrice ? `@₹${ipo.issuePrice}` : ' — Price TBD';
 
             // Format shares in lakhs (1 lakh = 100,000)
-            const toLk = (n) => n ? (n / 100000).toFixed(2) + 'lk' : null;
+            const toLk = (n) => (n !== null && n !== undefined && !isNaN(n)) ? (n / 100000).toFixed(2) + 'lk' : '0.00lk';
 
             let sharesPart = '';
-            if (ipo.anchorShares && ipo.totalShares) {
-                // Has both anchor and total → show breakdown
-                const ancLk = toLk(ipo.anchorShares);
-                const pubLk = toLk(ipo.totalShares - ipo.anchorShares);
-                sharesPart = `, ${ancLk} anc., ${pubLk} pub.`;
-            } else if (ipo.totalShares) {
-                // Only total shares, no anchors → all shares are public
-                sharesPart = `, ${toLk(ipo.totalShares)} total shares`;
+            if (ipo.totalShares) {
+                const ancNum = ipo.anchorShares || 0;
+                const pubNum = Math.max(0, ipo.totalShares - ancNum);
+                if (ancNum > 0) {
+                    sharesPart = `, ${toLk(ancNum)} anc., ${toLk(pubNum)} pub.`;
+                } else {
+                    sharesPart = `, 0 anc., ${toLk(pubNum)} pub.`;
+                }
             }
 
             const d30Str = fmtDate(ipo.anchor30);
@@ -1499,10 +1559,16 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 anchorNamesStr = `<span style="color:var(--text-muted); font-style:italic;">No anchors yet</span>`;
             }
-            const preIpoNamesStr = (ipo.preIpoInvestors && ipo.preIpoInvestors.length) 
-                ? `<strong>Pre-IPO:</strong> ${ipo.preIpoInvestors.join(', ')}.` 
-                : '';
-
+            let preIpoNamesStr = '';
+            if (!ipo.rhpUrl && ipo.preIpoInvestors === undefined) {
+                preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for RHP PDF...</span>`;
+            } else if (ipo.preIpoInvestors === undefined) {
+                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning RHP...</span>`;
+            } else if (ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0) {
+                preIpoNamesStr = `<strong>Pre-IPO:</strong> ${ipo.preIpoInvestors.join(', ')}.`;
+            } else {
+                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Pre-IPOs.</span>`;
+            }
             item.innerHTML = `
                 <div class="upcoming-summary-text">
                     <span class="upcoming-label ${badgeCls}">${ipo.issueType}${exc}</span>

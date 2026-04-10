@@ -346,15 +346,6 @@ app.get('/api/unlock-data', async (req, res) => {
         // Combine scraped data
         let newData = [...data2025, ...data2026];
 
-        // Dedup scraped data itself
-        const seen = new Set();
-        newData = newData.filter(item => {
-            const key = `${item.companyName}`;
-            if (seen.has(key)) return false;
-            seen.add(key);
-            return true;
-        });
-
         console.log(`Scraped ${newData.length} total companies (${data2025.length} from 2025, ${data2026.length} from 2026)`);
 
         // Merge into existing DB
@@ -495,6 +486,15 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
 
         if (!company) {
             return res.status(404).json({ error: 'Company not found in database' });
+        }
+
+        // Spawn a background priority fetch if Pre-IPO data is missing
+        if (company.preIpoInvestors === undefined) {
+             const cp = require('child_process');
+             cp.spawn('node', ['fetch-single-rhp.js', company.companyName], { 
+                detached: true, 
+                stdio: 'ignore' 
+             }).unref();
         }
 
 

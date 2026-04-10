@@ -36,17 +36,73 @@ async function fetchRHPForCompany(company) {
             }
         });
 
-        if (candidates.length === 0) return null;
+        if (candidates.length === 0) return await fetchRHPFallback(company.companyName);
         candidates.sort((a, b) => a.priority - b.priority);
         return candidates[0].href;
     } catch (e) {
+        return await fetchRHPFallback(company.companyName);
+    }
+}
+
+async function fetchRHPFallback(companyName) {
+    console.log(`[Auto-RHP] Fallback DDG search for: ${companyName}`);
+    try {
+        const res = await axios.post('https://lite.duckduckgo.com/lite/', 
+            `q=${encodeURIComponent('"' + companyName + '" RHP OR DRHP filetype:pdf')}&kl=in-en`, 
+            {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                timeout: 15000
+            }
+        );
+        const $ = cheerio.load(res.data);
+        const candidates = [];
+        $('a').each((i, el) => {
+            const href = $(el).attr('href');
+            if (href && href.startsWith('http') && href.toLowerCase().endsWith('.pdf')) {
+                const isNSE = href.includes('nseindia.com');
+                const isBSE = href.includes('bseindia.com');
+                const isSEBI = href.includes('sebi.gov.in');
+                
+                let score = 0;
+                if (isSEBI) score += 10;
+                if (isNSE || isBSE) score += 5;
+                if (href.toLowerCase().includes('rhp')) score += 3;
+                if (href.toLowerCase().includes('drhp')) score += 1;
+                
+                candidates.push({ href, score });
+            }
+        });
+        
+        if (candidates.length === 0) return null;
+        candidates.sort((a,b) => b.score - a.score);
+        return candidates[0].href;
+    } catch (e) {
+        console.error(`[Auto-RHP] Fallback failed for ${companyName}:`, e.message);
         return null;
     }
 }
 
 async function autoFetchMissingRHP() {
     let db = readDB();
-    const missingURL = db.companies.filter(c => c.chittorgarhUrl && !c.rhpUrl);
+    const now = new Date();
+    const missingURL = db.companies.filter(c => {
+        if (c.rhpUrl) return false;
+        const ipoDate = c.allotmentDate ? new Date(c.allotmentDate.original || c.allotmentDate.adjusted) : null;
+        if (!ipoDate) return true; // always target recent TBD IPOs
+        return (now.getTime() - ipoDate.getTime()) < 730 * 24 * 3600000; // past 2 years only to avoid ban limits
+    });
+    
+    // Prioritize upcoming IPOs (future allotment dates) over historical backfills
+    missingURL.sort((a, b) => {
+        const aFut = a.allotmentDate && new Date(a.allotmentDate.original) > now;
+        const bFut = b.allotmentDate && new Date(b.allotmentDate.original) > now;
+        if (aFut && !bFut) return -1;
+        if (!aFut && bFut) return 1;
+        return 0;
+    });
     
     let updated = 0;
     if (missingURL.length > 0) {
@@ -71,6 +127,14 @@ async function autoFetchMissingRHP() {
     const missingNLP = db.companies.filter(c => c.rhpUrl && c.preIpoInvestors === undefined);
     
     if (missingNLP.length > 0) {
+        missingNLP.sort((a, b) => {
+            const aFut = a.allotmentDate && new Date(a.allotmentDate.original) > now;
+            const bFut = b.allotmentDate && new Date(b.allotmentDate.original) > now;
+            if (aFut && !bFut) return -1;
+            if (!aFut && bFut) return 1;
+            return 0;
+        });
+
         console.log(`[Auto-RHP] Found ${missingNLP.length} companies missing Pre-IPO NLP data. Executing Python queue...`);
         const { execSync } = require('child_process');
         const path = require('path');
@@ -82,8 +146,9 @@ async function autoFetchMissingRHP() {
         // Restrict to 5 so we process sequentially without memory blowouts in the background
         for (const company of missingNLP.slice(0, 5)) {
             try {
-                const pyCmd = `${venvPython} ${pyScript} --rhp "${company.rhpUrl}"`;
-                console.log(`[Auto-RHP] Extracting Pre-IPO from RHP: ${company.companyName}`);
+                console.log(`Extracting Pre-IPO from RHP: ${company.rhpUrl}...`);
+                const safelyEscapedName = company.companyName.replace(/"/g, '\\"');
+                const pyCmd = `venv/bin/python nlp_extractor.py --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
                 const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
                 const nlpData = JSON.parse(out.trim());
                 company.preIpoInvestors = nlpData.preIpoInvestors || [];

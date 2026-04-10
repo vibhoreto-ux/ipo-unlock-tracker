@@ -349,11 +349,12 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
         let totalShares = 0;
         $('table').each((i, t) => {
             const text = $(t).text().toLowerCase();
-            if (text.includes('shares offered') && text.includes('total') && text.includes('anchor')) {
+            // Allow tables that have just 'shares offered' and 'total'. 'anchor' is optional.
+            if (text.includes('shares offered') && text.includes('total')) {
                 $(t).find('tr').each((j, row) => {
                     const cells = $(row).find('td');
                     if (cells.length >= 2) {
-                        const category = $(cells.eq(0)).text().trim().toLowerCase();
+                        const category = $(cells.eq(0)).text().replace(/\u00a0/g, ' ').trim().toLowerCase();
                         const sharesText = $(cells.eq(1)).text().trim().replace(/,/g, '');
                         const shares = parseInt(sharesText);
                         if (category === 'anchor' && !isNaN(shares)) {
@@ -375,7 +376,7 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
                 if (m) anchorShares = parseInt(m[1]);
             }
             if (!totalShares) {
-                const m = body.match(/total_shares_offered.*?(\d+)/);
+                const m = body.match(/total_shares_offered["\s:]+(\d+)/) || body.match(/issue_shares["\s:]+(\d+)/);
                 if (m) totalShares = parseInt(m[1]);
             }
         }

@@ -83,6 +83,14 @@ function mergeCompanies(existing, incoming) {
             if (company.exchange) existing.exchange = company.exchange;
             if (company.chittorgarhUrl) existing.chittorgarhUrl = company.chittorgarhUrl;
             if (company.rhpUrl) existing.rhpUrl = company.rhpUrl;
+            if (company.issuePrice !== undefined && company.issuePrice !== null) existing.issuePrice = company.issuePrice;
+            
+            // Preserve dynamically fetched deep arrays (Anchors + Pre-IPO NLP extractions)
+            if (company.anchorInvestors !== undefined) existing.anchorInvestors = company.anchorInvestors;
+            if (company.anchorShares !== undefined) existing.anchorShares = company.anchorShares;
+            if (company.totalShares !== undefined) existing.totalShares = company.totalShares;
+            if (company.preIpoInvestors !== undefined) existing.preIpoInvestors = company.preIpoInvestors;
+            
             map.set(key, existing);
             updateCount++;
         } else {
