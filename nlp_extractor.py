@@ -27,7 +27,21 @@ def extract_preipo_names(pdf_bytes, company_name=None):
             if len(n) < 5 or len(n) > 60: return False
             if len(n.split()) < 2: return False
             low = n.lower()
-            bad_kws = ['compliance', 'rule', 'meet', 'total', 'promoter', 'company', 'board', 'listing', 'equity', 'shares', 'stock', 'exchange', 'decide', 'business', 'financial', 'statement', 'director', 'officer', 'manager', 'placement', 'issue', 'cash', 'operating', 'activities', 'fiscal', 'shareholders', 'terms', 'herring', 'pursuant', 'accordance', 'regulation', 'net', 'gross', 'value']
+            bad_kws = [
+                'compliance', 'rule', 'meet', 'total', 'promoter', 'company', 'board',
+                'listing', 'equity', 'shares', 'stock', 'exchange', 'decide', 'business',
+                'financial', 'statement', 'director', 'officer', 'manager', 'placement',
+                'issue', 'cash', 'operating', 'activities', 'fiscal', 'shareholders',
+                'terms', 'herring', 'pursuant', 'accordance', 'regulation', 'net', 'gross',
+                'value', 'section', 'act,', 'tax', 'penalty', 'litigation', 'criminal',
+                'complaints', 'goods', 'services', 'central', 'required', 'schedule',
+                'particulars', 'nature', 'relation', 'against', 'public', 'programme',
+                'commenced', 'substations', 'projects', 'floating', 'matters', 'includes',
+                'include', 'hybrid', 'other', 'party', 'which', 'as', 'no.', 'sr.',
+                'our', 'top', 'the', 'gw', 'kv', 'moa', 'january', 'february', 'march',
+                'april', 'may', 'june', 'july', 'august', 'september', 'october',
+                'november', 'december', 'anchor', 'investors'
+            ]
             if any(kw in low.split() for kw in bad_kws): return False
             
             words = [w for w in n.split() if w.strip()]

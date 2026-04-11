@@ -229,7 +229,8 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/"
+      "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Dachepalli Publishers Ltd.",
@@ -2535,7 +2536,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/dr_30062025124358_DraftProspectus_GEL.pdf"
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/dr_30062025124358_DraftProspectus_GEL.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Valplast Technologies Ltd.",
@@ -2564,7 +2566,34 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bseindia.com/corporates/download/357894/Draft%20Red%20Herring%20Prospectus_20240927215235.pdf"
+      "rhpUrl": "https://www.bseindia.com/corporates/download/357894/Draft%20Red%20Herring%20Prospectus_20240927215235.pdf",
+      "preIpoInvestors": [
+        "Loan Received",
+        "Zeichenburo India Private Limited",
+        "Valplast India LLP Zeichenburo India Private Ltd",
+        "Private Placement(viii)",
+        "public Hence Eligible",
+        "Unsecured Loan taken",
+        "Sanjay Kumar",
+        "Valplast Technologies Limited vide NCLT order dated February",
+        "Contract Expense",
+        "Unsecured Loan Repaid",
+        "Maruna Exports Private Limited",
+        "THE SHAREHOLDER",
+        "Rajeev Tyagi",
+        "Singhvi Heritage LLP",
+        "LMD2 Innovative Capadvisors Private Limited",
+        "Sarvagya Management Services LLP",
+        "Zeichenburo India Private Ltd (₹40.4)",
+        "Advance Given",
+        "Growthify Infra Private Limited",
+        "Valplast India LLP (₹285.49)",
+        "Indirect Tax",
+        "the Companies Act",
+        "Sygnific Corporate Solutions Private Limited",
+        "Direct Tax",
+        "Monetic World LLP"
+      ]
     },
     {
       "companyName": "B.A.G.Convergence Ltd.",
@@ -2593,7 +2622,20 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_12122024183704_BAGCONVERGENCELIMITED.pdf"
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_12122024183704_BAGCONVERGENCELIMITED.pdf",
+      "preIpoInvestors": [
+        "Invest Rs (₹1329.48)",
+        "Codec IN and Out,",
+        "Shashi Shekhar Mishra",
+        "Fast TV Channels, Multi",
+        "Indirect Tax",
+        "Detect Fake News",
+        "Uday Shankar",
+        "Anurag Kumar Srivastava",
+        "Direct Tax",
+        "Anuradha Prasad Shukla",
+        "Civil Matters"
+      ]
     },
     {
       "companyName": "Zelio E-Mobility Ltd.",
@@ -2622,7 +2664,14 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bsesme.com/download/321673/SME_IPO%20Open/ZELIO_EMOBILITY_LIMITED_RHP_20250924154733.pdf"
+      "rhpUrl": "https://www.bsesme.com/download/321673/SME_IPO%20Open/ZELIO_EMOBILITY_LIMITED_RHP_20250924154733.pdf",
+      "preIpoInvestors": [
+        "the Selling Shareholders, and",
+        "the Offer",
+        "Torque Innovation EV Auto Private Limited (₹16.61)",
+        "Limite Credit",
+        "any Applicant"
+      ]
     },
     {
       "companyName": "Advance Agrolife Ltd.",
@@ -2972,9 +3021,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-04-04",
+        "expiryDate": "2026-04-07T00:00:00.000Z",
         "originalDate": "2026-04-07T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       }
     },
@@ -3129,9 +3178,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-04-05",
+        "expiryDate": "2026-04-06T00:00:00.000Z",
         "originalDate": "2026-04-06T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.bseindia.com/corporates/download/337336/IPO%20BasisOfAllotment/Pace%20Digitek%20Limited%20-%20Signed%20Prospectus-30092025_20251001150218.pdf",
@@ -3182,7 +3231,8 @@
         "originalDate": "2026-10-06T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_25102024044047_DRHP_Manas_Polymers_and_Energies_Ltd_24102024.pdf"
     },
     {
       "companyName": "Bhavik Enterprises Ltd.",
@@ -3254,7 +3304,7 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-03-30",
+        "expiryDate": "2026-04-06T00:00:00.000Z",
         "originalDate": "2026-04-03T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
@@ -3474,9 +3524,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-03-29",
+        "expiryDate": "2026-04-01T00:00:00.000Z",
         "originalDate": "2026-04-01T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       }
     },
@@ -8362,9 +8412,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-04",
+        "expiryDate": "2026-04-30T00:00:00.000Z",
         "originalDate": "2026-04-30T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "preIpoInvestors": [],
@@ -8564,7 +8614,7 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-03-29",
+        "expiryDate": "2026-03-30T00:00:00.000Z",
         "originalDate": "2026-03-28T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
@@ -8620,7 +8670,7 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-03-29",
+        "expiryDate": "2026-03-30T00:00:00.000Z",
         "originalDate": "2026-03-27T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
@@ -9113,9 +9163,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-02-24",
+        "expiryDate": "2026-02-19T00:00:00.000Z",
         "originalDate": "2026-02-19T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/MaxvoltEnergyIndustriesLimited_PROSP.pdf",
@@ -18740,76 +18790,85 @@
       "companyName": "ICICI Prudential Asset Management Co.Ltd. (ICICI Prudential AMC IPO)",
       "issueType": "Mainboard",
       "allotmentDate": {
-        "original": "2025-12-15T18:30:00.000Z",
-        "adjusted": "2025-12-15T18:30:00.000Z",
+        "original": "2025-12-19T00:00:00.000Z",
+        "adjusted": "2025-12-19T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor30": {
-        "original": "2026-01-14T18:30:00.000Z",
-        "adjusted": "2026-01-14T18:30:00.000Z",
+        "original": "2026-01-15T00:00:00.000Z",
+        "adjusted": "2026-01-15T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-03-15T18:30:00.000Z",
-        "adjusted": "2026-03-15T18:30:00.000Z",
+        "original": "2026-03-16T00:00:00.000Z",
+        "adjusted": "2026-03-16T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-06-17",
-        "originalDate": "2026-06-15T18:30:00.000Z",
-        "isAdjusted": true,
+        "expiryDate": "2026-06-19T00:00:00.000Z",
+        "originalDate": "2026-06-19T00:00:00.000Z",
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "exchange": "BSE, NSE",
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/icici-prudential-amc-ipo/2525/",
+      "issuePrice": 2165
     },
     {
       "companyName": "Encompass Design India Ltd. (ScaleSauce IPO)",
       "issueType": "SME",
       "allotmentDate": {
-        "original": "2025-12-08T18:30:00.000Z",
-        "adjusted": "2025-12-08T18:30:00.000Z",
+        "original": "2025-12-12T00:00:00.000Z",
+        "adjusted": "2025-12-12T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor30": {
-        "original": "2026-01-08T18:30:00.000Z",
-        "adjusted": "2026-01-08T18:30:00.000Z",
+        "original": "2026-01-09T00:00:00.000Z",
+        "adjusted": "2026-01-09T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-03-09T18:30:00.000Z",
-        "adjusted": "2026-03-09T18:30:00.000Z",
+        "original": "2026-03-10T00:00:00.000Z",
+        "adjusted": "2026-03-10T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-12-08T18:30:00.000Z",
-        "originalDate": "2026-12-08T18:30:00.000Z",
-        "isAdjusted": false,
+        "expiryDate": "2026-12-14T00:00:00.000Z",
+        "originalDate": "2026-12-12T00:00:00.000Z",
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "exchange": "NSE SME",
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/scalesauce-ipo/2547/",
+      "issuePrice": 107
     },
     {
       "companyName": "Billionbrains Garage Ventures Ltd. (Groww IPO)",
       "issueType": "Mainboard",
       "allotmentDate": {
-        "original": "2025-11-06T18:30:00.000Z",
-        "adjusted": "2025-11-06T18:30:00.000Z",
+        "original": "2025-11-12T00:00:00.000Z",
+        "adjusted": "2025-11-12T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor30": {
-        "original": "2025-12-08T18:30:00.000Z",
-        "adjusted": "2025-12-08T18:30:00.000Z",
+        "original": "2025-12-09T00:00:00.000Z",
+        "adjusted": "2025-12-09T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-02-06T18:30:00.000Z",
-        "adjusted": "2026-02-08T18:30:00.000Z",
+        "original": "2026-02-07T00:00:00.000Z",
+        "adjusted": "2026-02-09T00:00:00.000Z",
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-06T18:30:00.000Z",
-        "originalDate": "2026-05-06T18:30:00.000Z",
+        "expiryDate": "2026-05-12T00:00:00.000Z",
+        "originalDate": "2026-05-12T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "exchange": "BSE, NSE",
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/groww-ipo/2453/",
+      "issuePrice": 100
     },
     {
       "companyName": "Anantam Highways Trust InvIT (Anantam Highways InvIT)",
@@ -18832,76 +18891,85 @@
       "companyName": "TechD Cybersecurity Ltd. (TechDefence Labs IPO)",
       "issueType": "SME",
       "allotmentDate": {
-        "original": "2025-09-16T18:30:00.000Z",
-        "adjusted": "2025-09-16T18:30:00.000Z",
+        "original": "2025-09-22T00:00:00.000Z",
+        "adjusted": "2025-09-22T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor30": {
-        "original": "2025-10-17T18:30:00.000Z",
-        "adjusted": "2025-10-19T18:30:00.000Z",
+        "original": "2025-10-18T00:00:00.000Z",
+        "adjusted": "2025-10-20T00:00:00.000Z",
         "isAdjusted": true
       },
       "anchor90": {
-        "original": "2025-12-16T18:30:00.000Z",
-        "adjusted": "2025-12-16T18:30:00.000Z",
+        "original": "2025-12-17T00:00:00.000Z",
+        "adjusted": "2025-12-17T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-09-16T18:30:00.000Z",
-        "originalDate": "2026-09-16T18:30:00.000Z",
+        "expiryDate": "2026-09-22T00:00:00.000Z",
+        "originalDate": "2026-09-22T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "exchange": "NSE SME",
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/techdefence-labs-ipo/2280/",
+      "issuePrice": 193
     },
     {
       "companyName": "Urban Co.Ltd. (Urban Company IPO)",
       "issueType": "Mainboard",
       "allotmentDate": {
-        "original": "2025-09-11T18:30:00.000Z",
-        "adjusted": "2025-09-11T18:30:00.000Z",
+        "original": "2025-09-17T00:00:00.000Z",
+        "adjusted": "2025-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor30": {
-        "original": "2025-10-15T18:30:00.000Z",
-        "adjusted": "2025-10-15T18:30:00.000Z",
+        "original": "2025-10-16T00:00:00.000Z",
+        "adjusted": "2025-10-16T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor90": {
-        "original": "2025-12-13T18:30:00.000Z",
-        "adjusted": "2025-12-14T18:30:00.000Z",
+        "original": "2025-12-14T00:00:00.000Z",
+        "adjusted": "2025-12-15T00:00:00.000Z",
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-03-15",
-        "originalDate": "2026-03-11T18:30:00.000Z",
-        "isAdjusted": true,
+        "expiryDate": "2026-03-17T00:00:00.000Z",
+        "originalDate": "2026-03-17T00:00:00.000Z",
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "exchange": "BSE, NSE",
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/urban-company-ipo/2425/",
+      "issuePrice": 103
     },
     {
       "companyName": "National Securities Depository Ltd. (NSDL IPO)",
       "issueType": "Mainboard",
       "allotmentDate": {
-        "original": "2025-07-31T18:30:00.000Z",
-        "adjusted": "2025-07-31T18:30:00.000Z",
+        "original": "2025-08-06T00:00:00.000Z",
+        "adjusted": "2025-08-06T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor30": {
-        "original": "2025-09-01T18:30:00.000Z",
-        "adjusted": "2025-09-01T18:30:00.000Z",
+        "original": "2025-09-02T00:00:00.000Z",
+        "adjusted": "2025-09-02T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor90": {
-        "original": "2025-10-31T18:30:00.000Z",
-        "adjusted": "2025-11-02T18:30:00.000Z",
+        "original": "2025-11-01T00:00:00.000Z",
+        "adjusted": "2025-11-03T00:00:00.000Z",
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-02-01T18:30:00.000Z",
-        "originalDate": "2026-01-31T18:30:00.000Z",
-        "isAdjusted": true,
+        "expiryDate": "2026-02-06T00:00:00.000Z",
+        "originalDate": "2026-02-06T00:00:00.000Z",
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "exchange": "BSE",
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/national-securities-depository-limited-nsdl-ipo/2448/",
+      "issuePrice": 800
     },
     {
       "companyName": "Property Share Investment Trust REIT SM REIT (PropShare Titania)",
@@ -19790,9 +19858,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2027-02-10",
+        "expiryDate": "2027-02-11T00:00:00.000Z",
         "originalDate": "2027-02-11T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/aartic_08092025122017_Brandman_DRHP.pdf",
@@ -19924,9 +19992,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-02-04",
+        "expiryDate": "2027-02-04T00:00:00.000Z",
         "originalDate": "2027-02-04T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -20028,9 +20096,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-01-26",
+        "expiryDate": "2027-01-29T00:00:00.000Z",
         "originalDate": "2027-01-29T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -20256,9 +20324,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-01-23",
+        "expiryDate": "2027-01-20T00:00:00.000Z",
         "originalDate": "2027-01-20T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -20312,9 +20380,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-01-15",
+        "expiryDate": "2027-01-19T00:00:00.000Z",
         "originalDate": "2027-01-19T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -20380,9 +20448,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-02-09",
+        "expiryDate": "2027-01-13T00:00:00.000Z",
         "originalDate": "2027-01-13T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -20696,9 +20764,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2027-03-24",
+        "expiryDate": "2027-03-18T00:00:00.000Z",
         "originalDate": "2027-03-18T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
@@ -21012,13 +21080,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/emiac-technologies-ipo/2766/",
       "issuePrice": 98,
       "anchor30": {
-        "original": "2026-05-09T00:00:00.000Z",
-        "adjusted": "2026-05-11T00:00:00.000Z",
-        "isAdjusted": true
+        "original": "2026-05-08T00:00:00.000Z",
+        "adjusted": "2026-05-08T00:00:00.000Z",
+        "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-07-08T00:00:00.000Z",
-        "adjusted": "2026-07-08T00:00:00.000Z",
+        "original": "2026-07-07T00:00:00.000Z",
+        "adjusted": "2026-07-07T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -21265,9 +21333,9 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/safety-controls-and-devices-ipo/2328/",
       "issuePrice": 80,
       "anchor30": {
-        "original": "2026-05-09T00:00:00.000Z",
-        "adjusted": "2026-05-11T00:00:00.000Z",
-        "isAdjusted": true
+        "original": "2026-05-08T00:00:00.000Z",
+        "adjusted": "2026-05-08T00:00:00.000Z",
+        "isAdjusted": false
       },
       "anchor90": {
         "original": "2026-07-08T00:00:00.000Z",
@@ -21290,586 +21358,307 @@
       ],
       "anchorShares": 1584000,
       "totalShares": 6000000,
+      "rhpUrl": "https://www.sobhagyacapital.com/wp-content/uploads/2026/04/Prospectus-Safety-001.pdf",
+      "preIpoInvestors": [
+        "Shruti Agrawal",
+        "Mukul Mahavir Agrawal",
+        "Vaishali Prashant Jain",
+        "Mahendra Kumar Kankaria",
+        "Tripta Rani",
+        "Anjali Chopra",
+        "Navin Mahavirprasad Dalmia",
+        "Ankush Kedia",
+        "Arpika Gift (₹10)",
+        "Vicco Products Bombay Pvt Ltd (₹37)",
+        "M/S Technopolis Innovation LLP",
+        "Rajnish Chopra",
+        "Suresh Chandra Srivastva",
+        "Abhishek Chopra",
+        "Comercinate Enterprises Private Limited",
+        "Tradelink Exim India Private Limited",
+        "Amit R Agarwal",
+        "Hypotenuse Investment (₹12)",
+        "Niagra Growth Private Limited",
+        "Cap Gains Professional Solutions Private Limited",
+        "Navin Mahavirprasad Almia",
+        "Rasika Chopra",
+        "Rasika Gift (₹10)",
+        "Arpika Singhal",
+        "Rohan Gupta",
+        "Nitin Prakash",
+        "Sandeep Singh"
+      ],
+      "preIpoWaca": 6.45
+    },
+    {
+      "companyName": "Anantam Highways Trust (Anantam Highways InvIT IPO)",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2025-10-17T00:00:00.000Z",
+        "adjusted": "2025-10-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/anantam-highways-invit/2666/",
+      "issuePrice": 100,
+      "anchor30": {
+        "original": "2025-11-13T00:00:00.000Z",
+        "adjusted": "2025-11-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-12T00:00:00.000Z",
+        "adjusted": "2026-01-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2026-04-17T00:00:00.000Z",
+        "originalDate": "2026-04-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      }
+    },
+    {
+      "companyName": "Knowledge Realty Trust (Knowledge Realty Trust REIT)",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2025-08-18T00:00:00.000Z",
+        "adjusted": "2025-08-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/knowledge-realty-trust-reit-ipo/2485/",
+      "issuePrice": 100,
+      "anchor30": {
+        "original": "2025-09-11T00:00:00.000Z",
+        "adjusted": "2025-09-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-10T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2026-02-18T00:00:00.000Z",
+        "originalDate": "2026-02-18T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      }
+    },
+    {
+      "companyName": "Property Share Investment Trust-PropShare Titania",
+      "issueType": "Mainboard",
+      "exchange": "BSE",
+      "allotmentDate": {
+        "original": "2025-08-04T00:00:00.000Z",
+        "adjusted": "2025-08-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/propshare-titania-scheme-sm-reit-ipo/2533/",
+      "issuePrice": 1060000,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2026-02-04T00:00:00.000Z",
+        "originalDate": "2026-02-04T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      }
+    },
+    {
+      "companyName": "CFF Fluid Control Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2025-07-16T00:00:00.000Z",
+        "adjusted": "2025-07-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/cff-fluid-control-fpo/2440/",
+      "issuePrice": 585,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2026-07-16T00:00:00.000Z",
+        "originalDate": "2026-07-16T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      }
+    },
+    {
+      "companyName": "Capital Infra Trust (Capital Infra Trust InvIT)",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2025-01-17T00:00:00.000Z",
+        "adjusted": "2025-01-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/capital-infra-trust-invit/1957/",
+      "issuePrice": 99,
+      "anchor30": {
+        "original": "2025-02-12T00:00:00.000Z",
+        "adjusted": "2025-02-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-04-13T00:00:00.000Z",
+        "adjusted": "2025-04-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "preIPO": {
+        "expiryDate": "2025-07-17T00:00:00.000Z",
+        "originalDate": "2025-07-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      }
+    },
+    {
+      "companyName": "Mehul Telecom Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-04-24T00:00:00.000Z",
+        "adjusted": "2026-04-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mehul-telecom-ipo/2536/",
+      "issuePrice": 98,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-04-26T00:00:00.000Z",
+        "originalDate": "2027-04-24T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 789600,
+      "totalShares": 2829600,
       "rhpUrl": ""
+    },
+    {
+      "companyName": "Citius Transnet Investment Trust (Citius Transnet InvIT IPO)",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-04-24T00:00:00.000Z",
+        "adjusted": "2026-04-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/citius-transnet-invit-ipo/2862/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2026-10-26T00:00:00.000Z",
+        "originalDate": "2026-10-24T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Property Share Investment Trust-Propshare Celestia",
+      "issueType": "Mainboard",
+      "exchange": "BSE",
+      "allotmentDate": {
+        "original": "2026-04-24T00:00:00.000Z",
+        "adjusted": "2026-04-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/propshare-celestia-scheme-ipo/2965/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2026-10-26T00:00:00.000Z",
+        "originalDate": "2026-10-24T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Om Power Transmission Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-04-17T00:00:00.000Z",
+        "adjusted": "2026-04-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/om-power-transmission-ipo/2676/",
+      "issuePrice": 175,
+      "anchor30": {
+        "original": "2026-05-15T00:00:00.000Z",
+        "adjusted": "2026-05-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-07-14T00:00:00.000Z",
+        "adjusted": "2026-07-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2026-10-19T00:00:00.000Z",
+        "originalDate": "2026-10-17T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [
+        "MORGAN STANLEY ASIA (SINGAPORE) PTE.",
+        "CRAFT EMERGING MARKET FUND PCC-ELITE CAPITAL FUND",
+        "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND",
+        "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND",
+        "25,72,270"
+      ],
+      "anchorShares": 2572270,
+      "totalShares": 8575000,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Raajmarg Infra Investment Trust",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-03-24T00:00:00.000Z",
+        "adjusted": "2026-03-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/raajmarg-infra-investment-trust-ipo/2863/",
+      "issuePrice": 100,
+      "anchor30": {
+        "original": "2026-04-17T00:00:00.000Z",
+        "adjusted": "2026-04-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-06-16T00:00:00.000Z",
+        "adjusted": "2026-06-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2026-09-24T00:00:00.000Z",
+        "originalDate": "2026-09-24T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      }
     }
   ],
-  "lastUpdated": "2026-04-05T03:40:19.661Z",
+  "lastUpdated": "2026-04-11T06:26:01.426Z",
   "lastScraped": {
-    "time": "2026-04-05T03:40:19.661Z",
-    "scraped2025": 376,
-    "scraped2026": 63,
-    "totalNew": 439
+    "time": "2026-04-11T06:26:01.426Z",
+    "scraped2025": 375,
+    "scraped2026": 66,
+    "totalNew": 441
   },
-  "circularData": {
-    "Tankup Engineers Ltd.": {
-      "found": true,
-      "totalShares": 5295000,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 1010000,
-          "percentage": 19.1,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-05-27",
-          "shares": 191000,
-          "percentage": 3.6
-        },
-        {
-          "date": "2025-07-26",
-          "shares": 194000,
-          "percentage": 3.7
-        },
-        {
-          "date": "2026-05-04",
-          "shares": 2750000,
-          "percentage": 51.9
-        },
-        {
-          "date": "2028-05-04",
-          "shares": 1150000,
-          "percentage": 21.7
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/67742",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML67742.zip",
-      "fetchedAt": "2026-04-05T03:42:10.223Z"
-    },
-    "Maxvolt Energy Industries Ltd.": {
-      "found": true,
-      "totalShares": 10903928,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 2148800,
-          "percentage": 19.7,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-03-18",
-          "shares": 423200,
-          "percentage": 3.9
-        },
-        {
-          "date": "2025-05-17",
-          "shares": 428000,
-          "percentage": 3.9
-        },
-        {
-          "date": "2026-02-24",
-          "shares": 5630528,
-          "percentage": 51.6
-        },
-        {
-          "date": "2028-02-24",
-          "shares": 2273400,
-          "percentage": 20.8
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/66716",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML66716.zip",
-      "fetchedAt": "2026-04-05T03:53:21.669Z"
-    },
-    "Grand Continent Hotels Ltd.": {
-      "found": true,
-      "totalShares": 24919403,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 4716000,
-          "percentage": 18.9,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-04-23",
-          "shares": 934800,
-          "percentage": 3.8
-        },
-        {
-          "date": "2025-06-22",
-          "shares": 938400,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-03-29",
-          "shares": 13330203,
-          "percentage": 53.5
-        },
-        {
-          "date": "2028-03-29",
-          "shares": 5000000,
-          "percentage": 20.1
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/67287",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML67287.zip",
-      "fetchedAt": "2026-04-05T06:17:31.574Z"
-    },
-    "Rapid Fleet Management Services Ltd.": {
-      "found": true,
-      "totalShares": 7434800,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 1726200,
-          "percentage": 23.2,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-04-24",
-          "shares": 278400,
-          "percentage": 3.7
-        },
-        {
-          "date": "2025-06-23",
-          "shares": 280200,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-03-29",
-          "shares": 3662297,
-          "percentage": 49.3
-        },
-        {
-          "date": "2028-03-29",
-          "shares": 1487703,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/67319",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML67319.zip",
-      "fetchedAt": "2026-04-05T06:17:52.745Z"
-    },
-    "Brandman Retail Ltd.": {
-      "found": true,
-      "totalShares": 18457186,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 3499200,
-          "percentage": 19,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-03-09",
-          "shares": 693600,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-05-08",
-          "shares": 698400,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-10-28",
-          "shares": 68027,
-          "percentage": 0.4
-        },
-        {
-          "date": "2027-02-10",
-          "shares": 5793967,
-          "percentage": 31.4
-        },
-        {
-          "date": "2028-02-10",
-          "shares": 4010709,
-          "percentage": 21.7
-        },
-        {
-          "date": "2029-02-10",
-          "shares": 3693283,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/72723",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML72723.zip",
-      "fetchedAt": "2026-04-05T06:18:19.511Z"
-    },
-    "Msafe Equipments Ltd.": {
-      "found": true,
-      "totalShares": 37671700,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 22671700,
-          "percentage": 60.2,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2027-02-04",
-          "shares": 5554000,
-          "percentage": 14.7
-        },
-        {
-          "date": "2028-02-04",
-          "shares": 5326000,
-          "percentage": 14.1
-        },
-        {
-          "date": "2030-06-01",
-          "shares": 4120000,
-          "percentage": 10.9
-        }
-      ],
-      "source": "BSE",
-      "noticeId": "20260203-45",
-      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20260203-45&attachedId=3a78ee3e-b74b-4d23-a66e-9cb8b2c6a018",
-      "fetchedAt": "2026-04-05T06:31:44.837Z"
-    },
-    "Jain Resource Recycling Ltd.": {
-      "found": true,
-      "totalShares": 345085814,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 29633620,
-          "percentage": 8.6,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-10-27",
-          "shares": 12122841,
-          "percentage": 3.5
-        },
-        {
-          "date": "2025-12-26",
-          "shares": 12122848,
-          "percentage": 3.5
-        },
-        {
-          "date": "2026-03-29",
-          "shares": 222189242,
-          "percentage": 64.4
-        },
-        {
-          "date": "2027-03-29",
-          "shares": 69017263,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/70519",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70519.zip",
-      "fetchedAt": "2026-04-05T07:12:54.652Z"
-    },
-    "Pace Digitek Ltd.": {
-      "found": true,
-      "totalShares": 215851327,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 26575240,
-          "percentage": 12.3,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-10-29",
-          "shares": 5596903,
-          "percentage": 2.6
-        },
-        {
-          "date": "2025-12-28",
-          "shares": 5596904,
-          "percentage": 2.6
-        },
-        {
-          "date": "2026-04-05",
-          "shares": 28082280,
-          "percentage": 13
-        },
-        {
-          "date": "2026-10-04",
-          "shares": 106828905,
-          "percentage": 49.5
-        },
-        {
-          "date": "2028-10-02",
-          "shares": 43171095,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/70600",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70600.zip",
-      "fetchedAt": "2026-04-06T04:35:43.887Z"
-    },
-    "Fabtech Technologies Ltd.": {
-      "found": true,
-      "totalShares": 44450794,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 12058555,
-          "percentage": 27.1,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-04-04",
-          "shares": 23368435,
-          "percentage": 52.6
-        },
-        {
-          "date": "2027-04-04",
-          "shares": 9023804,
-          "percentage": 20.3
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/70646",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70646.zip",
-      "fetchedAt": "2026-04-09T12:17:21.493Z"
-    },
-    "Trualt Bioenergy Ltd.": {
-      "found": true,
-      "totalShares": 85752591,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 11844678,
-          "percentage": 13.8,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-10-28",
-          "shares": 2538143,
-          "percentage": 3
-        },
-        {
-          "date": "2025-12-27",
-          "shares": 2538146,
-          "percentage": 3
-        },
-        {
-          "date": "2026-03-30",
-          "shares": 23594844,
-          "percentage": 27.5
-        },
-        {
-          "date": "2026-10-01",
-          "shares": 28076780,
-          "percentage": 32.7
-        },
-        {
-          "date": "2028-10-01",
-          "shares": 17160000,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/70564",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70564.zip",
-      "fetchedAt": "2026-04-09T12:17:30.101Z"
-    },
-    "Gabion Technologies India Ltd.": {
-      "found": true,
-      "totalShares": 13575360,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 2577600,
-          "percentage": 19,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-02-06",
-          "shares": 510400,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-04-07",
-          "shares": 512000,
-          "percentage": 3.8
-        },
-        {
-          "date": "2027-02-09",
-          "shares": 3630894,
-          "percentage": 26.7
-        },
-        {
-          "date": "2028-02-09",
-          "shares": 3629394,
-          "percentage": 26.7
-        },
-        {
-          "date": "2029-02-09",
-          "shares": 2715072,
-          "percentage": 20
-        }
-      ],
-      "source": "BSE",
-      "noticeId": "20260112-35",
-      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20260112-35&attachedId=d34e439e-ebfe-4a51-9509-634ddf359d3c",
-      "fetchedAt": "2026-04-09T12:18:07.053Z"
-    },
-    "Avana Electrosystems Ltd.": {
-      "found": true,
-      "totalShares": 22645408,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 4280000,
-          "percentage": 18.9,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-02-14",
-          "shares": 845000,
-          "percentage": 3.7
-        },
-        {
-          "date": "2026-04-15",
-          "shares": 845000,
-          "percentage": 3.7
-        },
-        {
-          "date": "2027-01-23",
-          "shares": 6073206,
-          "percentage": 26.8
-        },
-        {
-          "date": "2028-01-23",
-          "shares": 6073118,
-          "percentage": 26.8
-        },
-        {
-          "date": "2029-01-23",
-          "shares": 4529084,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/72377",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML72377.zip",
-      "fetchedAt": "2026-04-09T12:19:09.905Z"
-    },
-    "Apsis Aerocom Ltd.": {
-      "found": true,
-      "totalShares": 12051921,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 2336400,
-          "percentage": 19.4,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-04-14",
-          "shares": 457200,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-06-13",
-          "shares": 458400,
-          "percentage": 3.8
-        },
-        {
-          "date": "2027-03-24",
-          "shares": 3205921,
-          "percentage": 26.6
-        },
-        {
-          "date": "2028-03-24",
-          "shares": 3181000,
-          "percentage": 26.4
-        },
-        {
-          "date": "2029-03-24",
-          "shares": 2413000,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/73340",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73340.zip",
-      "fetchedAt": "2026-04-09T12:19:22.022Z"
-    },
-    "Defrail Technologies Ltd.": {
-      "found": true,
-      "totalShares": 7024420,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 1342400,
-          "percentage": 19.1,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-02-14",
-          "shares": 257600,
-          "percentage": 3.7
-        },
-        {
-          "date": "2026-04-15",
-          "shares": 260800,
-          "percentage": 3.7
-        },
-        {
-          "date": "2027-01-15",
-          "shares": 1867620,
-          "percentage": 26.6
-        },
-        {
-          "date": "2028-01-15",
-          "shares": 1856000,
-          "percentage": 26.4
-        },
-        {
-          "date": "2029-01-15",
-          "shares": 1440000,
-          "percentage": 20.5
-        }
-      ],
-      "source": "BSE",
-      "noticeId": "20260116-41",
-      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20260116-41&attachedId=cb1db227-c4b5-4085-92ed-9f8d633538f5",
-      "fetchedAt": "2026-04-09T12:20:49.165Z"
-    },
-    "KRM Ayurveda Ltd.": {
-      "found": true,
-      "totalShares": 21260800,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 4198000,
-          "percentage": 19.7,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-02-27",
-          "shares": 771000,
-          "percentage": 3.6
-        },
-        {
-          "date": "2026-04-28",
-          "shares": 771000,
-          "percentage": 3.6
-        },
-        {
-          "date": "2027-01-26",
-          "shares": 6300100,
-          "percentage": 29.6
-        },
-        {
-          "date": "2028-01-26",
-          "shares": 4965700,
-          "percentage": 23.4
-        },
-        {
-          "date": "2029-01-26",
-          "shares": 4255000,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/72509",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML72509.zip",
-      "fetchedAt": "2026-04-10T03:09:39.820Z"
-    }
-  }
+  "circularData": {}
 }
