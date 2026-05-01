@@ -1478,9 +1478,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-28T00:00:00.000Z",
+        "expiryDate": "2026-05-25",
         "originalDate": "2026-05-28T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1598,9 +1598,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-20T00:00:00.000Z",
+        "expiryDate": "2026-05-18",
         "originalDate": "2026-05-20T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1628,9 +1628,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-19T00:00:00.000Z",
+        "expiryDate": "2026-05-16",
         "originalDate": "2026-05-19T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1688,9 +1688,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-18T00:00:00.000Z",
+        "expiryDate": "2026-05-14",
         "originalDate": "2026-05-18T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1748,9 +1748,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-18T00:00:00.000Z",
+        "expiryDate": "2026-05-18",
         "originalDate": "2026-05-18T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1890,9 +1890,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-12T00:00:00.000Z",
+        "expiryDate": "2026-05-18",
         "originalDate": "2026-05-12T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -2728,7 +2728,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/SheelBiotechLimited_RHP.pdf"
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/SheelBiotechLimited_RHP.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Infinity Infoway Ltd.",
@@ -2757,7 +2758,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bsesme.com/download/397071/SME_IPO%20Open/RHP_20250929215737.pdf"
+      "rhpUrl": "https://www.bsesme.com/download/397071/SME_IPO%20Open/RHP_20250929215737.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Munish Forge Ltd.",
@@ -2786,7 +2788,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/MunishForgeLimited_RHP.pdf"
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/MunishForgeLimited_RHP.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Sunsky Logistics Ltd.",
@@ -2807,7 +2810,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bsesme.com/download/362513/SME_IPO%20InPrinciple/SunskyDP290525_20250529223418.pdf"
+      "rhpUrl": "https://www.bsesme.com/download/362513/SME_IPO%20InPrinciple/SunskyDP290525_20250529223418.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Chiraharit Ltd.",
@@ -2828,7 +2832,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bseindia.com/corporates/download/332366/DP_BSE_Chiraharit_29032025_Final_20250331021617.pdf"
+      "rhpUrl": "https://www.bseindia.com/corporates/download/332366/DP_BSE_Chiraharit_29032025_Final_20250331021617.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Om Freight Forwarders Ltd.",
@@ -2905,7 +2910,31 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bseindia.com/corporates/download/387803/Sodhani%20Capital%20Limited%20_DP%20_Final_BSE_20250331231030.pdf"
+      "rhpUrl": "https://www.bseindia.com/corporates/download/387803/Sodhani%20Capital%20Limited%20_DP%20_Final_BSE_20250331231030.pdf",
+      "preIpoInvestors": [
+        "Development of Mutual Fund Investment Application (₹15)",
+        "Number of ESG Funds",
+        "procure Applications",
+        "Aastha Sodhani, aged",
+        "any Applicant",
+        "proposed IPO",
+        "Gold ETF",
+        "Mr. Abhishek Gupta,",
+        "In late",
+        "Ritika Sodhani, aged",
+        "Priya Sodhani, aged",
+        "Ms. Shiksha Sharma,",
+        "BSE separately",
+        "A astha Sodhani",
+        "Mr. Pulkit Jain,",
+        "Sodhani Capital Limited was established in",
+        "Index Funds",
+        "Indian Rupees to purchase",
+        "Rajesh Kumar Sodhani, aged",
+        "R itika Sodhani",
+        "be Estimated Estimated",
+        "Mobile App Users (₹50)"
+      ]
     },
     {
       "companyName": "Vijaypd Ceutical Ltd.",
@@ -2926,7 +2955,54 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/sezalm_10072025172607_1DraftProspectusVijaypd.pdf"
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/sezalm_10072025172607_1DraftProspectusVijaypd.pdf",
+      "preIpoInvestors": [
+        "Dhirendra Shah",
+        "Medical Device Industry",
+        "Paras Kishor Ajmera",
+        "Registered broker, SCSBs, RTAs, CDPs",
+        "Dina Madhukar Shah",
+        "Nila Narendra Shah",
+        "Exports of HS Code",
+        "Samit Madhukar Shah",
+        "Pharmaceuticals. These",
+        "Jigar Narendra Shah",
+        "Sunil Shah",
+        "Amendment Rules,",
+        "Bank I",
+        "M.V. Shah Trading and Investment Pvt. Ltd.",
+        "Chandrika Dilipkumar Shah",
+        "Saltiva Pharmaceuticals Private Limited",
+        "Sagar Bipin Shah",
+        "Saroj Narendra Shah",
+        "Chandresh Karsondas Shah",
+        "Rasila Ramesh Doshi",
+        "Annual Imports of HS Code",
+        "Bhavin Dhirendra Shah",
+        "SKL Advisors LLP",
+        "Nagindas Shah",
+        "between Samit Madhukar Shah, Rahul Jitendra (₹44.38)",
+        "Jitendra Shah",
+        "Nina Vijay Shah",
+        "Import of HS Code",
+        "Jigar Narendra Shahs",
+        "Chandrikaben Dilipkumar Shah",
+        "Dinesh Soni",
+        "Rahul Jitendra Shah",
+        "HS Code",
+        "Narendra Nagindas Shah",
+        "Jain Folamathu Sripal",
+        "Hemanti Jitendra Shah",
+        "Jignesh Mahendrabhai Ajmera",
+        "Bulk Drug Industry",
+        "Legal Advisors",
+        "Kusum Jitendra Shah",
+        "Revomed Private Limited (₹40.63)",
+        "Viraaj Kirti Shah",
+        "Vasanti Dhirendra Shah",
+        "Kalpesh Harkisandas Shah",
+        "Madhukar Shah"
+      ]
     },
     {
       "companyName": "Om Metallogic Ltd.",
@@ -2947,7 +3023,22 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bsesme.com/download/344643/SME_IPO%20InPrinciple/DPOMMETAL_20250727025625.pdf"
+      "rhpUrl": "https://www.bsesme.com/download/344643/SME_IPO%20InPrinciple/DPOMMETAL_20250727025625.pdf",
+      "preIpoInvestors": [
+        "Mr. Rohit Kumar",
+        "Mr. Rahul Kumar",
+        "Mr. Manish Sharma",
+        "Reserve & Surplus",
+        "Short Term Borrowings",
+        "Mrs. Seema Sharma",
+        "Long Term Borrowings",
+        "Special Resolution passed",
+        "Opp. Gopal Jee Milk Plant, Ballabhgarh, Haryana, India,",
+        "Trade Receivables",
+        "Short Term Provisions",
+        "A. Promo",
+        "Mr. Nishit Goel"
+      ]
     },
     {
       "companyName": "Suba Hotels Ltd.",
@@ -2976,7 +3067,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_23092024002607_SUBADRHP.pdf"
+      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_23092024002607_SUBADRHP.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Dhillon Freight Carrier Ltd.",
@@ -2997,7 +3089,8 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bsesme.com/download/322620/SME_IPO%20InPrinciple/DP_Dhillon_BSE_15052025_Final_20250516211547.pdf"
+      "rhpUrl": "https://www.bsesme.com/download/322620/SME_IPO%20InPrinciple/DP_Dhillon_BSE_15052025_Final_20250516211547.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Fabtech Technologies Ltd.",
@@ -3252,7 +3345,8 @@
         "originalDate": "2026-10-06T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://www.bseindia.com/corporates/download/361382/Bhavik%20Enterprises%20Limited_Draft%20Prospectus_20250425212919.pdf"
     },
     {
       "companyName": "Chatterbox Technologies Ltd.",
@@ -8088,9 +8182,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-29T00:00:00.000Z",
+        "expiryDate": "2026-06-02",
         "originalDate": "2026-05-29T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8200,9 +8294,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-21T00:00:00.000Z",
+        "expiryDate": "2026-05-20",
         "originalDate": "2026-05-21T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8248,9 +8342,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-19T00:00:00.000Z",
+        "expiryDate": "2026-05-23",
         "originalDate": "2026-05-19T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8356,9 +8450,9 @@
       "anchor30": null,
       "anchor90": null,
       "preIPO": {
-        "expiryDate": "2026-05-06T00:00:00.000Z",
+        "expiryDate": "2026-05-04",
         "originalDate": "2026-05-06T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8586,9 +8680,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-04-01T00:00:00.000Z",
+        "expiryDate": "2026-04-04",
         "originalDate": "2026-04-01T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -18861,9 +18955,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-12T00:00:00.000Z",
+        "expiryDate": "2026-05-10",
         "originalDate": "2026-05-12T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "exchange": "BSE, NSE",
@@ -19143,8 +19237,8 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-03-11T00:00:00.000Z",
-        "adjusted": "2026-03-11T00:00:00.000Z",
+        "original": "2026-03-02T00:00:00.000Z",
+        "adjusted": "2026-03-02T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sedemac-mechatronics-ipo/2794/",
@@ -19160,8 +19254,8 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-11T00:00:00.000Z",
-        "originalDate": "2026-09-11T00:00:00.000Z",
+        "expiryDate": "2026-09-02T00:00:00.000Z",
+        "originalDate": "2026-09-02T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
@@ -19216,11 +19310,11 @@
     },
     {
       "companyName": "Striders Impex Ltd.",
-      "issueType": "SME",
+      "issueType": "Mainboard",
       "exchange": "NSE SME",
       "allotmentDate": {
-        "original": "2026-03-06T00:00:00.000Z",
-        "adjusted": "2026-03-06T00:00:00.000Z",
+        "original": "2026-02-25T00:00:00.000Z",
+        "adjusted": "2026-02-25T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/striders-impex-ipo/2714/",
@@ -19236,10 +19330,10 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-03-08T00:00:00.000Z",
-        "originalDate": "2027-03-06T00:00:00.000Z",
+        "expiryDate": "2026-08-26T00:00:00.000Z",
+        "originalDate": "2026-08-25T00:00:00.000Z",
         "isAdjusted": true,
-        "type": "SME Pre-IPO (1 Yr)"
+        "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
         "SANSHI",
@@ -19258,11 +19352,11 @@
     },
     {
       "companyName": "Yaap Digital Ltd.",
-      "issueType": "SME",
+      "issueType": "Mainboard",
       "exchange": "NSE SME",
       "allotmentDate": {
-        "original": "2026-03-05T00:00:00.000Z",
-        "adjusted": "2026-03-05T00:00:00.000Z",
+        "original": "2026-02-24T00:00:00.000Z",
+        "adjusted": "2026-02-24T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/yaap-digital-ipo/2582/",
@@ -19278,10 +19372,10 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2027-03-05T00:00:00.000Z",
-        "originalDate": "2027-03-05T00:00:00.000Z",
+        "expiryDate": "2026-08-24T00:00:00.000Z",
+        "originalDate": "2026-08-24T00:00:00.000Z",
         "isAdjusted": false,
-        "type": "SME Pre-IPO (1 Yr)"
+        "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
         "SANSHI",
@@ -19303,8 +19397,8 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-03-05T00:00:00.000Z",
-        "adjusted": "2026-03-05T00:00:00.000Z",
+        "original": "2026-02-24T00:00:00.000Z",
+        "adjusted": "2026-02-24T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/omnitech-engineering-ipo/2479/",
@@ -19320,9 +19414,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-07T00:00:00.000Z",
-        "originalDate": "2026-09-05T00:00:00.000Z",
-        "isAdjusted": true,
+        "expiryDate": "2026-08-24T00:00:00.000Z",
+        "originalDate": "2026-08-24T00:00:00.000Z",
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -19344,8 +19438,8 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-03-04T00:00:00.000Z",
-        "adjusted": "2026-03-04T00:00:00.000Z",
+        "original": "2026-02-23T00:00:00.000Z",
+        "adjusted": "2026-02-23T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/pngs-reva-ipo/2475/",
@@ -19361,9 +19455,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-04T00:00:00.000Z",
-        "originalDate": "2026-09-04T00:00:00.000Z",
-        "isAdjusted": false,
+        "expiryDate": "2026-08-24T00:00:00.000Z",
+        "originalDate": "2026-08-23T00:00:00.000Z",
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -19385,8 +19479,8 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-03-02T00:00:00.000Z",
-        "adjusted": "2026-03-02T00:00:00.000Z",
+        "original": "2026-02-20T00:00:00.000Z",
+        "adjusted": "2026-02-20T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/clean-max-enviro-energy-solutions-ipo/2573/",
@@ -19402,8 +19496,8 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-09-02T00:00:00.000Z",
-        "originalDate": "2026-09-02T00:00:00.000Z",
+        "expiryDate": "2026-08-20T00:00:00.000Z",
+        "originalDate": "2026-08-20T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
@@ -19423,11 +19517,11 @@
     },
     {
       "companyName": "Accord Transformer & Switchgear Ltd.",
-      "issueType": "SME",
+      "issueType": "Mainboard",
       "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-03-02T00:00:00.000Z",
-        "adjusted": "2026-03-02T00:00:00.000Z",
+        "original": "2026-02-20T00:00:00.000Z",
+        "adjusted": "2026-02-20T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/accord-transformer-switchgear-ipo/2763/",
@@ -19443,10 +19537,10 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-03-02T00:00:00.000Z",
-        "originalDate": "2027-03-02T00:00:00.000Z",
+        "expiryDate": "2026-08-20T00:00:00.000Z",
+        "originalDate": "2026-08-20T00:00:00.000Z",
         "isAdjusted": false,
-        "type": "SME Pre-IPO (1 Yr)"
+        "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
         "SANSHI",
@@ -21525,8 +21619,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mehul-telecom-ipo/2536/",
       "issuePrice": 98,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-05-22T00:00:00.000Z",
+        "adjusted": "2026-05-22T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-07-21T00:00:00.000Z",
+        "adjusted": "2026-07-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-04-26T00:00:00.000Z",
         "originalDate": "2027-04-24T00:00:00.000Z",
@@ -21543,23 +21645,57 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-04-24T00:00:00.000Z",
-        "adjusted": "2026-04-24T00:00:00.000Z",
+        "original": "2026-04-29T00:00:00.000Z",
+        "adjusted": "2026-04-29T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/citius-transnet-invit-ipo/2862/",
-      "issuePrice": null,
-      "anchor30": null,
-      "anchor90": null,
+      "issuePrice": 100,
+      "anchor30": {
+        "original": "2026-05-23T00:00:00.000Z",
+        "adjusted": "2026-05-25T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-07-23T00:00:00.000Z",
+        "adjusted": "2026-07-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
-        "expiryDate": "2026-10-26T00:00:00.000Z",
-        "originalDate": "2026-10-24T00:00:00.000Z",
-        "isAdjusted": true,
+        "expiryDate": "2026-10-29T00:00:00.000Z",
+        "originalDate": "2026-10-29T00:00:00.000Z",
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        "WHITEOAK CAPITAL MULTI ASSET ALLOCATION FUND",
+        "WHITEOAK CAPITAL LARGE CAP FUND",
+        "WHITEOAK CAPITAL EQUITY SAVINGS FUND",
+        "WHITEOAK CAPITAL REIT & INVIT ALTERNATES FUND I",
+        "PRAZIM TRADING & INVESTMENT CO.PVT.LTD.",
+        "LARSEN & TOUBRO OFFICERS & SUPERVISORY STAFF PROVIDENT FUND,THE",
+        "HDFC NPS TRUST-HDFC PENSION MANAGEMENT CO.LTD.-SCHEME C-TIER I",
+        "HDFC NPS TRUST-HDFC PENSION MANAGEMENT CO.LTD.-SCHEME C-TIER II",
+        "DSP MULTI ASSET ALLOCATION FUND",
+        "ICICI NPS TRUST-ICICI PRUDENTIAL PENSION FUND SCHEME C-TIER I",
+        "SBI NPS TRUST-SBI PENSION FUND SCHEME-C TIER I",
+        "NUVAMA WEALTH FINANCE LTD.",
+        "QUANT DYNAMIC ASSET ALLOCATION FUND",
+        "QSIF HYBRID LONG-SHORT FUND",
+        "QUANT EQUITY SAVINGS FUND",
+        "INDUSIND GENERAL INSURANCE CO.LTD.",
+        "BAJAJ LIFE INSURANCE CO.LTD.",
+        "BHARTI AXA LIFE INSURANCE CO.LTD.",
+        "AXIS MAX LIFE INSURANCE LTD.-PARTICIPATING FUND",
+        "DSP NPS TRUST-DSP PENSION FUND MANAGERS PVT.LTD.-SCHEME C-TIER I",
+        "AXIS STRATEGIC BOND FUND",
+        "AXIS CREDIT RISK FUND",
+        "AXIS FLOATER FUND",
+        "ASKWA INCOME OPPORTUNITIES AIF",
+        "4,97,24,850"
+      ],
+      "anchorShares": 49724850,
+      "totalShares": 111113700,
       "rhpUrl": ""
     },
     {
@@ -21572,7 +21708,7 @@
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/propshare-celestia-scheme-ipo/2965/",
-      "issuePrice": null,
+      "issuePrice": 1050000,
       "anchor30": null,
       "anchor90": null,
       "preIPO": {
@@ -21598,13 +21734,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/om-power-transmission-ipo/2676/",
       "issuePrice": 175,
       "anchor30": {
-        "original": "2026-05-15T00:00:00.000Z",
-        "adjusted": "2026-05-15T00:00:00.000Z",
+        "original": "2026-05-14T00:00:00.000Z",
+        "adjusted": "2026-05-14T00:00:00.000Z",
         "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-07-14T00:00:00.000Z",
-        "adjusted": "2026-07-14T00:00:00.000Z",
+        "original": "2026-07-13T00:00:00.000Z",
+        "adjusted": "2026-07-13T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -21710,14 +21846,223 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       }
+    },
+    {
+      "companyName": "Leapfrog Engineering Services Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/leapfrog-engineering-ipo/2107/",
+      "issuePrice": 23,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Value 360 Communications Ltd.",
+      "issueType": "SME",
+      "exchange": "NSE SME",
+      "allotmentDate": {
+        "original": "2026-05-11T00:00:00.000Z",
+        "adjusted": "2026-05-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/value-360-communications-ipo/2552/",
+      "issuePrice": 98,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-05-11T00:00:00.000Z",
+        "originalDate": "2027-05-11T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "OnEMI Technology Solutions Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-05-08T00:00:00.000Z",
+        "adjusted": "2026-05-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/onemi-technology-ipo/2576/",
+      "issuePrice": 171,
+      "anchor30": {
+        "original": "2026-06-05T00:00:00.000Z",
+        "adjusted": "2026-06-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-08-04T00:00:00.000Z",
+        "adjusted": "2026-08-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2026-11-10T00:00:00.000Z",
+        "originalDate": "2026-11-08T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [
+        "HDFC BANKING & FINANCIAL SERVICES FUND",
+        "HDFC INNOVATION FUND",
+        "ICICI PRUDENTIAL REGULAR SAVINGS FUND",
+        "ICICI PRUDENTIAL QUANT FUND",
+        "ASHOKA INDIA EQUITY INVESTMENT TRUST PLC",
+        "WHITEOAK CAPITAL BANKING & FINANCIAL SERVICES FUND",
+        "WHITEOAK CAPITAL MULTI ASSET ALLOCATION FUND",
+        "WHITEOAK CAPITAL EQUITY FUND",
+        "GOLDMAN SACHS FUNDS-GOLDMAN SACHS INDIA EQUITY PORTFOLIO",
+        "NEW YORK STATE TEACHERS RETIREMENT SYSTEM-MANAGED BY GOLDMAN SACHS ASSET MANAGEMENT,LP",
+        "AL MEHWAR COMMERCIAL INVESTMENTS LLC-(WANDA)",
+        "BANDHAN LARGE & MID CAP FUND",
+        "BANDHAN SMALL CAP FUND",
+        "BANDHAN FINANCIAL SERVICES FUND",
+        "QUANT BFSI FUND",
+        "TATA BANKING & FINANCIAL SERVICES FUND",
+        "SUNDARAM SMALL CAP FUND",
+        "SUNDARAM FINANCIAL SERVICES OPPORTUNITIES FUND",
+        "ACM GLOBAL FUND VCC",
+        "NEO SECONDARIES FUND",
+        "BNP PARIBAS FINANCIAL MARKETS-ODI",
+        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD.",
+        "1,62,44,216"
+      ],
+      "anchorShares": 16244216,
+      "totalShares": 54147390,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Amba Auto Sales & Services Ltd.",
+      "issueType": "SME",
+      "exchange": "NSE SME",
+      "allotmentDate": {
+        "original": "2026-05-05T00:00:00.000Z",
+        "adjusted": "2026-05-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/amba-auto-sales-services-ipo/2644/",
+      "issuePrice": 135,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-05-05T00:00:00.000Z",
+        "originalDate": "2027-05-05T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Adisoft Technologies Ltd.",
+      "issueType": "SME",
+      "exchange": "NSE SME",
+      "allotmentDate": {
+        "original": "2026-04-30T00:00:00.000Z",
+        "adjusted": "2026-04-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/adisoft-technologies-ipo/2788/",
+      "issuePrice": 172,
+      "anchor30": {
+        "original": "2026-05-28T00:00:00.000Z",
+        "adjusted": "2026-05-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-07-27T00:00:00.000Z",
+        "adjusted": "2026-07-27T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-04-30T00:00:00.000Z",
+        "originalDate": "2027-04-30T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [
+        "BHARAT VENTURE OPPORTUNITIES FUND",
+        "MOTILAL OSWAL FINVEST LTD.",
+        "SANSHI FUND-I",
+        "MERU INVESTMENT FUND PCC-CELL 1",
+        "HEM GROWTH OPPORTUNITIES FUND",
+        "RAJASTHAN GLOBAL SECURITIES PVT.LTD.",
+        "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund",
+        "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES",
+        "12,25,600"
+      ],
+      "anchorShares": 1225600,
+      "totalShares": 4308000,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Bagmane Prime Office REIT (Bagmane REIT)",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-05-15T00:00:00.000Z",
+        "adjusted": "2026-05-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/bagmane-reit/3090/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2026-11-16T00:00:00.000Z",
+        "originalDate": "2026-11-15T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
+    },
+    {
+      "companyName": "Recode Studios Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-05-12T00:00:00.000Z",
+        "adjusted": "2026-05-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/recode-studios-ipo/2825/",
+      "issuePrice": 158,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-05-12T00:00:00.000Z",
+        "originalDate": "2027-05-12T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": ""
     }
   ],
-  "lastUpdated": "2026-04-11T06:26:01.426Z",
+  "lastUpdated": "2026-05-01T13:38:15.224Z",
   "lastScraped": {
-    "time": "2026-04-11T06:26:01.426Z",
-    "scraped2025": 375,
-    "scraped2026": 66,
-    "totalNew": 441
+    "time": "2026-05-01T13:38:15.224Z",
+    "scraped2025": 25,
+    "scraped2026": 32,
+    "totalNew": 57
   },
   "circularData": {}
 }

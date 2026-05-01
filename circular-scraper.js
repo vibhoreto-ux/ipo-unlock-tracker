@@ -1052,7 +1052,7 @@ function parseBSEDate(dateStr) {
 
         const year = parseInt(yearStr, 10);
         if (isNaN(day) || month === undefined || isNaN(year)) return null;
-        return new Date(year, month, day);
+        return new Date(Date.UTC(year, month, day));
     }
 
     let cleaned = dateStr
@@ -1075,9 +1075,7 @@ function parseBSEDate(dateStr) {
     }
 
     if (monthIdx === undefined || isNaN(day) || isNaN(year)) return null;
-    return new Date(year, monthIdx, day);
-
-    return new Date(year, month, day);
+    return new Date(Date.UTC(year, monthIdx, day));
 }
 
 // ─── Main Orchestrator ─────────────────────────────────────────────────────────
