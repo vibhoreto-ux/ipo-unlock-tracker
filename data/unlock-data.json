@@ -1478,9 +1478,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-25",
+        "expiryDate": "2026-05-28T00:00:00.000Z",
         "originalDate": "2026-05-28T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1598,9 +1598,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-18",
+        "expiryDate": "2026-05-20T00:00:00.000Z",
         "originalDate": "2026-05-20T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1628,9 +1628,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-16",
+        "expiryDate": "2026-05-19T00:00:00.000Z",
         "originalDate": "2026-05-19T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1688,9 +1688,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-14",
+        "expiryDate": "2026-05-18T00:00:00.000Z",
         "originalDate": "2026-05-18T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1748,9 +1748,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-18",
+        "expiryDate": "2026-05-18T00:00:00.000Z",
         "originalDate": "2026-05-18T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1890,9 +1890,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-18",
+        "expiryDate": "2026-05-12T00:00:00.000Z",
         "originalDate": "2026-05-12T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -8182,9 +8182,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-06-02",
+        "expiryDate": "2026-05-29T00:00:00.000Z",
         "originalDate": "2026-05-29T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8294,9 +8294,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-20",
+        "expiryDate": "2026-05-21T00:00:00.000Z",
         "originalDate": "2026-05-21T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8342,9 +8342,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-05-23",
+        "expiryDate": "2026-05-19T00:00:00.000Z",
         "originalDate": "2026-05-19T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8450,9 +8450,9 @@
       "anchor30": null,
       "anchor90": null,
       "preIPO": {
-        "expiryDate": "2026-05-04",
+        "expiryDate": "2026-05-06T00:00:00.000Z",
         "originalDate": "2026-05-06T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -8680,9 +8680,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-04-04",
+        "expiryDate": "2026-04-01T00:00:00.000Z",
         "originalDate": "2026-04-01T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -18955,9 +18955,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-10",
+        "expiryDate": "2026-05-12T00:00:00.000Z",
         "originalDate": "2026-05-12T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "exchange": "BSE, NSE",

@@ -352,6 +352,58 @@
       "pdf_url": "https://nsearchives.nseindia.com/corporate/KOTYARK_10032026174351_Reg30.pdf"
     },
     {
+      "source": "NSE",
+      "seq_id": "106562624",
+      "symbol": "ASIANHOTNR",
+      "company": "Asian Hotels (North) Limited",
+      "isin": "INE363A01022",
+      "shares": 23180000,
+      "listing_date": null,
+      "unlock_date": null,
+      "broadcast_dt": "20-Mar-202",
+      "announcement_text": "Asian Hotels (North) Limited has informed the Exchange about General Updates regarding receipt of Trading Approval of 23180000 equity shares allotted on preferential basis",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/ASIANHOTNR_20032026194825_IntimationregreceiptofTradingapproval.pdf"
+    },
+    {
+      "source": "NSE",
+      "seq_id": "106558528",
+      "symbol": "SADHNANIQ",
+      "company": "Sadhana Nitrochem Limited",
+      "isin": "INE888C01040",
+      "shares": null,
+      "listing_date": null,
+      "unlock_date": null,
+      "broadcast_dt": "16-Mar-202",
+      "announcement_text": "Sadhana Nitrochem Limited has informed the Exchange regarding 'Receipt of Trading Approval'.",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/SNCL_16032026194714_Receipt_of_Trading_Approval.pdf"
+    },
+    {
+      "source": "NSE",
+      "seq_id": "106566190",
+      "symbol": "EMKAY",
+      "company": "Emkay Global Financial Services Limited",
+      "isin": "INE296H01011",
+      "shares": 278300,
+      "listing_date": null,
+      "unlock_date": null,
+      "broadcast_dt": "24-Mar-202",
+      "announcement_text": "Emkay Global Financial Services Limited has informed the Exchanges about receipt of Trading approval letter for 2,78,300 Equity Shares having face value of Rs. 10/- each allotted at the price of Rs. 2",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/jpshah_24032026194450_IntimationtoBSEandNSEfortradingapprovals.pdf"
+    },
+    {
+      "source": "NSE",
+      "seq_id": "106565595",
+      "symbol": "GUJAPOLLO",
+      "company": "Gujarat Apollo Industries Limited",
+      "isin": "INE826C01016",
+      "shares": null,
+      "listing_date": null,
+      "unlock_date": null,
+      "broadcast_dt": "24-Mar-202",
+      "announcement_text": "Gujarat Apollo Industries Limited has informed the Exchange regarding 'Receipt of Trading Approval'.",
+      "pdf_url": "https://nsearchives.nseindia.com/corporate/GUJAPOLLO_24032026160637_GAILCorporateAnnouncement24032026.pdf"
+    },
+    {
       "source": "BSE",
       "scrip_cd": "501848",
       "company": "Global Offshore Services Ltd-$",
@@ -364,7 +416,7 @@
       "pdf_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7cbc27b2-8686-46b6-8eb7-61594a61ea63.pdf"
     }
   ],
-  "lastNSEScan": "2026-03-15T05:51:04.933Z",
-  "lastBSEScan": "2026-03-15T05:51:04.933Z",
-  "savedAt": "2026-03-15T05:51:32.024Z"
+  "lastNSEScan": "2026-04-05T03:39:43.069Z",
+  "lastBSEScan": "2026-04-05T03:39:43.069Z",
+  "savedAt": "2026-04-05T03:39:58.207Z"
 }
