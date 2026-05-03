@@ -1598,9 +1598,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-20T00:00:00.000Z",
+        "expiryDate": "2026-05-19",
         "originalDate": "2026-05-20T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -1628,9 +1628,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-05-19T00:00:00.000Z",
+        "expiryDate": "2026-05-17",
         "originalDate": "2026-05-19T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "rhpUrl": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
@@ -22064,5 +22064,83 @@
     "scraped2026": 32,
     "totalNew": 57
   },
-  "circularData": {}
+  "circularData": {
+    "Fujiyama Power Systems Ltd.": {
+      "found": true,
+      "totalShares": 306410934,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 25966717,
+          "percentage": 8.5,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-12-17",
+          "shares": 5414471,
+          "percentage": 1.8
+        },
+        {
+          "date": "2026-02-15",
+          "shares": 5414476,
+          "percentage": 1.8
+        },
+        {
+          "date": "2026-05-19",
+          "shares": 49162125,
+          "percentage": 16
+        },
+        {
+          "date": "2026-11-20",
+          "shares": 159053145,
+          "percentage": 51.9
+        },
+        {
+          "date": "2028-11-20",
+          "shares": 61400000,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/71369",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML71369.zip",
+      "fetchedAt": "2026-05-03T12:38:11.386Z"
+    },
+    "Tenneco Clean Air India Ltd.": {
+      "found": true,
+      "totalShares": 307431741,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 63476070,
+          "percentage": 20.6,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-12-16",
+          "shares": 13602002,
+          "percentage": 4.4
+        },
+        {
+          "date": "2026-02-14",
+          "shares": 13602028,
+          "percentage": 4.4
+        },
+        {
+          "date": "2026-04-29",
+          "shares": 3261964,
+          "percentage": 1.1
+        },
+        {
+          "date": "2026-05-17",
+          "shares": 213489677,
+          "percentage": 69.4
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/71348",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML71348.zip",
+      "fetchedAt": "2026-05-03T12:38:23.652Z"
+    }
+  }
 }

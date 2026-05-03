@@ -1,13 +1,13 @@
 National Stock Exchange of India
 Circular
 Department: LISTING
-Download Ref. No.: NSE/CML/71385 Date: November 20, 2025
-Circular Ref. No.: 2262/2025
+Download Ref. No.: NSE/CML/71348 Date: November 18, 2025
+Circular Ref. No.: 2241/2025
 To All Members,
-Sub: Listing of Equity Shares of Capillary Technologies India Limited (IPO)
+Sub: Listing of Equity Shares of Tenneco Clean Air India Limited (IPO)
 In pursuance of Regulation 3.1.1 of the National Stock Exchange (Capital Market) Trading
 Regulations Part A, it is hereby notified that the list of securities further admitted to dealings on
-the National Stock Exchange (Capital Market segment) with effect from November 21, 2025 and
+the National Stock Exchange (Capital Market segment) with effect from November 19, 2025 and
 the designated security codes thereof shall be as specified in Annexure.
 In pursuance of Regulation 2.5.5 of the National Stock Exchange (Capital Market) Trading
 Regulations Part A, it is hereby notified that the respective lot sizes in respect of securities above
@@ -17,7 +17,7 @@ codes and trading in such securities shall be in such lot sizes as specified in 
 Members are requested to note that the above security will be part of pre-open session for
 IPO and Other category of scrips as per SEBI circular no. CIR/MRD/DP/01/2012 &
 CIR/MRD/DP/02/2012 dated January 20, 2012.
-This circular shall be effective from November 21, 2025.
+This circular shall be effective from November 19, 2025.
 For and on behalf of
 National Stock Exchange of India Limited
 Aarti Parmar
@@ -27,69 +27,70 @@ Manager
 
 Continuation Sheet
 Annexure
-Symbol CAPILLARY
-Name of the Company Capillary Technologies India Limited
+Symbol TENNIND
+Name of the Company Tenneco Clean Air India Limited
 Series EQ
-ISIN INE0ILV01024
-Face Value Rs. 2/-
-Paid-up Value Rs. 2/-
-Issue Price for the current public issue Rs. 577/-
-Security Description Equity shares of Rs. 2/- each fully paid up
-No. of securities 79311773
+ISIN INE19RI01016
+Face Value Rs. 10/-
+Paid-up Value Rs. 10/-
+Issue Price for the current public issue Rs. 397/-
+Security Description Equity shares of Rs. 10/- each fully paid up
+No. of securities 403604309
 Distinctive number range As per Annexure I
 Market lot 1
 Pari Passu Yes
 Lock in details As per Annexure I
-Address of Registered and Corporate Office of the Company:
-Capillary Technologies India Limited
-#360 bearing PID No 101, 360,
-15th Cross Rd, Sector 4, HSR Layout,
-Bengaluru - 560 102, Karnataka
-Contact Number: +91 80 4122 5179
-Website: www.capillarytech.com
-Email Id: investorrelations@capillarytech.com
+Address of Registered Office of the Company:
+Tenneco Clean Air India Limited
+RNS2, Nissan Supplier Park,
+SIPCOT Industrial Park,
+Oragadam Industrial Corridor,
+Sriperumbudur Taluk,
+Kancheepuram - 602105, Tamil Nadu
+Contact Number: +91 124 4784 530
+Website: www.tennecoindia.com
+Email Id: TennecoIndiaInvestors@tenneco.com
+Address of Corporate Office of the Company:
+Tenneco Clean Air India Limited
+10th Floor, Tower B, Paras Twin Towers,
+Sector-54, Golf Course Road,
+Gurugram – 122002, Haryana
 Company Secretary and Compliance Officer
-Ms. Gireddy Bhargavi Reddy
-Contact Number: +91 80 4122 5179
-Website: www.capillarytech.com
-Email Id: investorrelations@capillarytech.com
+Ms. Roopali Singh
+Website: www.tennecoindia.com
+Email Id: TennecoIndiaInvestors@tenneco.com
 Financial Year: April 2025-March 2026
 Address of Registrar:
 MUFG Intime India Private Limited
-(Formerly Link Intime India Private Limited)
-C-101, 1st Floor, 247 Park,
-L.B.S. Marg, Vikhroli West,
-Mumbai 400083, Maharashtra
-Tel No: +91 810 811 4949
-Email Id: capillarytechnologies.ipo@in.mpms.mufg.com
-Website: https://in.mpms.mufg.com/
-Contact Person: Ms. Shanti Gopalkrishnan
+(formerly Link Intime India Private Limited)
+C-101, 247 Park, 1st Floor,
+LBS Marg, Vikhroli (West),
+Mumbai – 400083, Maharashtra
+Tel No: + 91 81081 14949
+Email Id: tennecocleanair.ipo@in.mpms.mufg.com
+Website: https://in.mpms.mufg.com
+Contact Person: Mr. Shanti Gopalkrishnan
 
 -- 2 of 3 --
 
 Continuation Sheet
 Annexure I
-Capillary Technologies India Limited
+Tenneco Clean Air India Limited
 No. of Equity Shares
 Fully Paid-up
 Distinctive Nos. Lock in upto
 From To
-329300 1 329300 18-Dec-2025
-329300 329301 658600 16-Feb-2026
-138075 658601 796675 18-Dec-2025
-138076 796676 934751 16-Feb-2026
-8294045 934752 9228796 Free
-12303168 9228797 21531964 19-May-2027
-2998371 21531965 24530335 Free
-535715 24530336 25066050 27-Apr-2026
-43764380 25066051 68830430 19-May-2026
-3729632 68830431 72560062 19-May-2027
-674291 72560063 73234353 19-May-2026
-94785 73234354 73329138 Free
-2946620 73329139 76275758 18-Dec-2025
-2946630 76275759 79222388 16-Feb-2026
-89385 79222389 79311773 Free
-79311773 Total
+30000 1 30000 17-May-2026
+13602002 30001 13632002 16-Dec-2025
+13602028 13632003 27234030 14-Feb-2026
+63476070 27234031 90710100 Free
+23944197 90710101 114654297 17-May-2026
+3261964 114654298 117916261 29-Apr-2026
+80770862 117916262 198687123* 17-May-2027
+15401706 721746067 737147772* 17-May-2026
+189515480 777713121 967228600 17-May-2026
+403604309 Total
+Note: 563624291 were cancellaled pursuant to Reduction of Equity Share Capital.
 
 -- 3 of 3 --
 
