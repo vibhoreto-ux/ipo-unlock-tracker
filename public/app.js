@@ -1174,7 +1174,7 @@ function pollForNLP(companyName, attempts = 0) {
             const tlDate = new Date(dateStr);
             tlDate.setHours(0, 0, 0, 0);
 
-            // Find closest BSE unlock event within 5 days
+            // Find closest circular unlock event within 5 days
             let bestMatch = null;
             let bestDiff = Infinity;
             for (const event of datedEvents) {
@@ -1189,6 +1189,29 @@ function pollForNLP(companyName, attempts = 0) {
             if (bestMatch) {
                 const subEl = document.getElementById(`tl${tlItem.id}Sub`);
                 if (subEl) subEl.textContent = `${bestMatch.percentage}% unlock`;
+
+                // Override the calculated date with the actual circular date
+                // (the circular has the authoritative lock-in date from NSE/BSE)
+                if (bestDiff > 0) {
+                    const dateEl = document.getElementById(`tl${tlItem.id}Date`);
+                    if (dateEl) {
+                        dateEl.textContent = formatDateSimple(bestMatch.date + 'T00:00:00.000Z');
+                    }
+
+                    // Also update the status badge since the date changed
+                    const statusEl = document.getElementById(`tl${tlItem.id}Status`);
+                    if (statusEl) {
+                        const status = getDateStatus(bestMatch.date);
+                        statusEl.innerHTML = status.badge;
+                    }
+
+                    // Update the timeline item class
+                    const timelineEl = document.getElementById(`timeline${tlItem.id}`);
+                    if (timelineEl) {
+                        const status = getDateStatus(bestMatch.date);
+                        timelineEl.className = 'timeline-item ' + status.class;
+                    }
+                }
             }
         }
     }
