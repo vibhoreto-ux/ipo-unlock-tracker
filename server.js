@@ -88,7 +88,92 @@ app.get('/api/nse-pdf', async (req, res) => {
             }
         }
     }
-});/**
+});
+
+/**
+ * GET /api/bse-page-proxy
+ * Relays a BSE HTML page via server-side curl (bypasses CORS + Akamai WAF).
+ * The browser calls this instead of fetching bseindia.com directly.
+ * Query param: url (must be a bseindia.com or bsesme.com URL)
+ */
+app.get('/api/bse-page-proxy', async (req, res) => {
+    const { execSync } = require('child_process');
+    try {
+        const targetUrl = req.query.url;
+        if (!targetUrl) return res.status(400).send('Missing url parameter');
+
+        // Validate: only allow BSE domains
+        if (!targetUrl.includes('bseindia.com') && !targetUrl.includes('bsesme.com')) {
+            return res.status(403).send('Only BSE domains are allowed');
+        }
+
+        console.log(`[BSE Proxy] Fetching: ${targetUrl.substring(0, 100)}`);
+
+        const escapedUrl = targetUrl.replace(/'/g, "'\\''");
+        const html = execSync(
+            `curl -s -L --max-time 20 ` +
+            `-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' ` +
+            `-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' ` +
+            `-H 'Accept-Language: en-US,en;q=0.9' ` +
+            `-H 'Referer: https://www.bseindia.com/' ` +
+            `'${escapedUrl}'`,
+            { maxBuffer: 10 * 1024 * 1024, timeout: 25000 }
+        ).toString('utf8');
+
+        res.setHeader('Content-Type', 'text/html');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.send(html);
+
+    } catch (err) {
+        console.error(`[BSE Proxy] Error: ${err.message}`);
+        res.status(502).send(`BSE proxy error: ${err.message}`);
+    }
+});
+
+/**
+ * GET /api/bse-pdf-proxy
+ * Relays a BSE PDF file via server-side curl (bypasses CORS + Akamai WAF).
+ * The browser calls this instead of fetching the PDF directly.
+ * Query param: url (must be a bseindia.com URL)
+ */
+app.get('/api/bse-pdf-proxy', async (req, res) => {
+    const { execSync } = require('child_process');
+    try {
+        const targetUrl = req.query.url;
+        if (!targetUrl) return res.status(400).send('Missing url parameter');
+
+        if (!targetUrl.includes('bseindia.com') && !targetUrl.includes('bsesme.com')) {
+            return res.status(403).send('Only BSE domains are allowed');
+        }
+
+        console.log(`[BSE PDF Proxy] Downloading: ${targetUrl.substring(0, 100)}`);
+
+        const escapedUrl = targetUrl.replace(/'/g, "'\\''");
+        const pdfBuffer = execSync(
+            `curl -s -L --max-time 30 ` +
+            `-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' ` +
+            `-H 'Accept: application/pdf,*/*' ` +
+            `-H 'Referer: https://www.bseindia.com/' ` +
+            `'${escapedUrl}'`,
+            { maxBuffer: 20 * 1024 * 1024, timeout: 35000, encoding: 'buffer' }
+        );
+
+        if (!pdfBuffer || pdfBuffer.length < 100) {
+            return res.status(502).send('BSE returned empty PDF response');
+        }
+
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Content-Disposition', 'inline; filename="annexure.pdf"');
+        res.send(pdfBuffer);
+
+    } catch (err) {
+        console.error(`[BSE PDF Proxy] Error: ${err.message}`);
+        res.status(502).send(`BSE PDF proxy error: ${err.message}`);
+    }
+});
+
+/**
  * POST /api/import-data
  * Accepts scraped anchor + IPO data from browser, processes it, merges into DB
  * Body: { anchorData: [...], ipoData: [...], year: number }
@@ -346,6 +431,15 @@ app.get('/api/unlock-data', async (req, res) => {
         // Combine scraped data
         let newData = [...data2025, ...data2026];
 
+        // Dedup scraped data itself
+        const seen = new Set();
+        newData = newData.filter(item => {
+            const key = `${item.companyName}`;
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+        });
+
         console.log(`Scraped ${newData.length} total companies (${data2025.length} from 2025, ${data2026.length} from 2026)`);
 
         // Merge into existing DB
@@ -488,15 +582,6 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             return res.status(404).json({ error: 'Company not found in database' });
         }
 
-        // Spawn a background priority fetch if Pre-IPO data is missing
-        if (company.preIpoInvestors === undefined) {
-             const cp = require('child_process');
-             cp.spawn('node', ['fetch-single-rhp.js', company.companyName], { 
-                detached: true, 
-                stdio: 'ignore' 
-             }).unref();
-        }
-
 
         const exchange = company.exchange || '';
         const listingDate = company.allotmentDate?.adjusted || company.allotmentDate?.original;
@@ -508,7 +593,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         console.log(`\n📄 Fetching circular for: ${companyName} (${exchange}, listed: ${listingDate.substring(0, 10)})${forceRefresh ? ' [FORCE REFRESH]' : ''}`);
 
         // Fetch from NSE first, then BSE fallback
-        const result = await getUnlockPercentages(companyName, exchange, listingDate);
+        const result = await getUnlockPercentages(companyName, exchange, listingDate, company?.totalShares);
 
         if (!result) {
             // Don't cache "not found" — allow retry on next click
