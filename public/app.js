@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    function isValidRHPUrl(url) {
+        if (!url) return false;
+        const l = url.toLowerCase();
+        if (l.includes('keyword/rhp-detail')) return false;
+        return l.endsWith('.pdf') || l.endsWith('.zip');
+    }
     // Elements
     const tableBody = document.getElementById('tableBody');
     const loading = document.getElementById('loading');
@@ -592,11 +598,15 @@ function pollForNLP(companyName, attempts = 0) {
             if (updatedCompany && updatedCompany.preIpoInvestors !== undefined) {
                 // Extractor finished!
                 const index = unlockData.findIndex(c => c.companyName === companyName);
-                if (index !== -1) unlockData[index] = updatedCompany;
-                
-                const titleEl = document.getElementById('modalTitle');
-                if (titleEl && titleEl.textContent === companyName) {
-                    openUnlockModal(updatedCompany);
+                if (index !== -1) {
+                    unlockData[index].preIpoInvestors = updatedCompany.preIpoInvestors;
+                    unlockData[index].preIpoWaca = updatedCompany.preIpoWaca;
+                    unlockData[index].rhpUrl = updatedCompany.rhpUrl;
+                    
+                    const titleEl = document.getElementById('modalCompanyName');
+                    if (titleEl && titleEl.textContent === companyName) {
+                        openUnlockModal(unlockData[index]);
+                    }
                 }
             } else {
                 pollForNLP(companyName, attempts + 1);
@@ -640,7 +650,7 @@ function pollForNLP(companyName, attempts = 0) {
         const rhpSection = document.getElementById('rhpSection');
         const btnViewRhp = document.getElementById('btnViewRhp');
         if (rhpSection && btnViewRhp) {
-            if (company.rhpUrl && company.rhpUrl.endsWith('.pdf')) {
+            if (isValidRHPUrl(company.rhpUrl)) {
                 btnViewRhp.href = company.rhpUrl;
                 rhpSection.style.display = '';
             } else {
@@ -652,7 +662,7 @@ function pollForNLP(companyName, attempts = 0) {
         const preIpoBlock = document.getElementById('preIpoDetailsBlock');
         if (preIpoBlock) {
             let preIpoNamesStr = '';
-            if (!company.rhpUrl && company.preIpoInvestors === undefined) {
+            if (!isValidRHPUrl(company.rhpUrl) && company.preIpoInvestors === undefined) {
                 preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for RHP PDF... (may take ~45s)</span>`;
                 pollForNLP(company.companyName);
             } else if (company.preIpoInvestors === undefined) {
@@ -1583,7 +1593,7 @@ function pollForNLP(companyName, attempts = 0) {
                 anchorNamesStr = `<span style="color:var(--text-muted); font-style:italic;">No anchors yet</span>`;
             }
             let preIpoNamesStr = '';
-            if (!ipo.rhpUrl && ipo.preIpoInvestors === undefined) {
+            if (!isValidRHPUrl(ipo.rhpUrl) && ipo.preIpoInvestors === undefined) {
                 preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for RHP PDF...</span>`;
             } else if (ipo.preIpoInvestors === undefined) {
                 preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning RHP...</span>`;

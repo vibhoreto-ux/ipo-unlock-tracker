@@ -8,6 +8,13 @@ const HEADERS = {
     'Origin': 'https://www.chittorgarh.com',
 };
 
+function isValidRHPUrl(url) {
+    if (!url) return false;
+    const l = url.toLowerCase();
+    if (l.includes('keyword/rhp-detail')) return false;
+    return l.endsWith('.pdf') || l.endsWith('.zip');
+}
+
 async function fetchRHPForCompany(company) {
     if (!company.chittorgarhUrl) return null;
     const targetUrl = company.chittorgarhUrl.startsWith('http') 
@@ -90,7 +97,7 @@ async function autoFetchMissingRHP() {
     let db = readDB();
     const now = new Date();
     const missingURL = db.companies.filter(c => {
-        if (c.rhpUrl) return false;
+        if (isValidRHPUrl(c.rhpUrl)) return false;
         const ipoDate = c.allotmentDate ? new Date(c.allotmentDate.original || c.allotmentDate.adjusted) : null;
         if (!ipoDate) return true; // always target recent TBD IPOs
         return (now.getTime() - ipoDate.getTime()) < 730 * 24 * 3600000; // past 2 years only to avoid ban limits
@@ -125,7 +132,7 @@ async function autoFetchMissingRHP() {
 
     // Phase 2: Missing NLP Pre-IPO Extractions
     db = readDB(); // refresh db reference safely
-    const missingNLP = db.companies.filter(c => c.rhpUrl && c.preIpoInvestors === undefined);
+    const missingNLP = db.companies.filter(c => isValidRHPUrl(c.rhpUrl) && c.preIpoInvestors === undefined);
     
     if (missingNLP.length > 0) {
         missingNLP.sort((a, b) => {

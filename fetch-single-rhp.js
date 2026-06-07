@@ -2,6 +2,13 @@ const { readDB, writeDB } = require('./db.js');
 const cheerio = require('cheerio');
 const { execSync } = require('child_process');
 
+function isValidRHPUrl(url) {
+    if (!url) return false;
+    const l = url.toLowerCase();
+    if (l.includes('keyword/rhp-detail')) return false;
+    return l.endsWith('.pdf') || l.endsWith('.zip');
+}
+
 async function run() {
     const targetName = process.argv[2];
     if (!targetName) return;
@@ -10,13 +17,13 @@ async function run() {
     const company = db.companies.find(c => c.companyName === targetName);
     if (!company) return;
 
-    if (company.rhpUrl && company.preIpoInvestors !== undefined) return;
+    if (isValidRHPUrl(company.rhpUrl) && company.preIpoInvestors !== undefined) return;
 
     console.log(`[Priority-Fetch] Start for ${targetName}...`);
     
     // 1. Check Chittorgarh
     let bestLink = null;
-    if (company.chittorgarhUrl && !company.rhpUrl) {
+    if (company.chittorgarhUrl && !isValidRHPUrl(company.rhpUrl)) {
         try {
             const res = await fetch(company.chittorgarhUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
             if (res.ok) {
@@ -38,7 +45,7 @@ async function run() {
     }
 
     // 2. Fallback DDG
-    if (!bestLink && !company.rhpUrl) {
+    if (!bestLink && !isValidRHPUrl(company.rhpUrl)) {
         try {
             const params = new URLSearchParams();
             params.append('q', `"${targetName}" "Red Herring Prospectus" filetype:pdf`);
@@ -76,7 +83,7 @@ async function run() {
             }
             const safelyEscapedName = targetName.replace(/"/g, '\\"');
             const pyCmd = `${pythonBin} nlp_extractor.py --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
-            const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
+            const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 120000 });
             const nlpData = JSON.parse(out.trim());
             company.preIpoInvestors = nlpData.preIpoInvestors || [];
             console.log(`[Priority-Fetch] Found ${company.preIpoInvestors.length} investors for ${targetName}`);

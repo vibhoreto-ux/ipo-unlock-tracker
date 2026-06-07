@@ -547,10 +547,36 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         const companyName = decodeURIComponent(req.params.companyName);
         const forceRefresh = req.query.force === 'true';
 
+        // Find the company in DB — use fuzzy match: case-insensitive, ignore trailing dots/spaces
+        const db = readDB();
+        const normQ = companyName.toLowerCase().replace(/[\.\s]+$/, '');
+        const company = db.companies.find(c =>
+            c.companyName === companyName ||
+            (c.companyName || '').toLowerCase().replace(/[\.\s]+$/, '') === normQ
+        );
+
+        // Trigger background RHP fetch if company is missing preIpoInvestors details
+        if (company && company.preIpoInvestors === undefined) {
+            console.log(`[RHP/Single] Triggering async RHP fetch for ${company.companyName}`);
+            const { spawn } = require('child_process');
+            const path = require('path');
+            const child = spawn(process.execPath, [path.join(__dirname, 'fetch-single-rhp.js'), company.companyName], {
+                detached: true,
+                stdio: 'ignore'
+            });
+            child.unref();
+        }
+
         // Common helper to inject live price before returning
         const respondWithPrices = async (basePayload) => {
             const liveData = await getLivePrice(companyName);
-            return res.json({ ...basePayload, liveMarketPrice: liveData });
+            return res.json({
+                ...basePayload,
+                preIpoInvestors: company ? company.preIpoInvestors : undefined,
+                preIpoWaca: company ? (company.preIpoWaca || company.waca) : undefined,
+                rhpUrl: company ? company.rhpUrl : undefined,
+                liveMarketPrice: liveData
+            });
         };
 
         // Check caches (skip if force refresh)
@@ -569,14 +595,6 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
                 return await respondWithPrices({ ...dbCached, fromCache: true });
             }
         }
-
-        // Find the company in DB — use fuzzy match: case-insensitive, ignore trailing dots/spaces
-        const db = readDB();
-        const normQ = companyName.toLowerCase().replace(/[\.\s]+$/, '');
-        const company = db.companies.find(c =>
-            c.companyName === companyName ||
-            (c.companyName || '').toLowerCase().replace(/[\.\s]+$/, '') === normQ
-        );
 
         if (!company) {
             return res.status(404).json({ error: 'Company not found in database' });
