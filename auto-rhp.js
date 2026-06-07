@@ -138,8 +138,11 @@ async function autoFetchMissingRHP() {
         console.log(`[Auto-RHP] Found ${missingNLP.length} companies missing Pre-IPO NLP data. Executing Python queue...`);
         const { execSync } = require('child_process');
         const path = require('path');
-        // Use system python3 (Render installs deps globally via build command)
-        const pythonBin = process.env.PYTHON_BIN || 'python3';
+        let pythonBin = process.env.PYTHON_BIN || 'python3';
+        const fs = require('fs');
+        if (fs.existsSync(path.join(__dirname, 'venv', 'bin', 'python'))) {
+            pythonBin = path.join(__dirname, 'venv', 'bin', 'python');
+        }
         const pyScript = path.join(__dirname, 'nlp_extractor.py');
         
         let nlpUpdated = 0;
