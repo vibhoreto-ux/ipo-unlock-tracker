@@ -6814,7 +6814,34 @@
         "originalDate": "2026-07-04T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://www.bseindia.com/downloads/ipo/Neetu%20Yoshi%20Limited%20-%20RHP%20&%20GID_260620251029.zip",
+      "preIpoInvestors": [
+        "Agarwal and",
+        "Shah Jointly holding with Puja Hemal Shah,",
+        "Ashok Katyal,",
+        "GSM or ASM",
+        "complete Allotment",
+        "Abhishek Agarwal",
+        "any Investor",
+        "Manoj Kumar Mathur",
+        "Himanshu Lohia.",
+        "Sandeep Aggarwal,",
+        "Shardha Agarwal.",
+        "Thakkar Sudhir Chandulal and",
+        "Himanshu Lohia,",
+        "Hemal Ashvin",
+        "Himanshu Lohia",
+        "Priyanka Aggarwal,",
+        "Abhishek Agarwal.",
+        "Shradha Agarwal",
+        "Shardha Agarwal",
+        "Sunil Kumar",
+        "be Estimated Amount to",
+        "Utsav Pramodkumar",
+        "Neelam Gupta,",
+        "Shradha Agarwal."
+      ]
     },
     {
       "companyName": "Adcounty Media India Ltd.",
@@ -7626,7 +7653,20 @@
         "originalDate": "2026-06-16T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_SACHEEROME.zip",
+      "preIpoInvestors": [
+        "Sachee Holdings Private Limited (₹100)",
+        "India – Ahead Venture Fund (₹102)",
+        "Vaishali F&F LLP (₹100)",
+        "Quick Infraprojects Private Limited (₹100)",
+        "Quartz Impex Private Limited (₹100)",
+        "Chahat Estates Agents Pvt Ltd",
+        "Share Transfer to Sachee Holdings Private Limited (₹30)",
+        "Share Transfer to Vaishali F&F LLP (₹30)",
+        "Share Transfer to Quick Infraprojects Private Limited (₹30)"
+      ],
+      "preIpoWaca": null
     },
     {
       "companyName": "Ganga Bath Fittings Ltd.",

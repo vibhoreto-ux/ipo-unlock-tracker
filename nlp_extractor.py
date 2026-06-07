@@ -40,7 +40,20 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                 'include', 'hybrid', 'other', 'party', 'which', 'as', 'no.', 'sr.',
                 'our', 'top', 'the', 'gw', 'kv', 'moa', 'january', 'february', 'march',
                 'april', 'may', 'june', 'july', 'august', 'september', 'october',
-                'november', 'december', 'anchor', 'investors'
+                'november', 'december', 'anchor', 'investors', 'salary', 'college',
+                'retail', 'bidder', 'bidders', 'portion', 'sales', 'domestic', 'export',
+                # Indian states / union territories (to avoid extracting "Andhra Pradesh" etc.)
+                'pradesh', 'bengal', 'karnataka', 'maharashtra', 'rajasthan', 'gujarat',
+                'punjab', 'haryana', 'bihar', 'jharkhand', 'odisha', 'assam', 'kerala',
+                'telangana', 'tamil', 'manipur', 'nagaland', 'meghalaya', 'mizoram',
+                'tripura', 'arunachal', 'sikkim', 'goa', 'himachal', 'uttarakhand',
+                'jammu', 'kashmir', 'chandigarh', 'ladakh', 'delhi',
+                # Countries
+                'ireland', 'arabia', 'arabia', 'kingdom', 'japan', 'china', 'singapore',
+                'mauritius', 'cayman', 'islands',
+                # Generic legal / acquisition phrases
+                'acquisition', 'land', 'transfer', 'consideration', 'allotment',
+                'diu', 'daman', 'congress', 'expo', 'up to',
             ]
             if any(kw in low.split() for kw in bad_kws): return False
             
