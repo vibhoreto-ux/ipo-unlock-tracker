@@ -255,12 +255,28 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                 if t: full_text += t + "\n"
                 
             tl = full_text.lower()
-            w1 = re.search(r'last (?:1 year|18 months|3 years)\s+([\d\.]+)', tl)
-            if w1: 
-                waca_val = float(w1.group(1))
-            else:
-                w2 = re.search(r'average cost of acquisition.{0,150}?(\d+\.\d+)', tl, re.DOTALL)
-                if w2: waca_val = float(w2.group(1))
+            
+            # Pattern A: Direct "Weighted average cost of acquisition 22.02" line (most specific)
+            wA = re.search(r'weighted average cost of acquisition\s+([\d]+\.[\d]{1,2})(?:\^|\#|$|\s)', tl)
+            # Pattern B: "WACA ... 22.02" from a table row
+            wB = re.search(r'\bwaca\b.{0,80}?([\d]+\.[\d]{1,2})', tl)
+            # Pattern C: "last 1 year / 18 months / 3 years N.NN" (existing)
+            wC = re.search(r'last (?:\(?\d+\)?\s+)?(?:1 year|one.*?year|18 months|eighteen.*?months|3 years|three.*?years)\s+([\d\.]+)', tl)
+            # Pattern D: "average cost of acquisition ... N.NN" generic fallback (but skip low face-value 10.00 traps)
+            wD = re.search(r'(?:weighted )?average cost of acquisition[^\n]{0,200}?([\d]{2,4}\.[\d]{1,2})', tl, re.DOTALL)
+
+            def valid_waca(v):
+                try:
+                    f = float(v)
+                    return 1.0 <= f <= 5000.0
+                except:
+                    return False
+            
+            # Pick best match in priority order
+            for w in [wA, wB, wC, wD]:
+                if w and valid_waca(w.group(1)):
+                    waca_val = float(w.group(1))
+                    break
 
         return { "investors": list(set(final_list)), "waca": waca_val }
     except Exception as e:
