@@ -1,9 +1,21 @@
 const axios = require('axios');
-const pdf = require('pdf-parse');
+const _pdfParseLib = require('pdf-parse');
 const { format, subDays, addDays, isBefore, parseISO } = require('date-fns');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
+async function pdf(buffer) {
+    if (typeof _pdfParseLib === 'function') return _pdfParseLib(buffer);
+    const { PDFParse } = _pdfParseLib;
+    const tmpFile = path.join(__dirname, `.pdfparse_tmp_pref_${Date.now()}.pdf`);
+    fs.writeFileSync(tmpFile, buffer);
+    try {
+        const parser = new PDFParse({ url: `file://${tmpFile}` });
+        const result = await parser.getText();
+        return { text: result.text || result.content || '', numpages: result.pages?.length || 0 };
+    } finally { try { fs.unlinkSync(tmpFile); } catch (e) { } }
+}
 
 // ── NSE Equity list (for dedup) ─────────────────────────────────────────────
 const NSE_EQUITY_CACHE = path.join(__dirname, 'nse-equity-list.json');

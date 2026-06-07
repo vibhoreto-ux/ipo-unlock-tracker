@@ -262,8 +262,8 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = [], forc
                 const existingCompany = existingCompanies.find(c => c.companyName === ipo.companyName);
 
                 // --- 1. Anchor Investors: scrape from Chittorgarh subscription page HTML ---
-                const hasValidCache = existingCompany && existingCompany.anchorInvestors && existingCompany.anchorInvestors.length > 0;
-                const hasEmptyCache = existingCompany && existingCompany.anchorInvestors && existingCompany.anchorInvestors.length === 0;
+                const hasValidCache = existingCompany && existingCompany.anchorInvestors && existingCompany.anchorInvestors.length > 0 && (existingCompany.totalShares || 0) > 0;
+                const hasEmptyCache = existingCompany && existingCompany.anchorInvestors && existingCompany.anchorInvestors.length === 0 && (existingCompany.totalShares || 0) > 0;
                 
                 // If it has a valid populated cache, use it always.
                 // If it has an empty cache, only use it if we are NOT force-refreshing.

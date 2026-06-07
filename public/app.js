@@ -1565,7 +1565,7 @@ function pollForNLP(companyName, attempts = 0) {
                 if (ancNum > 0) {
                     sharesPart = `, ${toLk(ancNum)} anc., ${toLk(pubNum)} pub.`;
                 } else {
-                    sharesPart = `, 0 anc., ${toLk(pubNum)} pub.`;
+                    sharesPart = `, ${toLk(ipo.totalShares)} shares`;
                 }
             }
 
