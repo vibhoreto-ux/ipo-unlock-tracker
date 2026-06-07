@@ -25,7 +25,7 @@ async function run() {
                 const candidates = [];
                 $('a').each((i, el) => {
                     const href = $(el).attr('href') || '';
-                    if (href.startsWith('http') && href.toLowerCase().endsWith('.pdf')) {
+                    if (href.startsWith('http') && (href.toLowerCase().endsWith('.pdf') || href.toLowerCase().endsWith('.zip'))) {
                         const text = $(el).text().toLowerCase();
                         if (text.includes('rhp') || text.includes('prospectus') || href.toLowerCase().includes('rhp')) {
                             candidates.push(href);
@@ -53,7 +53,7 @@ async function run() {
                 const $ = cheerio.load(html);
                 $('a').each((i, el) => {
                     const href = $(el).attr('href');
-                    if (href && href.startsWith('http') && href.toLowerCase().endsWith('.pdf') && !bestLink) {
+                    if (href && href.startsWith('http') && (href.toLowerCase().endsWith('.pdf') || href.toLowerCase().endsWith('.zip')) && !bestLink) {
                         bestLink = href;
                     }
                 });

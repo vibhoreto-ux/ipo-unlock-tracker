@@ -277,7 +277,15 @@ def main():
         try:
             r = requests.get(args.rhp, headers=headers, timeout=30)
             if r.status_code == 200:
-                extract_res = extract_preipo_names(r.content, args.company_name)
+                content = r.content
+                if content.startswith(b'PK\x03\x04') or args.rhp.lower().endswith('.zip'):
+                    import zipfile
+                    with zipfile.ZipFile(BytesIO(content)) as z:
+                        pdf_names = [n for n in z.namelist() if n.lower().endswith('.pdf')]
+                        if pdf_names:
+                            pdf_names.sort(key=lambda n: z.getinfo(n).file_size, reverse=True)
+                            content = z.read(pdf_names[0])
+                extract_res = extract_preipo_names(content, args.company_name)
                 result["preIpoInvestors"] = extract_res.get("investors", [])
                 result["waca"] = extract_res.get("waca")
         except Exception:

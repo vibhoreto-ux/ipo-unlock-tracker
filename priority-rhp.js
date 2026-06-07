@@ -30,13 +30,14 @@ async function fetchRHPForCompany(company) {
             const href = $(el).attr('href') || '';
             const text = $(el).text().toLowerCase().trim();
             if (!href) return;
-            if (href.startsWith('http') && href.toLowerCase().endsWith('.pdf')) {
+            if (href.startsWith('http') && (href.toLowerCase().endsWith('.pdf') || href.toLowerCase().endsWith('.zip'))) {
                 const isPdf = href.toLowerCase().endsWith('.pdf');
+                const isZip = href.toLowerCase().endsWith('.zip');
                 const isRHP = text.includes('rhp') || text.includes('red herring') || href.toLowerCase().includes('rhp');
                 const isDRHP = text.includes('drhp') || href.toLowerCase().includes('drhp');
                 const isBSESME = href.includes('bsesme.com');
                 const isBSE = href.includes('bseindia.com');
-                if (isPdf && (isRHP || isDRHP)) {
+                if ((isPdf || isZip) && (isRHP || isDRHP)) {
                     let basePriority = (isRHP && !isDRHP) ? 10 : 20; // Final RHP beats DRHP
                     let domainPriority = isBSESME ? 1 : isBSE ? 2 : 3;
                     candidates.push({ href, priority: basePriority + domainPriority });
@@ -69,7 +70,7 @@ async function fetchRHPFallback(companyName) {
         const candidates = [];
         $('a').each((i, el) => {
             const href = $(el).attr('href');
-            if (href && href.startsWith('http') && href.toLowerCase().endsWith('.pdf')) {
+            if (href && href.startsWith('http') && (href.toLowerCase().endsWith('.pdf') || href.toLowerCase().endsWith('.zip'))) {
                 const isNSE = href.includes('nseindia.com');
                 const isBSE = href.includes('bseindia.com');
                 const isSEBI = href.includes('sebi.gov.in');
