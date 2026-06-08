@@ -9,8 +9,9 @@ const TRUSTED_RHP_DOMAINS = [
     'bseindia.com',
     'sebi.gov.in',
     'bseplus.bseindia.com',
-    'bsesme.com',          // BSE SME official filing portal
+    'bsesme.com',               // BSE SME official filing portal
     'www.bsesme.com',
+    'gyrcapitaladvisors.com',   // SEBI-registered lead manager (merchant banker)
 ];
 
 function isValidRHPUrl(url) {

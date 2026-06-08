@@ -75,12 +75,18 @@ def extract_preipo_names(pdf_bytes, company_name=None):
         with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
             in_share_history = False
             parse_window_left = 0
+            no_preipo = False  # Set True if RHP explicitly states no pre-IPO placement
             for i, page in enumerate(pdf.pages[:150]):
                 text = page.extract_text()
                 if not text:
                     continue
                 
                 text_lower = text.lower()
+                
+                # Detect explicit "no pre-IPO placement" declaration - skip all extraction
+                if re.search(r'(?:has not undertaken|not proposing to undertake|did not undertake|have not undertaken)\s+any\s+pre.?ipo\s+placement', text_lower):
+                    no_preipo = True
+                    break
                 
                 if ('history of equity' in text_lower or 
                     'build up' in text_lower or
@@ -231,6 +237,10 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                             investors_dict[name.lower()] = name
         
         # Filter down names that represent just random text or promoters
+        # If RHP explicitly stated no pre-IPO placement, return empty immediately
+        if no_preipo:
+            investors_dict = {}
+
         final_list = []
         base_clean = ""
         if base_company_word:

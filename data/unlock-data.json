@@ -21029,7 +21029,10 @@
       },
       "anchorInvestors": [],
       "anchorShares": 1501200,
-      "totalShares": 5269200
+      "totalShares": 5269200,
+      "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/06/rhphorizon.pdf",
+      "preIpoInvestors": [],
+      "preIpoWaca": null
     },
     {
       "companyName": "Hexagon Nutrition Ltd.",
@@ -21122,12 +21125,8 @@
       "anchorShares": 1292400,
       "totalShares": 4728000,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_GENXAI.zip",
-      "preIpoInvestors": [
-        "Latent view Analytics Limited",
-        "SK Patodia and Associates LLP, Chartered Accountants",
-        "Share transfer from Harbinger Techaxes Private Limited** (₹10)",
-        "Number of Clients"
-      ]
+      "preIpoInvestors": [],
+      "preIpoWaca": null
     },
     {
       "companyName": "Vahh Chemicals Ltd.",
@@ -21150,7 +21149,9 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 2242000
+      "totalShares": 2242000,
+      "preIpoInvestors": [],
+      "preIpoWaca": null
     },
     {
       "companyName": "UHM Vacation Ltd.",
