@@ -6050,7 +6050,30 @@
         "originalDate": "2026-07-31T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://www.bsesme.com/download/338761/SME_IPO%20Open/RHP_SRL_20250722215043.pdf",
+      "preIpoInvestors": [
+        "Ashish Rameshchandra Kacholia",
+        "Saket Agrawal",
+        "M/s YMS Finance Private Limited",
+        "M/s RD Devcon Private Limited",
+        "Ruchas Ventures",
+        "M/s Veekay Apartments Private Limited",
+        "M/s Somani Estates Private Limited",
+        "Meru Investment Fund PCC Cell 1",
+        "Dinero Finance and Investment Private Limited",
+        "Rajashri Ravalnath Shende",
+        "A Sea water cooled AC Plants",
+        "ESOP Plan",
+        "Somani Estates Private Limited",
+        "Ashaben Amitkumar Patel",
+        "YMS Finance Private Limited",
+        "Meru Investment Fund PCC-Cell 1",
+        "Coral Pebble LLP",
+        "J4S Ventures Fund-I",
+        "RD Devcon Private Limited",
+        "Ravalnath Gopinath Shende"
+      ]
     },
     {
       "companyName": "Patel Chem Specialities Ltd.",
@@ -6816,8 +6839,46 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/Neetu%20Yoshi%20Limited%20-%20RHP%20&%20GID_260620251029.zip",
-      "preIpoInvestors": [],
-      "preIpoWaca": 22.02
+      "preIpoInvestors": [
+        "NLB Services Private Limited (₹62)",
+        "Shivang Agarwal (₹62)",
+        "Rajnish Varshney (₹62)",
+        "Leena Sanghvi (₹62)",
+        "Ketan Shanghavi HUF (₹62)",
+        "Akriti Arora (₹62)",
+        "Vikas Jain (₹62)",
+        "Priyanka Aggarwal (₹62)",
+        "Priyanshi Jain (₹62)",
+        "Shikhir Kapoor (₹62)",
+        "Amit Anand (₹62)",
+        "Radhika Chugh (₹62)",
+        "Pundrik Sharma (₹62)",
+        "Sulabh Jain (₹62)",
+        "Puneet Jain (₹62)",
+        "Manrich Singh Narang (₹62)",
+        "Utsav Pramodkumar Shrivastav HUF (₹62)",
+        "Adheesh Kabra (₹62)",
+        "Santosh Rani (₹62)",
+        "Vishal Goel HUF (₹62)",
+        "Sunil Kumar Gupta (₹62)",
+        "Viney Equity Market LLP (₹62)",
+        "HBPA Tradex Private Limited (₹62)",
+        "Mukul Gupta (₹62)",
+        "Sandeep Aggarwal (₹62)",
+        "Meenakshi Arora (₹62)",
+        "Anshu Agarwal (₹62)",
+        "Ajay Agarwal (₹62)",
+        "Ashok Katyal (₹62)",
+        "NKGJ Trading LLP (₹62)",
+        "Gaurav Shyamsukha (₹62)",
+        "Jatinder Singh Chawla (₹62)",
+        "Hemal Ashvin Shah & Puja Hemal Shah (₹62)",
+        "Aditya Shyam Makharia (₹62)",
+        "Thakkar Nidhi Sudhir (₹62)",
+        "Thakkar Sudhir Chandulal (₹62)",
+        "Manoj Kumar Mathur (₹62)"
+      ],
+      "preIpoWaca": 62
     },
     {
       "companyName": "Adcounty Media India Ltd.",
@@ -7422,7 +7483,43 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "Jitendra Kumar Garg (₹75)",
+        "Mamata Prashant Garg (₹75)",
+        "Anita Mathur (₹75)",
+        "Naveen Kumar Gupta (₹75)",
+        "Jagdish Prasad Garg (₹75)",
+        "Amit Garg (₹75)",
+        "Kalpesh Mahendra Shah (₹75)",
+        "Punit Agarwal (₹75)",
+        "Pijush Raha (₹75)",
+        "Hemant Arora (₹75)",
+        "Nayan Kantilal Mehta (₹75)",
+        "Payal Mehta (₹75)",
+        "Kapil Maheshwari (₹75)",
+        "Vivek Prabhakar Kakodkar (₹75)",
+        "Rahul Aggarwal (₹75)",
+        "Rahul Sarin (₹75)",
+        "Harish Gupta (₹75)",
+        "Rashmi Arora (₹75)",
+        "Nishant Bajpai (₹75)",
+        "Ankush Agarwal (₹75)",
+        "Swati Jain (₹75)",
+        "Kulbhushan Arora (₹75)",
+        "Himanshu Garg (₹75)",
+        "Prashant Garg (₹75)",
+        "Kiran Gupta (₹75)",
+        "Aashish Gupta (₹75)",
+        "Anita Srivastava (₹75)",
+        "Ankur Gupta (₹75)",
+        "Lokesh Jain (₹75)",
+        "Ayush Gupta (₹75)",
+        "Alpesh Jagdishbhai Vaghasiya (₹75)",
+        "Aankur Jain (₹75)",
+        "Aakash Goyal (₹75)"
+      ],
+      "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_INFLUX.zip",
+      "preIpoWaca": 75
     },
     {
       "companyName": "Eppeltone Engineers Ltd.",
@@ -21321,9 +21418,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-06-08T00:00:00.000Z",
+        "expiryDate": "2027-06-06",
         "originalDate": "2027-06-08T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
@@ -22105,6 +22202,52 @@
       "noticeId": "NSE/CML/71887",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML71887.zip",
       "fetchedAt": "2026-06-07T08:20:15.060Z"
+    },
+    "Merritronix Ltd.": {
+      "found": true,
+      "totalShares": 17484854,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 3364000,
+          "percentage": 19.2,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-07-03",
+          "shares": 668000,
+          "percentage": 3.8
+        },
+        {
+          "date": "2026-09-01",
+          "shares": 668000,
+          "percentage": 3.8
+        },
+        {
+          "date": "2027-03-18",
+          "shares": 461255,
+          "percentage": 2.6
+        },
+        {
+          "date": "2027-06-06",
+          "shares": 5130410,
+          "percentage": 29.3
+        },
+        {
+          "date": "2028-06-06",
+          "shares": 3696214,
+          "percentage": 21.1
+        },
+        {
+          "date": "2029-06-06",
+          "shares": 3496975,
+          "percentage": 20
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20260605-37",
+      "pdfUrl": "https://www.bseindia.com/Downloads/UploadDocs/Notices/Attach/AnnexureI$074c1f26-3a97-43b5-b2a9-86b68021aad2.pdf",
+      "fetchedAt": "2026-06-07T14:10:34.327Z"
     }
   }
 }
