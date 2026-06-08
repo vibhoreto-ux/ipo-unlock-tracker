@@ -597,15 +597,15 @@ function pollForNLP(companyName, attempts = 0) {
             const updatedCompany = await res.json();
             if (updatedCompany && updatedCompany.preIpoInvestors !== undefined) {
                 // Extractor finished!
-                const index = unlockData.findIndex(c => c.companyName === companyName);
+                const index = allCompanies.findIndex(c => c.companyName === companyName);
                 if (index !== -1) {
-                    unlockData[index].preIpoInvestors = updatedCompany.preIpoInvestors;
-                    unlockData[index].preIpoWaca = updatedCompany.preIpoWaca;
-                    unlockData[index].rhpUrl = updatedCompany.rhpUrl;
+                    allCompanies[index].preIpoInvestors = updatedCompany.preIpoInvestors;
+                    allCompanies[index].preIpoWaca = updatedCompany.preIpoWaca;
+                    allCompanies[index].rhpUrl = updatedCompany.rhpUrl;
                     
                     const titleEl = document.getElementById('modalCompanyName');
                     if (titleEl && titleEl.textContent === companyName) {
-                        openUnlockModal(unlockData[index]);
+                        openUnlockModal(allCompanies[index]);
                     }
                 }
             } else {
@@ -797,6 +797,36 @@ function pollForNLP(companyName, attempts = 0) {
             }
 
             if (detailsLoading) detailsLoading.style.display = 'none';
+
+            // Update global allCompanies entry with fresh pre-IPO data from server
+            const idx = allCompanies.findIndex(c => c.companyName === companyName);
+            if (idx !== -1) {
+                if (data.preIpoInvestors !== undefined) allCompanies[idx].preIpoInvestors = data.preIpoInvestors;
+                if (data.preIpoWaca !== undefined) allCompanies[idx].preIpoWaca = data.preIpoWaca;
+                if (data.rhpUrl !== undefined) allCompanies[idx].rhpUrl = data.rhpUrl;
+            }
+
+            // Update Pre-IPO details block if it exists and data is available
+            const preIpoBlock = document.getElementById('preIpoDetailsBlock');
+            if (preIpoBlock && data.preIpoInvestors !== undefined) {
+                let preIpoNamesStr = '';
+                if (data.preIpoInvestors && data.preIpoInvestors.length > 0) {
+                    let listItems = data.preIpoInvestors.map(i => `<li style="margin-bottom:4px;">${i}</li>`).join('');
+                    let wacaHtml = data.preIpoWaca ? `<div style="margin-top: 8px; font-size: 0.9em; font-weight: 500; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success);">₹${data.preIpoWaca}</span></div>` : '';
+                    preIpoNamesStr = `
+                        <details>
+                            <summary style="cursor:pointer; font-weight:600; color:var(--text); list-style-position: inside;">View Pre-IPO Investors (${data.preIpoInvestors.length})</summary>
+                            <ul style="margin-top:10px; padding-left:22px; color:var(--text-muted); font-size:0.95em; max-height: 160px; overflow-y: auto; overflow-x: hidden; padding-right: 10px;">
+                                ${listItems}
+                            </ul>
+                        </details>
+                        ${wacaHtml}
+                    `;
+                } else {
+                    preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Pre-IPO Investors recorded.</span>`;
+                }
+                preIpoBlock.innerHTML = `<div style="font-size: 13px; color: var(--text); line-height: 1.4;">${preIpoNamesStr}</div>`;
+            }
 
             // Update Live Price
             const liveEl = document.getElementById('modalLivePrice');

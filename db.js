@@ -4,6 +4,78 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, 'data');
 const DB_PATH = path.join(DATA_DIR, 'unlock-data.json');
 
+const PRE_IPO_OVERRIDES = {
+    'Genxai Analytics Ltd.': {
+        preIpoWaca: 70.40,
+        preIpoInvestors: [
+            'Aadishakti Steels (₹70.40)',
+            'Anshu Gupta (₹70.40)',
+            'Garv Agarwal (₹70.40)',
+            'Sunita Agrawal (₹70.40)',
+            'SP Holdings (₹70.40)',
+            'Abhishek Tibrewal HUF (₹70.40)',
+            'Mridul Agarwal (₹70.40)',
+            'Nidhi Aggarwal (₹70.40)',
+            'Saloni Ramratan Chirania (₹70.40)',
+            'Nitesh Agarwal (₹70.40)',
+            'Poonam Sunil Bagaria (₹70.40)',
+            'Sandeep Mandawewala (₹70.40)',
+            'Accufolio Risers LLP (₹70.40)',
+            'YBRA Ventures LLP (₹70.40)',
+            'Shaily Dinesh Jain (₹70.40)',
+            'Shriram Chandak (₹70.40)',
+            'Sunil Kumar Khandal (₹70.40)',
+            'Seema Sharma (₹70.40)',
+            'Sunil Kumar Khandal HUF (₹70.40)',
+            'Sushila Sharma (₹70.40)',
+            'Rakesh Khandelwal (₹70.40)',
+            'Namrta Arora (₹70.40)'
+        ]
+    },
+    'Horizon Reclaim (India) Ltd.': {
+        preIpoWaca: 103.00,
+        preIpoInvestors: [
+            'Gracious Advisors LLP (₹103.00)',
+            'Yogesh Chaudhary (₹103.00)'
+        ]
+    },
+    'Vahh Chemicals Ltd.': {
+        preIpoWaca: 6.06,
+        preIpoInvestors: [
+            'Aayush Hiren Desai (₹6.06)',
+            'Ruchik Kirtikumar Mehta (₹6.06)',
+            'Hiren Indravadan Desai (₹6.06)',
+            'Hetal Hirenbhai Desai (₹6.06)',
+            'Gita Mukeshkumar Mehta (₹6.06)',
+            'Mukeshkumar Rameshchandra Mehta (₹6.06)',
+            'Vishnudatt Vidhyasagar Tiwari (₹6.06)',
+            'Cravexnuts Foods LLP (₹6.06)',
+            'HSHS Nutraceuticals Limited (₹6.06)',
+            'Vedant Nutraceuticals Limited (₹6.06)'
+        ]
+    },
+    'Hexagon Nutrition Ltd.': {
+        preIpoWaca: 20.00,
+        preIpoInvestors: [
+            'Tata Capital Financial Services Limited (₹20.00)',
+            'Investcorp PE Fund II (₹20.00)',
+            'Malabar India Fund Limited (₹20.00)',
+            'Malabar Value Fund (₹20.00)',
+            'Ohm Capital (₹20.00)'
+        ]
+    }
+};
+
+function applyPreIpoOverrides(companies) {
+    if (!companies) return;
+    for (const c of companies) {
+        if (PRE_IPO_OVERRIDES[c.companyName]) {
+            c.preIpoInvestors = PRE_IPO_OVERRIDES[c.companyName].preIpoInvestors;
+            c.preIpoWaca = PRE_IPO_OVERRIDES[c.companyName].preIpoWaca;
+        }
+    }
+}
+
 /**
  * Ensure the data directory exists
  */
@@ -23,8 +95,10 @@ function readDB() {
         if (fs.existsSync(DB_PATH)) {
             const raw = fs.readFileSync(DB_PATH, 'utf-8');
             const data = JSON.parse(raw);
+            const companies = data.companies || [];
+            applyPreIpoOverrides(companies);
             return {
-                companies: data.companies || [],
+                companies: companies,
                 lastUpdated: data.lastUpdated || null,
                 lastScraped: data.lastScraped || {},
                 circularData: data.circularData || {}
@@ -42,6 +116,7 @@ function readDB() {
  */
 function writeDB(data) {
     ensureDataDir();
+    applyPreIpoOverrides(data.companies);
     const json = JSON.stringify(data, null, 2);
     fs.writeFileSync(DB_PATH, json, 'utf-8');
     console.log(`DB saved: ${data.companies.length} companies (${(json.length / 1024).toFixed(1)} KB)`);

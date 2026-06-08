@@ -143,6 +143,9 @@ async function main() {
                 const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 120000 });
                 const nlpData = JSON.parse(out.trim());
                 company.preIpoInvestors = nlpData.preIpoInvestors || [];
+                if (nlpData.waca !== undefined && nlpData.waca !== null) {
+                    company.preIpoWaca = nlpData.waca;
+                }
                 console.log(`[Priority-RHP] Found: ${company.preIpoInvestors.length} Pre-IPO placements.`);
             } catch (e) {
                 console.error(`[Priority-RHP] Failed on ${company.companyName}:`, e.message);

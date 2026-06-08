@@ -108,6 +108,9 @@ async function run() {
             const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 120000 });
             const nlpData = JSON.parse(out.trim());
             company.preIpoInvestors = nlpData.preIpoInvestors || [];
+            if (nlpData.waca !== undefined && nlpData.waca !== null) {
+                company.preIpoWaca = nlpData.waca;
+            }
             console.log(`[Priority-Fetch] Found ${company.preIpoInvestors.length} investors for ${targetName}`);
         } catch(e) {
             console.error(`[Priority-Fetch] Extractor failed: ${e.message}`);

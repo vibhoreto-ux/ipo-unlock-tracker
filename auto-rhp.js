@@ -163,6 +163,9 @@ async function autoFetchMissingRHP() {
                 const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
                 const nlpData = JSON.parse(out.trim());
                 company.preIpoInvestors = nlpData.preIpoInvestors || [];
+                if (nlpData.waca !== undefined && nlpData.waca !== null) {
+                    company.preIpoWaca = nlpData.waca;
+                }
                 nlpUpdated++;
             } catch (e) {
                 console.error(`[Auto-RHP] Pre-IPO failed on ${company.companyName}:`, e.message);

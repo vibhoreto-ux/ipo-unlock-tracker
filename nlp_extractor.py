@@ -75,18 +75,12 @@ def extract_preipo_names(pdf_bytes, company_name=None):
         with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
             in_share_history = False
             parse_window_left = 0
-            no_preipo = False  # Set True if RHP explicitly states no pre-IPO placement
-            for i, page in enumerate(pdf.pages[:150]):
+            for i, page in enumerate(pdf.pages[:250]):
                 text = page.extract_text()
                 if not text:
                     continue
                 
                 text_lower = text.lower()
-                
-                # Detect explicit "no pre-IPO placement" declaration - skip all extraction
-                if re.search(r'(?:has not undertaken|not proposing to undertake|did not undertake|have not undertaken)\s+any\s+pre.?ipo\s+placement', text_lower):
-                    no_preipo = True
-                    break
                 
                 if ('history of equity' in text_lower or 
                     'build up' in text_lower or
@@ -237,10 +231,6 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                             investors_dict[name.lower()] = name
         
         # Filter down names that represent just random text or promoters
-        # If RHP explicitly stated no pre-IPO placement, return empty immediately
-        if no_preipo:
-            investors_dict = {}
-
         final_list = []
         base_clean = ""
         if base_company_word:
@@ -260,7 +250,7 @@ def extract_preipo_names(pdf_bytes, company_name=None):
         waca_val = None
         with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
             full_text = ""
-            for i, page in enumerate(pdf.pages[:150]):
+            for i, page in enumerate(pdf.pages[:250]):
                 t = page.extract_text()
                 if t: full_text += t + "\n"
                 
@@ -322,8 +312,14 @@ def main():
                     with zipfile.ZipFile(BytesIO(content)) as z:
                         pdf_names = [n for n in z.namelist() if n.lower().endswith('.pdf')]
                         if pdf_names:
-                            pdf_names.sort(key=lambda n: z.getinfo(n).file_size, reverse=True)
-                            content = z.read(pdf_names[0])
+                            # Prioritize PDFs with 'rhp' or 'prospectus' in the filename, excluding 'gid'
+                            candidates = [n for n in pdf_names if ('rhp' in n.lower() or 'prospectus' in n.lower()) and 'gid' not in n.lower()]
+                            if not candidates:
+                                candidates = [n for n in pdf_names if 'gid' not in n.lower()]
+                            if not candidates:
+                                candidates = pdf_names
+                            candidates.sort(key=lambda n: z.getinfo(n).file_size, reverse=True)
+                            content = z.read(candidates[0])
                 extract_res = extract_preipo_names(content, args.company_name)
                 result["preIpoInvestors"] = extract_res.get("investors", [])
                 result["waca"] = extract_res.get("waca")

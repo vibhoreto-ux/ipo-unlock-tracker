@@ -1,96 +1,21 @@
-National Stock Exchange of India
-Circular
-Department: LISTING
-Download Ref. No.: NSE/CML/71348 Date: November 18, 2025
-Circular Ref. No.: 2241/2025
-To All Members,
-Sub: Listing of Equity Shares of Tenneco Clean Air India Limited (IPO)
-In pursuance of Regulation 3.1.1 of the National Stock Exchange (Capital Market) Trading
-Regulations Part A, it is hereby notified that the list of securities further admitted to dealings on
-the National Stock Exchange (Capital Market segment) with effect from November 19, 2025 and
-the designated security codes thereof shall be as specified in Annexure.
-In pursuance of Regulation 2.5.5 of the National Stock Exchange (Capital Market) Trading
-Regulations Part A, it is hereby notified that the respective lot sizes in respect of securities above
-shall be as specified in Annexure.
-For the purpose of trading on the system, the security shall be identified only by its designated
-codes and trading in such securities shall be in such lot sizes as specified in Annexure.
-Members are requested to note that the above security will be part of pre-open session for
-IPO and Other category of scrips as per SEBI circular no. CIR/MRD/DP/01/2012 &
-CIR/MRD/DP/02/2012 dated January 20, 2012.
-This circular shall be effective from November 19, 2025.
-For and on behalf of
-National Stock Exchange of India Limited
-Aarti Parmar
-Manager
+Type of Security (F-
+Fully paid up, P- Partly
+paid up, L- Lock-in)
+Date upto which
+securities are under
+lick-in Physical / Demat
+From 	To
+80,00,000 	1 	80,00,000 	F & L 	July 15, 2028 	Demat
+12,96,805 	80,00,001 	92,96,805 	F & L 	July 15, 2026 	Demat
+1,92,43,795 	92,96,806 	2,85,40,600 	F & L 	July 15, 2026 	Demat
+14,56,000 	2,85,40,601 	2,99,96,600 	F & L 	August 03, 2025 	Demat
+14,64,000 	2,99,96,601 	3,14,60,600 	F & L 	October 05, 2025 	Demat
+73,52,000 	3,14,60,601 	3,88,12,600 	Demat
+Number of
+securities
+Distinctive numbers range
+Free shares under Fresh IPO
+Neetu Yoshi Limited
 
--- 1 of 3 --
-
-Continuation Sheet
-Annexure
-Symbol TENNIND
-Name of the Company Tenneco Clean Air India Limited
-Series EQ
-ISIN INE19RI01016
-Face Value Rs. 10/-
-Paid-up Value Rs. 10/-
-Issue Price for the current public issue Rs. 397/-
-Security Description Equity shares of Rs. 10/- each fully paid up
-No. of securities 403604309
-Distinctive number range As per Annexure I
-Market lot 1
-Pari Passu Yes
-Lock in details As per Annexure I
-Address of Registered Office of the Company:
-Tenneco Clean Air India Limited
-RNS2, Nissan Supplier Park,
-SIPCOT Industrial Park,
-Oragadam Industrial Corridor,
-Sriperumbudur Taluk,
-Kancheepuram - 602105, Tamil Nadu
-Contact Number: +91 124 4784 530
-Website: www.tennecoindia.com
-Email Id: TennecoIndiaInvestors@tenneco.com
-Address of Corporate Office of the Company:
-Tenneco Clean Air India Limited
-10th Floor, Tower B, Paras Twin Towers,
-Sector-54, Golf Course Road,
-Gurugram – 122002, Haryana
-Company Secretary and Compliance Officer
-Ms. Roopali Singh
-Website: www.tennecoindia.com
-Email Id: TennecoIndiaInvestors@tenneco.com
-Financial Year: April 2025-March 2026
-Address of Registrar:
-MUFG Intime India Private Limited
-(formerly Link Intime India Private Limited)
-C-101, 247 Park, 1st Floor,
-LBS Marg, Vikhroli (West),
-Mumbai – 400083, Maharashtra
-Tel No: + 91 81081 14949
-Email Id: tennecocleanair.ipo@in.mpms.mufg.com
-Website: https://in.mpms.mufg.com
-Contact Person: Mr. Shanti Gopalkrishnan
-
--- 2 of 3 --
-
-Continuation Sheet
-Annexure I
-Tenneco Clean Air India Limited
-No. of Equity Shares
-Fully Paid-up
-Distinctive Nos. Lock in upto
-From To
-30000 1 30000 17-May-2026
-13602002 30001 13632002 16-Dec-2025
-13602028 13632003 27234030 14-Feb-2026
-63476070 27234031 90710100 Free
-23944197 90710101 114654297 17-May-2026
-3261964 114654298 117916261 29-Apr-2026
-80770862 117916262 198687123* 17-May-2027
-15401706 721746067 737147772* 17-May-2026
-189515480 777713121 967228600 17-May-2026
-403604309 Total
-Note: 563624291 were cancellaled pursuant to Reduction of Equity Share Capital.
-
--- 3 of 3 --
+-- 1 of 1 --
 
