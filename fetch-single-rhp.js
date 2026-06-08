@@ -2,11 +2,31 @@ const { readDB, writeDB } = require('./db.js');
 const cheerio = require('cheerio');
 const { execSync } = require('child_process');
 
+// Trusted domains that host real RHP documents (NSE, BSE, SEBI, NSDL)
+const TRUSTED_RHP_DOMAINS = [
+    'nsearchives.nseindia.com',
+    'nseindia.com',
+    'bseindia.com',
+    'sebi.gov.in',
+    'bseplus.bseindia.com',
+    'bsesme.com',          // BSE SME official filing portal
+    'www.bsesme.com',
+];
+
 function isValidRHPUrl(url) {
     if (!url) return false;
     const l = url.toLowerCase();
+    // Reject known placeholder/keyword pages
     if (l.includes('keyword/rhp-detail')) return false;
-    return l.endsWith('.pdf') || l.endsWith('.zip');
+    // Must end in pdf or zip
+    if (!l.endsWith('.pdf') && !l.endsWith('.zip')) return false;
+    // Must come from a trusted exchange/regulator domain
+    try {
+        const host = new URL(url).hostname.toLowerCase();
+        return TRUSTED_RHP_DOMAINS.some(d => host === d || host.endsWith('.' + d));
+    } catch {
+        return false;
+    }
 }
 
 async function run() {
@@ -60,7 +80,8 @@ async function run() {
                 const $ = cheerio.load(html);
                 $('a').each((i, el) => {
                     const href = $(el).attr('href');
-                    if (href && href.startsWith('http') && (href.toLowerCase().endsWith('.pdf') || href.toLowerCase().endsWith('.zip')) && !bestLink) {
+                    // Only accept trusted exchange/regulator hosted PDFs from search results
+                    if (href && href.startsWith('http') && isValidRHPUrl(href) && !bestLink) {
                         bestLink = href;
                     }
                 });
