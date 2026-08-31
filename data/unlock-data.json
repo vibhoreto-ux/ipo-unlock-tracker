@@ -27509,27 +27509,39 @@
       ],
       "anchorShares": 5325909,
       "totalShares": 17786442,
-      "rhpUrl": "",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_rhp_1787118510.pdf",
       "preIpoInvestors": [
         {
-          "name": "Rosewood Investments",
-          "date": "Pre-IPO PE Investment",
-          "shares": "99,99,999",
-          "buyPrice": 14.5,
+          "name": "Rosewood Investments (Private Equity)",
+          "date": "Pre-IPO PE Investment & Restructuring",
+          "shares": "2,18,25,492",
+          "buyPrice": 147.21,
           "ipoPrice": 988,
-          "discountPct": 98.5,
-          "type": "Private Equity Investor (OFS)"
+          "discountPct": 85.1,
+          "type": "PE Investor & Selling Shareholder (34.78% pre-issue)"
         },
         {
-          "name": "India Business Excellence Fund III (MO PE)",
-          "date": "Pre-IPO PE Investment",
-          "shares": "48,07,692",
-          "buyPrice": 18.2,
+          "name": "India Business Excellence Fund – III (Motilal Oswal PE)",
+          "date": "Pre-IPO PE Investment & Restructuring",
+          "shares": "1,51,60,906",
+          "buyPrice": 147.21,
           "ipoPrice": 988,
-          "discountPct": 98.2,
-          "type": "PE / Institutional (OFS)"
+          "discountPct": 85.1,
+          "type": "PE Investor & Selling Shareholder (24.16% pre-issue)"
+        },
+        {
+          "name": "Key Management & Professional Public Allottees",
+          "date": "ESOP Allotments & Pre-IPO Transfers",
+          "shares": "4,04,260",
+          "buyPrice": 237.4,
+          "ipoPrice": 988,
+          "discountPct": 76,
+          "type": "Non-Promoter Management & Key Personnel (0.64%)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_capital_structure_1787119247.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_anchor_1787321162.pdf",
+      "preIpoWaca": "147.21"
     },
     {
       "companyName": "Augmont Enterprises Ltd.",
