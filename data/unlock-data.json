@@ -27580,22 +27580,31 @@
       "rhpUrl": "",
       "preIpoInvestors": [
         {
-          "name": "Ashok Mohanlal Shah",
-          "date": "Pre-IPO OCPS Conversion",
-          "shares": "11,05,363",
-          "buyPrice": 10,
+          "name": "Utpal Hemendra Sheth (Rare Enterprises / RJ Corp)",
+          "date": "Aug 29, 2025 (Private Placement)",
+          "shares": "2,94,760",
+          "buyPrice": 678.51,
           "ipoPrice": 788,
-          "discountPct": 98.7,
-          "type": "Pre-IPO Investor (1.32%)"
+          "discountPct": 13.9,
+          "type": "Pre-IPO Private Placement (0.35%)"
+        },
+        {
+          "name": "Ashok Mohanlal Shah",
+          "date": "Aug 18, 2025 (OCPS Conversion)",
+          "shares": "11,05,363",
+          "buyPrice": 678.51,
+          "ipoPrice": 788,
+          "discountPct": 13.9,
+          "type": "Pre-IPO OCPS Conversion (1.32%)"
         },
         {
           "name": "Jawaharlal Mohanlal Shah",
-          "date": "Pre-IPO OCPS Conversion",
+          "date": "Aug 18, 2025 (OCPS Conversion)",
           "shares": "11,05,363",
-          "buyPrice": 10,
+          "buyPrice": 678.51,
           "ipoPrice": 788,
-          "discountPct": 98.7,
-          "type": "Pre-IPO Investor (1.32%)"
+          "discountPct": 13.9,
+          "type": "Pre-IPO OCPS Conversion (1.32%)"
         },
         {
           "name": "Mahendra Kumar Nemichand Bafna",
@@ -27604,20 +27613,11 @@
           "buyPrice": 10,
           "ipoPrice": 788,
           "discountPct": 98.7,
-          "type": "Pre-IPO Investor (0.84%)"
-        },
-        {
-          "name": "Utpal Hemendra Sheth (Rare Enterprises)",
-          "date": "May 2026 Transfer",
-          "shares": "2,94,760",
-          "buyPrice": 991,
-          "ipoPrice": 788,
-          "discountPct": -25.8,
-          "type": "Pre-IPO Secondary Purchase (0.35%)"
+          "type": "Pre-IPO Shareholder (0.84%)"
         },
         {
           "name": "Sangeeta Rathod Family Trust (Cello World)",
-          "date": "May 2026 Transfer",
+          "date": "May 25, 2026 (Secondary Transfer)",
           "shares": "1,00,908",
           "buyPrice": 991,
           "ipoPrice": 788,
@@ -27626,7 +27626,7 @@
         },
         {
           "name": "Rathod Family Trust (Cello World)",
-          "date": "May 2026 Transfer",
+          "date": "May 25, 2026 (Secondary Transfer)",
           "shares": "1,00,908",
           "buyPrice": 991,
           "ipoPrice": 788,
@@ -27635,7 +27635,7 @@
         },
         {
           "name": "Suresh Mutha",
-          "date": "May 2026 Transfer",
+          "date": "May 25, 2026 (Secondary Transfer)",
           "shares": "40,364",
           "buyPrice": 991,
           "ipoPrice": 788,
@@ -27644,7 +27644,7 @@
         },
         {
           "name": "Pravin Ghevarchand Dhoka",
-          "date": "May 2026 Transfer",
+          "date": "May 25, 2026 (Secondary Transfer)",
           "shares": "25,227",
           "buyPrice": 991,
           "ipoPrice": 788,
@@ -27653,7 +27653,7 @@
         },
         {
           "name": "Ved Investments (Sukhraj Babulalji Nahar)",
-          "date": "May 2026 Transfer",
+          "date": "May 25, 2026 (Secondary Transfer)",
           "shares": "25,227",
           "buyPrice": 991,
           "ipoPrice": 788,
@@ -27662,7 +27662,7 @@
         },
         {
           "name": "Prreeti Jaiin Nainutia / MM Ceramics",
-          "date": "May 2026 Transfer",
+          "date": "May 25, 2026 (Secondary Transfer)",
           "shares": "40,364",
           "buyPrice": 991,
           "ipoPrice": 788,
