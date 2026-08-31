@@ -27512,6 +27512,15 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_rhp_1787118510.pdf",
       "preIpoInvestors": [
         {
+          "name": "Late Rakesh Jhunjhunwala (Rare Enterprises)",
+          "date": "Aug 2007 (Pref.) & Jul 2009 (Rights)",
+          "shares": "36,54,000",
+          "buyPrice": 21.67,
+          "ipoPrice": 988,
+          "discountPct": 97.8,
+          "type": "Marquee Pre-IPO Investor (5:1 Split Adj. from ₹108.34)"
+        },
+        {
           "name": "Rosewood Investments (Private Equity)",
           "date": "Pre-IPO PE Investment & Restructuring",
           "shares": "2,18,25,492",
@@ -27530,13 +27539,31 @@
           "type": "PE Investor & Selling Shareholder (24.16% pre-issue)"
         },
         {
+          "name": "Soyumm Marketing Private Limited",
+          "date": "Aug 2007 & Jul 2009",
+          "shares": "36,54,000",
+          "buyPrice": 21.67,
+          "ipoPrice": 988,
+          "discountPct": 97.8,
+          "type": "Pre-IPO Institutional (5:1 Split Adj.)"
+        },
+        {
+          "name": "Industrial Investment Trusts Limited",
+          "date": "Sep 22, 2005 (Further Issue)",
+          "shares": "21,75,000",
+          "buyPrice": 9.2,
+          "ipoPrice": 988,
+          "discountPct": 99.1,
+          "type": "Pre-IPO Institutional (5:1 Split Adj. from ₹46)"
+        },
+        {
           "name": "Key Management & Professional Public Allottees",
           "date": "ESOP Allotments & Pre-IPO Transfers",
           "shares": "4,04,260",
           "buyPrice": 237.4,
           "ipoPrice": 988,
           "discountPct": 76,
-          "type": "Non-Promoter Management & Key Personnel (0.64%)"
+          "type": "Non-Promoter Management (0.64%)"
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_capital_structure_1787119247.pdf",
