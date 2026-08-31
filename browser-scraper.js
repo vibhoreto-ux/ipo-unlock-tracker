@@ -267,7 +267,7 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = [], forc
                 
                 // If it has a valid populated cache, use it always.
                 // If it has an empty cache, only use it if we are NOT force-refreshing.
-                if (hasValidCache || (hasEmptyCache && !forceRefresh)) {
+                if (hasValidCache || hasEmptyCache) {
                     ipo.anchorInvestors = existingCompany.anchorInvestors;
                     ipo.anchorShares = existingCompany.anchorShares || 0;
                     ipo.totalShares = existingCompany.totalShares || 0;
@@ -288,16 +288,18 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = [], forc
 
                 // --- 2. Pre-IPO Investors: Async Extraction Delegate ---
                 const hasValidNLPCache = existingCompany && existingCompany.preIpoInvestors && existingCompany.preIpoInvestors.length > 0;
-                const hasEmptyNLPCache = existingCompany && existingCompany.preIpoInvestors && existingCompany.preIpoInvestors.length === 0;
                 
-                // Fast-path: bridge existing database cache
-                if (hasValidNLPCache || (hasEmptyNLPCache && !forceRefresh)) {
+                if (hasValidNLPCache) {
                     ipo.preIpoInvestors = existingCompany.preIpoInvestors;
                     ipo.rhpUrl = existingCompany.rhpUrl || '';
+                    ipo.capitalStructureUrl = existingCompany.capitalStructureUrl || '';
+                    ipo.preIpoWaca = existingCompany.preIpoWaca;
+                    ipo.peerComparison = existingCompany.peerComparison;
                 } else {
-                    // Tell the background auto-healer bot to extract this asynchronously so we dont freeze the API
+                    // Let background auto-healer extract from capital structure / RHP
                     ipo.preIpoInvestors = undefined;
-                    ipo.rhpUrl = '';
+                    ipo.rhpUrl = existingCompany ? (existingCompany.rhpUrl || '') : '';
+                    ipo.capitalStructureUrl = existingCompany ? (existingCompany.capitalStructureUrl || '') : '';
                 }
             }
         }

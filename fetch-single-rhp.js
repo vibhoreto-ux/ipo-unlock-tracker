@@ -111,6 +111,9 @@ async function run() {
             if (nlpData.waca !== undefined && nlpData.waca !== null) {
                 company.preIpoWaca = nlpData.waca;
             }
+            if (nlpData.peerComparison) {
+                company.peerComparison = nlpData.peerComparison;
+            }
             console.log(`[Priority-Fetch] Found ${company.preIpoInvestors.length} investors for ${targetName}`);
         } catch(e) {
             console.error(`[Priority-Fetch] Extractor failed: ${e.message}`);

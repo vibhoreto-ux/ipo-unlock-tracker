@@ -13,6 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "adm-zip": "^0.5.16",
     "axios": "^1.13.6",
     "cheerio": "^1.0.0",

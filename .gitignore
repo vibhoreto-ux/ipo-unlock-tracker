@@ -4,3 +4,12 @@ node_modules/
 anchor_page_dump.html
 debug_*.js
 test_*.js
+scratch/
+*.png
+*.webp
+*.pdf
+debug_*.txt
+patch_*.py
+parse_*.py
+fix_*.py
+revert_*.py

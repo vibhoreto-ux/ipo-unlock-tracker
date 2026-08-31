@@ -5,6 +5,7 @@ const { scrapeWithBrowser } = require('./browser-scraper');
 const { autoFetchMissingRHP } = require('./auto-rhp');
 const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
 const { scanPreferential } = require('./preferential-scraper');
+const { fetchCapitalStructureUrl, extractFromCapitalStructure, batchScrapeCapitalStructureUrls } = require('./capital-structure-scraper');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -414,7 +415,7 @@ app.get('/api/unlock-data', async (req, res) => {
 
         let data2025, data2026;
         try {
-            // Try browser scraper first (Puppeteer)
+            // Try browser scraper first (Axios)
             [data2025, data2026] = await Promise.all([
                 scrapeWithBrowser(2025, db.companies, forceRefresh),
                 scrapeWithBrowser(2026, db.companies, forceRefresh)
@@ -517,6 +518,82 @@ app.get('/api/db-status', (req, res) => {
     });
 });
 
+/**
+ * POST /api/fetch-capital-structure
+ * Fetch pre-IPO investors for a specific company using the IPO Premium capital structure PDF.
+ * Body: { companyName: string }
+ * Returns: { success, preIpoInvestors, waca, capitalStructureUrl }
+ */
+app.post('/api/fetch-capital-structure', async (req, res) => {
+    try {
+        const { companyName } = req.body;
+        if (!companyName) return res.status(400).json({ error: 'Missing companyName' });
+
+        console.log(`[CapStruct API] Fetching capital structure for: ${companyName}`);
+
+        // Get the PDF URL
+        const capitalStructureUrl = await fetchCapitalStructureUrl(companyName);
+        if (!capitalStructureUrl) {
+            return res.json({ success: false, error: 'No capital structure PDF found on IPO Premium' });
+        }
+
+        // Extract pre-IPO investors
+        const result = await extractFromCapitalStructure(companyName, capitalStructureUrl);
+
+        // Update DB if we got results
+        if (result.preIpoInvestors && result.preIpoInvestors.length > 0) {
+            const db = readDB();
+            const company = db.companies.find(c => c.companyName === companyName);
+            if (company) {
+                company.preIpoInvestors = result.preIpoInvestors;
+                if (result.waca !== undefined && result.waca !== null) {
+                    company.preIpoWaca = result.waca;
+                }
+                if (result.peerComparison) {
+                    company.peerComparison = result.peerComparison;
+                }
+                writeDB(db);
+            }
+        }
+
+        res.json({
+            success: true,
+            capitalStructureUrl,
+            preIpoInvestors: result.preIpoInvestors || [],
+            waca: result.waca,
+            peerComparison: result.peerComparison,
+        });
+
+    } catch (error) {
+        console.error('[CapStruct API] Error:', error.message);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+/**
+ * POST /api/batch-capital-structure
+ * Batch-scrape capital structure PDF URLs from IPO Premium.
+ * Query params: ?limit=50&force=false
+ */
+app.post('/api/batch-capital-structure', async (req, res) => {
+    try {
+        const limit = parseInt(req.query.limit) || 50;
+        const force = req.query.force === 'true';
+
+        console.log(`[CapStruct API] Starting batch scrape (limit: ${limit}, force: ${force})`);
+        const result = await batchScrapeCapitalStructureUrls(limit, force);
+
+        res.json({
+            success: true,
+            ...result,
+            message: `Scraped ${result.scraped} detail pages, found ${result.found} capital structure PDFs`,
+        });
+    } catch (error) {
+        console.error('[CapStruct API] Batch error:', error.message);
+        res.status(500).json({ error: error.message });
+    }
+});
+
 app.listen(PORT, () => {
     const db = readDB();
     console.log(`\n🔓 IPO Unlock Tracker running at http://localhost:${PORT}`);
@@ -557,24 +634,37 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
 
         // Trigger background RHP fetch if company is missing preIpoInvestors details
         if (company && company.preIpoInvestors === undefined) {
-            console.log(`[RHP/Single] Triggering async RHP fetch for ${company.companyName}`);
-            const { spawn } = require('child_process');
-            const path = require('path');
-            const child = spawn(process.execPath, [path.join(__dirname, 'fetch-single-rhp.js'), company.companyName], {
-                detached: true,
-                stdio: 'ignore'
-            });
-            child.unref();
+            console.log(`[RHP/Single] Skipped heavy async RHP fetch for ${company.companyName} to prevent localhost load issues.`);
         }
 
-        // Common helper to inject live price before returning
+        // Common helper to inject live price before returning (and on-demand pre-IPO extraction if missing)
         const respondWithPrices = async (basePayload) => {
+            if (company && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
+                try {
+                    const csUrl = company.capitalStructureUrl || await fetchCapitalStructureUrl(company.companyName);
+                    if (csUrl) {
+                        company.capitalStructureUrl = csUrl;
+                        const csRes = await extractFromCapitalStructure(company.companyName, csUrl);
+                        if (csRes.preIpoInvestors && csRes.preIpoInvestors.length > 0) {
+                            company.preIpoInvestors = csRes.preIpoInvestors;
+                            if (csRes.waca) company.preIpoWaca = csRes.waca;
+                            if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
+                            writeDB(db);
+                        }
+                    }
+                } catch (e) {
+                    console.error('[UnlockDetails] CapStruct on-demand error:', e.message);
+                }
+            }
+
             const liveData = await getLivePrice(companyName);
             return res.json({
                 ...basePayload,
                 preIpoInvestors: company ? company.preIpoInvestors : undefined,
                 preIpoWaca: company ? (company.preIpoWaca || company.waca) : undefined,
-                rhpUrl: company ? company.rhpUrl : undefined,
+                rhpUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,
+                capitalStructureUrl: company ? company.capitalStructureUrl : undefined,
+                peerComparison: company ? company.peerComparison : undefined,
                 liveMarketPrice: liveData
             });
         };

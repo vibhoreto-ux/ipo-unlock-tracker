@@ -146,6 +146,9 @@ async function main() {
                 if (nlpData.waca !== undefined && nlpData.waca !== null) {
                     company.preIpoWaca = nlpData.waca;
                 }
+                if (nlpData.peerComparison) {
+                    company.peerComparison = nlpData.peerComparison;
+                }
                 console.log(`[Priority-RHP] Found: ${company.preIpoInvestors.length} Pre-IPO placements.`);
             } catch (e) {
                 console.error(`[Priority-RHP] Failed on ${company.companyName}:`, e.message);

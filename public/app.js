@@ -617,6 +617,89 @@ function pollForNLP(companyName, attempts = 0) {
     }, 5000);
 }
 
+/**
+ * Render a rich, styled table of pre-IPO investors with buy prices, dates, shares, and discount % vs IPO price.
+ */
+function renderPreIpoTable(investors, ipoPrice, isModal) {
+    if (!investors || investors.length === 0) return '<span class="empty">0 Pre-IPOs</span>';
+
+    const trs = investors.map(inv => {
+        let name = '';
+        let date = '—';
+        let shares = '—';
+        let buyPrice = null;
+        let discountPct = null;
+        let type = '';
+
+        if (typeof inv === 'object' && inv !== null) {
+            name = inv.name || '—';
+            date = inv.date || '—';
+            shares = inv.shares || '—';
+            buyPrice = inv.buyPrice !== undefined ? inv.buyPrice : (inv.price !== undefined ? parseFloat(inv.price) : null);
+            discountPct = inv.discountPct !== undefined ? inv.discountPct : null;
+            type = inv.type || '';
+        } else if (typeof inv === 'string') {
+            const priceMatch = inv.match(/\(₹?([\d\.]+)\)/);
+            if (priceMatch) {
+                buyPrice = parseFloat(priceMatch[1]);
+                name = inv.replace(/\(₹?[\d\.]+\)/, '').trim();
+            } else {
+                name = inv.trim();
+            }
+        }
+
+        if (buyPrice !== null && !isNaN(buyPrice) && ipoPrice && !isNaN(ipoPrice) && ipoPrice > 0 && discountPct === null) {
+            discountPct = Math.round(((ipoPrice - buyPrice) / ipoPrice) * 1000) / 10;
+        }
+
+        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}` : '—';
+        const ipoPriceStr = ipoPrice ? `₹${ipoPrice}` : '—';
+        
+        let discountHtml = '—';
+        if (discountPct !== null && !isNaN(discountPct)) {
+            if (discountPct > 0) {
+                discountHtml = `<span class="disc-pill disc-below" title="${discountPct}% below IPO price">-${discountPct}%</span>`;
+            } else if (discountPct < 0) {
+                discountHtml = `<span class="disc-pill disc-above" title="${Math.abs(discountPct)}% above IPO price">+${Math.abs(discountPct)}%</span>`;
+            } else {
+                discountHtml = `<span class="disc-pill disc-same">At IPO</span>`;
+            }
+        }
+
+        return `
+            <tr>
+                <td class="pi-name" style="padding: 7px 9px;" title="${name}">
+                    <div style="font-weight:600; color:var(--text);">${name}</div>
+                    ${type ? `<div style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">${type}</div>` : ''}
+                </td>
+                <td class="pi-date" style="padding: 7px 9px; white-space:nowrap; font-size:0.8rem; color:var(--text-secondary);">${date}</td>
+                <td class="pi-shares" style="padding: 7px 9px; white-space:nowrap; font-size:0.8rem; text-align:right; color:var(--text-secondary);">${shares}</td>
+                <td class="pi-price" style="padding: 7px 9px; font-weight:700; color:var(--text); text-align:right;">${buyPriceStr}</td>
+                ${isModal ? `<td class="pi-ipoprice" style="padding: 7px 9px; font-size:0.8rem; color:var(--text-secondary); text-align:right;">${ipoPriceStr}</td>` : ''}
+                <td class="pi-disc" style="padding: 7px 9px; text-align:center;">${discountHtml}</td>
+            </tr>
+        `;
+    }).join('');
+
+    return `
+        <table class="pre-ipo-table">
+            <thead>
+                <tr>
+                    <th style="text-align:left;">Investor / Entity</th>
+                    <th style="text-align:left;">Date</th>
+                    <th style="text-align:right;">Shares</th>
+                    <th style="text-align:right;">Buy Price</th>
+                    ${isModal ? `<th style="text-align:right;">IPO Price</th>` : ''}
+                    <th style="text-align:center;">vs IPO</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${trs}
+            </tbody>
+        </table>
+    `;
+}
+
     function openUnlockModal(company) {
         // Clear any existing timer just in case
         if (pollTimer) clearTimeout(pollTimer);
@@ -650,8 +733,10 @@ function pollForNLP(companyName, attempts = 0) {
         const rhpSection = document.getElementById('rhpSection');
         const btnViewRhp = document.getElementById('btnViewRhp');
         if (rhpSection && btnViewRhp) {
-            if (isValidRHPUrl(company.rhpUrl)) {
-                btnViewRhp.href = company.rhpUrl;
+            const targetDocUrl = company.capitalStructureUrl || (isValidRHPUrl(company.rhpUrl) ? company.rhpUrl : null);
+            if (targetDocUrl) {
+                btnViewRhp.href = targetDocUrl;
+                btnViewRhp.innerHTML = company.capitalStructureUrl ? '<span>📄 Capital Structure</span>' : '<span>📜 Pre-IPO Data</span>';
                 rhpSection.style.display = '';
             } else {
                 rhpSection.style.display = 'none';
@@ -662,28 +747,27 @@ function pollForNLP(companyName, attempts = 0) {
         const preIpoBlock = document.getElementById('preIpoDetailsBlock');
         if (preIpoBlock) {
             let preIpoNamesStr = '';
-            if (!isValidRHPUrl(company.rhpUrl) && company.preIpoInvestors === undefined) {
-                preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for RHP PDF... (may take ~45s)</span>`;
+            if (!isValidRHPUrl(company.rhpUrl) && !company.capitalStructureUrl && company.preIpoInvestors === undefined) {
+                preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for Capital Structure / RHP...</span>`;
                 pollForNLP(company.companyName);
             } else if (company.preIpoInvestors === undefined) {
-                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning RHP... (may take ~45s)</span>`;
+                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning Capital Structure PDF...</span>`;
                 pollForNLP(company.companyName);
             } else if (company.preIpoInvestors && company.preIpoInvestors.length > 0) {
-                let listItems = company.preIpoInvestors.map(i => `<li style="margin-bottom:4px;">${i}</li>`).join('');
-                let wacaHtml = company.preIpoWaca ? `<div style="margin-top: 8px; font-size: 0.9em; font-weight: 500; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success);">₹${company.preIpoWaca}</span></div>` : '';
+                const tableHtml = renderPreIpoTable(company.preIpoInvestors, company.issuePrice, true);
+                let wacaHtml = company.preIpoWaca ? `<div style="margin-top: 10px; font-size: 0.9em; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${company.preIpoWaca}</span></div>` : '';
                 preIpoNamesStr = `
-                    <details>
-                        <summary style="cursor:pointer; font-weight:600; color:var(--text); list-style-position: inside;">View Pre-IPO Investors (${company.preIpoInvestors.length})</summary>
-                        <ul style="margin-top:10px; padding-left:22px; color:var(--text-muted); font-size:0.95em; max-height: 160px; overflow-y: auto; overflow-x: hidden; padding-right: 10px;">
-                            ${listItems}
-                        </ul>
+                    <details open>
+                        <summary style="cursor:pointer; font-weight:700; color:var(--text); list-style-position: inside; margin-bottom: 6px;">Non-Promoter Pre-IPO Allotments & Investors (${company.preIpoInvestors.length})</summary>
+                        <div class="pre-ipo-table-wrapper">
+                            ${tableHtml}
+                        </div>
                     </details>
                     ${wacaHtml}
                 `;
             } else {
-                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Pre-IPO Investors recorded.</span>`;
+                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Non-Promoter Pre-IPO Investors recorded (100% Promoter/Group held prior to IPO).</span>`;
             }
-            // Use line-height to ensure it looks uniform whether expanded or not
             preIpoBlock.innerHTML = `<div style="font-size: 13px; color: var(--text); line-height: 1.4;">${preIpoNamesStr}</div>`;
             preIpoBlock.style.display = 'block';
         }
@@ -1545,7 +1629,6 @@ function pollForNLP(companyName, attempts = 0) {
         if (!upcomingList) return;
         upcomingList.innerHTML = '';
 
-        // Guard: data not yet loaded
         if (allCompanies.length === 0) {
             upcomingList.innerHTML = '<div class="no-data"><p>No data loaded yet. Click <strong>Refresh</strong>.</p></div>';
             return;
@@ -1555,9 +1638,7 @@ function pollForNLP(companyName, attempts = 0) {
         today.setHours(0, 0, 0, 0);
 
         const upcomingIPOs = allCompanies.filter(c => {
-            // Exclude InvIT entries — they're not real IPOs
             if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
-
             const listDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
             if (!listDateStr) return true;
             const listDate = new Date(listDateStr);
@@ -1579,94 +1660,158 @@ function pollForNLP(companyName, attempts = 0) {
             return formatted;
         };
 
-        const smeIpos = upcomingIPOs.filter(c => c.issueType === 'SME');
-        const mainIpos = upcomingIPOs.filter(c => c.issueType !== 'SME');
+        const flexContainer = document.createElement('div');
+        flexContainer.style.display = 'flex';
+        flexContainer.style.gap = '20px';
+        flexContainer.style.alignItems = 'flex-start';
+        flexContainer.style.flexWrap = 'wrap';
 
-        const splitView = document.createElement('div');
-        splitView.className = 'upcoming-split-view';
+        const mainboardCol = document.createElement('div');
+        mainboardCol.style.flex = '1';
+        mainboardCol.style.minWidth = '420px';
+        const mainboardGrid = document.createElement('div');
+        mainboardGrid.className = 'grid';
+        mainboardGrid.style.gridTemplateColumns = '1fr';
+        const mainboardTitle = document.createElement('h3');
+        mainboardTitle.innerHTML = 'Mainboard';
+        mainboardTitle.style.marginBottom = '10px';
+        mainboardCol.appendChild(mainboardTitle);
+        mainboardCol.appendChild(mainboardGrid);
 
-        const createCard = (ipo) => {
-            const item = document.createElement('div');
-            item.className = 'upcoming-item';
+        const smeCol = document.createElement('div');
+        smeCol.style.flex = '1';
+        smeCol.style.minWidth = '420px';
+        const smeGrid = document.createElement('div');
+        smeGrid.className = 'grid';
+        smeGrid.style.gridTemplateColumns = '1fr';
+        const smeTitle = document.createElement('h3');
+        smeTitle.innerHTML = 'SME';
+        smeTitle.style.marginBottom = '10px';
+        smeCol.appendChild(smeTitle);
+        smeCol.appendChild(smeGrid);
 
-            const badgeCls = ipo.issueType === 'SME' ? 'label-sme' : 'label-mainboard';
-            const exc = ipo.exchange ? ` - ${ipo.exchange}` : '';
+        flexContainer.appendChild(mainboardCol);
+        flexContainer.appendChild(smeCol);
 
-            // --- Compact summary line: IPO@110, 9.15lk anc., 23.36lk pub. U1 Apr 15, U2 Jun 14 ---
-            const pricePart = ipo.issuePrice ? `@₹${ipo.issuePrice}` : ' — Price TBD';
+        upcomingIPOs.forEach(ipo => {
+            const card = document.createElement('div');
+            card.className = 'card open';
+            card.dataset.board = ipo.issueType === 'SME' ? 'sme' : 'mainboard';
 
-            // Format shares in lakhs (1 lakh = 100,000)
             const toLk = (n) => (n !== null && n !== undefined && !isNaN(n)) ? (n / 100000).toFixed(2) + 'lk' : '0.00lk';
+            const price = ipo.issuePrice ? `₹${ipo.issuePrice}` : 'TBD';
+            const exc = ipo.exchange ? ` (${ipo.exchange})` : '';
 
-            let sharesPart = '';
+            let sharesStr = '';
             if (ipo.totalShares) {
                 const ancNum = ipo.anchorShares || 0;
                 const pubNum = Math.max(0, ipo.totalShares - ancNum);
-                if (ancNum > 0) {
-                    sharesPart = `, ${toLk(ancNum)} anc., ${toLk(pubNum)} pub.`;
-                } else {
-                    sharesPart = `, ${toLk(ipo.totalShares)} shares`;
-                }
+                if (ancNum > 0) sharesStr = `${toLk(ancNum)} anc., ${toLk(pubNum)} pub.`;
+                else sharesStr = `${toLk(ipo.totalShares)} shares`;
+            } else {
+                sharesStr = 'TBD';
             }
 
-            const d30Str = fmtDate(ipo.anchor30);
-            const d90Str = fmtDate(ipo.anchor90);
-            const unlockPart = (d30Str !== 'TBD' || d90Str !== 'TBD')
-                ? `U1 ${d30Str}, U2 ${d90Str}.`
-                : '';
+            // Attempt to show shares per anchor if data string contains it, else just chip
+            let anchorsHtml = ipo.anchorInvestors && ipo.anchorInvestors.length > 0 
+                ? `<div class="chips">` + ipo.anchorInvestors.map(a => `<span>${a}</span>`).join('') + `</div>`
+                : '<span class="empty">No anchors yet</span>';
+                
+            let preIpoHtml = '';
+            if (ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0) {
+                const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false);
+                preIpoHtml = `<details><summary>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
+            } else {
+                preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
+            }
 
-            // Anchor + Pre-IPO investor names — always show anchor status
-            let anchorNamesStr = '';
-            if (ipo.anchorInvestors && ipo.anchorInvestors.length) {
-                anchorNamesStr = `<strong style="color:var(--success)">Anchors (${ipo.anchorInvestors.length}):</strong> ${ipo.anchorInvestors.join(', ')}.`;
-            } else {
-                anchorNamesStr = `<span style="color:var(--text-muted); font-style:italic;">No anchors yet</span>`;
+            let peersHtml = '';
+            if (ipo.peerComparison && ipo.peerComparison.rows && ipo.peerComparison.rows.length > 0) {
+                const pc = ipo.peerComparison;
+                const colHeaders = ['Company', 'Face Val', 'Rev', 'EPS', 'P/E', 'RoNW%'];
+                const numValCols = pc.rows[0].values.length;
+                const useDetected = pc.columns && pc.columns.length >= numValCols;
+                const headerCols = useDetected ? pc.columns.slice(0, numValCols) : colHeaders.slice(0, numValCols);
+                
+                const thCells = `<th>Company</th>` + headerCols.map(h => `<th>${h}</th>`).join('');
+                const tbodyRows = pc.rows.map(row => {
+                    const valueCells = row.values.map(v => `<td>${v}</td>`).join('');
+                    return `<tr><td>${row.name}</td>${valueCells}</tr>`;
+                }).join('');
+                
+                peersHtml = `<details><summary>Peers</summary><div class="body"><table class="pi"><thead><tr>${thCells}</tr></thead><tbody>${tbodyRows}</tbody></table></div></details>`;
             }
-            let preIpoNamesStr = '';
-            if (!isValidRHPUrl(ipo.rhpUrl) && ipo.preIpoInvestors === undefined) {
-                preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for RHP PDF...</span>`;
-            } else if (ipo.preIpoInvestors === undefined) {
-                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning RHP...</span>`;
-            } else if (ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0) {
-                preIpoNamesStr = `<strong>Pre-IPO:</strong> ${ipo.preIpoInvestors.join(', ')}.`;
-            } else {
-                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Pre-IPOs.</span>`;
+
+            let mgmtHtml = '';
+            if (ipo.managementHighlights && ipo.managementHighlights.length > 0) {
+                const lis = ipo.managementHighlights.map(h => {
+                    let text = h;
+                    let tag = '';
+                    if(text.includes(':')) {
+                        const parts = text.split(':');
+                        tag = `<span class="tag">${parts[0].trim()}</span>`;
+                        text = parts.slice(1).join(':').trim();
+                    }
+                    const ytMatch = h.match(/🎥 Management Interview: "([^"]+)" — Watch: (https:\/\/[^\s]+)/);
+                    const ytMatch2 = h.match(/🎥 Management Interview: "([^"]+)"/);
+                    if (ytMatch) {
+                        return `<li>🎥 <a href="${ytMatch[2]}" target="_blank" rel="noopener noreferrer">${ytMatch[1]}</a> ${tag}</li>`;
+                    } else if (ytMatch2 && ipo.managementSourceUrl) {
+                        return `<li>🎥 <a href="${ipo.managementSourceUrl}" target="_blank" rel="noopener noreferrer">${ytMatch2[1]}</a> ${tag}</li>`;
+                    }
+                    return `<li>${text} ${tag}</li>`;
+                }).join('');
+                mgmtHtml = `<details open><summary>Top pointers & Guidance</summary><div class="body"><ul class="flags">${lis}</ul></div></details>`;
             }
-            item.innerHTML = `
-                <div class="upcoming-summary-text">
-                    <span class="upcoming-label ${badgeCls}">${ipo.issueType}${exc}</span>
-                    <strong>${ipo.companyName} IPO</strong>${pricePart}${sharesPart}<br>
-                    <span style="font-size: 0.9em; color: var(--text-secondary);">${unlockPart}</span><br>
-                    <span style="font-size: 0.85em;">${anchorNamesStr} ${preIpoNamesStr}</span>
+
+            const badgeBoardClass = ipo.issueType === 'SME' ? 'b-board' : 'b-board';
+            const badgeBoardText = ipo.issueType === 'SME' ? 'SME' : 'Mainboard';
+
+            let docsHtml = '';
+            const docLinks = [];
+            if (ipo.capitalStructureUrl) {
+                docLinks.push(`<a href="${ipo.capitalStructureUrl}" target="_blank" class="doc-btn doc-btn-cap"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
+            }
+            if (ipo.rhpUrl && isValidRHPUrl(ipo.rhpUrl)) {
+                docLinks.push(`<a href="${ipo.rhpUrl}" target="_blank" class="doc-btn"><i class="ph ph-file-pdf"></i> RHP</a>`);
+            }
+            if (ipo.anchorUrl) {
+                docLinks.push(`<a href="${ipo.anchorUrl}" target="_blank" class="doc-btn"><i class="ph ph-anchor"></i> Anchor Doc</a>`);
+            }
+            if (docLinks.length > 0) {
+                docsHtml = `<div class="card-doc-links">${docLinks.join('')}</div>`;
+            }
+
+            card.innerHTML = `
+                <div class="ctop">
+                    <div><div class="cname">${ipo.companyName}</div><div class="csector">${ipo.sector || 'Sector N/A'}${exc}</div></div>
+                    <div class="badges">
+                        <span class="badge b-open">OPEN</span>
+                        <span class="badge ${badgeBoardClass}">${badgeBoardText}</span>
+                    </div>
                 </div>
+                <div class="facts">
+                    <div><span class="k">Price</span><span class="v">${price}</span></div>
+                    <div><span class="k">Shares</span><span class="v">${sharesStr}</span></div>
+                    <div><span class="k">Anchor 30-d</span><span class="v">${fmtDate(ipo.anchor30)}</span></div>
+                    <div><span class="k">Anchor 90-d</span><span class="v">${fmtDate(ipo.anchor90)}</span></div>
+                </div>
+                
+                ${mgmtHtml}
+                <details><summary>Anchor Investors (${(ipo.anchorInvestors && ipo.anchorInvestors.length) || 0})</summary><div class="body">${anchorsHtml}</div></details>
+                ${preIpoHtml}
+                ${peersHtml}
+                ${docsHtml}
             `;
-            return item;
-        };
-
-        const createColumn = (title, count, badgeCls, ipos) => {
-            const col = document.createElement('div');
-            col.className = 'upcoming-column';
             
-            const header = document.createElement('h3');
-            header.className = 'upcoming-col-title';
-            header.innerHTML = `${title} <span class="badge ${badgeCls}">${count}</span>`;
-            col.appendChild(header);
-
-            if (ipos.length === 0) {
-                const noData = document.createElement('div');
-                noData.className = 'no-data';
-                noData.innerHTML = `<p>No upcoming ${title} currently listed.</p>`;
-                col.appendChild(noData);
+            if (ipo.issueType === 'SME') {
+                smeGrid.appendChild(card);
             } else {
-                ipos.forEach(ipo => col.appendChild(createCard(ipo)));
+                mainboardGrid.appendChild(card);
             }
-            return col;
-        };
+        });
 
-        splitView.appendChild(createColumn('Mainboard', mainIpos.length, 'label-mainboard', mainIpos));
-        splitView.appendChild(createColumn('SME', smeIpos.length, 'label-sme', smeIpos));
-
-        upcomingList.appendChild(splitView);
+        upcomingList.appendChild(flexContainer);
     }
 
 });

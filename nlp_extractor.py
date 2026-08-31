@@ -6,6 +6,256 @@ import pdfplumber
 import re
 from io import BytesIO
 
+
+def extract_peer_comparison(pdf_bytes):
+    """
+    Extract the Peer Comparison / Comparison of Accounting Ratios table from an RHP.
+    
+    Strategy:
+    - Scan for section header keywords (e.g. "Comparison of Accounting Ratios",
+      "listed industry peers", "Peer Competitors").
+    - Collect the lines of the table: rows where the last 4+ tokens are numeric-like.
+    - Detect and reconstruct wrapped company names from the following line(s).
+    - Return {columns, rows} where rows = [{name, values}].
+    """
+    # Only trigger on the SPECIFIC section heading, not general "peer group" text in notes
+    PEER_TRIGGER = re.compile(
+        r'comparison of accounting ratios|peer competitor.*comparison|'
+        r'comparison with.*industry peer|comparison of.*ratio.*peer|'
+        r'accounting ratios with.*peer|listed industry peers',
+        re.IGNORECASE
+    )
+    # Separate looser trigger for "peer group" that needs more context
+    PEER_GROUP_TRIGGER = re.compile(
+        r'^\s*(?:\d+\.\s+)?(?:peer group|peer comparator|peer companies)\s*$',
+        re.IGNORECASE
+    )
+    # Numeric-like token: number (possibly with commas), %, N.A, [●], placeholder
+    NUM_RE = re.compile(
+        r'^(?:\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?%?|n\.?a\.?|\[[\u25cf\u25e6●•]\]|'
+        r'\[-\]|-|\[.*?\])$',
+        re.IGNORECASE
+    )
+
+    def is_num(tok):
+        t = tok.strip().rstrip('*^#')
+        if not t:
+            return False
+        if NUM_RE.match(t):
+            return True
+        # bare number test
+        try:
+            float(t.replace(',', '').replace('%', ''))
+            return True
+        except ValueError:
+            pass
+        return False
+
+    def count_trailing_nums(tokens):
+        cnt = 0
+        for tok in reversed(tokens):
+            if is_num(tok):
+                cnt += 1
+            else:
+                break
+        return cnt
+
+    # Words that indicate the first token of a row that should be skipped
+    SKIP_FIRST_WORD = re.compile(
+        r'^(?:source|note|notes|\*|\^|\#|\d+\.|for|set|comparison|name|face|revenue|basic|diluted|'
+        r'return|nav|roe|ronw|cmp|total|income|ebitda|ebit|pat|debt|equity|kpi|'
+        r'fiscal|financial|year|period|weighted|average|quarter)$',
+        re.IGNORECASE
+    )
+    # Section separator lines — stop absorbing name continuation if we hit these
+    SECTION_SEPARATOR = re.compile(
+        r'^(?:peer group|peer competitors|peer comparator|our company|the ipo company|'
+        r'issuer|notes?:|source:|the above|investors should|accordingly|\*\*|\^\^)$',
+        re.IGNORECASE
+    )
+
+    try:
+        page_texts = []
+        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
+            for i, page in enumerate(pdf.pages[:250]):
+                t = page.extract_text() or ""
+                page_texts.append(t)
+
+        # Find pages that contain peer comparison sections
+        peer_pages = []
+        for idx, pt in enumerate(page_texts):
+            if PEER_TRIGGER.search(pt):
+                peer_pages.append(idx)
+
+        if not peer_pages:
+            return None
+
+        rows = []
+
+        for pidx in peer_pages:
+            # Gather a window of up to 3 pages starting from this trigger page
+            window_lines = []
+            for wpi in range(pidx, min(pidx + 3, len(page_texts))):
+                window_lines.extend(page_texts[wpi].split('\n'))
+            window_lines.append('')  # sentinel
+
+            found_table = False
+            i = 0
+            while i < len(window_lines):
+                line = window_lines[i].strip()
+                i += 1
+                if not line:
+                    continue
+
+                # Re-check trigger on this line to mark table start
+                if PEER_TRIGGER.search(line):
+                    found_table = True
+                    continue
+
+                if not found_table:
+                    continue
+
+                # Stop if we hit section end markers well past the table
+                low = line.lower()
+                if re.search(r'^(investors should read|the trading price|key operational|'
+                             r'key performance indicators)', low):
+                    break
+
+                tokens = line.split()
+                if not tokens:
+                    continue
+
+                # Skip header/label rows where first word is a known column header
+                if SKIP_FIRST_WORD.match(tokens[0]) and len(tokens) < 8:
+                    continue
+
+                tc = count_trailing_nums(tokens)
+                if tc < 4:
+                    continue
+
+                name_tokens = tokens[:-tc]
+                value_tokens = tokens[-tc:]
+
+                if not name_tokens:
+                    continue
+
+                name = ' '.join(name_tokens)
+                # Strip trailing decorators from name (e.g. "Zydus*" → "Zydus")
+                name = re.sub(r'[\*\^\#]+\s*$', '', name).strip()
+
+                # Look-ahead: next line may be a wrapped name continuation
+                while i < len(window_lines):
+                    next_line = window_lines[i].strip()
+                    if not next_line:
+                        break
+                    # Stop if it's a section separator
+                    if SECTION_SEPARATOR.match(next_line):
+                        break
+                    next_tokens = next_line.split()
+                    next_tc = count_trailing_nums(next_tokens)
+                    # If next line itself is a data row, stop
+                    if next_tc >= 4:
+                        break
+                    # If short (≤5 words) and no numbers, assume it's the wrapped name tail
+                    if len(next_tokens) <= 5 and next_tc == 0:
+                        # Don't absorb section separators
+                        if SECTION_SEPARATOR.match(next_line):
+                            break
+                        tail = re.sub(r'[\*\^\#]+\s*$', '', next_line).strip()
+                        name += ' ' + tail
+                        i += 1
+                    else:
+                        break
+
+                # Final name cleanup
+                name = re.sub(r'\s+', ' ', name).strip()
+
+                # Normalise special placeholders
+                clean_values = []
+                for v in value_tokens:
+                    v2 = v.strip().rstrip('*^#')
+                    if re.match(r'^\[.+\]$', v2):
+                        v2 = '—'
+                    clean_values.append(v2)
+
+                rows.append({'name': name, 'values': clean_values})
+
+            # Post-collection: filter out noise rows from WACA/weight tables
+            # These are rows like "Fiscal year ended March 31, 2025  3.55  1"
+            NOISE_NAME_RE = re.compile(
+                r'^(?:fiscal year|financial year|year ended|quarter ended|'
+                r'for the (?:year|period)|fy\s*\d{2,4})',
+                re.IGNORECASE
+            )
+            def is_noise_row(row):
+                # Skip rows with date-like names
+                if NOISE_NAME_RE.match(row['name']):
+                    return True
+                # Skip rows where values look like [date_part, year, ratio, weight_int]
+                # i.e. last value is a small integer 1–5 (weight) and second-to-last is a year-like value
+                vals = row['values']
+                if len(vals) == 4:
+                    try:
+                        last = int(vals[-1])
+                        if 1 <= last <= 5 and ',' in vals[0]:
+                            return True
+                    except ValueError:
+                        pass
+                return False
+
+            rows = [r for r in rows if not is_noise_row(r)]
+
+            if rows:
+                break  # stop at first successful page match
+
+        if not rows:
+            return None
+
+        # Detect column headers: look for a line on the trigger page that contains
+        # MULTIPLE RHP column-header keywords together (stricter than single match).
+        detected_cols = []
+        HEADER_KW_LIST = [
+            'face value', r'\beps\b', 'diluted', 'basic', r'\bp/e\b', r'\bpe\b',
+            'return', 'ronw', r'\bnav\b', 'revenue', 'cmp', 'total income',
+            'ebitda', r'\bpat\b', 'debt.equity', r'\bkpi\b'
+        ]
+        HEADER_MULTI = re.compile(
+            '|'.join(HEADER_KW_LIST), re.IGNORECASE
+        )
+        for pidx2 in peer_pages:
+            lines2 = page_texts[pidx2].split('\n')
+            in_section = False
+            for line in lines2:
+                if PEER_TRIGGER.search(line):
+                    in_section = True
+                if not in_section:
+                    continue
+                matches = HEADER_MULTI.findall(line)
+                if len(matches) >= 2:
+                    toks = [t.strip() for t in line.split() if t.strip()]
+                    # Must be a reasonable header line length, not a paragraph
+                    if 3 <= len(toks) <= 15:
+                        detected_cols = toks
+                        break
+            if detected_cols:
+                break
+
+        # Fallback to generic headers if detection failed
+        if not detected_cols:
+            num_vals = rows[0]['values'] if rows else []
+            generic = ['Face Val', 'Revenue(₹M)', 'Basic EPS', 'Diluted EPS',
+                       'P/E', 'RoNW%', 'NAV/Share', 'CMP', 'Total Income']
+            detected_cols = generic[:len(num_vals)]
+
+        return {'columns': detected_cols, 'rows': rows}
+
+    except Exception as e:
+        import traceback
+        sys.stderr.write(f"PEER_EXTRACT ERROR: {e}\n")
+        traceback.print_exc(file=sys.stderr)
+        return None
+
+
 def extract_preipo_names(pdf_bytes, company_name=None):
     """
     Extract Pre-IPO investor names from the final RHP PDF.
@@ -298,7 +548,8 @@ def main():
     result = {
         "anchorInvestors": [],
         "preIpoInvestors": [],
-        "waca": None
+        "waca": None,
+        "peerComparison": None
     }
     
     if args.rhp:
@@ -323,6 +574,9 @@ def main():
                 extract_res = extract_preipo_names(content, args.company_name)
                 result["preIpoInvestors"] = extract_res.get("investors", [])
                 result["waca"] = extract_res.get("waca")
+                peer_res = extract_peer_comparison(content)
+                if peer_res:
+                    result["peerComparison"] = peer_res
         except Exception:
             pass
             

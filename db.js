@@ -146,6 +146,11 @@ function mergeCompanies(existing, incoming) {
 
     for (const company of incoming) {
         const key = normalizeKey(company.companyName);
+        
+        // Auto-correct issueType if exchange implies SME
+        if (company.exchange && company.exchange.toUpperCase().includes('SME')) {
+            company.issueType = 'SME';
+        }
 
         if (map.has(key)) {
             // Merge: update fields if the incoming data has them
@@ -165,6 +170,8 @@ function mergeCompanies(existing, incoming) {
             if (company.anchorShares !== undefined) existing.anchorShares = company.anchorShares;
             if (company.totalShares !== undefined) existing.totalShares = company.totalShares;
             if (company.preIpoInvestors !== undefined) existing.preIpoInvestors = company.preIpoInvestors;
+            if (company.managementHighlights !== undefined) existing.managementHighlights = company.managementHighlights;
+            if (company.capitalStructureUrl) existing.capitalStructureUrl = company.capitalStructureUrl;
             
             map.set(key, existing);
             updateCount++;
