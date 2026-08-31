@@ -27512,6 +27512,15 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_rhp_1787118510.pdf",
       "preIpoInvestors": [
         {
+          "name": "Franklin Templeton Private Equity Strategy (PMS)",
+          "date": "Sep 2011 (Pref.) & Mar 2013 (CCD Conv.)",
+          "shares": "95,20,150",
+          "buyPrice": 47.29,
+          "ipoPrice": 988,
+          "discountPct": 95.2,
+          "type": "Marquee PE Investor (5:1 Split Adj. from ₹236.43)"
+        },
+        {
           "name": "Late Rakesh Jhunjhunwala (Rare Enterprises)",
           "date": "Aug 2007 (Pref.) & Jul 2009 (Rights)",
           "shares": "36,54,000",
@@ -27519,6 +27528,15 @@
           "ipoPrice": 988,
           "discountPct": 97.8,
           "type": "Marquee Pre-IPO Investor (5:1 Split Adj. from ₹108.34)"
+        },
+        {
+          "name": "Actis Medal Sports Limited (Actis PE)",
+          "date": "Oct 21, 2013 (Preferential Allotment)",
+          "shares": "1,29,88,000",
+          "buyPrice": 76.99,
+          "ipoPrice": 988,
+          "discountPct": 92.2,
+          "type": "Global PE Investor (5:1 Split Adj. from ₹384.97)"
         },
         {
           "name": "Rosewood Investments (Private Equity)",
