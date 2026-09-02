@@ -4803,7 +4803,8 @@
         "originalDate": "2026-09-01T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "preIpoInvestors": []
     },
     {
       "companyName": "Shivashrit Foods Ltd.",

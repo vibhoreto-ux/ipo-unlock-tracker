@@ -645,23 +645,30 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
                     if (csUrl) {
                         company.capitalStructureUrl = csUrl;
                         const csRes = await extractFromCapitalStructure(company.companyName, csUrl);
-                        if (csRes && csRes.preIpoInvestors !== undefined) {
+                        if (csRes && csRes.preIpoInvestors !== undefined && csRes.preIpoInvestors !== null) {
                             company.preIpoInvestors = csRes.preIpoInvestors;
                             if (csRes.waca) company.preIpoWaca = csRes.waca;
                             if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
-                            writeDB(db);
-                            console.log(`[UnlockDetails] Saved on-demand pre-IPO data for ${company.companyName} to DB`);
+                        } else {
+                            company.preIpoInvestors = [];
                         }
+                    } else {
+                        // No Capital Structure document found on IPO Premium (100% promoter held or not on IPO Premium)
+                        company.preIpoInvestors = [];
                     }
+                    writeDB(db);
+                    console.log(`[UnlockDetails] Saved on-demand pre-IPO data for ${company.companyName} (${company.preIpoInvestors.length} investors) to DB`);
                 } catch (e) {
                     console.error('[UnlockDetails] CapStruct on-demand error:', e.message);
+                    company.preIpoInvestors = [];
+                    writeDB(db);
                 }
             }
 
             const liveData = await getLivePrice(companyName);
             return res.json({
                 ...basePayload,
-                preIpoInvestors: company ? company.preIpoInvestors : undefined,
+                preIpoInvestors: company ? company.preIpoInvestors : [],
                 preIpoWaca: company ? (company.preIpoWaca || company.waca) : undefined,
                 rhpUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,
                 capitalStructureUrl: company ? company.capitalStructureUrl : undefined,

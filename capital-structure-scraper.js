@@ -276,12 +276,6 @@ async function fetchCapitalStructureUrl(companyName) {
     let cache = readCache();
     const key = normalize(companyName);
     
-    // If no cached index or it's stale (>24h), rebuild
-    if (!cache.lastUpdated || Object.keys(cache.companies).length === 0 ||
-        (Date.now() - new Date(cache.lastUpdated).getTime()) > 24 * 3600 * 1000) {
-        cache = await scrapeHomepageIndex();
-    }
-    
     // Try exact match first
     let entry = cache.companies[key];
     
@@ -295,9 +289,9 @@ async function fetchCapitalStructureUrl(companyName) {
         }
     }
     
-    // Fallback: search key words (e.g. "Ashutosh", "Skyways")
+    // Fallback: search key words (e.g. "Ashutosh", "Skyways", "Anondita")
     if (!entry) {
-        const words = companyName.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 3 && !['limited', 'private', 'india', 'tech'].includes(w));
+        const words = companyName.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 3 && !['limited', 'private', 'india', 'tech', 'medicare'].includes(w));
         if (words.length > 0) {
             const firstWord = words[0];
             for (const [cachedKey, cachedEntry] of Object.entries(cache.companies)) {

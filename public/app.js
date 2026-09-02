@@ -814,9 +814,6 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
         // Render Pre-IPO details block in exact same format as upcoming page
         renderModalPreIpoBlock(company);
-        if (company.preIpoInvestors === undefined) {
-            pollForNLP(company.companyName);
-        }
 
         // Set Issue Price and resetting Live Price
         const issuePriceEl = document.getElementById('modalIssuePrice');
