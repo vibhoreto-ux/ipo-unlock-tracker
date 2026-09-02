@@ -109,12 +109,25 @@ def extract_preipo_from_pdf_bytes(pdf_bytes, company_name, ipo_price):
                 if len(clean_name) > 3 and len(clean_name) < 75 and clean_name not in seen_names:
                     seen_names.add(clean_name)
                     
-                    price = float(price_match.group(1)) if price_match else (waca if waca else 10.0)
+                    price = None
+                    if price_match:
+                        try:
+                            clean_p_str = price_match.group(1).replace(',', '').strip()
+                            if clean_p_str != '.' and len(clean_p_str) > 0:
+                                price = float(clean_p_str)
+                        except:
+                            price = None
+                    if price is None:
+                        price = waca if waca else 10.0
+
                     shares_str = shares_match.group(1) if shares_match else "—"
                     
                     disc = None
                     if ipo_price and price:
-                        disc = round(((price - ipo_price) / ipo_price) * 100, 1)
+                        try:
+                            disc = round(((price - ipo_price) / ipo_price) * 100, 1)
+                        except:
+                            disc = None
                         
                     investors.append({
                         "name": clean_name,
@@ -185,6 +198,10 @@ def run_batch_populator():
                 c["capitalStructureUrl"] = target_url
             updated_count += 1
             print(f"  -> Extracted {len(investors)} pre-IPO investors for {cname}")
+            
+            if updated_count % 5 == 0:
+                with open(DB_PATH, "w") as f:
+                    json.dump(db, f, indent=2)
 
     with open(DB_PATH, "w") as f:
         json.dump(db, f, indent=2)
