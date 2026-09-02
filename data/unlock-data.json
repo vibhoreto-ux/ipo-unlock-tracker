@@ -19152,8 +19152,128 @@
         "HDFC LIFE INSURANCE",
         "HDFC MUTUAL FUND"
       ],
-      "preIpoInvestors": [],
-      "rhpUrl": "https://www.bseindia.com/corporates/download/363631/IPO%20Open/RHP_20260227181017.pdf"
+      "preIpoInvestors": [
+        {
+          "name": "A91 Emerging Fund II LLP",
+          "category": "Marquee PE / Institutional Investor (18.20%)",
+          "date": "May 2024 (Series B CCPS Conv.) & Historical",
+          "shares": "80,35,500",
+          "price": 368.28,
+          "discount": -72.8,
+          "percentage": 18.2
+        },
+        {
+          "name": "Xponentia Opportunities Fund - II",
+          "category": "Marquee PE Investor (7.88%)",
+          "date": "Pre-IPO Institutional Holding",
+          "shares": "34,78,500",
+          "price": 352.29,
+          "discount": -73.9,
+          "percentage": 7.88
+        },
+        {
+          "name": "Mace Private Limited",
+          "category": "Institutional Investor (5.78%)",
+          "date": "May 2024 (Series B CCPS Conv.)",
+          "shares": "25,53,000",
+          "price": 352.29,
+          "discount": -73.9,
+          "percentage": 5.78
+        },
+        {
+          "name": "360 One Special Opportunities Fund - Series 8",
+          "category": "Alternate Investment Fund (AIF - 5.14%)",
+          "date": "Pre-IPO AIF Tranches",
+          "shares": "22,69,500",
+          "price": 386.31,
+          "discount": -71.4,
+          "percentage": 5.14
+        },
+        {
+          "name": "NRJN Family Trust (Nandan Nilekani Family Office)",
+          "category": "Marquee Family Office / Early Investor",
+          "date": "Historical Pre-IPO Tranches",
+          "shares": "19,35,000",
+          "price": 94.86,
+          "discount": -93.0,
+          "percentage": 4.38
+        },
+        {
+          "name": "360 One Monopolistic Market Intermediaries Fund",
+          "category": "Alternate Investment Fund (AIF - 3.57%)",
+          "date": "May 2024 (Series B CCPS Conv.)",
+          "shares": "15,75,000",
+          "price": 386.13,
+          "discount": -71.4,
+          "percentage": 3.57
+        },
+        {
+          "name": "HDFC Life Insurance Company Limited",
+          "category": "Domestic Institutional Investor (DII - 3.21%)",
+          "date": "Pre-IPO Institutional Round",
+          "shares": "14,19,000",
+          "price": 373.68,
+          "discount": -72.4,
+          "percentage": 3.21
+        },
+        {
+          "name": "Xponentia Opportunities Limited",
+          "category": "Institutional Investor (3.21%)",
+          "date": "May 2024 (Series B CCPS Conv.)",
+          "shares": "14,17,500",
+          "price": 352.29,
+          "discount": -73.9,
+          "percentage": 3.21
+        },
+        {
+          "name": "Society for Innovation and Entrepreneurship (SINE, IIT Bombay)",
+          "category": "Academic Incubator / Founding Institution",
+          "date": "Incubation Allotment",
+          "shares": "4,08,000",
+          "price": 0.01,
+          "discount": -100.0,
+          "percentage": 0.92
+        },
+        {
+          "name": "Capri Global Holdings Private Limited",
+          "category": "Corporate Investor",
+          "date": "May 2024 (Series B CCPS Conv.)",
+          "shares": "2,83,500",
+          "price": 352.29,
+          "discount": -73.9,
+          "percentage": 0.64
+        },
+        {
+          "name": "SVS Trust No IV",
+          "category": "Institutional Trust",
+          "date": "May 2024 (Series B CCPS Conv.)",
+          "shares": "2,83,500",
+          "price": 352.29,
+          "discount": -73.9,
+          "percentage": 0.64
+        },
+        {
+          "name": "Venktesh Investment and Trading Company Private Limited",
+          "category": "Strategic Corporate Investor",
+          "date": "Pre-IPO Holding",
+          "shares": "2,11,500",
+          "price": 352.29,
+          "discount": -73.9,
+          "percentage": 0.48
+        },
+        {
+          "name": "Cyrus Jamshed Guzder",
+          "category": "Marquee HNI Investor",
+          "date": "Pre-IPO Holding",
+          "shares": "1,32,000",
+          "price": 340.0,
+          "discount": -74.9,
+          "percentage": 0.3
+        }
+      ],
+      "rhpUrl": "https://www.bseindia.com/corporates/download/363631/IPO%20Open/RHP_20260227181017.pdf",
+      "capitalStructureUrl": "https://www.bseindia.com/corporates/download/363631/IPO%20Open/RHP_20260227181017.pdf",
+      "preIpoWaca": 368.28
     },
     {
       "companyName": "Acetech E-Commerce Ltd.",

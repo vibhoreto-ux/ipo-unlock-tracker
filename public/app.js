@@ -816,7 +816,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             const targetDocUrl = company.capitalStructureUrl || (isValidRHPUrl(company.rhpUrl) ? company.rhpUrl : null);
             if (targetDocUrl) {
                 btnViewRhp.href = targetDocUrl;
-                btnViewRhp.innerHTML = company.capitalStructureUrl ? '<span>📄 Capital Structure</span>' : '<span>📜 Pre-IPO Data</span>';
+                btnViewRhp.innerHTML = '<span>📄 Capital Structure</span>';
                 rhpSection.style.display = '';
             } else {
                 rhpSection.style.display = 'none';
