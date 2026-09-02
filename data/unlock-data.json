@@ -22360,20 +22360,11 @@
       "anchorShares": 0,
       "totalShares": 0,
       "rhpUrl": "https://www.bsesme.com/download/380603/SME_IPO%20InPrinciple/DRHP_SaffronSpecialityPapersLimited_20251231195818.pdf",
-      "preIpoInvestors": [
-        {
-          "name": "Pre-IPO Strategic Shareholders Group",
-          "date": "Pre-IPO Allotments & Transfers",
-          "shares": "14,05,000",
-          "buyPrice": 10,
-          "ipoPrice": 45,
-          "discountPct": 77.8,
-          "type": "Non-Promoter Public Pre-IPO (10.60%)"
-        }
-      ],
+      "preIpoInvestors": [],
       "managementHighlights": [
         "ℹ️ No forward guidance, moat details, or interviews found on X or YouTube for Saffron Speciality Papers Ltd.."
-      ]
+      ],
+      "capitalStructureUrl": "https://www.bsesme.com/download/380603/SME_IPO%20InPrinciple/DRHP_SaffronSpecialityPapersLimited_20251231195818.pdf"
     },
     {
       "companyName": "Aastha Spintex Ltd.",
@@ -26310,15 +26301,17 @@
       "rhpUrl": "https://farmpeace.in/wp-content/uploads/2026/08/Prospectus.pdf",
       "preIpoInvestors": [
         {
-          "name": "Pre-IPO Strategic Shareholders Group",
-          "date": "Pre-IPO Allotments & Transfers",
-          "shares": "39,46,000",
-          "buyPrice": 12,
+          "name": "Pre-IPO Preferential Strategic Shareholders Group",
+          "date": "Nov/Dec 2024 (Pref. Issue & Aug 2025 12:1 Bonus)",
+          "shares": "39,46,960",
+          "buyPrice": 11.54,
           "ipoPrice": 59,
-          "discountPct": 79.7,
-          "type": "Non-Promoter Public Pre-IPO (26.04%)"
+          "discountPct": 80.4,
+          "type": "Non-Promoter Public Pre-IPO Group (26.04% pre-issue)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://farmpeace.in/wp-content/uploads/2026/08/Prospectus.pdf",
+      "preIpoWaca": "11.54"
     },
     {
       "companyName": "Rays of Belief Ltd.",
@@ -26590,8 +26583,38 @@
       ],
       "anchorShares": 768000,
       "totalShares": 2700000,
-      "rhpUrl": "https://hemadmin.hemsecurities.com/images/Files/offer/3115.pdf",
-      "preIpoInvestors": []
+      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_280820261345.zip",
+      "preIpoInvestors": [
+        {
+          "name": "Nikhil Omprakash Tapadia & Sachin Madhav Tarte",
+          "date": "Aug 01, 2026 (Secondary Transfer)",
+          "shares": "42,308",
+          "buyPrice": 52,
+          "ipoPrice": 54,
+          "discountPct": 3.7,
+          "type": "Pre-IPO Strategic Transferees (21,154 sh. each)"
+        },
+        {
+          "name": "Sharad Dattatray Jachak",
+          "date": "Aug 01, 2026 (Secondary Transfer)",
+          "shares": "21,000",
+          "buyPrice": 52,
+          "ipoPrice": 54,
+          "discountPct": 3.7,
+          "type": "Pre-IPO Strategic Transferee (0.28%)"
+        },
+        {
+          "name": "Niranajan Kolhe, Divya & Kinnary Raithatha, Santosh Doifode",
+          "date": "Aug 01, 2026 (Secondary Transfer)",
+          "shares": "38,460",
+          "buyPrice": 52,
+          "ipoPrice": 54,
+          "discountPct": 3.7,
+          "type": "Pre-IPO Transferees (9,615 sh. each)"
+        }
+      ],
+      "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_280820261345.zip",
+      "preIpoWaca": "52.00"
     },
     {
       "companyName": "Shanti Inorganics Ltd.",
@@ -26623,18 +26646,56 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 0,
-      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/shanti-inorganicslimited_rhp.pdf",
+      "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_SHANTIINOR.zip",
       "preIpoInvestors": [
         {
-          "name": "Pre-IPO Strategic Shareholders Group",
-          "date": "Pre-IPO Allotments & Transfers",
-          "shares": "18,89,000",
-          "buyPrice": 18,
+          "name": "Reina R Jaisinghani (Polycab Promoters)",
+          "date": "Sep 17, 2025 (Preferential Issue)",
+          "shares": "6,37,200",
+          "buyPrice": 90,
           "ipoPrice": 83,
-          "discountPct": 78.3,
-          "type": "Non-Promoter Public Pre-IPO (16.35%)"
+          "discountPct": -8.4,
+          "type": "Marquee Strategic Investor (5.51% pre-issue @ Premium)"
+        },
+        {
+          "name": "Seema Dilip Vora (Mukul Agrawal Associate)",
+          "date": "Sep 17, 2025 (Preferential Issue)",
+          "shares": "1,66,800",
+          "buyPrice": 90,
+          "ipoPrice": 83,
+          "discountPct": -8.4,
+          "type": "Marquee Pre-IPO Investor (1.44% pre-issue @ Premium)"
+        },
+        {
+          "name": "Invicta Continuum Fund I",
+          "date": "Sep 17, 2025 (Preferential Issue)",
+          "shares": "1,66,800",
+          "buyPrice": 90,
+          "ipoPrice": 83,
+          "discountPct": -8.4,
+          "type": "AIF / Institutional (1.44% pre-issue @ Premium)"
+        },
+        {
+          "name": "Amrut Bharat Opportunities Fund - Series I",
+          "date": "Sep 17, 2025 (Preferential Issue)",
+          "shares": "1,40,400",
+          "buyPrice": 90,
+          "ipoPrice": 83,
+          "discountPct": -8.4,
+          "type": "AIF / Institutional (1.21% pre-issue @ Premium)"
+        },
+        {
+          "name": "Piyush Purohit & Shah Enterprises",
+          "date": "Sep 17, 2025 (Preferential Issue)",
+          "shares": "1,70,000",
+          "buyPrice": 90,
+          "ipoPrice": 83,
+          "discountPct": -8.4,
+          "type": "Pre-IPO Strategic Allottees (@ Premium)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_SHANTIINOR.zip",
+      "preIpoWaca": "90.00"
     },
     {
       "companyName": "Ashutosh Fibre Ltd.",
@@ -27066,15 +27127,44 @@
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_270820261819.zip",
       "preIpoInvestors": [
         {
-          "name": "Pre-IPO Strategic Shareholders Group",
-          "date": "Pre-IPO Allotments & Transfers",
-          "shares": "18,76,000",
-          "buyPrice": 15,
+          "name": "Abundantia Capital VCC - Abundantia Capital III",
+          "date": "Jan 04, 2025 (Private Placement & 35:10 Bonus)",
+          "shares": "4,16,659",
+          "buyPrice": 48,
           "ipoPrice": 48,
-          "discountPct": 68.8,
-          "type": "Non-Promoter Public Pre-IPO (13.45%)"
+          "discountPct": 0,
+          "type": "Institutional Pre-IPO Investor (3.5:1 Bonus Adj. from ₹216)"
+        },
+        {
+          "name": "Invicta Continuum Fund I",
+          "date": "Jan 04, 2025 (Private Placement & 35:10 Bonus)",
+          "shares": "1,56,253",
+          "buyPrice": 48,
+          "ipoPrice": 48,
+          "discountPct": 0,
+          "type": "AIF / Institutional (3.5:1 Bonus Adj. from ₹216)"
+        },
+        {
+          "name": "Vijay Chhabra",
+          "date": "Jan 04, 2025 (Private Placement & 35:10 Bonus)",
+          "shares": "83,335",
+          "buyPrice": 48,
+          "ipoPrice": 48,
+          "discountPct": 0,
+          "type": "Strategic Pre-IPO Allottee (Bonus Adj.)"
+        },
+        {
+          "name": "Vaishali Mehtani & Public Pre-IPO Group",
+          "date": "Jan 04, 2025 (Private Placement & 35:10 Bonus)",
+          "shares": "1,15,753",
+          "buyPrice": 48,
+          "ipoPrice": 48,
+          "discountPct": 0,
+          "type": "Pre-IPO Strategic Allottees (Bonus Adj.)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP_270820261819.zip",
+      "preIpoWaca": "48.00"
     },
     {
       "companyName": "Complete Sports & Management India Ltd. (Complete Sports and Management IPO)",
@@ -27115,8 +27205,39 @@
       ],
       "anchorShares": 1579000,
       "totalShares": 5550000,
-      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_270820262204.zip",
-      "preIpoInvestors": []
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_rhp_1787401623.pdf",
+      "preIpoInvestors": [
+        {
+          "name": "Deepak Gangji Savla",
+          "date": "Jan 16, 2025 (1:1500 Bonus Issue)",
+          "shares": "3,00,200",
+          "buyPrice": 10,
+          "ipoPrice": 135,
+          "discountPct": 92.6,
+          "type": "Pre-IPO Non-Promoter Shareholder (2.00%)"
+        },
+        {
+          "name": "Tyna Valerian Dsilva & Amit Thapar",
+          "date": "Jan 16, 2025 (1:1500 Bonus Issue)",
+          "shares": "1,50,100",
+          "buyPrice": 10,
+          "ipoPrice": 135,
+          "discountPct": 92.6,
+          "type": "Pre-IPO Non-Promoter Shareholders (1.00%)"
+        },
+        {
+          "name": "Amol Namdev Shelke",
+          "date": "Jan 16, 2025 (1:1500 Bonus Issue)",
+          "shares": "30,020",
+          "buyPrice": 10,
+          "ipoPrice": 135,
+          "discountPct": 92.6,
+          "type": "Pre-IPO Non-Promoter Shareholder (0.20%)"
+        }
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_capital_structure_1787401598.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_anchor_1787838346.pdf",
+      "preIpoWaca": "10.00"
     },
     {
       "companyName": "Lumino Industries Ltd.",
@@ -27292,15 +27413,44 @@
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_Kwick_260820260911.zip",
       "preIpoInvestors": [
         {
-          "name": "Pre-IPO Strategic Shareholders Group",
-          "date": "Pre-IPO Allotments & Transfers",
-          "shares": "19,34,000",
-          "buyPrice": 25,
+          "name": "CCV Emerging Opportunities Fund - I / Ajay Kumar Aggarwal",
+          "date": "Jan 13, 2025 (Pre-IPO Transfer & 7:1 Bonus)",
+          "shares": "2,81,224",
+          "buyPrice": 71.13,
           "ipoPrice": 90,
-          "discountPct": 72.2,
-          "type": "Non-Promoter Public Pre-IPO (11.46%)"
+          "discountPct": 21,
+          "type": "AIF / Institutional (7:1 Bonus Adj. from ₹569)"
+        },
+        {
+          "name": "Convivial Advisors LLP",
+          "date": "Jan 13, 2025 (Pre-IPO Transfer & 7:1 Bonus)",
+          "shares": "2,67,048",
+          "buyPrice": 71.13,
+          "ipoPrice": 90,
+          "discountPct": 21,
+          "type": "Corporate Pre-IPO Investor (7:1 Bonus Adj. from ₹569)"
+        },
+        {
+          "name": "Kusumgar Holdings LLP",
+          "date": "Jan 13, 2025 (Pre-IPO Transfer & 7:1 Bonus)",
+          "shares": "1,94,936",
+          "buyPrice": 71.13,
+          "ipoPrice": 90,
+          "discountPct": 21,
+          "type": "Corporate Pre-IPO Investor (7:1 Bonus Adj. from ₹569)"
+        },
+        {
+          "name": "Abhay Mushale, Wealthlogistics, Samarth Garg, KS Ventures",
+          "date": "Jan 13, 2025 (Pre-IPO Transfer & 7:1 Bonus)",
+          "shares": "1,55,552",
+          "buyPrice": 71.13,
+          "ipoPrice": 90,
+          "discountPct": 21,
+          "type": "Pre-IPO Strategic Group (7:1 Bonus Adj. from ₹569)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_Kwick_260820260911.zip",
+      "preIpoWaca": "71.13"
     },
     {
       "companyName": "Annu Projects Ltd.",
