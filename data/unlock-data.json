@@ -19299,9 +19299,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-09-02T00:00:00.000Z",
+        "expiryDate": "2026-08-26",
         "originalDate": "2026-09-02T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -26301,13 +26301,58 @@
       "rhpUrl": "https://farmpeace.in/wp-content/uploads/2026/08/Prospectus.pdf",
       "preIpoInvestors": [
         {
-          "name": "Pre-IPO Preferential Strategic Shareholders Group",
-          "date": "Nov/Dec 2024 (Pref. Issue & Aug 2025 12:1 Bonus)",
-          "shares": "39,46,960",
+          "name": "Vishnuma Global Solutions Private Limited",
+          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "shares": "13,76,216",
           "buyPrice": 11.54,
           "ipoPrice": 59,
           "discountPct": 80.4,
-          "type": "Non-Promoter Public Pre-IPO Group (26.04% pre-issue)"
+          "type": "Strategic Corporate Pre-IPO (9.08% pre-issue / 13x Bonus Adj. from ₹150)"
+        },
+        {
+          "name": "Brightful Commercial Private Limited",
+          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "shares": "11,37,824",
+          "buyPrice": 11.54,
+          "ipoPrice": 59,
+          "discountPct": 80.4,
+          "type": "Strategic Corporate Pre-IPO (7.51% pre-issue / 13x Bonus Adj. from ₹150)"
+        },
+        {
+          "name": "Miteshkumar Rameshbhai Chaudhari",
+          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "shares": "6,40,000",
+          "buyPrice": 11.54,
+          "ipoPrice": 59,
+          "discountPct": 80.4,
+          "type": "Individual Pre-IPO Allottee (4.22% pre-issue / 13x Bonus Adj.)"
+        },
+        {
+          "name": "Neeraj Vishnukumar Gupta",
+          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "shares": "2,95,716",
+          "buyPrice": 11.54,
+          "ipoPrice": 59,
+          "discountPct": 80.4,
+          "type": "Individual Pre-IPO Allottee (1.95% pre-issue / 13x Bonus Adj.)"
+        },
+        {
+          "name": "Amisha Sanjay Shah",
+          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "shares": "1,08,108",
+          "buyPrice": 11.54,
+          "ipoPrice": 59,
+          "discountPct": 80.4,
+          "type": "Individual Pre-IPO Allottee (0.71% pre-issue / 13x Bonus Adj.)"
+        },
+        {
+          "name": "Other Public Pre-IPO Allottees Group",
+          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "shares": "3,89,096",
+          "buyPrice": 11.54,
+          "ipoPrice": 59,
+          "discountPct": 80.4,
+          "type": "Public Pre-IPO Allottees (13x Bonus Adj.)"
         }
       ],
       "capitalStructureUrl": "https://farmpeace.in/wp-content/uploads/2026/08/Prospectus.pdf",
@@ -26643,10 +26688,16 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        "INDIA MAX INVESTMENT FUND LIMITED (6.03L sh. | ₹5.01 Cr)",
+        "TATTVAM AIF TRUST - AANJAY AGELESS AIF FUND (4.82L sh. | ₹4.00 Cr)",
+        "FINWAVE GLOBAL OPPORTUNITIES FUND (2.91L sh. | ₹2.42 Cr)",
+        "KHANDELWAL FINANCE PRIVATE LIMITED (1.22L sh. | ₹1.01 Cr)",
+        "TIGER STRATEGIES FUND - I (1.22L sh. | ₹1.01 Cr)"
+      ],
       "anchorShares": 0,
       "totalShares": 0,
-      "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_SHANTIINOR.zip",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_rhp_1787570076.pdf",
       "preIpoInvestors": [
         {
           "name": "Reina R Jaisinghani (Polycab Promoters)",
@@ -26694,8 +26745,9 @@
           "type": "Pre-IPO Strategic Allottees (@ Premium)"
         }
       ],
-      "capitalStructureUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_SHANTIINOR.zip",
-      "preIpoWaca": "90.00"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_capital_structure_1788072660.pdf",
+      "preIpoWaca": "90.00",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_anchor_1787921730.pdf"
     },
     {
       "companyName": "Ashutosh Fibre Ltd.",
@@ -28107,6 +28159,52 @@
       "noticeId": "20250918-48",
       "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250918-48&attachedId=ee95ad86-4bc8-477e-a540-a9af465840be",
       "fetchedAt": "2026-08-31T07:44:09.002Z"
+    },
+    "Clean Max Enviro Energy Solutions Ltd.": {
+      "found": true,
+      "totalShares": 117079174,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 21895740,
+          "percentage": 18.7,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-03-27",
+          "shares": 4373218,
+          "percentage": 3.7
+        },
+        {
+          "date": "2026-05-26",
+          "shares": 4373219,
+          "percentage": 3.7
+        },
+        {
+          "date": "2026-08-05",
+          "shares": 4368471,
+          "percentage": 3.7
+        },
+        {
+          "date": "2026-08-26",
+          "shares": 33933666,
+          "percentage": 29
+        },
+        {
+          "date": "2027-02-26",
+          "shares": 24580517,
+          "percentage": 21
+        },
+        {
+          "date": "2029-02-26",
+          "shares": 23554343,
+          "percentage": 20.1
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/73067",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73067.zip",
+      "fetchedAt": "2026-09-02T11:35:13.056Z"
     }
   }
 }
