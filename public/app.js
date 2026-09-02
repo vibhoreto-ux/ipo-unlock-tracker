@@ -379,6 +379,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const colPre = createDateCell(company.preIPO);
             const companyIdx = allCompanies.indexOf(company);
 
+            row.className = 'clickable-row';
+            row.style.cursor = 'pointer';
+            row.setAttribute('data-company-idx', companyIdx);
+
             row.innerHTML = `
                 <td data-label="Company">
                     <span class="company-name">${company.companyName}</span>
@@ -386,23 +390,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${typeBadge}
                     </div>
                 </td>
-                <td data-label="Listing Date"><span class="date-text text-muted date-clickable" data-company-idx="${companyIdx}">${listingDateDisplay}</span></td>
-                <td class="col-anchor" data-label="30-Day Unlock"><div class="date-clickable" data-company-idx="${companyIdx}">${col30}</div></td>
-                <td class="col-anchor" data-label="90-Day Unlock"><div class="date-clickable" data-company-idx="${companyIdx}">${col90}</div></td>
-                <td class="col-preipo" data-label="Pre-IPO Lock-in"><div class="date-clickable" data-company-idx="${companyIdx}">${colPre}</div></td>
+                <td data-label="Listing Date"><span class="date-text text-muted">${listingDateDisplay}</span></td>
+                <td class="col-anchor" data-label="30-Day Unlock">${col30}</td>
+                <td class="col-anchor" data-label="90-Day Unlock">${col90}</td>
+                <td class="col-preipo" data-label="Pre-IPO Lock-in">${colPre}</td>
             `;
 
-            tableBody.appendChild(row);
-        });
-
-        // Attach click handlers to all date-clickable cells
-        document.querySelectorAll('.date-clickable').forEach(el => {
-            el.addEventListener('click', () => {
-                const idx = parseInt(el.getAttribute('data-company-idx'));
-                if (!isNaN(idx) && allCompanies[idx]) {
-                    openUnlockModal(allCompanies[idx]);
-                }
+            row.addEventListener('click', () => {
+                openUnlockModal(company);
             });
+
+            tableBody.appendChild(row);
         });
 
         // Re-apply visibility to new rows
@@ -728,9 +726,16 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             docLinks.push(`<a href="${anchorUrl}" target="_blank" class="doc-btn"><i class="ph ph-anchor"></i> Anchor Doc</a>`);
         }
         const docsHtml = docLinks.length > 0 ? `<div class="card-doc-links" style="margin-top:10px;">${docLinks.join('')}</div>` : '';
+        const topDocLink = capUrl 
+            ? `<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:11px; padding:3px 8px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`
+            : (rhpUrl && isValidRHPUrl(rhpUrl) ? `<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:11px; padding:3px 8px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;"><i class="ph ph-file-pdf"></i> RHP Document</a>` : '');
 
         if (investors === undefined) {
             preIpoBlock.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
+                    <span style="font-weight:700; color:var(--text); font-size: 13.5px;">Pre-IPO Details</span>
+                    ${topDocLink}
+                </div>
                 <div style="display:flex; align-items:center; gap:8px; padding:8px 4px; color:var(--text-secondary); font-size:13px;">
                     <div class="loader-spinner" style="width:14px; height:14px; border-width:2px;"></div>
                     <span>Scanning Capital Structure & Pre-IPO Data...</span>
@@ -746,7 +751,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             const wacaHtml = waca ? `<div style="margin-top: 10px; font-size: 0.85rem; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${waca}</span></div>` : '';
             preIpoBlock.innerHTML = `
                 <details open style="border:none; padding:0;">
-                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px;">Pre-IPO Investors & Shareholders (${investors.length})</summary>
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px; display:flex; justify-content:space-between; align-items:center;">
+                        <span>Pre-IPO Investors & Shareholders (${investors.length})</span>
+                        ${topDocLink}
+                    </summary>
                     <div class="body" style="margin-top:6px;">
                         <div class="pre-ipo-table-wrapper">${tableHtml}</div>
                         ${wacaHtml}
@@ -758,7 +766,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         } else {
             preIpoBlock.innerHTML = `
                 <details open style="border:none; padding:0;">
-                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px;">Pre-IPO Investors (0)</summary>
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px; display:flex; justify-content:space-between; align-items:center;">
+                        <span>Pre-IPO Investors (0)</span>
+                        ${topDocLink}
+                    </summary>
                     <div class="body" style="margin-top:6px;">
                         <span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (100% Promoter / Group held prior to IPO).</span>
                         ${docsHtml}

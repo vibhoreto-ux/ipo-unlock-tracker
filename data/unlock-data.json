@@ -510,20 +510,20 @@
         "Sanyukta Prasad",
         "Vivinprasath Devaraj",
         "Yogesh Goyal",
-        "Gala Finance and Investment Pvt. Ltd. (₹21)",
+        "Gala Finance and Investment Pvt. Ltd. (\u20b921)",
         "Lalit Dua",
         "Dr. Manohar Lal Gupta",
         "Saurabh Kumar",
         "Govind Rai Garg",
         "Pallav Singal",
         "Sushila Jora Jora",
-        "RNR Wealth Management Private Limited (₹28)",
+        "RNR Wealth Management Private Limited (\u20b928)",
         "Indu Sinha",
         "Manish Goyal",
         "Mr. Manish Goyal",
         "Mr. Govind Rai Garg",
         "be Rs",
-        "Vivin Seccom LLP (₹38)",
+        "Vivin Seccom LLP (\u20b938)",
         "Pallav Mr",
         "S can4health Diagnosis Private Limited (Common director)",
         "Amit Kumar Beria",
@@ -532,7 +532,7 @@
         "SEBI Circular No",
         "Amarjeet Singh",
         "Prem Lata Goyal",
-        "Shinohub Traders LLP (₹17)",
+        "Shinohub Traders LLP (\u20b917)",
         "Yogesh Mr",
         "Vijay Kumar Rathi"
       ]
@@ -4804,7 +4804,83 @@
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        {
+          "name": "Sahasrar Capital Private Limited",
+          "category": "Pre-IPO Preferential Allottee (0.25%)",
+          "date": "Jun 29, 2024 (Preferential Allotment)",
+          "shares": 22727,
+          "price": 110.0,
+          "discount": -24.1,
+          "percentage": 0.25
+        },
+        {
+          "name": "Sunil Gupta",
+          "category": "Pre-IPO Preferential Allottee (0.25%)",
+          "date": "Jun 29, 2024 (Preferential Allotment)",
+          "shares": 22727,
+          "price": 110.0,
+          "discount": -24.1,
+          "percentage": 0.25
+        },
+        {
+          "name": "Manish Kumar",
+          "category": "Pre-IPO Preferential Allottee (0.15%)",
+          "date": "Jun 29, 2024 (Preferential Allotment)",
+          "shares": 13636,
+          "price": 110.0,
+          "discount": -24.1,
+          "percentage": 0.15
+        },
+        {
+          "name": "Utsav Pramodkumar Shrivastav",
+          "category": "Pre-IPO Preferential Allottee (0.15%)",
+          "date": "Jun 29, 2024 (Preferential Allotment)",
+          "shares": 13636,
+          "price": 110.0,
+          "discount": -24.1,
+          "percentage": 0.15
+        },
+        {
+          "name": "Sunita Rani",
+          "category": "Pre-IPO Preferential Allottee (0.10%)",
+          "date": "Jun 29, 2024 (Preferential Allotment)",
+          "shares": 9090,
+          "price": 110.0,
+          "discount": -24.1,
+          "percentage": 0.1
+        },
+        {
+          "name": "Phulvinder Kaur",
+          "category": "Pre-IPO Preferential Allottee (0.10%)",
+          "date": "Jun 29, 2024 (Preferential Allotment)",
+          "shares": 9090,
+          "price": 110.0,
+          "discount": -24.1,
+          "percentage": 0.1
+        },
+        {
+          "name": "Tarun Khurana",
+          "category": "Pre-IPO Public Shareholder (4.03%)",
+          "date": "Prior to RHP filing",
+          "shares": 367400,
+          "price": 10.0,
+          "discount": -93.1,
+          "percentage": 4.03
+        },
+        {
+          "name": "Ipvinder Singh",
+          "category": "Pre-IPO Public Shareholder (4.90%)",
+          "date": "Nov 2022 / Mar 2024 (Rights & 1:1 Bonus)",
+          "shares": 445908,
+          "price": 5.0,
+          "discount": -96.6,
+          "percentage": 4.9
+        }
+      ],
+      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_240620252141.zip",
+      "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_240620252141.zip",
+      "preIpoWaca": 27.42
     },
     {
       "companyName": "Shivashrit Foods Ltd.",
@@ -5464,7 +5540,8 @@
         "originalDate": "2026-08-11T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "preIpoInvestors": []
     },
     {
       "companyName": "Jyoti Global Plast Ltd.",
@@ -6813,43 +6890,43 @@
       },
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/Neetu%20Yoshi%20Limited%20-%20RHP%20&%20GID_260620251029.zip",
       "preIpoInvestors": [
-        "NLB Services Private Limited (₹62)",
-        "Shivang Agarwal (₹62)",
-        "Rajnish Varshney (₹62)",
-        "Leena Sanghvi (₹62)",
-        "Ketan Shanghavi HUF (₹62)",
-        "Akriti Arora (₹62)",
-        "Vikas Jain (₹62)",
-        "Priyanka Aggarwal (₹62)",
-        "Priyanshi Jain (₹62)",
-        "Shikhir Kapoor (₹62)",
-        "Amit Anand (₹62)",
-        "Radhika Chugh (₹62)",
-        "Pundrik Sharma (₹62)",
-        "Sulabh Jain (₹62)",
-        "Puneet Jain (₹62)",
-        "Manrich Singh Narang (₹62)",
-        "Utsav Pramodkumar Shrivastav HUF (₹62)",
-        "Adheesh Kabra (₹62)",
-        "Santosh Rani (₹62)",
-        "Vishal Goel HUF (₹62)",
-        "Sunil Kumar Gupta (₹62)",
-        "Viney Equity Market LLP (₹62)",
-        "HBPA Tradex Private Limited (₹62)",
-        "Mukul Gupta (₹62)",
-        "Sandeep Aggarwal (₹62)",
-        "Meenakshi Arora (₹62)",
-        "Anshu Agarwal (₹62)",
-        "Ajay Agarwal (₹62)",
-        "Ashok Katyal (₹62)",
-        "NKGJ Trading LLP (₹62)",
-        "Gaurav Shyamsukha (₹62)",
-        "Jatinder Singh Chawla (₹62)",
-        "Hemal Ashvin Shah & Puja Hemal Shah (₹62)",
-        "Aditya Shyam Makharia (₹62)",
-        "Thakkar Nidhi Sudhir (₹62)",
-        "Thakkar Sudhir Chandulal (₹62)",
-        "Manoj Kumar Mathur (₹62)"
+        "NLB Services Private Limited (\u20b962)",
+        "Shivang Agarwal (\u20b962)",
+        "Rajnish Varshney (\u20b962)",
+        "Leena Sanghvi (\u20b962)",
+        "Ketan Shanghavi HUF (\u20b962)",
+        "Akriti Arora (\u20b962)",
+        "Vikas Jain (\u20b962)",
+        "Priyanka Aggarwal (\u20b962)",
+        "Priyanshi Jain (\u20b962)",
+        "Shikhir Kapoor (\u20b962)",
+        "Amit Anand (\u20b962)",
+        "Radhika Chugh (\u20b962)",
+        "Pundrik Sharma (\u20b962)",
+        "Sulabh Jain (\u20b962)",
+        "Puneet Jain (\u20b962)",
+        "Manrich Singh Narang (\u20b962)",
+        "Utsav Pramodkumar Shrivastav HUF (\u20b962)",
+        "Adheesh Kabra (\u20b962)",
+        "Santosh Rani (\u20b962)",
+        "Vishal Goel HUF (\u20b962)",
+        "Sunil Kumar Gupta (\u20b962)",
+        "Viney Equity Market LLP (\u20b962)",
+        "HBPA Tradex Private Limited (\u20b962)",
+        "Mukul Gupta (\u20b962)",
+        "Sandeep Aggarwal (\u20b962)",
+        "Meenakshi Arora (\u20b962)",
+        "Anshu Agarwal (\u20b962)",
+        "Ajay Agarwal (\u20b962)",
+        "Ashok Katyal (\u20b962)",
+        "NKGJ Trading LLP (\u20b962)",
+        "Gaurav Shyamsukha (\u20b962)",
+        "Jatinder Singh Chawla (\u20b962)",
+        "Hemal Ashvin Shah & Puja Hemal Shah (\u20b962)",
+        "Aditya Shyam Makharia (\u20b962)",
+        "Thakkar Nidhi Sudhir (\u20b962)",
+        "Thakkar Sudhir Chandulal (\u20b962)",
+        "Manoj Kumar Mathur (\u20b962)"
       ],
       "preIpoWaca": 62
     },
@@ -7457,39 +7534,39 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "preIpoInvestors": [
-        "Jitendra Kumar Garg (₹75)",
-        "Mamata Prashant Garg (₹75)",
-        "Anita Mathur (₹75)",
-        "Naveen Kumar Gupta (₹75)",
-        "Jagdish Prasad Garg (₹75)",
-        "Amit Garg (₹75)",
-        "Kalpesh Mahendra Shah (₹75)",
-        "Punit Agarwal (₹75)",
-        "Pijush Raha (₹75)",
-        "Hemant Arora (₹75)",
-        "Nayan Kantilal Mehta (₹75)",
-        "Payal Mehta (₹75)",
-        "Kapil Maheshwari (₹75)",
-        "Vivek Prabhakar Kakodkar (₹75)",
-        "Rahul Aggarwal (₹75)",
-        "Rahul Sarin (₹75)",
-        "Harish Gupta (₹75)",
-        "Rashmi Arora (₹75)",
-        "Nishant Bajpai (₹75)",
-        "Ankush Agarwal (₹75)",
-        "Swati Jain (₹75)",
-        "Kulbhushan Arora (₹75)",
-        "Himanshu Garg (₹75)",
-        "Prashant Garg (₹75)",
-        "Kiran Gupta (₹75)",
-        "Aashish Gupta (₹75)",
-        "Anita Srivastava (₹75)",
-        "Ankur Gupta (₹75)",
-        "Lokesh Jain (₹75)",
-        "Ayush Gupta (₹75)",
-        "Alpesh Jagdishbhai Vaghasiya (₹75)",
-        "Aankur Jain (₹75)",
-        "Aakash Goyal (₹75)"
+        "Jitendra Kumar Garg (\u20b975)",
+        "Mamata Prashant Garg (\u20b975)",
+        "Anita Mathur (\u20b975)",
+        "Naveen Kumar Gupta (\u20b975)",
+        "Jagdish Prasad Garg (\u20b975)",
+        "Amit Garg (\u20b975)",
+        "Kalpesh Mahendra Shah (\u20b975)",
+        "Punit Agarwal (\u20b975)",
+        "Pijush Raha (\u20b975)",
+        "Hemant Arora (\u20b975)",
+        "Nayan Kantilal Mehta (\u20b975)",
+        "Payal Mehta (\u20b975)",
+        "Kapil Maheshwari (\u20b975)",
+        "Vivek Prabhakar Kakodkar (\u20b975)",
+        "Rahul Aggarwal (\u20b975)",
+        "Rahul Sarin (\u20b975)",
+        "Harish Gupta (\u20b975)",
+        "Rashmi Arora (\u20b975)",
+        "Nishant Bajpai (\u20b975)",
+        "Ankush Agarwal (\u20b975)",
+        "Swati Jain (\u20b975)",
+        "Kulbhushan Arora (\u20b975)",
+        "Himanshu Garg (\u20b975)",
+        "Prashant Garg (\u20b975)",
+        "Kiran Gupta (\u20b975)",
+        "Aashish Gupta (\u20b975)",
+        "Anita Srivastava (\u20b975)",
+        "Ankur Gupta (\u20b975)",
+        "Lokesh Jain (\u20b975)",
+        "Ayush Gupta (\u20b975)",
+        "Alpesh Jagdishbhai Vaghasiya (\u20b975)",
+        "Aankur Jain (\u20b975)",
+        "Aakash Goyal (\u20b975)"
       ],
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_INFLUX.zip",
       "preIpoWaca": 75
@@ -7703,15 +7780,15 @@
       },
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_SACHEEROME.zip",
       "preIpoInvestors": [
-        "Sachee Holdings Private Limited (₹100)",
-        "India – Ahead Venture Fund (₹102)",
-        "Vaishali F&F LLP (₹100)",
-        "Quick Infraprojects Private Limited (₹100)",
-        "Quartz Impex Private Limited (₹100)",
+        "Sachee Holdings Private Limited (\u20b9100)",
+        "India \u2013 Ahead Venture Fund (\u20b9102)",
+        "Vaishali F&F LLP (\u20b9100)",
+        "Quick Infraprojects Private Limited (\u20b9100)",
+        "Quartz Impex Private Limited (\u20b9100)",
         "Chahat Estates Agents Pvt Ltd",
-        "Share Transfer to Sachee Holdings Private Limited (₹30)",
-        "Share Transfer to Vaishali F&F LLP (₹30)",
-        "Share Transfer to Quick Infraprojects Private Limited (₹30)"
+        "Share Transfer to Sachee Holdings Private Limited (\u20b930)",
+        "Share Transfer to Vaishali F&F LLP (\u20b930)",
+        "Share Transfer to Quick Infraprojects Private Limited (\u20b930)"
       ],
       "preIpoWaca": null
     },
@@ -20533,23 +20610,23 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "BANK OF INDIA SMALL CAP FUND (18,70,000 shares | ₹25.81 Cr)",
-        "BANK OF INDIA FLEXI CAP FUND (17,30,000 shares | ₹23.87 Cr)",
-        "TAURUS FLEXI CAP FUND (9,50,000 shares | ₹13.11 Cr)",
-        "TAURUS MID CAP FUND (3,50,000 shares | ₹4.83 Cr)",
-        "TAURUS LARGE CAP FUND (1,20,000 shares | ₹1.66 Cr)",
-        "TAURUS INFRASTRUCTURE FUND (30,000 shares | ₹0.41 Cr)",
-        "INDUSIND GENERAL INSURANCE CO.LTD. (9,40,000 shares | ₹12.97 Cr)",
-        "NOMURA SINGAPORE LTD. (3,65,000 shares | ₹5.04 Cr)",
-        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD. (3,65,000 shares | ₹5.04 Cr)",
-        "LC PHAROS MULTI STRATEGY FUND VCC-LC PHAROS MULTI STRATEGY FUND SF1 (7,24,700 shares | ₹10.00 Cr)",
-        "ASAS GLOBAL FUND INCORPORATED VCC SUB FUND (4,00,000 shares | ₹5.52 Cr)",
-        "HOLANI VENTURE CAPITAL FUND-HOLANI VENTURE CAPITAL FUND I (10,40,600 shares | ₹14.36 Cr)",
-        "PRANITYA INDIA OPPORTUNITIES FUND (12,02,000 shares | ₹16.59 Cr)",
-        "VISTA AXIS VCC-QUANT FUND (7,40,000 shares | ₹10.21 Cr)",
-        "LRSD SECURITIES PVT.LTD. (7,24,700 shares | ₹10.00 Cr)",
-        "SHINE STAR BUILD-CAP PVT.LTD. (4,00,000 shares | ₹5.52 Cr)",
-        "MERU INVESTMENT FUND PCC-CELL 1 (6,96,000 shares | ₹9.60 Cr)"
+        "BANK OF INDIA SMALL CAP FUND (18,70,000 shares | \u20b925.81 Cr)",
+        "BANK OF INDIA FLEXI CAP FUND (17,30,000 shares | \u20b923.87 Cr)",
+        "TAURUS FLEXI CAP FUND (9,50,000 shares | \u20b913.11 Cr)",
+        "TAURUS MID CAP FUND (3,50,000 shares | \u20b94.83 Cr)",
+        "TAURUS LARGE CAP FUND (1,20,000 shares | \u20b91.66 Cr)",
+        "TAURUS INFRASTRUCTURE FUND (30,000 shares | \u20b90.41 Cr)",
+        "INDUSIND GENERAL INSURANCE CO.LTD. (9,40,000 shares | \u20b912.97 Cr)",
+        "NOMURA SINGAPORE LTD. (3,65,000 shares | \u20b95.04 Cr)",
+        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD. (3,65,000 shares | \u20b95.04 Cr)",
+        "LC PHAROS MULTI STRATEGY FUND VCC-LC PHAROS MULTI STRATEGY FUND SF1 (7,24,700 shares | \u20b910.00 Cr)",
+        "ASAS GLOBAL FUND INCORPORATED VCC SUB FUND (4,00,000 shares | \u20b95.52 Cr)",
+        "HOLANI VENTURE CAPITAL FUND-HOLANI VENTURE CAPITAL FUND I (10,40,600 shares | \u20b914.36 Cr)",
+        "PRANITYA INDIA OPPORTUNITIES FUND (12,02,000 shares | \u20b916.59 Cr)",
+        "VISTA AXIS VCC-QUANT FUND (7,40,000 shares | \u20b910.21 Cr)",
+        "LRSD SECURITIES PVT.LTD. (7,24,700 shares | \u20b910.00 Cr)",
+        "SHINE STAR BUILD-CAP PVT.LTD. (4,00,000 shares | \u20b95.52 Cr)",
+        "MERU INVESTMENT FUND PCC-CELL 1 (6,96,000 shares | \u20b99.60 Cr)"
       ],
       "anchorShares": 0,
       "totalShares": 42231600,
@@ -21247,20 +21324,20 @@
       "totalShares": 5269200,
       "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/06/rhphorizon.pdf",
       "preIpoInvestors": [
-        "Gracious Advisors LLP (₹103.00)",
-        "Yogesh Chaudhary (₹103.00)"
+        "Gracious Advisors LLP (\u20b9103.00)",
+        "Yogesh Chaudhary (\u20b9103.00)"
       ],
       "preIpoWaca": 103,
       "peerComparison": {
         "columns": [
-          "CMP (₹)",
-          "Basic EPS (₹)",
-          "Diluted EPS (₹)",
-          "Face Val (₹)",
+          "CMP (\u20b9)",
+          "Basic EPS (\u20b9)",
+          "Diluted EPS (\u20b9)",
+          "Face Val (\u20b9)",
           "P/E",
           "RoNW (%)",
-          "NAV/Share (₹)",
-          "Total Income (₹L)"
+          "NAV/Share (\u20b9)",
+          "Total Income (\u20b9L)"
         ],
         "rows": [
           {
@@ -21277,13 +21354,13 @@
             ]
           },
           {
-            "name": "★ Horizon Reclaim (India) Limited",
+            "name": "\u2605 Horizon Reclaim (India) Limited",
             "values": [
-              "—",
+              "\u2014",
               "7.37",
               "7.37",
               "10",
-              "—",
+              "\u2014",
               "42.29%",
               "17.43",
               "5,001.07"
@@ -21331,22 +21408,22 @@
       "totalShares": 30859704,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_HEXAGON.zip",
       "preIpoInvestors": [
-        "Tata Capital Financial Services Limited (₹20.00)",
-        "Investcorp PE Fund II (₹20.00)",
-        "Malabar India Fund Limited (₹20.00)",
-        "Malabar Value Fund (₹20.00)",
-        "Ohm Capital (₹20.00)"
+        "Tata Capital Financial Services Limited (\u20b920.00)",
+        "Investcorp PE Fund II (\u20b920.00)",
+        "Malabar India Fund Limited (\u20b920.00)",
+        "Malabar Value Fund (\u20b920.00)",
+        "Ohm Capital (\u20b920.00)"
       ],
       "preIpoWaca": 20,
       "peerComparison": {
         "columns": [
-          "Face Val (₹)",
-          "Revenue (₹M)",
-          "Basic EPS (₹)",
-          "Diluted EPS (₹)",
+          "Face Val (\u20b9)",
+          "Revenue (\u20b9M)",
+          "Basic EPS (\u20b9)",
+          "Diluted EPS (\u20b9)",
           "P/E",
           "RoNW (%)",
-          "NAV/Share (₹)"
+          "NAV/Share (\u20b9)"
         ],
         "rows": [
           {
@@ -21374,7 +21451,7 @@
             ]
           },
           {
-            "name": "Nestlé India Limited",
+            "name": "Nestl\u00e9 India Limited",
             "values": [
               "1",
               "202,015.60",
@@ -21433,28 +21510,28 @@
       "totalShares": 4728000,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_GENXAI.zip",
       "preIpoInvestors": [
-        "Aadishakti Steels (₹70.40)",
-        "Anshu Gupta (₹70.40)",
-        "Garv Agarwal (₹70.40)",
-        "Sunita Agrawal (₹70.40)",
-        "SP Holdings (₹70.40)",
-        "Abhishek Tibrewal HUF (₹70.40)",
-        "Mridul Agarwal (₹70.40)",
-        "Nidhi Aggarwal (₹70.40)",
-        "Saloni Ramratan Chirania (₹70.40)",
-        "Nitesh Agarwal (₹70.40)",
-        "Poonam Sunil Bagaria (₹70.40)",
-        "Sandeep Mandawewala (₹70.40)",
-        "Accufolio Risers LLP (₹70.40)",
-        "YBRA Ventures LLP (₹70.40)",
-        "Shaily Dinesh Jain (₹70.40)",
-        "Shriram Chandak (₹70.40)",
-        "Sunil Kumar Khandal (₹70.40)",
-        "Seema Sharma (₹70.40)",
-        "Sunil Kumar Khandal HUF (₹70.40)",
-        "Sushila Sharma (₹70.40)",
-        "Rakesh Khandelwal (₹70.40)",
-        "Namrta Arora (₹70.40)"
+        "Aadishakti Steels (\u20b970.40)",
+        "Anshu Gupta (\u20b970.40)",
+        "Garv Agarwal (\u20b970.40)",
+        "Sunita Agrawal (\u20b970.40)",
+        "SP Holdings (\u20b970.40)",
+        "Abhishek Tibrewal HUF (\u20b970.40)",
+        "Mridul Agarwal (\u20b970.40)",
+        "Nidhi Aggarwal (\u20b970.40)",
+        "Saloni Ramratan Chirania (\u20b970.40)",
+        "Nitesh Agarwal (\u20b970.40)",
+        "Poonam Sunil Bagaria (\u20b970.40)",
+        "Sandeep Mandawewala (\u20b970.40)",
+        "Accufolio Risers LLP (\u20b970.40)",
+        "YBRA Ventures LLP (\u20b970.40)",
+        "Shaily Dinesh Jain (\u20b970.40)",
+        "Shriram Chandak (\u20b970.40)",
+        "Sunil Kumar Khandal (\u20b970.40)",
+        "Seema Sharma (\u20b970.40)",
+        "Sunil Kumar Khandal HUF (\u20b970.40)",
+        "Sushila Sharma (\u20b970.40)",
+        "Rakesh Khandelwal (\u20b970.40)",
+        "Namrta Arora (\u20b970.40)"
       ],
       "preIpoWaca": 70.4
     },
@@ -21482,16 +21559,16 @@
       "totalShares": 2242000,
       "rhpUrl": "https://www.bsesme.com/download/329359/SME_IPO%20InPrinciple/VahhDRHP03122025_20251203235722.pdf",
       "preIpoInvestors": [
-        "Aayush Hiren Desai (₹6.06)",
-        "Ruchik Kirtikumar Mehta (₹6.06)",
-        "Hiren Indravadan Desai (₹6.06)",
-        "Hetal Hirenbhai Desai (₹6.06)",
-        "Gita Mukeshkumar Mehta (₹6.06)",
-        "Mukeshkumar Rameshchandra Mehta (₹6.06)",
-        "Vishnudatt Vidhyasagar Tiwari (₹6.06)",
-        "Cravexnuts Foods LLP (₹6.06)",
-        "HSHS Nutraceuticals Limited (₹6.06)",
-        "Vedant Nutraceuticals Limited (₹6.06)"
+        "Aayush Hiren Desai (\u20b96.06)",
+        "Ruchik Kirtikumar Mehta (\u20b96.06)",
+        "Hiren Indravadan Desai (\u20b96.06)",
+        "Hetal Hirenbhai Desai (\u20b96.06)",
+        "Gita Mukeshkumar Mehta (\u20b96.06)",
+        "Mukeshkumar Rameshchandra Mehta (\u20b96.06)",
+        "Vishnudatt Vidhyasagar Tiwari (\u20b96.06)",
+        "Cravexnuts Foods LLP (\u20b96.06)",
+        "HSHS Nutraceuticals Limited (\u20b96.06)",
+        "Vedant Nutraceuticals Limited (\u20b96.06)"
       ],
       "preIpoWaca": 6.06
     },
@@ -21529,7 +21606,7 @@
         "Rubeena Khatoon I Ahmad",
         "Azfer Izhar Ahmad",
         "any Bidder",
-        "International Travel House Limited (₹206.83)",
+        "International Travel House Limited (\u20b9206.83)",
         "Arsalan Ahmad",
         "Izhar Ahmad Upto",
         "Rubeena Khatoon I Ahmed"
@@ -21609,7 +21686,7 @@
         "N. K.",
         "Kalawati Agarwal",
         "Designated Intermediaries",
-        "Global Scrap Processors Limited (₹13.05)",
+        "Global Scrap Processors Limited (\u20b913.05)",
         "Parasabha Construction",
         "Construction Private Limited^",
         "Raghav Agarwal Family Private",
@@ -22363,7 +22440,7 @@
       "rhpUrl": "https://www.bsesme.com/download/380603/SME_IPO%20InPrinciple/DRHP_SaffronSpecialityPapersLimited_20251231195818.pdf",
       "preIpoInvestors": [],
       "managementHighlights": [
-        "ℹ️ No forward guidance, moat details, or interviews found on X or YouTube for Saffron Speciality Papers Ltd.."
+        "\u2139\ufe0f No forward guidance, moat details, or interviews found on X or YouTube for Saffron Speciality Papers Ltd.."
       ],
       "capitalStructureUrl": "https://www.bsesme.com/download/380603/SME_IPO%20InPrinciple/DRHP_SaffronSpecialityPapersLimited_20251231195818.pdf"
     },
@@ -22441,7 +22518,7 @@
       "preIpoWaca": 125,
       "peerComparison": {
         "columns": [
-          "Basic EPS (₹)",
+          "Basic EPS (\u20b9)",
           "P/E",
           "RoNW (%)"
         ],
@@ -22689,7 +22766,7 @@
       "preIpoInvestors": [],
       "peerComparison": {
         "columns": [
-          "Basic EPS (₹)",
+          "Basic EPS (\u20b9)",
           "P/E",
           "RoNW (%)"
         ],
@@ -22754,7 +22831,7 @@
       "rhpUrl": "https://www.bsesme.com/download/354771/SME_IPO%20InPrinciple/Mala_Saree_DRHP_29.09.2025_20250930003732.pdf",
       "preIpoInvestors": [],
       "managementHighlights": [
-        "ℹ️ No forward guidance, moat details, or interviews found on X or YouTube for Shree Balaji (Mala) Textiles Ltd. (Shree Balaji Mala IPO)."
+        "\u2139\ufe0f No forward guidance, moat details, or interviews found on X or YouTube for Shree Balaji (Mala) Textiles Ltd. (Shree Balaji Mala IPO)."
       ]
     },
     {
@@ -22848,7 +22925,7 @@
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/atharva-polyplast-ipo-rhp.pdf",
       "preIpoInvestors": [
         "Smita Anujit Darade",
-        "Above Rs. (₹80)",
+        "Above Rs. (\u20b980)",
         "Sadhana Shivaji Darade",
         "Shivaji Kisan Darade",
         "Bank Limited",
@@ -22861,7 +22938,7 @@
         "BE HELD BY DIRECTORS",
         "Anujit Shivaji Darade",
         "GST Demand",
-        "Up to Rs. (₹20)",
+        "Up to Rs. (\u20b920)",
         "Qualified Institutional Buyers,",
         "Upon Subscrib",
         "Ashish Shivaji Darade Executive",
@@ -22876,7 +22953,7 @@
           "on",
           "Net",
           "worth",
-          "(“RoNW”)"
+          "(\u201cRoNW\u201d)"
         ],
         "rows": [
           {
@@ -22886,7 +22963,7 @@
               "4.28",
               "4.28",
               "10.5",
-              "—",
+              "\u2014",
               "40.63",
               "11.12"
             ]
@@ -23049,7 +23126,7 @@
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/twinkle-papers-ipo-rhp.pdf",
       "preIpoInvestors": [
         "Installation time",
-        "Haitian Huayuan Machinery India Private Limited (₹650)",
+        "Haitian Huayuan Machinery India Private Limited (\u20b9650)",
         "BE HELD BY DIRECTORS",
         "Mr. Amit Jain",
         "Mr. Ayush Jain",
@@ -23082,9 +23159,9 @@
             "name": "1 Twinkle Papers Ltd Peer Group",
             "values": [
               "10.00",
-              "—",
+              "\u2014",
               "2.36",
-              "—",
+              "\u2014",
               "11.89%",
               "19.86",
               "263.63"
@@ -23127,7 +23204,7 @@
             ]
           },
           {
-            "name": "Revenue from operations (1) ₹ Lakhs",
+            "name": "Revenue from operations (1) \u20b9 Lakhs",
             "values": [
               "7206.56",
               "8164.66",
@@ -23136,7 +23213,7 @@
             ]
           },
           {
-            "name": "EBITDA (3) ₹ Lakhs",
+            "name": "EBITDA (3) \u20b9 Lakhs",
             "values": [
               "1,075.15",
               "962.51",
@@ -23154,7 +23231,7 @@
             ]
           },
           {
-            "name": "EBIT (6) ₹ Lakhs",
+            "name": "EBIT (6) \u20b9 Lakhs",
             "values": [
               "887.22",
               "886.97",
@@ -23181,7 +23258,7 @@
             ]
           },
           {
-            "name": "Operating cash flow (9) ₹ Lakhs",
+            "name": "Operating cash flow (9) \u20b9 Lakhs",
             "values": [
               "196.31",
               "665.18",
@@ -23190,7 +23267,7 @@
             ]
           },
           {
-            "name": "PAT (10) ₹ Lakhs",
+            "name": "PAT (10) \u20b9 Lakhs",
             "values": [
               "540.10",
               "346.79",
@@ -23208,7 +23285,7 @@
             ]
           },
           {
-            "name": "Net Worth (12) ₹ Lakhs",
+            "name": "Net Worth (12) \u20b9 Lakhs",
             "values": [
               "2493.70",
               "1953.60",
@@ -23226,7 +23303,7 @@
             ]
           },
           {
-            "name": "EPS (14) ₹ Per Share",
+            "name": "EPS (14) \u20b9 Per Share",
             "values": [
               "4.84",
               "3.36",
@@ -23261,7 +23338,7 @@
       "totalShares": 6290000,
       "rhpUrl": "https://www.bsesme.com/download/327529/SME_IPO%20InPrinciple/DraftOfferDocument_20260420212924.zip",
       "preIpoInvestors": [
-        "Draps Ventures Private Limited**** (₹204.79)",
+        "Draps Ventures Private Limited**** (\u20b9204.79)",
         "any Investor",
         "Mrs. Jigisha Narayanswamy, aged",
         "Vaibhav Laxmi Processors Pvt Ltd",
@@ -23278,12 +23355,12 @@
         "a Special Resolution passed",
         "Afrodile Superfoods LLP",
         "Kamlesh Natwarlal Shah",
-        "Companies:  Jajoo Rashmi Refactories Limited",
+        "Companies: \uf0b7 Jajoo Rashmi Refactories Limited",
         "Anil Jain",
         "Shubham Ratan Sharma",
         "Narayanswamy Venkitkrishnan",
         "Tenure of Association",
-        "Number of Customers (₹794)",
+        "Number of Customers (\u20b9794)",
         "Remuneration Upto Rs."
       ],
       "peerComparison": {
@@ -23299,10 +23376,10 @@
           {
             "name": "Adon Agro Commodities Limited Listed Peers",
             "values": [
-              "—",
+              "\u2014",
               "10.00",
               "4.32",
-              "—",
+              "\u2014",
               "84.36%",
               "40.57"
             ]
@@ -23407,7 +23484,7 @@
             ]
           },
           {
-            "name": "8. Return on Capital Employed (\"ROCE”) (%) (7)",
+            "name": "8. Return on Capital Employed (\"ROCE\u201d) (%) (7)",
             "values": [
               "60.09%",
               "60.65%",
@@ -23628,7 +23705,7 @@
         "Singular Health Private Limited",
         "Shree Nagani Silk Mills Private Limited",
         "Siddhartha Super",
-        "Shree Nagani Silk Mills Private Limited – 10,000",
+        "Shree Nagani Silk Mills Private Limited \u2013 10,000",
         "this Offer",
         "Ram Krupa",
         "Key Managerial Personnel and Senior Management",
@@ -23639,7 +23716,7 @@
         "Rajendra Prasad",
         "Kavitha Pandian, aged",
         "Twinkle Adukia",
-        "Silkasia Exports Private Limited – 10,000",
+        "Silkasia Exports Private Limited \u2013 10,000",
         "Shree Nagani Silk",
         "Himtex Textiles Private Limited",
         "Nil Nil",
@@ -23650,7 +23727,7 @@
         "Finance Act",
         "Ram Krupa Properties Private Limited,",
         "Pawan Poddar",
-        "Ram Krupa Properties Private Limited – 5,000",
+        "Ram Krupa Properties Private Limited \u2013 5,000",
         "Vishal Agarwal",
         "Sunita Dharmendra Goyal",
         "Dharmendra Mohandas",
@@ -23666,7 +23743,7 @@
         "Vishal Agarwal holds",
         "Dharmendra Mohandas Goyal holds",
         "Poddar Tubes and Pipes Limited",
-        "Himtex Textiles Private Limited – 10,000",
+        "Himtex Textiles Private Limited \u2013 10,000",
         "Mohan Das Goyal",
         "Mukul Mohandas",
         "Varesh Goyal",
@@ -23811,17 +23888,17 @@
       "preIpoInvestors": [
         "Mansukhbhai Chalalia",
         "Alternate Investment Funds",
-        "VAX Fashion Private Limited (₹10)",
+        "VAX Fashion Private Limited (\u20b910)",
         "Sobhanaben R Galiya",
         "Foreign Direct Investment",
         "In late",
         "Gaurang Ramanbhai Galiya, aged",
-        "VPK Global Ventures Fund - Scheme 1 (₹10)",
+        "VPK Global Ventures Fund - Scheme 1 (\u20b910)",
         "Runel Saxena, aged",
         "Aditi Parmar, aged",
         "Ramanbhai Nanubhai Galiya, aged",
         "Sobhanaben R. Galiya, aged",
-        "VAX Fashion (₹10)",
+        "VAX Fashion (\u20b910)",
         "Whole Time"
       ],
       "peerComparison": {
@@ -24015,10 +24092,10 @@
       "rhpUrl": "https://investmentbank.kotak.com//kib-cms/sites/default/files/offer-documets/Cube_Highways_Trust_Offer_Document_July_13_2026.pdf",
       "preIpoInvestors": [],
       "managementHighlights": [
-        "🎥 Management Interview: \"CUBE HIGHWAYS InvIT IPO | Tollમાંથી Income કેવી રીતે? | Exclusive Management Interview\" — Watch: https://www.youtube.com/watch?v=K4pPrsYj5Hk"
+        "\ud83c\udfa5 Management Interview: \"CUBE HIGHWAYS InvIT IPO | Toll\u0aae\u0abe\u0a82\u0aa5\u0ac0 Income \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7? | Exclusive Management Interview\" \u2014 Watch: https://www.youtube.com/watch?v=K4pPrsYj5Hk"
       ],
       "managementSourceUrl": "https://www.youtube.com/watch?v=K4pPrsYj5Hk",
-      "managementVideoTitle": "CUBE HIGHWAYS InvIT IPO | Tollમાંથી Income કેવી રીતે? | Exclusive Management Interview"
+      "managementVideoTitle": "CUBE HIGHWAYS InvIT IPO | Toll\u0aae\u0abe\u0a82\u0aa5\u0ac0 Income \u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7? | Exclusive Management Interview"
     },
     {
       "companyName": "Gulf Lloyds (India) Ltd.",
@@ -24045,7 +24122,7 @@
       "rhpUrl": "https://www.bsesme.com/download/346052/SME_IPO%20InPrinciple/DraftProspectus_20260319205957.pdf",
       "preIpoInvestors": [],
       "managementHighlights": [
-        "ℹ️ No forward guidance, moat details, or interviews found on X or YouTube for Gulf Lloyds (India) Ltd.."
+        "\u2139\ufe0f No forward guidance, moat details, or interviews found on X or YouTube for Gulf Lloyds (India) Ltd.."
       ]
     },
     {
@@ -24076,70 +24153,70 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "QUANT MUTUAL FUND - QSIF EQUITY EX TOP 100 LONG-SHORT FUND · ₹19,99,98,680",
-        "QUANT MUTUAL FUND - QSIF EQUITY LONG SHORT FUND · ₹15,00,02,720",
-        "QUANT MUTUAL FUND - QSIF HYBRID LONG-SHORT FUND · ₹10,00,06,760",
-        "QUANT MUTUAL FUND - QSIF ACTIVE ASSET ALLOCATOR LONG - SHORT FUND · ₹4,99,95,960",
-        "ASHOKA INDIA EQUITY INVESTMENT TRUST PLC · ₹25,00,09,480",
-        "3P INDIA EQUITY FUND 2M · ₹15,00,02,720",
-        "HELIOS SMALL CAP FUND · ₹15,00,02,720",
-        "ABAKKUS FOUR2EIGHT OPPORTUNITIES FUND · ₹9,99,86,832",
-        "CARNELIAN INDIA AMRITKAAL FUND · ₹10,00,06,760",
-        "ANCHORAGE CAPITAL FUND - ANCHORAGE CAPITAL SCHEME III · ₹9,99,86,832"
+        "QUANT MUTUAL FUND - QSIF EQUITY EX TOP 100 LONG-SHORT FUND \u00b7 \u20b919,99,98,680",
+        "QUANT MUTUAL FUND - QSIF EQUITY LONG SHORT FUND \u00b7 \u20b915,00,02,720",
+        "QUANT MUTUAL FUND - QSIF HYBRID LONG-SHORT FUND \u00b7 \u20b910,00,06,760",
+        "QUANT MUTUAL FUND - QSIF ACTIVE ASSET ALLOCATOR LONG - SHORT FUND \u00b7 \u20b94,99,95,960",
+        "ASHOKA INDIA EQUITY INVESTMENT TRUST PLC \u00b7 \u20b925,00,09,480",
+        "3P INDIA EQUITY FUND 2M \u00b7 \u20b915,00,02,720",
+        "HELIOS SMALL CAP FUND \u00b7 \u20b915,00,02,720",
+        "ABAKKUS FOUR2EIGHT OPPORTUNITIES FUND \u00b7 \u20b99,99,86,832",
+        "CARNELIAN INDIA AMRITKAAL FUND \u00b7 \u20b910,00,06,760",
+        "ANCHORAGE CAPITAL FUND - ANCHORAGE CAPITAL SCHEME III \u00b7 \u20b99,99,86,832"
       ],
       "anchorShares": 3183961,
       "totalShares": 10613208,
       "rhpUrl": "",
       "managementHighlights": [
-        "🎥 Management Interview: \"▶ Promoter interview\" — Watch: https://www.youtube.com/watch?v=AtM1FbJ5rkw",
+        "\ud83c\udfa5 Management Interview: \"\u25b6 Promoter interview\" \u2014 Watch: https://www.youtube.com/watch?v=AtM1FbJ5rkw",
         "Next-year guidance (interview):Management is confident on continued thermal-coal demand and plans to explore opportunities in Critical Minerals (Nickel, Cobalt, Chromium) and steel logistics, holding a critical mineral block in the exploration stage. No specific revenue or margin targets were given for the next year.",
-        "CMLL has a strong order book of ₹9,55,089.08 lakhs as of May 15, 2026, with visibility for 2.5 to 3 years. This provides significant revenue visibility and indicates strong future business potential. : Order Book",
-        "The company's revenue from operations grew at a CAGR of 32.67% from ₹95,311.60 lakhs in Fiscal 2024 to ₹1,67,766.09 lakhs in Fiscal 2026. This demonstrates a strong growth trajectory in a capital-intensive industry. : Financial Performance",
+        "CMLL has a strong order book of \u20b99,55,089.08 lakhs as of May 15, 2026, with visibility for 2.5 to 3 years. This provides significant revenue visibility and indicates strong future business potential. : Order Book",
+        "The company's revenue from operations grew at a CAGR of 32.67% from \u20b995,311.60 lakhs in Fiscal 2024 to \u20b91,67,766.09 lakhs in Fiscal 2026. This demonstrates a strong growth trajectory in a capital-intensive industry. : Financial Performance",
         "CMLL reported an Operating EBITDA Margin of 25.69% in Fiscal 2026, which is higher than the industry average of its peers. This indicates strong operational efficiency and profitability compared to competitors. : Profitability",
         "The company's PAT Margin was 9.41% in Fiscal 2026, which is also better than the industry average. This highlights the company's ability to convert revenue into net profit effectively. : Profitability",
         "CMLL's Net Debt/Equity Ratio was 1.62x as of March 31, 2026, an increase from 1.33x in Fiscal 2025, indicating a rising reliance on debt to fund growth. This leverage needs to be monitored, although management states it is used productively. : Financial Health / Risk",
-        "The IPO proceeds will be used for repayment/prepayment of borrowings (₹20,800 lakhs) and funding capital expenditure for commercial vehicles, plant, and machinery (₹16,700 lakhs). This aims to reduce debt and enhance operational capacity. : Use of Proceeds",
+        "The IPO proceeds will be used for repayment/prepayment of borrowings (\u20b920,800 lakhs) and funding capital expenditure for commercial vehicles, plant, and machinery (\u20b916,700 lakhs). This aims to reduce debt and enhance operational capacity. : Use of Proceeds",
         "The company derives a significant portion of its revenue from a concentrated customer base; its top three customers contributed 90.11% in Fiscal 2026, with Northern Coalfields Limited being the largest at 44.16%. Loss of any key customer could materially impact business. : Customer Concentration Risk",
         "CMLL operates in Maharashtra, Madhya Pradesh, and Chhattisgarh, with Maharashtra contributing 55.49% of revenue in Fiscal 2026. Geographic concentration exposes the company to regional disruptions. : Geographic Concentration Risk",
-        "The company has undertaken Pre-IPO placements of 23,58,490 Equity Shares at ₹424.00 per share, aggregating to ₹10,000.00 lakhs. The IPO price may differ from this pre-IPO price, posing a potential risk for new investors. : Valuation / Pre-IPO Placement",
+        "The company has undertaken Pre-IPO placements of 23,58,490 Equity Shares at \u20b9424.00 per share, aggregating to \u20b910,000.00 lakhs. The IPO price may differ from this pre-IPO price, posing a potential risk for new investors. : Valuation / Pre-IPO Placement",
         "The promoters (Mohit Satishkumar Chadda, Anuj Krishanlal Chadda, Manish Krishanlal Chadda, Rahul Roshanlal Chadda, and Priya Anuj Chadda) collectively hold 88.75% of the pre-Offer equity share capital. This high promoter holding ensures strong control but also means limited public float initially. : Promoter Holding",
-        "CMLL has experienced negative cash flows from investing activities in Fiscal 2025 (₹(15,740.50) lakhs) and Fiscal 2024 (₹(32,731.29) lakhs). Sustained negative cash flows could adversely affect liquidity and financial condition. : Cash Flow Risk",
+        "CMLL has experienced negative cash flows from investing activities in Fiscal 2025 (\u20b9(15,740.50) lakhs) and Fiscal 2024 (\u20b9(32,731.29) lakhs). Sustained negative cash flows could adversely affect liquidity and financial condition. : Cash Flow Risk",
         "The company's mining operations are subject to various risks including accidents, equipment failures, and disruptions due to diesel supply and water availability. These operational risks could lead to decreased production and increased costs. : Operational Risk",
         "CMLL relies on third-party suppliers for critical materials like lubricants, tyres, and steel, and does not have long-term supply contracts. Disruptions in supply or price volatility could adversely impact operations and profitability. : Supply Chain Risk",
         "The company has a pending trademark application for its corporate name and logo. Failure to protect intellectual property rights could adversely affect its brand value and competitive position. : Intellectual Property Risk",
-        "The company has incurred contingent liabilities of ₹45,853.34 lakhs as of March 31, 2026, representing 70.81% of its net worth. Materialization of these liabilities could significantly impact financial condition. : Contingent Liability Risk"
+        "The company has incurred contingent liabilities of \u20b945,853.34 lakhs as of March 31, 2026, representing 70.81% of its net worth. Materialization of these liabilities could significantly impact financial condition. : Contingent Liability Risk"
       ],
       "managementSourceUrl": "https://www.youtube.com/watch?v=AtM1FbJ5rkw",
       "managementVideoTitle": "Caliber Mining IPO: Interview with CMD Mohit Chaddha | Inside First End-to-End Mining Co.",
       "preIpoInvestors": [
         {
           "name": "Abakkus Four2eight Opportunities Fund",
-          "price": "₹240.00",
+          "price": "\u20b9240.00",
           "date": "September 30, 2024"
         },
         {
-          "name": "Anchorage Capital Fund – Anchorage Capital Scheme III",
-          "price": "₹424.00",
+          "name": "Anchorage Capital Fund \u2013 Anchorage Capital Scheme III",
+          "price": "\u20b9424.00",
           "date": "June 17, 2026"
         },
         {
           "name": "Baring Private Equity India Fund 6",
-          "price": "₹424.00",
+          "price": "\u20b9424.00",
           "date": "June 27, 2026"
         },
         {
           "name": "Scarlet Ventures LLP",
-          "price": "₹424.00",
+          "price": "\u20b9424.00",
           "date": "June 27, 2026"
         },
         {
           "name": "Anuj A Sheth",
-          "price": "₹424.00",
+          "price": "\u20b9424.00",
           "date": "June 27, 2026"
         },
         {
           "name": "Maithili Gagan Chaturvedi",
-          "price": "₹424.00",
+          "price": "\u20b9424.00",
           "date": "June 27, 2026"
         }
       ]
@@ -24172,21 +24249,21 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "Aidos India Fund Limited · 3,53,43,000",
-        "Getfive Opportunity Fund -I · 3,00,69,600",
-        "Mint Focused Growth Fund PCC-Cell 1 · 2,00,83,800",
-        "Steptrade Revolution Fund · 2,00,83,800",
-        "Svan Velocity Fund · 2,00,83,800",
-        "Vijit Growth Fund · 2,00,83,800",
-        "Vikasa India EIF I Fund - Share Class P · 2,00,83,800",
-        "India Infinite · 1,45,86,000",
-        "The Golden Bird Investment Trust-I · 1,45,86,000",
-        "Laxminarayan Vyapaar Private Limited · 1,03,22,400",
-        "Abundantia Capital-VCC-Abundantia Capital III · 1,00,98,000",
-        "CCV Emerging Opportunities Fund -I · 1,00,98,000",
-        "Hem Growth Opportunities Fund · 1,00,98,000",
-        "Minerva Ventures Fund · 1,00,98,000",
-        "Samraddh Bharat Special Opportunities Fund- I · 1,00,98,000"
+        "Aidos India Fund Limited \u00b7 3,53,43,000",
+        "Getfive Opportunity Fund -I \u00b7 3,00,69,600",
+        "Mint Focused Growth Fund PCC-Cell 1 \u00b7 2,00,83,800",
+        "Steptrade Revolution Fund \u00b7 2,00,83,800",
+        "Svan Velocity Fund \u00b7 2,00,83,800",
+        "Vijit Growth Fund \u00b7 2,00,83,800",
+        "Vikasa India EIF I Fund - Share Class P \u00b7 2,00,83,800",
+        "India Infinite \u00b7 1,45,86,000",
+        "The Golden Bird Investment Trust-I \u00b7 1,45,86,000",
+        "Laxminarayan Vyapaar Private Limited \u00b7 1,03,22,400",
+        "Abundantia Capital-VCC-Abundantia Capital III \u00b7 1,00,98,000",
+        "CCV Emerging Opportunities Fund -I \u00b7 1,00,98,000",
+        "Hem Growth Opportunities Fund \u00b7 1,00,98,000",
+        "Minerva Ventures Fund \u00b7 1,00,98,000",
+        "Samraddh Bharat Special Opportunities Fund- I \u00b7 1,00,98,000"
       ],
       "anchorShares": 1368000,
       "totalShares": 4800000,
@@ -24194,94 +24271,94 @@
       "preIpoInvestors": [
         {
           "name": "Wealthwave Capital Fund",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "India Infinite",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Amit Haresh Dhulani",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Ritika Nikhil Jaisinghani",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Ajay Jaisinghani",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Sheetal Jignesh Sandhavi",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Monisha Vijay Khanchandani",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Binita Jesal Khakharia",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Tejas Sanat Sheth",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Sumesh Ashok Mishra",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Bhavin Hasmukh",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Shakeel Jairam Shetty",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Shrikrishna Sonti",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Pusha Devi Bhansali",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         },
         {
           "name": "Divyansh Sahai",
-          "price": "₹160",
+          "price": "\u20b9160",
           "date": "November 11, 2025 (Private Placement)"
         }
       ],
       "managementHighlights": [
-        "🎥 Management Interview: \"▶ Promoter interview\" — Watch: https://www.youtube.com/watch?v=WG6Xw1gzfvU",
+        "\ud83c\udfa5 Management Interview: \"\u25b6 Promoter interview\" \u2014 Watch: https://www.youtube.com/watch?v=WG6Xw1gzfvU",
         "Next-year guidance (interview):Management expects year-on-year revenue growth of around 25% to 30% in the near future. They also anticipate the working capital cycle to reduce from 180 days to around 130 days by September end, due to improved payment terms from government clients. Furthermore, by January 2028, the company plans to fully indigenize robot manufacturing at its Bagnan facility, making it a global manufacturing hub for Sotefin.",
         "The company operates in the rapidly growing automated parking systems (APS) market in India, which is projected to grow at a CAGR of 12-18% during 2023-2030. This indicates a significant market opportunity driven by urbanization and demand for space-efficient solutions. : Market Opportunity",
-        "Sotefin Bharat has a strong order book of ₹53,439.85 lakhs as of March 31, 2026, providing clear revenue visibility for the next 2-3 years. This substantial order book underpins future revenue and operational stability. : Order Book",
+        "Sotefin Bharat has a strong order book of \u20b953,439.85 lakhs as of March 31, 2026, providing clear revenue visibility for the next 2-3 years. This substantial order book underpins future revenue and operational stability. : Order Book",
         "The company has a long-standing technology collaboration with Sotefin SA, Switzerland, a global leader with patented robotic parking systems. This provides access to proven Swiss engineering expertise and globally benchmarked designs, differentiating Sotefin Bharat from competitors. : Moat / Technology",
         "Sotefin Bharat is diversifying into automated multi-level bus parking and automated storage and retrieval systems for containers at ports. This strategic expansion into adjacent verticals aims to broaden its product portfolio and reduce reliance on a single product category. : Growth Strategy",
-        "The company reported a PAT of ₹1,736.86 lakhs on a top line of ₹11,674.65 lakhs for FY26, with a PAT margin of approximately 15%. This represents a significant year-on-year growth of 30-35% in PAT, indicating strong financial performance. : Financial Performance",
+        "The company reported a PAT of \u20b91,736.86 lakhs on a top line of \u20b911,674.65 lakhs for FY26, with a PAT margin of approximately 15%. This represents a significant year-on-year growth of 30-35% in PAT, indicating strong financial performance. : Financial Performance",
         "Revenue from operations is highly concentrated, with the top ten customers contributing 91.77%, 84.85%, and 87.30% for FY26, FY25, and FY24 respectively. This high customer concentration poses a significant risk if any key customer reduces or cancels orders. : Risk - Customer Concentration",
         "A significant portion of revenue (56.52% in FY26) is generated from projects with government agencies, which are subject to procurement cycles, budget allocations, and policy changes. This exposes the company to risks of payment delays, contract cancellations, and lower margins due to competitive bidding. : Risk - Government Dependence",
-        "The company experienced negative cash flows from operating activities of ₹(685.84) lakhs in FY26, primarily due to higher trade receivables from government customers. Sustained negative cash flow could adversely impact liquidity and growth plans. : Risk - Cash Flow",
+        "The company experienced negative cash flows from operating activities of \u20b9(685.84) lakhs in FY26, primarily due to higher trade receivables from government customers. Sustained negative cash flow could adversely impact liquidity and growth plans. : Risk - Cash Flow",
         "Sotefin Bharat imports critical patented robotic dolly systems from Sotefin SA, Switzerland, which accounted for 50.40% of total purchases in FY26. Any disruption in this supply arrangement or adverse geopolitical factors could materially affect business operations. : Risk - Import Dependency",
         "The company has limited proprietary intellectual property, relying significantly on licensed technology from Sotefin SA. This dependence and minimal registered IP protection limit its ability to prevent replication by competitors and expose it to licensing risks. : Risk - Intellectual Property",
-        "The company has obtained ISO 9001:2015 and TÜV certification for compliance with EU Machinery Directive 2006/42/EC and EN 14010:2003+A1:2009 standards. These certifications enhance customer confidence and facilitate participation in institutional projects. : Certifications",
+        "The company has obtained ISO 9001:2015 and T\u00dcV certification for compliance with EU Machinery Directive 2006/42/EC and EN 14010:2003+A1:2009 standards. These certifications enhance customer confidence and facilitate participation in institutional projects. : Certifications",
         "Sotefin Bharat is establishing a dedicated manufacturing facility in India for in-house production of robots, currently imported from Switzerland. This indigenization aims to reduce import dependency, improve cost efficiencies, and enhance supply chain resilience, with full localization expected by January 2028. : Manufacturing & Indigenization",
         "The IPO is a 100% fresh issue of up to 48,00,000 Equity Shares, aggregating to an undisclosed amount, with no offer for sale component. This structure indicates that all proceeds will flow into the company for its growth and operational needs. : Issue Structure",
         "The company has entered into MoUs with the Government of Karnataka and MMRDA to promote automated parking and urban mobility solutions. These strategic collaborations are expected to scale solutions and strengthen market presence in India. : Strategic Partnerships",
@@ -24313,26 +24390,26 @@
       "totalShares": 12024000,
       "rhpUrl": "",
       "managementHighlights": [
-        "🎥 Management Interview: \"▶ Promoter interview\" — Watch: https://www.youtube.com/watch?v=EYIgmXdqzpw",
+        "\ud83c\udfa5 Management Interview: \"\u25b6 Promoter interview\" \u2014 Watch: https://www.youtube.com/watch?v=EYIgmXdqzpw",
         "Next-year guidance (interview):The management expects profit growth to be better than revenue growth in the current year, benefiting from the full-year impact of the 5.4 MW and 3.6 MW solar plants and the spinning unit (which had teething issues for one quarter last year). They also anticipate experimenting with new customers with the additional 48 looms.",
-        "The company's revenue from operations has shown significant growth, increasing from ₹1,836.03 million in FY2024 to ₹3,427.13 million in FY2026 (consolidated). This indicates a strong upward trajectory in sales, driven by both organic growth and the acquisition of a subsidiary. : Financial Performance",
+        "The company's revenue from operations has shown significant growth, increasing from \u20b91,836.03 million in FY2024 to \u20b93,427.13 million in FY2026 (consolidated). This indicates a strong upward trajectory in sales, driven by both organic growth and the acquisition of a subsidiary. : Financial Performance",
         ": Profitability has also improved substantially, with PAT margin increasing from 2.66% in FY2024 to 6.34% in FY2026. This suggests enhanced operational efficiency and cost management, contributing to a healthier bottom line. : Profitability",
         "The company has a high customer concentration, with its top 10 customers accounting for 70.33% of revenue in FY2026. This reliance on a few customers poses a significant risk, as the loss of any major customer or a reduction in business from them could materially impact revenue and profitability. : Risk - Customer Concentration",
         "Alpine Texworld is undertaking a fresh issue of up to 1,20,24,000 Equity Shares, with proceeds intended for setting up a new weaving unit (Proposed Manufacturing Unit 3) and repaying outstanding borrowings. This expansion aims to increase production capacity and reduce debt, which could improve financial leverage and operational efficiency. : IPO Details / Use of Proceeds",
         "The company's long-term debt-to-equity ratio was 2.35x in FY2026, which is relatively high. The planned repayment of borrowings using IPO proceeds is expected to reduce this ratio, improving the company's financial stability and leverage. : Financial Health / Debt",
         "The company has invested significantly in solar power plants (820 KW in 2024, 5.4 MW in 2025, 3.6 MW in 2026) to offset electricity consumption. This strategic move aims to reduce power costs and promote cost efficiency, contributing to margin sustainability. : Operational Efficiency / Moat",
-        "The company commenced operations at Manufacturing Unit 2 without obtaining Consolidated Consent and Authorization (CCA) from the Gujarat Pollution Control Board (GPCB), incurring a penalty of ₹1.98 million. While the CCA was subsequently obtained, this highlights a past regulatory non-compliance risk that could recur for Proposed Manufacturing Unit 3. : Risk - Regulatory Compliance",
+        "The company commenced operations at Manufacturing Unit 2 without obtaining Consolidated Consent and Authorization (CCA) from the Gujarat Pollution Control Board (GPCB), incurring a penalty of \u20b91.98 million. While the CCA was subsequently obtained, this highlights a past regulatory non-compliance risk that could recur for Proposed Manufacturing Unit 3. : Risk - Regulatory Compliance",
         "The company is heavily dependent on its top 10 suppliers for raw materials and traded goods, accounting for 64.26% of total purchases in FY2026. The absence of long-term supply agreements with these suppliers exposes the company to risks of supply disruption and price volatility, which could impact production and margins. : Risk - Supplier Concentration",
-        "The Promoters' average cost of acquisition for Equity Shares is significantly lower than the potential IPO price (e.g., Sumit Champalal Agarwal at ₹1.99, Sandeep Santkumar Agrawal at ₹2.52, Sachinkumar Santkumar Agrawal at ₹8.01). This disparity may lead to questions about valuation and potential for quick gains for promoters post-listing. : Valuation / Promoter Interest",
-        "The company has reported negative cash flows from investing activities (₹(323.70) million in FY2026) and financing activities (₹(30.87) million in FY2026). Sustained negative cash flow could adversely impact its ability to meet working capital needs and fund future growth without external financing. : Financial Health / Cash Flow",
+        "The Promoters' average cost of acquisition for Equity Shares is significantly lower than the potential IPO price (e.g., Sumit Champalal Agarwal at \u20b91.99, Sandeep Santkumar Agrawal at \u20b92.52, Sachinkumar Santkumar Agrawal at \u20b98.01). This disparity may lead to questions about valuation and potential for quick gains for promoters post-listing. : Valuation / Promoter Interest",
+        "The company has reported negative cash flows from investing activities (\u20b9(323.70) million in FY2026) and financing activities (\u20b9(30.87) million in FY2026). Sustained negative cash flow could adversely impact its ability to meet working capital needs and fund future growth without external financing. : Financial Health / Cash Flow",
         "The company's long-term credit rating was downgraded by CRISIL Ratings Limited from 'CRISIL BBB-/Stable' to 'CRISIL BB/Stable' in June 2026, with a remark \"Issuer Not Cooperating.\" This downgrade and the dispute over surveillance fees could adversely affect the company's credit profile and increase borrowing costs. : Risk - Credit Rating",
         "The company's manufacturing facilities and sales are highly concentrated in Gujarat, with 97.37% of revenue from operations in FY2026 derived from the state. This geographical concentration exposes the company to local and regional risks such as social unrest, natural disasters, and specific regulatory changes. : Risk - Geographic Concentration",
         "The company has incurred significant capital expenditure in the past and plans to continue doing so, including for Proposed Manufacturing Unit 3. There is no assurance that these expenditures will yield anticipated benefits or that the company can effectively manage rapid growth and associated operational challenges. : Risk - Execution / Growth",
         "The company uses automated imported machinery from global brands like Picanol, Toyota, and Karl Mayer, which require OEM-approved spare parts and technical support. This reliance on proprietary technology and imported components exposes the company to technology lock-in, supply disruptions, and foreign exchange fluctuations. : Operational Risk / Moat",
-        "The company has outstanding unsecured borrowings and loans from related parties amounting to ₹324.37 million as of March 31, 2026, which are repayable on demand. A demand for repayment could materially affect the company's liquidity and financial condition. : Risk - Financial Indebtedness"
+        "The company has outstanding unsecured borrowings and loans from related parties amounting to \u20b9324.37 million as of March 31, 2026, which are repayable on demand. A demand for repayment could materially affect the company's liquidity and financial condition. : Risk - Financial Indebtedness"
       ],
       "managementSourceUrl": "https://www.youtube.com/watch?v=EYIgmXdqzpw",
-      "managementVideoTitle": "SBI Funds Management|Alpine Texworld IPO में पैसा लगाएं या टेक्सटाइल सेक्टर की लिस्टेड कंपनियों में?",
+      "managementVideoTitle": "SBI Funds Management|Alpine Texworld IPO \u092e\u0947\u0902 \u092a\u0948\u0938\u093e \u0932\u0917\u093e\u090f\u0902 \u092f\u093e \u091f\u0947\u0915\u094d\u0938\u091f\u093e\u0907\u0932 \u0938\u0947\u0915\u094d\u091f\u0930 \u0915\u0940 \u0932\u093f\u0938\u094d\u091f\u0947\u0921 \u0915\u0902\u092a\u0928\u093f\u092f\u094b\u0902 \u092e\u0947\u0902?",
       "preIpoInvestors": []
     },
     {
@@ -24379,7 +24456,7 @@
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_100720261412.zip",
       "preIpoInvestors": [],
       "managementHighlights": [
-        "🎥 Management Interview: \"Millworks Technologies : Know Your Promoter - Management interaction with Mr. Sridhar Acharya, MD\" — Watch: https://www.youtube.com/watch?v=Y3DYWJpvj1Y",
+        "\ud83c\udfa5 Management Interview: \"Millworks Technologies : Know Your Promoter - Management interaction with Mr. Sridhar Acharya, MD\" \u2014 Watch: https://www.youtube.com/watch?v=Y3DYWJpvj1Y",
         "Excerpt (transcript matched): So, uh how do you see this revenue mix uh going forward?",
         "Excerpt (transcript matched): So, like uh my last question would be what sort of a growth prospects do you expect going forward because I'm seeing that two things."
       ],
@@ -24549,7 +24626,7 @@
       "totalShares": 170956631,
       "rhpUrl": "",
       "managementHighlights": [
-        "🎥 Management Interview: \"SBI Funds IPO: India's Largest AMC Is Going Public | Management Exclusive | CENTRE POINT\" — Watch: https://www.youtube.com/watch?v=5oWezFkA-Ec",
+        "\ud83c\udfa5 Management Interview: \"SBI Funds IPO: India's Largest AMC Is Going Public | Management Exclusive | CENTRE POINT\" \u2014 Watch: https://www.youtube.com/watch?v=5oWezFkA-Ec",
         "Excerpt (transcript matched): The 11,692 crore rupees, that is at the upper end of the price band, is all set to open on the 14th of July.",
         "Excerpt (transcript matched): And I think a lot of people want to know what will be the nature of the partnership? Is this just the first of more sales to come?",
         "Excerpt (transcript matched): So, Dennis uh you know, how do you sum up the way the asset management uh business and the landscape the industry here has shaped up in the 20 years that you've been participating in this journey?",
@@ -24679,24 +24756,24 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "India Max Investment Fund Limited · 3,75,24,000",
-        "Invicto Multiplier Fund · 2,02,48,800",
-        "Brescon Opportunities Fund · 2,01,07,200",
-        "Meru Investment Fund Pcc- Cell 1 · 1,50,09,600",
-        "Vijit Growth Fund · 1,50,09,600",
-        "Finavenue Capital Trust Finavenue Strategic Fund · 1,01,95,200"
+        "India Max Investment Fund Limited \u00b7 3,75,24,000",
+        "Invicto Multiplier Fund \u00b7 2,02,48,800",
+        "Brescon Opportunities Fund \u00b7 2,01,07,200",
+        "Meru Investment Fund Pcc- Cell 1 \u00b7 1,50,09,600",
+        "Vijit Growth Fund \u00b7 1,50,09,600",
+        "Finavenue Capital Trust Finavenue Strategic Fund \u00b7 1,01,95,200"
       ],
       "anchorShares": 1000800,
       "totalShares": 3588000,
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_070720261547.zip",
       "preIpoInvestors": [],
       "managementHighlights": [
-        "🎥 Management Interview: \"▶ Promoter interview\" — Watch: https://www.youtube.com/watch?v=-mAu1YlKmoA",
+        "\ud83c\udfa5 Management Interview: \"\u25b6 Promoter interview\" \u2014 Watch: https://www.youtube.com/watch?v=-mAu1YlKmoA",
         "Next-year guidance (interview):No specific guidance given in interview",
         "The company is an indigenous manufacturer of catalysts, adsorbents, and ceramic balls in India, serving critical industrial processes. This positions them well to benefit from the 'Make in India' initiative and import substitution push, which are strategic government priorities. : Business Model",
-        "Devson Catalyst has a strong track record of profitability and consistent financial performance. Revenue from operations grew from ₹4,346.99 lakhs in FY2024 to ₹5,577.59 lakhs in FY2026 (CAGR of 13.21%), and Profit After Tax increased by 207.01% from ₹407.84 lakhs to ₹1,252.09 lakhs in the same period. This demonstrates strong growth and operational efficiency. : Financial Performance",
+        "Devson Catalyst has a strong track record of profitability and consistent financial performance. Revenue from operations grew from \u20b94,346.99 lakhs in FY2024 to \u20b95,577.59 lakhs in FY2026 (CAGR of 13.21%), and Profit After Tax increased by 207.01% from \u20b9407.84 lakhs to \u20b91,252.09 lakhs in the same period. This demonstrates strong growth and operational efficiency. : Financial Performance",
         "The company's EBITDA margin has shown significant improvement, rising from 15.29% in FY2024 to 29.49% in FY2026. This indicates enhanced operational profitability and efficiency over the past three fiscal years. : Profitability",
-        "The IPO consists of a fresh issue of 33,38,000 equity shares aggregating to ₹3,938.84 lakhs and an offer for sale of 2,50,000 equity shares aggregating to ₹295.00 lakhs. The fresh issue proceeds will be used for capital expenditure to set up a new manufacturing unit and for working capital requirements, which is crucial for future growth. : Use of Proceeds",
+        "The IPO consists of a fresh issue of 33,38,000 equity shares aggregating to \u20b93,938.84 lakhs and an offer for sale of 2,50,000 equity shares aggregating to \u20b9295.00 lakhs. The fresh issue proceeds will be used for capital expenditure to set up a new manufacturing unit and for working capital requirements, which is crucial for future growth. : Use of Proceeds",
         "The company proposes to set up a new manufacturing unit at Industrial Plot No. 259, G.I.D.C. Estate, Wadhwancity, Gujarat, to expand its manufacturing capabilities. This expansion is expected to improve operational efficiency, increase production capacity, and enable economies of scale, supporting future growth. : Growth Strategy",
         "A significant portion of the company's revenue (60.12% in FY2026) is derived from its top 5 customers, and 76.03% from its top 10 customers. This high customer concentration poses a risk, as the loss of one or more key customers or a reduction in their demand could materially affect business, results of operations, and cash flows. : Risk - Customer Concentration",
         "The company is dependent on a limited number of suppliers for key raw materials, with the top 10 suppliers accounting for 75.82% of total raw material cost in FY2026. The absence of long-term supply contracts and potential disruptions in supply or adverse price fluctuations could adversely affect operations and financial performance. : Risk - Supplier Concentration",
@@ -24705,8 +24782,8 @@
         "There have been instances of delays in payment of certain statutory dues, including TDS. Although these dues have been subsequently paid, any further delays could attract financial penalties and adversely impact the company's financial condition and cash flows. : Risk - Statutory Dues",
         "The company's revenues are significantly dependent on certain geographical regions (Gujarat and Maharashtra in India, and Kuwait, Qatar, Turkey, USA, UAE internationally) and export markets. Adverse developments in these markets could materially affect business, financial condition, and results of operations. : Risk - Geographic Concentration",
         "The industrial catalyst market is highly competitive, with multinational and domestic players. Competition from larger, better-resourced, or technologically advanced players, including imports, may affect market share, pricing, margins, and growth prospects. : Risk - Competition",
-        "The company's business is working capital intensive, with net working capital requirements projected to increase from ₹2,122.69 lakhs in FY2026 to ₹3,118.23 lakhs in FY2027. Inability to secure additional funding or renew existing arrangements could adversely affect liquidity and expansion plans. : Risk - Working Capital",
-        "The average cost of acquisition for promoters is significantly lower than the offer price. For example, Prahladbhai Devjibhai Shiyaniya's average cost is ₹0.24 per share, compared to the IPO price of ₹118. This disparity may raise concerns about promoter incentives post-listing. : Valuation - Promoter WACA",
+        "The company's business is working capital intensive, with net working capital requirements projected to increase from \u20b92,122.69 lakhs in FY2026 to \u20b93,118.23 lakhs in FY2027. Inability to secure additional funding or renew existing arrangements could adversely affect liquidity and expansion plans. : Risk - Working Capital",
+        "The average cost of acquisition for promoters is significantly lower than the offer price. For example, Prahladbhai Devjibhai Shiyaniya's average cost is \u20b90.24 per share, compared to the IPO price of \u20b9118. This disparity may raise concerns about promoter incentives post-listing. : Valuation - Promoter WACA",
         "The company has not declared or paid dividends in the last three financial years. Future dividend payments will depend on earnings, financial condition, capital requirements, and contractual commitments, offering no assurance of future dividends. : Dividend Policy"
       ],
       "managementSourceUrl": "https://www.youtube.com/watch?v=-mAu1YlKmoA"
@@ -26308,7 +26385,7 @@
           "buyPrice": 11.54,
           "ipoPrice": 59,
           "discountPct": 80.4,
-          "type": "Strategic Corporate Pre-IPO (9.08% pre-issue / 13x Bonus Adj. from ₹150)"
+          "type": "Strategic Corporate Pre-IPO (9.08% pre-issue / 13x Bonus Adj. from \u20b9150)"
         },
         {
           "name": "Brightful Commercial Private Limited",
@@ -26317,7 +26394,7 @@
           "buyPrice": 11.54,
           "ipoPrice": 59,
           "discountPct": 80.4,
-          "type": "Strategic Corporate Pre-IPO (7.51% pre-issue / 13x Bonus Adj. from ₹150)"
+          "type": "Strategic Corporate Pre-IPO (7.51% pre-issue / 13x Bonus Adj. from \u20b9150)"
         },
         {
           "name": "Miteshkumar Rameshbhai Chaudhari",
@@ -26390,7 +26467,7 @@
           "buyPrice": 117.43,
           "ipoPrice": 239,
           "discountPct": 50.9,
-          "type": "Marquee Pre-IPO Investor (45:1 Bonus Adj. from ₹5,402)"
+          "type": "Marquee Pre-IPO Investor (45:1 Bonus Adj. from \u20b95,402)"
         },
         {
           "name": "KAPICO Investment Co. L.L.C (Kuwait PE/Family Office)",
@@ -26399,7 +26476,7 @@
           "buyPrice": 117.43,
           "ipoPrice": 239,
           "discountPct": 50.9,
-          "type": "Institutional Pre-IPO Investor (45:1 Bonus Adj. from ₹5,402)"
+          "type": "Institutional Pre-IPO Investor (45:1 Bonus Adj. from \u20b95,402)"
         },
         {
           "name": "Manish Agarwal",
@@ -26408,7 +26485,7 @@
           "buyPrice": 114.63,
           "ipoPrice": 239,
           "discountPct": 52,
-          "type": "Key Pre-IPO Investor (45:1 Bonus Adj. from ₹5,150 & ₹5,402)"
+          "type": "Key Pre-IPO Investor (45:1 Bonus Adj. from \u20b95,150 & \u20b95,402)"
         },
         {
           "name": "NB Ventures Limited (Neelesh Bhatnagar)",
@@ -26417,7 +26494,7 @@
           "buyPrice": 111.96,
           "ipoPrice": 239,
           "discountPct": 53.2,
-          "type": "VC Pre-IPO Investor (45:1 Bonus Adj. from ₹5,150)"
+          "type": "VC Pre-IPO Investor (45:1 Bonus Adj. from \u20b95,150)"
         },
         {
           "name": "Saju Sebastian Eapen",
@@ -26550,16 +26627,16 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "ICICI PRUDENTIAL SMALLCAP FUND (15,30,412 shares | ₹879.99 Cr)",
-        "JUPITER INDIA FUND (8,63,746 shares | ₹496.65 Cr)",
-        "JUPITER GLOBAL FUND,THE-JUPITER INDIA SELECT (4,40,596 shares | ₹253.34 Cr)",
-        "ADITYA BIRLA SUN LIFE INSURANCE CO.LTD. (11,82,584 shares | ₹679.99 Cr)",
-        "ITI MULTI CAP FUND (1,04,390 shares | ₹60.02 Cr)",
-        "ITI FLEXI CAP FUND (1,04,390 shares | ₹60.02 Cr)",
-        "SINGULARITY EQUITY FUND I (1,73,895 shares | ₹99.99 Cr)",
-        "INTEGRATED CORE STRATEGIES (ASIA) PTE.LTD. (2,60,858 shares | ₹149.99 Cr)",
-        "MORGAN STANLEY ASIA (SINGAPORE) PTE. (1,73,914 shares | ₹100.01 Cr)",
-        "BOFA SECURITIES EUROPE SA-ODI (4,86,954 shares | ₹280.00 Cr)"
+        "ICICI PRUDENTIAL SMALLCAP FUND (15,30,412 shares | \u20b9879.99 Cr)",
+        "JUPITER INDIA FUND (8,63,746 shares | \u20b9496.65 Cr)",
+        "JUPITER GLOBAL FUND,THE-JUPITER INDIA SELECT (4,40,596 shares | \u20b9253.34 Cr)",
+        "ADITYA BIRLA SUN LIFE INSURANCE CO.LTD. (11,82,584 shares | \u20b9679.99 Cr)",
+        "ITI MULTI CAP FUND (1,04,390 shares | \u20b960.02 Cr)",
+        "ITI FLEXI CAP FUND (1,04,390 shares | \u20b960.02 Cr)",
+        "SINGULARITY EQUITY FUND I (1,73,895 shares | \u20b999.99 Cr)",
+        "INTEGRATED CORE STRATEGIES (ASIA) PTE.LTD. (2,60,858 shares | \u20b9149.99 Cr)",
+        "MORGAN STANLEY ASIA (SINGAPORE) PTE. (1,73,914 shares | \u20b9100.01 Cr)",
+        "BOFA SECURITIES EUROPE SA-ODI (4,86,954 shares | \u20b9280.00 Cr)"
       ],
       "anchorShares": 0,
       "totalShares": 0,
@@ -26622,10 +26699,10 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "INNOVATIVE VISION FUND (2,04,000 shares | ₹1.10 Cr)",
-        "LRSD SECURITIES PVT.LTD. (1,86,000 shares | ₹1.00 Cr)",
-        "SB OPPORTUNITIES FUND II (1,86,000 shares | ₹1.00 Cr)",
-        "TATTVAM AIF TRUST (1,86,000 shares | ₹1.00 Cr)"
+        "INNOVATIVE VISION FUND (2,04,000 shares | \u20b91.10 Cr)",
+        "LRSD SECURITIES PVT.LTD. (1,86,000 shares | \u20b91.00 Cr)",
+        "SB OPPORTUNITIES FUND II (1,86,000 shares | \u20b91.00 Cr)",
+        "TATTVAM AIF TRUST (1,86,000 shares | \u20b91.00 Cr)"
       ],
       "anchorShares": 768000,
       "totalShares": 2700000,
@@ -26690,11 +26767,11 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "INDIA MAX INVESTMENT FUND LIMITED (6.03L sh. | ₹5.01 Cr)",
-        "TATTVAM AIF TRUST - AANJAY AGELESS AIF FUND (4.82L sh. | ₹4.00 Cr)",
-        "FINWAVE GLOBAL OPPORTUNITIES FUND (2.91L sh. | ₹2.42 Cr)",
-        "KHANDELWAL FINANCE PRIVATE LIMITED (1.22L sh. | ₹1.01 Cr)",
-        "TIGER STRATEGIES FUND - I (1.22L sh. | ₹1.01 Cr)"
+        "INDIA MAX INVESTMENT FUND LIMITED (6.03L sh. | \u20b95.01 Cr)",
+        "TATTVAM AIF TRUST - AANJAY AGELESS AIF FUND (4.82L sh. | \u20b94.00 Cr)",
+        "FINWAVE GLOBAL OPPORTUNITIES FUND (2.91L sh. | \u20b92.42 Cr)",
+        "KHANDELWAL FINANCE PRIVATE LIMITED (1.22L sh. | \u20b91.01 Cr)",
+        "TIGER STRATEGIES FUND - I (1.22L sh. | \u20b91.01 Cr)"
       ],
       "anchorShares": 0,
       "totalShares": 0,
@@ -26778,11 +26855,11 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "NINE ALPS TRUST-NINE ALPS OPPORTUNITY FUND (6,52,800 shares | ₹6.01 Cr)",
-        "SINGULARITY EQUITY FUND (3,75,600 shares | ₹3.46 Cr)",
-        "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND (3,75,600 shares | ₹3.46 Cr)",
-        "AARTH AIF GROWTH FUND (2,30,400 shares | ₹2.12 Cr)",
-        "VIRA AIF TRUST-VIRA BHARAT OPPORTUNITIES FUND (1,09,200 shares | ₹1.00 Cr)"
+        "NINE ALPS TRUST-NINE ALPS OPPORTUNITY FUND (6,52,800 shares | \u20b96.01 Cr)",
+        "SINGULARITY EQUITY FUND (3,75,600 shares | \u20b93.46 Cr)",
+        "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND (3,75,600 shares | \u20b93.46 Cr)",
+        "AARTH AIF GROWTH FUND (2,30,400 shares | \u20b92.12 Cr)",
+        "VIRA AIF TRUST-VIRA BHARAT OPPORTUNITIES FUND (1,09,200 shares | \u20b91.00 Cr)"
       ],
       "anchorShares": 1743600,
       "totalShares": 6124800,
@@ -26882,25 +26959,25 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "MOTILAL OSWAL DIGITAL INDIA FUND (10,25,644 shares | ₹44.00 Cr)",
-        "MOTILAL OSWAL CONTRA FUND (93,228 shares | ₹4.00 Cr)",
-        "BANDHAN FOCUSED FUND (6,52,698 shares | ₹28.00 Cr)",
-        "BANDHAN SMALL CAP FUND (4,66,174 shares | ₹20.00 Cr)",
-        "QSIF HYBRID LONG-SHORT FUND (5,59,436 shares | ₹24.00 Cr)",
-        "QSIF ACTIVE ASSET ALLOCATOR LONG-SHORT FUND (5,59,436 shares | ₹24.00 Cr)",
-        "ITI LARGE & MIDCAP FUND (2,09,780 shares | ₹9.00 Cr)",
-        "ITI LARGE CAP FUND (1,16,552 shares | ₹5.00 Cr)",
-        "ITI BALANCED ADVANTAGE FUND (46,614 shares | ₹2.00 Cr)",
-        "ITI BHARAT CONSUMPTION FUND (46,614 shares | ₹2.00 Cr)",
-        "ITI BUSINESS CYCLE FUND (46,614 shares | ₹2.00 Cr)",
-        "JM FLEXICAP FUND (1,86,490 shares | ₹8.00 Cr)",
-        "BAJAJ GENERAL INSURANCE LTD.-POLICYHOLDERS EQUITY (1,30,543 shares | ₹5.60 Cr)",
-        "BAJAJ GENERAL INSURANCE LTD.-SHAREHOLDERS EQUITY (55,947 shares | ₹2.40 Cr)",
-        "SAMCO SMALL CAP FUND (1,16,552 shares | ₹5.00 Cr)",
-        "SANSHI FUND-I (2,33,070 shares | ₹10.00 Cr)",
-        "MERU INVESTMENT FUND PCC-CELL 1 (2,33,104 shares | ₹100.00 Cr)",
-        "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND (1,39,808 shares | ₹6.00 Cr)",
-        "CP Capital Ltd. (1,16,660 shares | ₹5.00 Cr)"
+        "MOTILAL OSWAL DIGITAL INDIA FUND (10,25,644 shares | \u20b944.00 Cr)",
+        "MOTILAL OSWAL CONTRA FUND (93,228 shares | \u20b94.00 Cr)",
+        "BANDHAN FOCUSED FUND (6,52,698 shares | \u20b928.00 Cr)",
+        "BANDHAN SMALL CAP FUND (4,66,174 shares | \u20b920.00 Cr)",
+        "QSIF HYBRID LONG-SHORT FUND (5,59,436 shares | \u20b924.00 Cr)",
+        "QSIF ACTIVE ASSET ALLOCATOR LONG-SHORT FUND (5,59,436 shares | \u20b924.00 Cr)",
+        "ITI LARGE & MIDCAP FUND (2,09,780 shares | \u20b99.00 Cr)",
+        "ITI LARGE CAP FUND (1,16,552 shares | \u20b95.00 Cr)",
+        "ITI BALANCED ADVANTAGE FUND (46,614 shares | \u20b92.00 Cr)",
+        "ITI BHARAT CONSUMPTION FUND (46,614 shares | \u20b92.00 Cr)",
+        "ITI BUSINESS CYCLE FUND (46,614 shares | \u20b92.00 Cr)",
+        "JM FLEXICAP FUND (1,86,490 shares | \u20b98.00 Cr)",
+        "BAJAJ GENERAL INSURANCE LTD.-POLICYHOLDERS EQUITY (1,30,543 shares | \u20b95.60 Cr)",
+        "BAJAJ GENERAL INSURANCE LTD.-SHAREHOLDERS EQUITY (55,947 shares | \u20b92.40 Cr)",
+        "SAMCO SMALL CAP FUND (1,16,552 shares | \u20b95.00 Cr)",
+        "SANSHI FUND-I (2,33,070 shares | \u20b910.00 Cr)",
+        "MERU INVESTMENT FUND PCC-CELL 1 (2,33,104 shares | \u20b9100.00 Cr)",
+        "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND (1,39,808 shares | \u20b96.00 Cr)",
+        "CP Capital Ltd. (1,16,660 shares | \u20b95.00 Cr)"
       ],
       "anchorShares": 5034964,
       "totalShares": 16783216,
@@ -27054,10 +27131,10 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "WHITEOAK CAPITAL EQUITY FUND (4,32,750 shares | ₹8.66 Cr)",
-        "SANSHI FUND-I (4,32,750 shares | ₹8.66 Cr)",
-        "PLUTUS INVESTMENT TRUST-PLUTUS EQUITY INVESTMENTS SERIES (2,53,500 shares | ₹5.07 Cr)",
-        "KHANDELWAL FINANCE PVT.LTD. (2,53,500 shares | ₹5.07 Cr)"
+        "WHITEOAK CAPITAL EQUITY FUND (4,32,750 shares | \u20b98.66 Cr)",
+        "SANSHI FUND-I (4,32,750 shares | \u20b98.66 Cr)",
+        "PLUTUS INVESTMENT TRUST-PLUTUS EQUITY INVESTMENTS SERIES (2,53,500 shares | \u20b95.07 Cr)",
+        "KHANDELWAL FINANCE PVT.LTD. (2,53,500 shares | \u20b95.07 Cr)"
       ],
       "anchorShares": 1372500,
       "totalShares": 4575000,
@@ -27166,14 +27243,14 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "NEXUS GLOBAL OPPORTUNITIES FUND (2,40,000 shares | ₹1.15 Cr)",
-        "MONEYWISE FINANCIAL SERVICES PVT.LTD. (2,10,000 shares | ₹1.01 Cr)",
-        "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES (3,96,000 shares | ₹1.90 Cr)",
-        "NEXT ORBIT GROWTH FUND III (2,70,000 shares | ₹1.30 Cr)",
-        "VIJIT GROWTH FUND (2,10,000 shares | ₹1.01 Cr)",
-        "360 ONE PRIME LTD. (2,10,000 shares | ₹1.01 Cr)",
-        "PESB ALPHA FUND (2,10,000 shares | ₹1.01 Cr)",
-        "ARVESTA FINANCIAL SERVICES PVT.LTD. (2,10,000 shares | ₹1.01 Cr)"
+        "NEXUS GLOBAL OPPORTUNITIES FUND (2,40,000 shares | \u20b91.15 Cr)",
+        "MONEYWISE FINANCIAL SERVICES PVT.LTD. (2,10,000 shares | \u20b91.01 Cr)",
+        "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES (3,96,000 shares | \u20b91.90 Cr)",
+        "NEXT ORBIT GROWTH FUND III (2,70,000 shares | \u20b91.30 Cr)",
+        "VIJIT GROWTH FUND (2,10,000 shares | \u20b91.01 Cr)",
+        "360 ONE PRIME LTD. (2,10,000 shares | \u20b91.01 Cr)",
+        "PESB ALPHA FUND (2,10,000 shares | \u20b91.01 Cr)",
+        "ARVESTA FINANCIAL SERVICES PVT.LTD. (2,10,000 shares | \u20b91.01 Cr)"
       ],
       "anchorShares": 1956000,
       "totalShares": 3876000,
@@ -27186,7 +27263,7 @@
           "buyPrice": 48,
           "ipoPrice": 48,
           "discountPct": 0,
-          "type": "Institutional Pre-IPO Investor (3.5:1 Bonus Adj. from ₹216)"
+          "type": "Institutional Pre-IPO Investor (3.5:1 Bonus Adj. from \u20b9216)"
         },
         {
           "name": "Invicta Continuum Fund I",
@@ -27195,7 +27272,7 @@
           "buyPrice": 48,
           "ipoPrice": 48,
           "discountPct": 0,
-          "type": "AIF / Institutional (3.5:1 Bonus Adj. from ₹216)"
+          "type": "AIF / Institutional (3.5:1 Bonus Adj. from \u20b9216)"
         },
         {
           "name": "Vijay Chhabra",
@@ -27247,14 +27324,14 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "BHARAT EMERGING & STRATEGIC TECHNOLOGY FUND (5,51,000 shares | ₹7.44 Cr)",
-        "INDIA EQUITY FUND I (2,04,000 shares | ₹2.75 Cr)",
-        "AARTH AIF GROWTH FUND (2,04,000 shares | ₹2.75 Cr)",
-        "TIGER STRATEGIES FUND 1 (2,04,000 shares | ₹2.75 Cr)",
-        "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND (1,49,000 shares | ₹2.01 Cr)",
-        "VENTUREX FUND I (89,000 shares | ₹1.20 Cr)",
-        "NAVBHARAT INVESTMENT TRUST-NAVBHARAT INVESTMENT OPPORTUNITIES FUND (89,000 shares | ₹1.20 Cr)",
-        "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES (89,000 shares | ₹1.20 Cr)"
+        "BHARAT EMERGING & STRATEGIC TECHNOLOGY FUND (5,51,000 shares | \u20b97.44 Cr)",
+        "INDIA EQUITY FUND I (2,04,000 shares | \u20b92.75 Cr)",
+        "AARTH AIF GROWTH FUND (2,04,000 shares | \u20b92.75 Cr)",
+        "TIGER STRATEGIES FUND 1 (2,04,000 shares | \u20b92.75 Cr)",
+        "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND (1,49,000 shares | \u20b92.01 Cr)",
+        "VENTUREX FUND I (89,000 shares | \u20b91.20 Cr)",
+        "NAVBHARAT INVESTMENT TRUST-NAVBHARAT INVESTMENT OPPORTUNITIES FUND (89,000 shares | \u20b91.20 Cr)",
+        "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES (89,000 shares | \u20b91.20 Cr)"
       ],
       "anchorShares": 1579000,
       "totalShares": 5550000,
@@ -27320,36 +27397,36 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "HDFC LARGE & MID CAP FUND (6,57,566 shares | ₹5.39 Cr)",
-        "HDFC INNOVATION FUND (6,57,566 shares | ₹5.39 Cr)",
-        "HDFC INFRASTRUCTURE FUND (18,26,916 shares | ₹14.98 Cr)",
-        "HDFC BUSINESS CYCLE FUND (6,57,566 shares | ₹5.39 Cr)",
-        "HDFC VALUE FUND (6,57,566 shares | ₹5.39 Cr)",
-        "HDFC MANUFACTURING FUND (10,23,204 shares | ₹8.39 Cr)",
-        "KOTAK CONTRA FUND (12,17,762 shares | ₹9.99 Cr)",
-        "KOTAK MANUFACTURE IN INDIA FUND (12,17,762 shares | ₹9.99 Cr)",
-        "KOTAK SPECIAL OPPORTUNITIES FUND (12,17,762 shares | ₹9.99 Cr)",
-        "KOTAK ENERGY OPPORTUNITIES FUND (6,08,790 shares | ₹4.99 Cr)",
-        "KOTAK RURAL OPPORTUNITIES FUND (12,18,308 shares | ₹9.99 Cr)",
-        "MOTILAL OSWAL LARGE CAP FUND (6,07,925 shares | ₹4.98 Cr)",
-        "MOTILAL OSWAL CONTRA FUND (6,07,925 shares | ₹4.98 Cr)",
-        "MOTILAL OSWAL SPECIAL OPPORTUNITIES FUND (6,07,926 shares | ₹4.98 Cr)",
-        "MOTILAL OSWAL INNOVATION OPPORTUNITIES FUND (6,07,926 shares | ₹4.98 Cr)",
-        "BANDHAN SMALL CAP FUND (12,15,942 shares | ₹9.97 Cr)",
-        "BANDHAN BALANCED ADVANTAGE FUND (12,15,760 shares | ₹9.97 Cr)",
-        "ABAKKUS GROWTH FUND-OPEN ENDED (18,21,820 shares | ₹14.94 Cr)",
-        "3PIM INDIA EQUITY (IFSC) FUND (10,92,182 shares | ₹8.96 Cr)",
-        "EDELWEISS EQUITY SAVINGS FUND (4,54,985 shares | ₹3.73 Cr)",
-        "EDELWEISS RECENTLY LISTED IPO FUND (4,55,000 shares | ₹3.73 Cr)",
-        "BANK OF INDIA MID CAP FUND (7,27,075 shares | ₹5.96 Cr)",
-        "JM LARGE & MIDCAP FUND (3,04,850 shares | ₹2.50 Cr)",
-        "JM VALUE FUND (3,05,032 shares | ₹2.50 Cr)",
-        "SBI GENERAL INSURANCE CO.LTD. (7,27,075 shares | ₹5.96 Cr)",
-        "BAJAJ LIFE INSURANCE LTD. (6,09,882 shares | ₹5.00 Cr)",
-        "KOTAK MAHINDRA LIFE INSURANCE CO.LTD. (10,92,182 shares | ₹8.96 Cr)",
-        "ASHIKA GLOBAL FINANCE PVT.LTD. (6,09,882 shares | ₹5.00 Cr)",
-        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD. (6,09,882 shares | ₹5.00 Cr)",
-        "SILVER STRIDE INDIA GLOBAL FUND (6,09,882 shares | ₹5.00 Cr)"
+        "HDFC LARGE & MID CAP FUND (6,57,566 shares | \u20b95.39 Cr)",
+        "HDFC INNOVATION FUND (6,57,566 shares | \u20b95.39 Cr)",
+        "HDFC INFRASTRUCTURE FUND (18,26,916 shares | \u20b914.98 Cr)",
+        "HDFC BUSINESS CYCLE FUND (6,57,566 shares | \u20b95.39 Cr)",
+        "HDFC VALUE FUND (6,57,566 shares | \u20b95.39 Cr)",
+        "HDFC MANUFACTURING FUND (10,23,204 shares | \u20b98.39 Cr)",
+        "KOTAK CONTRA FUND (12,17,762 shares | \u20b99.99 Cr)",
+        "KOTAK MANUFACTURE IN INDIA FUND (12,17,762 shares | \u20b99.99 Cr)",
+        "KOTAK SPECIAL OPPORTUNITIES FUND (12,17,762 shares | \u20b99.99 Cr)",
+        "KOTAK ENERGY OPPORTUNITIES FUND (6,08,790 shares | \u20b94.99 Cr)",
+        "KOTAK RURAL OPPORTUNITIES FUND (12,18,308 shares | \u20b99.99 Cr)",
+        "MOTILAL OSWAL LARGE CAP FUND (6,07,925 shares | \u20b94.98 Cr)",
+        "MOTILAL OSWAL CONTRA FUND (6,07,925 shares | \u20b94.98 Cr)",
+        "MOTILAL OSWAL SPECIAL OPPORTUNITIES FUND (6,07,926 shares | \u20b94.98 Cr)",
+        "MOTILAL OSWAL INNOVATION OPPORTUNITIES FUND (6,07,926 shares | \u20b94.98 Cr)",
+        "BANDHAN SMALL CAP FUND (12,15,942 shares | \u20b99.97 Cr)",
+        "BANDHAN BALANCED ADVANTAGE FUND (12,15,760 shares | \u20b99.97 Cr)",
+        "ABAKKUS GROWTH FUND-OPEN ENDED (18,21,820 shares | \u20b914.94 Cr)",
+        "3PIM INDIA EQUITY (IFSC) FUND (10,92,182 shares | \u20b98.96 Cr)",
+        "EDELWEISS EQUITY SAVINGS FUND (4,54,985 shares | \u20b93.73 Cr)",
+        "EDELWEISS RECENTLY LISTED IPO FUND (4,55,000 shares | \u20b93.73 Cr)",
+        "BANK OF INDIA MID CAP FUND (7,27,075 shares | \u20b95.96 Cr)",
+        "JM LARGE & MIDCAP FUND (3,04,850 shares | \u20b92.50 Cr)",
+        "JM VALUE FUND (3,05,032 shares | \u20b92.50 Cr)",
+        "SBI GENERAL INSURANCE CO.LTD. (7,27,075 shares | \u20b95.96 Cr)",
+        "BAJAJ LIFE INSURANCE LTD. (6,09,882 shares | \u20b95.00 Cr)",
+        "KOTAK MAHINDRA LIFE INSURANCE CO.LTD. (10,92,182 shares | \u20b98.96 Cr)",
+        "ASHIKA GLOBAL FINANCE PVT.LTD. (6,09,882 shares | \u20b95.00 Cr)",
+        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD. (6,09,882 shares | \u20b95.00 Cr)",
+        "SILVER STRIDE INDIA GLOBAL FUND (6,09,882 shares | \u20b95.00 Cr)"
       ],
       "anchorShares": 25243901,
       "totalShares": 85365851,
@@ -27362,7 +27439,7 @@
           "buyPrice": 37.5,
           "ipoPrice": 82,
           "discountPct": 54.3,
-          "type": "Pre-IPO Further Issue / Secondary (Bonus & Split Adj. from ₹500)"
+          "type": "Pre-IPO Further Issue / Secondary (Bonus & Split Adj. from \u20b9500)"
         },
         {
           "name": "DRP Trading and Investments Private Limited",
@@ -27371,7 +27448,7 @@
           "buyPrice": 37.5,
           "ipoPrice": 82,
           "discountPct": 54.3,
-          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from ₹500)"
+          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from \u20b9500)"
         },
         {
           "name": "Regal Financial Advisory Private Limited",
@@ -27380,7 +27457,7 @@
           "buyPrice": 37.5,
           "ipoPrice": 82,
           "discountPct": 54.3,
-          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from ₹500)"
+          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from \u20b9500)"
         },
         {
           "name": "Sanatan Vinimay Private Limited",
@@ -27389,7 +27466,7 @@
           "buyPrice": 37.5,
           "ipoPrice": 82,
           "discountPct": 54.3,
-          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from ₹500)"
+          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from \u20b9500)"
         },
         {
           "name": "Embassy Vyapaar Private Limited",
@@ -27398,7 +27475,7 @@
           "buyPrice": 37.5,
           "ipoPrice": 82,
           "discountPct": 54.3,
-          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from ₹500)"
+          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from \u20b9500)"
         },
         {
           "name": "Adishwar Trade Link Private Limited",
@@ -27407,7 +27484,7 @@
           "buyPrice": 37.5,
           "ipoPrice": 82,
           "discountPct": 54.3,
-          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from ₹500)"
+          "type": "Pre-IPO Further Issue (Bonus & Split Adj. from \u20b9500)"
         },
         {
           "name": "Jalsagar Sales Agency Private Limited",
@@ -27416,7 +27493,7 @@
           "buyPrice": 2.63,
           "ipoPrice": 82,
           "discountPct": 96.8,
-          "type": "Pre-IPO Secondary Transfer (Bonus & Split Adj. from ₹35)"
+          "type": "Pre-IPO Secondary Transfer (Bonus & Split Adj. from \u20b935)"
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_capital_structure_1787602446.pdf",
@@ -27450,16 +27527,16 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "BHARAT VENTURE OPPORTUNITIES FUND (3,00,800 shares | ₹2.71 Cr)",
-        "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND (2,56,000 shares | ₹2.30 Cr)",
-        "CP Capital Ltd. (2,08,000 shares | ₹1.87 Cr)",
-        "TIGER STRATEGIES FUND 1 (1,66,400 shares | ₹1.50 Cr)",
-        "CCV EMERGING OPPORTUNITIES FUND I (1,12,000 shares | ₹1.01 Cr)",
-        "VIKASA INDIA EIF I FUND-SHARE CLASS P (1,12,000 shares | ₹1.01 Cr)",
-        "HEM GROWTH OPPORTUNITIES FUND (1,12,000 shares | ₹1.01 Cr)",
-        "SMART HORIZON OPPORTUNITY FUND (1,12,000 shares | ₹1.01 Cr)",
-        "STEPTRADE REVOLUTION FUND II (1,12,000 shares | ₹1.01 Cr)",
-        "LIGHTHOUSE CANTON SPECIAL OPPORTUNITIES FUND I (1,12,000 shares | ₹1.01 Cr)"
+        "BHARAT VENTURE OPPORTUNITIES FUND (3,00,800 shares | \u20b92.71 Cr)",
+        "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND (2,56,000 shares | \u20b92.30 Cr)",
+        "CP Capital Ltd. (2,08,000 shares | \u20b91.87 Cr)",
+        "TIGER STRATEGIES FUND 1 (1,66,400 shares | \u20b91.50 Cr)",
+        "CCV EMERGING OPPORTUNITIES FUND I (1,12,000 shares | \u20b91.01 Cr)",
+        "VIKASA INDIA EIF I FUND-SHARE CLASS P (1,12,000 shares | \u20b91.01 Cr)",
+        "HEM GROWTH OPPORTUNITIES FUND (1,12,000 shares | \u20b91.01 Cr)",
+        "SMART HORIZON OPPORTUNITY FUND (1,12,000 shares | \u20b91.01 Cr)",
+        "STEPTRADE REVOLUTION FUND II (1,12,000 shares | \u20b91.01 Cr)",
+        "LIGHTHOUSE CANTON SPECIAL OPPORTUNITIES FUND I (1,12,000 shares | \u20b91.01 Cr)"
       ],
       "anchorShares": 1603200,
       "totalShares": 5641600,
@@ -27472,7 +27549,7 @@
           "buyPrice": 71.13,
           "ipoPrice": 90,
           "discountPct": 21,
-          "type": "AIF / Institutional (7:1 Bonus Adj. from ₹569)"
+          "type": "AIF / Institutional (7:1 Bonus Adj. from \u20b9569)"
         },
         {
           "name": "Convivial Advisors LLP",
@@ -27481,7 +27558,7 @@
           "buyPrice": 71.13,
           "ipoPrice": 90,
           "discountPct": 21,
-          "type": "Corporate Pre-IPO Investor (7:1 Bonus Adj. from ₹569)"
+          "type": "Corporate Pre-IPO Investor (7:1 Bonus Adj. from \u20b9569)"
         },
         {
           "name": "Kusumgar Holdings LLP",
@@ -27490,7 +27567,7 @@
           "buyPrice": 71.13,
           "ipoPrice": 90,
           "discountPct": 21,
-          "type": "Corporate Pre-IPO Investor (7:1 Bonus Adj. from ₹569)"
+          "type": "Corporate Pre-IPO Investor (7:1 Bonus Adj. from \u20b9569)"
         },
         {
           "name": "Abhay Mushale, Wealthlogistics, Samarth Garg, KS Ventures",
@@ -27499,7 +27576,7 @@
           "buyPrice": 71.13,
           "ipoPrice": 90,
           "discountPct": 21,
-          "type": "Pre-IPO Strategic Group (7:1 Bonus Adj. from ₹569)"
+          "type": "Pre-IPO Strategic Group (7:1 Bonus Adj. from \u20b9569)"
         }
       ],
       "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_Kwick_260820260911.zip",
@@ -27568,16 +27645,16 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "WHITEOAK CAPITAL EQUITY FUND (1,99,200 shares | ₹2.01 Cr)",
-        "CAPRIZE INDIA OPPORTUNITIES FUND INVESTMENT ACCOUNT (1,00,800 shares | ₹1.02 Cr)",
-        "AARTH AIF GROWTH FUND (2,49,600 shares | ₹2.52 Cr)",
-        "VIKASA INDIA EIF I FUND-SHARE CLASS P (1,99,200 shares | ₹2.01 Cr)",
-        "VENTUREX FUND I (1,82,400 shares | ₹1.84 Cr)",
-        "IMAP INDIA CAPITAL INVESTMENT TRUST-CATALYST NEW INDIA FUND (1,00,800 shares | ₹1.02 Cr)",
-        "TIGER STRATEGIES FUND 1 (1,00,800 shares | ₹1.02 Cr)",
-        "KRS GROWTH OPPORTUNITIES FUND (1,00,800 shares | ₹1.02 Cr)",
-        "TEAL RISE FUND-I (1,00,800 shares | ₹1.02 Cr)",
-        "EVERGROW CAPITAL OPPORTUNITIES FUND (1,00,800 shares | ₹1.02 Cr)"
+        "WHITEOAK CAPITAL EQUITY FUND (1,99,200 shares | \u20b92.01 Cr)",
+        "CAPRIZE INDIA OPPORTUNITIES FUND INVESTMENT ACCOUNT (1,00,800 shares | \u20b91.02 Cr)",
+        "AARTH AIF GROWTH FUND (2,49,600 shares | \u20b92.52 Cr)",
+        "VIKASA INDIA EIF I FUND-SHARE CLASS P (1,99,200 shares | \u20b92.01 Cr)",
+        "VENTUREX FUND I (1,82,400 shares | \u20b91.84 Cr)",
+        "IMAP INDIA CAPITAL INVESTMENT TRUST-CATALYST NEW INDIA FUND (1,00,800 shares | \u20b91.02 Cr)",
+        "TIGER STRATEGIES FUND 1 (1,00,800 shares | \u20b91.02 Cr)",
+        "KRS GROWTH OPPORTUNITIES FUND (1,00,800 shares | \u20b91.02 Cr)",
+        "TEAL RISE FUND-I (1,00,800 shares | \u20b91.02 Cr)",
+        "EVERGROW CAPITAL OPPORTUNITIES FUND (1,00,800 shares | \u20b91.02 Cr)"
       ],
       "anchorShares": 1435200,
       "totalShares": 5287200,
@@ -27622,14 +27699,14 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "WHITEOAK CAPITAL MULTI CAP FUND (13,35,760 shares | ₹7.08 Cr)",
-        "WHITEOAK CAPITAL BALANCED ADVANTAGE FUND (5,71,660 shares | ₹3.03 Cr)",
-        "WHITEOAK CAPITAL AGGRESSIVE HYBRID FUND (3,79,220 shares | ₹2.01 Cr)",
-        "WHITEOAK CAPITAL EQUITY SAVINGS FUND (1,13,200 shares | ₹0.60 Cr)",
-        "WINRO COMMERCIAL (INDIA) LTD. (22,64,000 shares | ₹12.00 Cr)",
-        "WHITEOAK CAPITAL EQUITY FUND (9,43,522 shares | ₹5.00 Cr)",
-        "ASHIKA GLOBAL FINANCE PVT.LTD. (11,32,176 shares | ₹6.00 Cr)",
-        "VARANIUM DYNAMIC TRUST-VARANIUM EMERGING FUND (9,43,522 shares | ₹5.00 Cr)"
+        "WHITEOAK CAPITAL MULTI CAP FUND (13,35,760 shares | \u20b97.08 Cr)",
+        "WHITEOAK CAPITAL BALANCED ADVANTAGE FUND (5,71,660 shares | \u20b93.03 Cr)",
+        "WHITEOAK CAPITAL AGGRESSIVE HYBRID FUND (3,79,220 shares | \u20b92.01 Cr)",
+        "WHITEOAK CAPITAL EQUITY SAVINGS FUND (1,13,200 shares | \u20b90.60 Cr)",
+        "WINRO COMMERCIAL (INDIA) LTD. (22,64,000 shares | \u20b912.00 Cr)",
+        "WHITEOAK CAPITAL EQUITY FUND (9,43,522 shares | \u20b95.00 Cr)",
+        "ASHIKA GLOBAL FINANCE PVT.LTD. (11,32,176 shares | \u20b96.00 Cr)",
+        "VARANIUM DYNAMIC TRUST-VARANIUM EMERGING FUND (9,43,522 shares | \u20b95.00 Cr)"
       ],
       "anchorShares": 7683060,
       "totalShares": 25610204,
@@ -27642,7 +27719,7 @@
           "buyPrice": 12.21,
           "ipoPrice": 53,
           "discountPct": 77,
-          "type": "Pre-IPO Transfer (Bonus & Split Adj. from ₹2,710)"
+          "type": "Pre-IPO Transfer (Bonus & Split Adj. from \u20b92,710)"
         },
         {
           "name": "Makarand Madhusudan Joshi",
@@ -27687,7 +27764,7 @@
           "buyPrice": 9.01,
           "ipoPrice": 53,
           "discountPct": 83,
-          "type": "Pre-IPO Transfer (Bonus & Split Adj. from ₹2,001)"
+          "type": "Pre-IPO Transfer (Bonus & Split Adj. from \u20b92,001)"
         },
         {
           "name": "Jeevan Murlidhar",
@@ -27730,8 +27807,8 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND (2,00,400 shares | ₹2.00 Cr)",
-        "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND (1,02,000 shares | ₹1.02 Cr)"
+        "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND (2,00,400 shares | \u20b92.00 Cr)",
+        "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND (1,02,000 shares | \u20b91.02 Cr)"
       ],
       "anchorShares": 302400,
       "totalShares": 5326800,
@@ -27777,40 +27854,40 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "ICICI PRUDENTIAL SMALLCAP FUND (6,07,290 shares | ₹60.00 Cr)",
-        "HDFC PHARMA & HEALTHCARE FUND (4,04,865 shares | ₹40.00 Cr)",
-        "HDFC MNC FUND (50,610 shares | ₹5.00 Cr)",
-        "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND (4,55,475 shares | ₹45.00 Cr)",
-        "MOTILAL OSWAL SMALL CAP FUND (4,55,475 shares | ₹45.00 Cr)",
-        "MIRAE ASSET HEALTHCARE FUND (3,54,270 shares | ₹35.00 Cr)",
-        "MIRAE ASSET MULTI ASSET ALLOCATION FUND (1,01,205 shares | ₹10.00 Cr)",
-        "PRAZIM TRADING & INVESTMENT CO.PVT.LTD. (2,53,050 shares | ₹25.00 Cr)",
-        "TATA INDIA PHARMA & HEALTHCARE FUND (1,01,220 shares | ₹10.00 Cr)",
-        "TATA FLEXI CAP FUND (1,51,830 shares | ₹15.00 Cr)",
-        "EDELWEISS LARGE CAP FUND (2,02,425 shares | ₹20.00 Cr)",
-        "EDELWEISS RECENTLY LISTED IPO FUND (50,625 shares | ₹5.00 Cr)",
-        "MANULIFE GLOBAL FUND-INDIA EQUITY FUND (2,53,050 shares | ₹25.00 Cr)",
-        "MAHINDRA MANULIFE SMALL CAP FUND (2,53,050 shares | ₹25.00 Cr)",
-        "TATA AIA LIFE INSURANCE CO.LTD.-WHOLE LIFE AGGRESSIVE GROWTH FUND-ULIF 010 04/01/07 WLA 110 (1,61,955 shares | ₹16.00 Cr)",
-        "BAJAJ LIFE INSURANCE LTD. (1,61,955 shares | ₹16.00 Cr)",
-        "BARODA BNP PARIBAS HEALTH & WELLNESS FUND (60,720 shares | ₹6.00 Cr)",
-        "BARODA BNP PARIBAS FOCUSED FUND (1,01,235 shares | ₹10.00 Cr)",
-        "BHARTI AXA LIFE INSURANCE CO.LTD. (1,01,220 shares | ₹10.00 Cr)",
-        "TIMF HOLDINGS (1,01,220 shares | ₹10.00 Cr)",
-        "VALUEQUEST FOUNDERS CONVICTION LVF (1,01,220 shares | ₹10.00 Cr)",
-        "TRUST MF MULTI CAP FUND (50,610 shares | ₹5.00 Cr)",
-        "TRUST MF LARGE & MID CAP FUND (50,610 shares | ₹5.00 Cr)",
-        "GROWW MULTICAP FUND (70,860 shares | ₹7.00 Cr)",
-        "GROWW SMALL CAP FUND (30,360 shares | ₹3.00 Cr)",
-        "FLUMEN INVESTMENT TRUST-1729 GROWTH FUND I (50,610 shares | ₹5.00 Cr)",
-        "RMS GROWTH FUND SCHEME I (50,610 shares | ₹5.00 Cr)",
-        "SUSQUEHANNA PACIFIC PTY.LTD. (1,01,220 shares | ₹10.00 Cr)",
-        "SINGULARITY EQUITY FUND I (1,01,220 shares | ₹10.00 Cr)",
-        "ITI MULTI CAP FUND (50,610 shares | ₹5.00 Cr)",
-        "ITI FLEXI CAP FUND (50,610 shares | ₹5.00 Cr)",
-        "ICICI LOMBARD GENERAL INSURANCE CO.LTD. (88,331 shares | ₹8.73 Cr)",
-        "BNP PARIBAS FINANCIAL MARKETS-ODI (88,330 shares | ₹8.73 Cr)",
-        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD. (57,963 shares | ₹5.73 Cr)"
+        "ICICI PRUDENTIAL SMALLCAP FUND (6,07,290 shares | \u20b960.00 Cr)",
+        "HDFC PHARMA & HEALTHCARE FUND (4,04,865 shares | \u20b940.00 Cr)",
+        "HDFC MNC FUND (50,610 shares | \u20b95.00 Cr)",
+        "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND (4,55,475 shares | \u20b945.00 Cr)",
+        "MOTILAL OSWAL SMALL CAP FUND (4,55,475 shares | \u20b945.00 Cr)",
+        "MIRAE ASSET HEALTHCARE FUND (3,54,270 shares | \u20b935.00 Cr)",
+        "MIRAE ASSET MULTI ASSET ALLOCATION FUND (1,01,205 shares | \u20b910.00 Cr)",
+        "PRAZIM TRADING & INVESTMENT CO.PVT.LTD. (2,53,050 shares | \u20b925.00 Cr)",
+        "TATA INDIA PHARMA & HEALTHCARE FUND (1,01,220 shares | \u20b910.00 Cr)",
+        "TATA FLEXI CAP FUND (1,51,830 shares | \u20b915.00 Cr)",
+        "EDELWEISS LARGE CAP FUND (2,02,425 shares | \u20b920.00 Cr)",
+        "EDELWEISS RECENTLY LISTED IPO FUND (50,625 shares | \u20b95.00 Cr)",
+        "MANULIFE GLOBAL FUND-INDIA EQUITY FUND (2,53,050 shares | \u20b925.00 Cr)",
+        "MAHINDRA MANULIFE SMALL CAP FUND (2,53,050 shares | \u20b925.00 Cr)",
+        "TATA AIA LIFE INSURANCE CO.LTD.-WHOLE LIFE AGGRESSIVE GROWTH FUND-ULIF 010 04/01/07 WLA 110 (1,61,955 shares | \u20b916.00 Cr)",
+        "BAJAJ LIFE INSURANCE LTD. (1,61,955 shares | \u20b916.00 Cr)",
+        "BARODA BNP PARIBAS HEALTH & WELLNESS FUND (60,720 shares | \u20b96.00 Cr)",
+        "BARODA BNP PARIBAS FOCUSED FUND (1,01,235 shares | \u20b910.00 Cr)",
+        "BHARTI AXA LIFE INSURANCE CO.LTD. (1,01,220 shares | \u20b910.00 Cr)",
+        "TIMF HOLDINGS (1,01,220 shares | \u20b910.00 Cr)",
+        "VALUEQUEST FOUNDERS CONVICTION LVF (1,01,220 shares | \u20b910.00 Cr)",
+        "TRUST MF MULTI CAP FUND (50,610 shares | \u20b95.00 Cr)",
+        "TRUST MF LARGE & MID CAP FUND (50,610 shares | \u20b95.00 Cr)",
+        "GROWW MULTICAP FUND (70,860 shares | \u20b97.00 Cr)",
+        "GROWW SMALL CAP FUND (30,360 shares | \u20b93.00 Cr)",
+        "FLUMEN INVESTMENT TRUST-1729 GROWTH FUND I (50,610 shares | \u20b95.00 Cr)",
+        "RMS GROWTH FUND SCHEME I (50,610 shares | \u20b95.00 Cr)",
+        "SUSQUEHANNA PACIFIC PTY.LTD. (1,01,220 shares | \u20b910.00 Cr)",
+        "SINGULARITY EQUITY FUND I (1,01,220 shares | \u20b910.00 Cr)",
+        "ITI MULTI CAP FUND (50,610 shares | \u20b95.00 Cr)",
+        "ITI FLEXI CAP FUND (50,610 shares | \u20b95.00 Cr)",
+        "ICICI LOMBARD GENERAL INSURANCE CO.LTD. (88,331 shares | \u20b98.73 Cr)",
+        "BNP PARIBAS FINANCIAL MARKETS-ODI (88,330 shares | \u20b98.73 Cr)",
+        "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD. (57,963 shares | \u20b95.73 Cr)"
       ],
       "anchorShares": 5325909,
       "totalShares": 17786442,
@@ -27823,7 +27900,7 @@
           "buyPrice": 47.29,
           "ipoPrice": 988,
           "discountPct": 95.2,
-          "type": "Marquee PE Investor (5:1 Split Adj. from ₹236.43)"
+          "type": "Marquee PE Investor (5:1 Split Adj. from \u20b9236.43)"
         },
         {
           "name": "Late Rakesh Jhunjhunwala (Rare Enterprises)",
@@ -27832,7 +27909,7 @@
           "buyPrice": 21.67,
           "ipoPrice": 988,
           "discountPct": 97.8,
-          "type": "Marquee Pre-IPO Investor (5:1 Split Adj. from ₹108.34)"
+          "type": "Marquee Pre-IPO Investor (5:1 Split Adj. from \u20b9108.34)"
         },
         {
           "name": "Actis Medal Sports Limited (Actis PE)",
@@ -27841,7 +27918,7 @@
           "buyPrice": 76.99,
           "ipoPrice": 988,
           "discountPct": 92.2,
-          "type": "Global PE Investor (5:1 Split Adj. from ₹384.97)"
+          "type": "Global PE Investor (5:1 Split Adj. from \u20b9384.97)"
         },
         {
           "name": "Rosewood Investments (Private Equity)",
@@ -27853,7 +27930,7 @@
           "type": "PE Investor & Selling Shareholder (34.78% pre-issue)"
         },
         {
-          "name": "India Business Excellence Fund – III (Motilal Oswal PE)",
+          "name": "India Business Excellence Fund \u2013 III (Motilal Oswal PE)",
           "date": "Private Equity Investment & OFS",
           "shares": "1,51,60,906",
           "buyPrice": 147.21,
@@ -27877,7 +27954,7 @@
           "buyPrice": 9.2,
           "ipoPrice": 988,
           "discountPct": 99.1,
-          "type": "Pre-IPO Institutional (5:1 Split Adj. from ₹46)"
+          "type": "Pre-IPO Institutional (5:1 Split Adj. from \u20b946)"
         },
         {
           "name": "Key Management & Professional Public Allottees",
@@ -27921,21 +27998,21 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
-        "NOMURA TRUST & BANKING CO.LTD.,THE AS THE TRUSTEE OF NOMURA INDIA STOCK MOTHER FUND (6,34,505 shares | ₹50.00 Cr)",
-        "HDFC VALUE FUND (2,79,186 shares | ₹22.00 Cr)",
-        "HDFC CONSUMPTION FUND (1,26,901 shares | ₹10.00 Cr)",
-        "NIPPON INDIA SMALL CAP FUND (4,06,087 shares | ₹32.00 Cr)",
-        "TATA SMALL CAP FUND (4,44,144 shares | ₹35.00 Cr)",
-        "JUPITER INDIA FUND (2,52,757 shares | ₹19.92 Cr)",
-        "JUPITER GLOBAL FUND,THE-JUPITER INDIA SELECT (1,27,946 shares | ₹10.08 Cr)",
-        "LIONGLOBAL INVESTMENT FUNDS-LIONGLOBAL INDIA FUND (63,470 shares | ₹5.00 Cr)",
-        "EDELWEISS LIFE INSURANCE CO.LTD. (1,26,920 shares | ₹10.00 Cr)",
-        "TRUST MF FLEXI CAP FUND (1,27,528 shares | ₹10.05 Cr)",
-        "AUTHUM INVESTMENT & INFRASTRUCTURE LTD. (72,991 shares | ₹5.75 Cr)",
-        "BENGAL FINANCE & INVESTMENT PVT.LTD. (72,963 shares | ₹5.75 Cr)",
-        "GIRIK MULTICAP GROWTH EQUITY FUND-III (72,963 shares | ₹5.75 Cr)",
-        "TURNAROUND OPPORTUNITIES FUND (2,53,802 shares | ₹20.00 Cr)",
-        "SOCIETE GENERALE-ODI (63,470 shares | ₹5.00 Cr)"
+        "NOMURA TRUST & BANKING CO.LTD.,THE AS THE TRUSTEE OF NOMURA INDIA STOCK MOTHER FUND (6,34,505 shares | \u20b950.00 Cr)",
+        "HDFC VALUE FUND (2,79,186 shares | \u20b922.00 Cr)",
+        "HDFC CONSUMPTION FUND (1,26,901 shares | \u20b910.00 Cr)",
+        "NIPPON INDIA SMALL CAP FUND (4,06,087 shares | \u20b932.00 Cr)",
+        "TATA SMALL CAP FUND (4,44,144 shares | \u20b935.00 Cr)",
+        "JUPITER INDIA FUND (2,52,757 shares | \u20b919.92 Cr)",
+        "JUPITER GLOBAL FUND,THE-JUPITER INDIA SELECT (1,27,946 shares | \u20b910.08 Cr)",
+        "LIONGLOBAL INVESTMENT FUNDS-LIONGLOBAL INDIA FUND (63,470 shares | \u20b95.00 Cr)",
+        "EDELWEISS LIFE INSURANCE CO.LTD. (1,26,920 shares | \u20b910.00 Cr)",
+        "TRUST MF FLEXI CAP FUND (1,27,528 shares | \u20b910.05 Cr)",
+        "AUTHUM INVESTMENT & INFRASTRUCTURE LTD. (72,991 shares | \u20b95.75 Cr)",
+        "BENGAL FINANCE & INVESTMENT PVT.LTD. (72,963 shares | \u20b95.75 Cr)",
+        "GIRIK MULTICAP GROWTH EQUITY FUND-III (72,963 shares | \u20b95.75 Cr)",
+        "TURNAROUND OPPORTUNITIES FUND (2,53,802 shares | \u20b920.00 Cr)",
+        "SOCIETE GENERALE-ODI (63,470 shares | \u20b95.00 Cr)"
       ],
       "anchorShares": 3125633,
       "totalShares": 10469540,
