@@ -4887,8 +4887,9 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": null,
-      "preIpoInvestors": []
+      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2025/1759318215777_976.pdf",
+      "preIpoInvestors": [],
+      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2025/1759318215777_976.pdf"
     },
     {
       "companyName": "NSB BPO Solutions Ltd.",
@@ -5109,7 +5110,9 @@
         "originalDate": "2026-09-30T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2025/1758267006282_949.pdf",
+      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2025/1758267006282_949.pdf"
     },
     {
       "companyName": "Aptus Pharma Ltd.",
