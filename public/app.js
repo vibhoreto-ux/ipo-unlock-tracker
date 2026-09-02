@@ -810,19 +810,6 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             modalExchangeBadge.style.display = 'none';
         }
 
-        const rhpSection = document.getElementById('rhpSection');
-        const btnViewRhp = document.getElementById('btnViewRhp');
-        if (rhpSection && btnViewRhp) {
-            const targetDocUrl = company.capitalStructureUrl || (isValidRHPUrl(company.rhpUrl) ? company.rhpUrl : null);
-            if (targetDocUrl) {
-                btnViewRhp.href = targetDocUrl;
-                btnViewRhp.innerHTML = '<span>📄 Capital Structure</span>';
-                rhpSection.style.display = '';
-            } else {
-                rhpSection.style.display = 'none';
-            }
-        }
-
         // Render Pre-IPO details block in exact same format as upcoming page
         renderModalPreIpoBlock(company);
 
