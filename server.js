@@ -639,17 +639,18 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
 
         // Common helper to inject live price before returning (and on-demand pre-IPO extraction if missing)
         const respondWithPrices = async (basePayload) => {
-            if (company && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
+            if (company && company.preIpoInvestors === undefined) {
                 try {
                     const csUrl = company.capitalStructureUrl || await fetchCapitalStructureUrl(company.companyName);
                     if (csUrl) {
                         company.capitalStructureUrl = csUrl;
                         const csRes = await extractFromCapitalStructure(company.companyName, csUrl);
-                        if (csRes.preIpoInvestors && csRes.preIpoInvestors.length > 0) {
+                        if (csRes && csRes.preIpoInvestors !== undefined) {
                             company.preIpoInvestors = csRes.preIpoInvestors;
                             if (csRes.waca) company.preIpoWaca = csRes.waca;
                             if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
                             writeDB(db);
+                            console.log(`[UnlockDetails] Saved on-demand pre-IPO data for ${company.companyName} to DB`);
                         }
                     }
                 } catch (e) {

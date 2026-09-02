@@ -27770,9 +27770,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-03-01T00:00:00.000Z",
+        "expiryDate": "2027-02-28",
         "originalDate": "2027-03-01T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -27914,9 +27914,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-03-03T00:00:00.000Z",
+        "expiryDate": "2027-03-03",
         "originalDate": "2027-03-03T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -28205,6 +28205,114 @@
       "noticeId": "NSE/CML/73067",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73067.zip",
       "fetchedAt": "2026-09-02T11:35:13.056Z"
+    },
+    "Juniper Green Energy Ltd.": {
+      "found": true,
+      "totalShares": 568998442,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 56035817,
+          "percentage": 9.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-02",
+          "shares": 11986666,
+          "percentage": 2.1
+        },
+        {
+          "date": "2026-11-01",
+          "shares": 11986667,
+          "percentage": 2.1
+        },
+        {
+          "date": "2027-08-05",
+          "shares": 374626122,
+          "percentage": 65.8
+        },
+        {
+          "date": "2029-08-05",
+          "shares": 114363170,
+          "percentage": 20.1
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75585",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75585.zip",
+      "fetchedAt": "2026-09-02T11:39:21.306Z"
+    },
+    "Symbiotec Pharmalab Ltd.": {
+      "found": true,
+      "totalShares": 64256112,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 20092883,
+          "percentage": 31.3,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-26",
+          "shares": 2662949,
+          "percentage": 4.1
+        },
+        {
+          "date": "2026-11-25",
+          "shares": 2662960,
+          "percentage": 4.1
+        },
+        {
+          "date": "2027-02-28",
+          "shares": 25980320,
+          "percentage": 40.4
+        },
+        {
+          "date": "2028-02-28",
+          "shares": 12857000,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/76079",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76079.zip",
+      "fetchedAt": "2026-09-02T11:45:21.591Z"
+    },
+    "Augmont Enterprises Ltd.": {
+      "found": true,
+      "totalShares": 91373505,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 7343907,
+          "percentage": 8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-25",
+          "shares": 1562813,
+          "percentage": 1.7
+        },
+        {
+          "date": "2026-11-24",
+          "shares": 1562820,
+          "percentage": 1.7
+        },
+        {
+          "date": "2027-03-03",
+          "shares": 62549534,
+          "percentage": 68.5
+        },
+        {
+          "date": "2028-03-03",
+          "shares": 18354431,
+          "percentage": 20.1
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/76037",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76037.zip",
+      "fetchedAt": "2026-09-02T11:45:46.266Z"
     }
   }
 }

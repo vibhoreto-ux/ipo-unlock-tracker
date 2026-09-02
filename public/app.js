@@ -700,6 +700,75 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
     `;
 }
 
+    function renderModalPreIpoBlock(company, customData) {
+        const preIpoBlock = document.getElementById('preIpoDetailsBlock');
+        if (!preIpoBlock || !company) return;
+
+        const investors = (customData && customData.preIpoInvestors !== undefined) 
+            ? customData.preIpoInvestors 
+            : company.preIpoInvestors;
+
+        const waca = (customData && customData.preIpoWaca !== undefined)
+            ? customData.preIpoWaca
+            : company.preIpoWaca;
+
+        const capUrl = (customData && customData.capitalStructureUrl) || company.capitalStructureUrl;
+        const rhpUrl = (customData && customData.rhpUrl) || company.rhpUrl;
+        const anchorUrl = (customData && customData.anchorUrl) || company.anchorUrl;
+        const issuePrice = company.issuePrice || (customData && customData.issuePrice);
+
+        let docLinks = [];
+        if (capUrl) {
+            docLinks.push(`<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
+        }
+        if (rhpUrl && isValidRHPUrl(rhpUrl)) {
+            docLinks.push(`<a href="${rhpUrl}" target="_blank" class="doc-btn"><i class="ph ph-file-pdf"></i> RHP</a>`);
+        }
+        if (anchorUrl) {
+            docLinks.push(`<a href="${anchorUrl}" target="_blank" class="doc-btn"><i class="ph ph-anchor"></i> Anchor Doc</a>`);
+        }
+        const docsHtml = docLinks.length > 0 ? `<div class="card-doc-links" style="margin-top:10px;">${docLinks.join('')}</div>` : '';
+
+        if (investors === undefined) {
+            preIpoBlock.innerHTML = `
+                <div style="display:flex; align-items:center; gap:8px; padding:8px 4px; color:var(--text-secondary); font-size:13px;">
+                    <div class="loader-spinner" style="width:14px; height:14px; border-width:2px;"></div>
+                    <span>Scanning Capital Structure & Pre-IPO Data...</span>
+                </div>
+                ${docsHtml}
+            `;
+            preIpoBlock.style.display = 'block';
+            return;
+        }
+
+        if (investors && investors.length > 0) {
+            const tableHtml = renderPreIpoTable(investors, issuePrice, false);
+            const wacaHtml = waca ? `<div style="margin-top: 10px; font-size: 0.85rem; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${waca}</span></div>` : '';
+            preIpoBlock.innerHTML = `
+                <details open style="border:none; padding:0;">
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px;">Pre-IPO Investors & Shareholders (${investors.length})</summary>
+                    <div class="body" style="margin-top:6px;">
+                        <div class="pre-ipo-table-wrapper">${tableHtml}</div>
+                        ${wacaHtml}
+                        ${docsHtml}
+                    </div>
+                </details>
+            `;
+            preIpoBlock.style.display = 'block';
+        } else {
+            preIpoBlock.innerHTML = `
+                <details open style="border:none; padding:0;">
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px;">Pre-IPO Investors (0)</summary>
+                    <div class="body" style="margin-top:6px;">
+                        <span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (100% Promoter / Group held prior to IPO).</span>
+                        ${docsHtml}
+                    </div>
+                </details>
+            `;
+            preIpoBlock.style.display = 'block';
+        }
+    }
+
     function openUnlockModal(company) {
         // Clear any existing timer just in case
         if (pollTimer) clearTimeout(pollTimer);
@@ -743,33 +812,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             }
         }
 
-        // Render Pre-IPO details
-        const preIpoBlock = document.getElementById('preIpoDetailsBlock');
-        if (preIpoBlock) {
-            let preIpoNamesStr = '';
-            if (!isValidRHPUrl(company.rhpUrl) && !company.capitalStructureUrl && company.preIpoInvestors === undefined) {
-                preIpoNamesStr = `<span style="color:var(--warning); font-style:italic; font-size: 0.9em;">Waiting for Capital Structure / RHP...</span>`;
-                pollForNLP(company.companyName);
-            } else if (company.preIpoInvestors === undefined) {
-                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic; font-size: 0.9em;">Scanning Capital Structure PDF...</span>`;
-                pollForNLP(company.companyName);
-            } else if (company.preIpoInvestors && company.preIpoInvestors.length > 0) {
-                const tableHtml = renderPreIpoTable(company.preIpoInvestors, company.issuePrice, true);
-                let wacaHtml = company.preIpoWaca ? `<div style="margin-top: 10px; font-size: 0.9em; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${company.preIpoWaca}</span></div>` : '';
-                preIpoNamesStr = `
-                    <details open>
-                        <summary style="cursor:pointer; font-weight:700; color:var(--text); list-style-position: inside; margin-bottom: 6px;">Non-Promoter Pre-IPO Allotments & Investors (${company.preIpoInvestors.length})</summary>
-                        <div class="pre-ipo-table-wrapper">
-                            ${tableHtml}
-                        </div>
-                    </details>
-                    ${wacaHtml}
-                `;
-            } else {
-                preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Non-Promoter Pre-IPO Investors recorded (100% Promoter/Group held prior to IPO).</span>`;
-            }
-            preIpoBlock.innerHTML = `<div style="font-size: 13px; color: var(--text); line-height: 1.4;">${preIpoNamesStr}</div>`;
-            preIpoBlock.style.display = 'block';
+        // Render Pre-IPO details block in exact same format as upcoming page
+        renderModalPreIpoBlock(company);
+        if (company.preIpoInvestors === undefined) {
+            pollForNLP(company.companyName);
         }
 
         // Set Issue Price and resetting Live Price
@@ -824,10 +870,6 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             // Set class on timeline item
             timelineEl.className = 'timeline-item ' + status.class;
         });
-
-
-
-
 
         // Reset unlock details
         const detailsSection = document.getElementById('unlockDetailsSection');
@@ -887,29 +929,14 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             if (idx !== -1) {
                 if (data.preIpoInvestors !== undefined) allCompanies[idx].preIpoInvestors = data.preIpoInvestors;
                 if (data.preIpoWaca !== undefined) allCompanies[idx].preIpoWaca = data.preIpoWaca;
+                if (data.capitalStructureUrl !== undefined) allCompanies[idx].capitalStructureUrl = data.capitalStructureUrl;
                 if (data.rhpUrl !== undefined) allCompanies[idx].rhpUrl = data.rhpUrl;
+                if (data.anchorUrl !== undefined) allCompanies[idx].anchorUrl = data.anchorUrl;
             }
 
-            // Update Pre-IPO details block if it exists and data is available
-            const preIpoBlock = document.getElementById('preIpoDetailsBlock');
-            if (preIpoBlock && data.preIpoInvestors !== undefined) {
-                let preIpoNamesStr = '';
-                if (data.preIpoInvestors && data.preIpoInvestors.length > 0) {
-                    let listItems = data.preIpoInvestors.map(i => `<li style="margin-bottom:4px;">${i}</li>`).join('');
-                    let wacaHtml = data.preIpoWaca ? `<div style="margin-top: 8px; font-size: 0.9em; font-weight: 500; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success);">₹${data.preIpoWaca}</span></div>` : '';
-                    preIpoNamesStr = `
-                        <details>
-                            <summary style="cursor:pointer; font-weight:600; color:var(--text); list-style-position: inside;">View Pre-IPO Investors (${data.preIpoInvestors.length})</summary>
-                            <ul style="margin-top:10px; padding-left:22px; color:var(--text-muted); font-size:0.95em; max-height: 160px; overflow-y: auto; overflow-x: hidden; padding-right: 10px;">
-                                ${listItems}
-                            </ul>
-                        </details>
-                        ${wacaHtml}
-                    `;
-                } else {
-                    preIpoNamesStr = `<span style="color:var(--text-muted); font-style:italic;">0 Pre-IPO Investors recorded.</span>`;
-                }
-                preIpoBlock.innerHTML = `<div style="font-size: 13px; color: var(--text); line-height: 1.4;">${preIpoNamesStr}</div>`;
+            // Update Pre-IPO details block in modal with fresh data from server
+            if (currentModalCompany && (currentModalCompany.companyName === companyName)) {
+                renderModalPreIpoBlock(currentModalCompany, data);
             }
 
             // Update Live Price
