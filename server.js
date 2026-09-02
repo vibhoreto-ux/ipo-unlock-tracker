@@ -16,6 +16,7 @@ app.use(express.json({ limit: '10mb' }));
 
 const { getNextBusinessDay, calculatePreIPOLockin } = require('./holidays');
 const axios = require('axios');
+const cheerio = require('cheerio');
 const unzipper = require('unzipper');
 
 /**
@@ -613,6 +614,66 @@ const { getLivePrice } = require('./price-scraper');
 // In-memory hot cache for circular data (backed by DB for persistence across restarts)
 const circularCache = new Map();
 
+// Fast document URL resolver for any company
+async function resolveCompanyDocUrl(company) {
+    if (!company) return null;
+    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http')) {
+        return company.capitalStructureUrl;
+    }
+    if (company.rhpUrl && company.rhpUrl.startsWith('http')) {
+        return company.rhpUrl;
+    }
+
+    // Try fast lookup on IPO Premium
+    try {
+        const ipoPremUrl = await fetchCapitalStructureUrl(company.companyName);
+        if (ipoPremUrl) {
+            company.capitalStructureUrl = ipoPremUrl;
+            return ipoPremUrl;
+        }
+    } catch (e) {}
+
+    // Try Chittorgarh page lookup
+    if (company.chittorgarhUrl) {
+        try {
+            const chRes = await axios.get(company.chittorgarhUrl, {
+                headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)' },
+                timeout: 8000
+            });
+            const $ = cheerio.load(chRes.data);
+            for (const a of $('a').toArray()) {
+                const href = $(a).attr('href') || '';
+                const txt = $(a).text().trim().toLowerCase();
+                if ((href.includes('.pdf') || href.includes('.zip') || href.includes('sebi.gov.in') || href.includes('bseindia.com') || href.includes('nseindia.com')) &&
+                    (txt.includes('rhp') || txt.includes('prospectus') || href.includes('rhp') || href.includes('prospectus') || txt.includes('capital'))) {
+                    
+                    let finalUrl = href;
+                    // If SEBI html filing page, resolve embedded pdf
+                    if (href.includes('sebi.gov.in/filings/')) {
+                        try {
+                            const sebiRes = await axios.get(href, {
+                                headers: { 'User-Agent': 'Mozilla/5.0' },
+                                timeout: 6000
+                            });
+                            const $s = cheerio.load(sebiRes.data);
+                            const embed = $s('embed, iframe').attr('src') || '';
+                            const match = embed.match(/file=(https?:\/\/[^&]+)/i);
+                            if (match) {
+                                finalUrl = match[1];
+                            }
+                        } catch (e) {}
+                    }
+                    
+                    company.capitalStructureUrl = finalUrl;
+                    company.rhpUrl = finalUrl;
+                    return finalUrl;
+                }
+            }
+        } catch (e) {}
+    }
+    return null;
+}
+
 /**
  * GET /api/unlock-details/:companyName
  * Fetches lock-in details from BSE/NSE Annexure-I for the given company.
@@ -632,36 +693,43 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             (c.companyName || '').toLowerCase().replace(/[\.\s]+$/, '') === normQ
         );
 
-        // Trigger background RHP fetch if company is missing preIpoInvestors details
-        if (company && company.preIpoInvestors === undefined) {
-            console.log(`[RHP/Single] Skipped heavy async RHP fetch for ${company.companyName} to prevent localhost load issues.`);
-        }
-
         // Common helper to inject live price before returning (and on-demand pre-IPO extraction if missing)
         const respondWithPrices = async (basePayload) => {
-            if (company && company.preIpoInvestors === undefined) {
-                try {
-                    const csUrl = company.capitalStructureUrl || await fetchCapitalStructureUrl(company.companyName);
-                    if (csUrl) {
-                        company.capitalStructureUrl = csUrl;
-                        const csRes = await extractFromCapitalStructure(company.companyName, csUrl);
-                        if (csRes && csRes.preIpoInvestors !== undefined && csRes.preIpoInvestors !== null) {
-                            company.preIpoInvestors = csRes.preIpoInvestors;
-                            if (csRes.waca) company.preIpoWaca = csRes.waca;
-                            if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
-                        } else {
+            console.log('[DEBUG] respondWithPrices called for:', companyName, 'company found:', !!company);
+            if (company) {
+                // 1. Ensure capitalStructureUrl is resolved
+                if (!company.capitalStructureUrl && !company.rhpUrl) {
+                    const docUrl = await resolveCompanyDocUrl(company);
+                    console.log('[DEBUG] resolveCompanyDocUrl returned:', docUrl);
+                    if (docUrl) {
+                        company.capitalStructureUrl = docUrl;
+                        company.rhpUrl = docUrl;
+                        writeDB(db);
+                        console.log(`[UnlockDetails] Resolved and saved docUrl for ${company.companyName}: ${docUrl}`);
+                    }
+                }
+
+                // 2. If preIpoInvestors is missing/undefined, extract on demand and persist
+                if (company.preIpoInvestors === undefined) {
+                    const targetDoc = company.capitalStructureUrl || company.rhpUrl;
+                    if (targetDoc) {
+                        try {
+                            const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
+                            if (csRes && Array.isArray(csRes.preIpoInvestors)) {
+                                company.preIpoInvestors = csRes.preIpoInvestors;
+                                if (csRes.waca) company.preIpoWaca = csRes.waca;
+                                if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
+                            } else {
+                                company.preIpoInvestors = [];
+                            }
+                        } catch (e) {
                             company.preIpoInvestors = [];
                         }
                     } else {
-                        // No Capital Structure document found on IPO Premium (100% promoter held or not on IPO Premium)
                         company.preIpoInvestors = [];
                     }
                     writeDB(db);
-                    console.log(`[UnlockDetails] Saved on-demand pre-IPO data for ${company.companyName} (${company.preIpoInvestors.length} investors) to DB`);
-                } catch (e) {
-                    console.error('[UnlockDetails] CapStruct on-demand error:', e.message);
-                    company.preIpoInvestors = [];
-                    writeDB(db);
+                    console.log(`[UnlockDetails] Saved on-demand pre-IPO data for ${company.companyName} to DB`);
                 }
             }
 
@@ -671,7 +739,7 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
                 preIpoInvestors: company ? company.preIpoInvestors : [],
                 preIpoWaca: company ? (company.preIpoWaca || company.waca) : undefined,
                 rhpUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,
-                capitalStructureUrl: company ? company.capitalStructureUrl : undefined,
+                capitalStructureUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,
                 peerComparison: company ? company.peerComparison : undefined,
                 liveMarketPrice: liveData
             });
