@@ -19394,7 +19394,101 @@
         "HDFC LIFE INSURANCE",
         "HDFC MUTUAL FUND"
       ],
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        {
+          "name": "Augment India I Holdings, LLC",
+          "category": "Marquee PE / Institutional Investor (27.2%)",
+          "date": "Aug 2021 & Historical Tranches",
+          "shares": "2,89,45,210",
+          "price": 285.31,
+          "discount": -72.9,
+          "percentage": 27.2
+        },
+        {
+          "name": "BGTF One Holdings (DIFC) Limited (Brookfield)",
+          "category": "Strategic PE Investor (Series M CCPS Conversion)",
+          "date": "Oct 25, 2023 (Series M CCPS Conv.)",
+          "shares": "92,80,700",
+          "price": 431.0,
+          "discount": -59.1,
+          "percentage": 8.72
+        },
+        {
+          "name": "Steadview Capital Mauritius Limited",
+          "category": "Marquee Institutional Investor (1.25%)",
+          "date": "Pre-IPO Institutional Holding",
+          "shares": "13,29,535",
+          "price": 612.5,
+          "discount": -41.8,
+          "percentage": 1.25
+        },
+        {
+          "name": "Relativity Resilience Fund I",
+          "category": "Pre-IPO Institutional Allottee",
+          "date": "Feb 06, 2026 (Pre-IPO Round)",
+          "shares": "5,69,801",
+          "price": 1053.0,
+          "discount": 0.0,
+          "percentage": 0.54
+        },
+        {
+          "name": "Neo Digital Investments Limited",
+          "category": "Pre-IPO Institutional Allottee",
+          "date": "Pre-IPO Institutional Round",
+          "shares": "4,74,834",
+          "price": 612.5,
+          "discount": -41.8,
+          "percentage": 0.45
+        },
+        {
+          "name": "360 One Special Opportunities Fund (Series 9 & 12)",
+          "category": "Pre-IPO Alternate Investment Fund (AIF)",
+          "date": "Pre-IPO AIF Investment",
+          "shares": "3,60,874",
+          "price": 612.5,
+          "discount": -41.8,
+          "percentage": 0.34
+        },
+        {
+          "name": "MGN Agro Properties Private Limited",
+          "category": "Pre-IPO Corporate Allottee",
+          "date": "Feb 06, 2026 (Pre-IPO Round)",
+          "shares": "2,37,417",
+          "price": 1053.0,
+          "discount": 0.0,
+          "percentage": 0.22
+        },
+        {
+          "name": "Mamta Gautam Ashra",
+          "category": "Pre-IPO Strategic Shareholder",
+          "date": "Pre-IPO Holding",
+          "shares": "2,29,540",
+          "price": 612.5,
+          "discount": -41.8,
+          "percentage": 0.22
+        },
+        {
+          "name": "Dalmia Family Office Trust",
+          "category": "Family Office / HNI",
+          "date": "Feb 06, 2026 (Pre-IPO Round)",
+          "shares": "94,967",
+          "price": 1053.0,
+          "discount": 0.0,
+          "percentage": 0.09
+        },
+        {
+          "name": "Godrej Industries Limited",
+          "category": "Strategic Corporate Investor",
+          "date": "Pre-IPO Holding",
+          "shares": "47,483",
+          "price": 612.5,
+          "discount": -41.8,
+          "percentage": 0.04
+        }
+      ],
+      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1771319140347.pdf",
+      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1771319140347.pdf",
+      "preIpoWaca": 431.0
     },
     {
       "companyName": "Accord Transformer & Switchgear Ltd.",
