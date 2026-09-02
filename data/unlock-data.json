@@ -26342,18 +26342,120 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 0,
-      "rhpUrl": "",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_rhp_1787207689.pdf",
       "preIpoInvestors": [
         {
-          "name": "Pre-IPO Strategic Shareholders Group",
-          "date": "Pre-IPO Allotments & Transfers",
-          "shares": "11,08,000",
-          "buyPrice": 45,
+          "name": "Rainmatter Investments (Zerodha / Nithin & Nikhil Kamath)",
+          "date": "Apr 24, 2025 (Private Placement & 45:1 Bonus)",
+          "shares": "1,70,292",
+          "buyPrice": 117.43,
           "ipoPrice": 239,
-          "discountPct": 81.2,
-          "type": "Non-Promoter Public Pre-IPO (7.07%)"
+          "discountPct": 50.9,
+          "type": "Marquee Pre-IPO Investor (45:1 Bonus Adj. from ₹5,402)"
+        },
+        {
+          "name": "KAPICO Investment Co. L.L.C (Kuwait PE/Family Office)",
+          "date": "Apr 24, 2025 (Private Placement & 45:1 Bonus)",
+          "shares": "1,91,590",
+          "buyPrice": 117.43,
+          "ipoPrice": 239,
+          "discountPct": 50.9,
+          "type": "Institutional Pre-IPO Investor (45:1 Bonus Adj. from ₹5,402)"
+        },
+        {
+          "name": "Manish Agarwal",
+          "date": "Mar & May 2025 (Private Placements & 45:1 Bonus)",
+          "shares": "3,48,956",
+          "buyPrice": 114.63,
+          "ipoPrice": 239,
+          "discountPct": 52,
+          "type": "Key Pre-IPO Investor (45:1 Bonus Adj. from ₹5,150 & ₹5,402)"
+        },
+        {
+          "name": "NB Ventures Limited (Neelesh Bhatnagar)",
+          "date": "Mar 06, 2025 (Private Placement & 45:1 Bonus)",
+          "shares": "1,33,998",
+          "buyPrice": 111.96,
+          "ipoPrice": 239,
+          "discountPct": 53.2,
+          "type": "VC Pre-IPO Investor (45:1 Bonus Adj. from ₹5,150)"
+        },
+        {
+          "name": "Saju Sebastian Eapen",
+          "date": "Jun 19, 2025 (Preferential Issue)",
+          "shares": "1,39,867",
+          "buyPrice": 182,
+          "ipoPrice": 239,
+          "discountPct": 23.8,
+          "type": "Strategic Pre-IPO Investor"
+        },
+        {
+          "name": "Myong Zin Park",
+          "date": "Mar 24, 2026 (Pre-IPO Placement Round)",
+          "shares": "79,732",
+          "buyPrice": 290,
+          "ipoPrice": 239,
+          "discountPct": -21.3,
+          "type": "Pre-IPO Placement (Premium over IPO)"
+        },
+        {
+          "name": "Coral Pebble LLP",
+          "date": "Mar 06, 2025 (Private Placement & 45:1 Bonus)",
+          "shares": "44,666",
+          "buyPrice": 111.96,
+          "ipoPrice": 239,
+          "discountPct": 53.2,
+          "type": "Institutional Pre-IPO Investor (45:1 Bonus Adj.)"
+        },
+        {
+          "name": "Tremis Moms Ray Belief (Vivek Jhorar & Akhil Bansal)",
+          "date": "May 27, 2026 (Pre-IPO Placement Round)",
+          "shares": "34,482",
+          "buyPrice": 290,
+          "ipoPrice": 239,
+          "discountPct": -21.3,
+          "type": "Pre-IPO Placement AIF/Trust"
+        },
+        {
+          "name": "Jeffrey Daniel Shiring",
+          "date": "May 27, 2026 (Pre-IPO Placement Round)",
+          "shares": "33,877",
+          "buyPrice": 290,
+          "ipoPrice": 239,
+          "discountPct": -21.3,
+          "type": "Pre-IPO Placement Strategic"
+        },
+        {
+          "name": "Rayees Khalfay, Laique Modak, Nafeel Patankar",
+          "date": "Apr 24, 2025 (Private Placement & 45:1 Bonus)",
+          "shares": "63,756",
+          "buyPrice": 117.43,
+          "ipoPrice": 239,
+          "discountPct": 50.9,
+          "type": "Individual Pre-IPO Investors (21,252 sh. each)"
+        },
+        {
+          "name": "Jennifer Lee Switzer",
+          "date": "May 27, 2026 (Pre-IPO Placement Round)",
+          "shares": "17,241",
+          "buyPrice": 290,
+          "ipoPrice": 239,
+          "discountPct": -21.3,
+          "type": "Pre-IPO Placement"
+        },
+        {
+          "name": "Pankaj Dhingra, Nitin Jain, Sarita Jain, Sheela Jain, Usha Malik",
+          "date": "Mar 03, 2026 (Pre-IPO Placement Round)",
+          "shares": "38,731",
+          "buyPrice": 284,
+          "ipoPrice": 239,
+          "discountPct": -18.8,
+          "type": "Pre-IPO Placement Group"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_capital_structure_1787207689.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_anchor_1788183025.pdf",
+      "preIpoWaca": "117.43"
     },
     {
       "companyName": "Deepa Jewellers Ltd.",
@@ -27824,6 +27926,37 @@
       "noticeId": "20260730-40",
       "pdfUrl": "https://www.bseindia.com/downloads/UploadDocs/Notices/Attach/AnnexureI$1cd9ff91-ad0e-4d6b-9ef5-6cf9dad1a528.pdf",
       "fetchedAt": "2026-08-29T15:35:42.030Z"
+    },
+    "L.T.Elevator Ltd.": {
+      "found": true,
+      "totalShares": 34275789,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 22774255,
+          "percentage": 66.4,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-10-17",
+          "shares": 716800,
+          "percentage": 2.1
+        },
+        {
+          "date": "2025-12-16",
+          "shares": 720000,
+          "percentage": 2.1
+        },
+        {
+          "date": "2027-09-30",
+          "shares": 10064734,
+          "percentage": 29.4
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20250918-48",
+      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250918-48&attachedId=ee95ad86-4bc8-477e-a540-a9af465840be",
+      "fetchedAt": "2026-08-31T07:44:09.002Z"
     }
   }
 }
