@@ -5112,7 +5112,8 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2025/1758267006282_949.pdf",
-      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2025/1758267006282_949.pdf"
+      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2025/1758267006282_949.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Aptus Pharma Ltd.",
