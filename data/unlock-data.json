@@ -4799,9 +4799,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-09-01T00:00:00.000Z",
+        "expiryDate": "2026-08-30",
         "originalDate": "2026-09-01T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       }
     },
@@ -19057,9 +19057,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-11T00:00:00.000Z",
+        "expiryDate": "2026-09-09",
         "originalDate": "2026-09-11T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -28313,6 +28313,83 @@
       "noticeId": "NSE/CML/76037",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76037.zip",
       "fetchedAt": "2026-09-02T11:45:46.266Z"
+    },
+    "Anondita Medicare Ltd.": {
+      "found": true,
+      "totalShares": 18086618,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 3443000,
+          "percentage": 19,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-09-27",
+          "shares": 674000,
+          "percentage": 3.7
+        },
+        {
+          "date": "2025-11-26",
+          "shares": 676000,
+          "percentage": 3.7
+        },
+        {
+          "date": "2026-08-30",
+          "shares": 9663618,
+          "percentage": 53.4
+        },
+        {
+          "date": "2028-08-30",
+          "shares": 3630000,
+          "percentage": 20.1
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/69932",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML69932.zip",
+      "fetchedAt": "2026-09-02T11:51:11.948Z"
+    },
+    "SEDEMAC Mechatronics Ltd.": {
+      "found": true,
+      "totalShares": 44161500,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 16237644,
+          "percentage": 36.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-03-12",
+          "shares": 25500,
+          "percentage": 0.1
+        },
+        {
+          "date": "2026-04-07",
+          "shares": 1205195,
+          "percentage": 2.7
+        },
+        {
+          "date": "2026-06-06",
+          "shares": 1205206,
+          "percentage": 2.7
+        },
+        {
+          "date": "2026-09-09",
+          "shares": 16638355,
+          "percentage": 37.7
+        },
+        {
+          "date": "2027-09-09",
+          "shares": 8849600,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/73229",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73229.zip",
+      "fetchedAt": "2026-09-02T11:51:44.965Z"
     }
   }
 }

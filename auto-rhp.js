@@ -130,16 +130,11 @@ async function autoFetchMissingRHP() {
         }
     }
 
-    // Phase 2: Missing NLP Pre-IPO Extractions
-    // Try capital structure PDF first (small, fast), then fall back to full RHP
-    db = readDB(); // refresh db reference safely
-    // Expanded scope: include companies missing preIpoInvestors even without RHP URL,
-    // since IPO Premium capital structure PDFs can be found independently.
+    // Phase 2: Missing Pre-IPO Extractions via IPO Premium Capital Structure PDFs ONLY
+    db = readDB();
     const missingNLP = db.companies.filter(c => {
         if (c.preIpoInvestors !== undefined) return false;
-        // Must have either an RHP URL or a recent allotment date (to try capital structure)
         const ipoDate = c.allotmentDate ? new Date(c.allotmentDate.original || c.allotmentDate.adjusted) : null;
-        if (isValidRHPUrl(c.rhpUrl)) return true;
         if (!ipoDate) return true; // TBD IPOs
         return (now.getTime() - ipoDate.getTime()) < 730 * 24 * 3600000; // past 2 years
     });
@@ -153,37 +148,28 @@ async function autoFetchMissingRHP() {
             return 0;
         });
 
-        console.log(`[Auto-RHP] Found ${missingNLP.length} companies missing Pre-IPO NLP data.`);
-        const { execSync } = require('child_process');
-        const path = require('path');
-        let pythonBin = process.env.PYTHON_BIN || 'python3';
-        const fs = require('fs');
-        if (fs.existsSync(path.join(__dirname, 'venv', 'bin', 'python'))) {
-            pythonBin = path.join(__dirname, 'venv', 'bin', 'python');
-        }
-        const pyScript = path.join(__dirname, 'nlp_extractor.py');
+        console.log(`[Auto-CapStruct] Found ${missingNLP.length} companies missing Pre-IPO data. Processing via IPO Premium Capital Structure PDFs...`);
 
-        // Import capital structure scraper (lazy)
+        // Import capital structure scraper
         let capStructScraper;
         try {
             capStructScraper = require('./capital-structure-scraper');
         } catch (e) {
-            console.error('[Auto-RHP] Capital structure scraper not available:', e.message);
+            console.error('[Auto-CapStruct] Capital structure scraper not available:', e.message);
         }
         
         let nlpUpdated = 0;
-        // Restrict to 5 so we process sequentially without memory blowouts in the background
-        for (const company of missingNLP.slice(0, 5)) {
+        // Process up to 10 sequentially using lightweight Capital Structure PDFs only
+        for (const company of missingNLP.slice(0, 10)) {
             let extracted = false;
 
-            // --- Strategy 1: Try Capital Structure PDF (fast, small) ---
             if (capStructScraper) {
                 try {
-                    console.log(`[Auto-RHP] Trying capital structure PDF for: ${company.companyName}...`);
-                    const csResult = await capStructScraper.extractFromCapitalStructure(company.companyName);
+                    console.log(`[Auto-CapStruct] Fetching IPO Premium capital structure for: ${company.companyName}...`);
+                    const csResult = await capStructScraper.extractFromCapitalStructure(company.companyName, company.capitalStructureUrl);
                     
-                    if (csResult.preIpoInvestors && csResult.preIpoInvestors.length > 0) {
-                        company.preIpoInvestors = csResult.preIpoInvestors;
+                    if (csResult && csResult.preIpoInvestors !== null) {
+                        company.preIpoInvestors = csResult.preIpoInvestors || [];
                         if (csResult.waca !== undefined && csResult.waca !== null) {
                             company.preIpoWaca = csResult.waca;
                         }
@@ -192,36 +178,14 @@ async function autoFetchMissingRHP() {
                         }
                         nlpUpdated++;
                         extracted = true;
-                        console.log(`[Auto-RHP] ✅ Capital structure extracted ${csResult.preIpoInvestors.length} pre-IPO investors for ${company.companyName}`);
+                        console.log(`[Auto-CapStruct] ✅ Saved ${company.preIpoInvestors.length} pre-IPO records for ${company.companyName}`);
                     }
                 } catch (e) {
-                    console.warn(`[Auto-RHP] Capital structure failed for ${company.companyName}:`, e.message);
+                    console.warn(`[Auto-CapStruct] Capital structure extraction failed for ${company.companyName}:`, e.message);
                 }
             }
 
-            // --- Strategy 2: Fall back to full RHP PDF ---
-            if (!extracted && isValidRHPUrl(company.rhpUrl)) {
-                try {
-                    console.log(`[Auto-RHP] Falling back to full RHP: ${company.rhpUrl}...`);
-                    const safelyEscapedName = company.companyName.replace(/"/g, '\\"');
-                    const pyCmd = `${pythonBin} ${pyScript} --rhp "${company.rhpUrl}" --company_name "${safelyEscapedName}"`;
-                    const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 60000 });
-                    const nlpData = JSON.parse(out.trim());
-                    company.preIpoInvestors = nlpData.preIpoInvestors || [];
-                    if (nlpData.waca !== undefined && nlpData.waca !== null) {
-                        company.preIpoWaca = nlpData.waca;
-                    }
-                    if (nlpData.peerComparison) {
-                        company.peerComparison = nlpData.peerComparison;
-                    }
-                    nlpUpdated++;
-                    extracted = true;
-                } catch (e) {
-                    console.error(`[Auto-RHP] Full RHP failed on ${company.companyName}:`, e.message);
-                }
-            }
-
-            // --- Mark as empty if both strategies failed (prevent infinite retry loop) ---
+            // If no Capital Structure PDF found on IPO Premium, mark as empty array to avoid retry loops
             if (!extracted) {
                 company.preIpoInvestors = [];
                 nlpUpdated++;
@@ -230,7 +194,7 @@ async function autoFetchMissingRHP() {
         
         if (nlpUpdated > 0) {
             writeDB(db);
-            console.log(`[Auto-RHP] Saved ${nlpUpdated} new NLP Pre-IPO extractions to database.`);
+            console.log(`[Auto-CapStruct] Saved ${nlpUpdated} new Capital Structure Pre-IPO records to database.`);
         }
     }
 }
