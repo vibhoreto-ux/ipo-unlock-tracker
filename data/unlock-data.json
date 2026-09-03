@@ -28080,65 +28080,173 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 5424000,
-      "rhpUrl": "https://farmpeace.in/wp-content/uploads/2026/08/Prospectus.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_rhp_1787800455.pdf",
       "preIpoInvestors": [
         {
           "name": "Vishnuma Global Solutions Private Limited",
-          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "date": "June / Nov 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
           "shares": "13,76,216",
-          "buyPrice": 11.54,
+          "buyPrice": 37.5,
           "ipoPrice": 59,
-          "discountPct": 80.4,
-          "type": "Strategic Corporate Pre-IPO (9.08% pre-issue / 13x Bonus Adj. from \u20b9150)"
+          "discountPct": 36.4,
+          "type": "Strategic Corporate Pre-IPO (9.08% pre-issue / Bonus Adj.)"
         },
         {
           "name": "Brightful Commercial Private Limited",
-          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "date": "June 2024 (Pref. Issue) & Aug 2025 (3:1 Bonus)",
           "shares": "11,37,824",
-          "buyPrice": 11.54,
+          "buyPrice": 37.5,
           "ipoPrice": 59,
-          "discountPct": 80.4,
-          "type": "Strategic Corporate Pre-IPO (7.51% pre-issue / 13x Bonus Adj. from \u20b9150)"
+          "discountPct": 36.4,
+          "type": "Strategic Corporate Pre-IPO (7.51% pre-issue / Bonus Adj.)"
         },
         {
           "name": "Miteshkumar Rameshbhai Chaudhari",
-          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "date": "Rights / Transfer & Aug 2025 (3:1 Bonus)",
           "shares": "6,40,000",
-          "buyPrice": 11.54,
+          "buyPrice": 2.5,
           "ipoPrice": 59,
-          "discountPct": 80.4,
-          "type": "Individual Pre-IPO Allottee (4.22% pre-issue / 13x Bonus Adj.)"
+          "discountPct": 95.8,
+          "type": "Early Public Shareholder (4.22% pre-issue / Bonus Adj.)"
+        },
+        {
+          "name": "Bimla Tiwari",
+          "date": "Rights / Transfer & Aug 2025 (3:1 Bonus)",
+          "shares": "4,80,000",
+          "buyPrice": 2.5,
+          "ipoPrice": 59,
+          "discountPct": 95.8,
+          "type": "Early Public Shareholder (3.17% pre-issue / Bonus Adj.)"
         },
         {
           "name": "Neeraj Vishnukumar Gupta",
-          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "date": "Nov 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
           "shares": "2,95,716",
-          "buyPrice": 11.54,
+          "buyPrice": 37.5,
           "ipoPrice": 59,
-          "discountPct": 80.4,
-          "type": "Individual Pre-IPO Allottee (1.95% pre-issue / 13x Bonus Adj.)"
+          "discountPct": 36.4,
+          "type": "Individual Pre-IPO Allottee (1.95% pre-issue / Bonus Adj.)"
+        },
+        {
+          "name": "Rajeshkumar V Patel",
+          "date": "Rights & Aug 2025 (3:1 Bonus)",
+          "shares": "1,60,000",
+          "buyPrice": 2.5,
+          "ipoPrice": 59,
+          "discountPct": 95.8,
+          "type": "Individual Pre-IPO Shareholder (1.06% pre-issue)"
+        },
+        {
+          "name": "Poonam Shandliya",
+          "date": "Rights & Aug 2025 (3:1 Bonus)",
+          "shares": "1,60,000",
+          "buyPrice": 2.5,
+          "ipoPrice": 59,
+          "discountPct": 95.8,
+          "type": "Individual Pre-IPO Shareholder (1.06% pre-issue)"
+        },
+        {
+          "name": "Ashish M Bhandari HUF",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "1,34,000",
+          "buyPrice": 37.5,
+          "ipoPrice": 59,
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.88% pre-issue / Bonus Adj.)"
         },
         {
           "name": "Amisha Sanjay Shah",
-          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
           "shares": "1,08,108",
-          "buyPrice": 11.54,
+          "buyPrice": 37.5,
           "ipoPrice": 59,
-          "discountPct": 80.4,
-          "type": "Individual Pre-IPO Allottee (0.71% pre-issue / 13x Bonus Adj.)"
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.71% pre-issue / Bonus Adj.)"
         },
         {
-          "name": "Other Public Pre-IPO Allottees Group",
-          "date": "Nov/Dec 2024 (Pref. Issue) & Aug 2025 (12:1 Bonus)",
-          "shares": "3,89,096",
-          "buyPrice": 11.54,
+          "name": "Kapil Pramodbhai Vakhari",
+          "date": "Nov 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "93,072",
+          "buyPrice": 37.5,
           "ipoPrice": 59,
-          "discountPct": 80.4,
-          "type": "Public Pre-IPO Allottees (13x Bonus Adj.)"
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.61% pre-issue / Bonus Adj.)"
+        },
+        {
+          "name": "Tusharkumar Narendrabhai Chaudhary",
+          "date": "Rights & Aug 2025 (3:1 Bonus)",
+          "shares": "80,000",
+          "buyPrice": 2.5,
+          "ipoPrice": 59,
+          "discountPct": 95.8,
+          "type": "Early Individual Shareholder (0.53% pre-issue)"
+        },
+        {
+          "name": "Vaibhavbhai J. Patel",
+          "date": "Rights & Aug 2025 (3:1 Bonus)",
+          "shares": "80,000",
+          "buyPrice": 2.5,
+          "ipoPrice": 59,
+          "discountPct": 95.8,
+          "type": "Early Individual Shareholder (0.53% pre-issue)"
+        },
+        {
+          "name": "Vivek Suresh Trivedi",
+          "date": "Rights & Aug 2025 (3:1 Bonus)",
+          "shares": "80,000",
+          "buyPrice": 2.5,
+          "ipoPrice": 59,
+          "discountPct": 95.8,
+          "type": "Early Individual Shareholder (0.53% pre-issue)"
+        },
+        {
+          "name": "Renu Ashish Bhandari",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "54,000",
+          "buyPrice": 37.5,
+          "ipoPrice": 59,
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.36% pre-issue)"
+        },
+        {
+          "name": "Chainika Vibhav Shah",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "27,024",
+          "buyPrice": 37.5,
+          "ipoPrice": 59,
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.18% pre-issue)"
+        },
+        {
+          "name": "Aman Sanjeev Jain",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "27,000",
+          "buyPrice": 37.5,
+          "ipoPrice": 59,
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.18% pre-issue)"
+        },
+        {
+          "name": "Viral Suresh Jain",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "27,000",
+          "buyPrice": 37.5,
+          "ipoPrice": 59,
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.18% pre-issue)"
+        },
+        {
+          "name": "Shashank Krishnakant Pore",
+          "date": "June 2024 (Pref. @ \u20b9150) & Aug 2025 (3:1 Bonus)",
+          "shares": "27,000",
+          "buyPrice": 37.5,
+          "ipoPrice": 59,
+          "discountPct": 36.4,
+          "type": "Pre-IPO Allottee (0.18% pre-issue)"
         }
       ],
-      "capitalStructureUrl": "https://farmpeace.in/wp-content/uploads/2026/08/Prospectus.pdf",
-      "preIpoWaca": "11.54"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_capital_structure_1787800455.pdf",
+      "preIpoWaca": 26.88
     },
     {
       "companyName": "Rays of Belief Ltd.",
