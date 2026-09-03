@@ -321,24 +321,70 @@ async function mergeData(ipoList, anchorData, year, existingCompanies = [], forc
 async function fetchAnchorInvestorNames(chittorgarhUrl) {
     const empty = { investors: [], anchorShares: 0, totalShares: 0 };
     if (!chittorgarhUrl) return empty;
+
+    const cleanNumber = (str) => {
+        if (!str) return 0;
+        const cleaned = str.replace(/,/g, '').replace(/[^0-9]/g, '');
+        const n = parseInt(cleaned, 10);
+        return isNaN(n) ? 0 : n;
+    };
+
+    let investors = [];
+    let anchorShares = 0;
+    let totalShares = 0;
+    let marketMakerShares = 0;
+    let qibExAnchorShares = 0;
+    let niiShares = 0;
+    let retailShares = 0;
+
     try {
-        // Convert IPO page URL to subscription page URL
+        // 1. Fetch main IPO page for Total Issue Size
+        try {
+            const mainResp = await axios.get(chittorgarhUrl, { 
+                headers: { ...HEADERS, 'Referer': 'https://www.chittorgarh.com/' }, 
+                timeout: 15000 
+            });
+            const $main = cheerio.load(mainResp.data);
+
+            $main('table tr').each((i, row) => {
+                const cells = $main(row).find('td, th');
+                if (cells.length >= 2) {
+                    const label = $main(cells.eq(0)).text().trim().toLowerCase();
+                    const val = $main(cells.eq(1)).text().trim();
+
+                    if (label.includes('total issue size') && val.includes('shares')) {
+                        const match = val.match(/([\d,]+)\s*shares/i);
+                        if (match) totalShares = cleanNumber(match[1]);
+                    }
+                    if (label.includes('anchor investor') && (label.includes('−') || label.includes('-') || !label.includes('ex'))) {
+                        const match = val.match(/([\d,]+)/);
+                        if (match) anchorShares = cleanNumber(match[1]);
+                    }
+                    if (label.includes('market maker') && val.includes('shares')) {
+                        const match = val.match(/([\d,]+)/);
+                        if (match) marketMakerShares = cleanNumber(match[1]);
+                    }
+                }
+            });
+        } catch (e) {
+            console.warn(`[Anchor Scraper] Main page parse error: ${e.message}`);
+        }
+
+        // 2. Fetch subscription page for anchor investors & breakdown
         const subUrl = chittorgarhUrl.replace('/ipo/', '/ipo_subscription/');
-        const resp = await axios.get(subUrl, {
+        const subResp = await axios.get(subUrl, {
             headers: { ...HEADERS, 'Referer': 'https://www.chittorgarh.com/' },
             timeout: 15000
         });
-        const $ = cheerio.load(resp.data);
+        const $ = cheerio.load(subResp.data);
 
         // Extract investor names from #anchorinvestorlist table or any table with Anchor headers
-        const investors = [];
         $('table').each((i, t) => {
             const thText = $(t).text().toLowerCase();
             if (thText.includes('anchor') && (thText.includes('shares allotted') || thText.includes('group entity') || thText.includes('% allocated'))) {
                 $(t).find('tr').each((j, row) => {
                     const cells = $(row).find('td');
                     if (cells.length >= 3) {
-                        // Check if col 1 is index or name
                         let investorName = $(cells.eq(1)).text().trim();
                         if (investorName.match(/^\d+$/)) {
                             investorName = $(cells.eq(2)).text().trim();
@@ -353,23 +399,22 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
             }
         });
 
-        // Extract anchor shares and total shares from the shares offered table
-        let anchorShares = 0;
-        let totalShares = 0;
+        // Extract category-wise shares offered breakdown
         $('table').each((i, t) => {
-            const text = $(t).text().toLowerCase();
-            // Allow tables that have just 'shares offered' and 'total'. 'anchor' is optional.
-            if (text.includes('shares offered') && text.includes('total')) {
+            const tableText = $(t).text().toLowerCase();
+            if (tableText.includes('category') && tableText.includes('shares offered') && (tableText.includes('size (%)') || tableText.includes('amt (₹ cr.)') || tableText.includes('retail'))) {
                 $(t).find('tr').each((j, row) => {
                     const cells = $(row).find('td');
                     if (cells.length >= 2) {
-                        const category = $(cells.eq(0)).text().replace(/\u00a0/g, ' ').trim().toLowerCase();
-                        const sharesText = $(cells.eq(1)).text().trim().replace(/,/g, '');
-                        const shares = parseInt(sharesText);
-                        if (category === 'anchor' && !isNaN(shares)) {
-                            anchorShares = shares;
-                        }
-                        if (category === 'total' && !isNaN(shares)) {
+                        const cat = $(cells.eq(0)).text().replace(/\u00a0/g, ' ').trim().toLowerCase();
+                        const shares = cleanNumber($(cells.eq(1)).text());
+
+                        if (cat === 'anchor' && shares > 0) anchorShares = shares;
+                        if (cat === 'market maker' && shares > 0) marketMakerShares = shares;
+                        if (cat.includes('qib (ex') && shares > 0) qibExAnchorShares = shares;
+                        if (cat === 'nii' && shares > 0) niiShares = shares;
+                        if (cat === 'retail' && shares > 0) retailShares = shares;
+                        if (cat === 'total' && shares > 0 && shares > totalShares) {
                             totalShares = shares;
                         }
                     }
@@ -377,17 +422,17 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
             }
         });
 
-        // Fallback: try embedded JSON data for shares
-        if (!anchorShares || !totalShares) {
-            const body = $('body').text();
-            if (!anchorShares) {
-                const m = body.match(/shares_offered_anchor_investor.*?(\d+)/);
-                if (m) anchorShares = parseInt(m[1]);
+        // 3. Fallback: Check component sums and ensure Total = Anchor + Public Components
+        const sumComponents = qibExAnchorShares + niiShares + retailShares + marketMakerShares;
+        if (sumComponents > 0 && anchorShares > 0) {
+            const calculatedTotal = anchorShares + sumComponents;
+            if (calculatedTotal > totalShares) {
+                totalShares = calculatedTotal;
             }
-            if (!totalShares) {
-                const m = body.match(/total_shares_offered["\s:]+(\d+)/) || body.match(/issue_shares["\s:]+(\d+)/);
-                if (m) totalShares = parseInt(m[1]);
-            }
+        }
+
+        if (totalShares < anchorShares) {
+            totalShares = anchorShares + sumComponents;
         }
 
         return { investors, anchorShares, totalShares };

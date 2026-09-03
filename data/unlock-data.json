@@ -7552,7 +7552,9 @@
         "originalDate": "2026-02-01T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "totalShares": 5691200,
+      "anchorShares": 1619200
     },
     {
       "companyName": "Sellowrap Industries Ltd.",
@@ -28557,7 +28559,7 @@
         "SB OPPORTUNITIES FUND II (1,86,000 shares | \u20b91.00 Cr)",
         "TATTVAM AIF TRUST (1,86,000 shares | \u20b91.00 Cr)"
       ],
-      "anchorShares": 768000,
+      "anchorShares": 762000,
       "totalShares": 2700000,
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_280820261345.zip",
       "preIpoInvestors": [
