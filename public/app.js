@@ -1767,17 +1767,24 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             // Pre-IPO HTML: Special emphasis and open by default for Fixed Price
             let preIpoHtml = '';
             const hasPreIpo = ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0;
+            const capLink = ipo.capitalStructureUrl || ipo.rhpUrl;
+            const capDocBtn = capLink 
+                ? `<a href="${capLink}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>` 
+                : '';
 
             if (isFixedPrice) {
                 const preIpoTable = hasPreIpo 
                     ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false)}</div>`
-                    : `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">🛡️ 100% Promoter Held (0 external Pre-IPO round — zero pre-IPO selling overhang).</span>`;
+                    : `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">🛡️ 100% Promoter & Early Associate Held (0 external Pre-IPO round — zero pre-IPO selling overhang).</span>`;
 
                 preIpoHtml = `
                     <div class="pre-ipo-focus-box">
-                        <div class="pre-ipo-focus-header">
-                            <span class="pre-ipo-focus-tag">Key Focus</span>
-                            <span>Pre-IPO Capital Structure & Cost Basis</span>
+                        <div class="pre-ipo-focus-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+                            <div style="display:flex; align-items:center; gap:6px;">
+                                <span class="pre-ipo-focus-tag">Key Focus</span>
+                                <span>Pre-IPO Capital Structure & Cost Basis</span>
+                            </div>
+                            ${capDocBtn}
                         </div>
                         <div class="pre-ipo-focus-hint">
                             Since Fixed Price IPOs have <strong>no Anchor institutional price discovery</strong>, Pre-IPO shareholder acquisition costs and lock-in supply are the primary valuation & supply benchmark.
@@ -1793,7 +1800,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             } else {
                 if (hasPreIpo) {
                     const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false);
-                    preIpoHtml = `<details><summary>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
+                    preIpoHtml = `<details><summary style="display:flex; justify-content:space-between; align-items:center;"><span>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
                 } else {
                     preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
                 }

@@ -29878,12 +29878,10 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
-      "rhpUrl": "",
-      "capitalStructureUrl": "",
-      "preIpoInvestors": [
-        "any Investor"
-      ]
+      "totalShares": 33750000,
+      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2026/1788239986820.pdf",
+      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2026/1788239986820.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Amtech Esters Ltd.",
