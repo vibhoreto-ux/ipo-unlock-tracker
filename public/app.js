@@ -1735,6 +1735,11 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             const price = ipo.issuePrice ? `₹${ipo.issuePrice}` : 'TBD';
             const exc = ipo.exchange ? ` (${ipo.exchange})` : '';
 
+            const isFixedPrice = ipo.pricingType === 'Fixed Price' || 
+                ((!ipo.anchorInvestors || ipo.anchorInvestors.length === 0) && 
+                 (!ipo.anchorShares || ipo.anchorShares === 0) && 
+                 (!ipo.anchor30 || !ipo.anchor30.original));
+
             let sharesStr = '';
             if (ipo.totalShares) {
                 const ancNum = ipo.anchorShares || 0;
@@ -1745,17 +1750,53 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 sharesStr = 'TBD';
             }
 
-            // Attempt to show shares per anchor if data string contains it, else just chip
-            let anchorsHtml = ipo.anchorInvestors && ipo.anchorInvestors.length > 0 
-                ? `<div class="chips">` + ipo.anchorInvestors.map(a => `<span>${a}</span>`).join('') + `</div>`
-                : '<span class="empty">No anchors yet</span>';
-                
-            let preIpoHtml = '';
-            if (ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0) {
-                const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false);
-                preIpoHtml = `<details><summary>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
+            // Anchors HTML
+            let anchorsHtml = '';
+            let anchorSummaryText = '';
+            if (isFixedPrice) {
+                anchorSummaryText = 'Anchor Investors (0)';
+                anchorsHtml = '<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">No Anchor quota allocated (Fixed Price IPO structure — 100% split across Retail & HNI)</span>';
+            } else if (ipo.anchorInvestors && ipo.anchorInvestors.length > 0) {
+                anchorSummaryText = `Anchor Investors (${ipo.anchorInvestors.length})`;
+                anchorsHtml = `<div class="chips">` + ipo.anchorInvestors.map(a => `<span>${a}</span>`).join('') + `</div>`;
             } else {
-                preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
+                anchorSummaryText = 'Anchor Investors (0)';
+                anchorsHtml = '<span class="empty">No anchors yet</span>';
+            }
+
+            // Pre-IPO HTML: Special emphasis and open by default for Fixed Price
+            let preIpoHtml = '';
+            const hasPreIpo = ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0;
+
+            if (isFixedPrice) {
+                const preIpoTable = hasPreIpo 
+                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false)}</div>`
+                    : `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">🛡️ 100% Promoter Held (0 external Pre-IPO round — zero pre-IPO selling overhang).</span>`;
+
+                preIpoHtml = `
+                    <div class="pre-ipo-focus-box">
+                        <div class="pre-ipo-focus-header">
+                            <span class="pre-ipo-focus-tag">Key Focus</span>
+                            <span>Pre-IPO Capital Structure & Cost Basis</span>
+                        </div>
+                        <div class="pre-ipo-focus-hint">
+                            Since Fixed Price IPOs have <strong>no Anchor institutional price discovery</strong>, Pre-IPO shareholder acquisition costs and lock-in supply are the primary valuation & supply benchmark.
+                        </div>
+                        <details open>
+                            <summary style="font-weight:700; color:#b45309;">
+                                ${hasPreIpo ? `🔥 Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})` : `Pre-IPO Investors (0)`}
+                            </summary>
+                            <div class="body">${preIpoTable}</div>
+                        </details>
+                    </div>
+                `;
+            } else {
+                if (hasPreIpo) {
+                    const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false);
+                    preIpoHtml = `<details><summary>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
+                } else {
+                    preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
+                }
             }
 
             let peersHtml = '';
@@ -1799,6 +1840,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
             const badgeBoardClass = ipo.issueType === 'SME' ? 'b-board' : 'b-board';
             const badgeBoardText = ipo.issueType === 'SME' ? 'SME' : 'Mainboard';
+            const priceBadge = isFixedPrice 
+                ? `<span class="badge b-fixed-price"><i class="ph ph-tag"></i> FIXED PRICE (NO ANCHORS)</span>`
+                : `<span class="badge b-book-built">BOOK BUILT</span>`;
 
             let docsHtml = '';
             const docLinks = [];
@@ -1808,30 +1852,36 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             if (ipo.rhpUrl && isValidRHPUrl(ipo.rhpUrl)) {
                 docLinks.push(`<a href="${ipo.rhpUrl}" target="_blank" class="doc-btn"><i class="ph ph-file-pdf"></i> RHP</a>`);
             }
-            if (ipo.anchorUrl) {
+            if (ipo.anchorUrl && !isFixedPrice) {
                 docLinks.push(`<a href="${ipo.anchorUrl}" target="_blank" class="doc-btn"><i class="ph ph-anchor"></i> Anchor Doc</a>`);
             }
             if (docLinks.length > 0) {
                 docsHtml = `<div class="card-doc-links">${docLinks.join('')}</div>`;
             }
 
+            const anchor30Text = isFixedPrice ? '<span style="color:var(--text-secondary);font-size:12px;">None (Fixed Price)</span>' : fmtDate(ipo.anchor30);
+            const anchor90Text = isFixedPrice ? '<span style="color:var(--text-secondary);font-size:12px;">None (Fixed Price)</span>' : fmtDate(ipo.anchor90);
+
             card.innerHTML = `
                 <div class="ctop">
                     <div><div class="cname">${ipo.companyName}</div><div class="csector">${ipo.sector || 'Sector N/A'}${exc}</div></div>
                     <div class="badges">
                         <span class="badge b-open">OPEN</span>
-                        <span class="badge ${badgeBoardClass}">${badgeBoardText}</span>
+                        <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end;">
+                            ${priceBadge}
+                            <span class="badge ${badgeBoardClass}">${badgeBoardText}</span>
+                        </div>
                     </div>
                 </div>
                 <div class="facts">
                     <div><span class="k">Price</span><span class="v">${price}</span></div>
                     <div><span class="k">Shares</span><span class="v">${sharesStr}</span></div>
-                    <div><span class="k">Anchor 30-d</span><span class="v">${fmtDate(ipo.anchor30)}</span></div>
-                    <div><span class="k">Anchor 90-d</span><span class="v">${fmtDate(ipo.anchor90)}</span></div>
+                    <div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>
+                    <div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>
                 </div>
                 
                 ${mgmtHtml}
-                <details><summary>Anchor Investors (${(ipo.anchorInvestors && ipo.anchorInvestors.length) || 0})</summary><div class="body">${anchorsHtml}</div></details>
+                <details><summary>${anchorSummaryText}</summary><div class="body">${anchorsHtml}</div></details>
                 ${preIpoHtml}
                 ${peersHtml}
                 ${docsHtml}
