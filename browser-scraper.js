@@ -330,21 +330,28 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
         });
         const $ = cheerio.load(resp.data);
 
-        // Extract investor names from #anchorinvestorlist table
+        // Extract investor names from #anchorinvestorlist table or any table with Anchor headers
         const investors = [];
-        const anchorSection = $('#anchorinvestorlist');
-        if (anchorSection.length) {
-            anchorSection.find('table tr').each((j, row) => {
-                const cells = $(row).find('td');
-                if (cells.length >= 4) {
-                    // Column 1 = #, Column 2 = Anchor name, Column 3 = Group Entity
-                    const investorName = $(cells.eq(1)).text().trim();
-                    if (investorName && !investorName.match(/^(total|#|sr|s\.no|\d+$)/i)) {
-                        investors.push(investorName);
+        $('table').each((i, t) => {
+            const thText = $(t).text().toLowerCase();
+            if (thText.includes('anchor') && (thText.includes('shares allotted') || thText.includes('group entity') || thText.includes('% allocated'))) {
+                $(t).find('tr').each((j, row) => {
+                    const cells = $(row).find('td');
+                    if (cells.length >= 3) {
+                        // Check if col 1 is index or name
+                        let investorName = $(cells.eq(1)).text().trim();
+                        if (investorName.match(/^\d+$/)) {
+                            investorName = $(cells.eq(2)).text().trim();
+                        }
+                        if (investorName && !investorName.match(/^(total|#|sr|s\.no|\d+$)/i) && investorName.length > 2) {
+                            if (!investors.includes(investorName)) {
+                                investors.push(investorName);
+                            }
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
+        });
 
         // Extract anchor shares and total shares from the shares offered table
         let anchorShares = 0;
