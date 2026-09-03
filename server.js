@@ -624,21 +624,29 @@ async function resolveCompanyDocUrl(company) {
         return company.rhpUrl;
     }
 
-    // Try fast lookup on IPO Premium
+    // 1. Instant check against local capital-structure-cache.json
     try {
-        const ipoPremUrl = await fetchCapitalStructureUrl(company.companyName);
-        if (ipoPremUrl) {
-            company.capitalStructureUrl = ipoPremUrl;
-            return ipoPremUrl;
+        const cachePath = path.join(__dirname, 'data', 'capital-structure-cache.json');
+        if (fs.existsSync(cachePath)) {
+            const cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+            const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            for (const [slug, item] of Object.entries(cache)) {
+                if (norm.includes(slug) || slug.includes(norm.slice(0, 8))) {
+                    if (item && item.capitalStructureUrl) {
+                        company.capitalStructureUrl = item.capitalStructureUrl;
+                        return item.capitalStructureUrl;
+                    }
+                }
+            }
         }
     } catch (e) {}
 
-    // Try Chittorgarh page lookup
+    // 2. Fast Chittorgarh page lookup with 4s timeout
     if (company.chittorgarhUrl) {
         try {
             const chRes = await axios.get(company.chittorgarhUrl, {
                 headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)' },
-                timeout: 8000
+                timeout: 4000
             });
             const $ = cheerio.load(chRes.data);
             for (const a of $('a').toArray()) {
@@ -648,22 +656,6 @@ async function resolveCompanyDocUrl(company) {
                     (txt.includes('rhp') || txt.includes('prospectus') || href.includes('rhp') || href.includes('prospectus') || txt.includes('capital'))) {
                     
                     let finalUrl = href;
-                    // If SEBI html filing page, resolve embedded pdf
-                    if (href.includes('sebi.gov.in/filings/')) {
-                        try {
-                            const sebiRes = await axios.get(href, {
-                                headers: { 'User-Agent': 'Mozilla/5.0' },
-                                timeout: 6000
-                            });
-                            const $s = cheerio.load(sebiRes.data);
-                            const embed = $s('embed, iframe').attr('src') || '';
-                            const match = embed.match(/file=(https?:\/\/[^&]+)/i);
-                            if (match) {
-                                finalUrl = match[1];
-                            }
-                        } catch (e) {}
-                    }
-                    
                     company.capitalStructureUrl = finalUrl;
                     company.rhpUrl = finalUrl;
                     return finalUrl;
@@ -693,28 +685,25 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             (c.companyName || '').toLowerCase().replace(/[\.\s]+$/, '') === normQ
         );
 
-        // Common helper to inject live price before returning (and on-demand pre-IPO extraction if missing)
+        // Common helper to inject live price before returning
         const respondWithPrices = async (basePayload) => {
-            console.log('[DEBUG] respondWithPrices called for:', companyName, 'company found:', !!company);
             if (company) {
-                // 1. Ensure capitalStructureUrl is resolved
+                // Ensure capitalStructureUrl is resolved quickly
                 if (!company.capitalStructureUrl && !company.rhpUrl) {
                     const docUrl = await resolveCompanyDocUrl(company);
-                    console.log('[DEBUG] resolveCompanyDocUrl returned:', docUrl);
                     if (docUrl) {
                         company.capitalStructureUrl = docUrl;
                         company.rhpUrl = docUrl;
                         writeDB(db);
-                        console.log(`[UnlockDetails] Resolved and saved docUrl for ${company.companyName}: ${docUrl}`);
                     }
                 }
 
-                // 2. If preIpoInvestors is missing/undefined, extract on demand and persist
+                // If preIpoInvestors is missing/undefined, trigger background extraction non-blocking
                 if (company.preIpoInvestors === undefined) {
                     const targetDoc = company.capitalStructureUrl || company.rhpUrl;
                     if (targetDoc) {
-                        try {
-                            const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
+                        // Background non-blocking extraction
+                        extractFromCapitalStructure(company.companyName, targetDoc).then(csRes => {
                             if (csRes && Array.isArray(csRes.preIpoInvestors)) {
                                 company.preIpoInvestors = csRes.preIpoInvestors;
                                 if (csRes.waca) company.preIpoWaca = csRes.waca;
@@ -722,21 +711,22 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
                             } else {
                                 company.preIpoInvestors = [];
                             }
-                        } catch (e) {
+                            writeDB(db);
+                        }).catch(() => {
                             company.preIpoInvestors = [];
-                        }
+                            writeDB(db);
+                        });
                     } else {
                         company.preIpoInvestors = [];
+                        writeDB(db);
                     }
-                    writeDB(db);
-                    console.log(`[UnlockDetails] Saved on-demand pre-IPO data for ${company.companyName} to DB`);
                 }
             }
 
             const liveData = await getLivePrice(companyName);
             return res.json({
                 ...basePayload,
-                preIpoInvestors: company ? company.preIpoInvestors : [],
+                preIpoInvestors: company ? (company.preIpoInvestors || []) : [],
                 preIpoWaca: company ? (company.preIpoWaca || company.waca) : undefined,
                 rhpUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,
                 capitalStructureUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,
