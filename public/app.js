@@ -1687,13 +1687,20 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         flexContainer.style.gap = '20px';
         flexContainer.style.alignItems = 'flex-start';
         flexContainer.style.flexWrap = 'wrap';
+        flexContainer.style.width = '100%';
+        flexContainer.style.maxWidth = '100%';
+        flexContainer.style.boxSizing = 'border-box';
 
         const mainboardCol = document.createElement('div');
-        mainboardCol.style.flex = '1';
-        mainboardCol.style.minWidth = '420px';
+        mainboardCol.style.flex = '1 1 400px';
+        mainboardCol.style.minWidth = '0';
+        mainboardCol.style.maxWidth = '100%';
+        mainboardCol.style.overflow = 'hidden';
         const mainboardGrid = document.createElement('div');
         mainboardGrid.className = 'grid';
         mainboardGrid.style.gridTemplateColumns = '1fr';
+        mainboardGrid.style.width = '100%';
+        mainboardGrid.style.minWidth = '0';
         const mainboardTitle = document.createElement('h3');
         mainboardTitle.innerHTML = 'Mainboard';
         mainboardTitle.style.marginBottom = '10px';
@@ -1701,11 +1708,15 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         mainboardCol.appendChild(mainboardGrid);
 
         const smeCol = document.createElement('div');
-        smeCol.style.flex = '1';
-        smeCol.style.minWidth = '420px';
+        smeCol.style.flex = '1 1 400px';
+        smeCol.style.minWidth = '0';
+        smeCol.style.maxWidth = '100%';
+        smeCol.style.overflow = 'hidden';
         const smeGrid = document.createElement('div');
         smeGrid.className = 'grid';
         smeGrid.style.gridTemplateColumns = '1fr';
+        smeGrid.style.width = '100%';
+        smeGrid.style.minWidth = '0';
         const smeTitle = document.createElement('h3');
         smeTitle.innerHTML = 'SME';
         smeTitle.style.marginBottom = '10px';
