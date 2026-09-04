@@ -1419,14 +1419,55 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         });
     }
 
-    // Wire Upcoming IPO refresh button — silent reload, no Tracker UI changes
+    // Wire Upcoming IPO refresh button — actively probes missing Anchor & Pre-IPO data
     const refreshUpcomingBtn = document.getElementById('refreshUpcomingBtn');
     if (refreshUpcomingBtn) {
-        refreshUpcomingBtn.addEventListener('click', () => {
-            upcomingList.innerHTML = '<div class="no-data"><p>Refreshing (this may take up to 60s)...</p></div>';
-            loadCompanyData(true).then(() => renderUpcomingIPOs()).catch(() => {
-                upcomingList.innerHTML = '<div class="no-data"><p style="color:var(--danger)">Failed to refresh.</p></div>';
-            });
+        refreshUpcomingBtn.addEventListener('click', async () => {
+            const originalBtnHtml = refreshUpcomingBtn.innerHTML;
+            refreshUpcomingBtn.disabled = true;
+            refreshUpcomingBtn.innerHTML = '<span class="loader-spinner" style="width:12px;height:12px;border-width:2px;display:inline-block;vertical-align:middle;margin-right:6px;"></span> Probing...';
+
+            upcomingList.innerHTML = `
+                <div class="no-data" style="padding: 30px 20px; background: rgba(79, 70, 229, 0.04); border-radius: 12px; border: 1px dashed rgba(79, 70, 229, 0.2);">
+                    <div class="loader-spinner" style="margin: 0 auto 12px; width: 28px; height: 28px;"></div>
+                    <p style="font-weight: 700; color: var(--text); font-size: 1.05rem;">🔍 Probing upcoming IPOs for latest Anchor & Pre-IPO data...</p>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">Scanning Chittorgarh subscription lists, IPO Premium filings & RHP capital structure documents where data is currently 0 or missing.</p>
+                </div>
+            `;
+
+            try {
+                const probeResp = await fetch('/api/probe-upcoming', { method: 'POST' });
+                const probeRes = await probeResp.json();
+                
+                if (probeRes.companies && Array.isArray(probeRes.companies)) {
+                    allCompanies = probeRes.companies;
+                    if (probeRes.lastRefreshed && lastUpdated) {
+                        lastUpdated.textContent = new Date(probeRes.lastRefreshed).toLocaleString();
+                    }
+                    updateStats();
+                } else {
+                    await loadCompanyData(false);
+                }
+
+                renderUpcomingIPOs();
+
+                // Show notification banner if companies were updated
+                if (probeRes.updatedCount > 0) {
+                    const noticeDiv = document.createElement('div');
+                    noticeDiv.style.cssText = 'background: #ecfdf5; border: 1px solid #10b981; color: #065f46; padding: 10px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 13.5px; font-weight: 600; display:flex; align-items:center; justify-content:space-between; animation: fadeIn 0.3s ease;';
+                    noticeDiv.innerHTML = `
+                        <span>✨ Successfully probed ${probeRes.totalProbed} upcoming IPOs — updated fresh Anchor/Pre-IPO data for ${probeRes.updatedCount} companies!</span>
+                        <span style="cursor:pointer; font-size:16px;" onclick="this.parentElement.remove()">&times;</span>
+                    `;
+                    upcomingList.insertBefore(noticeDiv, upcomingList.firstChild);
+                }
+            } catch (err) {
+                console.error('[Upcoming Refresh] Failed:', err);
+                upcomingList.innerHTML = '<div class="no-data"><p style="color:var(--danger)">Failed to probe upcoming data. Please check connection.</p></div>';
+            } finally {
+                refreshUpcomingBtn.disabled = false;
+                refreshUpcomingBtn.innerHTML = originalBtnHtml;
+            }
         });
     }
 

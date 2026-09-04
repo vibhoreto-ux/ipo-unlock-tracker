@@ -490,4 +490,4 @@ function parseDate(dateStr) {
     return isNaN(d.getTime()) ? null : d;
 }
 
-module.exports = { scrapeWithBrowser };
+module.exports = { scrapeWithBrowser, fetchAnchorInvestorNames };

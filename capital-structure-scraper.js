@@ -349,7 +349,7 @@ async function extractFromCapitalStructure(companyName, capitalStructureUrl) {
     console.log(`[CapStruct] Extracting pre-IPO investors from: ${url}`);
     
     try {
-        const { execSync } = require('child_process');
+        const { exec } = require('child_process');
         let pythonBin = process.env.PYTHON_BIN || 'python3';
         if (fs.existsSync(path.join(__dirname, 'venv', 'bin', 'python'))) {
             pythonBin = path.join(__dirname, 'venv', 'bin', 'python');
@@ -358,14 +358,23 @@ async function extractFromCapitalStructure(companyName, capitalStructureUrl) {
         const safelyEscapedName = companyName.replace(/"/g, '\\"');
         
         const pyCmd = `${pythonBin} ${pyScript} --rhp "${url}" --company_name "${safelyEscapedName}"`;
-        const out = execSync(pyCmd, { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'], timeout: 90000 });
-        const nlpData = JSON.parse(out.trim());
-        
-        return {
-            preIpoInvestors: nlpData.preIpoInvestors || [],
-            waca: nlpData.waca !== undefined ? nlpData.waca : null,
-            peerComparison: nlpData.peerComparison || null,
-        };
+        return new Promise((resolve) => {
+            exec(pyCmd, { encoding: 'utf8', timeout: 12000 }, (err, stdout) => {
+                if (err || !stdout) {
+                    return resolve({ preIpoInvestors: [], waca: null, peerComparison: null });
+                }
+                try {
+                    const nlpData = JSON.parse(stdout.trim());
+                    resolve({
+                        preIpoInvestors: nlpData.preIpoInvestors || [],
+                        waca: nlpData.waca !== undefined ? nlpData.waca : null,
+                        peerComparison: nlpData.peerComparison || null,
+                    });
+                } catch (e) {
+                    resolve({ preIpoInvestors: [], waca: null, peerComparison: null });
+                }
+            });
+        });
     } catch (e) {
         console.error(`[CapStruct] Extraction failed for ${companyName}:`, e.message);
         return { preIpoInvestors: [], waca: null, peerComparison: null };

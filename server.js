@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { scrapeUnlockData } = require('./scraper');
-const { scrapeWithBrowser } = require('./browser-scraper');
+const { scrapeWithBrowser, fetchAnchorInvestorNames } = require('./browser-scraper');
 const { autoFetchMissingRHP } = require('./auto-rhp');
 const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
 const { scanPreferential } = require('./preferential-scraper');
@@ -592,6 +592,137 @@ app.post('/api/batch-capital-structure', async (req, res) => {
     } catch (error) {
         console.error('[CapStruct API] Batch error:', error.message);
         res.status(500).json({ error: error.message });
+    }
+});
+
+/**
+ * Probe upcoming/open IPOs for missing Anchor and Pre-IPO data
+ */
+async function probeUpcomingData() {
+    const db = readDB();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Filter upcoming unlisted companies (allotment date is in the future or not yet set)
+    const upcoming = db.companies.filter(c => {
+        if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
+        const listDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
+        if (!listDateStr) return true;
+        const listDate = new Date(listDateStr);
+        listDate.setHours(0, 0, 0, 0);
+        return listDate >= today;
+    });
+
+    console.log(`[ProbeUpcoming] Probing ${upcoming.length} upcoming IPOs for missing Anchor and Pre-IPO data...`);
+    let updatedCount = 0;
+    const probeLog = [];
+
+    // Probe in parallel chunks of 4
+    const CHUNK_SIZE = 4;
+    for (let i = 0; i < upcoming.length; i += CHUNK_SIZE) {
+        const chunk = upcoming.slice(i, i + CHUNK_SIZE);
+        await Promise.all(chunk.map(async (company) => {
+            let changed = false;
+            const name = company.companyName;
+
+            // 1. Probe Anchors & True Total Shares if anchorInvestors is 0 or missing
+            if (!company.anchorInvestors || company.anchorInvestors.length === 0 || !company.totalShares || company.totalShares === 0) {
+                try {
+                    if (company.chittorgarhUrl) {
+                        const parsed = await fetchAnchorInvestorNames(company.chittorgarhUrl);
+                        if (parsed.investors && parsed.investors.length > 0) {
+                            company.anchorInvestors = parsed.investors;
+                            changed = true;
+                        }
+                        if (parsed.anchorShares > 0 && parsed.anchorShares !== company.anchorShares) {
+                            company.anchorShares = parsed.anchorShares;
+                            changed = true;
+                        }
+                        if (parsed.totalShares > 0 && parsed.totalShares !== company.totalShares) {
+                            company.totalShares = parsed.totalShares;
+                            changed = true;
+                        }
+                    }
+                } catch (e) {
+                    console.warn(`[ProbeUpcoming] Anchor error for ${name}: ${e.message}`);
+                }
+            }
+
+            // 2. Probe Capital Structure & Pre-IPO Data if preIpoInvestors is empty/missing
+            if (!company.preIpoInvestors || company.preIpoInvestors.length === 0 || !company.capitalStructureUrl) {
+                try {
+                    const docUrl = await resolveCompanyDocUrl(company);
+                    if (docUrl && docUrl !== company.capitalStructureUrl) {
+                        company.capitalStructureUrl = docUrl;
+                        company.rhpUrl = docUrl;
+                        changed = true;
+                    }
+
+                    const targetDoc = company.capitalStructureUrl || company.rhpUrl;
+                    if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
+                        try {
+                            const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
+                            if (csRes && Array.isArray(csRes.preIpoInvestors) && csRes.preIpoInvestors.length > 0) {
+                                company.preIpoInvestors = csRes.preIpoInvestors;
+                                if (csRes.waca) company.preIpoWaca = csRes.waca;
+                                if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
+                                changed = true;
+                            }
+                        } catch (e) {}
+                    }
+                } catch (e) {
+                    console.warn(`[ProbeUpcoming] Pre-IPO error for ${name}: ${e.message}`);
+                }
+            }
+
+            if (changed) {
+                updatedCount++;
+                probeLog.push({
+                    company: name,
+                    anchorsCount: company.anchorInvestors ? company.anchorInvestors.length : 0,
+                    preIpoCount: company.preIpoInvestors ? company.preIpoInvestors.length : 0,
+                    totalShares: company.totalShares
+                });
+            }
+        }));
+    }
+
+    if (updatedCount > 0) {
+        db.lastUpdated = new Date().toISOString();
+        writeDB(db);
+        console.log(`[ProbeUpcoming] Successfully saved ${updatedCount} updated upcoming companies to DB`);
+    }
+
+    return {
+        totalProbed: upcoming.length,
+        updatedCount,
+        probeLog,
+        companies: db.companies,
+        lastRefreshed: db.lastUpdated
+    };
+}
+
+/**
+ * POST /api/probe-upcoming
+ * Actively probes upcoming IPOs for newly released Anchor allotments and Pre-IPO capital structure data
+ */
+app.post('/api/probe-upcoming', async (req, res) => {
+    try {
+        const result = await probeUpcomingData();
+        res.json({ success: true, ...result });
+    } catch (e) {
+        console.error('[ProbeUpcoming API] Error:', e.message);
+        res.status(500).json({ error: e.message });
+    }
+});
+
+app.get('/api/probe-upcoming', async (req, res) => {
+    try {
+        const result = await probeUpcomingData();
+        res.json({ success: true, ...result });
+    } catch (e) {
+        console.error('[ProbeUpcoming API] Error:', e.message);
+        res.status(500).json({ error: e.message });
     }
 });
 

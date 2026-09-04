@@ -22,9 +22,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-12-31T00:00:00.000Z",
+        "expiryDate": "2026-12-30",
         "originalDate": "2026-12-31T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://beelinemb.com/wp-content/uploads/2025/12/RHP_Apollo-Techno-Industries-Ltd.pdf",
@@ -5551,7 +5551,8 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_110920251506.zip",
-      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_110920251506.zip"
+      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_110920251506.zip",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Airfloa Rail Technology Ltd.",
@@ -24147,7 +24148,7 @@
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 5560000,
       "rhpUrl": "https://www.bsesme.com/download/380603/SME_IPO%20InPrinciple/DRHP_SaffronSpecialityPapersLimited_20251231195818.pdf",
       "preIpoInvestors": [],
       "managementHighlights": [
@@ -28532,7 +28533,8 @@
           "discountPct": 88.7,
           "type": "Early VC Investors"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://img.perniaspopupshop.com/store-locator-v2/uploads/Red_Herring_Prospectus_RHP_a99142e0fd.pdf"
     },
     {
       "companyName": "Phychem Technologies Ltd.",
@@ -29997,7 +29999,7 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 33750000,
+      "totalShares": 15000000,
       "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2026/1788239986820.pdf",
       "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2026/1788239986820.pdf",
       "preIpoInvestors": []
@@ -30025,7 +30027,7 @@
       "anchorShares": 676800,
       "totalShares": 2384000,
       "rhpUrl": "https://credorapartners.com/wp-content/uploads/2026/08/Amtech-Esters-Limited-RHP.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://credorapartners.com/wp-content/uploads/2026/08/Amtech-Esters-Limited-RHP.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30049,9 +30051,9 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 52731946,
       "rhpUrl": "https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30075,9 +30077,9 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 23510425,
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30101,9 +30103,9 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 7396437,
       "rhpUrl": "https://www.damcapital.in/files/pdf/639239827470702392_Prasol_Chemicals_Limited_-_RHP.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://www.damcapital.in/files/pdf/639239827470702392_Prasol_Chemicals_Limited_-_RHP.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30127,9 +30129,9 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 16704750,
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/upload/investmentbanking/prospects/kanohar_electricals_limited_-_rhp.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://www.iiflcapital.com/institutional-equities/upload/investmentbanking/prospects/kanohar_electricals_limited_-_rhp.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30153,9 +30155,9 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 28308481,
       "rhpUrl": "https://www.centrum.co.in/sites/default/files/product_equity/Pranav%20Constructions%20Limited%20-%20RHP.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://www.centrum.co.in/sites/default/files/product_equity/Pranav%20Constructions%20Limited%20-%20RHP.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30179,15 +30181,15 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 5690000,
       "rhpUrl": "https://www.bsesme.com/download/339300/SME_IPO%20InPrinciple/ApanaDP_20250930235823.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://www.bsesme.com/download/339300/SME_IPO%20InPrinciple/ApanaDP_20250930235823.pdf",
       "preIpoInvestors": []
     },
     {
       "companyName": "Qualiance International Ltd.",
       "issueType": "SME",
-      "exchange": "NSE SME",
+      "exchange": "BSE SME",
       "allotmentDate": {
         "original": "2026-09-11T00:00:00.000Z",
         "adjusted": "2026-09-11T00:00:00.000Z",
@@ -30211,11 +30213,18 @@
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 3552000,
+      "anchorInvestors": [
+        "BHARAT VENTURE OPPORTUNITIES FUND (BHARAT VENTURE shares)",
+        "CARNELIAN AIF CATEGORY I TRUST-Scheme I (CARNELIAN shares)",
+        "HEM GROWTH OPPORTUNITIES FUND (HEM GROWTH OPPORTUNITIES FUND shares)",
+        "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND (FINAVENUE shares)",
+        "360 ONE LVF TREASURY SOLUTIONS FUND (360 ONE shares)",
+        "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund (TATTVAM shares)"
+      ],
+      "anchorShares": 422400,
+      "totalShares": 1411200,
       "rhpUrl": "https://qualiance.com/api/uploads/ir/rhp_qualiance.pdf",
-      "capitalStructureUrl": "",
+      "capitalStructureUrl": "https://qualiance.com/api/uploads/ir/rhp_qualiance.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30284,11 +30293,11 @@
       ],
       "anchorShares": 1579000,
       "totalShares": 5550000,
-      "rhpUrl": "",
-      "capitalStructureUrl": ""
+      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_270820262204.zip",
+      "capitalStructureUrl": "https://www.bseindia.com/downloads/ipo/RHP_270820262204.zip"
     }
   ],
-  "lastUpdated": "2026-09-03T06:59:51.027Z",
+  "lastUpdated": "2026-09-04T17:36:40.787Z",
   "lastScraped": {
     "time": "2026-09-03T06:59:51.027Z",
     "scraped2025": 6,
@@ -30336,6 +30345,47 @@
       "noticeId": "NSE/CML/73229",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73229.zip",
       "fetchedAt": "2026-09-03T17:00:38.019Z"
+    },
+    "Apollo Techno Industries Ltd.": {
+      "found": true,
+      "totalShares": 13689000,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 2639000,
+          "percentage": 19.3,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-01-27",
+          "shares": 520000,
+          "percentage": 3.8
+        },
+        {
+          "date": "2026-03-28",
+          "shares": 530000,
+          "percentage": 3.9
+        },
+        {
+          "date": "2026-12-30",
+          "shares": 3647500,
+          "percentage": 26.6
+        },
+        {
+          "date": "2027-12-30",
+          "shares": 3607500,
+          "percentage": 26.4
+        },
+        {
+          "date": "2028-12-30",
+          "shares": 2745000,
+          "percentage": 20.1
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20251230-30",
+      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20251230-30&attachedId=926937f8-8027-4654-b7d1-98922d57a1f6",
+      "fetchedAt": "2026-09-03T17:17:16.616Z"
     }
   }
 }
