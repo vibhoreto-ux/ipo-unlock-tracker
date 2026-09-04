@@ -648,8 +648,8 @@ async function probeUpcomingData() {
                 }
             }
 
-            // 2. Probe Capital Structure & Pre-IPO Data if preIpoInvestors is empty/missing
-            if (!company.preIpoInvestors || company.preIpoInvestors.length === 0 || !company.capitalStructureUrl) {
+            // 2. Probe Capital Structure & Pre-IPO Data if preIpoInvestors is undefined or doc link is missing
+            if (company.preIpoInvestors === undefined || !company.capitalStructureUrl) {
                 try {
                     const docUrl = await resolveCompanyDocUrl(company);
                     if (docUrl && docUrl !== company.capitalStructureUrl) {
@@ -659,7 +659,7 @@ async function probeUpcomingData() {
                     }
 
                     const targetDoc = company.capitalStructureUrl || company.rhpUrl;
-                    if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
+                    if (targetDoc && company.preIpoInvestors === undefined) {
                         try {
                             const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
                             if (csRes && Array.isArray(csRes.preIpoInvestors) && csRes.preIpoInvestors.length > 0) {
