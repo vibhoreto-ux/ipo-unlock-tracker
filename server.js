@@ -648,18 +648,22 @@ async function probeUpcomingData() {
                 }
             }
 
-            // 2. Probe Capital Structure & Pre-IPO Data if preIpoInvestors is undefined or doc link is missing
-            if (company.preIpoInvestors === undefined || !company.capitalStructureUrl) {
+            // 2. Probe Capital Structure, Anchor Doc & Pre-IPO Data
+            const isCsMissingOrRhp = !company.capitalStructureUrl || 
+                company.capitalStructureUrl.toLowerCase().includes('rhp') || 
+                !company.capitalStructureUrl.toLowerCase().includes('capital_structure');
+            const isPreIpoMissing = !company.preIpoInvestors || company.preIpoInvestors.length === 0;
+
+            if (isCsMissingOrRhp || isPreIpoMissing || !company.anchorUrl) {
                 try {
                     const docUrl = await resolveCompanyDocUrl(company);
                     if (docUrl && docUrl !== company.capitalStructureUrl) {
                         company.capitalStructureUrl = docUrl;
-                        company.rhpUrl = docUrl;
                         changed = true;
                     }
 
                     const targetDoc = company.capitalStructureUrl || company.rhpUrl;
-                    if (targetDoc && company.preIpoInvestors === undefined) {
+                    if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
                         try {
                             const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
                             if (csRes && Array.isArray(csRes.preIpoInvestors) && csRes.preIpoInvestors.length > 0) {
@@ -681,7 +685,8 @@ async function probeUpcomingData() {
                     company: name,
                     anchorsCount: company.anchorInvestors ? company.anchorInvestors.length : 0,
                     preIpoCount: company.preIpoInvestors ? company.preIpoInvestors.length : 0,
-                    totalShares: company.totalShares
+                    totalShares: company.totalShares,
+                    capitalStructureUrl: company.capitalStructureUrl
                 });
             }
         }));
@@ -738,7 +743,6 @@ app.listen(PORT, () => {
 });
 
 // ----- BSE Circular / Unlock Details -----
-// ----- BSE Circular / Unlock Details -----
 const { getUnlockPercentages, parseLockInData } = require('./circular-scraper');
 const { getLivePrice } = require('./price-scraper');
 
@@ -748,12 +752,6 @@ const circularCache = new Map();
 // Fast document URL resolver for any company
 async function resolveCompanyDocUrl(company) {
     if (!company) return null;
-    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http')) {
-        return company.capitalStructureUrl;
-    }
-    if (company.rhpUrl && company.rhpUrl.startsWith('http')) {
-        return company.rhpUrl;
-    }
 
     // 1. Instant check against local capital-structure-cache.json
     try {
@@ -762,15 +760,42 @@ async function resolveCompanyDocUrl(company) {
             const cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
             const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
             for (const [slug, item] of Object.entries(cache)) {
-                if (norm.includes(slug) || slug.includes(norm.slice(0, 8))) {
+                const normSlug = slug.replace(/[^a-z0-9]/g, '');
+                if (norm.includes(normSlug) || normSlug.includes(norm.slice(0, 8)) || norm.slice(0, 8).includes(normSlug.slice(0, 8))) {
                     if (item && item.capitalStructureUrl) {
                         company.capitalStructureUrl = item.capitalStructureUrl;
+                        if (item.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = item.anchorPdfUrl;
+                        if (item.rhpUrl && (!company.rhpUrl || company.rhpUrl === company.capitalStructureUrl)) company.rhpUrl = item.rhpUrl;
                         return item.capitalStructureUrl;
                     }
                 }
             }
         }
     } catch (e) {}
+
+    // Check ipopremium-cache.json as well
+    try {
+        const ipoCachePath = path.join(__dirname, 'data', 'ipopremium-cache.json');
+        if (fs.existsSync(ipoCachePath)) {
+            const cache = JSON.parse(fs.readFileSync(ipoCachePath, 'utf8'));
+            const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            for (const [slug, item] of Object.entries(cache)) {
+                const normSlug = slug.replace(/[^a-z0-9]/g, '');
+                if (norm.includes(normSlug) || normSlug.includes(norm.slice(0, 8)) || norm.slice(0, 8).includes(normSlug.slice(0, 8))) {
+                    if (item && item.capitalStructureUrl) {
+                        company.capitalStructureUrl = item.capitalStructureUrl;
+                        if (item.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = item.anchorPdfUrl;
+                        return item.capitalStructureUrl;
+                    }
+                }
+            }
+        }
+    } catch (e) {}
+
+    // If company already has a genuine capital structure url
+    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http') && company.capitalStructureUrl.includes('capital_structure')) {
+        return company.capitalStructureUrl;
+    }
 
     // 2. Fast Chittorgarh page lookup with 4s timeout
     if (company.chittorgarhUrl) {
@@ -780,20 +805,42 @@ async function resolveCompanyDocUrl(company) {
                 timeout: 4000
             });
             const $ = cheerio.load(chRes.data);
+            let foundCap = null;
+            let foundRhp = null;
             for (const a of $('a').toArray()) {
                 const href = $(a).attr('href') || '';
                 const txt = $(a).text().trim().toLowerCase();
-                if ((href.includes('.pdf') || href.includes('.zip') || href.includes('sebi.gov.in') || href.includes('bseindia.com') || href.includes('nseindia.com')) &&
-                    (txt.includes('rhp') || txt.includes('prospectus') || href.includes('rhp') || href.includes('prospectus') || txt.includes('capital'))) {
-                    
-                    let finalUrl = href;
-                    company.capitalStructureUrl = finalUrl;
-                    company.rhpUrl = finalUrl;
-                    return finalUrl;
+                if (href.includes('.pdf') || href.includes('.zip') || href.includes('sebi.gov.in') || href.includes('bseindia.com') || href.includes('nseindia.com')) {
+                    if (txt.includes('capital') || href.includes('capital_structure')) {
+                        foundCap = href;
+                    }
+                    if (txt.includes('rhp') || txt.includes('prospectus') || href.includes('rhp') || href.includes('prospectus')) {
+                        foundRhp = href;
+                    }
                 }
+            }
+            if (foundCap) {
+                company.capitalStructureUrl = foundCap;
+                if (foundRhp) company.rhpUrl = foundRhp;
+                return foundCap;
+            }
+            if (foundRhp) {
+                company.rhpUrl = foundRhp;
+                if (!company.capitalStructureUrl) {
+                    company.capitalStructureUrl = foundRhp;
+                }
+                return company.capitalStructureUrl;
             }
         } catch (e) {}
     }
+
+    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http')) {
+        return company.capitalStructureUrl;
+    }
+    if (company.rhpUrl && company.rhpUrl.startsWith('http')) {
+        return company.rhpUrl;
+    }
+
     return null;
 }
 

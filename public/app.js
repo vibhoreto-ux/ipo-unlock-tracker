@@ -631,11 +631,11 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
         if (typeof inv === 'object' && inv !== null) {
             name = inv.name || '—';
-            date = inv.date || '—';
+            date = inv.date || inv.allotmentDate || inv.transactionDate || (inv.lockInExpiry ? 'Pre-IPO' : '—');
             shares = inv.shares || '—';
-            buyPrice = inv.buyPrice !== undefined ? inv.buyPrice : (inv.price !== undefined ? parseFloat(inv.price) : null);
+            buyPrice = inv.buyPrice !== undefined ? inv.buyPrice : (inv.price !== undefined ? parseFloat(inv.price) : (inv.acquisitionPrice !== undefined ? parseFloat(inv.acquisitionPrice) : null));
             discountPct = inv.discountPct !== undefined ? inv.discountPct : null;
-            type = inv.type || '';
+            type = inv.type || inv.category || '';
         } else if (typeof inv === 'string') {
             const priceMatch = inv.match(/\(₹?([\d\.]+)\)/);
             if (priceMatch) {

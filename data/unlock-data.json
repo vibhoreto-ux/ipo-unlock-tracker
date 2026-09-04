@@ -30214,18 +30214,48 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
-        "BHARAT VENTURE OPPORTUNITIES FUND (BHARAT VENTURE shares)",
-        "CARNELIAN AIF CATEGORY I TRUST-Scheme I (CARNELIAN shares)",
-        "HEM GROWTH OPPORTUNITIES FUND (HEM GROWTH OPPORTUNITIES FUND shares)",
-        "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND (FINAVENUE shares)",
-        "360 ONE LVF TREASURY SOLUTIONS FUND (360 ONE shares)",
-        "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund (TATTVAM shares)"
+        "BHARAT VENTURE OPPORTUNITIES FUND (1,12,000 shares)",
+        "CARNELIAN AIF CATEGORY I TRUST-Scheme I (80,000 shares)",
+        "HEM GROWTH OPPORTUNITIES FUND (70,400 shares)",
+        "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND (54,400 shares)",
+        "360 ONE LVF TREASURY SOLUTIONS FUND (52,800 shares)",
+        "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund (52,800 shares)"
       ],
       "anchorShares": 422400,
       "totalShares": 1411200,
-      "rhpUrl": "https://qualiance.com/api/uploads/ir/rhp_qualiance.pdf",
-      "capitalStructureUrl": "https://qualiance.com/api/uploads/ir/rhp_qualiance.pdf",
-      "preIpoInvestors": []
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/qualiance_international_ltd_nse_sme_anchor_1788438233.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/qualiance_international_ltd_nse_sme_rhp_1788244211.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/qualiance_international_ltd_nse_sme_capital_structure_1788247189.pdf",
+      "preIpoWaca": 127.00,
+      "preIpoInvestors": [
+        {
+          "name": "RJ HUF (Ramesh Thakurdas Jaisinghani)",
+          "date": "29 Aug 2026",
+          "shares": 264259,
+          "buyPrice": 127,
+          "acquisitionPrice": 127,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-09-13T00:00:00.000Z"
+        },
+        {
+          "name": "SB Opportunities Fund II",
+          "date": "29 Aug 2026",
+          "shares": 72000,
+          "buyPrice": 127,
+          "acquisitionPrice": 127,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-09-13T00:00:00.000Z"
+        },
+        {
+          "name": "Pocketful Research Capital Pvt Ltd",
+          "date": "29 Aug 2026",
+          "shares": 72000,
+          "buyPrice": 127,
+          "acquisitionPrice": 127,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-09-13T00:00:00.000Z"
+        }
+      ]
     },
     {
       "companyName": "Fly-Hi Maritime Travels Ltd.",

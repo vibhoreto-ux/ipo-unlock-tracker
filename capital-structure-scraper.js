@@ -222,43 +222,51 @@ async function scrapeDetailPage(detailUrl) {
             timeout: 45000,
         });
         
-        await new Promise(r => setTimeout(r, 2000));
+        await page.waitForFunction(() => document.body.innerText.length > 500, { timeout: 10000 }).catch(() => {});
+        await new Promise(r => setTimeout(r, 1500));
         
         const result = await page.evaluate(() => {
             let capitalStructureUrl = null;
             let anchorPdfUrl = null;
+            let rhpUrl = null;
             
             const allLinks = Array.from(document.querySelectorAll('a'));
-            
             for (const a of allLinks) {
                 const href = a.href || '';
                 const text = (a.textContent || '').trim().toLowerCase();
                 
                 // Capital structure PDF
-                if (!capitalStructureUrl && href.includes('capital_structure') && href.includes('.pdf')) {
-                    capitalStructureUrl = href;
-                }
-                if (!capitalStructureUrl && text.includes('capital structure') && href.includes('.pdf')) {
+                if (!capitalStructureUrl && (href.includes('capital_structure') || text.includes('capital structure')) && href.includes('.pdf')) {
                     capitalStructureUrl = href;
                 }
                 
                 // Anchor PDF
-                if (!anchorPdfUrl && href.includes('anchor') && href.includes('.pdf')) {
+                if (!anchorPdfUrl && (href.includes('anchor') || text.includes('anchor')) && href.includes('.pdf')) {
                     anchorPdfUrl = href;
                 }
-                if (!anchorPdfUrl && text.includes('anchor') && href.includes('.pdf')) {
-                    anchorPdfUrl = href;
+
+                // RHP PDF
+                if (!rhpUrl && (href.includes('rhp') || href.includes('prospectus') || text.includes('rhp') || text.includes('dhrp')) && href.includes('.pdf')) {
+                    rhpUrl = href;
                 }
             }
+
+            // Fallback: regex search on full body
+            const pdfs = Array.from(new Set(document.body.innerHTML.match(/https?:\/\/[^"'\s<>]+\.pdf/g) || []));
+            for (const p of pdfs) {
+                if (p.includes('capital_structure') && !capitalStructureUrl) capitalStructureUrl = p;
+                if (p.includes('anchor') && !anchorPdfUrl) anchorPdfUrl = p;
+                if ((p.includes('rhp') || p.includes('prospectus')) && !rhpUrl) rhpUrl = p;
+            }
             
-            return { capitalStructureUrl, anchorPdfUrl };
+            return { capitalStructureUrl, anchorPdfUrl, rhpUrl };
         });
         
         return result;
         
     } catch (e) {
         console.error(`[CapStruct] Detail page scrape error for ${detailUrl}:`, e.message);
-        return { capitalStructureUrl: null, anchorPdfUrl: null };
+        return { capitalStructureUrl: null, anchorPdfUrl: null, rhpUrl: null };
     } finally {
         if (page) await page.close().catch(() => {});
     }
