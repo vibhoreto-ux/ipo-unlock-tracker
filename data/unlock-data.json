@@ -21134,7 +21134,9 @@
       ],
       "rhpUrl": "https://www.bseindia.com/corporates/download/363631/IPO%20Open/RHP_20260227181017.pdf",
       "capitalStructureUrl": null,
-      "preIpoWaca": 368.28
+      "preIpoWaca": 368.28,
+      "anchorShares": 2410401,
+      "totalShares": 8043300
     },
     {
       "companyName": "Acetech E-Commerce Ltd.",
@@ -21313,7 +21315,9 @@
       ],
       "preIpoInvestors": [],
       "capitalStructureUrl": null,
-      "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1771933506852.pdf"
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/feb-2026/omnitech-engineering-limited-rhp_99941.html",
+      "anchorShares": 7691629,
+      "totalShares": 25685062
     },
     {
       "companyName": "PNGS Reva Diamond Jewellery Ltd.",
@@ -35348,9 +35352,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-08-10T00:00:00.000Z",
+        "expiryDate": "2027-08-06",
         "originalDate": "2027-08-10T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_capital_structure_1785898061.pdf",
@@ -42091,6 +42095,57 @@
       "noticeId": "NSE/CML/75684",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75684.zip",
       "fetchedAt": "2026-09-05T06:28:51.619Z"
+    },
+    "Anawil Wire & Engineering Ltd.": {
+      "found": true,
+      "totalShares": 24999800,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 4710000,
+          "percentage": 18.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-03",
+          "shares": 700000,
+          "percentage": 2.8
+        },
+        {
+          "date": "2026-09-04",
+          "shares": 935200,
+          "percentage": 3.7
+        },
+        {
+          "date": "2026-09-08",
+          "shares": 48000,
+          "percentage": 0.2
+        },
+        {
+          "date": "2026-11-03",
+          "shares": 940400,
+          "percentage": 3.8
+        },
+        {
+          "date": "2027-08-06",
+          "shares": 7009128,
+          "percentage": 28
+        },
+        {
+          "date": "2028-08-05",
+          "shares": 5657072,
+          "percentage": 22.6
+        },
+        {
+          "date": "2029-08-05",
+          "shares": 5000000,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75648",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75648.zip",
+      "fetchedAt": "2026-09-05T07:41:54.535Z"
     }
   }
 }
