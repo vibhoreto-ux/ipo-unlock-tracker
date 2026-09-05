@@ -715,10 +715,112 @@ async function probeUpcomingData() {
                 }
             }
 
+            // 3. Probe Pricing, Price Band & Dates from IPO Premium if missing or TBD
+            const needsPricingOrDates = !company.priceBand || !company.issuePrice || !company.allotmentDate;
+            if (needsPricingOrDates) {
+                try {
+                    const cachePath = path.join(__dirname, 'data', 'capital-structure-cache.json');
+                    if (fs.existsSync(cachePath)) {
+                        const csCache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+                        const normName = company.companyName.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        const foundKey = Object.keys(csCache).find(k => {
+                            const entry = csCache[k];
+                            const eName = (entry.companyName || entry.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+                            return eName === normName || k === normName || (entry.slug && normName.includes(entry.slug.replace(/[^a-z0-9]/g, '')));
+                        });
+                        const cachedEntry = foundKey ? csCache[foundKey] : null;
+                        
+                        if (cachedEntry) {
+                            if (cachedEntry.priceBand && company.priceBand !== cachedEntry.priceBand) {
+                                company.priceBand = cachedEntry.priceBand;
+                                changed = true;
+                            }
+                            if (cachedEntry.issuePrice && company.issuePrice !== cachedEntry.issuePrice) {
+                                company.issuePrice = cachedEntry.issuePrice;
+                                changed = true;
+                            }
+                            if (cachedEntry.lotSize && company.lotSize !== cachedEntry.lotSize) {
+                                company.lotSize = cachedEntry.lotSize;
+                                changed = true;
+                            }
+                            if (cachedEntry.allotmentDate && (!company.allotmentDate || !company.allotmentDate.original)) {
+                                company.allotmentDate = { original: cachedEntry.allotmentDate, adjusted: cachedEntry.allotmentDate, isAdjusted: false };
+                                changed = true;
+                            }
+                            if (cachedEntry.listingDate && !company.listingDate) {
+                                company.listingDate = cachedEntry.listingDate;
+                                changed = true;
+                            }
+                            if (cachedEntry.openDate && !company.openDate) {
+                                company.openDate = cachedEntry.openDate;
+                                changed = true;
+                            }
+                            if (cachedEntry.closeDate && !company.closeDate) {
+                                company.closeDate = cachedEntry.closeDate;
+                                changed = true;
+                            }
+
+                            // If still missing, scrape the detail page live
+                            if ((!company.priceBand || !company.issuePrice) && cachedEntry.detailUrl) {
+                                const detailRes = await scrapeDetailPage(cachedEntry.detailUrl);
+                                if (detailRes) {
+                                    if (detailRes.priceBand) {
+                                        company.priceBand = detailRes.priceBand;
+                                        cachedEntry.priceBand = detailRes.priceBand;
+                                        changed = true;
+                                    }
+                                    if (detailRes.issuePrice) {
+                                        company.issuePrice = detailRes.issuePrice;
+                                        cachedEntry.issuePrice = detailRes.issuePrice;
+                                        changed = true;
+                                    }
+                                    if (detailRes.lotSize) {
+                                        company.lotSize = detailRes.lotSize;
+                                        cachedEntry.lotSize = detailRes.lotSize;
+                                        changed = true;
+                                    }
+                                    if (detailRes.allotmentDate && (!company.allotmentDate || !company.allotmentDate.original)) {
+                                        company.allotmentDate = { original: detailRes.allotmentDate, adjusted: detailRes.allotmentDate, isAdjusted: false };
+                                        cachedEntry.allotmentDate = detailRes.allotmentDate;
+                                        changed = true;
+                                    }
+                                    if (detailRes.listingDate && !company.listingDate) {
+                                        company.listingDate = detailRes.listingDate;
+                                        cachedEntry.listingDate = detailRes.listingDate;
+                                        changed = true;
+                                    }
+                                    if (detailRes.openDate && !company.openDate) {
+                                        company.openDate = detailRes.openDate;
+                                        cachedEntry.openDate = detailRes.openDate;
+                                        changed = true;
+                                    }
+                                    if (detailRes.closeDate && !company.closeDate) {
+                                        company.closeDate = detailRes.closeDate;
+                                        cachedEntry.closeDate = detailRes.closeDate;
+                                        changed = true;
+                                    }
+                                    if (detailRes.totalShares && (!company.totalShares || company.totalShares === 0)) {
+                                        company.totalShares = detailRes.totalShares;
+                                        cachedEntry.totalShares = detailRes.totalShares;
+                                        changed = true;
+                                    }
+                                    fs.writeFileSync(cachePath, JSON.stringify(csCache, null, 2), 'utf8');
+                                }
+                            }
+                        }
+                    }
+                } catch (pe) {
+                    console.warn(`[ProbeUpcoming] Pricing probe error for ${name}: ${pe.message}`);
+                }
+            }
+
             if (changed) {
                 updatedCount++;
                 probeLog.push({
                     company: name,
+                    priceBand: company.priceBand,
+                    issuePrice: company.issuePrice,
+                    lotSize: company.lotSize,
                     anchorsCount: company.anchorInvestors ? company.anchorInvestors.length : 0,
                     preIpoCount: company.preIpoInvestors ? company.preIpoInvestors.length : 0,
                     totalShares: company.totalShares,

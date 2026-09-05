@@ -172,6 +172,42 @@ async function syncAllCapitalStructures(options = {}) {
             match.rhpUrl = item.rhpUrl;
             docChanged = true;
         }
+        if (item.priceBand && match.priceBand !== item.priceBand) {
+            match.priceBand = item.priceBand;
+            docChanged = true;
+        }
+        if (item.issuePrice && match.issuePrice !== item.issuePrice) {
+            match.issuePrice = item.issuePrice;
+            docChanged = true;
+        }
+        if (item.lotSize && match.lotSize !== item.lotSize) {
+            match.lotSize = item.lotSize;
+            docChanged = true;
+        }
+        if (item.allotmentDate && (!match.allotmentDate || !match.allotmentDate.original)) {
+            match.allotmentDate = {
+                original: item.allotmentDate,
+                adjusted: item.allotmentDate,
+                isAdjusted: false
+            };
+            docChanged = true;
+        }
+        if (item.listingDate && !match.listingDate) {
+            match.listingDate = item.listingDate;
+            docChanged = true;
+        }
+        if (item.openDate && !match.openDate) {
+            match.openDate = item.openDate;
+            docChanged = true;
+        }
+        if (item.closeDate && !match.closeDate) {
+            match.closeDate = item.closeDate;
+            docChanged = true;
+        }
+        if (item.totalShares && (!match.totalShares || match.totalShares === 0)) {
+            match.totalShares = item.totalShares;
+            docChanged = true;
+        }
 
         // Step 5: Extract Pre-IPO investors if missing and CS URL exists
         if (extractPreIpo && match.capitalStructureUrl && match.capitalStructureUrl.toLowerCase().includes('capital_structure')) {

@@ -25,9 +25,16 @@
     "id": 1327,
     "slug": "rentomojo-ltd",
     "detailUrl": "https://www.ipopremium.in/view/ipo/1327/rentomojo-ltd",
+    "priceBand": "₹384–404",
+    "issuePrice": 404,
+    "lotSize": 37,
+    "allotmentDate": "2026-09-15T00:00:00.000Z",
+    "listingDate": "2026-09-17",
+    "openDate": "2026-09-09",
+    "closeDate": "2026-09-11",
     "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
     "anchorPdfUrl": null,
-    "updatedAt": "2026-09-05T04:02:11.637Z",
+    "updatedAt": "2026-09-05T06:30:00.000Z",
     "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf"
   },
   "lccprojects": {
@@ -78,7 +85,15 @@
     "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
     "anchorPdfUrl": null,
     "updatedAt": "2026-09-05T04:03:05.498Z",
-    "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf"
+    "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf",
+    "priceBand": "₹322–339",
+    "issuePrice": 339,
+    "lotSize": 44,
+    "allotmentDate": "2026-09-14T18:30:00.000Z",
+    "listingDate": "2026-09-16T18:30:00.000Z",
+    "openDate": "2026-09-08T18:30:00.000Z",
+    "closeDate": "2026-09-10T18:30:00.000Z",
+    "totalShares": 23746313
   },
   "pranavconstructions": {
     "companyName": "Pranav Constructions Ltd.",

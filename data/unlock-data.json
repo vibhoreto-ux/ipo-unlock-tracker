@@ -4,7 +4,11 @@
       "companyName": "Steamhouse India Ltd.",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
-      "allotmentDate": null,
+      "allotmentDate": {
+        "original": "2026-09-14T18:30:00.000Z",
+        "adjusted": "2026-09-14T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "chittorgarhUrl": null,
       "issuePrice": null,
       "anchor30": null,
@@ -16,39 +20,56 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
       "capitalStructureUrl": null,
       "anchorUrl": null,
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "priceBand": "₹0–0",
+      "listingDate": "2026-09-16T18:30:00.000Z",
+      "openDate": "2026-09-08T18:30:00.000Z",
+      "closeDate": "2026-09-10T18:30:00.000Z"
     },
     {
       "companyName": "Vinod Texworld Ltd.",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
-      "allotmentDate": null,
+      "allotmentDate": {
+        "original": "2026-09-14T18:30:00.000Z",
+        "adjusted": "2026-09-14T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "chittorgarhUrl": null,
-      "issuePrice": null,
+      "issuePrice": 94,
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 4556800,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788519044.pdf",
       "capitalStructureUrl": null,
       "anchorUrl": null,
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "priceBand": "₹94–94",
+      "lotSize": 1200,
+      "listingDate": "2026-09-16T18:30:00.000Z",
+      "openDate": "2026-09-08T18:30:00.000Z",
+      "closeDate": "2026-09-10T18:30:00.000Z"
     },
     {
       "companyName": "Infrax Renewable Ltd",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
-      "allotmentDate": null,
+      "allotmentDate": {
+        "original": "2026-09-14T18:30:00.000Z",
+        "adjusted": "2026-09-14T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "chittorgarhUrl": null,
-      "issuePrice": null,
+      "issuePrice": 104,
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 3931200,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_rhp_1788532229.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_capital_structure_1788532230.pdf",
       "anchorUrl": null,
@@ -72,21 +93,30 @@
         "M/s. Intellifin Private Limited (₹160)",
         "Chittorgarh Infotech Limited",
         "Ms. Gandhi Maya Bhavik"
-      ]
+      ],
+      "priceBand": "₹104–104",
+      "lotSize": 1200,
+      "listingDate": "2026-09-16T18:30:00.000Z",
+      "openDate": "2026-09-08T18:30:00.000Z",
+      "closeDate": "2026-09-10T18:30:00.000Z"
     },
     {
       "companyName": "Manipal Payment & Identity Solutions Ltd.",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
-      "allotmentDate": null,
+      "allotmentDate": {
+        "original": "2026-09-14T18:30:00.000Z",
+        "adjusted": "2026-09-14T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "chittorgarhUrl": null,
-      "issuePrice": null,
+      "issuePrice": 339,
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 23746313,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
       "anchorUrl": null,
@@ -188,7 +218,12 @@
           "lockInExpiry": "2027-03-15T00:00:00.000Z"
         }
       ],
-      "preIpoWaca": 26.1
+      "preIpoWaca": 26.1,
+      "priceBand": "₹322–339",
+      "lotSize": 44,
+      "listingDate": "2026-09-16T18:30:00.000Z",
+      "openDate": "2026-09-08T18:30:00.000Z",
+      "closeDate": "2026-09-10T18:30:00.000Z"
     },
     {
       "companyName": "LCC Projects Ltd.",
@@ -206,7 +241,11 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Maya Arjan",
+        "Arjan Suja",
+        "Maya Arjan Rabari"
+      ],
       "preIpoWaca": "Nil (0 in last 3 yrs)"
     },
     {
@@ -231,11 +270,29 @@
       "companyName": "Rentomojo Ltd.",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
-      "allotmentDate": null,
+      "allotmentDate": {
+        "original": "2026-09-15T00:00:00.000Z",
+        "adjusted": "2026-09-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "listingDate": "2026-09-17",
+      "openDate": "2026-09-09",
+      "closeDate": "2026-09-11",
+      "priceBand": "₹384–404",
+      "issuePrice": 404,
+      "lotSize": 37,
+      "pricingType": "Book Built",
       "chittorgarhUrl": null,
-      "issuePrice": null,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
@@ -35117,9 +35174,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2027-02-12T00:00:00.000Z",
+        "expiryDate": "2027-02-12",
         "originalDate": "2027-02-12T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_capital_structure_1785699190.pdf",
@@ -40931,8 +40988,11 @@
       "totalShares": 15000000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_rhp_1788214693.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_capital_structure_1788214694.pdf",
-      "preIpoInvestors": [],
-      "preIpoWaca": 62.3
+      "preIpoInvestors": [
+        "any Investor"
+      ],
+      "preIpoWaca": 62.3,
+      "preIpoChecked": true
     },
     {
       "companyName": "Amtech Esters Ltd.",
@@ -41788,7 +41848,7 @@
       "capitalStructureUrl": null
     }
   ],
-  "lastUpdated": "2026-09-05T04:41:48.131Z",
+  "lastUpdated": "2026-09-05T06:35:56.171Z",
   "lastScraped": {
     "time": "2026-09-03T06:59:51.027Z",
     "scraped2025": 6,
@@ -41990,6 +42050,47 @@
       "noticeId": "20260810-35",
       "pdfUrl": "https://www.bseindia.com/downloads/UploadDocs/Notices/Attach/AnnexureI$033419df-ddf9-42a4-b7ed-d115e6752318.pdf",
       "fetchedAt": "2026-09-05T06:15:33.176Z"
+    },
+    "Ardee Industries Ltd.": {
+      "found": true,
+      "totalShares": 315200950,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 56246366,
+          "percentage": 17.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-08",
+          "shares": 12052790,
+          "percentage": 3.8
+        },
+        {
+          "date": "2026-11-07",
+          "shares": 12052794,
+          "percentage": 3.8
+        },
+        {
+          "date": "2027-01-29",
+          "shares": 4717000,
+          "percentage": 1.5
+        },
+        {
+          "date": "2027-02-12",
+          "shares": 166052000,
+          "percentage": 52.7
+        },
+        {
+          "date": "2028-02-12",
+          "shares": 64080000,
+          "percentage": 20.3
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75684",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75684.zip",
+      "fetchedAt": "2026-09-05T06:28:51.619Z"
     }
   }
 }

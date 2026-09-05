@@ -203,20 +203,17 @@ async function scrapeHomepageIndex() {
 }
 
 /**
- * Fetch the capital structure PDF URL for a given IPO by visiting its detail page.
+ * Fetch capital structure, anchor PDF, RHP, pricing, and dates for a given IPO by visiting its detail page.
  * Uses Puppeteer to bypass Cloudflare.
  * 
  * @param {string} detailUrl - Full URL to the IPO detail page
- * @returns {{ capitalStructureUrl: string|null, anchorPdfUrl: string|null }}
+ * @returns {{ capitalStructureUrl: string|null, anchorPdfUrl: string|null, rhpUrl: string|null, priceBand: string|null, issuePrice: number|null, lotSize: number|null, totalShares: number|null, openDate: string|null, closeDate: string|null, allotmentDate: string|null, listingDate: string|null }}
  */
 async function scrapeDetailPage(detailUrl) {
-    let browser;
+    let page;
     try {
-        browser = await puppeteer.launch({
-            headless: 'new',
-            args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
-        });
-        const page = await browser.newPage();
+        const browser = await getBrowser();
+        page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36');
         
         await page.goto(detailUrl, {
@@ -225,7 +222,7 @@ async function scrapeDetailPage(detailUrl) {
         });
         
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-        await new Promise(r => setTimeout(r, 1200));
+        await new Promise(r => setTimeout(r, 1000));
         
         const result = await page.evaluate(() => {
             let capitalStructureUrl = null;
@@ -260,17 +257,95 @@ async function scrapeDetailPage(detailUrl) {
                 if (p.includes('anchor') && !anchorPdfUrl) anchorPdfUrl = p;
                 if ((p.includes('rhp') || p.includes('prospectus')) && !rhpUrl) rhpUrl = p;
             }
-            
-            return { capitalStructureUrl, anchorPdfUrl, rhpUrl };
+
+            // Extract Price Band, Issue Price, Dates, Lot Size, and Total Shares
+            const bodyText = document.body.innerText;
+            let priceBand = null;
+            let issuePrice = null;
+            let lotSize = null;
+            let openDate = null;
+            let closeDate = null;
+            let allotmentDate = null;
+            let listingDate = null;
+            let totalShares = null;
+
+            // Price Band matching: "PRICE BAND\n₹384–404" or "Price Band: ₹384-404"
+            const pbMatch = bodyText.match(/PRICE\s*BAND\s*\n\s*₹?\s*([\d,]+)\s*[–\-\—\to]+\s*₹?\s*([\d,]+)/i) ||
+                            bodyText.match(/Price\s*Band\s*[:\t]?\s*₹?\s*([\d,]+)\s*[–\-\—\to]+\s*₹?\s*([\d,]+)/i);
+            if (pbMatch) {
+                priceBand = `₹${pbMatch[1]}–${pbMatch[2]}`;
+                issuePrice = parseFloat(pbMatch[2].replace(/,/g, ''));
+            } else {
+                const ipMatch = bodyText.match(/(?:Issue|Offer)\s*Price\s*[:\t\n]?\s*₹?\s*([\d,]+(?:\.\d+)?)/i);
+                if (ipMatch) {
+                    issuePrice = parseFloat(ipMatch[1].replace(/,/g, ''));
+                }
+            }
+
+            // Lot size: "LOT SIZE\n37"
+            const lotMatch = bodyText.match(/LOT\s*SIZE\s*\n\s*(\d+)/i) ||
+                             bodyText.match(/Lot\s*Size\s*[:\t]?\s*(\d+)/i);
+            if (lotMatch) {
+                lotSize = parseInt(lotMatch[1], 10);
+            }
+
+            // Total Issue Size: "3,10,80,977 shares"
+            const sharesMatch = bodyText.match(/Total\s*Issue\s*Size\s*[:\t\n]?\s*([\d,]+)\s*shares/i);
+            if (sharesMatch) {
+                totalShares = parseInt(sharesMatch[1].replace(/,/g, ''), 10);
+            }
+
+            // Dates: Open, Close, Allotment, Listing (e.g. "Open\nSep 9", "Listing\nSep 17")
+            const openM = bodyText.match(/Open\s*\n\s*([A-Za-z]+ \d+)/i);
+            const closeM = bodyText.match(/Close\s*\n\s*([A-Za-z]+ \d+)/i);
+            const allotM = bodyText.match(/Allotment\s*\n\s*([A-Za-z]+ \d+)/i);
+            const listM = bodyText.match(/Listing\s*\n\s*([A-Za-z]+ \d+)/i);
+
+            const parseDate2026 = (str) => {
+                if (!str) return null;
+                const d = new Date(`${str} 2026 00:00:00 GMT+0530`);
+                return isNaN(d.getTime()) ? null : d.toISOString();
+            };
+
+            if (openM) openDate = parseDate2026(openM[1]);
+            if (closeM) closeDate = parseDate2026(closeM[1]);
+            if (allotM) allotmentDate = parseDate2026(allotM[1]);
+            if (listM) listingDate = parseDate2026(listM[1]);
+
+            return {
+                capitalStructureUrl,
+                anchorPdfUrl,
+                rhpUrl,
+                priceBand,
+                issuePrice,
+                lotSize,
+                totalShares,
+                openDate,
+                closeDate,
+                allotmentDate,
+                listingDate
+            };
         });
         
         return result;
         
     } catch (e) {
         console.error(`[CapStruct] Detail page scrape error for ${detailUrl}:`, e.message);
-        return { capitalStructureUrl: null, anchorPdfUrl: null, rhpUrl: null };
+        return {
+            capitalStructureUrl: null,
+            anchorPdfUrl: null,
+            rhpUrl: null,
+            priceBand: null,
+            issuePrice: null,
+            lotSize: null,
+            totalShares: null,
+            openDate: null,
+            closeDate: null,
+            allotmentDate: null,
+            listingDate: null
+        };
     } finally {
-        if (browser) await browser.close().catch(() => {});
+        if (page) await page.close().catch(() => {});
     }
 }
 

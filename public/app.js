@@ -1942,7 +1942,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             card.dataset.board = ipo.issueType === 'SME' ? 'sme' : 'mainboard';
 
             const toLk = (n) => (n !== null && n !== undefined && !isNaN(n)) ? (n / 100000).toFixed(2) + 'lk' : '0.00lk';
-            const price = ipo.issuePrice ? `₹${ipo.issuePrice}` : 'TBD';
+            const price = ipo.priceBand || (ipo.issuePrice ? `₹${ipo.issuePrice}` : 'TBD');
             const exc = ipo.exchange ? ` (${ipo.exchange})` : '';
 
             const isFixedPrice = ipo.pricingType === 'Fixed Price' || 
@@ -2081,6 +2081,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             const anchor30Text = isFixedPrice ? '<span style="color:var(--text-secondary);font-size:12px;">None (Fixed Price)</span>' : fmtDate(ipo.anchor30);
             const anchor90Text = isFixedPrice ? '<span style="color:var(--text-secondary);font-size:12px;">None (Fixed Price)</span>' : fmtDate(ipo.anchor90);
 
+            const lotText = ipo.lotSize ? `${ipo.lotSize} shs` : null;
+            const listingDateText = ipo.listingDate ? formatDateSimple(ipo.listingDate) : (ipo.allotmentDate && (ipo.allotmentDate.original || ipo.allotmentDate.adjusted) ? fmtDate(ipo.allotmentDate) : null);
+
             card.innerHTML = `
                 <div class="ctop">
                     <div><div class="cname">${ipo.companyName}</div><div class="csector">${ipo.sector || 'Sector N/A'}${exc}</div></div>
@@ -2093,10 +2096,12 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                     </div>
                 </div>
                 <div class="facts">
-                    <div><span class="k">Price</span><span class="v">${price}</span></div>
-                    <div><span class="k">Shares</span><span class="v">${sharesStr}</span></div>
-                    <div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>
-                    <div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>
+                    <div><span class="k">Price Band</span><span class="v" style="color:var(--primary);font-weight:700;">${price}</span></div>
+                    ${lotText ? `<div><span class="k">Lot Size</span><span class="v">${lotText}</span></div>` : `<div><span class="k">Shares</span><span class="v">${sharesStr}</span></div>`}
+                    ${lotText ? `<div><span class="k">Issue Size</span><span class="v">${sharesStr}</span></div>` : `<div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>`}
+                    ${listingDateText ? `<div><span class="k">Listing</span><span class="v">${listingDateText}</span></div>` : `<div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>`}
+                    ${lotText ? `<div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>` : ''}
+                    ${lotText ? `<div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>` : ''}
                 </div>
                 
                 ${mgmtHtml}
