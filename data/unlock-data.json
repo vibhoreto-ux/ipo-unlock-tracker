@@ -91,39 +91,112 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "or NA NA NA NA",
-        "Neha Lashit",
-        "Alchemy Capital",
-        "Series III",
-        "Scheme IV",
-        "Flowers Valley",
-        "Nuvama Crossover Opportunities Fund - Series III B.",
-        "Dattatri Manjunatha Hardur",
-        "Ramanath Pai",
-        "Series IIIA",
-        "Arun Bhasker",
-        "Jnaneshwara Prabhu",
-        "Srinivas AG",
-        "Series III B.",
-        "Lashit Lallubhai",
-        "Under ESOP Scheme,",
-        "Rajat Shuvra Sen",
-        "Baikadi Narahari",
-        "Nuvama Crossover Opportunities Fund - Series IIIA",
-        "Series III A.",
-        "Nuvama Crossover Opportunities Fund – Series III",
-        "Nuvama Crossover Opportunities Fund - Series III B",
-        "Nuvama Crossover Opportunities Fund - Series III",
-        "Flowers Valley Private Limited",
-        "Nuvama Crossover Opportunities Fund – Series IIIA",
-        "Nuvama Crossover Opportunities Fund – Series IIIB",
-        "Series III B",
-        "Nuvama Crossover Opportunities Fund - Series III A.",
-        "Touchstone Trust Scheme IV",
-        "Nuvama Crossover Opportunities Fund - Series IIIB",
-        "Mayank Bhotika",
-        "India SME Investments Fund II"
-      ]
+        {
+          "name": "Touchstone Trust Scheme IV",
+          "category": "Private Equity / AIF (6.61% Pre-Issue)",
+          "shares": 14970000,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Think Investments PCC",
+          "category": "Foreign Portfolio Investor (2.85% Pre-Issue)",
+          "shares": 6453220,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Mukul Mahavir Agrawal",
+          "category": "Marquee Individual Investor (2.58% Pre-Issue)",
+          "shares": 5831220,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Nuvama Crossover Opportunities Fund - Series III",
+          "category": "Pre-IPO AIF Fund (2.50% Pre-Issue)",
+          "shares": 5664590,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Amicus Capital Partners India Fund II",
+          "category": "Private Equity Fund (2.28% Pre-Issue)",
+          "shares": 5164800,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "India SME Investments Fund II",
+          "category": "SME Investment AIF (2.26% Pre-Issue)",
+          "shares": 5109253,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Nuvama Crossover Opportunities Fund - Series IIIA",
+          "category": "Pre-IPO AIF Fund (1.91% Pre-Issue)",
+          "shares": 4331746,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Nuvama Crossover Opportunities Fund - Series III B",
+          "category": "Pre-IPO AIF Fund (1.47% Pre-Issue)",
+          "shares": 3332112,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Alchemy Capital Management Private Limited",
+          "category": "Asset Management / PMS (0.86% Pre-Issue)",
+          "shares": 1943740,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Lashit Lallubhai Sanghvi",
+          "category": "Individual Strategic Investor (0.86% Pre-Issue)",
+          "shares": 1943740,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Neha Lashit Sanghvi",
+          "category": "Individual Strategic Investor (0.86% Pre-Issue)",
+          "shares": 1943740,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Flowers Valley Private Limited",
+          "category": "Corporate Investor (0.76% Pre-Issue)",
+          "shares": 1710490,
+          "buyPrice": 26.1,
+          "date": "Secondary / Preferential Acq.",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Manipal Technologies Limited (Promoter)",
+          "category": "Promoter (61.55% Pre-Issue)",
+          "shares": 139302995,
+          "buyPrice": 0,
+          "date": "Promoter Core Holding",
+          "lockInExpiry": "2028-03-15T00:00:00.000Z"
+        }
+      ],
+      "preIpoWaca": 26.1
     },
     {
       "companyName": "LCC Projects Ltd.",
@@ -142,10 +215,40 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Maya Arjan",
-        "Maya Arjan Rabari",
-        "Arjan Suja"
-      ]
+        {
+          "name": "Arjan Suja Rabari (Promoter & Selling Shareholder)",
+          "category": "Promoter (44.61% Pre-Issue)",
+          "shares": 111520000,
+          "buyPrice": 0.67,
+          "date": "Founding Equity / Bonus",
+          "lockInExpiry": "2028-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Laljibhai Arjanbhai Ahir (Promoter & Selling Shareholder)",
+          "category": "Promoter (44.61% Pre-Issue)",
+          "shares": 111520000,
+          "buyPrice": 0.7,
+          "date": "Founding Equity / Bonus",
+          "lockInExpiry": "2028-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Geeta Lalji Ahir (Promoter Group)",
+          "category": "Promoter Group (7.34% Pre-Issue)",
+          "shares": 18359988,
+          "buyPrice": 0,
+          "date": "Bonus Allotment",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Sejuben Arjanbhai Rabari (Promoter Group)",
+          "category": "Promoter Group (3.81% Pre-Issue)",
+          "shares": 9520000,
+          "buyPrice": 0,
+          "date": "Bonus Allotment",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        }
+      ],
+      "preIpoWaca": "Nil (0 in last 3 yrs)"
     },
     {
       "companyName": "National Stock Exchange of India Ltd",
@@ -182,36 +285,150 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "IDG Ventures India",
-        "Rajeev Chitrabhanu",
-        "Chiratae Growth Fund – I represented by its (₹325)",
-        "Chiratae Trust",
-        "Jagdish Bamania",
-        "Accel India IV",
-        "GMO Payment",
-        "Geetansh Bamania",
-        "Edelweiss Discovery",
-        "Meera Bamania",
-        "Gaurav Bamania",
-        "IDG Ventures India Fund III LLC (₹339)",
-        "ValueQuest S.C.A.L.E.",
-        "VCATs Management",
-        "RM Employee Benefit",
-        "Dr. Niddodi",
-        "MVP Family Trust",
-        "RM Employee Benefit Trust",
-        "Rohan Ajeet Nil",
-        "Madison India Opportunities V VCC",
-        "Hakim Nil",
-        "Shri Investments",
-        "Edelweiss Discovery Fund – Series I",
-        "Prabhat Verma Nil",
-        "Akash Jangid Nil",
-        "ValueQuest S.C.A.L.E. Fund (₹110)",
-        "Accel India IV (Mauritius) Limited (₹742)",
-        "Dr. Sandesh",
-        "GMO Payment Gateway",
-        "Madison India"
+        {
+          "name": "Accel India IV (Mauritius) Limited",
+          "category": "Venture Capital / PE (20.92% Pre-Issue)",
+          "shares": 21207975,
+          "buyPrice": 46.79,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Edelweiss Discovery Fund – Series I",
+          "category": "Institutional Pre-IPO (10.53% Pre-Issue)",
+          "shares": 10677014,
+          "buyPrice": 74.91,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "ValueQuest S.C.A.L.E Fund",
+          "category": "Alternative Investment Fund (8.92% Pre-Issue)",
+          "shares": 9044726,
+          "buyPrice": 75.36,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Madison India Opportunities V VCC",
+          "category": "Foreign Portfolio Investor (6.64% Pre-Issue)",
+          "shares": 6737501,
+          "buyPrice": 55.99,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Rajeev Chitrabhanu HUF",
+          "category": "Strategic Individual Investor (3.33% Pre-Issue)",
+          "shares": 3380240,
+          "buyPrice": 15.19,
+          "date": "Early Equity Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "IDG Ventures India Fund III LLC",
+          "category": "Venture Capital (2.76% Pre-Issue)",
+          "shares": 2803431,
+          "buyPrice": 81.57,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Chiratae Trust",
+          "category": "Venture Capital Trust (2.22% Pre-Issue)",
+          "shares": 2253819,
+          "buyPrice": 82.36,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "GMO Payment Gateway Inc",
+          "category": "Strategic Corporate Investor (1.49% Pre-Issue)",
+          "shares": 1512800,
+          "buyPrice": 94.74,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Pratithi Investment Trust",
+          "category": "Private Family Office Trust (0.85% Pre-Issue)",
+          "shares": 866901,
+          "buyPrice": 86.2,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "GMO GFF Limited Partnership",
+          "category": "Foreign Investment Fund (0.83% Pre-Issue)",
+          "shares": 842174,
+          "buyPrice": 96.18,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Renaud Laplanche",
+          "category": "Foreign Angel / Strategic (0.74% Pre-Issue)",
+          "shares": 755405,
+          "buyPrice": 75.1,
+          "date": "Early Equity Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "MSIVC 2018V Venture Capital LP",
+          "category": "Venture Capital (0.74% Pre-Issue)",
+          "shares": 753647,
+          "buyPrice": 95.99,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Subodh Damodar Shinkar",
+          "category": "Individual Pre-IPO (0.33% Pre-Issue)",
+          "shares": 332320,
+          "buyPrice": 83.89,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Gautam Dalmia",
+          "category": "Individual Pre-IPO (0.33% Pre-Issue)",
+          "shares": 338830,
+          "buyPrice": 90.42,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Nitish Mittersain",
+          "category": "Individual Pre-IPO (0.22% Pre-Issue)",
+          "shares": 226920,
+          "buyPrice": 2.65,
+          "date": "Early Equity Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "VCATs Management Services Trust – II",
+          "category": "AIF / Angel Fund (0.08% Pre-Issue)",
+          "shares": 76260,
+          "buyPrice": 56.45,
+          "date": "Pre-IPO Series Round",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Gaurav Bamania (Promoter Group)",
+          "category": "Promoter Group (2.80% Pre-Issue)",
+          "shares": 2843320,
+          "buyPrice": 0.01,
+          "date": "Founding Equity",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Geetansh Bamania (Promoter & Founder)",
+          "category": "Promoter (14.69% Pre-Issue)",
+          "shares": 14897732,
+          "buyPrice": 0,
+          "date": "Founding Equity",
+          "lockInExpiry": "2028-03-15T00:00:00.000Z"
+        }
       ],
       "preIpoWaca": 292.08
     },
@@ -23319,7 +23536,7 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-12-14T00:00:00.000Z",
+        "expiryDate": "2026-12-14",
         "originalDate": "2026-12-12T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
@@ -31601,6 +31818,42 @@
       "noticeId": "20251230-30",
       "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20251230-30&attachedId=926937f8-8027-4654-b7d1-98922d57a1f6",
       "fetchedAt": "2026-09-03T17:17:16.616Z"
+    },
+    "Hexagon Nutrition Ltd.": {
+      "found": true,
+      "totalShares": 122918109,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 22269508,
+          "percentage": 18.1,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-07-09",
+          "shares": 4628847,
+          "percentage": 3.8
+        },
+        {
+          "date": "2026-09-07",
+          "shares": 4628849,
+          "percentage": 3.8
+        },
+        {
+          "date": "2026-12-14",
+          "shares": 66807105,
+          "percentage": 54.4
+        },
+        {
+          "date": "2027-12-14",
+          "shares": 24583800,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/74667",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML74667.zip",
+      "fetchedAt": "2026-09-05T05:07:42.582Z"
     }
   }
 }
