@@ -303,7 +303,8 @@ async function scrapeDetailPage(detailUrl) {
 
             const parseDate2026 = (str) => {
                 if (!str) return null;
-                const d = new Date(`${str} 2026 00:00:00 GMT+0530`);
+                const year = new Date().getFullYear();
+                const d = new Date(`${str} ${year} 00:00:00 GMT+0530`);
                 return isNaN(d.getTime()) ? null : d.toISOString();
             };
 

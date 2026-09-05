@@ -760,8 +760,8 @@ async function probeUpcomingData() {
                                 changed = true;
                             }
 
-                            // If still missing, scrape the detail page live
-                            if ((!company.priceBand || !company.issuePrice) && cachedEntry.detailUrl) {
+                            // If still missing key data, scrape the detail page live
+                            if (((!company.priceBand || !company.issuePrice) || !company.openDate || !company.closeDate) && cachedEntry.detailUrl) {
                                 const detailRes = await scrapeDetailPage(cachedEntry.detailUrl);
                                 if (detailRes) {
                                     if (detailRes.priceBand) {

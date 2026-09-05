@@ -1588,6 +1588,12 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         });
     }
 
+    // Wire Upcoming/Open checkbox filters
+    const filterUpcomingBox = document.getElementById('filterUpcoming');
+    const filterOpenBox = document.getElementById('filterOpen');
+    if (filterUpcomingBox) filterUpcomingBox.addEventListener('change', () => renderUpcomingIPOs());
+    if (filterOpenBox) filterOpenBox.addEventListener('change', () => renderUpcomingIPOs());
+
     // Wire Upcoming IPO refresh button — actively probes missing Anchor & Pre-IPO data
     const refreshUpcomingBtn = document.getElementById('refreshUpcomingBtn');
     if (refreshUpcomingBtn) {
@@ -1869,7 +1875,8 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        const upcomingIPOs = allCompanies.filter(c => {
+        // Get all IPOs that haven't listed yet (allotment date in future or no date)
+        const allUpcomingIPOs = allCompanies.filter(c => {
             if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
             const listDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
             if (!listDateStr) return true;
@@ -1878,8 +1885,62 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             return listDate > today;
         });
 
+        // Classify each IPO: "open" = subscription currently active, "upcoming" = not yet open
+        allUpcomingIPOs.forEach(ipo => {
+            let isOpen = false;
+            if (ipo.openDate && ipo.closeDate) {
+                const openD = new Date(ipo.openDate);
+                openD.setHours(0, 0, 0, 0);
+                const closeD = new Date(ipo.closeDate);
+                closeD.setHours(23, 59, 59, 999);
+                isOpen = today >= openD && today <= closeD;
+            } else if (ipo.openDate) {
+                // Has open date but no close date — check if open date is today or past
+                const openD = new Date(ipo.openDate);
+                openD.setHours(0, 0, 0, 0);
+                isOpen = today >= openD;
+            } else {
+                // Fallback heuristic: if allotment date is within ~7 days, IPO is likely open
+                // (IPOs typically open 5-6 days before allotment)
+                const allotStr = ipo.allotmentDate ? (ipo.allotmentDate.original || ipo.allotmentDate.adjusted) : null;
+                if (allotStr) {
+                    const allotD = new Date(allotStr);
+                    allotD.setHours(0, 0, 0, 0);
+                    const daysToAllot = Math.ceil((allotD - today) / (1000 * 60 * 60 * 24));
+                    // If allotment is 0-7 days away, classify as open
+                    if (daysToAllot >= 0 && daysToAllot <= 7) {
+                        isOpen = true;
+                    }
+                }
+            }
+            ipo._ipoStatus = isOpen ? 'open' : 'upcoming';
+        });
+
+        // Count each category
+        const openCount = allUpcomingIPOs.filter(i => i._ipoStatus === 'open').length;
+        const upcomingCount = allUpcomingIPOs.filter(i => i._ipoStatus === 'upcoming').length;
+
+        // Update badge counts in the filter checkboxes
+        const countUpEl = document.getElementById('filterUpcomingCount');
+        const countOpenEl = document.getElementById('filterOpenCount');
+        if (countUpEl) countUpEl.textContent = upcomingCount;
+        if (countOpenEl) countOpenEl.textContent = openCount;
+
+        // Apply checkbox filters
+        const showUpcoming = document.getElementById('filterUpcoming')?.checked ?? true;
+        const showOpen = document.getElementById('filterOpen')?.checked ?? true;
+
+        const upcomingIPOs = allUpcomingIPOs.filter(ipo => {
+            if (ipo._ipoStatus === 'open' && !showOpen) return false;
+            if (ipo._ipoStatus === 'upcoming' && !showUpcoming) return false;
+            return true;
+        });
+
         if (upcomingIPOs.length === 0) {
-            upcomingList.innerHTML = '<div class="no-data"><p>No upcoming IPOs found in database.</p></div>';
+            const msg = (!showUpcoming && !showOpen) 
+                ? 'No filters selected. Check at least one filter above.'
+                : 'No IPOs match the selected filters.';
+            upcomingList.innerHTML = `<div class="no-data"><p>${msg}</p></div>`;
             return;
         }
 
@@ -1970,7 +2031,13 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 anchorsHtml = '<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">No Anchor quota allocated (Fixed Price IPO structure — 100% split across Retail & HNI)</span>';
             } else if (ipo.anchorInvestors && ipo.anchorInvestors.length > 0) {
                 anchorSummaryText = `Anchor Investors (${ipo.anchorInvestors.length})`;
-                anchorsHtml = `<div class="chips">` + ipo.anchorInvestors.map(a => `<span>${a}</span>`).join('') + `</div>`;
+                anchorsHtml = `<div class="chips">` + ipo.anchorInvestors.map(a => {
+                    if (!a) return '';
+                    if (typeof a === 'string') return `<span>${a}</span>`;
+                    const name = a.name || a.investorName || a.investor || 'Anchor Investor';
+                    const detail = a.sharesFormatted ? ` (${a.sharesFormatted} shs${a.percent ? `, ${a.percent}%` : ''})` : (a.shares ? ` (${a.shares.toLocaleString('en-IN')} shs)` : '');
+                    return `<span>${name}${detail}</span>`;
+                }).filter(Boolean).join('') + `</div>`;
             } else {
                 anchorSummaryText = 'Anchor Investors (0)';
                 anchorsHtml = '<span class="empty">No anchors yet</span>';
@@ -2088,7 +2155,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 <div class="ctop">
                     <div><div class="cname">${ipo.companyName}</div><div class="csector">${ipo.sector || 'Sector N/A'}${exc}</div></div>
                     <div class="badges">
-                        <span class="badge b-open">OPEN</span>
+                        ${ipo._ipoStatus === 'open' 
+                            ? '<span class="badge b-open">🟢 OPEN</span>' 
+                            : '<span class="badge" style="background:#6366f1; color:white;">🕐 UPCOMING</span>'}
                         <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end;">
                             ${priceBadge}
                             <span class="badge ${badgeBoardClass}">${badgeBoardText}</span>
@@ -2098,10 +2167,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 <div class="facts">
                     <div><span class="k">Price Band</span><span class="v" style="color:var(--primary);font-weight:700;">${price}</span></div>
                     ${lotText ? `<div><span class="k">Lot Size</span><span class="v">${lotText}</span></div>` : `<div><span class="k">Shares</span><span class="v">${sharesStr}</span></div>`}
-                    ${lotText ? `<div><span class="k">Issue Size</span><span class="v">${sharesStr}</span></div>` : `<div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>`}
-                    ${listingDateText ? `<div><span class="k">Listing</span><span class="v">${listingDateText}</span></div>` : `<div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>`}
-                    ${lotText ? `<div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>` : ''}
-                    ${lotText ? `<div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>` : ''}
+                    ${lotText ? `<div><span class="k">Issue Size</span><span class="v">${sharesStr}</span></div>` : ''}
+                    <div><span class="k">Listing</span><span class="v">${listingDateText || 'TBD'}</span></div>
+                    <div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>
+                    <div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>
                 </div>
                 
                 ${mgmtHtml}

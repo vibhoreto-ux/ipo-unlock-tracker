@@ -200,9 +200,23 @@
                         <h2>Upcoming Unlisted IPOs</h2>
                         <p>Tracking latest filings with automatically extracted NLP data from Chittorgarh.</p>
                     </div>
-                    <button id="refreshUpcomingBtn" class="refresh-btn">
-                        <span class="icon">↻</span> Reload
-                    </button>
+                    <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+                        <div class="upcoming-filters" style="display:flex; align-items:center; gap:12px;">
+                            <label class="ipo-filter-chip" style="display:flex; align-items:center; gap:5px; cursor:pointer; padding:6px 14px; border-radius:8px; border:1.5px solid #e2e8f0; background:#f8fafc; font-size:0.85rem; font-weight:600; color:var(--text); transition:all .2s ease; user-select:none;">
+                                <input type="checkbox" id="filterUpcoming" checked style="accent-color:#6366f1; width:15px; height:15px; cursor:pointer;">
+                                <span>🕐 Upcoming</span>
+                                <span id="filterUpcomingCount" style="background:#6366f1; color:white; font-size:10px; padding:1px 6px; border-radius:10px; min-width:16px; text-align:center;">0</span>
+                            </label>
+                            <label class="ipo-filter-chip" style="display:flex; align-items:center; gap:5px; cursor:pointer; padding:6px 14px; border-radius:8px; border:1.5px solid #e2e8f0; background:#f8fafc; font-size:0.85rem; font-weight:600; color:var(--text); transition:all .2s ease; user-select:none;">
+                                <input type="checkbox" id="filterOpen" checked style="accent-color:#10b981; width:15px; height:15px; cursor:pointer;">
+                                <span>🟢 Open</span>
+                                <span id="filterOpenCount" style="background:#10b981; color:white; font-size:10px; padding:1px 6px; border-radius:10px; min-width:16px; text-align:center;">0</span>
+                            </label>
+                        </div>
+                        <button id="refreshUpcomingBtn" class="refresh-btn">
+                            <span class="icon">↻</span> Reload
+                        </button>
+                    </div>
                 </div>
             </div>
             <div id="upcomingList" class="upcoming-list">
