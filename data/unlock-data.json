@@ -28291,8 +28291,7 @@
         "LRSD SECURITIES PVT.LTD.",
         "NOVA GLOBAL OPPORTUNITIES FUND PCC-TOUCHSTONE",
         "31 Degrees North Fund I",
-        "VISIONARY VALUE FUND",
-        "20,92,190"
+        "VISIONARY VALUE FUND"
       ],
       "anchorShares": 2092190,
       "totalShares": 5230000,
@@ -28499,8 +28498,7 @@
         "SINGULARITY EQUITY FUND I",
         "INTEGRATED CORE STRATEGIES (ASIA) PTE.LTD.",
         "MORGAN STANLEY ASIA (SINGAPORE) PTE.",
-        "BOFA SECURITIES EUROPE SA-ODI",
-        "53,21,739"
+        "BOFA SECURITIES EUROPE SA-ODI"
       ],
       "anchorShares": 5321739,
       "totalShares": 11826086,
@@ -28636,8 +28634,7 @@
         "KHANDELWAL FINANCE PVT.LTD.",
         "TIGER STRATEGIES FUND",
         "INDIA MAX INVESTMENT FUND LTD.",
-        "FINWAVE GLOBAL OPPORTUNITIES FUND",
-        "16,19,200"
+        "FINWAVE GLOBAL OPPORTUNITIES FUND"
       ],
       "anchorShares": 1619200,
       "totalShares": 5691200,
@@ -30192,14 +30189,138 @@
         "ASHIKA INDIA SELECT FUND",
         "ASIO FUND VCC,THE-SUB FUND 4",
         "RIGEL GLOBAL FUND",
-        "SAINT CAPITAL FUND",
-        "67,94,034"
+        "SAINT CAPITAL FUND"
       ],
-      "anchorShares": 0,
+      "anchorShares": 6794034,
       "totalShares": 28308481,
-      "rhpUrl": "https://www.centrum.co.in/sites/default/files/product_equity/Pranav%20Constructions%20Limited%20-%20RHP.pdf",
-      "capitalStructureUrl": null,
-      "preIpoInvestors": []
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/pranav_constructions_ltd_mainboard_rhp_1788263683.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/pranav_constructions_ltd_mainboard_capital_structure_1788263933.pdf",
+      "preIpoInvestors": [
+        {
+          "name": "RiverCrest India Infrastructure Private Limited",
+          "date": "Pre-IPO Allotment",
+          "shares": 17113900,
+          "buyPrice": null,
+          "category": "Major Pre-IPO Investor (27.58%)",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Ravi Ramalingam",
+          "date": "Pre-IPO Allotment",
+          "shares": 10710000,
+          "buyPrice": null,
+          "category": "Major Pre-IPO Investor (17.26%)",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "BioUrja India Infra Private Limited",
+          "date": "Pre-IPO Allotment",
+          "shares": 2745296,
+          "buyPrice": null,
+          "category": "Pre-IPO Investor (4.42%)",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Jitendra Kantilal Shah",
+          "date": "Pre-IPO Allotment",
+          "shares": 988108,
+          "buyPrice": null,
+          "category": "Pre-IPO Investor (1.59%)",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Ujjwal Todi",
+          "date": "12 Feb 2025",
+          "shares": 125000,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Nikhil R. Patel",
+          "date": "12-17 Feb 2025",
+          "shares": 78926,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Rita Deepak Vakharia",
+          "date": "06 Feb 2025",
+          "shares": 41600,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Kiran Bachubhai Shah & HUF",
+          "date": "14-17 Feb 2025",
+          "shares": 41600,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Jugal Prafulchandra Shah & Jyoti Jugal Shah",
+          "date": "12-17 Feb 2025",
+          "shares": 41600,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Pankaj Dhirajlal",
+          "date": "10 Feb 2025",
+          "shares": 20800,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Ushaben Natwarbhai Patel",
+          "date": "10 Feb 2025",
+          "shares": 20800,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Meghna R. Ojha",
+          "date": "12 Feb 2025",
+          "shares": 20800,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Prachi Vishal Shah",
+          "date": "17 Feb 2025",
+          "shares": 20800,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Shah Pratika Kiran",
+          "date": "14 Feb 2025",
+          "shares": 20800,
+          "buyPrice": 240,
+          "acquisitionPrice": 240,
+          "category": "Pre-IPO Transferee",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        }
+      ],
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/pranav_constructions_ltd_mainboard_anchor_1788534487.pdf",
+      "preIpoWaca": 240
     },
     {
       "companyName": "Apana Logistics Ltd.",
@@ -30393,7 +30514,7 @@
       "capitalStructureUrl": null
     }
   ],
-  "lastUpdated": "2026-09-05T03:28:23.098Z",
+  "lastUpdated": "2026-09-05T03:45:12.090Z",
   "lastScraped": {
     "time": "2026-09-03T06:59:51.027Z",
     "scraped2025": 6,

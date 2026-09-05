@@ -5,7 +5,7 @@ const { scrapeWithBrowser, fetchAnchorInvestorNames } = require('./browser-scrap
 const { autoFetchMissingRHP } = require('./auto-rhp');
 const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
 const { scanPreferential } = require('./preferential-scraper');
-const { fetchCapitalStructureUrl, extractFromCapitalStructure, batchScrapeCapitalStructureUrls } = require('./capital-structure-scraper');
+const { fetchCapitalStructureUrl, extractFromCapitalStructure, batchScrapeCapitalStructureUrls, scrapeDetailPage } = require('./capital-structure-scraper');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -626,7 +626,7 @@ async function probeUpcomingData() {
             const name = company.companyName;
 
             // 1. Probe Anchors & True Total Shares if anchorInvestors is 0 or missing
-            if (!company.anchorInvestors || company.anchorInvestors.length === 0 || !company.totalShares || company.totalShares === 0) {
+            if (!company.anchorInvestors || company.anchorInvestors.length === 0 || !company.anchorShares || company.anchorShares === 0 || !company.totalShares || company.totalShares === 0) {
                 try {
                     if (company.chittorgarhUrl) {
                         const parsed = await fetchAnchorInvestorNames(company.chittorgarhUrl);
@@ -648,6 +648,19 @@ async function probeUpcomingData() {
                 }
             }
 
+            // Also clean numeric-only entries from anchorInvestors if any
+            if (Array.isArray(company.anchorInvestors)) {
+                const numericRow = company.anchorInvestors.find(inv => /^\s*[\d,]+\s*$/.test(inv));
+                if (numericRow) {
+                    if (!company.anchorShares || company.anchorShares === 0) {
+                        company.anchorShares = parseInt(numericRow.replace(/,/g, '').trim(), 10);
+                        changed = true;
+                    }
+                    company.anchorInvestors = company.anchorInvestors.filter(inv => !/^\s*[\d,]+\s*$/.test(inv));
+                    changed = true;
+                }
+            }
+
             // 2. Probe Capital Structure, Anchor Doc & Pre-IPO Data
             const isCsMissingOrRhp = !company.capitalStructureUrl || 
                 company.capitalStructureUrl.toLowerCase().includes('rhp') || 
@@ -656,7 +669,7 @@ async function probeUpcomingData() {
 
             if (isCsMissingOrRhp || isPreIpoMissing || !company.anchorUrl) {
                 try {
-                    const docUrl = await resolveCompanyDocUrl(company);
+                    const docUrl = await resolveCompanyDocUrl(company, true);
                     if (docUrl && docUrl !== company.capitalStructureUrl) {
                         company.capitalStructureUrl = docUrl;
                         changed = true;
@@ -752,48 +765,106 @@ const { getLivePrice } = require('./price-scraper');
 const circularCache = new Map();
 
 // Fast document URL resolver for any company
-async function resolveCompanyDocUrl(company) {
+async function resolveCompanyDocUrl(company, forceCheckDetailPage = false) {
     if (!company) return null;
 
-    // 1. Instant check against local capital-structure-cache.json
+    const cachePath = path.join(__dirname, 'data', 'capital-structure-cache.json');
+    const ipoCachePath = path.join(__dirname, 'data', 'ipopremium-cache.json');
+    let csCache = null;
+    let ipoCache = null;
+
     try {
-        const cachePath = path.join(__dirname, 'data', 'capital-structure-cache.json');
-        if (fs.existsSync(cachePath)) {
-            const cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
-            const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            for (const [slug, item] of Object.entries(cache)) {
-                const normSlug = slug.replace(/[^a-z0-9]/g, '');
-                if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
-                    if (item && item.capitalStructureUrl) {
-                        company.capitalStructureUrl = item.capitalStructureUrl;
-                        if (item.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = item.anchorPdfUrl;
-                        if (item.rhpUrl) company.rhpUrl = item.rhpUrl;
-                        return item.capitalStructureUrl;
-                    }
-                }
-            }
-        }
+        if (fs.existsSync(cachePath)) csCache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+    } catch (e) {}
+    try {
+        if (fs.existsSync(ipoCachePath)) ipoCache = JSON.parse(fs.readFileSync(ipoCachePath, 'utf8'));
     } catch (e) {}
 
-    // Check ipopremium-cache.json as well
-    try {
-        const ipoCachePath = path.join(__dirname, 'data', 'ipopremium-cache.json');
-        if (fs.existsSync(ipoCachePath)) {
-            const cache = JSON.parse(fs.readFileSync(ipoCachePath, 'utf8'));
-            const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            for (const [slug, item] of Object.entries(cache)) {
-                const normSlug = slug.replace(/[^a-z0-9]/g, '');
-                if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
-                    if (item && item.capitalStructureUrl) {
-                        company.capitalStructureUrl = item.capitalStructureUrl;
-                        if (item.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = item.anchorPdfUrl;
-                        if (item.rhpUrl) company.rhpUrl = item.rhpUrl;
-                        return item.capitalStructureUrl;
-                    }
-                }
+    const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    let matchedItem = null;
+    let matchedSlug = null;
+
+    if (csCache) {
+        for (const [slug, item] of Object.entries(csCache)) {
+            const normSlug = slug.replace(/[^a-z0-9]/g, '');
+            if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
+                matchedItem = item;
+                matchedSlug = slug;
+                break;
             }
         }
-    } catch (e) {}
+    }
+
+    if (!matchedItem && ipoCache && ipoCache.companies) {
+        for (const [slug, item] of Object.entries(ipoCache.companies)) {
+            const normSlug = slug.replace(/[^a-z0-9]/g, '');
+            if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
+                matchedItem = item;
+                matchedSlug = slug;
+                break;
+            }
+        }
+    }
+
+    // If we already have a genuine capital structure URL cached
+    if (matchedItem && matchedItem.capitalStructureUrl && matchedItem.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
+        company.capitalStructureUrl = matchedItem.capitalStructureUrl;
+        if (matchedItem.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = matchedItem.anchorPdfUrl;
+        if (matchedItem.rhpUrl && !company.rhpUrl) company.rhpUrl = matchedItem.rhpUrl;
+        return matchedItem.capitalStructureUrl;
+    }
+
+    // If capital structure URL is missing in cache OR forceCheckDetailPage is true, and detailUrl is available:
+    if (matchedItem && matchedItem.detailUrl && (!matchedItem.capitalStructureUrl || forceCheckDetailPage)) {
+        try {
+            console.log(`[resolveCompanyDocUrl] Probing IPO Premium detail page for ${company.companyName}: ${matchedItem.detailUrl}`);
+            const scraped = await scrapeDetailPage(matchedItem.detailUrl);
+            let cacheUpdated = false;
+
+            if (scraped && scraped.capitalStructureUrl) {
+                matchedItem.capitalStructureUrl = scraped.capitalStructureUrl;
+                company.capitalStructureUrl = scraped.capitalStructureUrl;
+                cacheUpdated = true;
+            }
+            if (scraped && scraped.anchorPdfUrl) {
+                matchedItem.anchorPdfUrl = scraped.anchorPdfUrl;
+                company.anchorUrl = scraped.anchorPdfUrl;
+                cacheUpdated = true;
+            }
+            if (scraped && scraped.rhpUrl) {
+                matchedItem.rhpUrl = scraped.rhpUrl;
+                company.rhpUrl = scraped.rhpUrl;
+                cacheUpdated = true;
+            }
+
+            if (cacheUpdated) {
+                matchedItem.updatedAt = new Date().toISOString();
+                if (csCache && matchedSlug) {
+                    csCache[matchedSlug] = { ...(csCache[matchedSlug] || {}), ...matchedItem };
+                    fs.writeFileSync(cachePath, JSON.stringify(csCache, null, 2), 'utf8');
+                }
+                if (ipoCache && ipoCache.companies && matchedSlug) {
+                    ipoCache.companies[matchedSlug] = { ...(ipoCache.companies[matchedSlug] || {}), ...matchedItem };
+                    fs.writeFileSync(ipoCachePath, JSON.stringify(ipoCache, null, 2), 'utf8');
+                }
+                if (company.capitalStructureUrl) return company.capitalStructureUrl;
+            }
+        } catch (e) {
+            console.warn(`[resolveCompanyDocUrl] Scrape detail page failed for ${company.companyName}: ${e.message}`);
+        }
+    }
+
+    // Fallback: If not in cache at all, try fetchCapitalStructureUrl
+    if (!matchedItem && forceCheckDetailPage) {
+        try {
+            const fetchedUrl = await fetchCapitalStructureUrl(company.companyName);
+            if (fetchedUrl) {
+                company.capitalStructureUrl = fetchedUrl;
+                return fetchedUrl;
+            }
+        } catch (e) {}
+    }
 
     // If company already has a genuine capital structure url
     if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http') && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
@@ -860,11 +931,10 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
         const respondWithPrices = async (basePayload) => {
             if (company) {
                 // Ensure capitalStructureUrl is resolved quickly
-                if (!company.capitalStructureUrl && !company.rhpUrl) {
+                if (!company.capitalStructureUrl || !company.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
                     const docUrl = await resolveCompanyDocUrl(company);
-                    if (docUrl) {
+                    if (docUrl && docUrl.toLowerCase().includes('capital_structure')) {
                         company.capitalStructureUrl = docUrl;
-                        company.rhpUrl = docUrl;
                         writeDB(db);
                     }
                 }

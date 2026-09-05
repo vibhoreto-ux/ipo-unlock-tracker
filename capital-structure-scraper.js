@@ -367,7 +367,7 @@ async function extractFromCapitalStructure(companyName, capitalStructureUrl) {
         
         const pyCmd = `${pythonBin} ${pyScript} --rhp "${url}" --company_name "${safelyEscapedName}"`;
         return new Promise((resolve) => {
-            exec(pyCmd, { encoding: 'utf8', timeout: 12000 }, (err, stdout) => {
+            exec(pyCmd, { encoding: 'utf8', timeout: 45000 }, (err, stdout) => {
                 if (err || !stdout) {
                     return resolve({ preIpoInvestors: [], waca: null, peerComparison: null });
                 }
@@ -437,6 +437,7 @@ async function batchScrapeCapitalStructureUrls(limit = 50, forceRefreshIndex = f
 module.exports = {
     fetchCapitalStructureUrl,
     extractFromCapitalStructure,
+    scrapeDetailPage,
     scrapeHomepageIndex,
     batchScrapeCapitalStructureUrls,
     normalize,
