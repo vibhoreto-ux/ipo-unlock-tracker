@@ -21,7 +21,7 @@
       "capitalStructureUrl": null,
       "anchorUrl": null,
       "preIpoInvestors": [],
-      "priceBand": "₹0–0",
+      "priceBand": null,
       "listingDate": "2026-09-16T18:30:00.000Z",
       "openDate": "2026-09-08T18:30:00.000Z",
       "closeDate": "2026-09-10T18:30:00.000Z"
@@ -25052,7 +25052,8 @@
       "managementHighlights": [
         "ℹ️ No forward guidance, moat details, or interviews found on X or YouTube for Saffron Speciality Papers Ltd.."
       ],
-      "capitalStructureUrl": null
+      "capitalStructureUrl": null,
+      "priceBand": "₹45"
     },
     {
       "companyName": "Aastha Spintex Ltd.",
@@ -37908,7 +37909,9 @@
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_capital_structure_1787800455.pdf",
-      "preIpoWaca": 26.88
+      "preIpoWaca": 26.88,
+      "lotSize": 2000,
+      "priceBand": "₹59"
     },
     {
       "companyName": "Rays of Belief Ltd.",
@@ -38093,7 +38096,9 @@
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_capital_structure_1787207689.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_anchor_1788183025.pdf",
-      "preIpoWaca": "117.43"
+      "preIpoWaca": "117.43",
+      "lotSize": 62,
+      "priceBand": "₹227–239"
     },
     {
       "companyName": "Deepa Jewellers Ltd.",
@@ -38249,7 +38254,9 @@
       "preIpoInvestors": [],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/deepa_jewellers_mainboard_capital_structure_1787736617.pdf",
       "anchorUrl": "https://www.chittorgarh.net/reports/anchor-investor/anchor-intimation-letter.pdf",
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "lotSize": 84,
+      "priceBand": "₹168–177"
     },
     {
       "companyName": "Purple Style Labs Ltd.",
@@ -38393,7 +38400,9 @@
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_capital_structure_1787640727.pdf",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_anchor_1787922697.pdf"
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_anchor_1787922697.pdf",
+      "lotSize": 26,
+      "priceBand": "₹546–575"
     },
     {
       "companyName": "Phychem Technologies Ltd.",
@@ -38490,7 +38499,9 @@
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_capital_structure_1787635907.pdf",
       "preIpoWaca": "52.00",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_anchor_1787925325.pdf"
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_anchor_1787925325.pdf",
+      "lotSize": 2000,
+      "priceBand": "₹51–54"
     },
     {
       "companyName": "Shanti Inorganics Ltd.",
@@ -38603,7 +38614,9 @@
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_capital_structure_1788072660.pdf",
       "preIpoWaca": "90.00",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_anchor_1787921730.pdf"
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_anchor_1787921730.pdf",
+      "lotSize": 1600,
+      "priceBand": "₹79–83"
     },
     {
       "companyName": "Ashutosh Fibre Ltd.",
@@ -38743,7 +38756,9 @@
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_capital_structure_1787648015.pdf",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_anchor_1787921988.pdf"
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_anchor_1787921988.pdf",
+      "lotSize": 1200,
+      "priceBand": "₹87–92"
     },
     {
       "companyName": "ESDS Software Solution Ltd.",
@@ -40996,7 +41011,9 @@
         "any Investor"
       ],
       "preIpoWaca": 62.3,
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "lotSize": 107,
+      "priceBand": "₹130–140"
     },
     {
       "companyName": "Amtech Esters Ltd.",
@@ -41045,7 +41062,9 @@
         "Bawa Resins Private Limited (₹10)",
         "Transferee: Gemini Holdings (₹239)",
         "Gemini Holdings (₹10)"
-      ]
+      ],
+      "lotSize": 1600,
+      "priceBand": "₹71–75"
     },
     {
       "companyName": "Asset Reconstruction Co.(India) Ltd.",
@@ -41153,7 +41172,9 @@
           "lockInExpiry": "2027-03-17T00:00:00.000Z"
         }
       ],
-      "preIpoWaca": 84
+      "preIpoWaca": 84,
+      "lotSize": 107,
+      "priceBand": "₹132–139"
     },
     {
       "companyName": "Glass Wall Systems (India) Ltd.",
@@ -41189,7 +41210,9 @@
         "amongst Amit Jawahar",
         "Amit Hemrajani Family Trust (₹111)",
         "Excellence Fund"
-      ]
+      ],
+      "lotSize": 82,
+      "priceBand": "₹172–182"
     },
     {
       "companyName": "Prasol Chemicals Ltd.",
@@ -41216,7 +41239,9 @@
       "rhpUrl": "https://www.damcapital.in/files/pdf/639239827470702392_Prasol_Chemicals_Limited_-_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_capital_structure_1788411840.pdf",
       "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "lotSize": 22,
+      "priceBand": "₹643–676"
     },
     {
       "companyName": "Kanohar Electricals Ltd.",
@@ -41253,7 +41278,9 @@
         }
       ],
       "preIpoChecked": true,
-      "preIpoWaca": "Nil (0 in last 3 yrs)"
+      "preIpoWaca": "Nil (0 in last 3 yrs)",
+      "lotSize": 23,
+      "priceBand": "₹601–632"
     },
     {
       "companyName": "Pranav Constructions Ltd.",
@@ -41517,7 +41544,9 @@
         }
       ],
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/pranav_constructions_ltd_mainboard_anchor_1788534487.pdf",
-      "preIpoWaca": 240
+      "preIpoWaca": 240,
+      "lotSize": 120,
+      "priceBand": "₹118–124"
     },
     {
       "companyName": "Apana Logistics Ltd.",
@@ -41604,7 +41633,9 @@
             ]
           }
         ]
-      }
+      },
+      "lotSize": 2000,
+      "priceBand": "₹60"
     },
     {
       "companyName": "Qualiance International Ltd.",
@@ -41682,8 +41713,8 @@
           "percent": 7.83
         }
       ],
-      "anchorShares": 422400,
-      "totalShares": 1411200,
+      "anchorShares": 1009000,
+      "totalShares": 3552000,
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/qualiance_international_ltd_nse_sme_anchor_1788438233.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/qualiance_international_ltd_nse_sme_rhp_1788244211.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/qualiance_international_ltd_nse_sme_capital_structure_1788247189.pdf",
@@ -41716,7 +41747,9 @@
           "category": "Pre-IPO Transferee",
           "lockInExpiry": "2027-09-13T00:00:00.000Z"
         }
-      ]
+      ],
+      "lotSize": 1000,
+      "priceBand": "₹120–127"
     },
     {
       "companyName": "Fly-Hi Maritime Travels Ltd.",
@@ -41751,7 +41784,9 @@
           "category": "Public Pre-IPO (20.00% Pre-Issue)",
           "lockInExpiry": "2027-09-08T00:00:00.000Z"
         }
-      ]
+      ],
+      "lotSize": 1200,
+      "priceBand": "₹102"
     },
     {
       "companyName": "Complete Sports & Management India Ltd.",
