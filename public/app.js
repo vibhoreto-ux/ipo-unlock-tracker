@@ -621,7 +621,22 @@ function pollForNLP(companyName, attempts = 0) {
 function renderPreIpoTable(investors, ipoPrice, isModal) {
     if (!investors || investors.length === 0) return '<span class="empty">0 Pre-IPOs</span>';
 
-    const trs = investors.map(inv => {
+    // Strict filter: Exclude Promoters and text artifacts (Pre-IPO tab is only for Non-Promoters)
+    const nonPromoters = investors.filter(inv => {
+        const name = typeof inv === 'string' ? inv : (inv.name || '');
+        const cat = typeof inv === 'object' ? (inv.category || inv.type || '') : '';
+        const date = typeof inv === 'object' ? (inv.date || '') : '';
+        const text = `${name} ${cat} ${date}`.toLowerCase();
+        if (/\bpromoter\b/i.test(text) || /\bpromoters\b/i.test(text) || /\bfounding equity\b/i.test(text)) return false;
+        if (/securities,?\s*allotted/i.test(name) || /capital existing in/i.test(name) || /capital build-up/i.test(name)) return false;
+        return name.trim().length >= 3;
+    });
+
+    if (nonPromoters.length === 0) {
+        return '<span class="empty" style="font-size:11px; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (100% Promoter / Group held prior to IPO).</span>';
+    }
+
+    const trs = nonPromoters.map(inv => {
         let name = '';
         let date = '—';
         let shares = '—';
@@ -632,7 +647,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         if (typeof inv === 'object' && inv !== null) {
             name = inv.name || '—';
             date = inv.date || inv.allotmentDate || inv.transactionDate || (inv.lockInExpiry ? 'Pre-IPO' : '—');
-            shares = inv.shares || '—';
+            shares = inv.shares ? (typeof inv.shares === 'number' ? inv.shares.toLocaleString('en-IN') : inv.shares) : '—';
             buyPrice = inv.buyPrice !== undefined ? inv.buyPrice : (inv.price !== undefined ? parseFloat(inv.price) : (inv.acquisitionPrice !== undefined ? parseFloat(inv.acquisitionPrice) : null));
             discountPct = inv.discountPct !== undefined ? inv.discountPct : null;
             type = inv.type || inv.category || '';
@@ -884,13 +899,24 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             return;
         }
 
-        if (investors && investors.length > 0) {
-            const tableHtml = renderPreIpoTable(investors, issuePrice, false);
+        // Filter out promoters from Pre-IPO tab count and display
+        const nonPromoters = (Array.isArray(investors) ? investors : []).filter(inv => {
+            const name = typeof inv === 'string' ? inv : (inv.name || '');
+            const cat = typeof inv === 'object' ? (inv.category || inv.type || '') : '';
+            const date = typeof inv === 'object' ? (inv.date || '') : '';
+            const text = `${name} ${cat} ${date}`.toLowerCase();
+            if (/\bpromoter\b/i.test(text) || /\bpromoters\b/i.test(text) || /\bfounding equity\b/i.test(text)) return false;
+            if (/securities,?\s*allotted/i.test(name) || /capital existing in/i.test(name) || /capital build-up/i.test(name)) return false;
+            return name.trim().length >= 3;
+        });
+
+        if (nonPromoters.length > 0) {
+            const tableHtml = renderPreIpoTable(nonPromoters, issuePrice, false);
             const wacaHtml = waca ? `<div style="margin-top: 5px; font-size: 11px; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${waca}</span></div>` : '';
             preIpoBlock.innerHTML = `
                 <details open style="border:none; padding:0;">
                     <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 12px; list-style-position: inside; margin-bottom: 4px; display:flex; justify-content:space-between; align-items:center;">
-                        <span>Pre-IPO Investors & Shareholders (${investors.length})</span>
+                        <span>Pre-IPO Investors & Shareholders (${nonPromoters.length})</span>
                         ${topDocLink}
                     </summary>
                     <div class="body" style="margin-top:3px;">
