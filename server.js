@@ -1,11 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 const { scrapeUnlockData } = require('./scraper');
 const { scrapeWithBrowser, fetchAnchorInvestorNames } = require('./browser-scraper');
 const { autoFetchMissingRHP } = require('./auto-rhp');
 const { readDB, writeDB, mergeCompanies, getCircularData, saveCircularData } = require('./db');
 const { scanPreferential } = require('./preferential-scraper');
 const { fetchCapitalStructureUrl, extractFromCapitalStructure, batchScrapeCapitalStructureUrls, scrapeDetailPage } = require('./capital-structure-scraper');
+const { syncAllCapitalStructures, matchesCompany } = require('./scripts/sync_all_capital_structures');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -462,15 +465,22 @@ app.get('/api/unlock-data', async (req, res) => {
         // Save to DB
         writeDB(updatedDB);
 
+        // Fast sync all Capital Structure links and unlisted upcoming companies
+        await syncAllCapitalStructures({ extractPreIpo: false }).catch(err => console.error('[Auto-Sync-CS] Error:', err.message));
+        const freshDb = readDB();
+
         // Trigger background RHP completion auto-healer
         autoFetchMissingRHP().catch(err => console.error('[Auto-RHP] Error:', err.message));
 
+        // Trigger background Capital Structure pre-IPO healer
+        syncAllCapitalStructures({ extractPreIpo: true }).catch(err => console.error('[Auto-Sync-CS] Error:', err.message));
+
         res.json({
-            data: merged,
+            data: freshDb.companies,
             source: 'fresh',
             lastRefreshed: now,
             dbStats: {
-                totalCompanies: merged.length,
+                totalCompanies: freshDb.companies.length,
                 lastScraped: updatedDB.lastScraped
             }
         });
@@ -669,7 +679,7 @@ async function probeUpcomingData() {
 
             if (isCsMissingOrRhp || isPreIpoMissing || !company.anchorUrl) {
                 try {
-                    const docUrl = await resolveCompanyDocUrl(company, true);
+                    const docUrl = await resolveCompanyDocUrl(company, false);
                     if (docUrl && docUrl !== company.capitalStructureUrl) {
                         company.capitalStructureUrl = docUrl;
                         changed = true;
@@ -679,15 +689,19 @@ async function probeUpcomingData() {
                         ? company.capitalStructureUrl 
                         : null;
                     if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
-                        try {
-                            const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
+                        // Background non-blocking extraction so HTTP response returns fast
+                        extractFromCapitalStructure(company.companyName, targetDoc).then(csRes => {
                             if (csRes && Array.isArray(csRes.preIpoInvestors) && csRes.preIpoInvestors.length > 0) {
-                                company.preIpoInvestors = csRes.preIpoInvestors;
-                                if (csRes.waca) company.preIpoWaca = csRes.waca;
-                                if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
-                                changed = true;
+                                const curDb = readDB();
+                                const target = curDb.companies.find(c => c.companyName === company.companyName);
+                                if (target) {
+                                    target.preIpoInvestors = csRes.preIpoInvestors;
+                                    if (csRes.waca) target.preIpoWaca = csRes.waca;
+                                    if (csRes.peerComparison) target.peerComparison = csRes.peerComparison;
+                                    writeDB(curDb);
+                                }
                             }
-                        } catch (e) {}
+                        }).catch(() => {});
                     }
                 } catch (e) {
                     console.warn(`[ProbeUpcoming] Pre-IPO error for ${name}: ${e.message}`);
@@ -728,8 +742,13 @@ async function probeUpcomingData() {
  */
 app.post('/api/probe-upcoming', async (req, res) => {
     try {
+        // Fast sync: Attach all Capital Structure links, RHPs, anchors and discover new upcoming IPOs
+        await syncAllCapitalStructures({ extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
         const result = await probeUpcomingData();
         res.json({ success: true, ...result });
+
+        // Trigger background pre-IPO extraction non-blocking
+        syncAllCapitalStructures({ extractPreIpo: true }).catch(() => {});
     } catch (e) {
         console.error('[ProbeUpcoming API] Error:', e.message);
         res.status(500).json({ error: e.message });
@@ -738,8 +757,11 @@ app.post('/api/probe-upcoming', async (req, res) => {
 
 app.get('/api/probe-upcoming', async (req, res) => {
     try {
+        await syncAllCapitalStructures({ extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
         const result = await probeUpcomingData();
         res.json({ success: true, ...result });
+
+        syncAllCapitalStructures({ extractPreIpo: true }).catch(() => {});
     } catch (e) {
         console.error('[ProbeUpcoming API] Error:', e.message);
         res.status(500).json({ error: e.message });
@@ -780,15 +802,12 @@ async function resolveCompanyDocUrl(company, forceCheckDetailPage = false) {
         if (fs.existsSync(ipoCachePath)) ipoCache = JSON.parse(fs.readFileSync(ipoCachePath, 'utf8'));
     } catch (e) {}
 
-    const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-
     let matchedItem = null;
     let matchedSlug = null;
 
     if (csCache) {
         for (const [slug, item] of Object.entries(csCache)) {
-            const normSlug = slug.replace(/[^a-z0-9]/g, '');
-            if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
+            if (matchesCompany(company.companyName, item.companyName || slug)) {
                 matchedItem = item;
                 matchedSlug = slug;
                 break;
@@ -798,8 +817,7 @@ async function resolveCompanyDocUrl(company, forceCheckDetailPage = false) {
 
     if (!matchedItem && ipoCache && ipoCache.companies) {
         for (const [slug, item] of Object.entries(ipoCache.companies)) {
-            const normSlug = slug.replace(/[^a-z0-9]/g, '');
-            if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
+            if (matchesCompany(company.companyName, item.name || slug)) {
                 matchedItem = item;
                 matchedSlug = slug;
                 break;
@@ -815,9 +833,12 @@ async function resolveCompanyDocUrl(company, forceCheckDetailPage = false) {
         return matchedItem.capitalStructureUrl;
     }
 
-    // If capital structure URL is missing in cache OR forceCheckDetailPage is true, and detailUrl is available:
-    if (matchedItem && matchedItem.detailUrl && (!matchedItem.capitalStructureUrl || forceCheckDetailPage)) {
+    // If capital structure URL is missing in cache and forceCheckDetailPage is true, and detailUrl is available:
+    const ONE_DAY = 24 * 60 * 60 * 1000;
+    const scrapedRecently = matchedItem && matchedItem.lastScrapedAt && (Date.now() - matchedItem.lastScrapedAt < ONE_DAY);
+    if (matchedItem && matchedItem.detailUrl && !matchedItem.capitalStructureUrl && !scrapedRecently && forceCheckDetailPage) {
         try {
+            matchedItem.lastScrapedAt = Date.now();
             console.log(`[resolveCompanyDocUrl] Probing IPO Premium detail page for ${company.companyName}: ${matchedItem.detailUrl}`);
             const scraped = await scrapeDetailPage(matchedItem.detailUrl);
             let cacheUpdated = false;

@@ -1,6 +1,221 @@
 {
   "companies": [
     {
+      "companyName": "Steamhouse India Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
+      "capitalStructureUrl": null,
+      "anchorUrl": null,
+      "preIpoInvestors": []
+    },
+    {
+      "companyName": "Vinod Texworld Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788519044.pdf",
+      "capitalStructureUrl": null,
+      "anchorUrl": null,
+      "preIpoInvestors": []
+    },
+    {
+      "companyName": "Infrax Renewable Ltd",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_rhp_1788532229.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_capital_structure_1788532230.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "M/s. Online Potato Consultancy Private Limited",
+        "A Promo",
+        "Mr. Ashwinbhai Gordhanbhai Vachhani",
+        "Online Potato Consultancy Private Limited",
+        "Newtonly Private Limited",
+        "Mr. Gandhi Bhavik Tarunkumar",
+        "Mr. Vishal Bhandari",
+        "M/s. Newtonly Private Limited",
+        "Mr. Bhargv Ashvinbhai Vachhani",
+        "M/s Maruna Exports Private Limited",
+        "M/s Monetic Catalyst LLP",
+        "Mr. Vivek Kumar",
+        "M/s Chittorgarh Infotech Limited",
+        "Intellifin Private Limited",
+        "Ms. Khushboo Bhargav Vachhani",
+        "Mr. Yash Hitesh Patel",
+        "M/s. Intellifin Private Limited (₹160)",
+        "Chittorgarh Infotech Limited",
+        "Ms. Gandhi Maya Bhavik"
+      ]
+    },
+    {
+      "companyName": "Manipal Payment & Identity Solutions Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "or NA NA NA NA",
+        "Neha Lashit",
+        "Alchemy Capital",
+        "Series III",
+        "Scheme IV",
+        "Flowers Valley",
+        "Nuvama Crossover Opportunities Fund - Series III B.",
+        "Dattatri Manjunatha Hardur",
+        "Ramanath Pai",
+        "Series IIIA",
+        "Arun Bhasker",
+        "Jnaneshwara Prabhu",
+        "Srinivas AG",
+        "Series III B.",
+        "Lashit Lallubhai",
+        "Under ESOP Scheme,",
+        "Rajat Shuvra Sen",
+        "Baikadi Narahari",
+        "Nuvama Crossover Opportunities Fund - Series IIIA",
+        "Series III A.",
+        "Nuvama Crossover Opportunities Fund – Series III",
+        "Nuvama Crossover Opportunities Fund - Series III B",
+        "Nuvama Crossover Opportunities Fund - Series III",
+        "Flowers Valley Private Limited",
+        "Nuvama Crossover Opportunities Fund – Series IIIA",
+        "Nuvama Crossover Opportunities Fund – Series IIIB",
+        "Series III B",
+        "Nuvama Crossover Opportunities Fund - Series III A.",
+        "Touchstone Trust Scheme IV",
+        "Nuvama Crossover Opportunities Fund - Series IIIB",
+        "Mayank Bhotika",
+        "India SME Investments Fund II"
+      ]
+    },
+    {
+      "companyName": "LCC Projects Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "Maya Arjan",
+        "Maya Arjan Rabari",
+        "Arjan Suja"
+      ]
+    },
+    {
+      "companyName": "National Stock Exchange of India Ltd",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
+      "capitalStructureUrl": null,
+      "anchorUrl": null,
+      "preIpoInvestors": []
+    },
+    {
+      "companyName": "Rentomojo Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": null,
+      "issuePrice": 37,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 31080977,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "IDG Ventures India",
+        "Rajeev Chitrabhanu",
+        "Chiratae Growth Fund – I represented by its (₹325)",
+        "Chiratae Trust",
+        "Jagdish Bamania",
+        "Accel India IV",
+        "GMO Payment",
+        "Geetansh Bamania",
+        "Edelweiss Discovery",
+        "Meera Bamania",
+        "Gaurav Bamania",
+        "IDG Ventures India Fund III LLC (₹339)",
+        "ValueQuest S.C.A.L.E.",
+        "VCATs Management",
+        "RM Employee Benefit",
+        "Dr. Niddodi",
+        "MVP Family Trust",
+        "RM Employee Benefit Trust",
+        "Rohan Ajeet Nil",
+        "Madison India Opportunities V VCC",
+        "Hakim Nil",
+        "Shri Investments",
+        "Edelweiss Discovery Fund – Series I",
+        "Prabhat Verma Nil",
+        "Akash Jangid Nil",
+        "ValueQuest S.C.A.L.E. Fund (₹110)",
+        "Accel India IV (Mauritius) Limited (₹742)",
+        "Dr. Sandesh",
+        "GMO Payment Gateway",
+        "Madison India"
+      ],
+      "preIpoWaca": 292.08
+    },
+    {
       "companyName": "Apollo Techno Industries Ltd.",
       "issueType": "SME",
       "exchange": "BSE SME",
@@ -22481,7 +22696,8 @@
           "type": "Private Placement (R3)"
         }
       ],
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboardtentative_price_and_lot_size_capital_structure_1786496687.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboardtentative_price_and_lot_size_capital_structure_1786496687.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboard_anchor_1787315943.pdf"
     },
     {
       "companyName": "Raajmarg Infra Investment Trust InvIT",
@@ -26711,7 +26927,16 @@
       "anchorShares": 0,
       "totalShares": 3429600,
       "rhpUrl": "https://www.fedsec.in/download-section/IPO%20Documents/SME/2026-27/ABH%20Healthcare%20Limited/ABH%20healthcare%20_RHP_13.08.2026.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "Dr. Kamal Baghi",
+        "Mr. Hemraj Saini",
+        "Late Mrs",
+        "Dr. Vaishali",
+        "Dr. Vaishali Saini",
+        "Mrs. Sukarma Khanna",
+        "Mrs. Rita Saini"
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/abh_healthcare_ltd_nse_sme_capital_structure_1786962797.pdf"
     },
     {
       "companyName": "Tempsens Instruments (India) Ltd.",
@@ -26744,7 +26969,18 @@
       "anchorShares": 0,
       "totalShares": 0,
       "rhpUrl": "https://www.icicisecurities.com/console/uploads/actual/TEMPSENS-INSTRUMENTS-(INDIA)-LIMITED---RED-HERRING-PROSPECTUS_1786731387_84.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "Nirmal Kumar",
+        "Ankit Talesara",
+        "Amit Talesara",
+        "Vinay Rathi",
+        "Marathon N",
+        "Pratap Singh",
+        "Rathi Family Trust"
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_mainboard_capital_structure_1786906752.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_ltd_mainboard_anchor_1787156017.pdf",
+      "preIpoWaca": 51.65
     },
     {
       "companyName": "Gaja Alternative Asset Management Ltd.",
@@ -26777,7 +27013,25 @@
       "anchorShares": 0,
       "totalShares": 0,
       "rhpUrl": "https://gajacapital.com/assets/gaja-alternative-asset-management-limited---red-herring-prospectus.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "Mr. Arindam Kumar Bhattacharya",
+        "Mr. Manish Sabharwal",
+        "Mr. Gopal Jain",
+        "Ms. Suparna Kumar",
+        "Mr. Sanjay Hiralal Patel",
+        "Options granted",
+        "SBI Life Insurance Co. Ltd",
+        "Mr. Sushane Chopra",
+        "Mr. Abhinav Jain",
+        "Mr. Shailesh Vishnubhai Haribhakti",
+        "Vesting Period",
+        "Mr. Ranjit Jayant Shah jointly",
+        "Number of Voting Rights",
+        "Mr. Gopal Jain jointly held with",
+        "Mr. Anshuman Goyal"
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternatives_mainboard_capital_structure_1786545628.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternative_asset_management_ltd_mainboard_anchor_1787065501.pdf"
     },
     {
       "companyName": "Mopshop Distribution Ltd.",
@@ -26802,7 +27056,15 @@
       "anchorShares": 0,
       "totalShares": 1975000,
       "rhpUrl": "https://www.bsesme.com/download/304088/SME_IPO%20InPrinciple/MOPSHOPDPFINAL_20250930232838.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "this Offer",
+        "any Applicant",
+        "P rakash Hakim Singh",
+        "Prakash Hakim Singh",
+        "or NIL",
+        "Exchanges within"
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/mopshop_distribution_ltd_bse_sme_capital_structure_1786859678.pdf"
     },
     {
       "companyName": "Dhanwel Hybrid Seeds Ltd.",
@@ -26826,7 +27088,28 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 2700000,
-      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/dhanwel-hybrid-seeds-rhp.pdf"
+      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/dhanwel-hybrid-seeds-rhp.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dhanwel_hybrid_seeds_ltd_bse_sme_capital_structure_1781679094.pdf",
+      "preIpoInvestors": [
+        "Mr. Ashok Dilipkumar Jain",
+        "Ms. Kajal Ashok Jain",
+        "Mr. Chetan Dinesh Jain",
+        "Chaitali Joy Banerjee",
+        "Mr. Raju Arabhambhai Modhavadiya",
+        "Mr. Subhash Nathamal Jain",
+        "Mr. Kishankumar Gordhanbhai Meghani",
+        "Ms. Shreya Dheeraj Jain",
+        "Mr. Rajesh Tripathi",
+        "Mrs. Kusum Dilipkumar Jain",
+        "Mr. Sudhir Mohanbhai Pipaliya",
+        "Mr. Vimal Mansukhbhai Vekariya",
+        "Mr. Ketan A Vyas",
+        "Mr. Nikul Mansukhbhai Vekariya",
+        "Alternate Investment Funds",
+        "Ms. Kirti Ravi Kothari",
+        "Mr. Kishan Gordhanbhai Meghani Managing",
+        "Exchanges within"
+      ]
     },
     {
       "companyName": "Sunshine Pictures Ltd.",
@@ -26869,7 +27152,12 @@
       ],
       "anchorShares": 0,
       "totalShares": 0,
-      "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf"
+      "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_capital_structure_1786426762.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_anchor_1786970543.pdf",
+      "preIpoInvestors": [
+        "any Investor"
+      ]
     },
     {
       "companyName": "Shankesh Jewellers Ltd.",
@@ -26901,7 +27189,57 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 0,
-      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/shankesh-jewellers-limited_rhp.pdf"
+      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/shankesh-jewellers-limited_rhp.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_capital_structure_1786372775.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_anchor_1786970732.pdf",
+      "preIpoInvestors": [
+        "Kunal Ramesh Jain,",
+        "Manoj Kantilal",
+        "Sunita Jain",
+        "Shivprasad Rajaram",
+        "Babulal Mangilal",
+        "Mahavir outstanding",
+        "Sushila Kantilal",
+        "Manoj K Jain HUF,",
+        "Purshotam Gourishankar",
+        "Manoj Jain HUF",
+        "Sunita Jain,",
+        "Yogesh Jaurat,",
+        "Kantilal Kheemraj Jain",
+        "Kantilal Jain HUF",
+        "Laxmi Ramasinh",
+        "Mangilal Rebari,",
+        "Swimmi Jain,",
+        "Manoj K",
+        "Ranjit Jain,",
+        "Saroj Kap,",
+        "Shraddha Rohan",
+        "Sushila Kantilal Jain",
+        "Karishma Saroj",
+        "Jugraj K",
+        "Mahavir K",
+        "Kantilal Jain,",
+        "Mahavir K Jain",
+        "Kanak Bihari",
+        "Jugraj Jain,",
+        "Manoj K Jain",
+        "Roopchand Jain,",
+        "Kheemraj Kantilal Jain",
+        "Mahavir Kantilal",
+        "Ramasinh Thapa,",
+        "Mangla Jugraj Jain",
+        "Mangla Jugraj Jain,",
+        "Kantilal Jain",
+        "Rajaram Mourya,",
+        "Swimmi Jain",
+        "Jain Kantilal Jain",
+        "Sahadev Hari",
+        "Mahavir Kantilal Jain",
+        "Manoj Kantilal Jain",
+        "Kheemraj Jain,",
+        "Suraj Shivprasad",
+        "HUF Kheemraj"
+      ]
     },
     {
       "companyName": "Lalithaa Jewellery Mart Ltd.",
@@ -26957,7 +27295,39 @@
       ],
       "anchorShares": 25283581,
       "totalShares": 84608276,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lalithaa_jewellery_mart_ltd_mainboard_rhp_1786363926.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lalithaa_jewellery_mart_ltd_mainboard_capital_structure_1786363927.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/lalithaa_jewellery_mart_ltd_mainboard_anchor_1786723077.pdf",
+      "preIpoInvestors": [
+        "Private Limited",
+        "D. Padmanaban",
+        "M . Kiran",
+        "L alitha Castle Private Limited (₹420)",
+        "Eastco Exim Private Limited,",
+        "C lank",
+        "M. S. Kandasamy",
+        "E astco Exim",
+        "E astco Exim Private Limited",
+        "E kadanta",
+        "A vighna",
+        "C lank Management Private Limited",
+        "Clank Management Private Limited",
+        "A ccropolis",
+        "M. Kiran Kumar Jain",
+        "G yanmal",
+        "S ohan Raj",
+        "R ajesh",
+        "Eastco Exim Private Limited (₹785)",
+        "Navyug Global Investment",
+        "L alitha",
+        "P. Rajeswaran",
+        "N ikhil",
+        "Lalitha Castle Private Limited (₹400)",
+        "Hemaa Kiran Kumar Jain",
+        "H emaa",
+        "A rvind",
+        "Krishkiran Mega Mall Private Limited (₹800)"
+      ]
     },
     {
       "companyName": "Horizon Industrial Parks Ltd.",
@@ -27045,7 +27415,49 @@
       ],
       "anchorShares": 194625000,
       "totalShares": 433409090,
-      "rhpUrl": "https://listing.bseindia.com/download//preanchor/rhp_20260812192140.pdf"
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_rhp_1786531310.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_capital_structure_1786532058.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_anchor_1786724201.pdf",
+      "preIpoInvestors": [
+        "ONE Real Assets Development Fund",
+        "Goodluck Buildtech Private Limited",
+        "ILV Distripark (MWC) Private Limited",
+        "Panvel Warehousing Private Limited",
+        "Redhills Industrial Park Private Limited",
+        "State Bank of India",
+        "Vertical Logistic Park LLP (₹850.18)",
+        "DSP Investment Private Limited",
+        "between BREP Asia II EIP Holding",
+        "Embassy Property Developments Private Limited",
+        "ONE Real Assets Advantage Fund",
+        "Bagur Logistics Park Private Limited",
+        "Maini Materials Movement Private Limited",
+        "Farukhnagar Logistics Parks LLP",
+        "FRK II Industrial Park Private Limited",
+        "Kalina Warehousing Private Limited",
+        "Jindpur Industrial Park Private Limited (₹904.16)",
+        "Jazz Leaf Investment Limited",
+        "ILV Distripark Private Limited",
+        "Select Unicorn LLP",
+        "Patencheru Industrial Park Private Limited (₹743.23)",
+        "Po onawala Vision Fund I",
+        "BREP Asia II",
+        "Pte. Ltd.",
+        "Lakshmipathi Realtors Private Limited",
+        "Malur Logistics and Industrial Parks Private Limited",
+        "Poonawala Vision Fund I",
+        "LI Industrial Parks Private Limited",
+        "Everest Food Products Private Limited",
+        "Poo nawala Vision Fund I**",
+        "DS P Investment Private Limited",
+        "Eve rest Food Products Private Limited**",
+        "Se lect Unicorn LLP",
+        "Ev erest Food Products Private Limited",
+        "BREP Asia III India Holding Co III Pte. Ltd.",
+        "Embassy Industrial Park Hosur Private Limited",
+        "Share for",
+        "BREP Asia II EIP Holding (NQ) Pte. Ltd"
+      ]
     },
     {
       "companyName": "Skytech Infinite Platform Ltd.",
@@ -27069,7 +27481,13 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 2945600,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/skytech_infinite_platform_ltd_nse_sme_rhp_1786356403.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skytech_infinite_platform_ltd_nse_sme_capital_structure_1786356609.pdf",
+      "preIpoInvestors": [
+        "Held Years",
+        "Paramashivam Deiveekan",
+        "Suma Deiveekan"
+      ]
     },
     {
       "companyName": "ENS Enterprises Ltd.",
@@ -27105,7 +27523,21 @@
       ],
       "anchorShares": 1026000,
       "totalShares": 3602400,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/ens_enterprises_ltd_bse_sme_rhp_1786514036.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ens_enterprises_ltd_bse_sme_capital_structure_1786514038.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/ens_enterprises_ltd_bse_sme_anchor_1786626995.pdf",
+      "preIpoInvestors": [
+        "Manish Kumar Srivastava",
+        "Anupam Kumar Srivastava",
+        "Mrs. Adhishree Srivastava",
+        "Sheetal Chauhan",
+        "M/s Connect Fund (₹12.5)",
+        "Adhishree Srivastava",
+        "SVPAN Consultant Private Limited",
+        "Mrs. Sheetal Chauhan",
+        "Ruchika Kumari",
+        "Avinash Kumar Singh"
+      ]
     },
     {
       "companyName": "Technocrats Plasma Systems Ltd.",
@@ -27148,7 +27580,15 @@
       ],
       "anchorShares": 1314000,
       "totalShares": 4620000,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/technocrats_plasma_systems_ltd_bse_sme_rhp_1786495531.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/technocrats_plasma_systems_ltd_bse_sme_capital_structure_1786495533.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/technocrats_plasma_systems_ltd_bse_sme_anchor_1786627089.pdf",
+      "preIpoInvestors": [
+        "Arun Kumar and Rs. (₹12)",
+        "Artha 99 Investment AIF Trust",
+        "Arun Kumar",
+        "Artha99 Investment AIF Trust"
+      ]
     },
     {
       "companyName": "Credent Connect N Care Ltd.",
@@ -27192,7 +27632,28 @@
       ],
       "anchorShares": 1404000,
       "totalShares": 4968000,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/credent_connect_n_care_ltd_nse_sme_rhp_1786358575.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/credent_connect_n_care_ltd_nse_sme_capital_structure_1786358768.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/credent_connect_n_care_ltd_nse_sme_anchor_1786537356.pdf",
+      "preIpoInvestors": [
+        "Ashok Kumar Sharma HUF",
+        "Tiger Strategies Fund -I",
+        "Amit Gupta",
+        "Dimple Sharma",
+        "Exchanges within",
+        "Ashok Kumar Sharma",
+        "Karan Sharma",
+        "Abakkus Venture Opportunities Fund",
+        "Ashish Kacholia",
+        "Karan Sharma HUF",
+        "Ashok Kumar",
+        "Tattvam AIF Trust – Aanjay Ageless AIF Fund",
+        "any Applicant",
+        "Convivial Advisors LLP",
+        "Tarun Sharma HUF",
+        "Tarun Sharma",
+        "SB Opportunities Fund II"
+      ]
     },
     {
       "companyName": "Shiprocket Ltd.",
@@ -27276,7 +27737,45 @@
       ],
       "anchorShares": 74991568,
       "totalShares": 166761574,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/shiprocket_ltd_mainboard_price_and_lot_rhp_1785939006.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shiprocket_ltd_mainboard_price_and_lot_capital_structure_1785940320.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/shiprocket_ltd_mainboard_anchor_1786460125.pdf",
+      "preIpoInvestors": [
+        "Options vested",
+        "Gaurav Mangla",
+        "RSP India Fund LLC (₹355)",
+        "Under ESOP",
+        "LR India Fund I S.a.r.l., SICAV-RAIF",
+        "Saahil Goel",
+        "Nitin Dhingra",
+        "Agility International Investment LLC",
+        "Arvind Limited",
+        "Nirvana Digital Investment Holding Co. Ltd (₹355)",
+        "Options outstanding",
+        "SAI Global India Fund I, LLP (₹616)",
+        "Vishesh Khurana",
+        "Options exercised",
+        "AFOS, LLC",
+        "LLC Series",
+        "LR India Fund I S.a.r.l. SICAV- RAIF (₹10)",
+        "Agility International Investment L.L.C. (₹10)",
+        "Gautam Kapoor",
+        "Moore Strategic Ventures LLC",
+        "Fiducia Investment Private Limited (₹163.13)",
+        "LR India Fund I S.a.r.l., SICAV- RAIF",
+        "Superfuel Consultants LLP Series A CCPS",
+        "Nirvana Digital Investment Holding Co. Ltd.",
+        "Superfuel Consultants LLP (₹10)",
+        "MUFG Bank Limited",
+        "Vivek Kalra",
+        "Options lapsed",
+        "Info Edge Ventures",
+        "KDT Ventures Holdings, LLC",
+        "Ankit Kaushik",
+        "Jatinder Aneja Series A CCPS",
+        "Tribe Capital III LLC Series"
+      ],
+      "preIpoWaca": 38.99
     },
     {
       "companyName": "Behari Lal Engineering Ltd.",
@@ -27321,7 +27820,9 @@
       ],
       "anchorShares": 3174946,
       "totalShares": 9983158,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_rhp_1786028123.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_capital_structure_1786028126.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_anchor_1786456251.pdf"
     },
     {
       "companyName": "Pramodini Medicare Ltd.",
@@ -27367,7 +27868,23 @@
       ],
       "anchorShares": 1360800,
       "totalShares": 5851200,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/pramodini_medicare_ltd_nse_sme_rhp_1785856254.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/pramodini_medicare_ltd_nse_sme_capital_structure_1785856382.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/pramodini_medicare_ltd_nse_sme_anchor_1786452093.pdf",
+      "preIpoInvestors": [
+        "Medicare Private",
+        "Mr. Sadineni Raghu Teja",
+        "Ms. Yashvi Hitesh Patel",
+        "A Promo",
+        "Ms. Sumita Mishra",
+        "Private Limited",
+        "Kuldeep Kumar",
+        "M/s Sri Ram Medicare Private Limited",
+        "Sri Ram Medicare Private Limited",
+        "Dr. Chalasani Kavitha",
+        "Mr. Yash Hitesh Patel",
+        "Dr. Chalasani Kuldeep Kumar"
+      ]
     },
     {
       "companyName": "Q&T Foods Ltd.",
@@ -27391,7 +27908,21 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 2282400,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/qt_foods_ltd_bse_sme_rhp_1786258671.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/qt_foods_ltd_bse_sme_capital_structure_1786258672.pdf",
+      "preIpoInvestors": [
+        "Ms. Roopali Gupta",
+        "Ms. Usha Gupta",
+        "Capgate Consultants Private Limited",
+        "Mr. Rakesh Gupta",
+        "Mr. Pradeep Kumar Sharma",
+        "Ms. Khushbu Varshney",
+        "Ms. Usha",
+        "Mr. Ajay Kumar Singh",
+        "SN Capital Management Pvt Ltd",
+        "Mr. Nishant Raj Gupta",
+        "Mr. Rahul Anand"
+      ]
     },
     {
       "companyName": "Fascinate Textiles Ltd.",
@@ -27415,7 +27946,19 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 4293600,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/fascinate_textiles_ltd_nse_sme_rhp_1786170942.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/fascinate_textiles_ltd_nse_sme_capital_structure_1786170743.pdf",
+      "preIpoInvestors": [
+        "Rishabh Nahar",
+        "Encore Events Private Limited",
+        "Chirag Ahuja",
+        "Karnika Industries Limited",
+        "Name of",
+        "Vishal Nahar",
+        "Narinder Kumar Ahuja",
+        "Vishal Nahar HUF",
+        "Amount to Amount Estimated"
+      ]
     },
     {
       "companyName": "Milky Mist Dairy Food Ltd.",
@@ -27468,7 +28011,53 @@
       ],
       "anchorShares": 33235713,
       "totalShares": 110943194,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/milky_mist_dairy_food_ltd_mainboard_rhp_1785897959.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/milky_mist_dairy_food_ltd_mainboard_capital_structure_1785897960.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/milky_mist_dairy_food_ltd_mainboard_anchor_1786371688.pdf",
+      "preIpoInvestors": [
+        "Kiran Vyapar Limited",
+        "Aquarius Family Private Trust",
+        "Sakthiraj S NA NA",
+        "S. Gopalakrishnan (on behalf of Pratithi Investment Trust)##",
+        "S Prakash NA NA",
+        "Jongsong Investments Pte. Ltd.",
+        "Jagannath NA NA",
+        "AG Ventures",
+        "Taurus Family",
+        "A R Chadha and Co India Pvt Ltd",
+        "A R Chadha",
+        "Unmaj Corporation LLP",
+        "Shanmugham S NA NA",
+        "TS Shanjay and TS",
+        "Oriental Carbon",
+        "Oriental Carbon and Chemicals Limited",
+        "Shivanand V",
+        "Options granted NA NA",
+        "Ravi S NA NA",
+        "Sathishkumar T",
+        "Modi Fiduciary",
+        "A R Chadha and Co",
+        "Pratithi Growth Fund I",
+        "TS Nitin",
+        "Aquarius Family Private Trust by way of gift",
+        "Natarajan R NA NA",
+        "Taurus Family Private",
+        "A R Chadha and Co India Private Limited",
+        "Piano Forte",
+        "Shiva Kumar M P NA NA",
+        "Taurus Family Private Trust",
+        "AR Chadha and Co India Private Limited",
+        "Biswajit Mishra NA NA",
+        "Dr. K Rathnam NA NA",
+        "Jagadeesan R NA NA",
+        "Kiran Vyapar",
+        "Anitha S",
+        "Palaniappan T K NA NA",
+        "Anitha S,",
+        "Taurus Family Private Trust by way of gift",
+        "Aquarius Family Private",
+        "TS Shanjay"
+      ]
     },
     {
       "companyName": "Sham Foam Ltd.",
@@ -27492,7 +28081,28 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 3114000,
-      "rhpUrl": ""
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/sham_foam_ltd_bse_sme_rhp_1786257769.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sham_foam_ltd_bse_sme_capital_structure_1786257773.pdf",
+      "preIpoInvestors": [
+        "Sanjeev Kumar Jindal",
+        "Abhinav Jindal",
+        "Mr. Rajinder Kumar Jindal For",
+        "Deepika Jindal",
+        "Kunal Jindal",
+        "Mrs. Parwati Devi and Ms. Monica Jindal",
+        "Mr. Sanjeev Kumar Jindal For",
+        "Charming Fashion Private Limited For",
+        "Mrs. Monica Jindal",
+        "Parwati Devi and Ms",
+        "Kumar Jindal",
+        "Mrs. Deepika Jindal",
+        "Mr. Kunal Jindal For",
+        "Mr. Abhinav Jindal For",
+        "Charming Fashion Private Limited (₹16.48)",
+        "Rajinder Kumar Jindal",
+        "Mr. Sanjeev Kumar Jindal (₹10)",
+        "Monica Jindal"
+      ]
     },
     {
       "companyName": "Molbio Diagnostics Ltd.",
@@ -27520,7 +28130,74 @@
         "originalDate": "2027-02-17T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_tentative_price_and_lot_size_capital_structure_1785817808.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_anchor_1786119339.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_tentative_price_and_lot_size_rhp_1785817607.pdf",
+      "preIpoInvestors": [
+        "Sangeetha M",
+        "Kailon Holding LLP",
+        "J. Guru Dutt and Sandhya",
+        "M atrix Clothing Private Limited",
+        "Kamath Shareholder",
+        "Sangeetha M Kini,",
+        "M.A.Usha Rani,",
+        "Sriram Natarajan Exxora Trading LLP",
+        "Exxora Trading LLP",
+        "E xxora Trading LLP (₹41.23)",
+        "Unmaj Corporation LLP",
+        "G.M. Kini,",
+        "U nthinkable Solutions LLP",
+        "Ganesh Kamath,",
+        "Chandrasekhar Selling",
+        "S ujay Limited",
+        "Sujay Limited (₹10)",
+        "J.Guru Dutt and",
+        "Baid Techventures LLP",
+        "D B Bandodkar and Sons Private",
+        "Agra-Gwalior Pathways Private",
+        "Sangeetha M. Kini,",
+        "D B Bandodkar And Sons",
+        "P P Suppliers",
+        "Jayanthi D",
+        "Sudhindar Krishan Khanna and",
+        "M.A. Rohit,",
+        "A gra-Gwalior Pathways Private Limited",
+        "Narendrakumar Agarwal,",
+        "Clothing Private Limited,",
+        "Mohamed Shareholder",
+        "Shaheeda Abdul Kader,",
+        "Private Limited,",
+        "Gopalkrishna Sampathgiri and",
+        "Navin Mahavirprasad",
+        "M.A. Sharath,",
+        "Jayshree Sampathgiri,",
+        "Unthinkable Solutions LLP",
+        "U nmaj Corporation LLP",
+        "Excellence Fund III,",
+        "LLP Selling",
+        "G.Sampathgiri and",
+        "Dover Commercials Private",
+        "Techventures LLP,",
+        "Matrix Clothing Private Limited",
+        "Dover Commercials Private Limited",
+        "K ailon Holdings LLP",
+        "Motilal Oswal Wealth Limited",
+        "Excellence Fund Shareholder,",
+        "P P Suppliers & Agencies Private Limited",
+        "D over Commercials Private Limited",
+        "D B Bandodkar And Sons Private Limited",
+        "Gurmeetsingh Santsingh Vasan,",
+        "B aid Techventures LLP",
+        "Shruthi G Kini,",
+        "Nil Nil",
+        "Guru Dutt,",
+        "Mangalore Kini Shareholder,",
+        "Jayashree Sampathgiri,",
+        "Shaheeda Abdul Kader",
+        "V Sciences Investments Pte",
+        "Sandhya Guru Dutt,"
+      ]
     },
     {
       "companyName": "Dhoot Transmission Ltd.",
@@ -27548,7 +28225,34 @@
         "originalDate": "2027-02-17T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_capital_structure_1785993004.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_anchor_1786121435.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_rhp_1785829215.pdf",
+      "preIpoInvestors": [
+        "Rahul Radhavallabh",
+        "BC Asia XV (₹461.22)",
+        "HDF C Bank Limited (₹291.79)",
+        "Options vested",
+        "Rahul Nil",
+        "Naveen Kumar NA",
+        "NA NA NA NA (₹468)",
+        "Kiranbai Radhavallabh",
+        "NA Upto",
+        "Nitinkumar Dagdulal Kalani were exercised (₹468)",
+        "BC Asia XV and",
+        "BC Asia XVI",
+        "BC Asia (₹461.22)",
+        "BC Asia XV up front (₹461.22)",
+        "NIL NIL",
+        "Somshekhar Patil (₹468)",
+        "NA Up to",
+        "Dhiren Vinodrai Seth",
+        "Anupama Rahul",
+        "Indian Bank",
+        "Options granted"
+      ],
+      "preIpoWaca": 480.34
     },
     {
       "companyName": "Technocraft Ventures Ltd.",
@@ -27576,7 +28280,17 @@
         "originalDate": "2027-02-14T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_capital_structure_1785491886.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_anchor_1786026596.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_rhp_1785490282.pdf",
+      "preIpoInvestors": [
+        "Rekha Tyagi",
+        "Sanjay Tyagi HUF",
+        "Kartikey Tyagi",
+        "Sanjay Tyagi"
+      ],
+      "preIpoWaca": 121.76
     },
     {
       "companyName": "LEAP India Ltd.",
@@ -27604,7 +28318,56 @@
         "originalDate": "2027-02-14T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/leap_india_ltd_mainboard_tentative_lot_and_price_capital_structure_1785699787.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/leap_india_ltd_mainboard_anchor_1786033831.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/leap_india_ltd_mainboard_rhp_1785677624.pdf",
+      "preIpoInvestors": [
+        "Sargam Retails Private Limited",
+        "Private placement## (₹483.59)",
+        "Sunu Mathew,",
+        "Rakesh Shah,",
+        "Options exercised",
+        "Deepak Goyal,",
+        "Madhurima International Private Limited",
+        "Miracle Carriers",
+        "Sixth Sense India Opportunities III",
+        "Ceramet Consultants Private Limited",
+        "Sixth Sense",
+        "Packaging Holding LLP (₹199.78)",
+        "Holdings II Pte. Ltd.,",
+        "Madhurima International Private",
+        "SC Credit Fund (₹400)",
+        "Vertical Holdings II Pte",
+        "CCPS to Vertical Holdings II Pte. Ltd.",
+        "First Bridge India Growth",
+        "Private placement# (₹483.59)",
+        "Ramesh Keshavji",
+        "II, Ltd. and",
+        "Series K CCPS for every",
+        "Vertical Holdings II Pte. Ltd.",
+        "First Bridge",
+        "Ramesh Keshavji Shah",
+        "Shriram Growth Fund 3",
+        "Scheme Samit Sinha,",
+        "Sujay S Jagani",
+        "CCPS from Mayfield India II, Ltd.,",
+        "Sambhav Fund,",
+        "Ceramet Consultants",
+        "Dhimal Shaileshbhai",
+        "Exchanges within",
+        "Jyoti Bhaiya,",
+        "Holdings II Pte. Ltd.",
+        "ESOP pool",
+        "Matyas Possessiones Private Limited (₹400)",
+        "Options granted",
+        "Harjindersingh Sarna and",
+        "Sameer Ahuja",
+        "Niveshaay Sambhav Fund,",
+        "Vasudha Dudani,",
+        "India Growth Fund,",
+        "First Bridge India Growth Fund"
+      ]
     },
     {
       "companyName": "Optimystix Entertainment India Ltd.",
@@ -27632,7 +28395,27 @@
         "originalDate": "2027-08-14T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/optimystix_entertainment_india_ltd_nse_sme_capital_structure_1785500160.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/optimystix_entertainment_india_ltd_nse_sme_anchor_1786026679.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/optimystix_entertainment_india_ltd_nse_sme_rhp_1785500159.pdf",
+      "preIpoInvestors": [
+        "Super Cassettes Industries Pvt",
+        "any Applicant",
+        "Mr. Rajesh Darshan Bahl",
+        "Manisha Gupta on behalf of M/s. New Resurgent Ventures",
+        "Super Cassettes Industries Pvt Limited",
+        "Mr. Vipul D.Shah",
+        "Ms. Priti Rajesh Bahl",
+        "Priti Bahl",
+        "New Resurgent Ventures",
+        "Optymistix Media Pvt Ltd",
+        "Vipul D. Shah",
+        "Vipul Dhirajlal Shah",
+        "Ankit Agarwal",
+        "Rahul Agarwal",
+        "Vipul D shah"
+      ]
     },
     {
       "companyName": "LAPL Automotive Ltd.",
@@ -27660,7 +28443,13 @@
         "originalDate": "2027-08-13T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_capital_structure_1785571147.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_anchor_1785936192.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_rhp_1785571147.pdf",
+      "preIpoInvestors": [
+        "Nyl Electric Pvt Ltd"
+      ]
     },
     {
       "companyName": "Ardee Industries Ltd.",
@@ -27688,7 +28477,22 @@
         "originalDate": "2027-02-12T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_capital_structure_1785699190.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_anchor_1785848419.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_rhp_1785259564.pdf",
+      "preIpoInvestors": [
+        "Fund PCC -",
+        "Sandeep Aggarwal",
+        "Category II Alternative Investment Fund, holds",
+        "Winro Commercial (India) Limited",
+        "Jaishree Aggarwal",
+        "Esha Gupta",
+        "Pantomath Capital Advisors Private Limited, who is",
+        "D.P Auto Industries Private Limited",
+        "Private Limited"
+      ],
+      "preIpoWaca": 4.41
     },
     {
       "companyName": "Aegeus Technologies Ltd.",
@@ -27716,7 +28520,31 @@
         "originalDate": "2027-08-11T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_capital_structure_1785303103.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_anchor_1785764651.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_rhp_1785302965.pdf",
+      "preIpoInvestors": [
+        "Ramesh Chandra",
+        "JM Global equities Private Limited",
+        "Brigade Innovations LLP (₹10)",
+        "Jayavardhan Diwan Family Trust (₹10)",
+        "Khor ten chun Aalam",
+        "Banyan Tree Facilities LLP (₹10)",
+        "Mr. Nishith Rameshchandra Shah",
+        "Suraj Nalin on behalf of Helios Holdings (₹10)",
+        "Shinohub Growth Ventures LLP",
+        "Atim Kabra",
+        "Conversion of",
+        "Mrs. Roopa Vernakar",
+        "M/s Brigade Innovations LLP (₹10)",
+        "Vansha Comtrade LLP",
+        "SEBI Circular No",
+        "Nishith Rameshchandra Shah",
+        "Jayawardhan Diwan family trust",
+        "Jasmeet Walia",
+        "Mukesh Kumar Chhaganlal"
+      ]
     },
     {
       "companyName": "Anawil Wire & Engineering Ltd.",
@@ -27744,7 +28572,24 @@
         "originalDate": "2027-08-10T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_capital_structure_1785898061.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_anchor_1785499134.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_rhp_1785296072.pdf",
+      "preIpoInvestors": [
+        "any Applicant",
+        "Jashmi Dhimal Sangvi",
+        "Mukul Mahavir Agarwal",
+        "India-Ahead Venture Fund",
+        "SB Opportunities Fund I",
+        "Darpan Infrastructure Private Limited",
+        "Naresh Kumar Bhargava",
+        "Anjuli Kothari",
+        "Rakhee A Shukla",
+        "Nimishkumar Rameshchandra Vashi",
+        "Arun Kumar Kothari",
+        "this Offer"
+      ]
     },
     {
       "companyName": "G.V.Electricals Ltd. (G.V. Electricals IPO)",
@@ -28532,7 +29377,8 @@
           "type": "Early VC Investors"
         }
       ],
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_capital_structure_1787640727.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_anchor_1787922697.pdf"
     },
     {
       "companyName": "Phychem Technologies Ltd.",
@@ -28569,7 +29415,7 @@
       ],
       "anchorShares": 762000,
       "totalShares": 2700000,
-      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_280820261345.zip",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_rhp_1787635905.pdf",
       "preIpoInvestors": [
         {
           "name": "Nikhil Omprakash Tapadia & Sachin Madhav Tarte",
@@ -28599,8 +29445,9 @@
           "type": "Pre-IPO Transferees (9,615 sh. each)"
         }
       ],
-      "capitalStructureUrl": null,
-      "preIpoWaca": "52.00"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_capital_structure_1787635907.pdf",
+      "preIpoWaca": "52.00",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_anchor_1787925325.pdf"
     },
     {
       "companyName": "Shanti Inorganics Ltd.",
@@ -28792,7 +29639,8 @@
           "type": "Pre-split Issue (Bonus & Split Adj.)"
         }
       ],
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_capital_structure_1787648015.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_capital_structure_1787648015.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_anchor_1787921988.pdf"
     },
     {
       "companyName": "ESDS Software Solution Ltd.",
@@ -28964,7 +29812,8 @@
           "type": "Pre-IPO Corporate Transfer"
         }
       ],
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_capital_structure_1787593434.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_capital_structure_1787593434.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_anchor_1787844503.pdf"
     },
     {
       "companyName": "Priority Jewels Ltd.",
@@ -29001,7 +29850,7 @@
       ],
       "anchorShares": 1372500,
       "totalShares": 4575000,
-      "rhpUrl": "",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_rhp_1787464700.pdf",
       "preIpoInvestors": [
         {
           "name": "Invicta Continuum Fund I",
@@ -29076,7 +29925,8 @@
           "type": "Pre-IPO Corporate (0.37%)"
         }
       ],
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_capital_structure_1787464701.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_capital_structure_1787464701.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_anchor_1787837770.pdf"
     },
     {
       "companyName": "Paluck Technologies Ltd.",
@@ -29294,7 +30144,7 @@
       ],
       "anchorShares": 25243901,
       "totalShares": 85365851,
-      "rhpUrl": "",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_rhp_1786626850.pdf",
       "preIpoInvestors": [
         {
           "name": "Sigma Vyapaar Private Limited",
@@ -29361,7 +30211,8 @@
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_capital_structure_1787602446.pdf",
-      "preIpoWaca": "37.50"
+      "preIpoWaca": "37.50",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_anchor_1787668203.pdf"
     },
     {
       "companyName": "Kwick Forensic Solutions Ltd.",
@@ -29404,7 +30255,7 @@
       ],
       "anchorShares": 1603200,
       "totalShares": 5641600,
-      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_Kwick_260820260911.zip",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_rhp_1787064344.pdf",
       "preIpoInvestors": [
         {
           "name": "CCV Emerging Opportunities Fund - I / Ajay Kumar Aggarwal",
@@ -29443,8 +30294,9 @@
           "type": "Pre-IPO Strategic Group (7:1 Bonus Adj. from ₹569)"
         }
       ],
-      "capitalStructureUrl": null,
-      "preIpoWaca": "71.13"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_capital_structure_1787064345.pdf",
+      "preIpoWaca": "71.13",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_anchor_1787662948.pdf"
     },
     {
       "companyName": "Annu Projects Ltd.",
@@ -29468,7 +30320,7 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 17683000,
-      "rhpUrl": "",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/annu_projects_ltd_mainboard_rhp_1787134129.pdf",
       "preIpoInvestors": [
         {
           "name": "Pre-IPO Strategic Shareholders Group",
@@ -29479,7 +30331,8 @@
           "discountPct": 77.8,
           "type": "Non-Promoter Public Pre-IPO (10.89%)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/annu_projects_ltd_mainboard_capital_structure_1787136120.pdf"
     },
     {
       "companyName": "Sumax Engineering Ltd.",
@@ -29533,7 +30386,9 @@
           "discountPct": 80.2,
           "type": "Non-Promoter Public Pre-IPO (3.26%)"
         }
-      ]
+      ],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sumax_engineering_ltd_nse_sme_capital_structure_1787032877.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/sumax_engineering_ltd_nse_sme_anchor_1787575058.pdf"
     },
     {
       "companyName": "Hy-Tech Engineers Ltd.",
@@ -29688,7 +30543,8 @@
           "discountPct": 35,
           "type": "Preferential Pre-IPO Allotment"
         }
-      ]
+      ],
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_anchor_1787312793.pdf"
     },
     {
       "companyName": "Symbiotec Pharmalab Ltd.",
@@ -29880,7 +30736,7 @@
       ],
       "anchorShares": 3125633,
       "totalShares": 10469540,
-      "rhpUrl": "",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_rhp_1787037099.pdf",
       "preIpoInvestors": [
         {
           "name": "Utpal Hemendra Sheth (Rare Enterprises / RJ Corp)",
@@ -29973,7 +30829,8 @@
           "type": "Pre-IPO Secondary"
         }
       ],
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_capital_structure_1787037498.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_capital_structure_1787037498.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_anchor_1787236790.pdf"
     },
     {
       "companyName": "Veegaland Developers Ltd.",
@@ -30049,8 +30906,31 @@
       "anchorShares": 676800,
       "totalShares": 2384000,
       "rhpUrl": "https://credorapartners.com/wp-content/uploads/2026/08/Amtech-Esters-Limited-RHP.pdf",
-      "capitalStructureUrl": null,
-      "preIpoInvestors": []
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_capital_structure_1788332330.pdf",
+      "preIpoInvestors": [
+        "Ankit Bhutoria",
+        "Gemini Alternatives LLP (₹10)",
+        "Urmila Rani",
+        "Ascentia Consulting Co LLP (₹10)",
+        "Meenakshi Sharma",
+        "Ajit Singh Bawa",
+        "Gurpreet Kaur Bawa",
+        "Jaspreet Kaur",
+        "Vinod Tulsidas Bhanushali",
+        "Sandeep Singh Mann",
+        "Harvind Singh Bawa",
+        "Bawa Resins Private",
+        "Himmat Gopalji",
+        "Dinesh Solar India Private",
+        "Dinesh Solar India Private Limited",
+        "Gurveen Kaur Bawa",
+        "Bawa Resins Pvt Ltd (₹10)",
+        "Neha Kaur",
+        "Mandeep Singh",
+        "Bawa Resins Private Limited (₹10)",
+        "Transferee: Gemini Holdings (₹239)",
+        "Gemini Holdings (₹10)"
+      ]
     },
     {
       "companyName": "Asset Reconstruction Co.(India) Ltd.",
@@ -30075,8 +30955,25 @@
       "anchorShares": 0,
       "totalShares": 52731946,
       "rhpUrl": "https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf",
-      "capitalStructureUrl": null,
-      "preIpoInvestors": []
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_capital_structure_1788415429.pdf",
+      "preIpoInvestors": [
+        "Progressive Star Finance",
+        "M udalageeri",
+        "M ihir Dilip Nanavati",
+        "Rina Saha",
+        "Avenue India",
+        "Lathe Investment Pte. Ltd.",
+        "S V Venkatakrishnan",
+        "S udhamoy Khasnobis",
+        "Progressive Star Finance Private Limited",
+        "State Bank of India",
+        "K arnataka Bank Limited",
+        "T he Federal Bank",
+        "Lathe Investments Pte Ltd.",
+        "T he South Indian Bank",
+        "Avenue India Resurgence Pte. Ltd.",
+        "L athe Investment Pte."
+      ]
     },
     {
       "companyName": "Glass Wall Systems (India) Ltd.",
@@ -30101,8 +30998,18 @@
       "anchorShares": 0,
       "totalShares": 23510425,
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf",
-      "capitalStructureUrl": null,
-      "preIpoInvestors": []
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_capital_structure_1788410565.pdf",
+      "preIpoInvestors": [
+        "Limited (Trustee",
+        "Nil Nil",
+        "Vinne Hemrajani Family Trust (₹111)",
+        "Excellence Trust",
+        "Eshan Hemrajani Family Trust (₹111)",
+        "Jawahar Hemrajani Family Trust (₹111)",
+        "amongst Amit Jawahar",
+        "Amit Hemrajani Family Trust (₹111)",
+        "Excellence Fund"
+      ]
     },
     {
       "companyName": "Prasol Chemicals Ltd.",
@@ -30127,7 +31034,7 @@
       "anchorShares": 0,
       "totalShares": 7396437,
       "rhpUrl": "https://www.damcapital.in/files/pdf/639239827470702392_Prasol_Chemicals_Limited_-_RHP.pdf",
-      "capitalStructureUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_capital_structure_1788411840.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30153,7 +31060,7 @@
       "anchorShares": 0,
       "totalShares": 16704750,
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/upload/investmentbanking/prospects/kanohar_electricals_limited_-_rhp.pdf",
-      "capitalStructureUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_capital_structure_1788413207.pdf",
       "preIpoInvestors": []
     },
     {
@@ -30345,8 +31252,69 @@
       "anchorShares": 0,
       "totalShares": 5690000,
       "rhpUrl": "https://www.bsesme.com/download/339300/SME_IPO%20InPrinciple/ApanaDP_20250930235823.pdf",
-      "capitalStructureUrl": null,
-      "preIpoInvestors": []
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/apana_logistics_ltd_bse_sme_capital_structure_1788343453.pdf",
+      "preIpoInvestors": [
+        "Aanchal Sureka and Adarsh Sureka, by way of Gift deed",
+        "Aanchal Sureka and Adarsh Sureka, by way of Gift deed.",
+        "Ms. Aanchal Pratyaksh Sureka",
+        "Mr. Shrawan Kumar Sureka",
+        "Mrs. Bimla Devi Sureka",
+        "Bhani Ram Sureka, Bimla Devi Sureka and Shrawan Kumar",
+        "Mr. Bhani Ram Sureka",
+        "Statutory Auditor, Legal Advisors",
+        "Mrs. Krishna Shrawan Sureka",
+        "Mr. Pratyaksh Sureka",
+        "Mr. Pratyaksh Sureka, by way of Gift deed.",
+        "Mr. Adarsh Sureka"
+      ],
+      "peerComparison": {
+        "columns": [
+          "Face",
+          "Value",
+          "Basic",
+          "EPS",
+          "PE",
+          "Ratio",
+          "RONW",
+          "NAV",
+          "Per",
+          "Share",
+          "Revenue",
+          "from"
+        ],
+        "rows": [
+          {
+            "name": "Apana Logistics Limited 60* 10/- Peer Industry",
+            "values": [
+              "4.96",
+              "12.10",
+              "33.82%",
+              "17.15",
+              "3,085.13"
+            ]
+          },
+          {
+            "name": "Premier Roadlines 41.60 10/- Limited",
+            "values": [
+              "5.97",
+              "6.97",
+              "14.23%",
+              "44.93",
+              "33,075.62"
+            ]
+          },
+          {
+            "name": "VRL Logistics Limited 299.85 10/-",
+            "values": [
+              "13.54",
+              "22.15",
+              "21.27%",
+              "65.31",
+              "3,22,111.00"
+            ]
+          }
+        ]
+      }
     },
     {
       "companyName": "Qualiance International Ltd.",
@@ -30514,7 +31482,7 @@
       "capitalStructureUrl": null
     }
   ],
-  "lastUpdated": "2026-09-05T03:45:12.090Z",
+  "lastUpdated": "2026-09-05T04:39:36.897Z",
   "lastScraped": {
     "time": "2026-09-03T06:59:51.027Z",
     "scraped2025": 6,

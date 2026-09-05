@@ -210,20 +210,22 @@ async function scrapeHomepageIndex() {
  * @returns {{ capitalStructureUrl: string|null, anchorPdfUrl: string|null }}
  */
 async function scrapeDetailPage(detailUrl) {
-    const browser = await getBrowser();
-    let page;
-    
+    let browser;
     try {
-        page = await browser.newPage();
+        browser = await puppeteer.launch({
+            headless: 'new',
+            args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+        });
+        const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36');
         
         await page.goto(detailUrl, {
             waitUntil: 'networkidle2',
-            timeout: 45000,
+            timeout: 35000,
         });
         
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-        await new Promise(r => setTimeout(r, 2000));
+        await new Promise(r => setTimeout(r, 1200));
         
         const result = await page.evaluate(() => {
             let capitalStructureUrl = null;
@@ -268,7 +270,7 @@ async function scrapeDetailPage(detailUrl) {
         console.error(`[CapStruct] Detail page scrape error for ${detailUrl}:`, e.message);
         return { capitalStructureUrl: null, anchorPdfUrl: null, rhpUrl: null };
     } finally {
-        if (page) await page.close().catch(() => {});
+        if (browser) await browser.close().catch(() => {});
     }
 }
 

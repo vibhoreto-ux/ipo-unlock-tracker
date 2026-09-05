@@ -5,12 +5,23 @@
       "name": "Deepa Jewellers",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1321/deepa-jewellers",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/deepa_jewellers_mainboard_capital_structure_1787736617.pdf",
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/deepa_jewellers_mainboard_rhp_1787736014.pdf"
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/deepa_jewellers_mainboard_rhp_1787736014.pdf",
+      "companyName": "Deepa Jewellers",
+      "id": 1321,
+      "slug": "deepa-jewellers",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/deepa_jewellers_mainboard_anchor_1788184284.pdf",
+      "updatedAt": "2026-09-05T04:03:19.599Z"
     },
     "farmpeace": {
       "name": "Farm Peace Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1322/farm-peace-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_capital_structure_1787800455.pdf",
+      "companyName": "Farm Peace Ltd",
+      "id": 1322,
+      "slug": "farm-peace-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:16:52.984Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_rhp_1787800455.pdf"
     },
     "flyhimaritimetravels": {
       "name": "Fly-Hi Maritime Travels  Ltd",
@@ -20,241 +31,497 @@
     "raysofbelief": {
       "name": "Rays of Belief Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1313/rays-of-belief-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_capital_structure_1787207689.pdf",
+      "companyName": "Rays of Belief Ltd.",
+      "id": 1313,
+      "slug": "rays-of-belief-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_anchor_1788183025.pdf",
+      "updatedAt": "2026-09-05T04:03:28.726Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rays_of_belief_ltd_mainboard_rhp_1787207455.pdf"
     },
     "phychemtechnologies": {
       "name": "Phychem Technologies Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1282/phychem-technologies-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_capital_structure_1787635907.pdf",
+      "companyName": "Phychem Technologies Ltd.",
+      "id": 1282,
+      "slug": "phychem-technologies-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_anchor_1787925325.pdf",
+      "updatedAt": "2026-09-05T04:03:54.364Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/phychem_technologies_ltd_bse_sme_rhp_1787635905.pdf"
     },
     "purplestylelabs": {
       "name": "Purple Style Labs Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1319/purple-style-labs-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_capital_structure_1787640727.pdf",
+      "companyName": "Purple Style Labs Ltd.",
+      "id": 1319,
+      "slug": "purple-style-labs-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_anchor_1787922697.pdf",
+      "updatedAt": "2026-09-05T04:03:44.576Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/purple_style_labs_ltd_mainboard_rhp_1787640365.pdf"
     },
     "ashutoshfibre": {
       "name": "Ashutosh Fibre Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1320/ashutosh-fibre-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_capital_structure_1787648015.pdf",
-      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_anchor_1787921988.pdf"
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_anchor_1787921988.pdf",
+      "companyName": "Ashutosh Fibre Ltd.",
+      "id": 1320,
+      "slug": "ashutosh-fibre-ltd",
+      "updatedAt": "2026-09-05T04:04:12.354Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/ashutosh_fibre_ltd_nse_sme_rhp_1787645426.pdf"
     },
     "shantiinorganics": {
       "name": "Shanti Inorganics Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1317/shanti-inorganics-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_capital_structure_1788072660.pdf",
+      "companyName": "Shanti Inorganics Ltd.",
+      "id": 1317,
+      "slug": "shanti-inorganics-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_anchor_1787921730.pdf",
+      "updatedAt": "2026-09-05T04:04:05.073Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/shanti_inorganics_ltdnse_sme_rhp_1787570076.pdf"
     },
     "priorityjewels": {
       "name": "Priority Jewels Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1315/priority-jewels-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_capital_structure_1787464701.pdf",
+      "companyName": "Priority Jewels Ltd",
+      "id": 1315,
+      "slug": "priority-jewels-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_anchor_1787837770.pdf",
+      "updatedAt": "2026-09-05T04:04:24.629Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_rhp_1787464700.pdf"
     },
     "esdssoftwaresolution": {
       "name": "ESDS Software Solution  Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1318/esds-software-solution-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_capital_structure_1787593434.pdf",
+      "companyName": "ESDS Software Solution  Ltd",
+      "id": 1318,
+      "slug": "esds-software-solution-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_anchor_1787844503.pdf",
+      "updatedAt": "2026-09-05T04:04:56.084Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_rhp_1787593432.pdf"
     },
     "completesportsmanagement": {
       "name": "Complete Sports & Management India Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1314/complete-sports-management-india-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_capital_structure_1787401598.pdf",
+      "companyName": "Complete Sports & Management India Ltd",
+      "id": 1314,
+      "slug": "complete-sports-management-india-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_anchor_1787838346.pdf",
+      "updatedAt": "2026-09-05T04:04:33.581Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_rhp_1787401623.pdf"
     },
     "palucktechnologies": {
       "name": "Paluck Technologies Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1316/paluck-technologies-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/paluck_technologies_ltd_bse_sme_capital_structure_1787552258.pdf",
+      "companyName": "Paluck Technologies Ltd.",
+      "id": 1316,
+      "slug": "paluck-technologies-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/paluck_technologies_ltd_bse_sme_anchor_1787835344.pdf",
+      "updatedAt": "2026-09-05T04:17:00.700Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/paluck_technologies_ltd_bse_sme_rhp_1787551750.pdf"
     },
     "luminoindustries": {
       "name": "Lumino Industries Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1305/lumino-industries-ltd",
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_capital_structure_1787602446.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_capital_structure_1787602446.pdf",
+      "companyName": "Lumino Industries Ltd",
+      "id": 1305,
+      "slug": "lumino-industries-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_anchor_1787668203.pdf",
+      "updatedAt": "2026-09-05T04:05:06.640Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_rhp_1786626850.pdf"
     },
     "kwickforensicsolutions": {
       "name": "Kwick Forensic Solutions Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1310/kwick-forensic-solutions-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_capital_structure_1787064345.pdf",
+      "companyName": "Kwick Forensic Solutions Ltd",
+      "id": 1310,
+      "slug": "kwick-forensic-solutions-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_anchor_1787662948.pdf",
+      "updatedAt": "2026-09-05T04:05:21.744Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_rhp_1787064344.pdf"
     },
     "annuprojects": {
       "name": "Annu Projects Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1312/annu-projects-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/annu_projects_ltd_mainboard_capital_structure_1787136120.pdf",
+      "companyName": "Annu Projects Ltd.",
+      "id": 1312,
+      "slug": "annu-projects-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:05:46.243Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/annu_projects_ltd_mainboard_rhp_1787134129.pdf"
     },
     "sumaxengineering": {
       "name": "Sumax Engineering Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1309/sumax-engineering-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sumax_engineering_ltd_nse_sme_capital_structure_1787032877.pdf",
+      "companyName": "Sumax Engineering Ltd.",
+      "id": 1309,
+      "slug": "sumax-engineering-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/sumax_engineering_ltd_nse_sme_anchor_1787575058.pdf",
+      "updatedAt": "2026-09-05T04:05:37.010Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/sumax_engineering_ltd_nse_sme_rhp_1787032354.pdf"
     },
     "madhurknitcrafts": {
       "name": "Madhur Knit Crafts  Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1308/madhur-knit-crafts-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_capital_structure_1787008949.pdf",
-      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_anchor_1787312793.pdf"
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_anchor_1787312793.pdf",
+      "companyName": "Madhur Knit Crafts  Ltd",
+      "id": 1308,
+      "slug": "madhur-knit-crafts-ltd",
+      "updatedAt": "2026-09-05T04:06:23.508Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_rhp_1787008948.pdf"
     },
     "abhhealthcare": {
       "name": "ABH Healthcare Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1307/abh-healthcare-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/abh_healthcare_ltd_nse_sme_capital_structure_1786962797.pdf",
+      "companyName": "ABH Healthcare Ltd.",
+      "id": 1307,
+      "slug": "abh-healthcare-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:06:31.719Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/abh_healthcare_ltd_nse_sme_rhp_1786961845.pdf"
     },
     "symbiotecpharmalab": {
       "name": "Symbiotec Pharmalab  Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1302/symbiotec-pharmalab-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_capital_structure_1787119247.pdf",
+      "companyName": "Symbiotec Pharmalab  Ltd.",
+      "id": 1302,
+      "slug": "symbiotec-pharmalab-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_anchor_1787321162.pdf",
+      "updatedAt": "2026-09-05T04:06:13.944Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/symbiotec_pharmalab_ltd_mainboard_rhp_1787118510.pdf"
     },
     "skywaysairservices": {
       "name": "Skyways Air Services Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1164/skyways-air-services-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboardtentative_price_and_lot_size_capital_structure_1786496687.pdf",
-      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboard_anchor_1787315943.pdf"
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboard_anchor_1787315943.pdf",
+      "companyName": "Skyways Air Services Ltd.",
+      "id": 1164,
+      "slug": "skyways-air-services-ltd",
+      "updatedAt": "2026-09-05T04:06:04.602Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboardtentative_price_and_lot_size_rhp_1786496682.pdf"
     },
     "hytechengineers": {
       "name": "Hy-Tech Engineers Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1311/hy-tech-engineers-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/hy_tech_engineers_ltd_mainboard_capital_structure_1787082096.pdf",
+      "companyName": "Hy-Tech Engineers Ltd",
+      "id": 1311,
+      "slug": "hy-tech-engineers-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/hy_tech_engineers_ltd_mainboard_anchor_1787310992.pdf",
+      "updatedAt": "2026-09-05T04:06:41.048Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/hy_tech_engineers_ltd_mainboard_rhp_1787082095.pdf"
     },
     "augmontenterprises": {
       "name": "Augmont Enterprises Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1303/augmont-enterprises-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_capital_structure_1787037498.pdf",
+      "companyName": "Augmont Enterprises Ltd.",
+      "id": 1303,
+      "slug": "augmont-enterprises-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_anchor_1787236790.pdf",
+      "updatedAt": "2026-09-05T04:06:50.538Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_rhp_1787037099.pdf"
     },
     "tempsensinstrumentsindia": {
       "name": "Tempsens Instruments (India) Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1304/tempsens-instruments",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_mainboard_capital_structure_1786906752.pdf",
+      "companyName": "Tempsens Instruments (India) Ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_ltd_mainboard_anchor_1787156017.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_mainboard_rhp_1786730236.pdf",
+      "updatedAt": "2026-09-05T04:17:08.294Z"
     },
     "gajaalternativeassetmanagement": {
       "name": "Gaja Alternative Asset Management Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1121/gaja-alternative-asset-management-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternatives_mainboard_capital_structure_1786545628.pdf",
+      "companyName": "Gaja Alternative Asset Management Ltd",
+      "id": 1121,
+      "slug": "gaja-alternative-asset-management-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternative_asset_management_ltd_mainboard_anchor_1787065501.pdf",
+      "updatedAt": "2026-09-05T04:07:25.759Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternatives_mainboard_rhp_1786545386.pdf"
     },
     "mopshopdistribution": {
       "name": "Mopshop Distribution Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1306/mopshop-distribution-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/mopshop_distribution_ltd_bse_sme_capital_structure_1786859678.pdf",
+      "companyName": "Mopshop Distribution Ltd",
+      "id": 1306,
+      "slug": "mopshop-distribution-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:07:09.205Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/mopshop_distribution_ltd_bse_sme_rhp_1786859676.pdf"
     },
     "dhanwelhybridseeds": {
       "name": "Dhanwel Hybrid Seeds  Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1226/dhanwel-hybrid-seeds-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dhanwel_hybrid_seeds_ltd_bse_sme_capital_structure_1781679094.pdf",
+      "companyName": "Dhanwel Hybrid Seeds  Ltd",
+      "id": 1226,
+      "slug": "dhanwel-hybrid-seeds-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:07:17.729Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/dhanwel_hybrid_seeds_ltd_bse_sme_rhp_1786731778.pdf"
     },
     "shankeshjewellers": {
       "name": "Shankesh Jewellers Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1291/shankesh-jewellers-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_capital_structure_1786372775.pdf",
+      "companyName": "Shankesh Jewellers Ltd.",
+      "id": 1291,
+      "slug": "shankesh-jewellers-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_anchor_1786970732.pdf",
+      "updatedAt": "2026-09-05T04:07:34.925Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_rhp_1786372674.pdf"
     },
     "sunshinepictures": {
       "name": "Sunshine Pictures Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1288/sunshine-pictures-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_capital_structure_1786426762.pdf",
+      "companyName": "Sunshine Pictures Ltd.",
+      "id": 1288,
+      "slug": "sunshine-pictures-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_anchor_1786970543.pdf",
+      "updatedAt": "2026-09-05T04:07:46.684Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_rhp_1786425068.pdf"
     },
     "lalithaajewellerymart": {
       "name": "Lalithaa Jewellery Mart Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1289/lalithaa-jewellery-mart-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lalithaa_jewellery_mart_ltd_mainboard_capital_structure_1786363927.pdf",
+      "companyName": "Lalithaa Jewellery Mart Ltd",
+      "id": 1289,
+      "slug": "lalithaa-jewellery-mart-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/lalithaa_jewellery_mart_ltd_mainboard_anchor_1786723077.pdf",
+      "updatedAt": "2026-09-05T04:08:19.907Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lalithaa_jewellery_mart_ltd_mainboard_rhp_1786363926.pdf"
     },
     "horizonindustrialparks": {
       "name": "Horizon Industrial Parks Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1301/horizon-industrial-parks-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_capital_structure_1786532058.pdf",
-      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_anchor_1786724201.pdf"
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_anchor_1786724201.pdf",
+      "companyName": "Horizon Industrial Parks Ltd.",
+      "id": 1301,
+      "slug": "horizon-industrial-parks-ltd",
+      "updatedAt": "2026-09-05T04:08:29.594Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/horizon_industrial_parks_ltd_mainboard_rhp_1786531310.pdf"
     },
     "ensenterprises": {
       "name": "ENS Enterprises Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1292/ens-enterprises-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ens_enterprises_ltd_bse_sme_capital_structure_1786514038.pdf",
+      "companyName": "ENS Enterprises Ltd",
+      "id": 1292,
+      "slug": "ens-enterprises-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/ens_enterprises_ltd_bse_sme_anchor_1786626995.pdf",
+      "updatedAt": "2026-09-05T04:08:57.675Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/ens_enterprises_ltd_bse_sme_rhp_1786514036.pdf"
     },
     "skytechinfiniteplatform": {
       "name": "Skytech Infinite Platform  Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1290/skytech-infinite-platform-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skytech_infinite_platform_ltd_nse_sme_capital_structure_1786356609.pdf",
+      "companyName": "Skytech Infinite Platform  Ltd.",
+      "id": 1290,
+      "slug": "skytech-infinite-platform-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:08:48.546Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/skytech_infinite_platform_ltd_nse_sme_rhp_1786356403.pdf"
     },
     "technocratsplasmasystems": {
       "name": "Technocrats Plasma Systems Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1300/technocrats-plasma-systems-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/technocrats_plasma_systems_ltd_bse_sme_capital_structure_1786495533.pdf",
+      "companyName": "Technocrats Plasma Systems Ltd.",
+      "id": 1300,
+      "slug": "technocrats-plasma-systems-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/technocrats_plasma_systems_ltd_bse_sme_anchor_1786627089.pdf",
+      "updatedAt": "2026-09-05T04:09:08.838Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/technocrats_plasma_systems_ltd_bse_sme_rhp_1786495531.pdf"
     },
     "credentconnectncare": {
       "name": "Credent Connect N Care Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1273/credent-connect-n-care-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/credent_connect_n_care_ltd_nse_sme_capital_structure_1786358768.pdf",
+      "companyName": "Credent Connect N Care Ltd.",
+      "id": 1273,
+      "slug": "credent-connect-n-care-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/credent_connect_n_care_ltd_nse_sme_anchor_1786537356.pdf",
+      "updatedAt": "2026-09-05T04:09:16.485Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/credent_connect_n_care_ltd_nse_sme_rhp_1786358575.pdf"
     },
     "qtfoods": {
       "name": "Q&T Foods Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1287/qt-foods-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/qt_foods_ltd_bse_sme_capital_structure_1786258672.pdf",
+      "companyName": "Q&T Foods Ltd.",
+      "id": 1287,
+      "slug": "qt-foods-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:09:24.416Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/qt_foods_ltd_bse_sme_rhp_1786258671.pdf"
     },
     "beharilalengineering": {
       "name": "Behari Lal Engineering Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1285/behari-lal-engineering-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_capital_structure_1786028126.pdf",
+      "companyName": "Behari Lal Engineering Ltd",
+      "id": 1285,
+      "slug": "behari-lal-engineering-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_anchor_1786456251.pdf",
+      "updatedAt": "2026-09-05T04:09:52.316Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_rhp_1786028123.pdf"
     },
     "shiprocket": {
       "name": "Shiprocket Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1280/shiprocket-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shiprocket_ltd_mainboard_price_and_lot_capital_structure_1785940320.pdf",
+      "companyName": "Shiprocket Ltd",
+      "id": 1280,
+      "slug": "shiprocket-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/shiprocket_ltd_mainboard_anchor_1786460125.pdf",
+      "updatedAt": "2026-09-05T04:09:32.624Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/shiprocket_ltd_mainboard_price_and_lot_rhp_1785939006.pdf"
     },
     "pramodinimedicare": {
       "name": "Pramodini Medicare Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1281/pramodini-medicare-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/pramodini_medicare_ltd_nse_sme_capital_structure_1785856382.pdf",
+      "companyName": "Pramodini Medicare Ltd.",
+      "id": 1281,
+      "slug": "pramodini-medicare-ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/pramodini_medicare_ltd_nse_sme_anchor_1786452093.pdf",
+      "updatedAt": "2026-09-05T04:09:42.234Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/pramodini_medicare_ltd_nse_sme_rhp_1785856254.pdf"
     },
     "fascinatetextiles": {
       "name": "Fascinate Textiles Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1283/fascinate-textiles-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/fascinate_textiles_ltd_nse_sme_capital_structure_1786170743.pdf",
+      "companyName": "Fascinate Textiles Ltd",
+      "id": 1283,
+      "slug": "fascinate-textiles-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:10:00.599Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/fascinate_textiles_ltd_nse_sme_rhp_1786170942.pdf"
     },
     "milkymistdairyfood": {
       "name": "Milky Mist Dairy Food Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1059/milky-mist-dairy-food-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/milky_mist_dairy_food_ltd_mainboard_capital_structure_1785897960.pdf",
+      "companyName": "Milky Mist Dairy Food Ltd.",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/milky_mist_dairy_food_ltd_mainboard_anchor_1786371688.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/milky_mist_dairy_food_ltd_mainboard_rhp_1785897959.pdf",
+      "updatedAt": "2026-09-05T04:17:17.878Z"
     },
     "shamfoam": {
       "name": "Sham Foam Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1286/sham-foam-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sham_foam_ltd_bse_sme_capital_structure_1786257773.pdf",
+      "companyName": "Sham Foam Ltd",
+      "id": 1286,
+      "slug": "sham-foam-ltd",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:10:08.221Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/sham_foam_ltd_bse_sme_rhp_1786257769.pdf"
     },
     "dhoottransmission": {
       "name": "Dhoot Transmission Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1241/dhoot-transmission-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_capital_structure_1785993004.pdf",
+      "companyName": "Dhoot Transmission Ltd.",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_anchor_1786121435.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_rhp_1785829215.pdf",
+      "updatedAt": "2026-09-05T04:17:25.636Z"
     },
     "molbiodiagnostics": {
       "name": "Molbio Diagnostics  Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1277/molbio-diagnostics-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_tentative_price_and_lot_size_capital_structure_1785817808.pdf",
+      "companyName": "Molbio Diagnostics  Ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_anchor_1786119339.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_tentative_price_and_lot_size_rhp_1785817607.pdf",
+      "updatedAt": "2026-09-05T04:17:32.289Z"
     },
     "technocraftventures": {
       "name": "Technocraft Ventures Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1278/technocraft-ventures-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_capital_structure_1785491886.pdf",
+      "companyName": "Technocraft Ventures Ltd.",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_anchor_1786026596.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_rhp_1785490282.pdf",
+      "updatedAt": "2026-09-05T04:17:38.745Z"
     },
     "optimystixentertainment": {
       "name": "Optimystix Entertainment India Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1279/optimystix-entertainment-india-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/optimystix_entertainment_india_ltd_nse_sme_capital_structure_1785500160.pdf",
+      "companyName": "Optimystix Entertainment India Ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/optimystix_entertainment_india_ltd_nse_sme_anchor_1786026679.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/optimystix_entertainment_india_ltd_nse_sme_rhp_1785500159.pdf",
+      "updatedAt": "2026-09-05T04:17:45.495Z"
     },
     "leap": {
       "name": "LEAP India Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1267/leap-india-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/leap_india_ltd_mainboard_tentative_lot_and_price_capital_structure_1785699787.pdf",
+      "companyName": "LEAP India Ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/leap_india_ltd_mainboard_anchor_1786033831.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/leap_india_ltd_mainboard_rhp_1785677624.pdf",
+      "updatedAt": "2026-09-05T04:17:53.674Z"
     },
     "laplautomotive": {
       "name": "LAPL Automotive Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1276/lapl-automotive-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_capital_structure_1785571147.pdf",
+      "companyName": "LAPL Automotive Ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_anchor_1785936192.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_rhp_1785571147.pdf",
+      "updatedAt": "2026-09-05T04:18:00.454Z"
     },
     "ardeeindustries": {
       "name": "Ardee Industries Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1272/ardee-industries-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_capital_structure_1785699190.pdf",
+      "companyName": "Ardee Industries Ltd.",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_anchor_1785848419.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_rhp_1785259564.pdf",
+      "updatedAt": "2026-09-05T04:18:06.807Z"
     },
     "aegeustechnologies": {
       "name": "Aegeus Technologies Ltd.",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1275/aegeus-technologies-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_capital_structure_1785303103.pdf",
+      "companyName": "Aegeus Technologies Ltd.",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_anchor_1785764651.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_rhp_1785302965.pdf",
+      "updatedAt": "2026-09-05T04:18:13.343Z"
     },
     "anawilwireengineering": {
       "name": "Anawil Wire & Engineering Ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1274/anawil-wire-engineering-ltd",
-      "capitalStructureUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_capital_structure_1785898061.pdf",
+      "companyName": "Anawil Wire & Engineering Ltd",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_anchor_1785499134.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_rhp_1785296072.pdf",
+      "updatedAt": "2026-09-05T04:18:19.564Z"
     },
     "nationalstockexchangeoftentativedates": {
       "name": "National Stock Exchange of India Ltd(Tentative dates)",
@@ -262,7 +529,11 @@
       "slug": "national-stock-exchange-of-india-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1325/national-stock-exchange-of-india-ltd",
       "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "anchorPdfUrl": null,
+      "companyName": "National Stock Exchange of India Ltd(Tentative dates)",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
+      "updatedAt": "2026-09-05T04:38:01.704Z",
+      "lastScrapedAt": 1788583075458
     },
     "veegalanddevelopers": {
       "name": "Veegaland Developers Ltd",
@@ -277,48 +548,66 @@
       "id": 1327,
       "slug": "rentomojo-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1327/rentomojo-ltd",
-      "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "Rentomojo Ltd.(TENTATIVE DATES)",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf",
+      "updatedAt": "2026-09-05T04:18:32.144Z"
     },
     "lccprojectstentativedates": {
       "name": "LCC Projects Ltd.(Tentative Dates)",
       "id": 1333,
       "slug": "lcc-projects-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1333/lcc-projects-ltd",
-      "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "LCC Projects Ltd.(Tentative Dates)",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
+      "updatedAt": "2026-09-05T04:18:38.784Z"
     },
     "assetreconstructioncompanyindiatentativedate": {
       "name": "Asset Reconstruction Company (India) Limited(Tentative date)",
       "id": 1331,
       "slug": "asset-reconstruction-company",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1331/asset-reconstruction-company",
-      "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_capital_structure_1788415429.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "Asset Reconstruction Company (India) Limited(Tentative date)",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_rhp_1788413443.pdf",
+      "updatedAt": "2026-09-05T04:18:46.092Z"
     },
     "glasswallsystemsindiatentativedate": {
       "name": "Glass Wall Systems (India) Ltd(Tentative date)",
       "id": 1334,
       "slug": "glass-wall-systems",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1334/glass-wall-systems",
-      "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_capital_structure_1788410565.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "Glass Wall Systems (India) Ltd(Tentative date)",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_rhp_1788410563.pdf",
+      "updatedAt": "2026-09-05T04:18:52.485Z"
     },
     "apanalogistics": {
       "name": "Apana Logistics  Ltd",
       "id": 1335,
       "slug": "apana-logistics-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1335/apana-logistics-ltd",
-      "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/apana_logistics_ltd_bse_sme_capital_structure_1788343453.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "Apana Logistics  Ltd",
+      "updatedAt": "2026-09-05T04:02:51.642Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/apana_logistics_ltd_bse_sme_rhp_1788343452.pdf"
     },
     "manipalpaymentidentitysolutionstentativedates": {
       "name": "Manipal Payment & Identity Solutions Ltd.(TENTATIVE DATES)",
       "id": 1328,
       "slug": "manipal-payment-identity-solutions-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1328/manipal-payment-identity-solutions-ltd",
-      "capitalStructureUrl": null,
-      "anchorPdfUrl": null
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "Manipal Payment & Identity Solutions Ltd.(TENTATIVE DATES)",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf",
+      "updatedAt": "2026-09-05T04:18:58.651Z"
     },
     "pranavconstructions": {
       "name": "Pranav Constructions Ltd.",
@@ -336,6 +625,127 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1284/qualiance-international-ltd",
       "capitalStructureUrl": null,
       "anchorPdfUrl": null
+    },
+    "nationalstockexchangeof": {
+      "companyName": "National Stock Exchange of India Ltd",
+      "id": 1325,
+      "slug": "national-stock-exchange-of-india-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1325/national-stock-exchange-of-india-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:38:50.839Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
+      "lastScrapedAt": 1788583067860
+    },
+    "rentomojo": {
+      "companyName": "Rentomojo Ltd.",
+      "id": 1327,
+      "slug": "rentomojo-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1327/rentomojo-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:02:11.637Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf"
+    },
+    "lccprojects": {
+      "companyName": "LCC Projects Ltd.",
+      "id": 1333,
+      "slug": "lcc-projects-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1333/lcc-projects-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:02:20.271Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf"
+    },
+    "assetreconstructioncompany": {
+      "companyName": "Asset Reconstruction Company Limited",
+      "id": 1331,
+      "slug": "asset-reconstruction-company",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1331/asset-reconstruction-company",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_capital_structure_1788415429.pdf",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:02:30.257Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_rhp_1788413443.pdf"
+    },
+    "glasswallsystems": {
+      "companyName": "Glass Wall Systems Ltd",
+      "id": 1334,
+      "slug": "glass-wall-systems",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1334/glass-wall-systems",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_capital_structure_1788410565.pdf",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:02:39.581Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_rhp_1788410563.pdf"
+    },
+    "manipalpaymentidentitysolutions": {
+      "companyName": "Manipal Payment & Identity Solutions Ltd.",
+      "id": 1328,
+      "slug": "manipal-payment-identity-solutions-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1328/manipal-payment-identity-solutions-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
+      "anchorPdfUrl": null,
+      "updatedAt": "2026-09-05T04:03:05.498Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf"
+    },
+    "tempsensinstruments": {
+      "companyName": "Tempsens Instruments Ltd",
+      "id": 1304,
+      "slug": "tempsens-instruments",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1304/tempsens-instruments",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_mainboard_capital_structure_1786906752.pdf",
+      "anchorPdfUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_ltd_mainboard_anchor_1787156017.pdf",
+      "updatedAt": "2026-09-05T04:06:59.826Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_mainboard_rhp_1786730236.pdf"
+    },
+    "amtechesters": {
+      "key": "amtechesters",
+      "companyName": "Amtech Esters Ltd.",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1332/amtech-esters-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_capital_structure_1788332330.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_rhp_1788331906.pdf",
+      "updatedAt": "2026-09-05T04:30:51.023Z"
+    },
+    "prasolchemicals": {
+      "key": "prasolchemicals",
+      "companyName": "Prasol Chemicals Ltd.",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1336/prasol-chemicals-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_capital_structure_1788411840.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_rhp_1788411625.pdf",
+      "updatedAt": "2026-09-05T04:30:51.027Z"
+    },
+    "kanoharelectricals": {
+      "key": "kanoharelectricals",
+      "companyName": "Kanohar Electricals Ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1330/kanohar-electricals-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_capital_structure_1788413207.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_rhp_1788413204.pdf",
+      "updatedAt": "2026-09-05T04:30:51.028Z"
+    },
+    "infraxrenewable": {
+      "key": "infraxrenewable",
+      "companyName": "Infrax Renewable Ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1339/infrax-renewable-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_capital_structure_1788532230.pdf",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_rhp_1788532229.pdf",
+      "updatedAt": "2026-09-05T04:30:51.030Z"
+    },
+    "vinodtexworld": {
+      "key": "vinodtexworld",
+      "companyName": "Vinod Texworld Ltd.",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1338/vinod-texworld-ltd",
+      "capitalStructureUrl": null,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788519044.pdf",
+      "updatedAt": "2026-09-05T04:38:43.164Z",
+      "lastScrapedAt": 1788583082306
+    },
+    "steamhouseindia": {
+      "key": "steamhouseindia",
+      "companyName": "Steamhouse India Ltd.",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1337/steamhouse-india-ltd",
+      "capitalStructureUrl": null,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
+      "updatedAt": "2026-09-05T04:38:22.647Z",
+      "lastScrapedAt": 1788583089082
     }
   }
 }
