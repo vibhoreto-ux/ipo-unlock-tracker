@@ -28978,7 +28978,9 @@
         "originalDate": "2027-08-06T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_290720261726.zip",
+      "preIpoInvestors": []
     },
     {
       "companyName": "H.R.Hygiene Products Ltd. (H.R. Hygiene Products IPO)",

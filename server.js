@@ -988,6 +988,10 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
             const liveData = await getLivePrice(companyName);
             return res.json({
                 ...basePayload,
+                anchorInvestors: company ? (company.anchorInvestors || []) : [],
+                anchorShares: company ? company.anchorShares : undefined,
+                anchorUrl: company ? company.anchorUrl : undefined,
+                totalShares: company ? company.totalShares : undefined,
                 preIpoInvestors: company ? (company.preIpoInvestors || []) : [],
                 preIpoWaca: company ? (company.preIpoWaca || company.waca) : undefined,
                 rhpUrl: company ? (company.capitalStructureUrl || company.rhpUrl) : undefined,

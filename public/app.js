@@ -666,29 +666,29 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
         return `
             <tr>
-                <td class="pi-name" style="padding: 7px 9px;" title="${name}">
-                    <div style="font-weight:600; color:var(--text);">${name}</div>
-                    ${type ? `<div style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">${type}</div>` : ''}
+                <td class="pi-name" style="padding: 4px 6px; font-size: 11px;" title="${name}">
+                    <div style="font-weight:600; color:var(--text); line-height: 1.25;">${name}</div>
+                    ${type ? `<div style="font-size:10px; color:var(--text-secondary); margin-top:1px;">${type}</div>` : ''}
                 </td>
-                <td class="pi-date" style="padding: 7px 9px; white-space:nowrap; font-size:0.8rem; color:var(--text-secondary);">${date}</td>
-                <td class="pi-shares" style="padding: 7px 9px; white-space:nowrap; font-size:0.8rem; text-align:right; color:var(--text-secondary);">${shares}</td>
-                <td class="pi-price" style="padding: 7px 9px; font-weight:700; color:var(--text); text-align:right;">${buyPriceStr}</td>
-                ${isModal ? `<td class="pi-ipoprice" style="padding: 7px 9px; font-size:0.8rem; color:var(--text-secondary); text-align:right;">${ipoPriceStr}</td>` : ''}
-                <td class="pi-disc" style="padding: 7px 9px; text-align:center;">${discountHtml}</td>
+                <td class="pi-date" style="padding: 4px 6px; white-space:nowrap; font-size:10.5px; color:var(--text-secondary);">${date}</td>
+                <td class="pi-shares" style="padding: 4px 6px; white-space:nowrap; font-size:10.5px; text-align:right; color:var(--text-secondary);">${shares}</td>
+                <td class="pi-price" style="padding: 4px 6px; font-size:11px; font-weight:700; color:var(--text); text-align:right;">${buyPriceStr}</td>
+                ${isModal ? `<td class="pi-ipoprice" style="padding: 4px 6px; font-size:10.5px; color:var(--text-secondary); text-align:right;">${ipoPriceStr}</td>` : ''}
+                <td class="pi-disc" style="padding: 4px 6px; text-align:center; font-size:10.5px;">${discountHtml}</td>
             </tr>
         `;
     }).join('');
 
     return `
-        <table class="pre-ipo-table">
+        <table class="pre-ipo-table" style="font-size: 11px;">
             <thead>
                 <tr>
-                    <th style="text-align:left;">Investor / Entity</th>
-                    <th style="text-align:left;">Date</th>
-                    <th style="text-align:right;">Shares</th>
-                    <th style="text-align:right;">Buy Price</th>
-                    ${isModal ? `<th style="text-align:right;">IPO Price</th>` : ''}
-                    <th style="text-align:center;">vs IPO</th>
+                    <th style="text-align:left; padding: 3px 6px; font-size: 10px;">Investor / Entity</th>
+                    <th style="text-align:left; padding: 3px 6px; font-size: 10px;">Date</th>
+                    <th style="text-align:right; padding: 3px 6px; font-size: 10px;">Shares</th>
+                    <th style="text-align:right; padding: 3px 6px; font-size: 10px;">Buy Price</th>
+                    ${isModal ? `<th style="text-align:right; padding: 3px 6px; font-size: 10px;">IPO Price</th>` : ''}
+                    <th style="text-align:center; padding: 3px 6px; font-size: 10px;">vs IPO</th>
                 </tr>
             </thead>
             <tbody>
@@ -697,6 +697,114 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         </table>
     `;
 }
+
+    function renderModalAnchorBlock(company, customData) {
+        const anchorBlock = document.getElementById('anchorDetailsBlock');
+        if (!anchorBlock || !company) return;
+
+        const rawInvestors = (customData && customData.anchorInvestors !== undefined)
+            ? customData.anchorInvestors
+            : (company.anchorInvestors || []);
+
+        const anchorShares = (customData && customData.anchorShares !== undefined)
+            ? customData.anchorShares
+            : (company.anchorShares || 0);
+
+        const anchorUrl = (customData && customData.anchorUrl) || company.anchorUrl;
+        const totalShares = (customData && customData.totalShares) || company.totalShares || 0;
+        const issuePrice = company.issuePrice || (customData && customData.issuePrice);
+
+        // Filter out totals or numeric artifacts
+        const cleanInvestors = (Array.isArray(rawInvestors) ? rawInvestors : [])
+            .map(inv => (typeof inv === 'string' ? inv.trim() : (inv && inv.name ? inv.name.trim() : '')))
+            .filter(inv => inv && !/^[\d,\.\s%]+$/.test(inv) && !/^(total|sub[\s-]*total|grand total)/i.test(inv));
+
+        const hasAnchorData = cleanInvestors.length > 0 || anchorShares > 0 || anchorUrl;
+
+        // Top right Anchor Doc link if available
+        const topDocLink = anchorUrl 
+            ? `<a href="${anchorUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px; background:#ecfdf5; border:1px solid #10b981; color:#065f46; border-radius:4px;"><i class="ph ph-anchor"></i> Anchor Doc (PDF)</a>`
+            : '';
+
+        if (!hasAnchorData) {
+            const isFixed = (company.issueType && company.issueType.toLowerCase().includes('fixed')) || (company.anchor30 === null && company.anchor90 === null);
+            anchorBlock.innerHTML = `
+                <details style="border:none; padding:0;">
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 12px; list-style-position: inside; display:flex; justify-content:space-between; align-items:center;">
+                        <span style="display:inline-flex; align-items:center; gap:4px;">
+                            <span>⚓ Anchor Investors (0)</span>
+                        </span>
+                        ${topDocLink}
+                    </summary>
+                    <div class="body" style="margin-top:3px;">
+                        <span class="empty" style="font-size:11px; color:var(--text-secondary); font-style:italic;">
+                            ${isFixed ? 'Fixed Price Issue — No Anchor institutional portion (100% allotted to Public/HNIs).' : 'No Anchor institutional allocation disclosed for this issue.'}
+                        </span>
+                    </div>
+                </details>
+            `;
+            anchorBlock.style.display = 'block';
+            return;
+        }
+
+        // Compute metrics badges
+        let metricsBadges = [];
+        if (anchorShares > 0) {
+            const sharesFormatted = anchorShares >= 100000 
+                ? (anchorShares / 100000).toFixed(2) + 'lk shares'
+                : anchorShares.toLocaleString('en-IN') + ' shares';
+            metricsBadges.push(`<span style="background:rgba(16, 185, 129, 0.12); color:#065f46; padding:2px 5px; border-radius:4px; font-weight:700;">Total: ${sharesFormatted}</span>`);
+
+            if (totalShares > 0) {
+                const pct = ((anchorShares / totalShares) * 100).toFixed(1);
+                metricsBadges.push(`<span style="background:rgba(16, 185, 129, 0.08); color:#065f46; padding:2px 5px; border-radius:4px;">${pct}% of Issue</span>`);
+            }
+
+            if (issuePrice && issuePrice > 0) {
+                const valCr = ((anchorShares * issuePrice) / 10000000).toFixed(2);
+                metricsBadges.push(`<span style="background:rgba(16, 185, 129, 0.08); color:#065f46; padding:2px 5px; border-radius:4px;">₹${valCr} Cr</span>`);
+            }
+
+            const halfShares = Math.round(anchorShares / 2);
+            const halfStr = halfShares >= 100000 ? (halfShares / 100000).toFixed(2) + 'lk' : halfShares.toLocaleString('en-IN');
+            metricsBadges.push(`<span style="background:rgba(16, 185, 129, 0.05); color:var(--text-secondary); padding:2px 5px; border-radius:4px; font-size:10.5px;">50% (30d): ${halfStr}</span>`);
+            metricsBadges.push(`<span style="background:rgba(16, 185, 129, 0.05); color:var(--text-secondary); padding:2px 5px; border-radius:4px; font-size:10.5px;">50% (90d): ${halfStr}</span>`);
+        }
+
+        const metricsHtml = metricsBadges.length > 0
+            ? `<div style="display:flex; flex-wrap:wrap; gap:4px; font-size:10.5px; margin-bottom:5px;">${metricsBadges.join('')}</div>`
+            : '';
+
+        let investorsGrid = '';
+        if (cleanInvestors.length > 0) {
+            investorsGrid = `
+                <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)); gap: 3px 5px; margin-top: 4px; max-height: 105px; overflow-y: auto; padding-right: 2px;">
+                    ${cleanInvestors.map(name => `
+                        <div style="font-size: 10.5px; font-weight: 600; color: #065f46; background: #ffffff; border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 4px; padding: 2px 6px; display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${name}">
+                            <span style="color: #10b981; font-size: 7px; flex-shrink: 0;">●</span>
+                            <span style="overflow: hidden; text-overflow: ellipsis;">${name}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        anchorBlock.innerHTML = `
+            <details open style="border:none; padding:0;">
+                <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 12px; list-style-position: inside; margin-bottom: 4px; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="display:inline-flex; align-items:center; gap:4px;">
+                        <span>⚓ Anchor Investors & Allocation (${cleanInvestors.length})</span>
+                    </span>
+                    ${topDocLink}
+                </summary>
+                <div class="body" style="margin-top:3px;">
+                    ${metricsHtml}
+                    ${investorsGrid}
+                </div>
+            </details>
+        `;
+        anchorBlock.style.display = 'block';
+    }
 
     function renderModalPreIpoBlock(company, customData) {
         const preIpoBlock = document.getElementById('preIpoDetailsBlock');
@@ -715,29 +823,23 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         const anchorUrl = (customData && customData.anchorUrl) || company.anchorUrl;
         const issuePrice = company.issuePrice || (customData && customData.issuePrice);
 
-        let docLinks = [];
-        if (capUrl) {
-            docLinks.push(`<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
-        }
+        let bottomDocLinks = [];
         if (rhpUrl && isValidRHPUrl(rhpUrl)) {
-            docLinks.push(`<a href="${rhpUrl}" target="_blank" class="doc-btn"><i class="ph ph-file-pdf"></i> RHP</a>`);
+            bottomDocLinks.push(`<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 6px;"><i class="ph ph-file-pdf"></i> RHP Document</a>`);
         }
-        if (anchorUrl) {
-            docLinks.push(`<a href="${anchorUrl}" target="_blank" class="doc-btn"><i class="ph ph-anchor"></i> Anchor Doc</a>`);
-        }
-        const docsHtml = docLinks.length > 0 ? `<div class="card-doc-links" style="margin-top:10px;">${docLinks.join('')}</div>` : '';
+        const docsHtml = bottomDocLinks.length > 0 ? `<div class="card-doc-links" style="margin-top:4px;">${bottomDocLinks.join('')}</div>` : '';
         const topDocLink = capUrl 
-            ? `<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:11px; padding:3px 8px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`
-            : (rhpUrl && isValidRHPUrl(rhpUrl) ? `<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:11px; padding:3px 8px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;"><i class="ph ph-file-pdf"></i> RHP Document</a>` : '');
+            ? `<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`
+            : (rhpUrl && isValidRHPUrl(rhpUrl) ? `<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"><i class="ph ph-file-pdf"></i> RHP Document</a>` : '');
 
         if (investors === undefined) {
             preIpoBlock.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
-                    <span style="font-weight:700; color:var(--text); font-size: 13.5px;">Pre-IPO Details</span>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 4px;">
+                    <span style="font-weight:700; color:var(--text); font-size: 12px;">Pre-IPO Details</span>
                     ${topDocLink}
                 </div>
-                <div style="display:flex; align-items:center; gap:8px; padding:8px 4px; color:var(--text-secondary); font-size:13px;">
-                    <div class="loader-spinner" style="width:14px; height:14px; border-width:2px;"></div>
+                <div style="display:flex; align-items:center; gap:6px; padding:4px 2px; color:var(--text-secondary); font-size:11px;">
+                    <div class="loader-spinner" style="width:12px; height:12px; border-width:2px;"></div>
                     <span>Scanning Capital Structure & Pre-IPO Data...</span>
                 </div>
                 ${docsHtml}
@@ -748,15 +850,15 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
         if (investors && investors.length > 0) {
             const tableHtml = renderPreIpoTable(investors, issuePrice, false);
-            const wacaHtml = waca ? `<div style="margin-top: 10px; font-size: 0.85rem; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${waca}</span></div>` : '';
+            const wacaHtml = waca ? `<div style="margin-top: 5px; font-size: 11px; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${waca}</span></div>` : '';
             preIpoBlock.innerHTML = `
                 <details open style="border:none; padding:0;">
-                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px; display:flex; justify-content:space-between; align-items:center;">
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 12px; list-style-position: inside; margin-bottom: 4px; display:flex; justify-content:space-between; align-items:center;">
                         <span>Pre-IPO Investors & Shareholders (${investors.length})</span>
                         ${topDocLink}
                     </summary>
-                    <div class="body" style="margin-top:6px;">
-                        <div class="pre-ipo-table-wrapper">${tableHtml}</div>
+                    <div class="body" style="margin-top:3px;">
+                        <div class="pre-ipo-table-wrapper" style="max-height: 135px; overflow-y: auto;">${tableHtml}</div>
                         ${wacaHtml}
                         ${docsHtml}
                     </div>
@@ -766,12 +868,12 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         } else {
             preIpoBlock.innerHTML = `
                 <details open style="border:none; padding:0;">
-                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 13.5px; list-style-position: inside; margin-bottom: 6px; display:flex; justify-content:space-between; align-items:center;">
+                    <summary style="cursor:pointer; font-weight:700; color:var(--text); font-size: 12px; list-style-position: inside; margin-bottom: 4px; display:flex; justify-content:space-between; align-items:center;">
                         <span>Pre-IPO Investors (0)</span>
                         ${topDocLink}
                     </summary>
-                    <div class="body" style="margin-top:6px;">
-                        <span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (100% Promoter / Group held prior to IPO).</span>
+                    <div class="body" style="margin-top:3px;">
+                        <span class="empty" style="font-size:11px; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (100% Promoter / Group held prior to IPO).</span>
                         ${docsHtml}
                     </div>
                 </details>
@@ -810,7 +912,8 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             modalExchangeBadge.style.display = 'none';
         }
 
-        // Render Pre-IPO details block in exact same format as upcoming page
+        // Render Anchor & Pre-IPO details blocks in modal
+        renderModalAnchorBlock(company);
         renderModalPreIpoBlock(company);
 
         // Set Issue Price and resetting Live Price
@@ -919,7 +1022,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
             if (detailsLoading) detailsLoading.style.display = 'none';
 
-            // Update global allCompanies entry with fresh pre-IPO data from server
+            // Update global allCompanies entry with fresh pre-IPO and anchor data from server
             const idx = allCompanies.findIndex(c => c.companyName === companyName);
             if (idx !== -1) {
                 if (data.preIpoInvestors !== undefined) allCompanies[idx].preIpoInvestors = data.preIpoInvestors;
@@ -927,10 +1030,14 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 if (data.capitalStructureUrl !== undefined) allCompanies[idx].capitalStructureUrl = data.capitalStructureUrl;
                 if (data.rhpUrl !== undefined) allCompanies[idx].rhpUrl = data.rhpUrl;
                 if (data.anchorUrl !== undefined) allCompanies[idx].anchorUrl = data.anchorUrl;
+                if (data.anchorInvestors !== undefined) allCompanies[idx].anchorInvestors = data.anchorInvestors;
+                if (data.anchorShares !== undefined) allCompanies[idx].anchorShares = data.anchorShares;
+                if (data.totalShares !== undefined) allCompanies[idx].totalShares = data.totalShares;
             }
 
-            // Update Pre-IPO details block in modal with fresh data from server
+            // Update Anchor and Pre-IPO details block in modal with fresh data from server
             if (currentModalCompany && (currentModalCompany.companyName === companyName)) {
+                renderModalAnchorBlock(currentModalCompany, data);
                 renderModalPreIpoBlock(currentModalCompany, data);
             }
 
