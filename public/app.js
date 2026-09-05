@@ -2166,11 +2166,11 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 </div>
                 <div class="facts">
                     <div><span class="k">Price Band</span><span class="v" style="color:var(--primary);font-weight:700;">${price}</span></div>
-                    ${lotText ? `<div><span class="k">Lot Size</span><span class="v">${lotText}</span></div>` : `<div><span class="k">Shares</span><span class="v">${sharesStr}</span></div>`}
-                    ${lotText ? `<div><span class="k">Issue Size</span><span class="v">${sharesStr}</span></div>` : ''}
-                    <div><span class="k">Listing</span><span class="v">${listingDateText || 'TBD'}</span></div>
+                    <div><span class="k">Issue Size</span><span class="v">${sharesStr}</span></div>
                     <div><span class="k">Anchor 30-d</span><span class="v">${anchor30Text}</span></div>
                     <div><span class="k">Anchor 90-d</span><span class="v">${anchor90Text}</span></div>
+                    <div><span class="k">Lot Size</span><span class="v">${lotText || '—'}</span></div>
+                    <div><span class="k">Listing</span><span class="v">${listingDateText || 'TBD'}</span></div>
                 </div>
                 
                 ${mgmtHtml}
