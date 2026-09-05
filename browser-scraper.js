@@ -386,12 +386,34 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
                     const cells = $(row).find('td');
                     if (cells.length >= 3) {
                         let investorName = $(cells.eq(1)).text().trim();
+                        let group = '';
+                        let sharesIdx = 3;
+                        let amtIdx = 4;
+                        let pctIdx = 5;
                         if (investorName.match(/^\d+$/)) {
                             investorName = $(cells.eq(2)).text().trim();
+                            group = $(cells.eq(3)).text().trim();
+                            sharesIdx = 4;
+                            amtIdx = 5;
+                            pctIdx = 6;
+                        } else {
+                            group = $(cells.eq(2)).text().trim();
                         }
-                        if (investorName && !investorName.match(/^(total|#|sr|s\.no|\d+$)/i) && investorName.length > 2) {
-                            if (!investors.includes(investorName)) {
-                                investors.push(investorName);
+                        const sharesRaw = $(cells.eq(sharesIdx)).text().trim();
+                        const amtRaw = $(cells.eq(amtIdx)).text().trim();
+                        const pctRaw = $(cells.eq(pctIdx)).text().trim();
+                        const letters = investorName.replace(/[^a-zA-Z]/g, '');
+                        if (investorName && !investorName.match(/^(total|#|sr|s\.no|\d+$)/i) && !/^[\d,\.\s%]+$/.test(investorName) && letters.length > 3 && !/^(total|subtotal|grandtotal|crore|lakhs?|cr)$/i.test(letters)) {
+                            const exists = investors.some(inv => (typeof inv === 'string' ? inv === investorName : inv.name === investorName));
+                            if (!exists) {
+                                investors.push({
+                                    name: investorName,
+                                    group: group && group !== investorName ? group : undefined,
+                                    shares: shares > 0 ? shares : undefined,
+                                    sharesFormatted: sharesRaw || undefined,
+                                    amountCr: amtRaw && !isNaN(parseFloat(amtRaw)) ? parseFloat(amtRaw) : undefined,
+                                    percent: pctRaw && !isNaN(parseFloat(pctRaw)) ? parseFloat(pctRaw) : undefined
+                                });
                             }
                         }
                     }

@@ -660,13 +660,20 @@ async function probeUpcomingData() {
 
             // Also clean numeric-only entries from anchorInvestors if any
             if (Array.isArray(company.anchorInvestors)) {
-                const numericRow = company.anchorInvestors.find(inv => /^\s*[\d,]+\s*$/.test(inv));
+                const numericRow = company.anchorInvestors.find(inv => {
+                    const str = typeof inv === 'string' ? inv : (inv && inv.name ? inv.name : '');
+                    return /^\s*[\d,]+\s*$/.test(str);
+                });
                 if (numericRow) {
+                    const numStr = typeof numericRow === 'string' ? numericRow : numericRow.name;
                     if (!company.anchorShares || company.anchorShares === 0) {
-                        company.anchorShares = parseInt(numericRow.replace(/,/g, '').trim(), 10);
+                        company.anchorShares = parseInt(numStr.replace(/,/g, '').trim(), 10);
                         changed = true;
                     }
-                    company.anchorInvestors = company.anchorInvestors.filter(inv => !/^\s*[\d,]+\s*$/.test(inv));
+                    company.anchorInvestors = company.anchorInvestors.filter(inv => {
+                        const str = typeof inv === 'string' ? inv : (inv && inv.name ? inv.name : '');
+                        return !/^\s*[\d,]+\s*$/.test(str);
+                    });
                     changed = true;
                 }
             }

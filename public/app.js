@@ -714,10 +714,31 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         const totalShares = (customData && customData.totalShares) || company.totalShares || 0;
         const issuePrice = company.issuePrice || (customData && customData.issuePrice);
 
-        // Filter out totals or numeric artifacts
+        // Normalize and filter out totals or numeric artifacts
         const cleanInvestors = (Array.isArray(rawInvestors) ? rawInvestors : [])
-            .map(inv => (typeof inv === 'string' ? inv.trim() : (inv && inv.name ? inv.name.trim() : '')))
-            .filter(inv => inv && !/^[\d,\.\s%]+$/.test(inv) && !/^(total|sub[\s-]*total|grand total)/i.test(inv));
+            .map(inv => {
+                if (typeof inv === 'string') {
+                    return { name: inv.trim() };
+                } else if (inv && inv.name) {
+                    return {
+                        name: inv.name.trim(),
+                        group: inv.group,
+                        shares: inv.shares,
+                        sharesFormatted: inv.sharesFormatted,
+                        amountCr: inv.amountCr,
+                        percent: inv.percent
+                    };
+                }
+                return null;
+            })
+            .filter(inv => {
+                if (!inv || !inv.name) return false;
+                const letters = inv.name.replace(/[^a-zA-Z]/g, '');
+                if (letters.length <= 3) return false;
+                if (/^(total|subtotal|grandtotal|crore|lakhs?|cr)$/i.test(letters)) return false;
+                if (/^[\d,\.\s%]+$/i.test(inv.name)) return false;
+                return true;
+            });
 
         const hasAnchorData = cleanInvestors.length > 0 || anchorShares > 0 || anchorUrl;
 
@@ -778,13 +799,28 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         let investorsGrid = '';
         if (cleanInvestors.length > 0) {
             investorsGrid = `
-                <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)); gap: 3px 5px; margin-top: 4px; max-height: 105px; overflow-y: auto; padding-right: 2px;">
-                    ${cleanInvestors.map(name => `
-                        <div style="font-size: 10.5px; font-weight: 600; color: #065f46; background: #ffffff; border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 4px; padding: 2px 6px; display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${name}">
-                            <span style="color: #10b981; font-size: 7px; flex-shrink: 0;">●</span>
-                            <span style="overflow: hidden; text-overflow: ellipsis;">${name}</span>
+                <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 4px 6px; margin-top: 4px; max-height: 125px; overflow-y: auto; padding-right: 2px;">
+                    ${cleanInvestors.map(inv => {
+                        let badgeHtml = '';
+                        if (inv.sharesFormatted || inv.shares) {
+                            const sText = inv.sharesFormatted 
+                                ? (inv.shares && inv.shares >= 100000 ? (inv.shares / 100000).toFixed(2) + 'L' : inv.sharesFormatted)
+                                : (inv.shares >= 100000 ? (inv.shares / 100000).toFixed(2) + 'L' : inv.shares.toLocaleString('en-IN'));
+                            const pctText = inv.percent ? ` (${inv.percent}%)` : '';
+                            badgeHtml = `<span style="font-weight:700; color:#065f46; font-size:10px; background:rgba(16, 185, 129, 0.12); padding:1px 5px; border-radius:3px; flex-shrink:0; white-space:nowrap;">${sText} shs${pctText}</span>`;
+                        }
+                        const groupTooltip = inv.group ? ` [${inv.group}]` : '';
+                        const fullTitle = `${inv.name}${groupTooltip}${inv.sharesFormatted ? ` - ${inv.sharesFormatted} shares` : ''}${inv.amountCr ? ` (₹${inv.amountCr} Cr)` : ''}`;
+                        return `
+                        <div style="font-size: 10.5px; font-weight: 600; color: #065f46; background: #ffffff; border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 4px; padding: 2px 6px; display: flex; align-items: center; justify-content: space-between; gap: 6px; min-width: 0;" title="${fullTitle}">
+                            <div style="display: flex; align-items: center; gap: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <span style="color: #10b981; font-size: 7px; flex-shrink: 0;">●</span>
+                                <span style="overflow: hidden; text-overflow: ellipsis;">${inv.name}</span>
+                            </div>
+                            ${badgeHtml}
                         </div>
-                    `).join('')}
+                        `;
+                    }).join('')}
                 </div>
             `;
         }
