@@ -29158,9 +29158,226 @@
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "KOTAK MANUFACTURE IN INDIA FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 800030,
+          "sharesFormatted": "8,00,030",
+          "amountCr": 34,
+          "percent": 6.91
+        },
+        {
+          "name": "KOTAK MULTICAP FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 799995,
+          "sharesFormatted": "7,99,995",
+          "amountCr": 34,
+          "percent": 6.91
+        },
+        {
+          "name": "ICICI PRUDENTIAL SMALLCAP FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 1110585,
+          "sharesFormatted": "11,10,585",
+          "amountCr": 47.2,
+          "percent": 9.59
+        },
+        {
+          "name": "ICICI PRUDENTIAL EXPORTS & SERVICES FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 277655,
+          "sharesFormatted": "2,77,655",
+          "amountCr": 11.8,
+          "percent": 2.4
+        },
+        {
+          "name": "NIPPON INDIA SMALL CAP FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 971775,
+          "sharesFormatted": "9,71,775",
+          "amountCr": 41.3,
+          "percent": 8.39
+        },
+        {
+          "name": "NIPPON INDIA POWER & INFRA FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 416465,
+          "sharesFormatted": "4,16,465",
+          "amountCr": 17.7,
+          "percent": 3.6
+        },
+        {
+          "name": "ASHOKA INDIA EQUITY INVESTMENT TRUST PLC",
+          "group": "ASHOKA",
+          "shares": 953855,
+          "sharesFormatted": "9,53,855",
+          "amountCr": 40.54,
+          "percent": 8.24
+        },
+        {
+          "name": "INDIA ACORN FUND LTD.",
+          "group": "INDIA ACORN",
+          "shares": 434385,
+          "sharesFormatted": "4,34,385",
+          "amountCr": 18.46,
+          "percent": 3.75
+        },
+        {
+          "name": "MOTILAL OSWAL SMALL CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 799995,
+          "sharesFormatted": "7,99,995",
+          "amountCr": 34,
+          "percent": 6.91
+        },
+        {
+          "name": "MOTILAL OSWAL FOCUSED FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 588245,
+          "sharesFormatted": "5,88,245",
+          "amountCr": 25,
+          "percent": 5.08
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE INFRASTRUCTURE FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 172550,
+          "sharesFormatted": "1,72,550",
+          "amountCr": 7.33,
+          "percent": 1.49
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE MANUFACTURING EQUITY FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 172550,
+          "sharesFormatted": "1,72,550",
+          "amountCr": 7.33,
+          "percent": 1.49
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE SPECIAL OPPORTUNITIES FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 172550,
+          "sharesFormatted": "1,72,550",
+          "amountCr": 7.33,
+          "percent": 1.49
+        },
+        {
+          "name": "SBI LIFE INSURANCE CO.LTD.",
+          "group": "SBI LIFE INSURANCE",
+          "shares": 705950,
+          "sharesFormatted": "7,05,950",
+          "amountCr": 30,
+          "percent": 6.1
+        },
+        {
+          "name": "TATA AIA LIFE INSURANCE CO.LTD.-RISING INDIA FUND (ULIF 073-17/01/24 RIF 110)",
+          "group": "TATA AIA LIFE INSURANCE",
+          "shares": 517650,
+          "sharesFormatted": "5,17,650",
+          "amountCr": 22,
+          "percent": 4.47
+        },
+        {
+          "name": "TATA BUSINESS CYCLE FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 517650,
+          "sharesFormatted": "5,17,650",
+          "amountCr": 22,
+          "percent": 4.47
+        },
+        {
+          "name": "CANARA ROBECO SMALL CAP FUND",
+          "group": "CANARA ROBECO MUTUAL FUND",
+          "shares": 517650,
+          "sharesFormatted": "5,17,650",
+          "amountCr": 22,
+          "percent": 4.47
+        },
+        {
+          "name": "KOTAK MAHINDRA LIFE INSURANCE CO.LTD.",
+          "group": "KOTAK LIFE INSURANCE",
+          "shares": 236449,
+          "sharesFormatted": "2,36,449",
+          "amountCr": 10.05,
+          "percent": 2.04
+        },
+        {
+          "name": "IKIGAI SMALL CAP FUND",
+          "group": "IKIGAI",
+          "shares": 236449,
+          "sharesFormatted": "2,36,449",
+          "amountCr": 10.05,
+          "percent": 2.04
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 235340,
+          "sharesFormatted": "2,35,340",
+          "amountCr": 10,
+          "percent": 2.03
+        },
+        {
+          "name": "ALCHEMY EMERGING LEADERS OF TOMORROW",
+          "group": "ALCHEMY",
+          "shares": 235305,
+          "sharesFormatted": "2,35,305",
+          "amountCr": 10,
+          "percent": 2.03
+        },
+        {
+          "name": "LC PHAROS MULTI STRATEGY FUND VCC-LC PHAROS MULTI STRATEGY FUND SF1",
+          "group": "LC PHAROS",
+          "shares": 117670,
+          "sharesFormatted": "1,17,670",
+          "amountCr": 5,
+          "percent": 1.02
+        },
+        {
+          "name": "ENIGMA SMALL OPPORTUNITIES FUND",
+          "group": "ENIGMA",
+          "shares": 117705,
+          "sharesFormatted": "1,17,705",
+          "amountCr": 5,
+          "percent": 1.02
+        },
+        {
+          "name": "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND",
+          "group": "COGNIZANT",
+          "shares": 117670,
+          "sharesFormatted": "1,17,670",
+          "amountCr": 5,
+          "percent": 1.02
+        },
+        {
+          "name": "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD.",
+          "group": "CITIGROUP",
+          "shares": 117670,
+          "sharesFormatted": "1,17,670",
+          "amountCr": 5,
+          "percent": 1.02
+        },
+        {
+          "name": "SOCIETE GENERALE-ODI",
+          "group": "SOCIETE GENERAL",
+          "shares": 117670,
+          "sharesFormatted": "1,17,670",
+          "amountCr": 5,
+          "percent": 1.02
+        },
+        {
+          "name": "NOMURA SINGAPORE LTD.",
+          "group": "NOMURA",
+          "shares": 117670,
+          "sharesFormatted": "1,17,670",
+          "amountCr": 5,
+          "percent": 1.02
+        }
+      ],
+      "anchorShares": 11579133,
+      "totalShares": 25931407,
       "rhpUrl": "https://www.lohiagroup.com/storage/app/media/lohia-corp-limited-rhp-unsigned-version.pdf",
       "preIpoInvestors": []
     },
@@ -29191,9 +29408,745 @@
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "ICICI PRUDENTIAL MANUFACTURING FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 948420,
+          "sharesFormatted": "9,48,420",
+          "amountCr": 46,
+          "percent": 4.03
+        },
+        {
+          "name": "ISIF HYBRID LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 175260,
+          "sharesFormatted": "1,75,260",
+          "amountCr": 8.5,
+          "percent": 0.74
+        },
+        {
+          "name": "ICICI PRUDENTIAL BALANCED HYBRID FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 41250,
+          "sharesFormatted": "41,250",
+          "amountCr": 2,
+          "percent": 0.18
+        },
+        {
+          "name": "ICICI PRUDENTIAL QUANT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 41250,
+          "sharesFormatted": "41,250",
+          "amountCr": 2,
+          "percent": 0.18
+        },
+        {
+          "name": "ISIF EQUITY LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 30930,
+          "sharesFormatted": "30,930",
+          "amountCr": 1.5,
+          "percent": 0.13
+        },
+        {
+          "name": "HDFC DEFENCE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 292110,
+          "sharesFormatted": "2,92,110",
+          "amountCr": 14.17,
+          "percent": 1.24
+        },
+        {
+          "name": "HDFC MULTI CAP FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 274890,
+          "sharesFormatted": "2,74,890",
+          "amountCr": 13.33,
+          "percent": 1.17
+        },
+        {
+          "name": "HDFC CHILDREN'S FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 274890,
+          "sharesFormatted": "2,74,890",
+          "amountCr": 13.33,
+          "percent": 1.17
+        },
+        {
+          "name": "HDFC INNOVATION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 120300,
+          "sharesFormatted": "1,20,300",
+          "amountCr": 5.83,
+          "percent": 0.51
+        },
+        {
+          "name": "HDFC MANUFACTURING FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 120300,
+          "sharesFormatted": "1,20,300",
+          "amountCr": 5.83,
+          "percent": 0.51
+        },
+        {
+          "name": "HDFC BUSINESS CYCLE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 103080,
+          "sharesFormatted": "1,03,080",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "HDFC MNC FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 51540,
+          "sharesFormatted": "51,540",
+          "amountCr": 2.5,
+          "percent": 0.22
+        },
+        {
+          "name": "SBI MNC FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 412380,
+          "sharesFormatted": "4,12,380",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "SBI INFRASTRUCTURE FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 391740,
+          "sharesFormatted": "3,91,740",
+          "amountCr": 19,
+          "percent": 1.67
+        },
+        {
+          "name": "SBI QUALITY FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 391740,
+          "sharesFormatted": "3,91,740",
+          "amountCr": 19,
+          "percent": 1.67
+        },
+        {
+          "name": "SBI CHILDREN'S FUND-SAVINGS PLAN",
+          "group": "SBI MUTUAL FUND",
+          "shares": 41250,
+          "sharesFormatted": "41,250",
+          "amountCr": 2,
+          "percent": 0.18
+        },
+        {
+          "name": "KOTAK CONTRA FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "KOTAK BUSINESS CYCLE FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "KOTAK SPECIAL OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "KOTAK TRANSPORTATION & LOGISTICS FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "KOTAK MNC FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "KOTAK MANUFACTURE IN INDIA FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 206160,
+          "sharesFormatted": "2,06,160",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE FLEXI CAP FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 412380,
+          "sharesFormatted": "4,12,380",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE INFRASTRUCTURE FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 412380,
+          "sharesFormatted": "4,12,380",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE MIDCAP FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 371130,
+          "sharesFormatted": "3,71,130",
+          "amountCr": 18,
+          "percent": 1.58
+        },
+        {
+          "name": "APEX HYBRID LONG-SHORT FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 41220,
+          "sharesFormatted": "41,220",
+          "amountCr": 2,
+          "percent": 0.18
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 1030920,
+          "sharesFormatted": "10,30,920",
+          "amountCr": 50,
+          "percent": 4.38
+        },
+        {
+          "name": "WHITEOAK CAPITAL INDIA OPPORTUNITIES FUND",
+          "group": "WHITEOAK",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "360 ONE FLEXICAP FUND",
+          "group": "360 ONE MUTUAL FUND",
+          "shares": 721650,
+          "sharesFormatted": "7,21,650",
+          "amountCr": 35,
+          "percent": 3.07
+        },
+        {
+          "name": "360 ONE MULTI-STAGE DEFENCE & SPACE FUND",
+          "group": "360 ONE",
+          "shares": 412350,
+          "sharesFormatted": "4,12,350",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "DYNASIF EQUITY EX-TOP 100 LONG-SHORT FUND",
+          "group": "360 ONE MUTUAL FUND",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "ARANDA INVESTMENTS PTE.LTD.",
+          "group": "ARANDA INVESTMENTS",
+          "shares": 721620,
+          "sharesFormatted": "7,21,620",
+          "amountCr": 35,
+          "percent": 3.07
+        },
+        {
+          "name": "GOVERNMENT PENSION FUND GLOBAL",
+          "shares": 721620,
+          "sharesFormatted": "7,21,620",
+          "amountCr": 35,
+          "percent": 3.07
+        },
+        {
+          "name": "GOLDMAN SACHS FUNDS-GOLDMAN SACHS INDIA EQUITY PORTFOLIO",
+          "group": "GOLDMAN SACHS",
+          "shares": 721620,
+          "sharesFormatted": "7,21,620",
+          "amountCr": 35,
+          "percent": 3.07
+        },
+        {
+          "name": "AMANSA HOLDINGS PVT.LTD.",
+          "group": "AMANSA",
+          "shares": 721620,
+          "sharesFormatted": "7,21,620",
+          "amountCr": 35,
+          "percent": 3.07
+        },
+        {
+          "name": "AXIS ELSS TAX SAVER FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 236100,
+          "sharesFormatted": "2,36,100",
+          "amountCr": 11.45,
+          "percent": 1
+        },
+        {
+          "name": "AXIS SMALL CAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 216750,
+          "sharesFormatted": "2,16,750",
+          "amountCr": 10.51,
+          "percent": 0.92
+        },
+        {
+          "name": "AXIS FLEXI CAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 98730,
+          "sharesFormatted": "98,730",
+          "amountCr": 4.79,
+          "percent": 0.42
+        },
+        {
+          "name": "AXIS MULTICAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 77070,
+          "sharesFormatted": "77,070",
+          "amountCr": 3.74,
+          "percent": 0.33
+        },
+        {
+          "name": "AXIS INDIA MANUFACTURING FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 38520,
+          "sharesFormatted": "38,520",
+          "amountCr": 1.87,
+          "percent": 0.16
+        },
+        {
+          "name": "AXIS BALANCED ADVANTAGE FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 28890,
+          "sharesFormatted": "28,890",
+          "amountCr": 1.4,
+          "percent": 0.12
+        },
+        {
+          "name": "AXIS MULTI ASSET ALLOCATION FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 16830,
+          "sharesFormatted": "16,830",
+          "amountCr": 0.82,
+          "percent": 0.07
+        },
+        {
+          "name": "AXIS INNOVATION FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 9630,
+          "sharesFormatted": "9,630",
+          "amountCr": 0.47,
+          "percent": 0.04
+        },
+        {
+          "name": "BANDHAN SMALL CAP FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 517140,
+          "sharesFormatted": "5,17,140",
+          "amountCr": 25.08,
+          "percent": 2.2
+        },
+        {
+          "name": "HSBC SMALL CAP FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 376110,
+          "sharesFormatted": "3,76,110",
+          "amountCr": 18.24,
+          "percent": 1.6
+        },
+        {
+          "name": "HSBC MULTI CAP FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 141030,
+          "sharesFormatted": "1,41,030",
+          "amountCr": 6.84,
+          "percent": 0.6
+        },
+        {
+          "name": "MIRAE ASSET FOCUSED FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 463890,
+          "sharesFormatted": "4,63,890",
+          "amountCr": 22.5,
+          "percent": 1.97
+        },
+        {
+          "name": "MIRAE ASSET INFRASTRUCTURE FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 53250,
+          "sharesFormatted": "53,250",
+          "amountCr": 2.58,
+          "percent": 0.23
+        },
+        {
+          "name": "UTI INFRASTRUCTURE FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 310290,
+          "sharesFormatted": "3,10,290",
+          "amountCr": 15.05,
+          "percent": 1.32
+        },
+        {
+          "name": "UTI MULTI CAP FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 206850,
+          "sharesFormatted": "2,06,850",
+          "amountCr": 10.03,
+          "percent": 0.88
+        },
+        {
+          "name": "MOTILAL OSWAL SMALL CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 517140,
+          "sharesFormatted": "5,17,140",
+          "amountCr": 25.08,
+          "percent": 2.2
+        },
+        {
+          "name": "QSIF ACTIVE ASSET ALLOCATOR LONG-SHORT FUND",
+          "group": "QUANT MUTUAL FUND",
+          "shares": 206850,
+          "sharesFormatted": "2,06,850",
+          "amountCr": 10.03,
+          "percent": 0.88
+        },
+        {
+          "name": "QSIF EQUITY EX-TOP 100 LONG-SHORT FUND",
+          "group": "QUANT MUTUAL FUND",
+          "shares": 310290,
+          "sharesFormatted": "3,10,290",
+          "amountCr": 15.05,
+          "percent": 1.32
+        },
+        {
+          "name": "TATA INFRASTRUCTURE FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 248220,
+          "sharesFormatted": "2,48,220",
+          "amountCr": 12.04,
+          "percent": 1.06
+        },
+        {
+          "name": "TATA RESOURCES & ENERGY FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 227550,
+          "sharesFormatted": "2,27,550",
+          "amountCr": 11.04,
+          "percent": 0.97
+        },
+        {
+          "name": "TITANIUM EQUITY LONG-SHORT FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 41370,
+          "sharesFormatted": "41,370",
+          "amountCr": 2.01,
+          "percent": 0.18
+        },
+        {
+          "name": "INVESCO INDIA INFRASTRUCTURE FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 206850,
+          "sharesFormatted": "2,06,850",
+          "amountCr": 10.03,
+          "percent": 0.88
+        },
+        {
+          "name": "INVESCO INDIA MANUFACTURING FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 206850,
+          "sharesFormatted": "2,06,850",
+          "amountCr": 10.03,
+          "percent": 0.88
+        },
+        {
+          "name": "SUMMIT EQUITY LONG-SHORT FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 103440,
+          "sharesFormatted": "1,03,440",
+          "amountCr": 5.02,
+          "percent": 0.44
+        },
+        {
+          "name": "BLACKROCK GLOBAL FUNDS-INDIA FUND",
+          "group": "BLACKROCK",
+          "shares": 517140,
+          "sharesFormatted": "5,17,140",
+          "amountCr": 25.08,
+          "percent": 2.2
+        },
+        {
+          "name": "PINEBRIDGE GLOBAL FUNDS-PINEBRIDGE INDIA EQUITY FUND",
+          "group": "PINEBRIDGE",
+          "shares": 414030,
+          "sharesFormatted": "4,14,030",
+          "amountCr": 20.08,
+          "percent": 1.76
+        },
+        {
+          "name": "DSP INDIA FUND",
+          "group": "DSP",
+          "shares": 412350,
+          "sharesFormatted": "4,12,350",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "ICICI PRUDENTIAL LIFE INSURANCE CO.LTD.",
+          "group": "ICICI PRUDENTIAL LIFE INSURANCE",
+          "shares": 412350,
+          "sharesFormatted": "4,12,350",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "SBI LIFE INSURANCE CO.LTD.",
+          "group": "SBI LIFE INSURANCE",
+          "shares": 412350,
+          "sharesFormatted": "4,12,350",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 413250,
+          "sharesFormatted": "4,13,250",
+          "amountCr": 20.04,
+          "percent": 1.76
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 412350,
+          "sharesFormatted": "4,12,350",
+          "amountCr": 20,
+          "percent": 1.75
+        },
+        {
+          "name": "NATIXIS INTERNATIONAL FUNDS (LUX) I-LOOMIS SAYLES GLOBAL EMERGING MARKETS EQUITY FUND",
+          "group": "NATIXIS",
+          "shares": 309270,
+          "sharesFormatted": "3,09,270",
+          "amountCr": 15,
+          "percent": 1.31
+        },
+        {
+          "name": "KEDAARA CAPITAL PUBLIC MARKETS IFSC FUND I",
+          "group": "KEDAARA",
+          "shares": 268020,
+          "sharesFormatted": "2,68,020",
+          "amountCr": 13,
+          "percent": 1.14
+        },
+        {
+          "name": "EAMC ICAV-ENAM INDIA OPPORTUNITIES FUND",
+          "group": "EAMC",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "CANARA ROBECO MID CAP FUND",
+          "group": "CANARA ROBECO MUTUAL FUND",
+          "shares": 310980,
+          "sharesFormatted": "3,10,980",
+          "amountCr": 15.08,
+          "percent": 1.32
+        },
+        {
+          "name": "EDELWEISS BUSINESS CYCLE FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 216480,
+          "sharesFormatted": "2,16,480",
+          "amountCr": 10.5,
+          "percent": 0.92
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 51540,
+          "sharesFormatted": "51,540",
+          "amountCr": 2.5,
+          "percent": 0.22
+        },
+        {
+          "name": "UNION LARGE & MIDCAP FUND",
+          "group": "UNION MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "KOTAK FUNDS-INDIA MIDCAP FUND",
+          "group": "KOTAK",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "3P INDIA EQUITY FUND II M",
+          "group": "3P INDIA",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "FRANKLIN BUILD INDIA FUND",
+          "group": "FRANKLIN TEMPLETON MUTUAL FUND",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "MANULIFE GLOBAL FUND-INDIA EQUITY FUND",
+          "group": "MANULIFE",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "ICICI LOMBARD GENERAL INSURANCE CO.LTD.",
+          "group": "ICICI LOMBARD GENERAL INSURANCE",
+          "shares": 206190,
+          "sharesFormatted": "2,06,190",
+          "amountCr": 10,
+          "percent": 0.88
+        },
+        {
+          "name": "UNIFI BCAD FUND",
+          "group": "UNIFI",
+          "shares": 185858,
+          "sharesFormatted": "1,85,858",
+          "amountCr": 9.01,
+          "percent": 0.79
+        },
+        {
+          "name": "LIC MF VALUE FUND",
+          "group": "LIC MUTUAL FUND",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "PGIM INDIA MULTI CAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "SPARK MIDAS INVESTMENT FUND I",
+          "group": "SPARK",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 103148,
+          "sharesFormatted": "1,03,148",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UEGFH-HIGH GROWTH FUND II",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "CANARA HSBC LIFE INSURANCE CO.LTD.",
+          "group": "CANARA HSBC",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "INDUSIND NIPPON LIFE INSURANCE CO.LTD.",
+          "group": "INDUSIND NIPPON LIFE INSURANCE",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "ABAKKUS SMALL CAP FUND",
+          "group": "ABAKKUS MUTUAL FUND",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "EASTSPRING INVESTMENTS INDIA INFRASTRUCTURE EQUITY OPEN LTD.",
+          "group": "EASTSPRING",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "TAKSH INDIA ENTERPRISING FUND",
+          "group": "TAKSH",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "CSIM INDIA OPPORTUNITIES FUND I",
+          "group": "CSIM INDIA",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "SOCIETE GENERALE-ODI",
+          "group": "SOCIETE GENERAL",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        },
+        {
+          "name": "ALCHEMY EMERGING LEADERS OF TOMORROW-SERIES II",
+          "group": "ALCHEMY",
+          "shares": 103110,
+          "sharesFormatted": "1,03,110",
+          "amountCr": 5,
+          "percent": 0.44
+        }
+      ],
+      "anchorShares": 23525656,
+      "totalShares": 78618857,
       "rhpUrl": "https://www.axiscapital.co.in/contents/Indo%20MIM%20RHP-1784352328.pdf",
       "preIpoInvestors": []
     },
@@ -29224,9 +30177,90 @@
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "TAURUS MID CAP FUND",
+          "group": "TAURUS MUTUAL FUND",
+          "shares": 78760,
+          "sharesFormatted": "78,760",
+          "amountCr": 1,
+          "percent": 2
+        },
+        {
+          "name": "TAURUS ELSS TAX SAVER FUND",
+          "group": "TAURUS MUTUAL FUND",
+          "shares": 78760,
+          "sharesFormatted": "78,760",
+          "amountCr": 1,
+          "percent": 2
+        },
+        {
+          "name": "TAURUS FLEXI CAP FUND",
+          "group": "TAURUS MUTUAL FUND",
+          "shares": 236280,
+          "sharesFormatted": "2,36,280",
+          "amountCr": 3,
+          "percent": 6
+        },
+        {
+          "name": "STEPTRADE REVOLUTION FUND",
+          "group": "STEPTRADE",
+          "shares": 393800,
+          "sharesFormatted": "3,93,800",
+          "amountCr": 5,
+          "percent": 9.99
+        },
+        {
+          "name": "VENUS INVESTMENTS VCC-VENUS STELLAR FUND",
+          "group": "VENUS INVESTMENTS",
+          "shares": 394020,
+          "sharesFormatted": "3,94,020",
+          "amountCr": 5,
+          "percent": 10
+        },
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 551540,
+          "sharesFormatted": "5,51,540",
+          "amountCr": 7,
+          "percent": 14
+        },
+        {
+          "name": "LONGTHRIVE CAPITAL VCC-TRENDVIEW CAPITAL FUND",
+          "group": "LONGTHRIVE CAPITAL VCC",
+          "shares": 551100,
+          "sharesFormatted": "5,51,100",
+          "amountCr": 7,
+          "percent": 13.99
+        },
+        {
+          "name": "INNOVATIVE VISION FUND",
+          "group": "INNOVATIVE VISION",
+          "shares": 394020,
+          "sharesFormatted": "3,94,020",
+          "amountCr": 5,
+          "percent": 10
+        },
+        {
+          "name": "SAINT CAPITAL FUND",
+          "group": "SAINT CAPITAL",
+          "shares": 630960,
+          "sharesFormatted": "6,30,960",
+          "amountCr": 8.01,
+          "percent": 16.01
+        },
+        {
+          "name": "VINEY GROWTH FUND",
+          "group": "VINEY",
+          "shares": 630960,
+          "sharesFormatted": "6,30,960",
+          "amountCr": 8.01,
+          "percent": 16.01
+        }
+      ],
+      "anchorShares": 3940200,
+      "totalShares": 13134000,
       "rhpUrl": "https://xtranetindia.com/assets/img/pdf/RHP.pdf",
       "preIpoInvestors": []
     },
@@ -29257,7 +30291,64 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "SOLIDARITY MICRO CAP EMERGING LEADER AIF",
+          "group": "SOLIDARITY",
+          "shares": 520000,
+          "sharesFormatted": "5,20,000",
+          "amountCr": 4,
+          "percent": 28.26
+        },
+        {
+          "name": "AARTH AIF GROWTH FUND",
+          "group": "AARTH",
+          "shares": 390400,
+          "sharesFormatted": "3,90,400",
+          "amountCr": 3.01,
+          "percent": 21.22
+        },
+        {
+          "name": "INDIA EQUITY FUND I",
+          "group": "INDIA EQUITY FUND",
+          "shares": 390400,
+          "sharesFormatted": "3,90,400",
+          "amountCr": 3.01,
+          "percent": 21.22
+        },
+        {
+          "name": "IMAP INDIA CAPITAL INVESTMENT TRUST-CATALYST NEW INDIA FUND",
+          "group": "IMAP INDIA",
+          "shares": 145600,
+          "sharesFormatted": "1,45,600",
+          "amountCr": 1.12,
+          "percent": 7.91
+        },
+        {
+          "name": "BRESCON OPPORTUNITIES FUND",
+          "group": "BRESCON",
+          "shares": 131200,
+          "sharesFormatted": "1,31,200",
+          "amountCr": 1.01,
+          "percent": 7.13
+        },
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 131200,
+          "sharesFormatted": "1,31,200",
+          "amountCr": 1.01,
+          "percent": 7.13
+        },
+        {
+          "name": "MILI EMERGING EQUITIES FUND",
+          "group": "MILI",
+          "shares": 131200,
+          "sharesFormatted": "1,31,200",
+          "amountCr": 1.01,
+          "percent": 7.13
+        }
+      ],
       "anchorShares": 1840000,
       "totalShares": 6488000,
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/rhp_mtf.pdf",
@@ -29324,9 +30415,242 @@
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "ARANDA INVESTMENTS (MAURITIUS) PTE.LTD.",
+          "group": "ARANDA INVESTMENTS",
+          "shares": 554300,
+          "sharesFormatted": "5,54,300",
+          "amountCr": 16.63,
+          "percent": 8.55
+        },
+        {
+          "name": "SBI RESURGENT INDIA OPPORTUNITIES SCHEME",
+          "group": "SBI MUTUAL FUND",
+          "shares": 554300,
+          "sharesFormatted": "5,54,300",
+          "amountCr": 16.63,
+          "percent": 8.55
+        },
+        {
+          "name": "HDFC BUSINESS CYCLE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 115500,
+          "sharesFormatted": "1,15,500",
+          "amountCr": 3.47,
+          "percent": 1.78
+        },
+        {
+          "name": "HDFC MANUFACTURING FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 230950,
+          "sharesFormatted": "2,30,950",
+          "amountCr": 6.93,
+          "percent": 3.56
+        },
+        {
+          "name": "HDFC INNOVATION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 207850,
+          "sharesFormatted": "2,07,850",
+          "amountCr": 6.24,
+          "percent": 3.21
+        },
+        {
+          "name": "NIPPON INDIA SMALL CAP FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 554300,
+          "sharesFormatted": "5,54,300",
+          "amountCr": 16.63,
+          "percent": 8.55
+        },
+        {
+          "name": "KOTAK ENERGY OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 53450,
+          "sharesFormatted": "53,450",
+          "amountCr": 1.6,
+          "percent": 0.82
+        },
+        {
+          "name": "KOTAK INFRASTRUCTURE & ECONOMIC REFORM FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 500850,
+          "sharesFormatted": "5,00,850",
+          "amountCr": 15.03,
+          "percent": 7.72
+        },
+        {
+          "name": "GOLDMAN SACHS FUNDS-GOLDMAN SACHS INDIA EQUITY PORTFOLIO",
+          "group": "GOLDMAN SACHS",
+          "shares": 554300,
+          "sharesFormatted": "5,54,300",
+          "amountCr": 16.63,
+          "percent": 8.55
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 554300,
+          "sharesFormatted": "5,54,300",
+          "amountCr": 16.63,
+          "percent": 8.55
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE SMALL CAP FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 519650,
+          "sharesFormatted": "5,19,650",
+          "amountCr": 15.59,
+          "percent": 8.01
+        },
+        {
+          "name": "APEX HYBRID LONG-SHORT FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 34650,
+          "sharesFormatted": "34,650",
+          "amountCr": 1.04,
+          "percent": 0.53
+        },
+        {
+          "name": "TITANIUM HYBRID LONG-SHORT FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 200050,
+          "sharesFormatted": "2,00,050",
+          "amountCr": 6,
+          "percent": 3.08
+        },
+        {
+          "name": "TITANIUM EQUITY LONG-SHORT FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 116650,
+          "sharesFormatted": "1,16,650",
+          "amountCr": 3.5,
+          "percent": 1.8
+        },
+        {
+          "name": "MOTILAL OSWAL CONTRA FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 316700,
+          "sharesFormatted": "3,16,700",
+          "amountCr": 9.5,
+          "percent": 4.88
+        },
+        {
+          "name": "360 ONE EQUITY OPPORTUNITY FUND-SERIES IV",
+          "group": "360 ONE",
+          "shares": 316700,
+          "sharesFormatted": "3,16,700",
+          "amountCr": 9.5,
+          "percent": 4.88
+        },
+        {
+          "name": "VALUEQUEST INDIA G.I.F.T.FUND",
+          "group": "VALUEQUEST",
+          "shares": 316700,
+          "sharesFormatted": "3,16,700",
+          "amountCr": 9.5,
+          "percent": 4.88
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 87100,
+          "sharesFormatted": "87,100",
+          "amountCr": 2.61,
+          "percent": 1.34
+        },
+        {
+          "name": "EDELWEISS BUSINESS CYCLE FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 229600,
+          "sharesFormatted": "2,29,600",
+          "amountCr": 6.89,
+          "percent": 3.54
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 01815/02/13 PENSPRESER 104-PENSION PRESERVER FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 1330,
+          "sharesFormatted": "1,330",
+          "amountCr": 0.04,
+          "percent": 0.02
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 01715/02/13 PENSMAXIMI 104-PENSION MAXIMISER FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 22455,
+          "sharesFormatted": "22,455",
+          "amountCr": 0.67,
+          "percent": 0.35
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 00625/11/05 PENSBALANC 104-PENSION BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 1331,
+          "sharesFormatted": "1,331",
+          "amountCr": 0.04,
+          "percent": 0.02
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULGF 00217/04/06 GRATBALANC 104-GROUP GRATUITY BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 3013,
+          "sharesFormatted": "3,013",
+          "amountCr": 0.09,
+          "percent": 0.05
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UMFPH-HIGH GROWTH PENSION FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 6691,
+          "sharesFormatted": "6,691",
+          "amountCr": 0.2,
+          "percent": 0.1
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UHG2S-INDIA CONSUMPTION OPPORTUNITIES FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 4344,
+          "sharesFormatted": "4,344",
+          "amountCr": 0.13,
+          "percent": 0.07
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UEGFH-HIGH GROWTH FUND II",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 67364,
+          "sharesFormatted": "67,364",
+          "amountCr": 2.02,
+          "percent": 1.04
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 00225/06/04 LIFEBALANC 104-BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 67364,
+          "sharesFormatted": "67,364",
+          "amountCr": 2.02,
+          "percent": 1.04
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-SUSTAINABLE EQUITY FUND-ULIF02505/10/21 SUSTAINEQU104",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 59657,
+          "sharesFormatted": "59,657",
+          "amountCr": 1.79,
+          "percent": 0.92
+        },
+        {
+          "name": "KOTAK MAHINDRA LIFE INSURANCE CO.LTD.",
+          "group": "KOTAK LIFE INSURANCE",
+          "shares": 233550,
+          "sharesFormatted": "2,33,550",
+          "amountCr": 7.01,
+          "percent": 3.6
+        }
+      ],
+      "anchorShares": 6484999,
+      "totalShares": 21666666,
       "rhpUrl": "https://www.icicisecurities.com/console/uploads/actual/TEMPSENS-INSTRUMENTS-(INDIA)-LIMITED---RED-HERRING-PROSPECTUS_1786731387_84.pdf",
       "preIpoInvestors": [
         "Nirmal Kumar",
@@ -29368,9 +30692,170 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "NIPPON INDIA BANKING & FINANCIAL SERVICES FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 1875066,
+          "sharesFormatted": "18,75,066",
+          "amountCr": 30,
+          "percent": 18.18
+        },
+        {
+          "name": "INVESCO INDIA FINANCIAL SERVICES FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 1687578,
+          "sharesFormatted": "16,87,578",
+          "amountCr": 27,
+          "percent": 16.36
+        },
+        {
+          "name": "SUMMIT EQUITY LONG-SHORT FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 187488,
+          "sharesFormatted": "1,87,488",
+          "amountCr": 3,
+          "percent": 1.82
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 780642,
+          "sharesFormatted": "7,80,642",
+          "amountCr": 12.49,
+          "percent": 7.57
+        },
+        {
+          "name": "JM SMALL CAP FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 374976,
+          "sharesFormatted": "3,74,976",
+          "amountCr": 6,
+          "percent": 3.64
+        },
+        {
+          "name": "JM MIDCAP FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 218643,
+          "sharesFormatted": "2,18,643",
+          "amountCr": 3.5,
+          "percent": 2.12
+        },
+        {
+          "name": "JM MULTI ASSET ALLOCATION FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 125085,
+          "sharesFormatted": "1,25,085",
+          "amountCr": 2,
+          "percent": 1.21
+        },
+        {
+          "name": "JM VALUE FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 62403,
+          "sharesFormatted": "62,403",
+          "amountCr": 1,
+          "percent": 0.61
+        },
+        {
+          "name": "SBI LIFE INSURANCE CO.LTD.",
+          "group": "SBI LIFE INSURANCE",
+          "shares": 625053,
+          "sharesFormatted": "6,25,053",
+          "amountCr": 10,
+          "percent": 6.06
+        },
+        {
+          "name": "HELIOS SMALL CAP FUND",
+          "group": "HELIOS MUTUAL FUND",
+          "shares": 625053,
+          "sharesFormatted": "6,25,053",
+          "amountCr": 10,
+          "percent": 6.06
+        },
+        {
+          "name": "TRUST MF FLEXI CAP FUND",
+          "group": "TRUST MUTUAL FUND",
+          "shares": 625053,
+          "sharesFormatted": "6,25,053",
+          "amountCr": 10,
+          "percent": 6.06
+        },
+        {
+          "name": "GROWW MULTICAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 348378,
+          "sharesFormatted": "3,48,378",
+          "amountCr": 5.57,
+          "percent": 3.38
+        },
+        {
+          "name": "GROWW SMALL CAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 151497,
+          "sharesFormatted": "1,51,497",
+          "amountCr": 2.42,
+          "percent": 1.47
+        },
+        {
+          "name": "GROWW BANKING & FINANCIAL SERVICES FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 125178,
+          "sharesFormatted": "1,25,178",
+          "amountCr": 2,
+          "percent": 1.21
+        },
+        {
+          "name": "SANSHI FUND-I",
+          "group": "SANSHI",
+          "shares": 625053,
+          "sharesFormatted": "6,25,053",
+          "amountCr": 10,
+          "percent": 6.06
+        },
+        {
+          "name": "BENGAL FINANCE & INVESTMENT PVT.LTD.",
+          "group": "BENGAL FINANCE & INVESTMENT",
+          "shares": 625053,
+          "sharesFormatted": "6,25,053",
+          "amountCr": 10,
+          "percent": 6.06
+        },
+        {
+          "name": "WINRO COMMERCIAL (INDIA) LTD.",
+          "group": "WINRO COMMERCIAL",
+          "shares": 312582,
+          "sharesFormatted": "3,12,582",
+          "amountCr": 5,
+          "percent": 3.03
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 312573,
+          "sharesFormatted": "3,12,573",
+          "amountCr": 5,
+          "percent": 3.03
+        },
+        {
+          "name": "SAMCO ACTIVE MOMENTUM FUND",
+          "group": "SAMCO MUTUAL FUND",
+          "shares": 312573,
+          "sharesFormatted": "3,12,573",
+          "amountCr": 5,
+          "percent": 3.03
+        },
+        {
+          "name": "SOCIETE GENERALE-ODI",
+          "group": "SOCIETE GENERAL",
+          "shares": 312573,
+          "sharesFormatted": "3,12,573",
+          "amountCr": 5,
+          "percent": 3.03
+        }
+      ],
+      "anchorShares": 10312500,
+      "totalShares": 34375000,
       "rhpUrl": "https://gajacapital.com/assets/gaja-alternative-asset-management-limited---red-herring-prospectus.pdf",
       "preIpoInvestors": [
         "Mr. Arindam Kumar Bhattacharya",
@@ -29605,9 +31090,120 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 1842840,
+          "sharesFormatted": "18,42,840",
+          "amountCr": 17.14,
+          "percent": 15.56
+        },
+        {
+          "name": "NECTA BLOOM VCC-NECTA BLOOM ONE",
+          "group": "NECTA BLOOM VCC",
+          "shares": 1612960,
+          "sharesFormatted": "16,12,960",
+          "amountCr": 15,
+          "percent": 13.62
+        },
+        {
+          "name": "VENUS INVESTMENTS VCC-VENUS STELLAR FUND",
+          "group": "VENUS INVESTMENTS",
+          "shares": 1075680,
+          "sharesFormatted": "10,75,680",
+          "amountCr": 10.03,
+          "percent": 9.08
+        },
+        {
+          "name": "ZEAL GLOBAL OPPORTUNITIES FUND",
+          "group": "ZEAL GLOBAL",
+          "shares": 1075360,
+          "sharesFormatted": "10,75,360",
+          "amountCr": 10.01,
+          "percent": 9.08
+        },
+        {
+          "name": "ASAS GLOBAL FUND INCORPORATED VCC SUB FUND",
+          "group": "ASAS GLOBAL",
+          "shares": 1075360,
+          "sharesFormatted": "10,75,360",
+          "amountCr": 10.01,
+          "percent": 9.08
+        },
+        {
+          "name": "UNI GROWTH FUND",
+          "shares": 860320,
+          "sharesFormatted": "8,60,320",
+          "amountCr": 8,
+          "percent": 7.26
+        },
+        {
+          "name": "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND",
+          "group": "SUNRISE",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "INNOVATIVE VISION TRUST",
+          "group": "INNOVATIVE VISION",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "NEXUS GLOBAL OPPORTUNITIES FUND",
+          "group": "NEXUS",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "ARNESTA GLOBAL OPPORTUNITIES FUND PCC-ARNESTA GLOBAL FUND 1",
+          "group": "ARNESTA",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "NOVA GLOBAL OPPORTUNITIES FUND PCC-TOUCHSTONE",
+          "group": "NOVA",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "COMPACT STRUCTURE FUND",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "31 DEGREES NORTH GROWTH FUND",
+          "group": "31 DEGREES",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        },
+        {
+          "name": "VINEY GROWTH FUND",
+          "group": "VINEY",
+          "shares": 537760,
+          "sharesFormatted": "5,37,760",
+          "amountCr": 5,
+          "percent": 4.54
+        }
+      ],
+      "anchorShares": 11844600,
+      "totalShares": 39482000,
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/shankesh-jewellers-limited_rhp.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_capital_structure_1786372775.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/shankesh_jewellers_ltd_mainboard_anchor_1786970732.pdf",
@@ -31929,7 +33525,274 @@
         "Shaheeda Abdul Kader",
         "V Sciences Investments Pte",
         "Sandhya Guru Dutt,"
-      ]
+      ],
+      "anchorInvestors": [
+        {
+          "name": "HDFC PHARMA & HEALTHCARE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 138006,
+          "sharesFormatted": "1,38,006",
+          "amountCr": 11.14,
+          "percent": 3.96
+        },
+        {
+          "name": "HDFC VALUE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 108432,
+          "sharesFormatted": "1,08,432",
+          "amountCr": 8.75,
+          "percent": 3.11
+        },
+        {
+          "name": "HDFC INNOVATION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 108414,
+          "sharesFormatted": "1,08,414",
+          "amountCr": 8.75,
+          "percent": 3.11
+        },
+        {
+          "name": "HDFC MNC FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 78858,
+          "sharesFormatted": "78,858",
+          "amountCr": 6.36,
+          "percent": 2.26
+        },
+        {
+          "name": "KOTAK CONTRA FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 144576,
+          "sharesFormatted": "1,44,576",
+          "amountCr": 11.67,
+          "percent": 4.15
+        },
+        {
+          "name": "KOTAK HEALTHCARE FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 144576,
+          "sharesFormatted": "1,44,576",
+          "amountCr": 11.67,
+          "percent": 4.15
+        },
+        {
+          "name": "KOTAK CONSUMPTION FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 144558,
+          "sharesFormatted": "1,44,558",
+          "amountCr": 11.67,
+          "percent": 4.14
+        },
+        {
+          "name": "ICICI PRUDENTIAL QUALITY FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 185886,
+          "sharesFormatted": "1,85,886",
+          "amountCr": 15,
+          "percent": 5.33
+        },
+        {
+          "name": "ISIF EQUITY LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 37170,
+          "sharesFormatted": "37,170",
+          "amountCr": 3,
+          "percent": 1.07
+        },
+        {
+          "name": "ICICI PRUDENTIAL EXPORTS & SERVICES FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 148698,
+          "sharesFormatted": "1,48,698",
+          "amountCr": 12,
+          "percent": 4.26
+        },
+        {
+          "name": "NIPPON INDIA PHARMA FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 247842,
+          "sharesFormatted": "2,47,842",
+          "amountCr": 20,
+          "percent": 7.11
+        },
+        {
+          "name": "NIPPON INDIA INNOVATION FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 123912,
+          "sharesFormatted": "1,23,912",
+          "amountCr": 10,
+          "percent": 3.55
+        },
+        {
+          "name": "GOLDMAN SACHS FUNDS-GOLDMAN SACHS INDIA EQUITY PORTFOLIO",
+          "group": "GOLDMAN SACHS",
+          "shares": 309780,
+          "sharesFormatted": "3,09,780",
+          "amountCr": 25,
+          "percent": 8.88
+        },
+        {
+          "name": "GOLDMAN SACHS ETF TRUST-GOLDMAN SACHS INDIA EQUITY ETF",
+          "group": "GOLDMAN SACHS",
+          "shares": 61974,
+          "sharesFormatted": "61,974",
+          "amountCr": 5,
+          "percent": 1.78
+        },
+        {
+          "name": "INTERNATIONAL FINANCE CORPORATION",
+          "shares": 247842,
+          "sharesFormatted": "2,47,842",
+          "amountCr": 20,
+          "percent": 7.11
+        },
+        {
+          "name": "BLACKROCK GLOBAL FUNDS-INDIA FUND",
+          "group": "BLACKROCK",
+          "shares": 247842,
+          "sharesFormatted": "2,47,842",
+          "amountCr": 20,
+          "percent": 7.11
+        },
+        {
+          "name": "MIRAE ASSET HEALTHCARE FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 247842,
+          "sharesFormatted": "2,47,842",
+          "amountCr": 20,
+          "percent": 7.11
+        },
+        {
+          "name": "WHITEOAK CAPITAL PHARMA & HEALTHCARE FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 80568,
+          "sharesFormatted": "80,568",
+          "amountCr": 6.5,
+          "percent": 2.31
+        },
+        {
+          "name": "WHITEOAK CAPITAL AGGRESSIVE HYBRID FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 43362,
+          "sharesFormatted": "43,362",
+          "amountCr": 3.5,
+          "percent": 1.24
+        },
+        {
+          "name": "MOTILAL OSWAL LARGE CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 123930,
+          "sharesFormatted": "1,23,930",
+          "amountCr": 10,
+          "percent": 3.55
+        },
+        {
+          "name": "TATA INDIA PHARMA & HEALTHCARE FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 123930,
+          "sharesFormatted": "1,23,930",
+          "amountCr": 10,
+          "percent": 3.55
+        },
+        {
+          "name": "EDELWEISS EQUITY SAVINGS FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 92934,
+          "sharesFormatted": "92,934",
+          "amountCr": 7.5,
+          "percent": 2.66
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 30996,
+          "sharesFormatted": "30,996",
+          "amountCr": 2.5,
+          "percent": 0.89
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 88597,
+          "sharesFormatted": "88,597",
+          "amountCr": 7.15,
+          "percent": 2.54
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-SUSTAINABLE EQUITY FUND-ULIF02505/10/21 SUSTAINEQU104",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 35104,
+          "sharesFormatted": "35,104",
+          "amountCr": 2.83,
+          "percent": 1.01
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF00225/06/04 LIFEBALANC 104-BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 33367,
+          "sharesFormatted": "33,367",
+          "amountCr": 2.69,
+          "percent": 0.96
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 01715/02/13 PENSMAXIMI 104-PENSION MAXIMISER FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 11401,
+          "sharesFormatted": "11,401",
+          "amountCr": 0.92,
+          "percent": 0.33
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UHG2S-INDIA CONSUMPTION OPPORTUNITIES FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 2625,
+          "sharesFormatted": "2,625",
+          "amountCr": 0.21,
+          "percent": 0.08
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UMFPH-HIGH GROWTH PENSION FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 2625,
+          "sharesFormatted": "2,625",
+          "amountCr": 0.21,
+          "percent": 0.08
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULGF 00217/04/06 GRATBALANC 104-GROUP GRATUITY BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 1750,
+          "sharesFormatted": "1,750",
+          "amountCr": 0.14,
+          "percent": 0.05
+        },
+        {
+          "name": "MAX LIFE INSURANCE CO.LTD.-ULIF 01815/02/13 PENSPRESER 104-PENSION PRESERVER FUND",
+          "group": "MAX LIFE INSURANCE",
+          "shares": 862,
+          "sharesFormatted": "862",
+          "amountCr": 0.07,
+          "percent": 0.02
+        },
+        {
+          "name": "MAX LIFE INSURANCE CO.LTD.-ULIF 00625/11/05 PENSBALANC 104-PENSION BALANCED FUND",
+          "group": "MAX LIFE INSURANCE",
+          "shares": 862,
+          "sharesFormatted": "862",
+          "amountCr": 0.07,
+          "percent": 0.02
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 88596,
+          "sharesFormatted": "88,596",
+          "amountCr": 7.15,
+          "percent": 2.54
+        }
+      ],
+      "anchorShares": 3487717,
+      "totalShares": 11646246
     },
     {
       "companyName": "Dhoot Transmission Ltd.",
@@ -31984,7 +33847,586 @@
         "Indian Bank",
         "Options granted"
       ],
-      "preIpoWaca": 480.34
+      "preIpoWaca": 480.34,
+      "anchorInvestors": [
+        {
+          "name": "SBI MULTICAP FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 631465,
+          "sharesFormatted": "6,31,465",
+          "amountCr": 55,
+          "percent": 5.99
+        },
+        {
+          "name": "SBI AUTOMOTIVE OPPORTUNITIES FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 287028,
+          "sharesFormatted": "2,87,028",
+          "amountCr": 25,
+          "percent": 2.72
+        },
+        {
+          "name": "ICICI PRUDENTIAL SMALLCAP FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 823480,
+          "sharesFormatted": "8,23,480",
+          "amountCr": 71.73,
+          "percent": 7.81
+        },
+        {
+          "name": "ISIF EQUITY LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 31671,
+          "sharesFormatted": "31,671",
+          "amountCr": 2.76,
+          "percent": 0.3
+        },
+        {
+          "name": "ISIF EQUITY EX-TOP 100 LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 63342,
+          "sharesFormatted": "63,342",
+          "amountCr": 5.52,
+          "percent": 0.6
+        },
+        {
+          "name": "HDFC MANUFACTURING FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 229619,
+          "sharesFormatted": "2,29,619",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "HDFC BUSINESS CYCLE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 229619,
+          "sharesFormatted": "2,29,619",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "HDFC INNOVATION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 110211,
+          "sharesFormatted": "1,10,211",
+          "amountCr": 9.6,
+          "percent": 1.05
+        },
+        {
+          "name": "HDFC TRANSPORTATION & LOGISTICS FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 303110,
+          "sharesFormatted": "3,03,110",
+          "amountCr": 26.4,
+          "percent": 2.88
+        },
+        {
+          "name": "HDFC CONSUMPTION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 45934,
+          "sharesFormatted": "45,934",
+          "amountCr": 4,
+          "percent": 0.44
+        },
+        {
+          "name": "BLACKROCK GLOBAL FUNDS-INDIA FUND",
+          "group": "BLACKROCK",
+          "shares": 366945,
+          "sharesFormatted": "3,66,945",
+          "amountCr": 31.96,
+          "percent": 3.48
+        },
+        {
+          "name": "BLACKROCK EMERGING FRONTIERS MASTER FUND LTD.",
+          "group": "BLACKROCK",
+          "shares": 321929,
+          "sharesFormatted": "3,21,929",
+          "amountCr": 28.04,
+          "percent": 3.05
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 516664,
+          "sharesFormatted": "5,16,664",
+          "amountCr": 45,
+          "percent": 4.9
+        },
+        {
+          "name": "ABU DHABI INVESTMENT AUTHORITY-STABLE",
+          "group": "ABU DHABI INVESTMENT",
+          "shares": 401846,
+          "sharesFormatted": "4,01,846",
+          "amountCr": 35,
+          "percent": 3.81
+        },
+        {
+          "name": "ABU DHABI INVESTMENT AUTHORITY-MONSOON",
+          "group": "ABU DHABI INVESTMENT",
+          "shares": 172227,
+          "sharesFormatted": "1,72,227",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "AXIS MULTICAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 89539,
+          "sharesFormatted": "89,539",
+          "amountCr": 7.8,
+          "percent": 0.85
+        },
+        {
+          "name": "AXIS INDIA MANUFACTURING FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 44761,
+          "sharesFormatted": "44,761",
+          "amountCr": 3.9,
+          "percent": 0.42
+        },
+        {
+          "name": "AXIS INNOVATION FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 10319,
+          "sharesFormatted": "10,319",
+          "amountCr": 0.9,
+          "percent": 0.1
+        },
+        {
+          "name": "AXIS MULTI ASSET ALLOCATION FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 20655,
+          "sharesFormatted": "20,655",
+          "amountCr": 1.8,
+          "percent": 0.2
+        },
+        {
+          "name": "AXIS SMALL CAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 244613,
+          "sharesFormatted": "2,44,613",
+          "amountCr": 21.31,
+          "percent": 2.32
+        },
+        {
+          "name": "AXIS FLEXI CAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 106777,
+          "sharesFormatted": "1,06,777",
+          "amountCr": 9.3,
+          "percent": 1.01
+        },
+        {
+          "name": "MIRAE ASSET FOCUSED FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 516664,
+          "sharesFormatted": "5,16,664",
+          "amountCr": 45,
+          "percent": 4.9
+        },
+        {
+          "name": "NIPPON INDIA POWER & INFRA FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 172210,
+          "sharesFormatted": "1,72,210",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "NIPPON INDIA VALUE FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 172227,
+          "sharesFormatted": "1,72,227",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "GOVERNMENT PENSION FUND GLOBAL",
+          "shares": 172227,
+          "sharesFormatted": "1,72,227",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "PICTET-INDIAN EQUITIES",
+          "group": "PICTET",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "AMUNDI FUNDS NEW SILK ROAD",
+          "group": "AMUNDI",
+          "shares": 172227,
+          "sharesFormatted": "1,72,227",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "AMUNDI FUNDS-ASIA EQUITY FOCUS",
+          "group": "AMUNDI",
+          "shares": 57409,
+          "sharesFormatted": "57,409",
+          "amountCr": 5,
+          "percent": 0.54
+        },
+        {
+          "name": "ALLIANZ GLOBAL INVESTORS FUND-ALLIANZ INDIA EQUITY",
+          "group": "ALLIANZ",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "FRANKLIN INDIA BALANCED ADVANTAGE FUND",
+          "group": "FRANKLIN TEMPLETON MUTUAL FUND",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "TATA FLEXI CAP FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 96679,
+          "sharesFormatted": "96,679",
+          "amountCr": 8.42,
+          "percent": 0.92
+        },
+        {
+          "name": "TITANIUM HYBRID LONG-SHORT FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 12070,
+          "sharesFormatted": "12,070",
+          "amountCr": 1.05,
+          "percent": 0.11
+        },
+        {
+          "name": "TATA DIVIDEND YIELD FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 24208,
+          "sharesFormatted": "24,208",
+          "amountCr": 2.11,
+          "percent": 0.23
+        },
+        {
+          "name": "TATA ELSS FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 96679,
+          "sharesFormatted": "96,679",
+          "amountCr": 8.42,
+          "percent": 0.92
+        },
+        {
+          "name": "INVESCO INDIA MANUFACTURING FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 172227,
+          "sharesFormatted": "1,72,227",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "SUMMIT EQUITY LONG-SHORT FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 57409,
+          "sharesFormatted": "57,409",
+          "amountCr": 5,
+          "percent": 0.54
+        },
+        {
+          "name": "CANARA ROBECO MULTI CAP FUND",
+          "group": "CANARA ROBECO MUTUAL FUND",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "UTI MULTI CAP FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 91851,
+          "sharesFormatted": "91,851",
+          "amountCr": 8,
+          "percent": 0.87
+        },
+        {
+          "name": "UTI TRANSPORTATION & LOGISTICS FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 137785,
+          "sharesFormatted": "1,37,785",
+          "amountCr": 12,
+          "percent": 1.31
+        },
+        {
+          "name": "PGIM INDIA MULTI CAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 34459,
+          "sharesFormatted": "34,459",
+          "amountCr": 3,
+          "percent": 0.33
+        },
+        {
+          "name": "PGIM INDIA RETIREMENT FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 8109,
+          "sharesFormatted": "8,109",
+          "amountCr": 0.71,
+          "percent": 0.08
+        },
+        {
+          "name": "PGIM INDIA SMALL CAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 129659,
+          "sharesFormatted": "1,29,659",
+          "amountCr": 11.29,
+          "percent": 1.23
+        },
+        {
+          "name": "HSBC FLEXI CAP FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 54502,
+          "sharesFormatted": "54,502",
+          "amountCr": 4.75,
+          "percent": 0.52
+        },
+        {
+          "name": "HSBC SMALL CAP FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 54502,
+          "sharesFormatted": "54,502",
+          "amountCr": 4.75,
+          "percent": 0.52
+        },
+        {
+          "name": "HSBC AGGRESSIVE HYBRID FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 43605,
+          "sharesFormatted": "43,605",
+          "amountCr": 3.8,
+          "percent": 0.41
+        },
+        {
+          "name": "HSBC CONSUMPTION FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 19618,
+          "sharesFormatted": "19,618",
+          "amountCr": 1.71,
+          "percent": 0.19
+        },
+        {
+          "name": "SUNDARAM SMALL CAP FUND",
+          "group": "SUNDARAM MUTUAL FUND",
+          "shares": 172227,
+          "sharesFormatted": "1,72,227",
+          "amountCr": 15,
+          "percent": 1.63
+        },
+        {
+          "name": "SBI LIFE INSURANCE CO.LTD.",
+          "group": "SBI LIFE INSURANCE",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "ICICI PRUDENTIAL LIFE INSURANCE CO.LTD.",
+          "group": "ICICI PRUDENTIAL LIFE INSURANCE",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "MAX LIFE INSURANCE CO.LTD.-ULIF 01815/02/13 PENSPRESER 104-PENSION PRESERVER FUND",
+          "group": "MAX LIFE INSURANCE",
+          "shares": 1139,
+          "sharesFormatted": "1,139",
+          "amountCr": 0.1,
+          "percent": 0.01
+        },
+        {
+          "name": "MAX LIFE INSURANCE CO.LTD.-ULIF 00625/11/05 PENSBALANC 104-PENSION BALANCED FUND",
+          "group": "MAX LIFE INSURANCE",
+          "shares": 1139,
+          "sharesFormatted": "1,139",
+          "amountCr": 0.1,
+          "percent": 0.01
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULGF 00217/04/06 GRATBALANC 104-GROUP GRATUITY BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 2295,
+          "sharesFormatted": "2,295",
+          "amountCr": 0.2,
+          "percent": 0.02
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UMFPH-HIGH GROWTH PENSION FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 3434,
+          "sharesFormatted": "3,434",
+          "amountCr": 0.3,
+          "percent": 0.03
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UHG2S-INDIA CONSUMPTION OPPORTUNITIES FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 3434,
+          "sharesFormatted": "3,434",
+          "amountCr": 0.3,
+          "percent": 0.03
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UEGFH-HIGH GROWTH FUND II",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 36144,
+          "sharesFormatted": "36,144",
+          "amountCr": 3.15,
+          "percent": 0.34
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE CO.LTD.-ULIF00225/06/04 LIFEBALANC 104-BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 36142,
+          "sharesFormatted": "36,142",
+          "amountCr": 3.15,
+          "percent": 0.34
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-SUSTAINABLE EQUITY FUND-ULIF02505/10/21 SUSTAINEQU104",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 34442,
+          "sharesFormatted": "34,442",
+          "amountCr": 3,
+          "percent": 0.33
+        },
+        {
+          "name": "MOTILAL OSWAL LARGE CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 137785,
+          "sharesFormatted": "1,37,785",
+          "amountCr": 12,
+          "percent": 1.31
+        },
+        {
+          "name": "MOTILAL OSWAL INNOVATION OPPORTUNITIES FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 91851,
+          "sharesFormatted": "91,851",
+          "amountCr": 8,
+          "percent": 0.87
+        },
+        {
+          "name": "BANDHAN TRANSPORTATION & LOGISTICS FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 57409,
+          "sharesFormatted": "57,409",
+          "amountCr": 5,
+          "percent": 0.54
+        },
+        {
+          "name": "BANDHAN MIDCAP FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 57409,
+          "sharesFormatted": "57,409",
+          "amountCr": 5,
+          "percent": 0.54
+        },
+        {
+          "name": "BANDHAN LARGE CAP FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 57409,
+          "sharesFormatted": "57,409",
+          "amountCr": 5,
+          "percent": 0.54
+        },
+        {
+          "name": "EDELWEISS EQUITY SAVINGS FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 28713,
+          "sharesFormatted": "28,713",
+          "amountCr": 2.5,
+          "percent": 0.27
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 28696,
+          "sharesFormatted": "28,696",
+          "amountCr": 2.5,
+          "percent": 0.27
+        },
+        {
+          "name": "EDELWEISS BUSINESS CYCLE FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 114818,
+          "sharesFormatted": "1,14,818",
+          "amountCr": 10,
+          "percent": 1.09
+        },
+        {
+          "name": "3P INDIA EQUITY FUND I M",
+          "group": "3P INDIA",
+          "shares": 229636,
+          "sharesFormatted": "2,29,636",
+          "amountCr": 20,
+          "percent": 2.18
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 114818,
+          "sharesFormatted": "1,14,818",
+          "amountCr": 10,
+          "percent": 1.09
+        },
+        {
+          "name": "360 ONE LVF TREASURY SOLUTIONS FUND",
+          "group": "360 ONE",
+          "shares": 114818,
+          "sharesFormatted": "1,14,818",
+          "amountCr": 10,
+          "percent": 1.09
+        },
+        {
+          "name": "BAJAJ FINSERV CONSUMPTION FUND",
+          "group": "BAJAJ FINSERV MUTUAL FUND",
+          "shares": 87789,
+          "sharesFormatted": "87,789",
+          "amountCr": 7.65,
+          "percent": 0.83
+        },
+        {
+          "name": "TAKSH INDIA ENTERPRISING FUND",
+          "group": "TAKSH",
+          "shares": 87789,
+          "sharesFormatted": "87,789",
+          "amountCr": 7.65,
+          "percent": 0.83
+        },
+        {
+          "name": "CHARTERED FINANCE & LEASING LTD.",
+          "group": "CHARTERED FINANCE & LEASING",
+          "shares": 87789,
+          "sharesFormatted": "87,789",
+          "amountCr": 7.65,
+          "percent": 0.83
+        }
+      ],
+      "anchorShares": 10542657,
+      "totalShares": 35218047
     },
     {
       "companyName": "Technocraft Ventures Ltd.",
@@ -32022,7 +34464,43 @@
         "Kartikey Tyagi",
         "Sanjay Tyagi"
       ],
-      "preIpoWaca": 121.76
+      "preIpoWaca": 121.76,
+      "anchorInvestors": [
+        {
+          "name": "LRSD SECURITIES PVT.LTD.",
+          "group": "LRSD SECURITIES",
+          "shares": 1197810,
+          "sharesFormatted": "11,97,810",
+          "amountCr": 25.39,
+          "percent": 33.61
+        },
+        {
+          "name": "VIKASA INDIA EIF I FUND-SHARE CLASS P",
+          "group": "VIKASA",
+          "shares": 945000,
+          "sharesFormatted": "9,45,000",
+          "amountCr": 20.03,
+          "percent": 26.52
+        },
+        {
+          "name": "NAKSHATRA BHARAT VANTAGE FUND",
+          "group": "NAKSHATRA",
+          "shares": 710500,
+          "sharesFormatted": "7,10,500",
+          "amountCr": 15.06,
+          "percent": 19.94
+        },
+        {
+          "name": "VENUS INVESTMENTS VCC-VENUS STELLAR FUND",
+          "group": "VENUS INVESTMENTS",
+          "shares": 710500,
+          "sharesFormatted": "7,10,500",
+          "amountCr": 15.06,
+          "percent": 19.94
+        }
+      ],
+      "anchorShares": 3563810,
+      "totalShares": 11881000
     },
     {
       "companyName": "LEAP India Ltd.",
@@ -32099,7 +34577,265 @@
         "Vasudha Dudani,",
         "India Growth Fund,",
         "First Bridge India Growth Fund"
-      ]
+      ],
+      "anchorInvestors": [
+        {
+          "name": "SMALLCAP WORLD FUND,INC.",
+          "group": "SMALLCAP WORLD FUND",
+          "shares": 10062136,
+          "sharesFormatted": "1,00,62,136",
+          "amountCr": 159.99,
+          "percent": 21.51
+        },
+        {
+          "name": "MONETARY AUTHORITY OF SINGAPORE",
+          "shares": 3458354,
+          "sharesFormatted": "34,58,354",
+          "amountCr": 54.99,
+          "percent": 7.39
+        },
+        {
+          "name": "AXIS FLEXI CAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 4716168,
+          "sharesFormatted": "47,16,168",
+          "amountCr": 74.99,
+          "percent": 10.08
+        },
+        {
+          "name": "MOTILAL OSWAL CONSUMPTION FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 943290,
+          "sharesFormatted": "9,43,290",
+          "amountCr": 15,
+          "percent": 2.02
+        },
+        {
+          "name": "MOTILAL OSWAL LARGE CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 2201292,
+          "sharesFormatted": "22,01,292",
+          "amountCr": 35,
+          "percent": 4.71
+        },
+        {
+          "name": "MORGAN STANLEY INDIA INVESTMENT FUND,INC.",
+          "group": "MORGAN STANLEY",
+          "shares": 1291842,
+          "sharesFormatted": "12,91,842",
+          "amountCr": 20.54,
+          "percent": 2.76
+        },
+        {
+          "name": "GREATER INDIA PORTFOLIO",
+          "group": "GREATER INDIA",
+          "shares": 884728,
+          "sharesFormatted": "8,84,728",
+          "amountCr": 14.07,
+          "percent": 1.89
+        },
+        {
+          "name": "MORGAN STANLEY INVESTMENT FUNDS INDIAN EQUITY FUND",
+          "group": "MORGAN STANLEY",
+          "shares": 804546,
+          "sharesFormatted": "8,04,546",
+          "amountCr": 12.79,
+          "percent": 1.72
+        },
+        {
+          "name": "GOVERNMENT PENSION FUND GLOBAL",
+          "shares": 2980270,
+          "sharesFormatted": "29,80,270",
+          "amountCr": 47.39,
+          "percent": 6.37
+        },
+        {
+          "name": "HABROK INDIA MASTER LP",
+          "group": "HABROK",
+          "shares": 1231212,
+          "sharesFormatted": "12,31,212",
+          "amountCr": 19.58,
+          "percent": 2.63
+        },
+        {
+          "name": "CASSINI PARTNERS, L.P.",
+          "group": "HABROK",
+          "shares": 780576,
+          "sharesFormatted": "7,80,576",
+          "amountCr": 12.41,
+          "percent": 1.67
+        },
+        {
+          "name": "PRUDENTIAL ASSURANCE CO.LTD.,THE",
+          "group": "PRUDENTIAL",
+          "shares": 2011788,
+          "sharesFormatted": "20,11,788",
+          "amountCr": 31.99,
+          "percent": 4.3
+        },
+        {
+          "name": "BANK OF INDIA FLEXI CAP FUND",
+          "group": "BANK OF INDIA MUTUAL FUND",
+          "shares": 1634284,
+          "sharesFormatted": "16,34,284",
+          "amountCr": 25.99,
+          "percent": 3.49
+        },
+        {
+          "name": "BANK OF INDIA MULTI CAP FUND",
+          "group": "BANK OF INDIA MUTUAL FUND",
+          "shares": 628954,
+          "sharesFormatted": "6,28,954",
+          "amountCr": 10,
+          "percent": 1.34
+        },
+        {
+          "name": "JM FLEXICAP FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 1132042,
+          "sharesFormatted": "11,32,042",
+          "amountCr": 18,
+          "percent": 2.42
+        },
+        {
+          "name": "JM SMALL CAP FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 314430,
+          "sharesFormatted": "3,14,430",
+          "amountCr": 5,
+          "percent": 0.67
+        },
+        {
+          "name": "JM LARGE & MIDCAP FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 251544,
+          "sharesFormatted": "2,51,544",
+          "amountCr": 4,
+          "percent": 0.54
+        },
+        {
+          "name": "JM MIDCAP FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 377316,
+          "sharesFormatted": "3,77,316",
+          "amountCr": 6,
+          "percent": 0.81
+        },
+        {
+          "name": "JM AGGRESSIVE HYBRID FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 188752,
+          "sharesFormatted": "1,88,752",
+          "amountCr": 3,
+          "percent": 0.4
+        },
+        {
+          "name": "ITI MULTI CAP FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 565974,
+          "sharesFormatted": "5,65,974",
+          "amountCr": 9,
+          "percent": 1.21
+        },
+        {
+          "name": "ITI SMALL CAP FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 1132136,
+          "sharesFormatted": "11,32,136",
+          "amountCr": 18,
+          "percent": 2.42
+        },
+        {
+          "name": "ITI FLEXI CAP FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 565974,
+          "sharesFormatted": "5,65,974",
+          "amountCr": 9,
+          "percent": 1.21
+        },
+        {
+          "name": "LIONTRUST INVESTMENT FUNDS I-LIONTRUST INDIA FUND",
+          "group": "LION",
+          "shares": 314524,
+          "sharesFormatted": "3,14,524",
+          "amountCr": 5,
+          "percent": 0.67
+        },
+        {
+          "name": "AMUNDI FUNDS NEW SILK ROAD",
+          "group": "AMUNDI",
+          "shares": 2011788,
+          "sharesFormatted": "20,11,788",
+          "amountCr": 31.99,
+          "percent": 4.3
+        },
+        {
+          "name": "GROWW MULTICAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 628484,
+          "sharesFormatted": "6,28,484",
+          "amountCr": 9.99,
+          "percent": 1.34
+        },
+        {
+          "name": "GROWW SMALL CAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 314242,
+          "sharesFormatted": "3,14,242",
+          "amountCr": 5,
+          "percent": 0.67
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE INSURANCE CO.LTD.",
+          "group": "ADITYA BIRLA SUN LIFE INSURANCE",
+          "shares": 3140540,
+          "sharesFormatted": "31,40,540",
+          "amountCr": 49.93,
+          "percent": 6.72
+        },
+        {
+          "name": "GOLDMAN SACHS INVESTMENTS (MAURITIUS) I LTD.",
+          "group": "GOLDMAN SACHS",
+          "shares": 314524,
+          "sharesFormatted": "3,14,524",
+          "amountCr": 5,
+          "percent": 0.67
+        },
+        {
+          "name": "ALPHAMINE ABSOLUTE RETURN FUND",
+          "group": "ALPHAMINE",
+          "shares": 314524,
+          "sharesFormatted": "3,14,524",
+          "amountCr": 5,
+          "percent": 0.67
+        },
+        {
+          "name": "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD.",
+          "group": "CITIGROUP",
+          "shares": 314524,
+          "sharesFormatted": "3,14,524",
+          "amountCr": 5,
+          "percent": 0.67
+        },
+        {
+          "name": "SOCIETE GENERALE-ODI",
+          "group": "SOCIETE GENERAL",
+          "shares": 943572,
+          "sharesFormatted": "9,43,572",
+          "amountCr": 15,
+          "percent": 2.02
+        },
+        {
+          "name": "BNP PARIBAS FINANCIAL MARKETS",
+          "group": "BNP PARIBAS",
+          "shares": 314524,
+          "sharesFormatted": "3,14,524",
+          "amountCr": 5,
+          "percent": 0.67
+        }
+      ],
+      "anchorShares": 46768854,
+      "totalShares": 155974840
     },
     {
       "companyName": "Optimystix Entertainment India Ltd.",
@@ -32147,7 +34883,115 @@
         "Ankit Agarwal",
         "Rahul Agarwal",
         "Vipul D shah"
-      ]
+      ],
+      "anchorInvestors": [
+        {
+          "name": "BHARAT EMERGING & STRATEGIC TECHNOLOGY FUND",
+          "group": "BHARAT INNOVATION",
+          "shares": 285600,
+          "sharesFormatted": "2,85,600",
+          "amountCr": 5,
+          "percent": 17.1
+        },
+        {
+          "name": "BIRCHWOOD MULTI STRATEGY FUND OPEN-ENDED PCC LTD.-BIRCHWOOD GLOBAL ALPHA FUND",
+          "group": "BIRCHWOOD",
+          "shares": 285600,
+          "sharesFormatted": "2,85,600",
+          "amountCr": 5,
+          "percent": 17.1
+        },
+        {
+          "name": "NORTH STAR OPPORTUNITIES FUND VCC-BULL VALUE INCORPORATED VCC SUB FUND",
+          "group": "NORTH STAR",
+          "shares": 68800,
+          "sharesFormatted": "68,800",
+          "amountCr": 1.2,
+          "percent": 4.12
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 171200,
+          "sharesFormatted": "1,71,200",
+          "amountCr": 3,
+          "percent": 10.25
+        },
+        {
+          "name": "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES",
+          "group": "VIKASA",
+          "shares": 171200,
+          "sharesFormatted": "1,71,200",
+          "amountCr": 3,
+          "percent": 10.25
+        },
+        {
+          "name": "VENTUREX FUND I",
+          "group": "VENTUREX",
+          "shares": 114400,
+          "sharesFormatted": "1,14,400",
+          "amountCr": 2,
+          "percent": 6.85
+        },
+        {
+          "name": "ASAS GLOBAL FUND INCORPORATED VCC SUB FUND",
+          "group": "ASAS GLOBAL",
+          "shares": 114400,
+          "sharesFormatted": "1,14,400",
+          "amountCr": 2,
+          "percent": 6.85
+        },
+        {
+          "name": "ASHIKA GLOBAL FINANCE PVT.LTD.",
+          "group": "ASHIKA GLOBAL SECURITIES",
+          "shares": 114400,
+          "sharesFormatted": "1,14,400",
+          "amountCr": 2,
+          "percent": 6.85
+        },
+        {
+          "name": "CP Capital Ltd.",
+          "group": "CP CAPITAL",
+          "shares": 114400,
+          "sharesFormatted": "1,14,400",
+          "amountCr": 2,
+          "percent": 6.85
+        },
+        {
+          "name": "PARADISE MOON INVESTMENT FUND I",
+          "group": "PARADISE MOON",
+          "shares": 57600,
+          "sharesFormatted": "57,600",
+          "amountCr": 1.01,
+          "percent": 3.45
+        },
+        {
+          "name": "VIJIT GROWTH FUND",
+          "group": "VIJIT",
+          "shares": 57600,
+          "sharesFormatted": "57,600",
+          "amountCr": 1.01,
+          "percent": 3.45
+        },
+        {
+          "name": "SERENE ALPHA CAPITAL TRUST",
+          "group": "SERENE ALPHA",
+          "shares": 57600,
+          "sharesFormatted": "57,600",
+          "amountCr": 1.01,
+          "percent": 3.45
+        },
+        {
+          "name": "STRATEGIC SIXTH SENSE CAPITAL FUND",
+          "group": "STRATEGIC SIXTH SENSE",
+          "shares": 57600,
+          "sharesFormatted": "57,600",
+          "amountCr": 1.01,
+          "percent": 3.45
+        }
+      ],
+      "anchorShares": 1670400,
+      "totalShares": 6200000
     },
     {
       "companyName": "LAPL Automotive Ltd.",
@@ -32181,7 +35025,75 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/lapl_automotive_ltd_bse_sme_rhp_1785571147.pdf",
       "preIpoInvestors": [
         "Nyl Electric Pvt Ltd"
-      ]
+      ],
+      "anchorInvestors": [
+        {
+          "name": "KRS GROWTH OPPORTUNITIES FUND",
+          "group": "KRS VISION TRUST",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        },
+        {
+          "name": "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES",
+          "group": "VIKASA",
+          "shares": 229200,
+          "sharesFormatted": "2,29,200",
+          "amountCr": 2.15,
+          "percent": 23.46
+        },
+        {
+          "name": "PESB ALPHA FUND",
+          "group": "PESB CAPITAL",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        },
+        {
+          "name": "360 ONE LVF TREASURY SOLUTIONS FUND",
+          "group": "360 ONE",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        },
+        {
+          "name": "LORDS MULTIGROWTH FUND",
+          "group": "LORDS MULTIGROWTH",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        },
+        {
+          "name": "ELITE CAPITAL FUND",
+          "group": "ELITE CAPITAL",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        },
+        {
+          "name": "ARROW EMERGING OPPORTUNITIES FUND LTD.",
+          "group": "ARROW",
+          "shares": 106800,
+          "sharesFormatted": "1,06,800",
+          "amountCr": 1,
+          "percent": 10.93
+        }
+      ],
+      "anchorShares": 976800,
+      "totalShares": 3446400
     },
     {
       "companyName": "Ardee Industries Ltd.",
@@ -32224,7 +35136,66 @@
         "D.P Auto Industries Private Limited",
         "Private Limited"
       ],
-      "preIpoWaca": 4.41
+      "preIpoWaca": 4.41,
+      "anchorInvestors": [
+        {
+          "name": "BANK OF INDIA SMALL CAP FUND",
+          "group": "BANK OF INDIA MUTUAL FUND",
+          "shares": 4717147,
+          "sharesFormatted": "47,17,147",
+          "amountCr": 25,
+          "percent": 19.57
+        },
+        {
+          "name": "BENGAL FINANCE & INVESTMENT PVT.LTD.",
+          "group": "BENGAL FINANCE & INVESTMENT",
+          "shares": 4717147,
+          "sharesFormatted": "47,17,147",
+          "amountCr": 25,
+          "percent": 19.57
+        },
+        {
+          "name": "WINRO COMMERCIAL (INDIA) LTD.",
+          "group": "WINRO COMMERCIAL",
+          "shares": 4717147,
+          "sharesFormatted": "47,17,147",
+          "amountCr": 25,
+          "percent": 19.57
+        },
+        {
+          "name": "BHARAT VALUE FUND",
+          "group": "BHARAT VALUE",
+          "shares": 3773830,
+          "sharesFormatted": "37,73,830",
+          "amountCr": 20,
+          "percent": 15.66
+        },
+        {
+          "name": "INDIA MAX INVESTMENT FUND LTD.",
+          "shares": 3773830,
+          "sharesFormatted": "37,73,830",
+          "amountCr": 20,
+          "percent": 15.66
+        },
+        {
+          "name": "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND",
+          "group": "COGNIZANT",
+          "shares": 1203241,
+          "sharesFormatted": "12,03,241",
+          "amountCr": 6.38,
+          "percent": 4.99
+        },
+        {
+          "name": "IMAP INDIA CAPITAL INVESTMENT TRUST-CATALYST NEW INDIA FUND",
+          "group": "IMAP INDIA",
+          "shares": 1203242,
+          "sharesFormatted": "12,03,242",
+          "amountCr": 6.38,
+          "percent": 4.99
+        }
+      ],
+      "anchorShares": 24105584,
+      "totalShares": 80351950
     },
     {
       "companyName": "Aegeus Technologies Ltd.",
@@ -32256,6 +35227,26 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_capital_structure_1785303103.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_anchor_1785764651.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_rhp_1785302965.pdf",
+      "anchorInvestors": [
+        {
+          "name": "AARTH AIF GROWTH FUND",
+          "group": "AARTH",
+          "shares": 286800,
+          "sharesFormatted": "2,86,800",
+          "amountCr": 3.01,
+          "percent": 50.1
+        },
+        {
+          "name": "M7 GLOBAL FUND PCC-CELL DEWCA FUND",
+          "group": "M7 GLOBAL",
+          "shares": 285600,
+          "sharesFormatted": "2,85,600",
+          "amountCr": 3,
+          "percent": 49.9
+        }
+      ],
+      "anchorShares": 572400,
+      "totalShares": 2258400,
       "preIpoInvestors": [
         "Ramesh Chandra",
         "JM Global equities Private Limited",
@@ -32321,7 +35312,161 @@
         "Nimishkumar Rameshchandra Vashi",
         "Arun Kumar Kothari",
         "this Offer"
-      ]
+      ],
+      "anchorInvestors": [
+        {
+          "name": "ABAKKUS VENTURE OPPORTUNITIES FUND",
+          "group": "ABAKKUS",
+          "shares": 259600,
+          "sharesFormatted": "2,59,600",
+          "amountCr": 7.01,
+          "percent": 13.84
+        },
+        {
+          "name": "CARNELIAN AIF CATEGORY I TRUST-Scheme I",
+          "group": "CARNELIAN",
+          "shares": 259600,
+          "sharesFormatted": "2,59,600",
+          "amountCr": 7.01,
+          "percent": 13.84
+        },
+        {
+          "name": "MOTILAL OSWAL FINVEST LTD.",
+          "group": "MOTILAL OSWAL",
+          "shares": 185200,
+          "sharesFormatted": "1,85,200",
+          "amountCr": 5,
+          "percent": 9.87
+        },
+        {
+          "name": "HEM GROWTH OPPORTUNITIES FUND",
+          "shares": 185200,
+          "sharesFormatted": "1,85,200",
+          "amountCr": 5,
+          "percent": 9.87
+        },
+        {
+          "name": "INDIA MAX INVESTMENT FUND LTD.",
+          "shares": 130000,
+          "sharesFormatted": "1,30,000",
+          "amountCr": 3.51,
+          "percent": 6.93
+        },
+        {
+          "name": "360 ONE LVF TREASURY SOLUTIONS FUND",
+          "group": "360 ONE",
+          "shares": 74400,
+          "sharesFormatted": "74,400",
+          "amountCr": 2.01,
+          "percent": 3.97
+        },
+        {
+          "name": "PLUTUS INVESTMENT TRUST-PLUTUS EQUITY INVESTMENTS SERIES",
+          "group": "PLUTUS",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 74400,
+          "sharesFormatted": "74,400",
+          "amountCr": 2.01,
+          "percent": 3.97
+        },
+        {
+          "name": "AARTH AIF GROWTH FUND",
+          "group": "AARTH",
+          "shares": 74400,
+          "sharesFormatted": "74,400",
+          "amountCr": 2.01,
+          "percent": 3.97
+        },
+        {
+          "name": "MINT FOCUSED GROWTH FUND PCC-CELL 1",
+          "group": "MINT FOCUSED",
+          "shares": 186400,
+          "sharesFormatted": "1,86,400",
+          "amountCr": 5.03,
+          "percent": 9.94
+        },
+        {
+          "name": "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND",
+          "group": "NAV CAPITAL",
+          "shares": 74400,
+          "sharesFormatted": "74,400",
+          "amountCr": 2.01,
+          "percent": 3.97
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 74400,
+          "sharesFormatted": "74,400",
+          "amountCr": 2.01,
+          "percent": 3.97
+        },
+        {
+          "name": "EVERGROW CAPITAL OPPORTUNITIES FUND",
+          "group": "EVERGROW",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "INNOVATIVE VISION FUND",
+          "group": "INNOVATIVE VISION",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "LRSD SECURITIES PVT.LTD.",
+          "group": "LRSD SECURITIES",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "RELIGO COMMODITIES VENTURES TRUST-RELIGO COMMODITIES VENTURE FUND",
+          "group": "RELIGO",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "SB OPPORTUNITIES FUND II",
+          "group": "SB OPPORTUNITIES FUND",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund",
+          "group": "TATTVAM",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        },
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 37200,
+          "sharesFormatted": "37,200",
+          "amountCr": 1,
+          "percent": 1.98
+        }
+      ],
+      "anchorShares": 1875600,
+      "totalShares": 6585600
     },
     {
       "companyName": "G.V.Electricals Ltd. (G.V. Electricals IPO)",
@@ -32349,7 +35494,51 @@
         "originalDate": "2027-08-12T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "MOTILAL OSWAL FINVEST LTD.",
+          "group": "MOTILAL OSWAL",
+          "shares": 386000,
+          "sharesFormatted": "3,86,000",
+          "amountCr": 5.02,
+          "percent": 43.47
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 155000,
+          "sharesFormatted": "1,55,000",
+          "amountCr": 2.02,
+          "percent": 17.45
+        },
+        {
+          "name": "VIKASA INDIA EIF I FUND-INCUBE GLOBAL OPPORTUNITIES",
+          "group": "VIKASA",
+          "shares": 154000,
+          "sharesFormatted": "1,54,000",
+          "amountCr": 2,
+          "percent": 17.34
+        },
+        {
+          "name": "COGNIZANT CAPITAL DYNAMIC OPPORTUNITIES FUND",
+          "group": "COGNIZANT",
+          "shares": 116000,
+          "sharesFormatted": "1,16,000",
+          "amountCr": 1.51,
+          "percent": 13.06
+        },
+        {
+          "name": "KHANDELWAL FINANCE PVT.LTD.",
+          "group": "KHANDELWAL FINANCE",
+          "shares": 77000,
+          "sharesFormatted": "77,000",
+          "amountCr": 1,
+          "percent": 8.67
+        }
+      ],
+      "anchorShares": 888000,
+      "totalShares": 3250000
     },
     {
       "companyName": "Fusion Klassroom Edutech Ltd.",
@@ -32377,7 +35566,59 @@
         "originalDate": "2027-08-07T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "SUBHKAM VENTURES (I) PVT.LTD.",
+          "group": "SUBHKAM VENTURES",
+          "shares": 188800,
+          "sharesFormatted": "1,88,800",
+          "amountCr": 3,
+          "percent": 27.1
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-ELITE CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 126400,
+          "sharesFormatted": "1,26,400",
+          "amountCr": 2.01,
+          "percent": 18.14
+        },
+        {
+          "name": "KUBER INDIA OPPORTUNITIES FUND",
+          "group": "KUBER INDIA",
+          "shares": 126400,
+          "sharesFormatted": "1,26,400",
+          "amountCr": 2.01,
+          "percent": 18.14
+        },
+        {
+          "name": "EKAMYA PRAGATI SCHEME 1",
+          "group": "EKAMYA",
+          "shares": 126400,
+          "sharesFormatted": "1,26,400",
+          "amountCr": 2.01,
+          "percent": 18.14
+        },
+        {
+          "name": "MILLTRUST INTERNATIONAL INVESTMENTS SPC-GIS NARNOLIA EMERGING INDIA FUND SP",
+          "group": "MILLTRUST",
+          "shares": 64000,
+          "sharesFormatted": "64,000",
+          "amountCr": 1.02,
+          "percent": 9.18
+        },
+        {
+          "name": "NARNOLIA INDIA OPPORTUNITY FUND",
+          "group": "NARNOLIA",
+          "shares": 64800,
+          "sharesFormatted": "64,800",
+          "amountCr": 1.03,
+          "percent": 9.3
+        }
+      ],
+      "anchorShares": 696800,
+      "totalShares": 2455200
     },
     {
       "companyName": "Juniper Green Energy Ltd.",
@@ -32408,7 +35649,259 @@
       },
       "capitalStructureUrl": null,
       "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/jul-2026/1785231174698.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "WHITEOAK CAPITAL FLEXI CAP FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 711084,
+          "sharesFormatted": "7,11,084",
+          "amountCr": 16,
+          "percent": 2.97
+        },
+        {
+          "name": "WHITEOAK CAPITAL MID CAP FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 888888,
+          "sharesFormatted": "8,88,888",
+          "amountCr": 20,
+          "percent": 3.71
+        },
+        {
+          "name": "WHITEOAK CAPITAL ELSS TAX SAVER FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 44418,
+          "sharesFormatted": "44,418",
+          "amountCr": 1,
+          "percent": 0.19
+        },
+        {
+          "name": "WHITEOAK CAPITAL MULTI CAP FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 333366,
+          "sharesFormatted": "3,33,366",
+          "amountCr": 7.5,
+          "percent": 1.39
+        },
+        {
+          "name": "WHITEOAK CAPITAL BALANCED HYBRID FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 62238,
+          "sharesFormatted": "62,238",
+          "amountCr": 1.4,
+          "percent": 0.26
+        },
+        {
+          "name": "WHITEOAK CAPITAL AGGRESSIVE HYBRID FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 137808,
+          "sharesFormatted": "1,37,808",
+          "amountCr": 3.1,
+          "percent": 0.57
+        },
+        {
+          "name": "WHITEOAK CAPITAL BALANCED ADVANTAGE FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 933306,
+          "sharesFormatted": "9,33,306",
+          "amountCr": 21,
+          "percent": 3.89
+        },
+        {
+          "name": "WHITEOAK CAPITAL MULTI ASSET ALLOCATION FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 444444,
+          "sharesFormatted": "4,44,444",
+          "amountCr": 10,
+          "percent": 1.85
+        },
+        {
+          "name": "NIPPON INDIA SMALL CAP FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 2311056,
+          "sharesFormatted": "23,11,056",
+          "amountCr": 52,
+          "percent": 9.64
+        },
+        {
+          "name": "NIPPON INDIA POWER & INFRA FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 1244496,
+          "sharesFormatted": "12,44,496",
+          "amountCr": 28,
+          "percent": 5.19
+        },
+        {
+          "name": "ICICI PRUDENTIAL ENERGY OPPORTUNITIES FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 1555554,
+          "sharesFormatted": "15,55,554",
+          "amountCr": 35,
+          "percent": 6.49
+        },
+        {
+          "name": "ISIF EQUITY LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 222222,
+          "sharesFormatted": "2,22,222",
+          "amountCr": 5,
+          "percent": 0.93
+        },
+        {
+          "name": "ICICI PRUDENTIAL INFRASTRUCTURE FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 1777776,
+          "sharesFormatted": "17,77,776",
+          "amountCr": 40,
+          "percent": 7.42
+        },
+        {
+          "name": "SBI INFRASTRUCTURE FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 2222286,
+          "sharesFormatted": "22,22,286",
+          "amountCr": 50,
+          "percent": 9.27
+        },
+        {
+          "name": "SBI ENERGY OPPORTUNITIES FUND",
+          "group": "SBI MUTUAL FUND",
+          "shares": 1333266,
+          "sharesFormatted": "13,33,266",
+          "amountCr": 30,
+          "percent": 5.56
+        },
+        {
+          "name": "ABU DHABI INVESTMENT AUTHORITY-STABLE",
+          "group": "ABU DHABI INVESTMENT",
+          "shares": 3555552,
+          "sharesFormatted": "35,55,552",
+          "amountCr": 80,
+          "percent": 14.83
+        },
+        {
+          "name": "MIRAE ASSET LARGE CAP FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 1327062,
+          "sharesFormatted": "13,27,062",
+          "amountCr": 29.86,
+          "percent": 5.54
+        },
+        {
+          "name": "HSBC FLEXI CAP FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 400113,
+          "sharesFormatted": "4,00,113",
+          "amountCr": 9,
+          "percent": 1.67
+        },
+        {
+          "name": "HSBC ELSS TAX SAVER FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 280104,
+          "sharesFormatted": "2,80,104",
+          "amountCr": 6.3,
+          "percent": 1.17
+        },
+        {
+          "name": "HSBC AGGRESSIVE HYBRID FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 80058,
+          "sharesFormatted": "80,058",
+          "amountCr": 1.8,
+          "percent": 0.33
+        },
+        {
+          "name": "HSBC INFRASTRUCTURE FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 100056,
+          "sharesFormatted": "1,00,056",
+          "amountCr": 2.25,
+          "percent": 0.42
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 687984,
+          "sharesFormatted": "6,87,984",
+          "amountCr": 15.48,
+          "percent": 2.87
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 687984,
+          "sharesFormatted": "6,87,984",
+          "amountCr": 15.48,
+          "percent": 2.87
+        },
+        {
+          "name": "DSP NATURAL RESOURCES & NEW ENERGY FUND",
+          "group": "DSP MUTUAL FUND",
+          "shares": 649308,
+          "sharesFormatted": "6,49,308",
+          "amountCr": 14.61,
+          "percent": 2.71
+        },
+        {
+          "name": "MOTILAL OSWAL LARGE CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 649242,
+          "sharesFormatted": "6,49,242",
+          "amountCr": 14.61,
+          "percent": 2.71
+        },
+        {
+          "name": "TATA AIG GENERAL INSURANCE CO.LTD.",
+          "group": "TATA AIG GENERAL INSURANCE",
+          "shares": 444510,
+          "sharesFormatted": "4,44,510",
+          "amountCr": 10,
+          "percent": 1.85
+        },
+        {
+          "name": "BNP PARIBAS FUNDS EMERGING MARKETS CLIMATE SOLUTIONS",
+          "group": "BNP PARIBAS",
+          "shares": 222288,
+          "sharesFormatted": "2,22,288",
+          "amountCr": 5,
+          "percent": 0.93
+        },
+        {
+          "name": "3PIM INDIA EQUITY (IFSC) FUND",
+          "group": "3PIM",
+          "shares": 222288,
+          "sharesFormatted": "2,22,288",
+          "amountCr": 5,
+          "percent": 0.93
+        },
+        {
+          "name": "EDELWEISS EQUITY SAVINGS FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 111144,
+          "sharesFormatted": "1,11,144",
+          "amountCr": 2.5,
+          "percent": 0.46
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 111144,
+          "sharesFormatted": "1,11,144",
+          "amountCr": 2.5,
+          "percent": 0.46
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 222288,
+          "sharesFormatted": "2,22,288",
+          "amountCr": 5,
+          "percent": 0.93
+        }
+      ],
+      "anchorShares": 23973333,
+      "totalShares": 80009150
     },
     {
       "companyName": "Oneindig Technologies Ltd.",
@@ -32436,7 +35929,35 @@
         "originalDate": "2027-08-06T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "LRSD SECURITIES PVT.LTD.",
+          "group": "LRSD SECURITIES",
+          "shares": 405600,
+          "sharesFormatted": "4,05,600",
+          "amountCr": 3.89,
+          "percent": 49.71
+        },
+        {
+          "name": "RADIANT GLOBAL FUND-CLASS B PARTICIPATING SHARES",
+          "group": "RADIANT GLOBAL",
+          "shares": 205200,
+          "sharesFormatted": "2,05,200",
+          "amountCr": 1.97,
+          "percent": 25.15
+        },
+        {
+          "name": "LONGTHRIVE CAPITAL VCC-TRENDVIEW CAPITAL FUND",
+          "group": "LONGTHRIVE CAPITAL VCC",
+          "shares": 205200,
+          "sharesFormatted": "2,05,200",
+          "amountCr": 1.97,
+          "percent": 25.15
+        }
+      ],
+      "anchorShares": 816000,
+      "totalShares": 2880000
     },
     {
       "companyName": "MV Electrosystems Ltd.",
@@ -32464,7 +35985,121 @@
         "originalDate": "2027-02-06T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "KOTAK INFRASTRUCTURE & ECONOMIC REFORM FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 561408,
+          "sharesFormatted": "5,61,408",
+          "amountCr": 23.86,
+          "percent": 18.28
+        },
+        {
+          "name": "KOTAK MANUFACTURE IN INDIA FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 336872,
+          "sharesFormatted": "3,36,872",
+          "amountCr": 14.32,
+          "percent": 10.97
+        },
+        {
+          "name": "KOTAK SPECIAL OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 336838,
+          "sharesFormatted": "3,36,838",
+          "amountCr": 14.32,
+          "percent": 10.97
+        },
+        {
+          "name": "SHUBHKAM VENTURES (INDIA) PVT.LTD.",
+          "group": "SHUBHKAM VENTURES",
+          "shares": 423538,
+          "sharesFormatted": "4,23,538",
+          "amountCr": 18,
+          "percent": 13.79
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 235293,
+          "sharesFormatted": "2,35,293",
+          "amountCr": 10,
+          "percent": 7.66
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 170578,
+          "sharesFormatted": "1,70,578",
+          "amountCr": 7.25,
+          "percent": 5.56
+        },
+        {
+          "name": "FOUNDERS COLLECTIVE FUND",
+          "shares": 164730,
+          "sharesFormatted": "1,64,730",
+          "amountCr": 7,
+          "percent": 5.36
+        },
+        {
+          "name": "360 ONE PRIME LTD.",
+          "shares": 117674,
+          "sharesFormatted": "1,17,674",
+          "amountCr": 5,
+          "percent": 3.83
+        },
+        {
+          "name": "360 ONE LVF TREASURY SOLUTIONS FUND",
+          "group": "360 ONE",
+          "shares": 117674,
+          "sharesFormatted": "1,17,674",
+          "amountCr": 5,
+          "percent": 3.83
+        },
+        {
+          "name": "ASHIKA GLOBAL FINANCE PVT.LTD.",
+          "group": "ASHIKA GLOBAL SECURITIES",
+          "shares": 117674,
+          "sharesFormatted": "1,17,674",
+          "amountCr": 5,
+          "percent": 3.83
+        },
+        {
+          "name": "ASHIKA INDIA SELECT FUND",
+          "group": "ASHIKA",
+          "shares": 117674,
+          "sharesFormatted": "1,17,674",
+          "amountCr": 5,
+          "percent": 3.83
+        },
+        {
+          "name": "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund",
+          "group": "TATTVAM",
+          "shares": 135286,
+          "sharesFormatted": "1,35,286",
+          "amountCr": 5.75,
+          "percent": 4.41
+        },
+        {
+          "name": "VENTUREX FUND I",
+          "group": "VENTUREX",
+          "shares": 117674,
+          "sharesFormatted": "1,17,674",
+          "amountCr": 5,
+          "percent": 3.83
+        },
+        {
+          "name": "MERU INVESTMENT FUND PCC-CELL 1",
+          "group": "MERU INVESTMENT",
+          "shares": 117674,
+          "sharesFormatted": "1,17,674",
+          "amountCr": 5,
+          "percent": 3.83
+        }
+      ],
+      "anchorShares": 3070587,
+      "totalShares": 6823528
     },
     {
       "companyName": "Dhaval Packaging Ltd.",
@@ -32494,7 +36129,51 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_290720261726.zip",
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "CARNELIAN AIF CATEGORY I TRUST-Scheme I",
+          "group": "CARNELIAN",
+          "shares": 516000,
+          "sharesFormatted": "5,16,000",
+          "amountCr": 5.01,
+          "percent": 50.06
+        },
+        {
+          "name": "SAINT CAPITAL FUND",
+          "group": "SAINT CAPITAL",
+          "shares": 205200,
+          "sharesFormatted": "2,05,200",
+          "amountCr": 1.99,
+          "percent": 19.91
+        },
+        {
+          "name": "VVD EQUITY FUND",
+          "group": "VVD AIF TRUST",
+          "shares": 103200,
+          "sharesFormatted": "1,03,200",
+          "amountCr": 1,
+          "percent": 10.01
+        },
+        {
+          "name": "JALAN CHEMICAL INDUSTRIES PVT.LTD.",
+          "group": "JALAN CHEMICAL INDUSTRIES",
+          "shares": 103200,
+          "sharesFormatted": "1,03,200",
+          "amountCr": 1,
+          "percent": 10.01
+        },
+        {
+          "name": "BLUE ASTER CAPITAL FUND P.C.C-BLUE ASTER CAPITAL MULTI ASSET FUND PROTECTED CELL",
+          "group": "BLUE ASTER",
+          "shares": 103200,
+          "sharesFormatted": "1,03,200",
+          "amountCr": 1,
+          "percent": 10.01
+        }
+      ],
+      "anchorShares": 1030800,
+      "totalShares": 3748800
     },
     {
       "companyName": "H.R.Hygiene Products Ltd. (H.R. Hygiene Products IPO)",
@@ -32522,7 +36201,67 @@
         "originalDate": "2027-08-05T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "NECTA BLOOM VCC-NECTA BLOOM ONE",
+          "group": "NECTA BLOOM VCC",
+          "shares": 320000,
+          "sharesFormatted": "3,20,000",
+          "amountCr": 2.82,
+          "percent": 18.98
+        },
+        {
+          "name": "MONEYWISE FINANCIAL SERVICES PVT.LTD.",
+          "group": "MONEYWISE FINANCIAL SERVICES",
+          "shares": 227200,
+          "sharesFormatted": "2,27,200",
+          "amountCr": 2,
+          "percent": 13.47
+        },
+        {
+          "name": "KRUSHNAM NEXUS CAPITAL TRUST-KRUSHNAM NEXUS CAPITAL SCHEME 1",
+          "group": "KRUSHNAM NEXUS",
+          "shares": 227200,
+          "sharesFormatted": "2,27,200",
+          "amountCr": 2,
+          "percent": 13.47
+        },
+        {
+          "name": "KUBER INDIA OPPORTUNITIES FUND",
+          "group": "KUBER INDIA",
+          "shares": 227200,
+          "sharesFormatted": "2,27,200",
+          "amountCr": 2,
+          "percent": 13.47
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 227200,
+          "sharesFormatted": "2,27,200",
+          "amountCr": 2,
+          "percent": 13.47
+        },
+        {
+          "name": "SAINT CAPITAL FUND",
+          "group": "SAINT CAPITAL",
+          "shares": 340800,
+          "sharesFormatted": "3,40,800",
+          "amountCr": 3,
+          "percent": 20.21
+        },
+        {
+          "name": "RAJASTHAN GLOBAL SECURITIES PVT.LTD.",
+          "group": "RAJASTHAN GLOBAL SECURITIES",
+          "shares": 116800,
+          "sharesFormatted": "1,16,800",
+          "amountCr": 1.03,
+          "percent": 6.93
+        }
+      ],
+      "anchorShares": 1686400,
+      "totalShares": 6131200
     },
     {
       "companyName": "Manipal Health Enterprises Ltd.",
@@ -32550,7 +36289,1049 @@
         "originalDate": "2027-02-05T00:00:00.000Z",
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "ICICI PRUDENTIAL PHARMA HEALTHCARE & DIAGNOSTICS (P.H.D) FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 846550,
+          "sharesFormatted": "8,46,550",
+          "amountCr": 49.95,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL MULTI-ASSET FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 761900,
+          "sharesFormatted": "7,61,900",
+          "amountCr": 44.95,
+          "percent": 0
+        },
+        {
+          "name": "ISIF ACTIVE ASSET ALLOCATOR LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 84650,
+          "sharesFormatted": "84,650",
+          "amountCr": 4.99,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL EQUITY & DEBT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 728025,
+          "sharesFormatted": "7,28,025",
+          "amountCr": 42.95,
+          "percent": 0
+        },
+        {
+          "name": "ISIF EQUITY LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 84650,
+          "sharesFormatted": "84,650",
+          "amountCr": 4.99,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL INNOVATION FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 846550,
+          "sharesFormatted": "8,46,550",
+          "amountCr": 49.95,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL BHARAT CONSUMPTION FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 761900,
+          "sharesFormatted": "7,61,900",
+          "amountCr": 44.95,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL EXPORTS & SERVICES FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 118525,
+          "sharesFormatted": "1,18,525",
+          "amountCr": 6.99,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL ACTIVE MOMENTUM FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 423275,
+          "sharesFormatted": "4,23,275",
+          "amountCr": 24.97,
+          "percent": 0
+        },
+        {
+          "name": "KOTAK MIDCAP FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 1862425,
+          "sharesFormatted": "18,62,425",
+          "amountCr": 109.88,
+          "percent": 0
+        },
+        {
+          "name": "KOTAK LARGE CAP FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 931200,
+          "sharesFormatted": "9,31,200",
+          "amountCr": 54.94,
+          "percent": 0
+        },
+        {
+          "name": "KOTAK FLEXICAP FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 1862400,
+          "sharesFormatted": "18,62,400",
+          "amountCr": 109.88,
+          "percent": 0
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE PHARMA & HEALTHCARE FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 162425,
+          "sharesFormatted": "1,62,425",
+          "amountCr": 9.58,
+          "percent": 0
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE MIDCAP FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 1691775,
+          "sharesFormatted": "16,91,775",
+          "amountCr": 99.81,
+          "percent": 0
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE LARGE CAP FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 852675,
+          "sharesFormatted": "8,52,675",
+          "amountCr": 50.31,
+          "percent": 0
+        },
+        {
+          "name": "FIDELITY SECURITIES FUND: FIDELITY BLUE CHIP GROWTH FUND",
+          "group": "FIDELITY",
+          "shares": 1301100,
+          "sharesFormatted": "13,01,100",
+          "amountCr": 76.76,
+          "percent": 0
+        },
+        {
+          "name": "FIDELITY INVESTMENT TRUST: FIDELITY SERIES EMERGING MARKETS OPPORTUNITIES FUND",
+          "group": "FIDELITY",
+          "shares": 425700,
+          "sharesFormatted": "4,25,700",
+          "amountCr": 25.12,
+          "percent": 0
+        },
+        {
+          "name": "FIDELITY SECURITIES FUND: FIDELITY BLUE CHIP GROWTH K6 FUND",
+          "group": "FIDELITY",
+          "shares": 272600,
+          "sharesFormatted": "2,72,600",
+          "amountCr": 16.08,
+          "percent": 0
+        },
+        {
+          "name": "FIDELITY GROUP TRUST FOR EMPLOYEE BENEFIT PLANS: FIDELITY BLUE CHIP GROWTH COMMINGLED POOL",
+          "group": "FIDELITY",
+          "shares": 222700,
+          "sharesFormatted": "2,22,700",
+          "amountCr": 13.14,
+          "percent": 0
+        },
+        {
+          "name": "FIDELITY SECURITIES FUND: FIDELITY SERIES BLUE CHIP GROWTH FUND",
+          "group": "FIDELITY",
+          "shares": 216500,
+          "sharesFormatted": "2,16,500",
+          "amountCr": 12.77,
+          "percent": 0
+        },
+        {
+          "name": "FIAM GROUP TRUST FOR EMPLOYEE BENEFIT PLANS: FIAM TARGET DATE BLUE CHIP GROWTH COMMINGLED POOL",
+          "group": "FIDELITY",
+          "shares": 139700,
+          "sharesFormatted": "1,39,700",
+          "amountCr": 8.24,
+          "percent": 0
+        },
+        {
+          "name": "FIAM GROUP TRUST FOR EMPLOYEE BENEFIT PLANS: FIAM EMERGING MARKETS OPPORTUNITIES COMMINGLED POOL",
+          "group": "FIDELITY",
+          "shares": 128575,
+          "sharesFormatted": "1,28,575",
+          "amountCr": 7.59,
+          "percent": 0
+        },
+        {
+          "name": "LSOI SPV 1 LTD.",
+          "group": "LSOI SPV",
+          "shares": 1353450,
+          "sharesFormatted": "13,53,450",
+          "amountCr": 79.85,
+          "percent": 0
+        },
+        {
+          "name": "LSOII SPV 3 LTD.",
+          "group": "LSOI SPV",
+          "shares": 1353425,
+          "sharesFormatted": "13,53,425",
+          "amountCr": 79.85,
+          "percent": 0
+        },
+        {
+          "name": "MIRAE ASSET LARGE & MIDCAP FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 1407575,
+          "sharesFormatted": "14,07,575",
+          "amountCr": 83.05,
+          "percent": 0
+        },
+        {
+          "name": "MIRAE ASSET FOCUSED FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 1299300,
+          "sharesFormatted": "12,99,300",
+          "amountCr": 76.66,
+          "percent": 0
+        },
+        {
+          "name": "NOMURA INDIA INVESTMENT FUND MOTHER FUND",
+          "group": "NOMURA",
+          "shares": 2706875,
+          "sharesFormatted": "27,06,875",
+          "amountCr": 159.71,
+          "percent": 0
+        },
+        {
+          "name": "ABU DHABI INVESTMENT AUTHORITY-STABLE",
+          "group": "ABU DHABI INVESTMENT",
+          "shares": 1520425,
+          "sharesFormatted": "15,20,425",
+          "amountCr": 89.71,
+          "percent": 0
+        },
+        {
+          "name": "360 ONE PRIVATE EQUITY FUND-SERIES II",
+          "group": "360 ONE",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 0
+        },
+        {
+          "name": "360 ONE PRIME LTD.",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 0
+        },
+        {
+          "name": "ABU DHABI INVESTMENT AUTHORITY-MONSOON",
+          "group": "ABU DHABI INVESTMENT",
+          "shares": 1859425,
+          "sharesFormatted": "18,59,425",
+          "amountCr": 109.71,
+          "percent": 0
+        },
+        {
+          "name": "DSP HEALTHCARE FUND",
+          "group": "DSP MUTUAL FUND",
+          "shares": 1859425,
+          "sharesFormatted": "18,59,425",
+          "amountCr": 109.71,
+          "percent": 0
+        },
+        {
+          "name": "IPROFILE EMERGING MARKETS PRIVATE POOL MANAGED BY FRANKLIN TEMPLETON INVESTMENTS",
+          "group": "IPROFILE",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN TEMPLETON INVESTMENT FUNDS-TEMPLETON EMERGING MARKETS DYNAMIC INCOME FUND",
+          "group": "FRANKLIN TEMPLETON",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN TEMPLETON INVESTMENT FUNDS-TEMPLETON BIC FUND",
+          "group": "FRANKLIN TEMPLETON",
+          "shares": 103175,
+          "sharesFormatted": "1,03,175",
+          "amountCr": 6.09,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN TEMPLETON INVESTMENT FUNDS-TEMPLETON EMERGING MARKETS FUND",
+          "group": "FRANKLIN TEMPLETON",
+          "shares": 291225,
+          "sharesFormatted": "2,91,225",
+          "amountCr": 17.18,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN TEMPLETON FUNDS-FTF TEMPLETON GLOBAL EMERGING MARKETS FUND",
+          "group": "FRANKLIN TEMPLETON",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 0
+        },
+        {
+          "name": "TEMPLETON EMERGING MARKETS FUND",
+          "group": "TEMPLETON",
+          "shares": 232550,
+          "sharesFormatted": "2,32,550",
+          "amountCr": 13.72,
+          "percent": 0
+        },
+        {
+          "name": "TEMPLETON INTERNATIONAL EMERGING MARKETS FUND",
+          "group": "TEMPLETON",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 0
+        },
+        {
+          "name": "TEMPLETON EMERGING MARKETS INVESTMENT TRUST PLC",
+          "group": "TEMPLETON",
+          "shares": 500675,
+          "sharesFormatted": "5,00,675",
+          "amountCr": 29.54,
+          "percent": 0
+        },
+        {
+          "name": "TEMPLETON DEVELOPING MARKETS TRUST",
+          "group": "TEMPLETON",
+          "shares": 308050,
+          "sharesFormatted": "3,08,050",
+          "amountCr": 18.17,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN TEMPLETON VARIABLE INSURANCE PRODUCTS TRUST-TEMPLETON DEVELOPING MARKETS VIP FUND",
+          "group": "FRANKLIN TEMPLETON",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 0
+        },
+        {
+          "name": "MOTILAL OSWAL ACTIVE MOMENTUM FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 560325,
+          "sharesFormatted": "5,60,325",
+          "amountCr": 33.06,
+          "percent": 0
+        },
+        {
+          "name": "MOTILAL OSWAL MULTI CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 1125200,
+          "sharesFormatted": "11,25,200",
+          "amountCr": 66.39,
+          "percent": 0
+        },
+        {
+          "name": "MOTILAL OSWAL BALANCED ADVANTAGE FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 173900,
+          "sharesFormatted": "1,73,900",
+          "amountCr": 10.26,
+          "percent": 0
+        },
+        {
+          "name": "POLAR CAPITAL FUNDS PLC-HEALTHCARE OPPORTUNITIES FUND",
+          "group": "POLAR CAPITAL",
+          "shares": 1859425,
+          "sharesFormatted": "18,59,425",
+          "amountCr": 109.71,
+          "percent": 0
+        },
+        {
+          "name": "PRAZIM TRADING & INVESTMENT CO.PVT.LTD.",
+          "group": "PRAZIM TRADING & INVESTMENT",
+          "shares": 1859425,
+          "sharesFormatted": "18,59,425",
+          "amountCr": 109.71,
+          "percent": 0
+        },
+        {
+          "name": "PUBLIC SECTOR PENSION INVESTMENT BOARD-PSP INVESTMENTS",
+          "group": "PUBLIC SECTOR PENSION INVESTMENT BOARD",
+          "shares": 1859425,
+          "sharesFormatted": "18,59,425",
+          "amountCr": 109.71,
+          "percent": 0
+        },
+        {
+          "name": "SBI LIFE INSURANCE CO.LTD.",
+          "group": "SBI LIFE INSURANCE",
+          "shares": 1859425,
+          "sharesFormatted": "18,59,425",
+          "amountCr": 109.71,
+          "percent": 0
+        },
+        {
+          "name": "UTI DIVIDEND YIELD FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 425000,
+          "sharesFormatted": "4,25,000",
+          "amountCr": 25.08,
+          "percent": 0
+        },
+        {
+          "name": "UTI MNC FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 106250,
+          "sharesFormatted": "1,06,250",
+          "amountCr": 6.27,
+          "percent": 0
+        },
+        {
+          "name": "UTI BALANCED ADVANTAGE FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 265625,
+          "sharesFormatted": "2,65,625",
+          "amountCr": 15.67,
+          "percent": 0
+        },
+        {
+          "name": "UTI HEALTHCARE FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 212525,
+          "sharesFormatted": "2,12,525",
+          "amountCr": 12.54,
+          "percent": 0
+        },
+        {
+          "name": "UTI MIDCAP FUND",
+          "group": "UTI MUTUAL FUND",
+          "shares": 850025,
+          "sharesFormatted": "8,50,025",
+          "amountCr": 50.15,
+          "percent": 0
+        },
+        {
+          "name": "EASTSPRING INVESTMENTS-INDIA CONSUMER EQUITY OPEN LTD.",
+          "group": "EASTSPRING",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "EASTSPRING INVESTMENTS-INDIA EQUITY OPEN LTD.",
+          "group": "EASTSPRING",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "CARMIGNAC PORTFOLIO",
+          "group": "CARMIGNAC",
+          "shares": 1520425,
+          "sharesFormatted": "15,20,425",
+          "amountCr": 89.71,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN INDIA LARGE & MID CAP FUND",
+          "group": "FRANKLIN TEMPLETON MUTUAL FUND",
+          "shares": 651625,
+          "sharesFormatted": "6,51,625",
+          "amountCr": 38.45,
+          "percent": 0
+        },
+        {
+          "name": "FRANKLIN INDIA OPPORTUNITIES FUND",
+          "group": "FRANKLIN TEMPLETON MUTUAL FUND",
+          "shares": 868800,
+          "sharesFormatted": "8,68,800",
+          "amountCr": 51.26,
+          "percent": 0
+        },
+        {
+          "name": "INCOME INS LP ASIA EQ ACTIVE FN",
+          "group": "INCOME INSURANCE",
+          "shares": 504200,
+          "sharesFormatted": "5,04,200",
+          "amountCr": 29.75,
+          "percent": 0
+        },
+        {
+          "name": "FULLERTON LUX FUNDS-ASIA FOCUS EQUITIES",
+          "group": "FULLERTON",
+          "shares": 224400,
+          "sharesFormatted": "2,24,400",
+          "amountCr": 13.24,
+          "percent": 0
+        },
+        {
+          "name": "FULLERTON LUX FUNDS-ASIA ABSOLUTE ALPHA",
+          "group": "FULLERTON",
+          "shares": 164400,
+          "sharesFormatted": "1,64,400",
+          "amountCr": 9.7,
+          "percent": 0
+        },
+        {
+          "name": "BNP PARIBAS TRUST SERVICES SINGAPORE LTD.AS TRUSTEE OF FULLERTON ALPHA-ASIA FOCUS EQUITIES FUND",
+          "group": "FULLERTON",
+          "shares": 536075,
+          "sharesFormatted": "5,36,075",
+          "amountCr": 31.63,
+          "percent": 0
+        },
+        {
+          "name": "TA ASIA ABSOLUTE ALPHA FUND",
+          "group": "TA",
+          "shares": 91350,
+          "sharesFormatted": "91,350",
+          "amountCr": 5.39,
+          "percent": 0
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 1520425,
+          "sharesFormatted": "15,20,425",
+          "amountCr": 89.71,
+          "percent": 0
+        },
+        {
+          "name": "ICICI PRUDENTIAL LIFE INSURANCE CO.LTD.",
+          "group": "ICICI PRUDENTIAL LIFE INSURANCE",
+          "shares": 1520425,
+          "sharesFormatted": "15,20,425",
+          "amountCr": 89.71,
+          "percent": 0
+        },
+        {
+          "name": "INVESCO INDIA MIDCAP FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 1267025,
+          "sharesFormatted": "12,67,025",
+          "amountCr": 74.75,
+          "percent": 0
+        },
+        {
+          "name": "INVESCO INDIA MULTICAP FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 253400,
+          "sharesFormatted": "2,53,400",
+          "amountCr": 14.95,
+          "percent": 0
+        },
+        {
+          "name": "GOVERNMENT PENSION FUND GLOBAL",
+          "shares": 1520425,
+          "sharesFormatted": "15,20,425",
+          "amountCr": 89.71,
+          "percent": 0
+        },
+        {
+          "name": "SBI NPS TRUST-SBI PENSION FUND SCHEME-E TIER II",
+          "group": "SBI NPS TRUST",
+          "shares": 126700,
+          "sharesFormatted": "1,26,700",
+          "amountCr": 7.48,
+          "percent": 0
+        },
+        {
+          "name": "SBI NPS TRUST-SBI PENSION FUND-NPS LITE SCHEME-GOVT.PATTERN",
+          "group": "SBI NPS TRUST",
+          "shares": 50675,
+          "sharesFormatted": "50,675",
+          "amountCr": 2.99,
+          "percent": 0
+        },
+        {
+          "name": "SBI NPS TRUST-SBI PENSION FUND SCHEME-ATAL PENSION YOJANA",
+          "group": "SBI NPS TRUST",
+          "shares": 962950,
+          "sharesFormatted": "9,62,950",
+          "amountCr": 56.81,
+          "percent": 0
+        },
+        {
+          "name": "SBI NPS TRUST-SBI PENSION FUND-UPS-CG SCHEME",
+          "group": "SBI NPS TRUST",
+          "shares": 337875,
+          "sharesFormatted": "3,37,875",
+          "amountCr": 19.93,
+          "percent": 0
+        },
+        {
+          "name": "WHITEOAK CAPITAL FLEXI CAP FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 449150,
+          "sharesFormatted": "4,49,150",
+          "amountCr": 26.5,
+          "percent": 0
+        },
+        {
+          "name": "WHITEOAK CAPITAL LARGE CAP FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 93250,
+          "sharesFormatted": "93,250",
+          "amountCr": 5.5,
+          "percent": 0
+        },
+        {
+          "name": "WHITEOAK CAPITAL PHARMA & HEALTHCARE FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 135600,
+          "sharesFormatted": "1,35,600",
+          "amountCr": 8,
+          "percent": 0
+        },
+        {
+          "name": "WHITEOAK CAPITAL BALANCED ADVANTAGE FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 76275,
+          "sharesFormatted": "76,275",
+          "amountCr": 4.5,
+          "percent": 0
+        },
+        {
+          "name": "WHITEOAK CAPITAL MULTI ASSET ALLOCATION FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 177975,
+          "sharesFormatted": "1,77,975",
+          "amountCr": 10.5,
+          "percent": 0
+        },
+        {
+          "name": "WHITEOAK CAPITAL INDIA OPPORTUNITIES FUND",
+          "group": "WHITEOAK",
+          "shares": 339000,
+          "sharesFormatted": "3,39,000",
+          "amountCr": 20,
+          "percent": 0
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK INDIA OPPORTUNITIES FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 408450,
+          "sharesFormatted": "4,08,450",
+          "amountCr": 24.1,
+          "percent": 0
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 600950,
+          "sharesFormatted": "6,00,950",
+          "amountCr": 35.46,
+          "percent": 0
+        },
+        {
+          "name": "ALLIANZ GLOBAL INVESTORS FUND-ALLIANZ INDIA EQUITY",
+          "group": "ALLIANZ",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "AXIS LARGE & MID CAP FUND",
+          "group": "AXIS MUTUAL FUND",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "HSBC GLOBAL INVESTMENT FUNDS-INDIAN EQUITY",
+          "group": "HSBC",
+          "shares": 509875,
+          "sharesFormatted": "5,09,875",
+          "amountCr": 30.08,
+          "percent": 0
+        },
+        {
+          "name": "HSBC INDIAN EQUITY MOTHER FUND",
+          "group": "HSBC",
+          "shares": 337600,
+          "sharesFormatted": "3,37,600",
+          "amountCr": 19.92,
+          "percent": 0
+        },
+        {
+          "name": "HSBC FOCUSED FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 345900,
+          "sharesFormatted": "3,45,900",
+          "amountCr": 20.41,
+          "percent": 0
+        },
+        {
+          "name": "HSBC BALANCED ADVANTAGE FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 86475,
+          "sharesFormatted": "86,475",
+          "amountCr": 5.1,
+          "percent": 0
+        },
+        {
+          "name": "HSBC FLEXI CAP FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 207550,
+          "sharesFormatted": "2,07,550",
+          "amountCr": 12.25,
+          "percent": 0
+        },
+        {
+          "name": "HSBC ELSS TAX SAVER FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 207550,
+          "sharesFormatted": "2,07,550",
+          "amountCr": 12.25,
+          "percent": 0
+        },
+        {
+          "name": "KOTAK FUNDS-INDIA MIDCAP FUND",
+          "group": "KOTAK",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "PICTET-INDIAN EQUITIES",
+          "group": "PICTET",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "TATA INDIA PHARMA & HEALTHCARE FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 253500,
+          "sharesFormatted": "2,53,500",
+          "amountCr": 14.96,
+          "percent": 0
+        },
+        {
+          "name": "TATA FLEXI CAP FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 376475,
+          "sharesFormatted": "3,76,475",
+          "amountCr": 22.21,
+          "percent": 0
+        },
+        {
+          "name": "TATA INDIA INNOVATION FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 217500,
+          "sharesFormatted": "2,17,500",
+          "amountCr": 12.83,
+          "percent": 0
+        },
+        {
+          "name": "MORGAN STANLEY ASIA (SINGAPORE) PTE.-ODI",
+          "group": "MORGAN STANLEY",
+          "shares": 847475,
+          "sharesFormatted": "8,47,475",
+          "amountCr": 50,
+          "percent": 0
+        },
+        {
+          "name": "UTI NPS TRUST-UTI PENSION FUND-NPS VATSALYA SCHEMЕ",
+          "group": "UTI NPS TRUST",
+          "shares": 2000,
+          "sharesFormatted": "2,000",
+          "amountCr": 0.12,
+          "percent": 0
+        },
+        {
+          "name": "UTI NPS TRUST-UTI PENSION FUND-WEALTH BUILDER NPS EQUITY SCHEME TIER I",
+          "group": "UTI NPS TRUST",
+          "shares": 7500,
+          "sharesFormatted": "7,500",
+          "amountCr": 0.44,
+          "percent": 0
+        },
+        {
+          "name": "UTI NPS TRUST-UTI PENSION FUND SCHEME-E TIER I",
+          "group": "UTI NPS TRUST",
+          "shares": 449000,
+          "sharesFormatted": "4,49,000",
+          "amountCr": 26.49,
+          "percent": 0
+        },
+        {
+          "name": "UTI NPS TRUST-UTI PENSION FUND-NPS LITE SCHEME-GOVT.PATTERN",
+          "group": "UTI NPS TRUST",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "amountCr": 2.95,
+          "percent": 0
+        },
+        {
+          "name": "MAX LIFE INSURANCE CO.LTD.-ULIF 01311/02/08 LIFE HIGHER 104-HIGH GROWTH FUND",
+          "group": "MAX LIFE INSURANCE",
+          "shares": 423750,
+          "sharesFormatted": "4,23,750",
+          "amountCr": 25,
+          "percent": 0
+        },
+        {
+          "name": "BANDHAN MIDCAP FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 211875,
+          "sharesFormatted": "2,11,875",
+          "amountCr": 12.5,
+          "percent": 0
+        },
+        {
+          "name": "BANDHAN INNOVATION FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 211875,
+          "sharesFormatted": "2,11,875",
+          "amountCr": 12.5,
+          "percent": 0
+        },
+        {
+          "name": "NATIXIS INTERNATIONAL FUNDS (LUX) I-LOOMIS SAYLES GLOBAL EMERGING MARKETS EQUITY FUND",
+          "group": "NATIXIS",
+          "shares": 423750,
+          "sharesFormatted": "4,23,750",
+          "amountCr": 25,
+          "percent": 0
+        },
+        {
+          "name": "PRUDENTIAL ASSURANCE CO.LTD.,THE",
+          "group": "PRUDENTIAL",
+          "shares": 423750,
+          "sharesFormatted": "4,23,750",
+          "amountCr": 25,
+          "percent": 9.44
+        },
+        {
+          "name": "SUNDARAM SERVICES FUND",
+          "group": "SUNDARAM MUTUAL FUND",
+          "shares": 339000,
+          "sharesFormatted": "3,39,000",
+          "amountCr": 20,
+          "percent": 7.55
+        },
+        {
+          "name": "SUNDARAM CONSUMPTION FUND",
+          "group": "SUNDARAM MUTUAL FUND",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "SUSQUEHANNA PACIFIC PTY.LTD.",
+          "group": "SUSQUEHANN",
+          "shares": 423750,
+          "sharesFormatted": "4,23,750",
+          "amountCr": 25,
+          "percent": 9.44
+        },
+        {
+          "name": "VALUE PARTNERS HIGH-DIVIDEND STOCKS FUND",
+          "group": "VALUE PARTNERS",
+          "shares": 421225,
+          "sharesFormatted": "4,21,225",
+          "amountCr": 24.85,
+          "percent": 9.38
+        },
+        {
+          "name": "ORBIMED GENESIS MASTER FUND,LP",
+          "group": "ORBIMED",
+          "shares": 254250,
+          "sharesFormatted": "2,54,250",
+          "amountCr": 15,
+          "percent": 5.66
+        },
+        {
+          "name": "ABAKKUS GROWTH FUND-OPEN ENDED",
+          "group": "ABAKKUS",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE INSURANCE CO.LTD.",
+          "group": "ADITYA BIRLA SUN LIFE INSURANCE",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "SOCIETE GENERALE-ODI",
+          "group": "SOCIETE GENERAL",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "WINRO COMMERCIAL (INDIA) LTD.",
+          "group": "WINRO COMMERCIAL",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "GOLDMAN SACHS BANK EUROPE SE-ODI",
+          "group": "GOLDMAN SACHS",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "HCL CAPITAL PVT.LTD.",
+          "group": "HCL CAPITAL",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "KOTAK MAHINDRA LIFE INSURANCE CO.LTD.",
+          "group": "KOTAK LIFE INSURANCE",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "GREAT EASTERN LIFE-SINGAPORE LIFE INSURANCE FUND-PAR-LION GLOBAL EQUITY",
+          "group": "GREAT EASTERN LIFE",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "PRIVATE CLIENT EMERGING MARKETS PORTFOLIO",
+          "group": "PRIVATE CLIENT",
+          "shares": 169500,
+          "sharesFormatted": "1,69,500",
+          "amountCr": 10,
+          "percent": 3.78
+        },
+        {
+          "name": "PGIM INDIA LARGE & MIDCAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 98150,
+          "sharesFormatted": "98,150",
+          "amountCr": 5.79,
+          "percent": 2.19
+        },
+        {
+          "name": "PGIM INDIA MULTI CAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 53100,
+          "sharesFormatted": "53,100",
+          "amountCr": 3.13,
+          "percent": 1.18
+        },
+        {
+          "name": "PGIM INDIA HEALTHCARE FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 18250,
+          "sharesFormatted": "18,250",
+          "amountCr": 1.08,
+          "percent": 0.41
+        },
+        {
+          "name": "BHARTI AXA LIFE INSURANCE CO.LTD.",
+          "group": "BHARTI AXA LIFE INSURANCE",
+          "shares": 85043,
+          "sharesFormatted": "85,043",
+          "amountCr": 5.02,
+          "percent": 1.89
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 84775,
+          "sharesFormatted": "84,775",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "BARODA BNP PARIBAS HEALTH & WELLNESS FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "CREAEGIS TRANSFORMATIONS FUND VCC-CTF 1",
+          "group": "CREAEGIS",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "JM MULTI ASSET ALLOCATION FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "MAHINDRA MANULIFE FLEXI CAP FUND",
+          "group": "MAHINDRA MANULIFE MUTUAL FUND",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        },
+        {
+          "name": "UNION MIDCAP FUND",
+          "group": "UNION MUTUAL FUND",
+          "shares": 84750,
+          "sharesFormatted": "84,750",
+          "amountCr": 5,
+          "percent": 1.89
+        }
+      ],
+      "anchorShares": 70628768,
+      "totalShares": 157233715
     },
     {
       "companyName": "Poojaa Precision Engg.Ltd.",
@@ -32578,7 +37359,121 @@
         "originalDate": "2027-08-04T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "MOTILAL OSWAL FINVEST LTD.",
+          "group": "MOTILAL OSWAL",
+          "shares": 182800,
+          "sharesFormatted": "1,82,800",
+          "amountCr": 5.5,
+          "percent": 12.19
+        },
+        {
+          "name": "LRSD SECURITIES PVT.LTD.",
+          "group": "LRSD SECURITIES",
+          "shares": 33600,
+          "sharesFormatted": "33,600",
+          "amountCr": 1.01,
+          "percent": 2.24
+        },
+        {
+          "name": "MINT FOCUSED GROWTH FUND PCC-CELL 1",
+          "group": "MINT FOCUSED",
+          "shares": 166400,
+          "sharesFormatted": "1,66,400",
+          "amountCr": 5.01,
+          "percent": 11.1
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 33600,
+          "sharesFormatted": "33,600",
+          "amountCr": 1.01,
+          "percent": 2.24
+        },
+        {
+          "name": "HEM GROWTH OPPORTUNITIES FUND",
+          "shares": 133600,
+          "sharesFormatted": "1,33,600",
+          "amountCr": 4.02,
+          "percent": 8.91
+        },
+        {
+          "name": "UPSURGE OPPORTUNITIES FUND I",
+          "group": "UPSURGE",
+          "shares": 66800,
+          "sharesFormatted": "66,800",
+          "amountCr": 2.01,
+          "percent": 4.45
+        },
+        {
+          "name": "ASHIKA GLOBAL FINANCE PVT.LTD.",
+          "group": "ASHIKA GLOBAL SECURITIES",
+          "shares": 33600,
+          "sharesFormatted": "33,600",
+          "amountCr": 1.01,
+          "percent": 2.24
+        },
+        {
+          "name": "SHINCHO ASIA CAPITAL (INCORPORATED VCC SUB FUND)",
+          "group": "SHINCHO ASIA",
+          "shares": 33600,
+          "sharesFormatted": "33,600",
+          "amountCr": 1.01,
+          "percent": 2.24
+        },
+        {
+          "name": "SAINT CAPITAL FUND",
+          "group": "SAINT CAPITAL",
+          "shares": 33600,
+          "sharesFormatted": "33,600",
+          "amountCr": 1.01,
+          "percent": 2.24
+        },
+        {
+          "name": "INDIA MAX INVESTMENT FUND LTD.",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "amountCr": 3.01,
+          "percent": 6.67
+        },
+        {
+          "name": "RELIGO COMMODITIES VENTURES TRUST-RELIGO COMMODITIES VENTURE FUND",
+          "group": "RELIGO",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "amountCr": 1.51,
+          "percent": 3.33
+        },
+        {
+          "name": "ABAKKUS VENTURE OPPORTUNITIES FUND",
+          "group": "ABAKKUS",
+          "shares": 465200,
+          "sharesFormatted": "4,65,200",
+          "amountCr": 14,
+          "percent": 31.02
+        },
+        {
+          "name": "MERU INVESTMENT FUND PCC-CELL 1",
+          "group": "MERU INVESTMENT",
+          "shares": 133200,
+          "sharesFormatted": "1,33,200",
+          "amountCr": 4.01,
+          "percent": 8.88
+        },
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 33600,
+          "sharesFormatted": "33,600",
+          "amountCr": 1.01,
+          "percent": 2.24
+        }
+      ],
+      "anchorShares": 1499600,
+      "totalShares": 5310000
     },
     {
       "companyName": "Advance Technoforge Ltd.",
@@ -32646,7 +37541,123 @@
         "originalDate": "2027-07-31T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "anchorInvestors": [
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 151000,
+          "sharesFormatted": "1,51,000",
+          "amountCr": 2.01,
+          "percent": 9.14
+        },
+        {
+          "name": "AARTH AIF GROWTH FUND",
+          "group": "AARTH",
+          "shares": 151000,
+          "sharesFormatted": "1,51,000",
+          "amountCr": 2.01,
+          "percent": 9.14
+        },
+        {
+          "name": "STEPTRADE REVOLUTION FUND",
+          "group": "STEPTRADE",
+          "shares": 76000,
+          "sharesFormatted": "76,000",
+          "amountCr": 1.01,
+          "percent": 4.6
+        },
+        {
+          "name": "VBCUBE VENTURES FUND",
+          "group": "VBCUBE",
+          "shares": 151000,
+          "sharesFormatted": "1,51,000",
+          "amountCr": 2.01,
+          "percent": 9.14
+        },
+        {
+          "name": "VBCUBE VENTURES FUND II",
+          "group": "VBCUBE",
+          "shares": 151000,
+          "sharesFormatted": "1,51,000",
+          "amountCr": 2.01,
+          "percent": 9.14
+        },
+        {
+          "name": "SB OPPORTUNITIES FUND II",
+          "group": "SB OPPORTUNITIES FUND",
+          "shares": 76000,
+          "sharesFormatted": "76,000",
+          "amountCr": 1.01,
+          "percent": 4.6
+        },
+        {
+          "name": "KINGSMAN WEALTH FUND PCC-KIF II",
+          "group": "KINGSMAN WEALTH FUND PCC",
+          "shares": 215000,
+          "sharesFormatted": "2,15,000",
+          "amountCr": 2.86,
+          "percent": 13.01
+        },
+        {
+          "name": "CAPRIZE INDIA OPPORTUNITIES FUND INVESTMENT ACCOUNT",
+          "group": "-",
+          "shares": 76000,
+          "sharesFormatted": "76,000",
+          "amountCr": 1.01,
+          "percent": 4.6
+        },
+        {
+          "name": "31 Degrees North Fund I",
+          "group": "31 DEGREES",
+          "shares": 113000,
+          "sharesFormatted": "1,13,000",
+          "amountCr": 1.5,
+          "percent": 6.84
+        },
+        {
+          "name": "31 DEGREES NORTH FUND",
+          "group": "31 DEGREES",
+          "shares": 113000,
+          "sharesFormatted": "1,13,000",
+          "amountCr": 1.5,
+          "percent": 6.84
+        },
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 76000,
+          "sharesFormatted": "76,000",
+          "amountCr": 1.01,
+          "percent": 4.6
+        },
+        {
+          "name": "RADIANT GLOBAL FUND-CLASS B PARTICIPATING SHARES",
+          "group": "RADIANT GLOBAL",
+          "shares": 76000,
+          "sharesFormatted": "76,000",
+          "amountCr": 1.01,
+          "percent": 4.6
+        },
+        {
+          "name": "SMC INDIA OPPORTUNITIES FUND",
+          "group": "SMC",
+          "shares": 76000,
+          "sharesFormatted": "76,000",
+          "amountCr": 1.01,
+          "percent": 4.6
+        },
+        {
+          "name": "Ascend Global Opportunities Fund",
+          "group": "ASCEND GLOBAL",
+          "shares": 151000,
+          "sharesFormatted": "1,51,000",
+          "amountCr": 2.01,
+          "percent": 9.14
+        }
+      ],
+      "anchorShares": 1652000,
+      "totalShares": 6198000
     },
     {
       "companyName": "Farm Peace Ltd.",
@@ -36978,7 +41989,7 @@
       "source": "BSE",
       "noticeId": "20260810-35",
       "pdfUrl": "https://www.bseindia.com/downloads/UploadDocs/Notices/Attach/AnnexureI$033419df-ddf9-42a4-b7ed-d115e6752318.pdf",
-      "fetchedAt": "2026-09-05T06:03:50.494Z"
+      "fetchedAt": "2026-09-05T06:15:33.176Z"
     }
   }
 }

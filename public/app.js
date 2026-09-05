@@ -1946,7 +1946,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             const exc = ipo.exchange ? ` (${ipo.exchange})` : '';
 
             const isFixedPrice = ipo.pricingType === 'Fixed Price' || 
-                ((!ipo.anchorInvestors || ipo.anchorInvestors.length === 0) && 
+                (ipo.issueType === 'SME' && ipo.pricingType !== 'Book Built' &&
+                 ipo.allotmentDate !== null &&
+                 (!ipo.anchorInvestors || ipo.anchorInvestors.length === 0) && 
                  (!ipo.anchorShares || ipo.anchorShares === 0) && 
                  (!ipo.anchor30 || !ipo.anchor30.original));
 

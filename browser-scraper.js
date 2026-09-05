@@ -400,6 +400,7 @@ async function fetchAnchorInvestorNames(chittorgarhUrl) {
                             group = $(cells.eq(2)).text().trim();
                         }
                         const sharesRaw = $(cells.eq(sharesIdx)).text().trim();
+                        const shares = cleanNumber(sharesRaw);
                         const amtRaw = $(cells.eq(amtIdx)).text().trim();
                         const pctRaw = $(cells.eq(pctIdx)).text().trim();
                         const letters = investorName.replace(/[^a-zA-Z]/g, '');

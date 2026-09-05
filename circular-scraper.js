@@ -22,7 +22,8 @@ async function pdf(buffer) {
     const tmpFile = _path.join(__dirname, `.pdfparse_tmp_${Date.now()}.pdf`);
     _fs.writeFileSync(tmpFile, buffer);
     try {
-        const parser = new PDFParse({ url: `file://${tmpFile}` });
+        const { pathToFileURL } = require('url');
+        const parser = new PDFParse({ url: pathToFileURL(tmpFile).href });
         const result = await parser.getText();
         return { text: result.text || result.content || '', numpages: result.pages?.length || 0 };
     } finally { try { _fs.unlinkSync(tmpFile); } catch (e) { } }

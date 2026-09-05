@@ -967,6 +967,29 @@ app.get('/api/unlock-details/:companyName', async (req, res) => {
                     }
                 }
 
+                // Smart auto-resolution of Anchor data on popup load!
+                // If company has no anchorInvestors, has only raw string names, or anchorShares is missing:
+                const needsAnchorEnrichment = !company.anchorInvestors || 
+                    company.anchorInvestors.length === 0 || 
+                    (company.anchorInvestors.length > 0 && typeof company.anchorInvestors[0] === 'string') ||
+                    !company.anchorShares || company.anchorShares === 0;
+
+                if (needsAnchorEnrichment && company.chittorgarhUrl) {
+                    try {
+                        const parsed = await fetchAnchorInvestorNames(company.chittorgarhUrl);
+                        if (parsed && Array.isArray(parsed.investors) && parsed.investors.length > 0) {
+                            company.anchorInvestors = parsed.investors;
+                            if (parsed.anchorShares > 0) company.anchorShares = parsed.anchorShares;
+                            if (parsed.totalShares > 0 && (!company.totalShares || company.totalShares < parsed.totalShares)) {
+                                company.totalShares = parsed.totalShares;
+                            }
+                            writeDB(db);
+                        }
+                    } catch (ancErr) {
+                        console.warn(`[UnlockDetails] Anchor auto-resolve error for ${company.companyName}:`, ancErr.message);
+                    }
+                }
+
                 // If preIpoInvestors is missing/undefined, trigger background extraction non-blocking
                 if (company.preIpoInvestors === undefined) {
                     const targetDoc = company.capitalStructureUrl || company.rhpUrl;
