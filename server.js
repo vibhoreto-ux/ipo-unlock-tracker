@@ -662,7 +662,9 @@ async function probeUpcomingData() {
                         changed = true;
                     }
 
-                    const targetDoc = company.capitalStructureUrl || company.rhpUrl;
+                    const targetDoc = (company.capitalStructureUrl && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) 
+                        ? company.capitalStructureUrl 
+                        : null;
                     if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
                         try {
                             const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
@@ -761,11 +763,11 @@ async function resolveCompanyDocUrl(company) {
             const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
             for (const [slug, item] of Object.entries(cache)) {
                 const normSlug = slug.replace(/[^a-z0-9]/g, '');
-                if (norm.includes(normSlug) || normSlug.includes(norm.slice(0, 8)) || norm.slice(0, 8).includes(normSlug.slice(0, 8))) {
+                if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
                     if (item && item.capitalStructureUrl) {
                         company.capitalStructureUrl = item.capitalStructureUrl;
                         if (item.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = item.anchorPdfUrl;
-                        if (item.rhpUrl && (!company.rhpUrl || company.rhpUrl === company.capitalStructureUrl)) company.rhpUrl = item.rhpUrl;
+                        if (item.rhpUrl) company.rhpUrl = item.rhpUrl;
                         return item.capitalStructureUrl;
                     }
                 }
@@ -781,10 +783,11 @@ async function resolveCompanyDocUrl(company) {
             const norm = (company.companyName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
             for (const [slug, item] of Object.entries(cache)) {
                 const normSlug = slug.replace(/[^a-z0-9]/g, '');
-                if (norm.includes(normSlug) || normSlug.includes(norm.slice(0, 8)) || norm.slice(0, 8).includes(normSlug.slice(0, 8))) {
+                if (norm === normSlug || (norm.length > 7 && (norm.startsWith(normSlug) || normSlug.startsWith(norm)))) {
                     if (item && item.capitalStructureUrl) {
                         company.capitalStructureUrl = item.capitalStructureUrl;
                         if (item.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = item.anchorPdfUrl;
+                        if (item.rhpUrl) company.rhpUrl = item.rhpUrl;
                         return item.capitalStructureUrl;
                     }
                 }
@@ -793,7 +796,7 @@ async function resolveCompanyDocUrl(company) {
     } catch (e) {}
 
     // If company already has a genuine capital structure url
-    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http') && company.capitalStructureUrl.includes('capital_structure')) {
+    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http') && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
         return company.capitalStructureUrl;
     }
 
@@ -811,10 +814,10 @@ async function resolveCompanyDocUrl(company) {
                 const href = $(a).attr('href') || '';
                 const txt = $(a).text().trim().toLowerCase();
                 if (href.includes('.pdf') || href.includes('.zip') || href.includes('sebi.gov.in') || href.includes('bseindia.com') || href.includes('nseindia.com')) {
-                    if (txt.includes('capital') || href.includes('capital_structure')) {
+                    if (txt.includes('capital structure') || href.toLowerCase().includes('capital_structure')) {
                         foundCap = href;
                     }
-                    if (txt.includes('rhp') || txt.includes('prospectus') || href.includes('rhp') || href.includes('prospectus')) {
+                    if (txt.includes('rhp') || txt.includes('prospectus') || href.toLowerCase().includes('rhp') || href.toLowerCase().includes('prospectus')) {
                         foundRhp = href;
                     }
                 }
@@ -826,19 +829,9 @@ async function resolveCompanyDocUrl(company) {
             }
             if (foundRhp) {
                 company.rhpUrl = foundRhp;
-                if (!company.capitalStructureUrl) {
-                    company.capitalStructureUrl = foundRhp;
-                }
-                return company.capitalStructureUrl;
+                // NEVER set company.capitalStructureUrl = foundRhp!
             }
         } catch (e) {}
-    }
-
-    if (company.capitalStructureUrl && company.capitalStructureUrl.startsWith('http')) {
-        return company.capitalStructureUrl;
-    }
-    if (company.rhpUrl && company.rhpUrl.startsWith('http')) {
-        return company.rhpUrl;
     }
 
     return null;

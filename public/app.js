@@ -1808,10 +1808,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             // Pre-IPO HTML: Special emphasis and open by default for Fixed Price
             let preIpoHtml = '';
             const hasPreIpo = ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0;
-            const capLink = ipo.capitalStructureUrl || ipo.rhpUrl;
-            const capDocBtn = capLink 
-                ? `<a href="${capLink}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>` 
-                : '';
+            const hasRealCapDoc = ipo.capitalStructureUrl && ipo.capitalStructureUrl.toLowerCase().includes('capital_structure');
+            const capDocBtn = hasRealCapDoc 
+                ? `<a href="${ipo.capitalStructureUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>` 
+                : (ipo.rhpUrl && isValidRHPUrl(ipo.rhpUrl) ? `<a href="${ipo.rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-pdf"></i> RHP Document</a>` : '');
 
             if (isFixedPrice) {
                 const preIpoTable = hasPreIpo 
@@ -1894,7 +1894,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
             let docsHtml = '';
             const docLinks = [];
-            if (ipo.capitalStructureUrl) {
+            if (ipo.capitalStructureUrl && ipo.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
                 docLinks.push(`<a href="${ipo.capitalStructureUrl}" target="_blank" class="doc-btn doc-btn-cap"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
             }
             if (ipo.rhpUrl && isValidRHPUrl(ipo.rhpUrl)) {

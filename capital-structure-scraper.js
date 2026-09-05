@@ -222,8 +222,8 @@ async function scrapeDetailPage(detailUrl) {
             timeout: 45000,
         });
         
-        await page.waitForFunction(() => document.body.innerText.length > 500, { timeout: 10000 }).catch(() => {});
-        await new Promise(r => setTimeout(r, 1500));
+        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        await new Promise(r => setTimeout(r, 2000));
         
         const result = await page.evaluate(() => {
             let capitalStructureUrl = null;

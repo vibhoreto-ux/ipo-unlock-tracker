@@ -1,117 +1,150 @@
-const fs = require('fs');
-const path = require('path');
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
+const fs = require("fs");
+const path = require("path");
 
-const CACHE_FILE = path.join(__dirname, '..', 'data', 'capital-structure-cache.json');
+async function scrapeAllWithScroll() {
+    console.log("=== Scraping All IPO Premium Detail Pages with Lazy Scroll ===");
+    const cacheFile = path.join(__dirname, "..", "data", "capital-structure-cache.json");
+    const ipoCacheFile = path.join(__dirname, "..", "data", "ipopremium-cache.json");
+    const unlockFile = path.join(__dirname, "..", "data", "unlock-data.json");
 
-function normalizeCompanyName(name) {
-    if (!name) return '';
-    return name
-        .toLowerCase()
-        .replace(/\b(limited|ltd|pvt|private|ipo|india)\b/g, '')
-        .replace(/[^a-z0-9]/g, '')
-        .trim();
-}
+    const cache = fs.existsSync(cacheFile) ? JSON.parse(fs.readFileSync(cacheFile, "utf8")) : {};
+    const ipoCache = fs.existsSync(ipoCacheFile) ? JSON.parse(fs.readFileSync(ipoCacheFile, "utf8")) : {};
+    const unlockDb = JSON.parse(fs.readFileSync(unlockFile, "utf8"));
 
-async function scrapeAllIpoPremium() {
-    console.log('--- Scraping entire IPO Premium Catalog ---');
-    let cache = {};
-    if (fs.existsSync(CACHE_FILE)) {
-        try { cache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf-8')); } catch (e) {}
-    }
+    const browser = await puppeteer.launch({ headless: "new", args: ["--no-sandbox", "--disable-dev-shm-usage"] });
+    const mainPage = await browser.newPage();
+    await mainPage.setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
 
-    const browser = await puppeteer.launch({
-        headless: 'new',
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    console.log("1. Loading https://www.ipopremium.in/ ...");
+    await mainPage.goto("https://www.ipopremium.in/", { waitUntil: "networkidle2", timeout: 45000 });
+    await new Promise(r => setTimeout(r, 2000));
+
+    // Gather all IPO links from homepage
+    const ipoLinks = await mainPage.evaluate(() => {
+        const links = [];
+        const seen = new Set();
+        document.querySelectorAll("a[href*=\"/view/ipo/\"]").forEach(a => {
+            const href = a.href;
+            const name = a.innerText.trim();
+            if (href && !seen.has(href)) {
+                seen.add(href);
+                links.push({ href, name });
+            }
+        });
+        return links;
     });
 
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36');
+    console.log(`Found ${ipoLinks.length} total IPO detail links.`);
+    await mainPage.close();
 
-    // Scrape homepage first to collect all active IDs
-    let allIpos = [];
-    page.on('response', async res => {
-        if (res.url().includes('/ipo') && res.request().method() === 'POST') {
-            try {
-                const json = await res.json();
-                if (json && Array.isArray(json.data)) {
-                    allIpos.push(...json.data);
-                }
-            } catch (e) {}
-        }
-    });
+    let csFound = 0;
+    for (let i = 0; i < ipoLinks.length; i++) {
+        const item = ipoLinks[i];
+        const m = item.href.match(/\/view\/ipo\/(\d+)\/([^\/]+)/);
+        if (!m) continue;
+        const id = parseInt(m[1]);
+        const slug = m[2];
+        const key = slug.replace(/[^a-z0-9]/g, "");
 
-    await page.goto('https://www.ipopremium.in/', { waitUntil: 'networkidle2', timeout: 30000 });
-    console.log(`Captured ${allIpos.length} IPOs from homepage API`);
+        const page = await browser.newPage();
+        await page.setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
 
-    // Add all discovered items to cache
-    for (const item of allIpos) {
-        if (!item.id || !item.slug) continue;
-        let rawName = item.slug.replace(/-/g, ' ');
-        if (item.name) {
-            const match = item.name.match(/>([^<]+)</);
-            if (match) rawName = match[1];
-        }
-        const cleanName = rawName.replace(/\s*\([^)]*\)/g, '').trim();
-        const normKey = normalizeCompanyName(cleanName);
+        try {
+            await page.goto(item.href, { waitUntil: "networkidle2", timeout: 35000 });
+            // Scroll down to trigger lazy load of document table
+            await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+            await new Promise(r => setTimeout(r, 2000));
 
-        if (!cache[normKey]) {
-            cache[normKey] = {
-                companyName: cleanName,
-                id: item.id,
-                slug: item.slug,
-                detailUrl: `https://www.ipopremium.in/view/ipo/${item.id}/${item.slug}`,
-                capitalStructureUrl: null,
-                anchorPdfUrl: null,
+            const html = await page.content();
+            const pdfs = Array.from(new Set(html.match(/https?:\/\/[^"'\s<>]+\.pdf/g) || []));
+
+            let cs = null, anchor = null, rhp = null;
+
+            for (const p of pdfs) {
+                const low = p.toLowerCase();
+                if (low.includes("capital_structure") && !cs) cs = p;
+                if (low.includes("anchor") && !anchor) anchor = p;
+                if ((low.includes("rhp") || low.includes("prospectus") || low.includes("drhp")) && !rhp) rhp = p;
+            }
+
+            if (cs) csFound++;
+            console.log(`[${i+1}/${ipoLinks.length}] ${slug} => CS: ${cs || "null"} | Anchor: ${anchor || "null"} | RHP: ${rhp || "null"}`);
+
+            const entry = {
+                companyName: item.name || slug,
+                id: id,
+                slug: slug,
+                detailUrl: item.href,
+                capitalStructureUrl: cs,
+                anchorPdfUrl: anchor,
+                rhpUrl: rhp,
                 updatedAt: new Date().toISOString()
             };
+
+            cache[key] = entry;
+            ipoCache[key] = entry;
+
+        } catch (err) {
+            console.warn(`  Failed ${slug}: ${err.message}`);
+        } finally {
+            await page.close();
+            await new Promise(r => setTimeout(r, 500));
         }
     }
 
-    // Now scan detail pages for any items missing capitalStructureUrl
-    const keys = Object.keys(cache);
-    console.log(`Checking ${keys.length} cached companies for Capital Structure PDFs...`);
-
-    for (let i = 0; i < keys.length; i++) {
-        const entry = cache[keys[i]];
-        if (entry.capitalStructureUrl) continue;
-
-        console.log(`[${i+1}/${keys.length}] Scraping detail page for ${entry.companyName} (${entry.detailUrl})...`);
-        try {
-            await page.goto(entry.detailUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
-            const result = await page.evaluate(() => {
-                let cs = null;
-                let an = null;
-                for (const a of document.querySelectorAll('a')) {
-                    const h = a.href || '';
-                    const t = (a.innerText || '').toLowerCase();
-                    if (!cs && (h.includes('capital_structure') || t.includes('capital structure')) && h.includes('.pdf')) {
-                        cs = h;
-                    }
-                    if (!an && (h.includes('anchor') || t.includes('anchor')) && h.includes('.pdf')) {
-                        an = h;
-                    }
-                }
-                return { cs, an };
-            });
-
-            if (result.cs) {
-                entry.capitalStructureUrl = result.cs;
-                console.log(`  -> Found Capital Structure: ${result.cs}`);
-            }
-            if (result.an) {
-                entry.anchorPdfUrl = result.an;
-            }
-            entry.updatedAt = new Date().toISOString();
-        } catch (e) {
-            console.log(`  -> Scrape failed for ${entry.companyName}: ${e.message}`);
-        }
-    }
-
-    fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
-    console.log('Saved updated cache to', CACHE_FILE);
+    fs.writeFileSync(cacheFile, JSON.stringify(cache, null, 2), "utf8");
+    fs.writeFileSync(ipoCacheFile, JSON.stringify(ipoCache, null, 2), "utf8");
+    console.log(`\n✅ Saved caches with ${csFound} Capital Structure PDFs!`);
 
     await browser.close();
+
+    // Synchronize data/unlock-data.json
+    console.log("\n=== Synchronizing data/unlock-data.json ===");
+    let fixedDocsCount = 0;
+    let clearedRhpFromCapCount = 0;
+
+    for (const company of unlockDb.companies) {
+        const norm = (company.companyName || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        
+        let matched = null;
+        for (const [slug, item] of Object.entries(cache)) {
+            const normSlug = slug.replace(/[^a-z0-9]/g, "");
+            if (norm.includes(normSlug) || normSlug.includes(norm.slice(0, 8)) || (norm.length > 5 && normSlug.includes(norm.slice(0, 6)))) {
+                matched = item;
+                break;
+            }
+        }
+
+        if (matched) {
+            if (matched.capitalStructureUrl) {
+                if (company.capitalStructureUrl !== matched.capitalStructureUrl) {
+                    console.log(`  Updating CS for ${company.companyName}: ${matched.capitalStructureUrl}`);
+                    company.capitalStructureUrl = matched.capitalStructureUrl;
+                    fixedDocsCount++;
+                }
+            }
+            if (matched.anchorPdfUrl && !company.anchorUrl) {
+                company.anchorUrl = matched.anchorPdfUrl;
+            }
+            if (matched.rhpUrl) {
+                company.rhpUrl = matched.rhpUrl;
+            }
+        }
+
+        // Cleanse: If company.capitalStructureUrl contains "rhp" or does not contain "capital_structure"
+        if (company.capitalStructureUrl && (company.capitalStructureUrl.toLowerCase().includes("rhp") || !company.capitalStructureUrl.toLowerCase().includes("capital_structure"))) {
+            if (!company.rhpUrl || company.rhpUrl === company.capitalStructureUrl) {
+                company.rhpUrl = company.capitalStructureUrl;
+            }
+            company.capitalStructureUrl = null;
+            clearedRhpFromCapCount++;
+            console.log(`  Cleared faux capitalStructureUrl (RHP link) for ${company.companyName}`);
+        }
+    }
+
+    fs.writeFileSync(unlockFile, JSON.stringify(unlockDb, null, 2), "utf8");
+    console.log(`\n🎉 Sync completed! Attached ${fixedDocsCount} genuine CS links, cleansed ${clearedRhpFromCapCount} faux RHP links from capitalStructureUrl.`);
 }
 
-scrapeAllIpoPremium().catch(e => console.error(e));
+scrapeAllWithScroll().catch(e => console.error(e));
