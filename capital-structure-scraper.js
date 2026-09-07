@@ -439,14 +439,23 @@ async function fetchCapitalStructureUrl(companyName) {
  * @param {string} [capitalStructureUrl] - Optional direct PDF URL (skips lookup)
  * @returns {{ preIpoInvestors: string[], waca: number|null, peerComparison: Object|null }}
  */
-async function extractFromCapitalStructure(companyName, capitalStructureUrl) {
-    const url = capitalStructureUrl || await fetchCapitalStructureUrl(companyName);
-    
-    if (!url) {
-        return { preIpoInvestors: null, waca: null, peerComparison: null };
+async function extractFromCapitalStructure(arg1, arg2, arg3) {
+    let companyName, url, isSme;
+    if (typeof arg1 === 'string' && arg1.startsWith('http')) {
+        url = arg1;
+        companyName = typeof arg2 === 'string' ? arg2 : 'Company';
+        isSme = arg3 === true;
+    } else {
+        companyName = arg1 || 'Company';
+        url = typeof arg2 === 'string' && arg2.startsWith('http') ? arg2 : await fetchCapitalStructureUrl(companyName);
+        isSme = arg3 === true;
     }
     
-    console.log(`[CapStruct] Extracting pre-IPO investors from: ${url}`);
+    if (!url) {
+        return { preIpoInvestors: [], waca: null, peerComparison: null };
+    }
+    
+    console.log(`[CapStruct] Extracting pre-IPO investors for "${companyName}" from: ${url}`);
     
     try {
         const { exec } = require('child_process');
@@ -455,9 +464,10 @@ async function extractFromCapitalStructure(companyName, capitalStructureUrl) {
             pythonBin = path.join(__dirname, 'venv', 'bin', 'python');
         }
         const pyScript = path.join(__dirname, 'nlp_extractor.py');
-        const safelyEscapedName = companyName.replace(/"/g, '\\"');
+        const safelyEscapedName = (companyName || '').replace(/"/g, '\\"');
+        const smeFlag = isSme ? ' --is_sme' : '';
         
-        const pyCmd = `${pythonBin} ${pyScript} --rhp "${url}" --company_name "${safelyEscapedName}"`;
+        const pyCmd = `${pythonBin} ${pyScript} --rhp "${url}" --company_name "${safelyEscapedName}"${smeFlag}`;
         return new Promise((resolve) => {
             exec(pyCmd, { encoding: 'utf8', timeout: 45000 }, (err, stdout) => {
                 if (err || !stdout) {

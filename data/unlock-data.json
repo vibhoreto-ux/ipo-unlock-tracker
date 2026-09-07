@@ -140,9 +140,155 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_rhp_1788675381.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_capital_structure_1788675382.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "Founders Collective Fund",
+          "shares": 457932,
+          "price": 136,
+          "acquisitionPrice": 136,
+          "purchasePrice": 136,
+          "date": "2026-09-01",
+          "allotmentDate": "2026-09-01",
+          "lockin": "1 Year",
+          "category": "AIF / Pre-IPO Fund"
+        },
+        {
+          "name": "Abakkus Venture Opportunities Fund",
+          "shares": 77744,
+          "price": 136,
+          "acquisitionPrice": 136,
+          "purchasePrice": 136,
+          "date": "2026-09-01",
+          "allotmentDate": "2026-09-01",
+          "lockin": "1 Year",
+          "category": "AIF / Pre-IPO Fund"
+        },
+        {
+          "name": "Utkarsh Patel",
+          "shares": 186155,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Richa Garg",
+          "shares": 162135,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Utkarsh Patel HUF",
+          "shares": 129708,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Vanilla Consultants",
+          "shares": 127306,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Corporate Pre-IPO"
+        },
+        {
+          "name": "Bhanuben Bharatbhai Patel",
+          "shares": 72060,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Rahul Garg",
+          "shares": 63653,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Chirag Jain",
+          "shares": 30025,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Lurk Estate Private Limited",
+          "shares": 25221,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Corporate Pre-IPO"
+        },
+        {
+          "name": "Neeru Khurana",
+          "shares": 9608,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-18",
+          "allotmentDate": "2025-12-18",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Dhairya Sethi",
+          "shares": 7206,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2025-12-24",
+          "allotmentDate": "2025-12-24",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        },
+        {
+          "name": "Ravi Kumar Aggarwal",
+          "shares": 6005,
+          "price": 70.55,
+          "acquisitionPrice": 70.55,
+          "purchasePrice": 70.55,
+          "date": "2026-01-05",
+          "allotmentDate": "2026-01-05",
+          "lockin": "1 Year",
+          "category": "Pre-IPO Investor"
+        }
+      ],
       "name": "Maharaja & Speedex India Ltd",
-      "lotSize": 1600
+      "lotSize": 1600,
+      "preIpoWaca": 96.43,
+      "preIpoHoldersCount": 13
     },
     {
       "companyName": "Century Business Media Ltd",
@@ -42304,7 +42450,7 @@
       "capitalStructureUrl": null
     }
   ],
-  "lastUpdated": "2026-09-07T15:42:24.724Z",
+  "lastUpdated": "2026-09-07T15:52:51.162Z",
   "lastScraped": {
     "time": "2026-09-03T06:59:51.027Z",
     "scraped2025": 6,
