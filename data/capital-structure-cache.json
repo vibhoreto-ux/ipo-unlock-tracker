@@ -712,6 +712,9 @@
     "capitalStructureUrl": null,
     "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
     "updatedAt": "2026-09-05T04:38:22.647Z",
-    "lastScrapedAt": 1788583089082
+    "lastScrapedAt": 1788583089082,
+    "priceBand": "₹77–81",
+    "issuePrice": 81,
+    "lotSize": 185
   }
 }

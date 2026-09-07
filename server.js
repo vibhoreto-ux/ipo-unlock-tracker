@@ -633,6 +633,7 @@ async function probeUpcomingData() {
         const chunk = upcoming.slice(i, i + CHUNK_SIZE);
         await Promise.all(chunk.map(async (company) => {
             let changed = false;
+            const updatedFields = [];
             const name = company.companyName;
 
             // 1. Probe Anchors & True Total Shares if anchorInvestors is 0 or missing
@@ -643,14 +644,17 @@ async function probeUpcomingData() {
                         if (parsed.investors && parsed.investors.length > 0) {
                             company.anchorInvestors = parsed.investors;
                             changed = true;
+                            if (!updatedFields.includes('Anchor Allotment')) updatedFields.push('Anchor Allotment');
                         }
                         if (parsed.anchorShares > 0 && parsed.anchorShares !== company.anchorShares) {
                             company.anchorShares = parsed.anchorShares;
                             changed = true;
+                            if (!updatedFields.includes('Anchor Shares')) updatedFields.push('Anchor Shares');
                         }
                         if (parsed.totalShares > 0 && parsed.totalShares !== company.totalShares) {
                             company.totalShares = parsed.totalShares;
                             changed = true;
+                            if (!updatedFields.includes('Total Shares')) updatedFields.push('Total Shares');
                         }
                     }
                 } catch (e) {
@@ -690,6 +694,7 @@ async function probeUpcomingData() {
                     if (docUrl && docUrl !== company.capitalStructureUrl) {
                         company.capitalStructureUrl = docUrl;
                         changed = true;
+                        if (!updatedFields.includes('Capital Structure Doc')) updatedFields.push('Capital Structure Doc');
                     }
 
                     const targetDoc = (company.capitalStructureUrl && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) 
@@ -734,75 +739,90 @@ async function probeUpcomingData() {
                             if (cachedEntry.priceBand && company.priceBand !== cachedEntry.priceBand) {
                                 company.priceBand = cachedEntry.priceBand;
                                 changed = true;
+                                if (!updatedFields.includes('Price Band')) updatedFields.push('Price Band');
                             }
                             if (cachedEntry.issuePrice && company.issuePrice !== cachedEntry.issuePrice) {
                                 company.issuePrice = cachedEntry.issuePrice;
                                 changed = true;
+                                if (!updatedFields.includes('Issue Price')) updatedFields.push('Issue Price');
                             }
                             if (cachedEntry.lotSize && company.lotSize !== cachedEntry.lotSize) {
                                 company.lotSize = cachedEntry.lotSize;
                                 changed = true;
+                                if (!updatedFields.includes('Lot Size')) updatedFields.push('Lot Size');
                             }
                             if (cachedEntry.allotmentDate && (!company.allotmentDate || !company.allotmentDate.original)) {
                                 company.allotmentDate = { original: cachedEntry.allotmentDate, adjusted: cachedEntry.allotmentDate, isAdjusted: false };
                                 changed = true;
+                                if (!updatedFields.includes('Allotment Date')) updatedFields.push('Allotment Date');
                             }
                             if (cachedEntry.listingDate && !company.listingDate) {
                                 company.listingDate = cachedEntry.listingDate;
                                 changed = true;
+                                if (!updatedFields.includes('Listing Date')) updatedFields.push('Listing Date');
                             }
                             if (cachedEntry.openDate && !company.openDate) {
                                 company.openDate = cachedEntry.openDate;
                                 changed = true;
+                                if (!updatedFields.includes('Open Date')) updatedFields.push('Open Date');
                             }
                             if (cachedEntry.closeDate && !company.closeDate) {
                                 company.closeDate = cachedEntry.closeDate;
                                 changed = true;
+                                if (!updatedFields.includes('Close Date')) updatedFields.push('Close Date');
                             }
 
                             // If still missing key data, scrape the detail page live
                             if (((!company.priceBand || !company.issuePrice) || !company.openDate || !company.closeDate) && cachedEntry.detailUrl) {
                                 const detailRes = await scrapeDetailPage(cachedEntry.detailUrl);
                                 if (detailRes) {
-                                    if (detailRes.priceBand) {
+                                    if (detailRes.priceBand && detailRes.priceBand !== company.priceBand) {
                                         company.priceBand = detailRes.priceBand;
                                         cachedEntry.priceBand = detailRes.priceBand;
                                         changed = true;
+                                        if (!updatedFields.includes('Price Band')) updatedFields.push('Price Band');
                                     }
-                                    if (detailRes.issuePrice) {
+                                    if (detailRes.issuePrice && detailRes.issuePrice !== company.issuePrice) {
                                         company.issuePrice = detailRes.issuePrice;
                                         cachedEntry.issuePrice = detailRes.issuePrice;
                                         changed = true;
+                                        if (!updatedFields.includes('Issue Price')) updatedFields.push('Issue Price');
                                     }
-                                    if (detailRes.lotSize) {
+                                    if (detailRes.lotSize && detailRes.lotSize !== company.lotSize) {
                                         company.lotSize = detailRes.lotSize;
                                         cachedEntry.lotSize = detailRes.lotSize;
                                         changed = true;
+                                        if (!updatedFields.includes('Lot Size')) updatedFields.push('Lot Size');
                                     }
                                     if (detailRes.allotmentDate && (!company.allotmentDate || !company.allotmentDate.original)) {
                                         company.allotmentDate = { original: detailRes.allotmentDate, adjusted: detailRes.allotmentDate, isAdjusted: false };
                                         cachedEntry.allotmentDate = detailRes.allotmentDate;
                                         changed = true;
+                                        if (!updatedFields.includes('Allotment Date')) updatedFields.push('Allotment Date');
                                     }
                                     if (detailRes.listingDate && !company.listingDate) {
                                         company.listingDate = detailRes.listingDate;
                                         cachedEntry.listingDate = detailRes.listingDate;
                                         changed = true;
+                                        if (!updatedFields.includes('Listing Date')) updatedFields.push('Listing Date');
                                     }
                                     if (detailRes.openDate && !company.openDate) {
                                         company.openDate = detailRes.openDate;
                                         cachedEntry.openDate = detailRes.openDate;
                                         changed = true;
+                                        if (!updatedFields.includes('Open Date')) updatedFields.push('Open Date');
                                     }
                                     if (detailRes.closeDate && !company.closeDate) {
                                         company.closeDate = detailRes.closeDate;
                                         cachedEntry.closeDate = detailRes.closeDate;
                                         changed = true;
+                                        if (!updatedFields.includes('Close Date')) updatedFields.push('Close Date');
                                     }
                                     if (detailRes.totalShares && (!company.totalShares || company.totalShares === 0)) {
                                         company.totalShares = detailRes.totalShares;
                                         cachedEntry.totalShares = detailRes.totalShares;
                                         changed = true;
+                                        if (!updatedFields.includes('Total Shares')) updatedFields.push('Total Shares');
                                     }
                                     fs.writeFileSync(cachePath, JSON.stringify(csCache, null, 2), 'utf8');
                                 }
@@ -818,6 +838,7 @@ async function probeUpcomingData() {
                 updatedCount++;
                 probeLog.push({
                     company: name,
+                    updatedFields: updatedFields.length > 0 ? updatedFields : ['Anchor/Pre-IPO Data'],
                     priceBand: company.priceBand,
                     issuePrice: company.issuePrice,
                     lotSize: company.lotSize,

@@ -10,7 +10,7 @@
         "isAdjusted": false
       },
       "chittorgarhUrl": null,
-      "issuePrice": null,
+      "issuePrice": 81,
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
@@ -21,10 +21,11 @@
       "capitalStructureUrl": null,
       "anchorUrl": null,
       "preIpoInvestors": [],
-      "priceBand": null,
+      "priceBand": "₹77–81",
       "listingDate": "2026-09-16T18:30:00.000Z",
       "openDate": "2026-09-08T18:30:00.000Z",
-      "closeDate": "2026-09-10T18:30:00.000Z"
+      "closeDate": "2026-09-10T18:30:00.000Z",
+      "lotSize": 185
     },
     {
       "companyName": "Vinod Texworld Ltd.",
@@ -74,25 +75,276 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_capital_structure_1788532230.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "M/s. Online Potato Consultancy Private Limited",
-        "A Promo",
-        "Mr. Ashwinbhai Gordhanbhai Vachhani",
-        "Online Potato Consultancy Private Limited",
-        "Newtonly Private Limited",
-        "Mr. Gandhi Bhavik Tarunkumar",
-        "Mr. Vishal Bhandari",
-        "M/s. Newtonly Private Limited",
-        "Mr. Bhargv Ashvinbhai Vachhani",
-        "M/s Maruna Exports Private Limited",
-        "M/s Monetic Catalyst LLP",
-        "Mr. Vivek Kumar",
-        "M/s Chittorgarh Infotech Limited",
-        "Intellifin Private Limited",
-        "Ms. Khushboo Bhargav Vachhani",
-        "Mr. Yash Hitesh Patel",
-        "M/s. Intellifin Private Limited (₹160)",
-        "Chittorgarh Infotech Limited",
-        "Ms. Gandhi Maya Bhavik"
+        {
+          "name": "Mr. Yash Hitesh Patel",
+          "date": "21 Jul 2025",
+          "shares": 900400,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "M/s. Newtonly Private Limited",
+          "date": "05 Jun 2026",
+          "shares": 825911,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Vishal Bhandari",
+          "date": "05 Jun 2026",
+          "shares": 138000,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "M/s Chittorgarh Infotech Limited",
+          "date": "21 Jul 2025",
+          "shares": 128000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Vivek Kumar",
+          "date": "21 Jul 2025",
+          "shares": 128000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "M/s. Online Potato Consultancy Private Limited",
+          "date": "05 May 2026",
+          "shares": 160000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Pre-IPO Shareholder",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "M/s. Intellifin Private Limited",
+          "date": "21 Jul 2025",
+          "shares": 80000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Virendra Prasad Bhagat",
+          "date": "21 Jul 2025",
+          "shares": 88000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "M/s Maruna Exports Private Limited",
+          "date": "21 Jul 2025",
+          "shares": 64000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "M/s Monetic Catalyst LLP",
+          "date": "21 Jul 2025",
+          "shares": 48000,
+          "buyPrice": 20,
+          "acquisitionPrice": 160,
+          "category": "Private Placement (₹160 pre-bonus / ₹20 post 7:1 bonus)",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Ami Niraj Shah",
+          "date": "05 Jun 2026",
+          "shares": 81600,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Vinod Kumar Sahni",
+          "date": "05 Jun 2026",
+          "shares": 69600,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Suman Agrawal",
+          "date": "05 Jun 2026",
+          "shares": 42000,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Avnish Chhabria",
+          "date": "05 Jun 2026",
+          "shares": 40800,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Meenu Sharma",
+          "date": "05 Jun 2026",
+          "shares": 36000,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Krisha Talreja",
+          "date": "05 Jun 2026",
+          "shares": 36000,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Rahul Mahajan",
+          "date": "05 Jun 2026",
+          "shares": 30000,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Vineet Kumar Sahni",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Sonal Dhurv Bahl",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Soumya Mantha",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Pooja Kumar",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Pankaj Bhardwaj",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Aparna Misra",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Girdhar Balwani",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Shivam Thapliyal",
+          "date": "05 Jun 2026",
+          "shares": 20400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Madhav Goyal",
+          "date": "05 Jun 2026",
+          "shares": 14400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Meenakshi Kaushik",
+          "date": "05 Jun 2026",
+          "shares": 14400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Ms. Shruti Sharma",
+          "date": "05 Jun 2026",
+          "shares": 14400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Vivek Nathwani",
+          "date": "05 Jun 2026",
+          "shares": 14400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        },
+        {
+          "name": "Mr. Vivek Sarkar",
+          "date": "05 Jun 2026",
+          "shares": 14400,
+          "buyPrice": 72,
+          "acquisitionPrice": 72,
+          "category": "Pre-IPO Private Placement",
+          "lockInExpiry": "2027-09-14T00:00:00.000Z"
+        }
       ],
       "priceBand": "₹104–104",
       "lotSize": 1200,
@@ -21290,7 +21542,7 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-07T00:00:00.000Z",
+        "expiryDate": "2026-09-02",
         "originalDate": "2026-09-05T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
@@ -24318,7 +24570,9 @@
         }
       ],
       "anchorShares": 1336000,
-      "totalShares": 4700000
+      "totalShares": 4700000,
+      "rhpUrl": "https://www.bsesme.com/download/343207/SME_IPO%20Open/RHP_Merritronix_19052026_20260523143217.pdf",
+      "preIpoInvestors": []
     },
     {
       "companyName": "Aureate Tradde Ltd.",
@@ -38525,9 +38779,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-09-07T00:00:00.000Z",
+        "expiryDate": "2027-09-05",
         "originalDate": "2027-09-07T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
@@ -41887,7 +42141,7 @@
       "capitalStructureUrl": null
     }
   ],
-  "lastUpdated": "2026-09-05T06:35:56.171Z",
+  "lastUpdated": "2026-09-07T14:06:23.397Z",
   "lastScraped": {
     "time": "2026-09-03T06:59:51.027Z",
     "scraped2025": 6,
@@ -42181,6 +42435,93 @@
       "noticeId": "NSE/CML/75648",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75648.zip",
       "fetchedAt": "2026-09-05T07:41:54.535Z"
+    },
+    "Omnitech Engineering Ltd.": {
+      "found": true,
+      "totalShares": 123666020,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 17993433,
+          "percentage": 14.6,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-03-31",
+          "shares": 3845814,
+          "percentage": 3.1
+        },
+        {
+          "date": "2026-05-30",
+          "shares": 3845815,
+          "percentage": 3.1
+        },
+        {
+          "date": "2026-09-02",
+          "shares": 7329803,
+          "percentage": 5.9
+        },
+        {
+          "date": "2027-03-02",
+          "shares": 65730352,
+          "percentage": 53.2
+        },
+        {
+          "date": "2029-03-02",
+          "shares": 24920803,
+          "percentage": 20.2
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/73104",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73104.zip",
+      "fetchedAt": "2026-09-06T06:57:54.620Z"
+    },
+    "Shanti Inorganics Ltd.": {
+      "found": true,
+      "totalShares": 17247400,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 4072000,
+          "percentage": 23.6,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-18",
+          "shares": 307200,
+          "percentage": 1.8
+        },
+        {
+          "date": "2026-10-02",
+          "shares": 808000,
+          "percentage": 4.7
+        },
+        {
+          "date": "2026-12-01",
+          "shares": 811200,
+          "percentage": 4.7
+        },
+        {
+          "date": "2027-09-05",
+          "shares": 5195228,
+          "percentage": 30.1
+        },
+        {
+          "date": "2028-09-05",
+          "shares": 2595668,
+          "percentage": 15
+        },
+        {
+          "date": "2030-07-01",
+          "shares": 3458104,
+          "percentage": 20.1
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/76203",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76203.zip",
+      "fetchedAt": "2026-09-07T04:12:02.750Z"
     }
   }
 }

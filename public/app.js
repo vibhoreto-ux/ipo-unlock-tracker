@@ -1626,13 +1626,25 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
                 renderUpcomingIPOs();
 
-                // Show notification banner if companies were updated
-                if (probeRes.updatedCount > 0) {
-                    const noticeDiv = document.createElement('div');
+                // Show notification banner with details of updated company and fields
+                const noticeDiv = document.createElement('div');
+                if (probeRes.updatedCount > 0 && probeRes.probeLog && probeRes.probeLog.length > 0) {
+                    const companyDetails = probeRes.probeLog.map(p => {
+                        const fieldsStr = p.updatedFields && p.updatedFields.length > 0 ? ` (${p.updatedFields.join(', ')})` : '';
+                        return `<strong>${p.company}</strong>${fieldsStr}`;
+                    }).join('; ');
+
                     noticeDiv.style.cssText = 'background: #ecfdf5; border: 1px solid #10b981; color: #065f46; padding: 10px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 13.5px; font-weight: 600; display:flex; align-items:center; justify-content:space-between; animation: fadeIn 0.3s ease;';
                     noticeDiv.innerHTML = `
-                        <span>✨ Successfully probed ${probeRes.totalProbed} upcoming IPOs — updated fresh Anchor/Pre-IPO data for ${probeRes.updatedCount} companies!</span>
-                        <span style="cursor:pointer; font-size:16px;" onclick="this.parentElement.remove()">&times;</span>
+                        <span>✨ Successfully probed ${probeRes.totalProbed} upcoming IPOs — updated ${companyDetails}!</span>
+                        <span style="cursor:pointer; font-size:16px; margin-left:12px;" onclick="this.parentElement.remove()">&times;</span>
+                    `;
+                    upcomingList.insertBefore(noticeDiv, upcomingList.firstChild);
+                } else {
+                    noticeDiv.style.cssText = 'background: #f0fdf4; border: 1px solid #86efac; color: #166534; padding: 10px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 13.5px; font-weight: 600; display:flex; align-items:center; justify-content:space-between; animation: fadeIn 0.3s ease;';
+                    noticeDiv.innerHTML = `
+                        <span>✨ Probed ${probeRes.totalProbed || 25} upcoming IPOs — all Anchor, Pre-IPO, pricing, and allotment data are already up to date!</span>
+                        <span style="cursor:pointer; font-size:16px; margin-left:12px;" onclick="this.parentElement.remove()">&times;</span>
                     `;
                     upcomingList.insertBefore(noticeDiv, upcomingList.firstChild);
                 }
