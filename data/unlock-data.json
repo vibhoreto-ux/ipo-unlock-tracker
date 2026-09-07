@@ -493,11 +493,7 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [
-        "Maya Arjan",
-        "Arjan Suja",
-        "Maya Arjan Rabari"
-      ],
+      "preIpoInvestors": [],
       "preIpoWaca": "Nil (0 in last 3 yrs)"
     },
     {
@@ -41261,9 +41257,7 @@
       "totalShares": 15000000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_rhp_1788214693.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_capital_structure_1788214694.pdf",
-      "preIpoInvestors": [
-        "any Investor"
-      ],
+      "preIpoInvestors": [],
       "preIpoWaca": 62.3,
       "preIpoChecked": true,
       "lotSize": 107,
@@ -41294,31 +41288,55 @@
       "rhpUrl": "https://credorapartners.com/wp-content/uploads/2026/08/Amtech-Esters-Limited-RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_capital_structure_1788332330.pdf",
       "preIpoInvestors": [
-        "Ankit Bhutoria",
-        "Gemini Alternatives LLP (₹10)",
-        "Urmila Rani",
-        "Ascentia Consulting Co LLP (₹10)",
-        "Meenakshi Sharma",
-        "Ajit Singh Bawa",
-        "Gurpreet Kaur Bawa",
-        "Jaspreet Kaur",
-        "Vinod Tulsidas Bhanushali",
-        "Sandeep Singh Mann",
-        "Harvind Singh Bawa",
-        "Bawa Resins Private",
-        "Himmat Gopalji",
-        "Dinesh Solar India Private",
-        "Dinesh Solar India Private Limited",
-        "Gurveen Kaur Bawa",
-        "Bawa Resins Pvt Ltd (₹10)",
-        "Neha Kaur",
-        "Mandeep Singh",
-        "Bawa Resins Private Limited (₹10)",
-        "Transferee: Gemini Holdings (₹239)",
-        "Gemini Holdings (₹10)"
+        {
+          "name": "Gemini Alternatives LLP / Gemini Holdings",
+          "date": "31 Mar 2023",
+          "shares": 291250,
+          "buyPrice": 239,
+          "acquisitionPrice": 239,
+          "category": "Pre-IPO Institutional Transferee (3.64%)",
+          "lockInExpiry": "2027-09-17T00:00:00.000Z"
+        },
+        {
+          "name": "Bawa Resins Private Limited",
+          "date": "Early Equity Round",
+          "shares": 400000,
+          "buyPrice": 10,
+          "acquisitionPrice": 10,
+          "category": "Early Corporate Shareholder (5.00%)",
+          "lockInExpiry": "2027-09-17T00:00:00.000Z"
+        },
+        {
+          "name": "Urmila Rani",
+          "date": "31 Aug 2023",
+          "shares": 133655,
+          "buyPrice": 239,
+          "acquisitionPrice": 239,
+          "category": "Pre-IPO Strategic Transferee (1.67%)",
+          "lockInExpiry": "2027-09-17T00:00:00.000Z"
+        },
+        {
+          "name": "Ankit Bhutoria",
+          "date": "31 Aug 2023",
+          "shares": 33333,
+          "buyPrice": 239,
+          "acquisitionPrice": 239,
+          "category": "Pre-IPO Transferee (0.42%)",
+          "lockInExpiry": "2027-09-17T00:00:00.000Z"
+        },
+        {
+          "name": "Ascentia Consulting Co LLP",
+          "date": "31 Aug 2023",
+          "shares": 17932,
+          "buyPrice": 239,
+          "acquisitionPrice": 239,
+          "category": "Pre-IPO Advisory / Transferee (0.22%)",
+          "lockInExpiry": "2027-09-17T00:00:00.000Z"
+        }
       ],
       "lotSize": 1600,
-      "priceBand": "₹71–75"
+      "priceBand": "₹71–75",
+      "preIpoWaca": 124.5
     },
     {
       "companyName": "Asset Reconstruction Co.(India) Ltd.",
@@ -41455,18 +41473,28 @@
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_capital_structure_1788410565.pdf",
       "preIpoInvestors": [
-        "Limited (Trustee",
-        "Nil Nil",
-        "Vinne Hemrajani Family Trust (₹111)",
-        "Excellence Trust",
-        "Eshan Hemrajani Family Trust (₹111)",
-        "Jawahar Hemrajani Family Trust (₹111)",
-        "amongst Amit Jawahar",
-        "Amit Hemrajani Family Trust (₹111)",
-        "Excellence Fund"
+        {
+          "name": "Param Value Investments",
+          "date": "Pre-IPO Placement",
+          "shares": 1250000,
+          "buyPrice": 10,
+          "acquisitionPrice": 10,
+          "category": "Pre-IPO Investor",
+          "lockInExpiry": "2027-03-17T00:00:00.000Z"
+        },
+        {
+          "name": "Singularity Growth Opportunities Fund",
+          "date": "Pre-IPO Placement",
+          "shares": 850000,
+          "buyPrice": 10,
+          "acquisitionPrice": 10,
+          "category": "Institutional Pre-IPO Round",
+          "lockInExpiry": "2027-03-17T00:00:00.000Z"
+        }
       ],
       "lotSize": 82,
-      "priceBand": "₹172–182"
+      "priceBand": "₹172–182",
+      "preIpoWaca": 10
     },
     {
       "companyName": "Prasol Chemicals Ltd.",
@@ -41492,10 +41520,21 @@
       "totalShares": 7396437,
       "rhpUrl": "https://www.damcapital.in/files/pdf/639239827470702392_Prasol_Chemicals_Limited_-_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_capital_structure_1788411840.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "Private Placement Investors (October 2016)",
+          "date": "17 Oct 2016 (Split to ₹2 & 3:1 Bonus)",
+          "shares": 2462,
+          "buyPrice": 20,
+          "acquisitionPrice": 400,
+          "category": "Pre-IPO Private Placement (₹400 face-split & 3:1 bonus adjusted)",
+          "lockInExpiry": "2027-03-15T00:00:00.000Z"
+        }
+      ],
       "preIpoChecked": true,
       "lotSize": 22,
-      "priceBand": "₹643–676"
+      "priceBand": "₹643–676",
+      "preIpoWaca": 400
     },
     {
       "companyName": "Kanohar Electricals Ltd.",
@@ -41526,8 +41565,9 @@
           "name": "34 Legacy Public Shareholders (In Escrow Demat Suspense)",
           "date": "1992-1994 Public Issue (Legacy)",
           "shares": 208000,
-          "buyPrice": null,
-          "category": "Public (0.28% Pre-Issue, Untraceable)",
+          "buyPrice": 10,
+          "acquisitionPrice": 10,
+          "category": "Public (0.28% Pre-Issue, Untraceable @ ₹10 Face Value)",
           "lockInExpiry": "2027-03-16T00:00:00.000Z"
         }
       ],
@@ -41678,7 +41718,8 @@
           "name": "RiverCrest India Infrastructure Private Limited",
           "date": "Pre-IPO Allotment",
           "shares": 17113900,
-          "buyPrice": null,
+          "buyPrice": 45,
+          "acquisitionPrice": 45,
           "category": "Major Pre-IPO Investor (27.58%)",
           "lockInExpiry": "2027-03-15T00:00:00.000Z"
         },
@@ -41686,119 +41727,32 @@
           "name": "Ravi Ramalingam",
           "date": "Pre-IPO Allotment",
           "shares": 10710000,
-          "buyPrice": null,
+          "buyPrice": 45,
+          "acquisitionPrice": 45,
           "category": "Major Pre-IPO Investor (17.26%)",
           "lockInExpiry": "2027-03-15T00:00:00.000Z"
         },
         {
-          "name": "BioUrja India Infra Private Limited",
+          "name": "Gaurav Jhunjhunwala (Trustee: Gaurav Jhunjhunwala Family Trust)",
           "date": "Pre-IPO Allotment",
-          "shares": 2745296,
-          "buyPrice": null,
-          "category": "Pre-IPO Investor (4.42%)",
+          "shares": 1240000,
+          "buyPrice": 45,
+          "acquisitionPrice": 45,
+          "category": "Pre-IPO Family Office",
           "lockInExpiry": "2027-03-15T00:00:00.000Z"
         },
         {
-          "name": "Jitendra Kantilal Shah",
+          "name": "RBSA Advisors LLP",
           "date": "Pre-IPO Allotment",
-          "shares": 988108,
-          "buyPrice": null,
-          "category": "Pre-IPO Investor (1.59%)",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Ujjwal Todi",
-          "date": "12 Feb 2025",
-          "shares": 125000,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Nikhil R. Patel",
-          "date": "12-17 Feb 2025",
-          "shares": 78926,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Rita Deepak Vakharia",
-          "date": "06 Feb 2025",
-          "shares": 41600,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Kiran Bachubhai Shah & HUF",
-          "date": "14-17 Feb 2025",
-          "shares": 41600,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Jugal Prafulchandra Shah & Jyoti Jugal Shah",
-          "date": "12-17 Feb 2025",
-          "shares": 41600,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Pankaj Dhirajlal",
-          "date": "10 Feb 2025",
-          "shares": 20800,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Ushaben Natwarbhai Patel",
-          "date": "10 Feb 2025",
-          "shares": 20800,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Meghna R. Ojha",
-          "date": "12 Feb 2025",
-          "shares": 20800,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Prachi Vishal Shah",
-          "date": "17 Feb 2025",
-          "shares": 20800,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
-          "lockInExpiry": "2027-03-15T00:00:00.000Z"
-        },
-        {
-          "name": "Shah Pratika Kiran",
-          "date": "14 Feb 2025",
-          "shares": 20800,
-          "buyPrice": 240,
-          "acquisitionPrice": 240,
-          "category": "Pre-IPO Transferee",
+          "shares": 620000,
+          "buyPrice": 45,
+          "acquisitionPrice": 45,
+          "category": "Strategic Advisory Pre-IPO",
           "lockInExpiry": "2027-03-15T00:00:00.000Z"
         }
       ],
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/pranav_constructions_ltd_mainboard_anchor_1788534487.pdf",
-      "preIpoWaca": 240,
+      "preIpoWaca": 45,
       "lotSize": 120,
       "priceBand": "₹118–124"
     },
@@ -41827,18 +41781,15 @@
       "rhpUrl": "https://www.bsesme.com/download/339300/SME_IPO%20InPrinciple/ApanaDP_20250930235823.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/apana_logistics_ltd_bse_sme_capital_structure_1788343453.pdf",
       "preIpoInvestors": [
-        "Aanchal Sureka and Adarsh Sureka, by way of Gift deed",
-        "Aanchal Sureka and Adarsh Sureka, by way of Gift deed.",
-        "Ms. Aanchal Pratyaksh Sureka",
-        "Mr. Shrawan Kumar Sureka",
-        "Mrs. Bimla Devi Sureka",
-        "Bhani Ram Sureka, Bimla Devi Sureka and Shrawan Kumar",
-        "Mr. Bhani Ram Sureka",
-        "Statutory Auditor, Legal Advisors",
-        "Mrs. Krishna Shrawan Sureka",
-        "Mr. Pratyaksh Sureka",
-        "Mr. Pratyaksh Sureka, by way of Gift deed.",
-        "Mr. Adarsh Sureka"
+        {
+          "name": "Bhani Ram Sureka & Shrawan Kumar Sureka",
+          "date": "25 Mar 2020 (9:1 Bonus)",
+          "shares": 968400,
+          "buyPrice": 1,
+          "acquisitionPrice": 10,
+          "category": "Early Non-Promoter Shareholder (9:1 Bonus Adj.)",
+          "lockInExpiry": "2027-09-08T00:00:00.000Z"
+        }
       ],
       "peerComparison": {
         "columns": [
@@ -41889,7 +41840,8 @@
         ]
       },
       "lotSize": 2000,
-      "priceBand": "₹60"
+      "priceBand": "₹60",
+      "preIpoWaca": 10
     },
     {
       "companyName": "Qualiance International Ltd.",
@@ -42034,13 +41986,15 @@
           "name": "Neelu Ramesh Aurangabadkar",
           "date": "10 days prior to Prospectus",
           "shares": 2004000,
-          "buyPrice": null,
-          "category": "Public Pre-IPO (20.00% Pre-Issue)",
+          "buyPrice": 10,
+          "acquisitionPrice": 10,
+          "category": "Strategic Pre-IPO Public Shareholder (20.00% Pre-Issue)",
           "lockInExpiry": "2027-09-08T00:00:00.000Z"
         }
       ],
       "lotSize": 1200,
-      "priceBand": "₹102"
+      "priceBand": "₹102",
+      "preIpoWaca": 10
     },
     {
       "companyName": "Complete Sports & Management India Ltd.",
