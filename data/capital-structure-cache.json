@@ -8,7 +8,13 @@
     "anchorPdfUrl": null,
     "updatedAt": "2026-09-07T15:11:31.195Z",
     "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
-    "lastScrapedAt": 1788793888832
+    "lastScrapedAt": 1788793888832,
+    "priceBand": "₹0–0",
+    "allotmentDate": "2026-09-21T18:30:00.000Z",
+    "listingDate": "2026-09-23T18:30:00.000Z",
+    "openDate": "2026-09-16T18:30:00.000Z",
+    "closeDate": "2026-09-20T18:30:00.000Z",
+    "totalShares": 148905525
   },
   "veegalanddevelopers": {
     "companyName": "Veegaland Developers Ltd",
@@ -47,7 +53,15 @@
     "anchorPdfUrl": null,
     "updatedAt": "2026-09-07T15:16:36.231Z",
     "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
-    "lastScrapedAt": 1788794193106
+    "lastScrapedAt": 1788794193106,
+    "priceBand": "₹139–146",
+    "issuePrice": 146,
+    "lotSize": 102,
+    "allotmentDate": "2026-09-14T18:30:00.000Z",
+    "listingDate": "2026-09-16T18:30:00.000Z",
+    "openDate": "2026-09-08T18:30:00.000Z",
+    "closeDate": "2026-09-10T18:30:00.000Z",
+    "totalShares": 29256232
   },
   "assetreconstructioncompany": {
     "companyName": "Asset Reconstruction Company Limited",
