@@ -170,7 +170,12 @@ function mergeCompanies(existing, incoming) {
             if (company.anchorShares !== undefined) existing.anchorShares = company.anchorShares;
             if (company.totalShares !== undefined) existing.totalShares = company.totalShares;
             if (company.preIpoInvestors !== undefined) existing.preIpoInvestors = company.preIpoInvestors;
-            if (company.managementHighlights !== undefined) existing.managementHighlights = company.managementHighlights;
+            if (company.priceBand !== undefined) existing.priceBand = company.priceBand;
+            if (company.lotSize !== undefined) existing.lotSize = company.lotSize;
+            if (company.openDate !== undefined) existing.openDate = company.openDate;
+            if (company.closeDate !== undefined) existing.closeDate = company.closeDate;
+            if (company.listingDate !== undefined) existing.listingDate = company.listingDate;
+            if (company.anchorUrl !== undefined) existing.anchorUrl = company.anchorUrl;
             if (company.capitalStructureUrl) existing.capitalStructureUrl = company.capitalStructureUrl;
             
             map.set(key, existing);

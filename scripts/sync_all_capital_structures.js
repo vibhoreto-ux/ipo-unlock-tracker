@@ -37,9 +37,9 @@ async function syncAllCapitalStructures(options = {}) {
     if (!ipoCache.companies) ipoCache.companies = {};
     const unlockDb = JSON.parse(fs.readFileSync(unlockPath, 'utf8'));
 
-    // Step 1: Check homepage if forceHomepage or if cache hasn't been updated recently (only when scrapeDetails is true)
-    const shouldCheckHomepage = forceHomepage || !ipoCache.lastUpdated || (Date.now() - new Date(ipoCache.lastUpdated).getTime() > 6 * 60 * 60 * 1000);
-    if (shouldCheckHomepage && scrapeDetails) {
+    // Step 1: Check homepage if forceHomepage or if cache is older than 15 mins
+    const shouldCheckHomepage = forceHomepage || !ipoCache.lastUpdated || (Date.now() - new Date(ipoCache.lastUpdated).getTime() > 15 * 60 * 1000);
+    if (shouldCheckHomepage) {
         try {
             console.log('[Sync] Checking IPO Premium homepage index...');
             const freshCache = await scrapeHomepageIndex();
@@ -79,12 +79,12 @@ async function syncAllCapitalStructures(options = {}) {
         const ONE_DAY = 24 * 60 * 60 * 1000;
         const needScraping = entries.filter(([, v]) => {
             if (!v.detailUrl) return false;
-            if (v.capitalStructureUrl) return false;
+            if (v.capitalStructureUrl && v.priceBand && v.allotmentDate) return false;
             if (v.lastScrapedAt && (Date.now() - v.lastScrapedAt < ONE_DAY)) return false;
             return true;
         });
 
-        console.log(`[Sync] ${needScraping.length} IPOs in cache missing Capital Structure. Scanning detail pages...`);
+        console.log(`[Sync] ${needScraping.length} IPOs in cache need detail page scraping. Scanning...`);
 
         for (const [key, item] of needScraping) {
             try {
@@ -93,21 +93,31 @@ async function syncAllCapitalStructures(options = {}) {
                 const res = await scrapeDetailPage(item.detailUrl);
                 let changed = false;
 
-                if (res && res.capitalStructureUrl && res.capitalStructureUrl !== item.capitalStructureUrl) {
-                    item.capitalStructureUrl = res.capitalStructureUrl;
-                    changed = true;
-                    newFoundCount++;
-                    console.log(`  🔥 Found Capital Structure: ${res.capitalStructureUrl}`);
-                }
-                if (res && res.anchorPdfUrl && res.anchorPdfUrl !== item.anchorPdfUrl) {
-                    item.anchorPdfUrl = res.anchorPdfUrl;
-                    changed = true;
-                    console.log(`  ⚓ Found Anchor PDF: ${res.anchorPdfUrl}`);
-                }
-                if (res && res.rhpUrl && res.rhpUrl !== item.rhpUrl) {
-                    item.rhpUrl = res.rhpUrl;
-                    changed = true;
-                    console.log(`  📄 Found RHP PDF: ${res.rhpUrl}`);
+                if (res) {
+                    if (res.capitalStructureUrl && res.capitalStructureUrl !== item.capitalStructureUrl) {
+                        item.capitalStructureUrl = res.capitalStructureUrl;
+                        changed = true;
+                        newFoundCount++;
+                        console.log(`  🔗 Found Capital Structure: ${res.capitalStructureUrl}`);
+                    }
+                    if (res.anchorPdfUrl && res.anchorPdfUrl !== item.anchorPdfUrl) {
+                        item.anchorPdfUrl = res.anchorPdfUrl;
+                        changed = true;
+                        console.log(`  ⚓ Found Anchor PDF: ${res.anchorPdfUrl}`);
+                    }
+                    if (res.rhpUrl && res.rhpUrl !== item.rhpUrl) {
+                        item.rhpUrl = res.rhpUrl;
+                        changed = true;
+                        console.log(`  📄 Found RHP PDF: ${res.rhpUrl}`);
+                    }
+                    if (res.priceBand) { item.priceBand = res.priceBand; changed = true; }
+                    if (res.issuePrice) { item.issuePrice = res.issuePrice; changed = true; }
+                    if (res.lotSize) { item.lotSize = res.lotSize; changed = true; }
+                    if (res.totalShares) { item.totalShares = res.totalShares; changed = true; }
+                    if (res.openDate) { item.openDate = res.openDate; changed = true; }
+                    if (res.closeDate) { item.closeDate = res.closeDate; changed = true; }
+                    if (res.allotmentDate) { item.allotmentDate = res.allotmentDate; changed = true; }
+                    if (res.listingDate) { item.listingDate = res.listingDate; changed = true; }
                 }
 
                 item.updatedAt = new Date().toISOString();
@@ -128,27 +138,35 @@ async function syncAllCapitalStructures(options = {}) {
     let dbUpdatedCount = 0;
 
     for (const [key, item] of Object.entries(csCache)) {
-        if (!item.capitalStructureUrl && !item.rhpUrl && !item.anchorPdfUrl) continue;
-
-        const candidateName = item.companyName || key;
+        const candidateName = item.companyName || item.name || key;
         let match = unlockDb.companies.find(c => matchesCompany(c.companyName, candidateName));
 
         // If company does not exist in unlockDb at all, add it as a new upcoming company!
         if (!match) {
             console.log(`[Sync] 🆕 Discovered new upcoming company not in DB: "${candidateName}"`);
+            const isSme = (item.issueType && item.issueType.toUpperCase().includes('SME')) || 
+                          (item.slug && item.slug.includes('sme')) || 
+                          (item.capitalStructureUrl && item.capitalStructureUrl.includes('sme')) || 
+                          (item.rhpUrl && item.rhpUrl.includes('sme')) || 
+                          (item.lotSize && Number(item.lotSize) >= 200);
             match = {
                 companyName: candidateName.includes('Ltd') ? candidateName : `${candidateName} Ltd.`,
-                issueType: item.slug && item.slug.includes('sme') ? 'SME' : 'Mainboard',
-                exchange: 'BSE, NSE',
-                allotmentDate: null,
+                issueType: isSme ? 'SME' : 'Mainboard',
+                exchange: isSme ? 'BSE SME' : 'BSE, NSE',
+                allotmentDate: item.allotmentDate ? { original: item.allotmentDate, adjusted: item.allotmentDate, isAdjusted: false } : null,
                 chittorgarhUrl: null,
-                issuePrice: null,
+                issuePrice: item.issuePrice || null,
+                priceBand: item.priceBand || null,
+                lotSize: item.lotSize || undefined,
+                openDate: item.openDate || null,
+                closeDate: item.closeDate || null,
+                listingDate: item.listingDate || null,
                 anchor30: null,
                 anchor90: null,
                 preIPO: null,
                 anchorInvestors: [],
                 anchorShares: 0,
-                totalShares: 0,
+                totalShares: item.totalShares || 0,
                 rhpUrl: item.rhpUrl || null,
                 capitalStructureUrl: item.capitalStructureUrl || null,
                 anchorUrl: item.anchorPdfUrl || null,

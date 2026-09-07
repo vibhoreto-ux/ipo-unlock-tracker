@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02T11:35:20.285Z",
+  "lastUpdated": "2026-09-07T15:16:28.508Z",
   "companies": {
     "deepajewellers": {
       "name": "Deepa Jewellers",
@@ -532,8 +532,8 @@
       "anchorPdfUrl": null,
       "companyName": "National Stock Exchange of India Ltd(Tentative dates)",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
-      "updatedAt": "2026-09-05T04:38:01.704Z",
-      "lastScrapedAt": 1788583075458
+      "updatedAt": "2026-09-07T15:11:33.939Z",
+      "lastScrapedAt": 1788793891795
     },
     "veegalanddevelopers": {
       "name": "Veegaland Developers Ltd",
@@ -633,9 +633,9 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1325/national-stock-exchange-of-india-ltd",
       "capitalStructureUrl": null,
       "anchorPdfUrl": null,
-      "updatedAt": "2026-09-05T04:38:50.839Z",
+      "updatedAt": "2026-09-07T15:11:31.195Z",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
-      "lastScrapedAt": 1788583067860
+      "lastScrapedAt": 1788793888832
     },
     "rentomojo": {
       "companyName": "Rentomojo Ltd.",
@@ -645,7 +645,8 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
       "anchorPdfUrl": null,
       "updatedAt": "2026-09-05T04:02:11.637Z",
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf"
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf",
+      "name": "Rentomojo Ltd."
     },
     "lccprojects": {
       "companyName": "LCC Projects Ltd.",
@@ -655,7 +656,8 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
       "anchorPdfUrl": null,
       "updatedAt": "2026-09-05T04:02:20.271Z",
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf"
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
+      "name": "LCC Projects Ltd."
     },
     "assetreconstructioncompany": {
       "companyName": "Asset Reconstruction Company Limited",
@@ -685,7 +687,8 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
       "anchorPdfUrl": null,
       "updatedAt": "2026-09-05T04:03:05.498Z",
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf"
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf",
+      "name": "Manipal Payment & Identity Solutions Ltd."
     },
     "tempsensinstruments": {
       "companyName": "Tempsens Instruments Ltd",
@@ -703,7 +706,8 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1332/amtech-esters-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_capital_structure_1788332330.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_rhp_1788331906.pdf",
-      "updatedAt": "2026-09-05T04:30:51.023Z"
+      "updatedAt": "2026-09-05T04:30:51.023Z",
+      "name": "Amtech Esters Ltd."
     },
     "prasolchemicals": {
       "key": "prasolchemicals",
@@ -711,7 +715,8 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1336/prasol-chemicals-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_capital_structure_1788411840.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_rhp_1788411625.pdf",
-      "updatedAt": "2026-09-05T04:30:51.027Z"
+      "updatedAt": "2026-09-05T04:30:51.027Z",
+      "name": "Prasol Chemicals Ltd."
     },
     "kanoharelectricals": {
       "key": "kanoharelectricals",
@@ -719,7 +724,8 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1330/kanohar-electricals-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_capital_structure_1788413207.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_rhp_1788413204.pdf",
-      "updatedAt": "2026-09-05T04:30:51.028Z"
+      "updatedAt": "2026-09-05T04:30:51.028Z",
+      "name": "Kanohar Electricals Ltd"
     },
     "infraxrenewable": {
       "key": "infraxrenewable",
@@ -727,7 +733,8 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1339/infrax-renewable-ltd",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_capital_structure_1788532230.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_rhp_1788532229.pdf",
-      "updatedAt": "2026-09-05T04:30:51.030Z"
+      "updatedAt": "2026-09-05T04:30:51.030Z",
+      "name": "Infrax Renewable Ltd"
     },
     "vinodtexworld": {
       "key": "vinodtexworld",
@@ -735,8 +742,9 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1338/vinod-texworld-ltd",
       "capitalStructureUrl": null,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788519044.pdf",
-      "updatedAt": "2026-09-05T04:38:43.164Z",
-      "lastScrapedAt": 1788583082306
+      "updatedAt": "2026-09-07T15:11:36.656Z",
+      "lastScrapedAt": 1788793894541,
+      "name": "Vinod Texworld Ltd."
     },
     "steamhouseindia": {
       "key": "steamhouseindia",
@@ -744,8 +752,131 @@
       "detailUrl": "https://www.ipopremium.in/view/ipo/1337/steamhouse-india-ltd",
       "capitalStructureUrl": null,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
-      "updatedAt": "2026-09-05T04:38:22.647Z",
-      "lastScrapedAt": 1788583089082
+      "updatedAt": "2026-09-07T15:11:39.468Z",
+      "lastScrapedAt": 1788793897258,
+      "priceBand": "₹77–81",
+      "issuePrice": 81,
+      "lotSize": 185
+    },
+    "manikaplastech": {
+      "name": "Manika Plastech Ltd.",
+      "id": 1341,
+      "slug": "manika-plastech-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1341/manika-plastech-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Manika Plastech Ltd.",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:42.284Z",
+      "lastScrapedAt": 1788793900071
+    },
+    "centurybusinessmedia": {
+      "name": "Century Business Media Ltd",
+      "id": 1344,
+      "slug": "century-business-media-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1344/century-business-media-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Century Business Media Ltd",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:45.124Z",
+      "lastScrapedAt": 1788793902885
+    },
+    "maharajaspeedex": {
+      "name": "Maharaja & Speedex India Ltd",
+      "id": 1340,
+      "slug": "maharaja-speedex-india-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1340/maharaja-speedex-india-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Maharaja & Speedex India Ltd",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:47.905Z",
+      "lastScrapedAt": 1788793905726
+    },
+    "raksantransformers": {
+      "name": "Raksan Transformers Ltd",
+      "id": 1245,
+      "slug": "raksan-transformers-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1245/raksan-transformers-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Raksan Transformers Ltd",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:50.699Z",
+      "lastScrapedAt": 1788793908507
+    },
+    "omgalaxy": {
+      "name": "Om Galaxy Ltd",
+      "id": 1342,
+      "slug": "om-galaxy-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1342/om-galaxy-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Om Galaxy Ltd",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:53.813Z",
+      "lastScrapedAt": 1788793911300
+    },
+    "panchatvbharat": {
+      "name": "Panchatv Bharat Ltd.",
+      "id": 1345,
+      "slug": "panchatv-bharat-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1345/panchatv-bharat-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Panchatv Bharat Ltd.",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:56.617Z",
+      "lastScrapedAt": 1788793914414
+    },
+    "steamhouse": {
+      "name": "Steamhouse India Ltd.",
+      "id": 1337,
+      "slug": "steamhouse-india-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1337/steamhouse-india-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Steamhouse India Ltd.",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:11:59.478Z",
+      "lastScrapedAt": 1788793917219
+    },
+    "assetreconstructioncompanyindia": {
+      "name": "Asset Reconstruction Company (India) Limited",
+      "id": 1331,
+      "slug": "asset-reconstruction-company",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1331/asset-reconstruction-company",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Asset Reconstruction Company (India) Limited",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:12:02.581Z",
+      "lastScrapedAt": 1788793920082
+    },
+    "karamtaraengineering": {
+      "name": "Karamtara Engineering Ltd",
+      "id": 1107,
+      "slug": "karamtara-engineering-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1107/karamtara-engineering-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Karamtara Engineering Ltd",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:12:05.414Z",
+      "lastScrapedAt": 1788793923182
+    },
+    "glasswallsystemsindia": {
+      "name": "Glass Wall Systems (India) Ltd",
+      "id": 1334,
+      "slug": "glass-wall-systems",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1334/glass-wall-systems",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Glass Wall Systems (India) Ltd",
+      "rhpUrl": null,
+      "updatedAt": "2026-09-07T15:12:08.207Z",
+      "lastScrapedAt": 1788793926016
     }
   }
 }

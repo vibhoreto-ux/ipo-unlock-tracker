@@ -872,8 +872,8 @@ async function probeUpcomingData() {
  */
 app.post('/api/probe-upcoming', async (req, res) => {
     try {
-        // Fast sync: Attach all Capital Structure links, RHPs, anchors and discover new upcoming IPOs
-        await syncAllCapitalStructures({ extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
+        // Fast sync: Discover newly published IPOs from IPO Premium homepage and attach capital structure links
+        await syncAllCapitalStructures({ forceHomepage: true, scrapeDetails: true, extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
         const result = await probeUpcomingData();
         res.json({ success: true, ...result });
 
@@ -887,7 +887,7 @@ app.post('/api/probe-upcoming', async (req, res) => {
 
 app.get('/api/probe-upcoming', async (req, res) => {
     try {
-        await syncAllCapitalStructures({ extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
+        await syncAllCapitalStructures({ forceHomepage: true, scrapeDetails: true, extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
         const result = await probeUpcomingData();
         res.json({ success: true, ...result });
 
