@@ -767,9 +767,9 @@
     "key": "vinodtexworld",
     "companyName": "Vinod Texworld Ltd.",
     "detailUrl": "https://www.ipopremium.in/view/ipo/1338/vinod-texworld-ltd",
-    "capitalStructureUrl": null,
-    "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788519044.pdf",
-    "updatedAt": "2026-09-07T15:11:36.656Z",
+    "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_capital_structure_1788686295.pdf",
+    "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788685953.pdf",
+    "updatedAt": "2026-09-07T15:42:24.724Z",
     "lastScrapedAt": 1788793894541
   },
   "steamhouseindia": {
@@ -778,7 +778,7 @@
     "detailUrl": "https://www.ipopremium.in/view/ipo/1337/steamhouse-india-ltd",
     "capitalStructureUrl": null,
     "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
-    "updatedAt": "2026-09-07T15:11:39.468Z",
+    "updatedAt": "2026-09-07T15:42:24.724Z",
     "lastScrapedAt": 1788793897258,
     "priceBand": "₹77–81",
     "issuePrice": 81,
@@ -789,10 +789,10 @@
     "id": 1341,
     "slug": "manika-plastech-ltd",
     "detailUrl": "https://www.ipopremium.in/view/ipo/1341/manika-plastech-ltd",
-    "capitalStructureUrl": null,
+    "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_capital_structure_1788684348.pdf",
     "anchorPdfUrl": null,
-    "rhpUrl": null,
-    "updatedAt": "2026-09-07T15:11:42.284Z",
+    "rhpUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_rhp_1788683576.pdf",
+    "updatedAt": "2026-09-07T15:42:24.177Z",
     "lastScrapedAt": 1788793900071
   },
   "centurybusinessmedia": {
@@ -838,10 +838,10 @@
     "id": 1342,
     "slug": "om-galaxy-ltd",
     "detailUrl": "https://www.ipopremium.in/view/ipo/1342/om-galaxy-ltd",
-    "capitalStructureUrl": null,
+    "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_capital_structure_1788677426.pdf",
     "anchorPdfUrl": null,
-    "rhpUrl": null,
-    "updatedAt": "2026-09-07T15:11:53.813Z",
+    "rhpUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_rhp_1788677424.pdf",
+    "updatedAt": "2026-09-07T15:42:23.932Z",
     "lastScrapedAt": 1788793911300
   },
   "panchatvbharat": {
@@ -851,8 +851,8 @@
     "detailUrl": "https://www.ipopremium.in/view/ipo/1345/panchatv-bharat-ltd",
     "capitalStructureUrl": null,
     "anchorPdfUrl": null,
-    "rhpUrl": null,
-    "updatedAt": "2026-09-07T15:11:56.617Z",
+    "rhpUrl": "https://assets.ipopremium.in/images/ipo/panchatv_bharat_ltd_bse_sme_rhp_1788759669.pdf",
+    "updatedAt": "2026-09-07T15:42:24.724Z",
     "lastScrapedAt": 1788793914414
   },
   "steamhouse": {
@@ -898,5 +898,11 @@
     "rhpUrl": null,
     "updatedAt": "2026-09-07T15:12:08.207Z",
     "lastScrapedAt": 1788793926016
+  },
+  "maharajaspeedexindia": {
+    "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_capital_structure_1788675382.pdf",
+    "rhpUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_rhp_1788675381.pdf",
+    "companyName": "Maharaja & Speedex India Ltd",
+    "updatedAt": "2026-09-07T15:42:24.395Z"
   }
 }

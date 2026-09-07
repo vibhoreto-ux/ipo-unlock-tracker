@@ -33,7 +33,12 @@ async function getBrowser() {
     console.log('[CapStruct] Launching Puppeteer browser...');
     sharedBrowser = await puppeteer.launch({
         headless: 'new',
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-blink-features=AutomationControlled'
+        ],
     });
     browserLastUsed = Date.now();
     
@@ -215,14 +220,23 @@ async function scrapeDetailPage(detailUrl) {
         const browser = await getBrowser();
         page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36');
+        await page.setExtraHTTPHeaders({
+            'accept-language': 'en-US,en;q=0.9',
+        });
         
         await page.goto(detailUrl, {
             waitUntil: 'networkidle2',
-            timeout: 35000,
+            timeout: 40000,
         });
         
+        let title = await page.title();
+        if (title.includes('Just a moment') || title.includes('Cloudflare')) {
+            console.log(`[CapStruct] Waiting for Cloudflare challenge on ${detailUrl}...`);
+            await page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 15000 }).catch(() => {});
+        }
+        
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-        await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 1200));
         
         const result = await page.evaluate(() => {
             let capitalStructureUrl = null;
