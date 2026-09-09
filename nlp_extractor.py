@@ -322,6 +322,7 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                 base_company_word = parts[0]
         
                 
+        full_text = ""
         with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
             in_share_history = False
             parse_window_left = 0
@@ -329,6 +330,7 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                 text = page.extract_text()
                 if not text:
                     continue
+                full_text += text + "\n"
                 
                 text_lower = text.lower()
                 
@@ -498,35 +500,29 @@ def extract_preipo_names(pdf_bytes, company_name=None):
             final_list.append(v)
 
         waca_val = None
-        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
-            full_text = ""
-            for i, page in enumerate(pdf.pages[:250]):
-                t = page.extract_text()
-                if t: full_text += t + "\n"
-                
-            tl = full_text.lower()
-            
-            # Pattern A: Direct "Weighted average cost of acquisition 22.02" line (most specific)
-            wA = re.search(r'weighted average cost of acquisition\s+([\d]+\.[\d]{1,2})(?:\^|\#|$|\s)', tl)
-            # Pattern B: "WACA ... 22.02" from a table row
-            wB = re.search(r'\bwaca\b.{0,80}?([\d]+\.[\d]{1,2})', tl)
-            # Pattern C: "last 1 year / 18 months / 3 years N.NN" (existing)
-            wC = re.search(r'last (?:\(?\d+\)?\s+)?(?:1 year|one.*?year|18 months|eighteen.*?months|3 years|three.*?years)\s+([\d\.]+)', tl)
-            # Pattern D: "average cost of acquisition ... N.NN" generic fallback (but skip low face-value 10.00 traps)
-            wD = re.search(r'(?:weighted )?average cost of acquisition[^\n]{0,200}?([\d]{2,4}\.[\d]{1,2})', tl, re.DOTALL)
+        tl = full_text.lower()
+        
+        # Pattern A: Direct "Weighted average cost of acquisition 22.02" line (most specific)
+        wA = re.search(r'weighted average cost of acquisition\s+([\d]+\.[\d]{1,2})(?:\^|\#|$|\s)', tl)
+        # Pattern B: "WACA ... 22.02" from a table row
+        wB = re.search(r'\bwaca\b.{0,80}?([\d]+\.[\d]{1,2})', tl)
+        # Pattern C: "last 1 year / 18 months / 3 years N.NN" (existing)
+        wC = re.search(r'last (?:\(?\d+\)?\s+)?(?:1 year|one.*?year|18 months|eighteen.*?months|3 years|three.*?years)\s+([\d\.]+)', tl)
+        # Pattern D: "average cost of acquisition ... N.NN" generic fallback (but skip low face-value 10.00 traps)
+        wD = re.search(r'(?:weighted )?average cost of acquisition[^\n]{0,200}?([\d]{2,4}\.[\d]{1,2})', tl, re.DOTALL)
 
-            def valid_waca(v):
-                try:
-                    f = float(v)
-                    return 1.0 <= f <= 5000.0
-                except:
-                    return False
-            
-            # Pick best match in priority order
-            for w in [wA, wB, wC, wD]:
-                if w and valid_waca(w.group(1)):
-                    waca_val = float(w.group(1))
-                    break
+        def valid_waca(v):
+            try:
+                f = float(v)
+                return 1.0 <= f <= 5000.0
+            except:
+                return False
+        
+        # Pick best match in priority order
+        for w in [wA, wB, wC, wD]:
+            if w and valid_waca(w.group(1)):
+                waca_val = float(w.group(1))
+                break
 
         return { "investors": list(set(final_list)), "waca": waca_val }
     except Exception as e:
@@ -553,9 +549,12 @@ def main():
     }
     
     if args.rhp:
-        headers = {'User-Agent': 'Mozilla/5.0'}
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            'Accept': 'application/pdf,application/octet-stream,*/*',
+        }
         try:
-            r = requests.get(args.rhp, headers=headers, timeout=30)
+            r = requests.get(args.rhp, headers=headers, timeout=15)
             if r.status_code == 200:
                 content = r.content
                 if content.startswith(b'PK\x03\x04') or args.rhp.lower().endswith('.zip'):
