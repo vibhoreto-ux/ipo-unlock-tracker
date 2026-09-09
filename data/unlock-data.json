@@ -5659,7 +5659,73 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": null
+      "rhpUrl": "https://www.bsesme.com/download/321673/SME_IPO%20Open/ZELIO_EMOBILITY_LIMITED_RHP_20250924154733.pdf",
+      "anchorInvestors": [
+        {
+          "name": "SANSHI FUND-I",
+          "group": "SANSHI",
+          "shares": 552000,
+          "sharesFormatted": "5,52,000",
+          "amountCr": 7.51,
+          "percent": 33.68
+        },
+        {
+          "name": "INDIA MAX INVESTMENT FUND LTD.",
+          "shares": 495000,
+          "sharesFormatted": "4,95,000",
+          "amountCr": 6.73,
+          "percent": 30.2
+        },
+        {
+          "name": "CARNELIAN AIF CATEGORY I TRUST-Scheme I",
+          "group": "CARNELIAN",
+          "shares": 148000,
+          "sharesFormatted": "1,48,000",
+          "amountCr": 2.01,
+          "percent": 9.03
+        },
+        {
+          "name": "VINEY GROWTH FUND",
+          "group": "VINEY",
+          "shares": 148000,
+          "sharesFormatted": "1,48,000",
+          "amountCr": 2.01,
+          "percent": 9.03
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 74000,
+          "sharesFormatted": "74,000",
+          "amountCr": 1.01,
+          "percent": 4.51
+        },
+        {
+          "name": "RAJASTHAN GLOBAL SECURITIES PVT.LTD.",
+          "group": "RAJASTHAN GLOBAL SECURITIES",
+          "shares": 74000,
+          "sharesFormatted": "74,000",
+          "amountCr": 1.01,
+          "percent": 4.51
+        },
+        {
+          "name": "SB OPPORTUNITIES FUND",
+          "shares": 74000,
+          "sharesFormatted": "74,000",
+          "amountCr": 1.01,
+          "percent": 4.51
+        },
+        {
+          "name": "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND",
+          "group": "SUNRISE",
+          "shares": 74000,
+          "sharesFormatted": "74,000",
+          "amountCr": 1.01,
+          "percent": 4.51
+        }
+      ],
+      "anchorShares": 1639000,
+      "totalShares": 5760000
     },
     {
       "companyName": "Advance Agrolife Ltd.",
@@ -7523,7 +7589,65 @@
         }
       ],
       "totalShares": 18324060,
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        {
+          "name": "Vineet Gupta",
+          "shares": 182540,
+          "acquisitionPrice": 63,
+          "date": "2025-04-05",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Preferential Allotment"
+        },
+        {
+          "name": "Ruchi Gupta",
+          "shares": 182540,
+          "acquisitionPrice": 63,
+          "date": "2025-04-05",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Preferential Allotment"
+        },
+        {
+          "name": "Rahul Gupta HUF",
+          "shares": 182540,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        },
+        {
+          "name": "Seema Gupta",
+          "shares": 182540,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        },
+        {
+          "name": "Manish Taparia",
+          "shares": 91269,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        },
+        {
+          "name": "Vandana Taparia",
+          "shares": 91269,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        }
+      ],
+      "preIpoWaca": 63.15,
+      "waca": 63.15,
+      "preIpoChecked": true
     },
     {
       "companyName": "GK Energy Ltd.",
@@ -7683,7 +7807,407 @@
         "originalDate": "2026-09-25T00:00:00.000Z",
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
-      }
+      },
+      "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2025/09/jdcablesrhp.pdf",
+      "anchorInvestors": [
+        {
+          "name": "BEACON STONE CAPITAL VCC-BEACON STONE I",
+          "group": "BEACON STONE CAPITAL",
+          "shares": 179200,
+          "sharesFormatted": "1,79,200",
+          "amountCr": 2.72,
+          "percent": 10.07
+        },
+        {
+          "name": "NEGEN UNDISCOVERED VALUE FUND",
+          "group": "NEGEN",
+          "shares": 131200,
+          "sharesFormatted": "1,31,200",
+          "amountCr": 1.99,
+          "percent": 7.37
+        }
+      ],
+      "anchorShares": 1780000,
+      "totalShares": 22551112,
+      "preIpoInvestors": [
+        {
+          "name": "Venturex Fund I",
+          "shares": 85729,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Hemant Kumar Gupta",
+          "shares": 29790,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ativir Financial Services Private Limited",
+          "shares": 26811,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ankur Toshniwal",
+          "shares": 25487,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Aman Sanjeev Jain HUF",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Vishal Narang",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Finavenue Growth Fund",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Paradise Moon Investment Fund-I",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Nagori Ramiz Inusbhai",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Navneet Makharia",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Manvi Jain",
+          "shares": 16881,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Laxmi Randar",
+          "shares": 16881,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ritesh Kailas Veera",
+          "shares": 12578,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Darshan H Ringshia",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ashok Kumar Pareek",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ajay Bhaskar",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Sapna Bhansali",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Rohit Agarwal",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Adarsh Tibrewal",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Armaan Sarawgi",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Parmar Sanjay Amrutlal",
+          "shares": 6951,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Sarita Devi Pilania",
+          "shares": 5958,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Roshan Singhee",
+          "shares": 5958,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Rishi Kumar Gupta",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Meenakshi",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Rohit Sharma",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Amit Agarwal",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Nupur Kandoi",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Vikas Kumar Agrawal HUF",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Vikash Sharma",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Anand Harlalka",
+          "shares": 1655,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Prakash Sahay",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Rajesh Jhunjhunwala",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Hemant Kumar Choradia",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Satyajit Kumar Jha",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Manoj Tiwari",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Arumay Roy",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        }
+      ],
+      "circularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
+      "bseCircularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
+      "annexureUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
+      "lockInEvents": [
+        {
+          "date": null,
+          "shares": 4533600,
+          "percentage": 20.1,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-10-25",
+          "shares": 890400,
+          "percentage": 3.95,
+          "label": "Anchor Lock-in (30 Days)"
+        },
+        {
+          "date": "2025-12-24",
+          "shares": 890400,
+          "percentage": 3.95,
+          "label": "Anchor Lock-in (90 Days)"
+        },
+        {
+          "date": "2026-09-25",
+          "shares": 6104144,
+          "percentage": 27.07,
+          "label": "Pre-IPO Lock-in (1 Year)"
+        },
+        {
+          "date": "2027-09-25",
+          "shares": 5621545,
+          "percentage": 24.93,
+          "label": "2 Years Lock-in"
+        },
+        {
+          "date": "2028-09-25",
+          "shares": 4510223,
+          "percentage": 20,
+          "label": "Promoter Lock-in (3 Years)"
+        }
+      ],
+      "preIpoWaca": 116.45,
+      "waca": 116.45,
+      "preIpoChecked": true
     },
     {
       "companyName": "VMS TMT Ltd.",
@@ -46154,6 +46678,47 @@
       "noticeId": "NSE/CML/70199",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70199.zip",
       "fetchedAt": "2026-09-09T17:42:33.272Z"
+    },
+    "L.T.Elevator Ltd.": {
+      "found": true,
+      "totalShares": 34275789,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 22774255,
+          "percentage": 66.4,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-10-17",
+          "shares": 716800,
+          "percentage": 2.1
+        },
+        {
+          "date": "2025-12-16",
+          "shares": 720000,
+          "percentage": 2.1
+        },
+        {
+          "date": "2027-09-30",
+          "shares": 10064734,
+          "percentage": 29.4
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20250918-48",
+      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250918-48&attachedId=ee95ad86-4bc8-477e-a540-a9af465840be",
+      "fetchedAt": "2026-09-09T17:47:55.260Z"
+    },
+    "JD Cables Ltd.": {
+      "found": true,
+      "totalShares": 0,
+      "unlockEvents": [],
+      "isScannedPDF": true,
+      "source": "BSE",
+      "noticeId": "20250924-60",
+      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
+      "fetchedAt": "2026-09-09T17:52:27.220Z"
     }
   }
 }
