@@ -1,26 +1,182 @@
 {
   "companies": [
     {
-      "companyName": "Karamtara Engineering Ltd",
+      "companyName": "Hero Motors Ltd(TENTATIVE DATES)",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
-      "allotmentDate": {
-        "original": "2026-09-14T18:30:00.000Z",
-        "adjusted": "2026-09-14T18:30:00.000Z",
-        "isAdjusted": false
-      },
+      "allotmentDate": null,
       "chittorgarhUrl": null,
-      "issuePrice": 254,
-      "priceBand": "₹241–254",
-      "openDate": "2026-09-08T18:30:00.000Z",
-      "closeDate": "2026-09-10T18:30:00.000Z",
-      "listingDate": "2026-09-16T18:30:00.000Z",
+      "issuePrice": null,
+      "priceBand": null,
+      "openDate": null,
+      "closeDate": null,
+      "listingDate": null,
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 0,
+      "rhpUrl": null,
+      "capitalStructureUrl": null,
+      "anchorUrl": null,
+      "preIpoInvestors": []
+    },
+    {
+      "companyName": "Karamtara Engineering Ltd",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/karamtara-engineering-ipo/2020/",
+      "issuePrice": 254,
+      "priceBand": "₹241–254",
+      "openDate": "2026-09-08T18:30:00.000Z",
+      "closeDate": "2026-09-10T18:30:00.000Z",
+      "listingDate": "2026-09-16T18:30:00.000Z",
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-17T00:00:00.000Z",
+        "originalDate": "2027-03-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [
+        {
+          "name": "HDFC INNOVATION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 1181121,
+          "sharesFormatted": "11,81,121",
+          "amountCr": 30,
+          "percent": 11.43
+        },
+        {
+          "name": "NIPPON INDIA SMALL CAP FUND",
+          "group": "NIPPON INDIA MUTUAL FUND",
+          "shares": 1181121,
+          "sharesFormatted": "11,81,121",
+          "amountCr": 30,
+          "percent": 11.43
+        },
+        {
+          "name": "MIRAE ASSET ELSS TAX SAVER FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 1181121,
+          "sharesFormatted": "11,81,121",
+          "amountCr": 30,
+          "percent": 11.43
+        },
+        {
+          "name": "MOTILAL OSWAL MANUFACTURING FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 629884,
+          "sharesFormatted": "6,29,884",
+          "amountCr": 16,
+          "percent": 6.09
+        },
+        {
+          "name": "MOTILAL OSWAL INFRASTRUCTURE FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 157471,
+          "sharesFormatted": "1,57,471",
+          "amountCr": 4,
+          "percent": 1.52
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 787355,
+          "sharesFormatted": "7,87,355",
+          "amountCr": 20,
+          "percent": 7.62
+        },
+        {
+          "name": "SBI LIFE INSURANCE CO.LTD.",
+          "group": "SBI LIFE INSURANCE",
+          "shares": 787355,
+          "sharesFormatted": "7,87,355",
+          "amountCr": 20,
+          "percent": 7.62
+        },
+        {
+          "name": "SINGULARITY EQUITY FUND I",
+          "group": "SINGULARITY",
+          "shares": 787355,
+          "sharesFormatted": "7,87,355",
+          "amountCr": 20,
+          "percent": 7.62
+        },
+        {
+          "name": "AUTHUM INVESTMENT & INFRASTRUCTURE LTD.",
+          "group": "AUTHUM INVESTMENT",
+          "shares": 787355,
+          "sharesFormatted": "7,87,355",
+          "amountCr": 20,
+          "percent": 7.62
+        },
+        {
+          "name": "ELM PARK FUND LTD.",
+          "group": "ELM PARK",
+          "shares": 787355,
+          "sharesFormatted": "7,87,355",
+          "amountCr": 20,
+          "percent": 7.62
+        },
+        {
+          "name": "SOCIETE GENERALE",
+          "group": "SOCIETE GENERAL",
+          "shares": 787355,
+          "sharesFormatted": "7,87,355",
+          "amountCr": 20,
+          "percent": 7.62
+        },
+        {
+          "name": "DURO INDIA OPPORTUNITIES FUND PTE.LTD.",
+          "group": "DURO",
+          "shares": 354402,
+          "sharesFormatted": "3,54,402",
+          "amountCr": 9,
+          "percent": 3.43
+        },
+        {
+          "name": "SUSQUEHANNA PACIFIC PTY.LTD.",
+          "group": "SUSQUEHANN",
+          "shares": 354402,
+          "sharesFormatted": "3,54,402",
+          "amountCr": 9,
+          "percent": 3.43
+        },
+        {
+          "name": "TRUSTMF SMALL CAP FUND",
+          "group": "TRUST MUTUAL FUND",
+          "shares": 354403,
+          "sharesFormatted": "3,54,403",
+          "amountCr": 9,
+          "percent": 3.43
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 216589,
+          "sharesFormatted": "2,16,589",
+          "amountCr": 5.5,
+          "percent": 2.1
+        }
+      ],
+      "anchorShares": 10334644,
+      "totalShares": 34448818,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_rhp_1788537648.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_capital_structure_1788537651.pdf",
       "anchorUrl": null,
@@ -34,11 +190,11 @@
       "issueType": "SME",
       "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-09-15T18:30:00.000Z",
-        "adjusted": "2026-09-15T18:30:00.000Z",
+        "original": "2026-09-18T00:00:00.000Z",
+        "adjusted": "2026-09-18T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/panchatv-bharat-ipo/2373/",
       "issuePrice": 140,
       "priceBand": "₹140",
       "openDate": "2026-09-09T18:30:00.000Z",
@@ -46,10 +202,15 @@
       "listingDate": "2026-09-17T18:30:00.000Z",
       "anchor30": null,
       "anchor90": null,
-      "preIPO": null,
+      "preIPO": {
+        "expiryDate": "2027-09-20T00:00:00.000Z",
+        "originalDate": "2027-09-18T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 1756000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/panchatv_bharat_ltd_bse_sme_rhp_1788759669.pdf",
       "capitalStructureUrl": null,
       "anchorUrl": null,
@@ -62,22 +223,132 @@
       "issueType": "SME",
       "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-09-15T18:30:00.000Z",
-        "adjusted": "2026-09-15T18:30:00.000Z",
+        "original": "2026-09-18T00:00:00.000Z",
+        "adjusted": "2026-09-18T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/om-galaxy-ipo/2987/",
       "issuePrice": 90,
       "priceBand": "₹85–90",
       "openDate": "2026-09-09T18:30:00.000Z",
       "closeDate": "2026-09-14T18:30:00.000Z",
       "listingDate": "2026-09-17T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchor30": {
+        "original": "2026-10-16T00:00:00.000Z",
+        "adjusted": "2026-10-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-15T00:00:00.000Z",
+        "adjusted": "2026-12-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-20T00:00:00.000Z",
+        "originalDate": "2027-09-18T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [
+        {
+          "name": "NEGEN UNDISCOVERED VALUE FUND",
+          "group": "NEGEN",
+          "shares": 1588800,
+          "sharesFormatted": "15,88,800",
+          "amountCr": 14.3,
+          "percent": 47.83
+        },
+        {
+          "name": "YR INVESTMENT OPPORTUNITIES FUND",
+          "group": "YR INVESTMENT",
+          "shares": 334400,
+          "sharesFormatted": "3,34,400",
+          "amountCr": 3.01,
+          "percent": 10.07
+        },
+        {
+          "name": "NEO ALTERNATIVES INVESTMENT TRUST-NEO TREASURY PLUS FUND",
+          "group": "NEO",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "NEO ALTERNATIVES INVESTMENT TRUST-NEO DYNAMIC STRATEGY FUND",
+          "group": "NEO",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "ARVESTA FINANCIAL SERVICES PVT.LTD.",
+          "group": "ARVESTA FINANCIAL SERVICES",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND",
+          "group": "NAV CAPITAL",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "VIJIT GROWTH FUND",
+          "group": "VIJIT",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "ZEAL GLOBAL OPPORTUNITIES FUND",
+          "group": "ZEAL GLOBAL",
+          "shares": 390400,
+          "sharesFormatted": "3,90,400",
+          "amountCr": 3.51,
+          "percent": 11.75
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "SAINT CAPITAL FUND",
+          "group": "SAINT CAPITAL",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "BONANZA OPPORTUNITY FUND",
+          "group": "BONANZA",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        },
+        {
+          "name": "M7 GLOBAL FUND PCC - AERION",
+          "group": "M7 GLOBAL FUND",
+          "shares": 112000,
+          "sharesFormatted": "1,12,000",
+          "amountCr": 1.01,
+          "percent": 3.37
+        }
+      ],
+      "anchorShares": 3321600,
+      "totalShares": 11667200,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_rhp_1788677424.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_capital_structure_1788677426.pdf",
       "anchorUrl": null,
@@ -91,23 +362,218 @@
       "issueType": "SME",
       "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-09-15T18:30:00.000Z",
-        "adjusted": "2026-09-15T18:30:00.000Z",
+        "original": "2026-09-18T00:00:00.000Z",
+        "adjusted": "2026-09-18T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/raksan-transformers-ipo/2767/",
       "issuePrice": 273,
       "priceBand": "₹258–273",
       "lotSize": 400,
       "openDate": "2026-09-09T18:30:00.000Z",
       "closeDate": "2026-09-14T18:30:00.000Z",
       "listingDate": "2026-09-17T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 5512800,
+      "anchor30": {
+        "original": "2026-10-16T00:00:00.000Z",
+        "adjusted": "2026-10-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-15T00:00:00.000Z",
+        "adjusted": "2026-12-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-20T00:00:00.000Z",
+        "originalDate": "2027-09-18T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [
+        {
+          "name": "SHUBHKAM VENTURES (INDIA) PVT.LTD.",
+          "group": "SHUBHKAM VENTURES",
+          "shares": 348000,
+          "sharesFormatted": "3,48,000",
+          "amountCr": 9.5,
+          "percent": 22.17
+        },
+        {
+          "name": "BHARAT VENTURE OPPORTUNITIES FUND",
+          "group": "BHARAT VENTURE",
+          "shares": 165200,
+          "sharesFormatted": "1,65,200",
+          "amountCr": 4.51,
+          "percent": 10.52
+        },
+        {
+          "name": "AARTH AIF GROWTH FUND",
+          "group": "AARTH",
+          "shares": 108000,
+          "sharesFormatted": "1,08,000",
+          "amountCr": 2.95,
+          "percent": 6.88
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 72000,
+          "sharesFormatted": "72,000",
+          "amountCr": 1.97,
+          "percent": 4.59
+        },
+        {
+          "name": "HEM GROWTH OPPORTUNITIES FUND",
+          "shares": 72000,
+          "sharesFormatted": "72,000",
+          "amountCr": 1.97,
+          "percent": 4.59
+        },
+        {
+          "name": "INDIA MAX INVESTMENT FUND LTD.",
+          "shares": 72000,
+          "sharesFormatted": "72,000",
+          "amountCr": 1.97,
+          "percent": 4.59
+        },
+        {
+          "name": "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND",
+          "group": "NAV CAPITAL",
+          "shares": 72000,
+          "sharesFormatted": "72,000",
+          "amountCr": 1.97,
+          "percent": 4.59
+        },
+        {
+          "name": "VINEY GROWTH FUND",
+          "group": "VINEY",
+          "shares": 72000,
+          "sharesFormatted": "72,000",
+          "amountCr": 1.97,
+          "percent": 4.59
+        },
+        {
+          "name": "MAESTRO EMERGING FUND PCC VALUE INVESTING",
+          "group": "MIRAE",
+          "shares": 55200,
+          "sharesFormatted": "55,200",
+          "amountCr": 1.51,
+          "percent": 3.52
+        },
+        {
+          "name": "MINERVA VENTURES FUND",
+          "group": "MINERVA",
+          "shares": 55200,
+          "sharesFormatted": "55,200",
+          "amountCr": 1.51,
+          "percent": 3.52
+        },
+        {
+          "name": "LRSD SECURITIES PVT.LTD.",
+          "group": "RAJASTHAN GLOBAL GROUP",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "360 ONE PRIME LTD.",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "EKAMYA PRAGATI SCHEME 1",
+          "group": "EKAMYA",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "KINGSMAN WEALTH FUND PCC-KIF II",
+          "group": "KINGSMAN WEALTH FUND PCC",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "Manifested Opportunity Growth Fund",
+          "group": "MANIFESTED",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "SAINT CAPITAL FUND",
+          "group": "SAINT CAPITAL",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "SB OPPORTUNITIES FUND II",
+          "group": "SB OPPORTUNITIES FUND",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "SHINE STAR BUILD-CAP PVT.LTD.",
+          "group": "SHINE STAR",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "SWYOM INDIA ALPHA FUND",
+          "group": "SWYOM",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "TATTVAM AIF TRUST-Aanjay Ageless AIF Fund",
+          "group": "TATTVAM",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "GOLDEN BIRD INVESTMENT TRUST I,THE",
+          "group": "GOLDEN BIRD",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "VCUBE VENTURES INVESTMENT TRUST-V-CUBE VENTURES SCHEME 1",
+          "group": "VBCUBE",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        },
+        {
+          "name": "VENTUREX FUND I",
+          "group": "VENTUREX",
+          "shares": 36800,
+          "sharesFormatted": "36,800",
+          "amountCr": 1,
+          "percent": 2.34
+        }
+      ],
+      "anchorShares": 1570000,
+      "totalShares": 12586800,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/raksan_transformers_ltd_bse_sme_rhp_1788595232.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/raksan_transformers_ltd_bse_sme_capital_structure_1788620167.pdf",
       "anchorUrl": null,
@@ -123,22 +589,114 @@
       "issueType": "SME",
       "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-09-15T18:30:00.000Z",
-        "adjusted": "2026-09-15T18:30:00.000Z",
+        "original": "2026-09-18T00:00:00.000Z",
+        "adjusted": "2026-09-18T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/maharaja-speedex-ipo/3089/",
       "issuePrice": 186,
       "priceBand": "₹177–186",
       "openDate": "2026-09-09T18:30:00.000Z",
       "closeDate": "2026-09-14T18:30:00.000Z",
       "listingDate": "2026-09-17T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
-      "anchorInvestors": [],
+      "anchor30": {
+        "original": "2026-10-16T00:00:00.000Z",
+        "adjusted": "2026-10-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-15T00:00:00.000Z",
+        "adjusted": "2026-12-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-20T00:00:00.000Z",
+        "originalDate": "2027-09-18T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [
+        {
+          "name": "ABAKKUS VENTURE OPPORTUNITIES FUND",
+          "group": "ABAKKUS",
+          "shares": 270000,
+          "sharesFormatted": "2,70,000",
+          "amountCr": 5.02,
+          "percent": 22
+        },
+        {
+          "name": "FOUNDERS COLLECTIVE FUND",
+          "shares": 270000,
+          "sharesFormatted": "2,70,000",
+          "amountCr": 5.02,
+          "percent": 22
+        },
+        {
+          "name": "SAGEONE SMALL & MICRO OPPORTUNITY FUND",
+          "group": "SAGEONE",
+          "shares": 180000,
+          "sharesFormatted": "1,80,000",
+          "amountCr": 3.35,
+          "percent": 14.67
+        },
+        {
+          "name": "ASHIKA GLOBAL FINANCE PVT.LTD.",
+          "group": "ASHIKA GLOBAL SECURITIES",
+          "shares": 150000,
+          "sharesFormatted": "1,50,000",
+          "amountCr": 2.79,
+          "percent": 12.22
+        },
+        {
+          "name": "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND",
+          "group": "NAV CAPITAL",
+          "shares": 87000,
+          "sharesFormatted": "87,000",
+          "amountCr": 1.62,
+          "percent": 7.09
+        },
+        {
+          "name": "EMERGE CAPITAL OPPORTUNITIES SCHEME",
+          "shares": 54000,
+          "sharesFormatted": "54,000",
+          "amountCr": 1,
+          "percent": 4.4
+        },
+        {
+          "name": "FLYINGBEE INVESTMENT FUND",
+          "group": "MONEYBEE",
+          "shares": 54000,
+          "sharesFormatted": "54,000",
+          "amountCr": 1,
+          "percent": 4.4
+        },
+        {
+          "name": "RMS GROWTH FUND SCHEME I",
+          "group": "RMS",
+          "shares": 54000,
+          "sharesFormatted": "54,000",
+          "amountCr": 1,
+          "percent": 4.4
+        },
+        {
+          "name": "VIJIT GROWTH FUND",
+          "group": "VIJIT",
+          "shares": 54000,
+          "sharesFormatted": "54,000",
+          "amountCr": 1,
+          "percent": 4.4
+        },
+        {
+          "name": "FLUMEN INVESTMENT TRUST-1729 GROWTH FUND I",
+          "group": "FLUMEN INVESTMENT",
+          "shares": 54000,
+          "sharesFormatted": "54,000",
+          "amountCr": 1,
+          "percent": 4.4
+        }
+      ],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 4308000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_rhp_1788675381.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_capital_structure_1788675382.pdf",
       "anchorUrl": null,
@@ -297,11 +855,11 @@
       "issueType": "SME",
       "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-09-16T18:30:00.000Z",
-        "adjusted": "2026-09-16T18:30:00.000Z",
+        "original": "2026-09-21T00:00:00.000Z",
+        "adjusted": "2026-09-21T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/century-business-media-ipo/2604/",
       "issuePrice": 74,
       "priceBand": "₹70–74",
       "openDate": "2026-09-10T18:30:00.000Z",
@@ -309,11 +867,16 @@
       "listingDate": "2026-09-20T18:30:00.000Z",
       "anchor30": null,
       "anchor90": null,
-      "preIPO": null,
+      "preIPO": {
+        "expiryDate": "2027-09-21T00:00:00.000Z",
+        "originalDate": "2027-09-21T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
-      "rhpUrl": null,
+      "anchorShares": 654400,
+      "totalShares": 2312000,
+      "rhpUrl": "https://hemadmin.hemsecurities.com/images/Files/offer/3167.pdf",
       "capitalStructureUrl": null,
       "anchorUrl": null,
       "preIpoInvestors": [],
@@ -325,11 +888,11 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-09-16T18:30:00.000Z",
-        "adjusted": "2026-09-16T18:30:00.000Z",
+        "original": "2026-09-21T00:00:00.000Z",
+        "adjusted": "2026-09-21T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/manika-plastech-ipo/2483/",
       "issuePrice": 43,
       "priceBand": "₹40–43",
       "openDate": "2026-09-10T18:30:00.000Z",
@@ -337,10 +900,15 @@
       "listingDate": "2026-09-20T18:30:00.000Z",
       "anchor30": null,
       "anchor90": null,
-      "preIPO": null,
+      "preIPO": {
+        "expiryDate": "2027-03-22T00:00:00.000Z",
+        "originalDate": "2027-03-21T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 29186045,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_rhp_1788683576.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_capital_structure_1788684348.pdf",
       "anchorUrl": null,
@@ -354,18 +922,79 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-09-14T18:30:00.000Z",
-        "adjusted": "2026-09-14T18:30:00.000Z",
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/steamhouse-india-ipo/2514/",
       "issuePrice": 81,
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 0,
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-17T00:00:00.000Z",
+        "originalDate": "2027-03-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [
+        {
+          "name": "SINGULARITY LARGE VALUE FUND III",
+          "group": "SINGULARITY",
+          "shares": 5197390,
+          "sharesFormatted": "51,97,390",
+          "amountCr": 42.1,
+          "percent": 33.9
+        },
+        {
+          "name": "CHARTERED FINANCE & LEASING LTD.",
+          "group": "CHARTERED FINANCE & LEASING",
+          "shares": 5197390,
+          "sharesFormatted": "51,97,390",
+          "amountCr": 42.1,
+          "percent": 33.9
+        },
+        {
+          "name": "ABAKKUS EMERGING OPPORTUNITIES FUND I",
+          "group": "ABAKKUS",
+          "shares": 1234875,
+          "sharesFormatted": "12,34,875",
+          "amountCr": 10,
+          "percent": 8.05
+        },
+        {
+          "name": "NIVESHAAY SAMBHAV FUND",
+          "group": "NIVESHAAY",
+          "shares": 1851642,
+          "sharesFormatted": "18,51,642",
+          "amountCr": 15,
+          "percent": 12.08
+        },
+        {
+          "name": "EMERGE CAPITAL OPPORTUNITIES SCHEME",
+          "shares": 1234690,
+          "sharesFormatted": "12,34,690",
+          "amountCr": 10,
+          "percent": 8.05
+        },
+        {
+          "name": "31 Degrees North Fund I",
+          "group": "31 DEGREES",
+          "shares": 617345,
+          "sharesFormatted": "6,17,345",
+          "amountCr": 5,
+          "percent": 4.03
+        }
+      ],
+      "anchorShares": 15333332,
+      "totalShares": 51111111,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
       "capitalStructureUrl": null,
       "anchorUrl": null,
@@ -382,15 +1011,20 @@
       "issueType": "SME",
       "exchange": "NSE SME",
       "allotmentDate": {
-        "original": "2026-09-14T18:30:00.000Z",
-        "adjusted": "2026-09-14T18:30:00.000Z",
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vinod-texworld-ipo/2718/",
       "issuePrice": 94,
       "anchor30": null,
       "anchor90": null,
-      "preIPO": null,
+      "preIPO": {
+        "expiryDate": "2027-09-17T00:00:00.000Z",
+        "originalDate": "2027-09-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 4556800,
@@ -433,17 +1067,22 @@
     {
       "companyName": "Infrax Renewable Ltd",
       "issueType": "SME",
-      "exchange": "NSE SME",
+      "exchange": "BSE SME",
       "allotmentDate": {
-        "original": "2026-09-14T18:30:00.000Z",
-        "adjusted": "2026-09-14T18:30:00.000Z",
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/infrax-renewable-ipo/3163/",
       "issuePrice": 104,
       "anchor30": null,
       "anchor90": null,
-      "preIPO": null,
+      "preIPO": {
+        "expiryDate": "2027-09-17T00:00:00.000Z",
+        "originalDate": "2027-09-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 3931200,
@@ -733,15 +1372,28 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-09-14T18:30:00.000Z",
-        "adjusted": "2026-09-14T18:30:00.000Z",
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/manipal-payment-and-identity-solutions-ipo/2524/",
       "issuePrice": 339,
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-17T00:00:00.000Z",
+        "originalDate": "2027-03-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 23746313,
@@ -858,15 +1510,28 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-09-14T18:30:00.000Z",
-        "adjusted": "2026-09-14T18:30:00.000Z",
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/lcc-projects-ipo/2086/",
       "issuePrice": 146,
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-17T00:00:00.000Z",
+        "originalDate": "2027-03-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 29256232,
@@ -917,8 +1582,8 @@
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
       "allotmentDate": {
-        "original": "2026-09-15T00:00:00.000Z",
-        "adjusted": "2026-09-15T00:00:00.000Z",
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
         "isAdjusted": false
       },
       "listingDate": "2026-09-17",
@@ -928,7 +1593,7 @@
       "issuePrice": 404,
       "lotSize": 37,
       "pricingType": "Book Built",
-      "chittorgarhUrl": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rentomojo-ipo/2971/",
       "anchor30": {
         "original": "2026-10-15T00:00:00.000Z",
         "adjusted": "2026-10-15T00:00:00.000Z",
@@ -939,7 +1604,12 @@
         "adjusted": "2026-12-14T00:00:00.000Z",
         "isAdjusted": false
       },
-      "preIPO": null,
+      "preIPO": {
+        "expiryDate": "2027-03-17T00:00:00.000Z",
+        "originalDate": "2027-03-17T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 31080977,
@@ -1100,9 +1770,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-12-30",
+        "expiryDate": "2026-12-31T00:00:00.000Z",
         "originalDate": "2026-12-31T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://beelinemb.com/wp-content/uploads/2025/12/RHP_Apollo-Techno-Industries-Ltd.pdf",
@@ -6604,7 +7274,28 @@
           "percentage": 20
         }
       ],
-      "totalShares": 6860000
+      "totalShares": 6860000,
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2025/aptus-pharma-limited_97275.html",
+      "anchorInvestors": [
+        {
+          "name": "31 Degrees North Fund I",
+          "group": "31 DEGREES",
+          "shares": 192000,
+          "sharesFormatted": "1,92,000",
+          "amountCr": 1.34,
+          "percent": 36.36
+        },
+        {
+          "name": "EMINENCE GLOBAL FUND PCC-EUBILIA CAPITAL PARTNERS FUND I",
+          "group": "EMINENCE",
+          "shares": 192000,
+          "sharesFormatted": "1,92,000",
+          "amountCr": 1.34,
+          "percent": 36.36
+        }
+      ],
+      "anchorShares": 528000,
+      "preIpoInvestors": []
     },
     {
       "companyName": "BharatRohan Airborne Innovations Ltd.",
@@ -7272,14 +7963,321 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-09-18T00:00:00.000Z",
+        "expiryDate": "2026-09-25",
         "originalDate": "2026-09-18T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "capitalStructureUrl": null,
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_120920251551.zip",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "Aparna Samir Thakker",
+          "shares": 1993005,
+          "acquisitionPrice": 31.46,
+          "date": "2023-09-11",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Individual Pre-IPO (Post-Bonus)"
+        },
+        {
+          "name": "Purvesh Mukeshkumar Shah",
+          "shares": 350000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Rohan Gupta",
+          "shares": 150000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Asha M Mehta",
+          "shares": 132000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-09",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Aditya Rashmikant Dharia",
+          "shares": 99990,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Kranti Prabhakar Shanbhag",
+          "shares": 99000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Sheila Bhaskar Mudbidri",
+          "shares": 80000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Amartara Plastics Private Limited",
+          "shares": 75000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Amit Mehra",
+          "shares": 60000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Tejal Pratyush Bhartiya",
+          "shares": 60000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Sheetal Hemanth",
+          "shares": 50000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Daksha Mukeshkumar Shah",
+          "shares": 50000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Ninedot Fortune Builders LLP",
+          "shares": 52000,
+          "acquisitionPrice": 116.35,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Singhvi Heritage LLP",
+          "shares": 48700,
+          "acquisitionPrice": 115.15,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Sunil Abar",
+          "shares": 36000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Ninedot Ventures LLP",
+          "shares": 31200,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Chitresh Kumar Lunawat",
+          "shares": 28500,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Sanjay Harshadrai Mehta",
+          "shares": 27000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Nandan Pravinbhai Ganatra",
+          "shares": 24900,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Indubai Soma Hirve",
+          "shares": 24900,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Husain Asgar",
+          "shares": 24000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Pranav Rakesh Kapoor",
+          "shares": 24000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Vandan Vijay Agarwal",
+          "shares": 24000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Harsha Talreja",
+          "shares": 24000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Anup Navalchand Gangar",
+          "shares": 20000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Suresh Punamchand Varaiya",
+          "shares": 20000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Kambhapu Vineeth",
+          "shares": 20100,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Mona Jayesh Sheth",
+          "shares": 18000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Rajkumar Kapoor",
+          "shares": 12000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        },
+        {
+          "name": "Aakash Jain",
+          "shares": 12000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Rajesh Swaminathan",
+          "shares": 10800,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Moiz Mohammed Bohra",
+          "shares": 9000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Aman Jain",
+          "shares": 6000,
+          "acquisitionPrice": 100,
+          "date": "2024-08-01",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Preferential Allotment (Post-Bonus)"
+        },
+        {
+          "name": "Vipula Shailesh Bhansali",
+          "shares": 6000,
+          "acquisitionPrice": 125,
+          "date": "2024-12-04",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement Allotment"
+        }
+      ],
       "anchorInvestors": [
         {
           "name": "LRSD SECURITIES PVT.LTD.",
@@ -7347,37 +8345,46 @@
         }
       ],
       "anchorShares": 1852000,
-      "totalShares": 6507000,
+      "totalShares": 23969954,
       "bseCircularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
       "circularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
       "lockInEvents": [
         {
           "date": null,
           "shares": 4655000,
-          "percentage": 30.2,
+          "percentage": 19.4,
           "label": "Not under lock-in"
         },
         {
           "date": "2025-10-15",
           "shares": 926000,
-          "percentage": 6
+          "percentage": 3.9
         },
         {
           "date": "2025-12-14",
           "shares": 926000,
-          "percentage": 6
+          "percentage": 3.9
+        },
+        {
+          "date": "2026-09-25",
+          "shares": 8569554,
+          "percentage": 35.8
         },
         {
           "date": "2027-09-25",
           "shares": 4794500,
-          "percentage": 31.1
+          "percentage": 20
         },
         {
           "date": "2028-09-25",
           "shares": 4098900,
-          "percentage": 26.6
+          "percentage": 17.1
         }
-      ]
+      ],
+      "annexureUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
+      "preIpoWaca": 108.55,
+      "waca": 108.55,
+      "preIpoChecked": true
     },
     {
       "companyName": "Shringar House of Mangalsutra Ltd.",
@@ -7597,9 +8604,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-09-16T00:00:00.000Z",
+        "expiryDate": "2026-09-12",
         "originalDate": "2026-09-16T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_TAURIAN.zip",
@@ -23282,9 +24289,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-09",
+        "expiryDate": "2026-09-11T00:00:00.000Z",
         "originalDate": "2026-09-11T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -23617,7 +24624,7 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-02",
+        "expiryDate": "2026-09-07T00:00:00.000Z",
         "originalDate": "2026-09-05T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
@@ -25230,9 +26237,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-02-28",
+        "expiryDate": "2027-03-01T00:00:00.000Z",
         "originalDate": "2027-03-01T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -26225,7 +27232,7 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2026-12-14",
+        "expiryDate": "2026-12-14T00:00:00.000Z",
         "originalDate": "2026-12-12T00:00:00.000Z",
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
@@ -37764,9 +38771,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2027-02-12",
+        "expiryDate": "2027-02-12T00:00:00.000Z",
         "originalDate": "2027-02-12T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ardee_industries_ltd_mainboard_capital_structure_1785699190.pdf",
@@ -37866,9 +38873,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-08-06",
+        "expiryDate": "2027-08-11T00:00:00.000Z",
         "originalDate": "2027-08-11T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/aegeus_technologies_ltd_bse_sme_capital_structure_1785303103.pdf",
@@ -37938,9 +38945,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-08-06",
+        "expiryDate": "2027-08-10T00:00:00.000Z",
         "originalDate": "2027-08-10T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/anawil_wire_engineering_ltd_nse_sme_capital_structure_1785898061.pdf",
@@ -40513,13 +41520,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rays-of-belief-ipo/2787/",
       "issuePrice": 239,
       "anchor30": {
-        "original": "2026-10-04T00:00:00.000Z",
+        "original": "2026-10-03T00:00:00.000Z",
         "adjusted": "2026-10-05T00:00:00.000Z",
         "isAdjusted": true
       },
       "anchor90": {
-        "original": "2026-12-03T00:00:00.000Z",
-        "adjusted": "2026-12-03T00:00:00.000Z",
+        "original": "2026-12-02T00:00:00.000Z",
+        "adjusted": "2026-12-02T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -40703,13 +41710,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/deepa-jewellers-ipo/2827/",
       "issuePrice": 177,
       "anchor30": {
-        "original": "2026-10-04T00:00:00.000Z",
+        "original": "2026-10-03T00:00:00.000Z",
         "adjusted": "2026-10-05T00:00:00.000Z",
         "isAdjusted": true
       },
       "anchor90": {
-        "original": "2026-12-03T00:00:00.000Z",
-        "adjusted": "2026-12-03T00:00:00.000Z",
+        "original": "2026-12-02T00:00:00.000Z",
+        "adjusted": "2026-12-02T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -40864,13 +41871,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/purple-style-labs-ipo/2622/",
       "issuePrice": 575,
       "anchor30": {
-        "original": "2026-10-03T00:00:00.000Z",
+        "original": "2026-10-02T00:00:00.000Z",
         "adjusted": "2026-10-05T00:00:00.000Z",
         "isAdjusted": true
       },
       "anchor90": {
-        "original": "2026-12-02T00:00:00.000Z",
-        "adjusted": "2026-12-02T00:00:00.000Z",
+        "original": "2026-12-01T00:00:00.000Z",
+        "adjusted": "2026-12-01T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -41125,9 +42132,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-09-05",
+        "expiryDate": "2027-09-07T00:00:00.000Z",
         "originalDate": "2027-09-07T00:00:00.000Z",
-        "isAdjusted": true,
+        "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [
@@ -41831,13 +42838,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/paluck-technologies-ipo/2702/",
       "issuePrice": 48,
       "anchor30": {
-        "original": "2026-10-02T00:00:00.000Z",
-        "adjusted": "2026-10-05T00:00:00.000Z",
-        "isAdjusted": true
+        "original": "2026-10-01T00:00:00.000Z",
+        "adjusted": "2026-10-01T00:00:00.000Z",
+        "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-12-01T00:00:00.000Z",
-        "adjusted": "2026-12-01T00:00:00.000Z",
+        "original": "2026-11-30T00:00:00.000Z",
+        "adjusted": "2026-11-30T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -43633,8 +44640,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/veegaland-developers-ipo/2834/",
       "issuePrice": 140,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-16T00:00:00.000Z",
+        "adjusted": "2026-10-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-15T00:00:00.000Z",
+        "adjusted": "2026-12-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-18T00:00:00.000Z",
         "originalDate": "2027-03-18T00:00:00.000Z",
@@ -43668,8 +44683,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/amtech-esters-ipo/2207/",
       "issuePrice": 75,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-17T00:00:00.000Z",
         "originalDate": "2027-09-17T00:00:00.000Z",
@@ -43746,8 +44769,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/asset-reconstruction-ipo/2558/",
       "issuePrice": 139,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-15T00:00:00.000Z",
+        "adjusted": "2026-10-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-14T00:00:00.000Z",
+        "adjusted": "2026-12-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-17T00:00:00.000Z",
         "originalDate": "2027-03-17T00:00:00.000Z",
@@ -43859,8 +44890,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/glass-wall-systems-ipo/2594/",
       "issuePrice": 182,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-11T00:00:00.000Z",
+        "adjusted": "2026-10-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-10T00:00:00.000Z",
+        "adjusted": "2026-12-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-16T00:00:00.000Z",
         "originalDate": "2027-03-16T00:00:00.000Z",
@@ -43910,8 +44949,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/prasol-chemicals-ipo/2775/",
       "issuePrice": 676,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-11T00:00:00.000Z",
+        "adjusted": "2026-10-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-10T00:00:00.000Z",
+        "adjusted": "2026-12-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-16T00:00:00.000Z",
         "originalDate": "2027-03-16T00:00:00.000Z",
@@ -43953,8 +45000,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kanohar-electricals-ipo/2856/",
       "issuePrice": 632,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-11T00:00:00.000Z",
+        "adjusted": "2026-10-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-10T00:00:00.000Z",
+        "adjusted": "2026-12-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-16T00:00:00.000Z",
         "originalDate": "2027-03-16T00:00:00.000Z",
@@ -43996,8 +45051,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/pranav-constructions-ipo/2127/",
       "issuePrice": 124,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-10T00:00:00.000Z",
+        "adjusted": "2026-10-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-09T00:00:00.000Z",
+        "adjusted": "2026-12-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-15T00:00:00.000Z",
         "originalDate": "2027-03-15T00:00:00.000Z",
@@ -44261,7 +45324,7 @@
     {
       "companyName": "Qualiance International Ltd.",
       "issueType": "SME",
-      "exchange": "BSE SME",
+      "exchange": "NSE SME",
       "allotmentDate": {
         "original": "2026-09-11T00:00:00.000Z",
         "adjusted": "2026-09-11T00:00:00.000Z",
@@ -44429,13 +45492,13 @@
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/complete-sports-and-management-ipo/3182/",
       "issuePrice": 135,
       "anchor30": {
-        "original": "2026-10-02T00:00:00.000Z",
-        "adjusted": "2026-10-05T00:00:00.000Z",
-        "isAdjusted": true
+        "original": "2026-10-01T00:00:00.000Z",
+        "adjusted": "2026-10-01T00:00:00.000Z",
+        "isAdjusted": false
       },
       "anchor90": {
-        "original": "2026-12-01T00:00:00.000Z",
-        "adjusted": "2026-12-01T00:00:00.000Z",
+        "original": "2026-11-30T00:00:00.000Z",
+        "adjusted": "2026-11-30T00:00:00.000Z",
         "isAdjusted": false
       },
       "preIPO": {
@@ -44517,512 +45580,302 @@
       "listingDate": "2026-09-06T18:30:00.000Z",
       "openDate": "2026-08-30T18:30:00.000Z",
       "closeDate": "2026-09-02T18:30:00.000Z"
+    },
+    {
+      "companyName": "National Stock Exchange of India Ltd. (NSE IPO)",
+      "issueType": "Mainboard",
+      "exchange": "BSE",
+      "allotmentDate": null,
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 148905525,
+      "rhpUrl": "",
+      "capitalStructureUrl": ""
+    },
+    {
+      "companyName": "Axiom Gas Engineering Ltd.",
+      "issueType": "SME",
+      "exchange": "NSE SME",
+      "allotmentDate": {
+        "original": "2026-09-25T00:00:00.000Z",
+        "adjusted": "2026-09-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
+      "issuePrice": 53,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-09-27T00:00:00.000Z",
+        "originalDate": "2027-09-25T00:00:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 9398000,
+      "rhpUrl": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/axiom_gas_engineering_ltd_nse_sme_capital_structure_1788933277.pdf",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Mr. Alpeshkumar Naginbhai Patel",
+        "Naginbhai Patel",
+        "Mrs. Kinnari Alpeshkumar Patel",
+        "Kinnari Alpeshkumar Patel",
+        "Vedanti Alpeshkumar Patel",
+        "Naginbhai Nathabai Patel",
+        "Mrs. Asma Mohamad Sadique Banani",
+        "Sushilaben Naginbhai Patel",
+        "Kadar Banani",
+        "Sadique Abdul Kadar Banani",
+        "Asma Mohamad Sadique Banani",
+        "Gift of",
+        "Alpeshkumar Naginbhai Patel",
+        "Mr. Sadique Abdul Kadar Banani",
+        "Abdul Kadar Banani and Asma Mohamad Sadique Banani hold"
+      ]
+    },
+    {
+      "companyName": "Kheria Autocomp Ltd.",
+      "issueType": "SME",
+      "exchange": "NSE SME",
+      "allotmentDate": {
+        "original": "2026-09-24T00:00:00.000Z",
+        "adjusted": "2026-09-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-09-24T00:00:00.000Z",
+        "originalDate": "2027-09-24T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 1310400,
+      "totalShares": 4600000,
+      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/kheria_autocomp_limited_rhp-1.pdf",
+      "capitalStructureUrl": ""
+    },
+    {
+      "companyName": "Sonaselection India Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-09-24T00:00:00.000Z",
+        "adjusted": "2026-09-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-03-24T00:00:00.000Z",
+        "originalDate": "2027-03-24T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 14300000,
+      "rhpUrl": "",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sonaselection_india_ltd_mainboard_capital_structure_1788943748.pdf",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Sandeep Motors Private Limited",
+        "Invicta Continuum Fund I",
+        "Inter Globe Overseas Limited",
+        "Sonmod Marketing Private Limited",
+        "Sangam Finserv Limited",
+        "Transcoal Impex Private Limited",
+        "Vivek Freight Logistics Private Limited",
+        "Srp Estate Private Limited",
+        "Juggernaut Corporate Advisors LLP",
+        "Sangam Finserve Limited",
+        "Nutri Vista Agro Exim LLP (₹90)",
+        "Sona Polyspin Pvt Ltd",
+        "Sona Polyspin Private Limited (₹29.19)"
+      ],
+      "preIpoWaca": 44.71
+    },
+    {
+      "companyName": "Jindal Supreme (India) Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-09-23T00:00:00.000Z",
+        "adjusted": "2026-09-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/jindal-supreme-ipo/2803/",
+      "issuePrice": 93,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-03-23T00:00:00.000Z",
+        "originalDate": "2027-03-23T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 13428000,
+      "rhpUrl": "https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/jindal_supreme_india_ltd_mainboard_capital_structure_1788861284.pdf",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "any Applicant,",
+        "Mange Ram"
+      ]
+    },
+    {
+      "companyName": "SS Retail Ltd.",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-09-23T00:00:00.000Z",
+        "adjusted": "2026-09-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ss-retail-ipo/2822/",
+      "issuePrice": null,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-03-23T00:00:00.000Z",
+        "originalDate": "2027-03-23T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 0,
+      "rhpUrl": "https://ssmobile.com/aboutus/investor/assets/RHP/SS%20Retail%20Limited%20-%20RHP%20-%2008092026.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ss_retail_ltd_mainboard_capital_structure_1788947112.pdf",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Harshal Kishor",
+        "Deepa Siddharth",
+        "Bhavini Harshal",
+        "Rakhi Narendra"
+      ],
+      "preIpoWaca": 7.57
+    },
+    {
+      "companyName": "Quanto Agroworld Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-22T00:00:00.000Z",
+        "adjusted": "2026-09-22T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/quanto-agroworld-ipo/2390/",
+      "issuePrice": 67,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-09-22T00:00:00.000Z",
+        "originalDate": "2027-09-22T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 4630000,
+      "rhpUrl": "https://syjjlswidlmfzafnyaen.supabase.co/storage/v1/object/public/investor-documents/DRAFT_PROSPECTUS_QUANTO_27-02-2026.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/quanto_agroworld_ltd_bse_sme_capital_structure_1788936040.pdf",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Krushnarao Bhaskarrao Nimbalkar",
+        "Surendra Kumar Babulal Agarwal",
+        "Meghna Hitesh Kakkad",
+        "Padam were",
+        "Dushyant Kumar Yatendra Gupta",
+        "Ruchi Ritesh Kakkad",
+        "Incorporat Subscriber",
+        "Dushyant Kumar Gupta",
+        "Sangeeta Surendra Agarwal"
+      ]
+    },
+    {
+      "companyName": "Shakti Polytarp Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-22T00:00:00.000Z",
+        "adjusted": "2026-09-22T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shakti-polytarp-ipo/2427/",
+      "issuePrice": 59,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-09-22T00:00:00.000Z",
+        "originalDate": "2027-09-22T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 822000,
+      "totalShares": 4564000,
+      "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/shakti-polytarp-ltd-rhp.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shakti_polytarp_ltd_bse_sme_capital_structure_1788934843.pdf",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Ravi Singhal",
+        "Vijay Gangrade",
+        "Ajay Gangrade",
+        "Trisha Singhal",
+        "Vivek Singhal",
+        "Gaurav Gangrade",
+        "Jyoti Gangrade",
+        "Ramesh Chandra Siroya",
+        "Priyal Singhal",
+        "Santosh Kataria"
+      ]
+    },
+    {
+      "companyName": "Injecto Polymers Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-21T00:00:00.000Z",
+        "adjusted": "2026-09-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/injecto-polymers-ipo/2625/",
+      "issuePrice": 100,
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": {
+        "expiryDate": "2027-09-21T00:00:00.000Z",
+        "originalDate": "2027-09-21T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
+      "anchorInvestors": [],
+      "anchorShares": 957600,
+      "totalShares": 5612400,
+      "rhpUrl": "https://injectopolymers.in/wp-content/uploads/2026/09/1.-RHP_07.09.2026.pdf",
+      "capitalStructureUrl": ""
     }
   ],
-  "lastUpdated": "2026-09-07T15:59:55.890061Z",
+  "lastUpdated": "2026-09-09T16:59:21.037Z",
   "lastScraped": {
-    "time": "2026-09-03T06:59:51.027Z",
+    "time": "2026-09-09T16:57:44.724Z",
     "scraped2025": 6,
-    "scraped2026": 207,
-    "totalNew": 213
-  },
-  "circularData": {
-    "SEDEMAC Mechatronics Ltd.": {
-      "found": true,
-      "totalShares": 44161500,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 16237644,
-          "percentage": 36.8,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-03-12",
-          "shares": 25500,
-          "percentage": 0.1
-        },
-        {
-          "date": "2026-04-07",
-          "shares": 1205195,
-          "percentage": 2.7
-        },
-        {
-          "date": "2026-06-06",
-          "shares": 1205206,
-          "percentage": 2.7
-        },
-        {
-          "date": "2026-09-09",
-          "shares": 16638355,
-          "percentage": 37.7
-        },
-        {
-          "date": "2027-09-09",
-          "shares": 8849600,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/73229",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73229.zip",
-      "fetchedAt": "2026-09-03T17:00:38.019Z"
-    },
-    "Apollo Techno Industries Ltd.": {
-      "found": true,
-      "totalShares": 13689000,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 2639000,
-          "percentage": 19.3,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-01-27",
-          "shares": 520000,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-03-28",
-          "shares": 530000,
-          "percentage": 3.9
-        },
-        {
-          "date": "2026-12-30",
-          "shares": 3647500,
-          "percentage": 26.6
-        },
-        {
-          "date": "2027-12-30",
-          "shares": 3607500,
-          "percentage": 26.4
-        },
-        {
-          "date": "2028-12-30",
-          "shares": 2745000,
-          "percentage": 20.1
-        }
-      ],
-      "source": "BSE",
-      "noticeId": "20251230-30",
-      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20251230-30&attachedId=926937f8-8027-4654-b7d1-98922d57a1f6",
-      "fetchedAt": "2026-09-03T17:17:16.616Z"
-    },
-    "Hexagon Nutrition Ltd.": {
-      "found": true,
-      "totalShares": 122918109,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 22269508,
-          "percentage": 18.1,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-07-09",
-          "shares": 4628847,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-09-07",
-          "shares": 4628849,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-12-14",
-          "shares": 66807105,
-          "percentage": 54.4
-        },
-        {
-          "date": "2027-12-14",
-          "shares": 24583800,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/74667",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML74667.zip",
-      "fetchedAt": "2026-09-05T05:07:42.582Z"
-    },
-    "Skyways Air Services Ltd.": {
-      "found": true,
-      "totalShares": 145343544,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 29983600,
-          "percentage": 20.6,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-09-26",
-          "shares": 6324000,
-          "percentage": 4.4
-        },
-        {
-          "date": "2026-11-25",
-          "shares": 6324000,
-          "percentage": 4.4
-        },
-        {
-          "date": "2027-02-28",
-          "shares": 73643224,
-          "percentage": 50.7
-        },
-        {
-          "date": "2028-02-29",
-          "shares": 29068720,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/76083",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76083.zip",
-      "fetchedAt": "2026-09-05T05:58:31.668Z"
-    },
-    "Aegeus Technologies Ltd.": {
-      "found": true,
-      "totalShares": 8374593,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 1686000,
-          "percentage": 20.1,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-09-06",
-          "shares": 285600,
-          "percentage": 3.4
-        },
-        {
-          "date": "2026-11-05",
-          "shares": 286800,
-          "percentage": 3.4
-        },
-        {
-          "date": "2027-08-06",
-          "shares": 3292593,
-          "percentage": 39.3
-        },
-        {
-          "date": "2028-08-06",
-          "shares": 1147200,
-          "percentage": 13.7
-        },
-        {
-          "date": "2029-08-06",
-          "shares": 1676400,
-          "percentage": 20
-        }
-      ],
-      "source": "BSE",
-      "noticeId": "20260810-35",
-      "pdfUrl": "https://www.bseindia.com/downloads/UploadDocs/Notices/Attach/AnnexureI$033419df-ddf9-42a4-b7ed-d115e6752318.pdf",
-      "fetchedAt": "2026-09-05T06:15:33.176Z"
-    },
-    "Ardee Industries Ltd.": {
-      "found": true,
-      "totalShares": 315200950,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 56246366,
-          "percentage": 17.8,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-09-08",
-          "shares": 12052790,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-11-07",
-          "shares": 12052794,
-          "percentage": 3.8
-        },
-        {
-          "date": "2027-01-29",
-          "shares": 4717000,
-          "percentage": 1.5
-        },
-        {
-          "date": "2027-02-12",
-          "shares": 166052000,
-          "percentage": 52.7
-        },
-        {
-          "date": "2028-02-12",
-          "shares": 64080000,
-          "percentage": 20.3
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/75684",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75684.zip",
-      "fetchedAt": "2026-09-05T06:28:51.619Z"
-    },
-    "Anawil Wire & Engineering Ltd.": {
-      "found": true,
-      "totalShares": 24999800,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 4710000,
-          "percentage": 18.8,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-09-03",
-          "shares": 700000,
-          "percentage": 2.8
-        },
-        {
-          "date": "2026-09-04",
-          "shares": 935200,
-          "percentage": 3.7
-        },
-        {
-          "date": "2026-09-08",
-          "shares": 48000,
-          "percentage": 0.2
-        },
-        {
-          "date": "2026-11-03",
-          "shares": 940400,
-          "percentage": 3.8
-        },
-        {
-          "date": "2027-08-06",
-          "shares": 7009128,
-          "percentage": 28
-        },
-        {
-          "date": "2028-08-05",
-          "shares": 5657072,
-          "percentage": 22.6
-        },
-        {
-          "date": "2029-08-05",
-          "shares": 5000000,
-          "percentage": 20
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/75648",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75648.zip",
-      "fetchedAt": "2026-09-05T07:41:54.535Z"
-    },
-    "Omnitech Engineering Ltd.": {
-      "found": true,
-      "totalShares": 123666020,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 17993433,
-          "percentage": 14.6,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-03-31",
-          "shares": 3845814,
-          "percentage": 3.1
-        },
-        {
-          "date": "2026-05-30",
-          "shares": 3845815,
-          "percentage": 3.1
-        },
-        {
-          "date": "2026-09-02",
-          "shares": 7329803,
-          "percentage": 5.9
-        },
-        {
-          "date": "2027-03-02",
-          "shares": 65730352,
-          "percentage": 53.2
-        },
-        {
-          "date": "2029-03-02",
-          "shares": 24920803,
-          "percentage": 20.2
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/73104",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73104.zip",
-      "fetchedAt": "2026-09-06T06:57:54.620Z"
-    },
-    "Shanti Inorganics Ltd.": {
-      "found": true,
-      "totalShares": 17247400,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 4072000,
-          "percentage": 23.6,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2026-09-18",
-          "shares": 307200,
-          "percentage": 1.8
-        },
-        {
-          "date": "2026-10-02",
-          "shares": 808000,
-          "percentage": 4.7
-        },
-        {
-          "date": "2026-12-01",
-          "shares": 811200,
-          "percentage": 4.7
-        },
-        {
-          "date": "2027-09-05",
-          "shares": 5195228,
-          "percentage": 30.1
-        },
-        {
-          "date": "2028-09-05",
-          "shares": 2595668,
-          "percentage": 15
-        },
-        {
-          "date": "2030-07-01",
-          "shares": 3458104,
-          "percentage": 20.1
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/76203",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76203.zip",
-      "fetchedAt": "2026-09-07T04:12:02.750Z"
-    },
-    "Matrix Geo Solutions Ltd.": {
-      "found": true,
-      "totalShares": 14581832,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 2774400,
-          "percentage": 19,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-10-26",
-          "shares": 542400,
-          "percentage": 3.7
-        },
-        {
-          "date": "2025-12-25",
-          "shares": 548400,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-09-27",
-          "shares": 4340628,
-          "percentage": 29.8
-        },
-        {
-          "date": "2027-09-30",
-          "shares": 3436004,
-          "percentage": 23.6
-        },
-        {
-          "date": "2028-09-29",
-          "shares": 2940000,
-          "percentage": 20.2
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/70498",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70498.zip",
-      "fetchedAt": "2026-09-09T15:11:52.620Z"
-    },
-    "Ecoline Exim Ltd.": {
-      "found": true,
-      "totalShares": 20515376,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 3877000,
-          "percentage": 18.9,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-10-25",
-          "shares": 770000,
-          "percentage": 3.8
-        },
-        {
-          "date": "2025-12-24",
-          "shares": 773000,
-          "percentage": 3.8
-        },
-        {
-          "date": "2026-09-25",
-          "shares": 6564818,
-          "percentage": 32
-        },
-        {
-          "date": "2027-09-25",
-          "shares": 4330558,
-          "percentage": 21.1
-        },
-        {
-          "date": "2028-09-25",
-          "shares": 4200000,
-          "percentage": 20.5
-        }
-      ],
-      "source": "NSE",
-      "noticeId": "NSE/CML/70504",
-      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70504.zip",
-      "fetchedAt": "2026-09-09T15:22:11.660Z"
-    },
-    "True Colors Ltd.": {
-      "found": true,
-      "totalShares": 24654600,
-      "unlockEvents": [
-        {
-          "date": null,
-          "shares": 4794000,
-          "percentage": 19.4,
-          "label": "Not under lock-in"
-        },
-        {
-          "date": "2025-10-25",
-          "shares": 951000,
-          "percentage": 3.9
-        },
-        {
-          "date": "2025-12-24",
-          "shares": 954600,
-          "percentage": 3.9
-        },
-        {
-          "date": "2026-09-28",
-          "shares": 7030200,
-          "percentage": 28.5
-        },
-        {
-          "date": "2027-09-28",
-          "shares": 5993800,
-          "percentage": 24.3
-        },
-        {
-          "date": "2028-09-28",
-          "shares": 4931000,
-          "percentage": 20
-        }
-      ],
-      "source": "BSE",
-      "noticeId": "20250929-83",
-      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250929-83&attachedId=f0753414-0b61-4966-99f4-54d341418ace",
-      "fetchedAt": "2026-09-09T15:22:19.091Z"
-    }
+    "scraped2026": 229,
+    "totalNew": 235
   }
 }

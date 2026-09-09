@@ -1435,16 +1435,21 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                                 // Check if this is a listing notice
                                 if (!upper.includes('LISTING') && !upper.includes('SHARES ADMITTED')) return null;
 
-                                // Check if company name matches
+                                // Check if company name matches strictly
+                                if (words.length === 0) return null;
+                                const primaryWord = words[0];
+                                if (!upper.includes(primaryWord)) return null;
+
                                 const matchCount = words.filter(w => upper.includes(w)).length;
-                                if (matchCount < Math.min(words.length, 2)) return null;
+                                const requiredMatches = words.length <= 2 ? words.length : (words.length - 1);
+                                if (matchCount < requiredMatches) return null;
 
                                 // MUST have an annexure pdf link to be the actual listing circular we need
                                 if (!upper.includes('ANNEXURE') || !upper.includes('.PDF')) {
                                     return null;
                                 }
 
-                                console.log(`[BSE/Client] Found match: ${noticeId} (${matchCount}/${words.length} words)`);
+                                console.log(`[BSE/Client] Found strict match: ${noticeId} (${matchCount}/${words.length} words, primary: ${primaryWord})`);
                                 return noticeId;
                             } catch {
                                 return null;

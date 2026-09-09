@@ -395,9 +395,11 @@ async function searchBSESMENotices(searchWords) {
         // Find matching company
         for (const link of links) {
             const normalizedText = link.text.toUpperCase().replace(/[^A-Z0-9]/g, ' ');
-            const matchCount = searchWords.filter(w => normalizedText.includes(w)).length;
-
-            if (matchCount >= Math.min(searchWords.length, 2)) {
+            if (searchWords.length === 0) continue;
+            const primaryWord = searchWords[0];
+            if (!normalizedText.includes(primaryWord)) continue;
+            const reqMatches = searchWords.length <= 2 ? searchWords.length : (searchWords.length - 1);
+            if (matchCount >= reqMatches) {
                 if (link.format === 'direct-pdf') {
                     // New format: extract notice ID from PDF URL path
                     // Pattern: /downloads/UploadDocs/Notices/20260324-28/20260324-28.pdf
