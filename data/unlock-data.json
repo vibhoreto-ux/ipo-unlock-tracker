@@ -5725,7 +5725,8 @@
         }
       ],
       "anchorShares": 1639000,
-      "totalShares": 5760000
+      "totalShares": 5760000,
+      "preIpoInvestors": []
     },
     {
       "companyName": "Advance Agrolife Ltd.",
@@ -7552,43 +7553,48 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_10062025130850_DRHP_PrimeCableIndustriesLimited.pdf",
+      "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_PRIMECAB.zip",
       "nseCircularUrl": "https://nsearchives.nseindia.com/content/circulars/CML70463.zip",
       "circularUrl": "https://nsearchives.nseindia.com/content/circulars/CML70463.zip",
       "lockInEvents": [
         {
           "date": null,
           "shares": 3451200,
-          "percentage": 18.8,
+          "percentage": 18.82,
           "label": "Not under lock-in"
         },
         {
           "date": "2025-10-25",
           "shares": 683200,
-          "percentage": 3.7
+          "percentage": 3.73,
+          "label": "Anchor Lock-in (30 Days)"
         },
         {
           "date": "2025-12-25",
           "shares": 689600,
-          "percentage": 3.8
+          "percentage": 3.76,
+          "label": "Anchor Lock-in (90 Days)"
         },
         {
           "date": "2026-09-24",
           "shares": 5700306,
-          "percentage": 31.1
+          "percentage": 31.09,
+          "label": "Pre-IPO Lock-in (1 Year)"
         },
         {
           "date": "2027-09-24",
           "shares": 4133109,
-          "percentage": 22.6
+          "percentage": 22.54,
+          "label": "2 Years Lock-in"
         },
         {
           "date": "2028-09-24",
           "shares": 3666645,
-          "percentage": 20
+          "percentage": 20,
+          "label": "Promoter Lock-in (3 Years)"
         }
       ],
-      "totalShares": 18324060,
+      "totalShares": 18333225,
       "preIpoInvestors": [
         {
           "name": "Vineet Gupta",
@@ -7645,6 +7651,25 @@
           "type": "Secondary Transfer"
         }
       ],
+      "anchorInvestors": [
+        {
+          "name": "NEGEN UNDISCOVERED VALUE FUND",
+          "group": "NEGEN",
+          "shares": 283200,
+          "sharesFormatted": "2,83,200",
+          "amountCr": 2.35,
+          "percent": 20.63
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 241600,
+          "sharesFormatted": "2,41,600",
+          "amountCr": 2.01,
+          "percent": 17.6
+        }
+      ],
+      "anchorShares": 1372800,
       "preIpoWaca": 63.15,
       "waca": 63.15,
       "preIpoChecked": true
@@ -8167,6 +8192,7 @@
       "circularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
       "bseCircularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
       "annexureUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
+      "capitalStructureUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2025/09/jdcablesrhp.pdf",
       "lockInEvents": [
         {
           "date": null,
@@ -25048,9 +25074,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2026-09-11T00:00:00.000Z",
+        "expiryDate": "2026-09-09",
         "originalDate": "2026-09-11T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -37867,9 +37893,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-02-17T00:00:00.000Z",
+        "expiryDate": "2027-02-13",
         "originalDate": "2027-02-17T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/molbio_diagnostics_ltd_mainboard_tentative_price_and_lot_size_capital_structure_1785817808.pdf",
@@ -38229,9 +38255,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-02-17T00:00:00.000Z",
+        "expiryDate": "2027-02-14",
         "originalDate": "2027-02-17T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dhoot_transmission_ltd_mainboard_capital_structure_1785993004.pdf",
@@ -46712,13 +46738,614 @@
     },
     "JD Cables Ltd.": {
       "found": true,
-      "totalShares": 0,
-      "unlockEvents": [],
-      "isScannedPDF": true,
       "source": "BSE",
       "noticeId": "20250924-60",
       "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
-      "fetchedAt": "2026-09-09T17:52:27.220Z"
+      "annexureUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250924-60&attachedId=bfdfc224-2762-4643-87cf-1b3f5543c0c6",
+      "totalShares": 22551112,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 4533600,
+          "percentage": 20.1,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-10-25",
+          "shares": 890400,
+          "percentage": 3.95,
+          "label": "Anchor Lock-in (30 Days)"
+        },
+        {
+          "date": "2025-12-24",
+          "shares": 890400,
+          "percentage": 3.95,
+          "label": "Anchor Lock-in (90 Days)"
+        },
+        {
+          "date": "2026-09-25",
+          "shares": 6104144,
+          "percentage": 27.07,
+          "label": "Pre-IPO Lock-in (1 Year)"
+        },
+        {
+          "date": "2027-09-25",
+          "shares": 5621545,
+          "percentage": 24.93,
+          "label": "2 Years Lock-in"
+        },
+        {
+          "date": "2028-09-25",
+          "shares": 4510223,
+          "percentage": 20,
+          "label": "Promoter Lock-in (3 Years)"
+        }
+      ],
+      "preIpoInvestors": [
+        {
+          "name": "Venturex Fund I",
+          "shares": 85729,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Hemant Kumar Gupta",
+          "shares": 29790,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ativir Financial Services Private Limited",
+          "shares": 26811,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ankur Toshniwal",
+          "shares": 25487,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Aman Sanjeev Jain HUF",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Vishal Narang",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Finavenue Growth Fund",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Paradise Moon Investment Fund-I",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Nagori Ramiz Inusbhai",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Navneet Makharia",
+          "shares": 21184,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Manvi Jain",
+          "shares": 16881,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Laxmi Randar",
+          "shares": 16881,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ritesh Kailas Veera",
+          "shares": 12578,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Darshan H Ringshia",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ashok Kumar Pareek",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Ajay Bhaskar",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Sapna Bhansali",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Rohit Agarwal",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Adarsh Tibrewal",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Armaan Sarawgi",
+          "shares": 8275,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Parmar Sanjay Amrutlal",
+          "shares": 6951,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Sarita Devi Pilania",
+          "shares": 5958,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Roshan Singhee",
+          "shares": 5958,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Rishi Kumar Gupta",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Meenakshi",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Rohit Sharma",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Amit Agarwal",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Nupur Kandoi",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Vikas Kumar Agrawal HUF",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Vikash Sharma",
+          "shares": 3972,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Anand Harlalka",
+          "shares": 1655,
+          "acquisitionPrice": 116.45,
+          "date": "2025-04-18",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Private Placement (Post-Bonus)"
+        },
+        {
+          "name": "Prakash Sahay",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Rajesh Jhunjhunwala",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Hemant Kumar Choradia",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Satyajit Kumar Jha",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Manoj Tiwari",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        },
+        {
+          "name": "Arumay Roy",
+          "shares": 331,
+          "acquisitionPrice": 10,
+          "date": "2025-06-27",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-25",
+          "type": "Pre-IPO Subscription"
+        }
+      ],
+      "preIpoWaca": 116.45,
+      "isScannedPDF": false,
+      "fetchedAt": "2026-09-10T14:58:00.484Z"
+    },
+    "Molbio Diagnostics Ltd.": {
+      "found": true,
+      "totalShares": 115239996,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 21435279,
+          "percentage": 18.6,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-11",
+          "shares": 1743856,
+          "percentage": 1.5
+        },
+        {
+          "date": "2026-11-10",
+          "shares": 1743861,
+          "percentage": 1.5
+        },
+        {
+          "date": "2027-02-04",
+          "shares": 495661,
+          "percentage": 0.4
+        },
+        {
+          "date": "2027-02-13",
+          "shares": 42238538,
+          "percentage": 36.7
+        },
+        {
+          "date": "2027-08-13",
+          "shares": 24534701,
+          "percentage": 21.3
+        },
+        {
+          "date": "2029-08-13",
+          "shares": 23048100,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75760",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75760.zip",
+      "fetchedAt": "2026-09-10T14:52:30.577Z"
+    },
+    "Dhoot Transmission Ltd.": {
+      "found": true,
+      "totalShares": 204548057,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 24686890,
+          "percentage": 12.1,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-11",
+          "shares": 5271308,
+          "percentage": 2.6
+        },
+        {
+          "date": "2026-11-10",
+          "shares": 5271349,
+          "percentage": 2.6
+        },
+        {
+          "date": "2027-02-14",
+          "shares": 128358898,
+          "percentage": 62.8
+        },
+        {
+          "date": "2028-02-14",
+          "shares": 40959612,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75769",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75769.zip",
+      "fetchedAt": "2026-09-10T14:53:04.050Z"
+    },
+    "SEDEMAC Mechatronics Ltd.": {
+      "found": true,
+      "totalShares": 44161500,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 16237644,
+          "percentage": 36.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-03-12",
+          "shares": 25500,
+          "percentage": 0.1
+        },
+        {
+          "date": "2026-04-07",
+          "shares": 1205195,
+          "percentage": 2.7
+        },
+        {
+          "date": "2026-06-06",
+          "shares": 1205206,
+          "percentage": 2.7
+        },
+        {
+          "date": "2026-09-09",
+          "shares": 16638355,
+          "percentage": 37.7
+        },
+        {
+          "date": "2027-09-09",
+          "shares": 8849600,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/73229",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML73229.zip",
+      "fetchedAt": "2026-09-10T14:53:48.068Z"
+    },
+    "Prime Cable Industries Ltd.": {
+      "found": true,
+      "source": "NSE",
+      "noticeId": "NSE/CML/70463",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70463.zip",
+      "totalShares": 18333225,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 3451200,
+          "percentage": 18.82,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-10-25",
+          "shares": 683200,
+          "percentage": 3.73,
+          "label": "Anchor Lock-in (30 Days)"
+        },
+        {
+          "date": "2025-12-25",
+          "shares": 689600,
+          "percentage": 3.76,
+          "label": "Anchor Lock-in (90 Days)"
+        },
+        {
+          "date": "2026-09-24",
+          "shares": 5700306,
+          "percentage": 31.09,
+          "label": "Pre-IPO Lock-in (1 Year)"
+        },
+        {
+          "date": "2027-09-24",
+          "shares": 4133109,
+          "percentage": 22.54,
+          "label": "2 Years Lock-in"
+        },
+        {
+          "date": "2028-09-24",
+          "shares": 3666645,
+          "percentage": 20,
+          "label": "Promoter Lock-in (3 Years)"
+        }
+      ],
+      "preIpoInvestors": [
+        {
+          "name": "Vineet Gupta",
+          "shares": 182540,
+          "acquisitionPrice": 63,
+          "date": "2025-04-05",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Preferential Allotment"
+        },
+        {
+          "name": "Ruchi Gupta",
+          "shares": 182540,
+          "acquisitionPrice": 63,
+          "date": "2025-04-05",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Preferential Allotment"
+        },
+        {
+          "name": "Rahul Gupta HUF",
+          "shares": 182540,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        },
+        {
+          "name": "Seema Gupta",
+          "shares": 182540,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        },
+        {
+          "name": "Manish Taparia",
+          "shares": 91269,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        },
+        {
+          "name": "Vandana Taparia",
+          "shares": 91269,
+          "acquisitionPrice": 63.2,
+          "date": "2025-04-23",
+          "lockInPeriod": "1 Year",
+          "lockInExpiry": "2026-09-24",
+          "type": "Secondary Transfer"
+        }
+      ],
+      "preIpoWaca": 63.15,
+      "isScannedPDF": false,
+      "fetchedAt": "2026-09-10T14:58:00.488Z"
     }
   }
 }
