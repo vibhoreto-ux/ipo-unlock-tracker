@@ -618,8 +618,10 @@ function pollForNLP(companyName, attempts = 0) {
 /**
  * Render a rich, styled table of pre-IPO investors with buy prices, dates, shares, and discount % vs IPO price.
  */
-function renderPreIpoTable(investors, ipoPrice, isModal) {
+function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
     if (!investors || investors.length === 0) return '<span class="empty">0 Pre-IPOs</span>';
+
+    const junkRegex = /^(this offer|any applicant,??|any investor|foreign direct investment|mutual funds|alternate investment funds|schemes of arrangement|gift of|incorporat subscriber|reduction of|private limited|trading private|holdings private|advisory private|up private limited|amount to amount estimated|options vested|options exercised|name of|securities,?\s*allotted|capital existing in|capital build-up|padam were|khor ten chun aalam|funds?|category ii|chairman and|who is|pcc -|holds)$/i;
 
     // Strict filter: Exclude Promoters and text artifacts (Pre-IPO tab is only for Non-Promoters)
     const nonPromoters = investors.filter(inv => {
@@ -628,6 +630,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         const date = typeof inv === 'object' ? (inv.date || '') : '';
         const text = `${name} ${cat} ${date}`.toLowerCase();
         if (/\bpromoter\b/i.test(text) || /\bpromoters\b/i.test(text) || /\bfounding equity\b/i.test(text)) return false;
+        if (junkRegex.test(name.trim())) return false;
         if (/securities,?\s*allotted/i.test(name) || /capital existing in/i.test(name) || /capital build-up/i.test(name)) return false;
         return name.trim().length >= 3;
     });
@@ -643,21 +646,46 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         let buyPrice = null;
         let discountPct = null;
         let type = '';
+        let priceTag = '';
 
         if (typeof inv === 'object' && inv !== null) {
             name = inv.name || '—';
             date = inv.date || inv.allotmentDate || inv.transactionDate || (inv.lockInExpiry ? 'Pre-IPO' : '—');
             shares = inv.shares ? (typeof inv.shares === 'number' ? inv.shares.toLocaleString('en-IN') : inv.shares) : '—';
-            buyPrice = inv.buyPrice !== undefined ? inv.buyPrice : (inv.price !== undefined ? parseFloat(inv.price) : (inv.acquisitionPrice !== undefined ? parseFloat(inv.acquisitionPrice) : null));
+            
+            const rawP = inv.buyPrice !== undefined && inv.buyPrice !== null ? inv.buyPrice : 
+                         (inv.acquisitionPrice !== undefined && inv.acquisitionPrice !== null ? inv.acquisitionPrice : 
+                         (inv.costPerShare !== undefined && inv.costPerShare !== null ? inv.costPerShare : 
+                         (inv.price !== undefined && inv.price !== null ? inv.price : null)));
+            
+            if (rawP !== null && rawP !== '') {
+                if (typeof rawP === 'number') {
+                    buyPrice = rawP;
+                } else if (typeof rawP === 'string') {
+                    const parsed = parseFloat(rawP.replace(/[^0-9.]/g, ''));
+                    if (!isNaN(parsed)) buyPrice = parsed;
+                }
+            }
             discountPct = inv.discountPct !== undefined ? inv.discountPct : null;
             type = inv.type || inv.category || '';
         } else if (typeof inv === 'string') {
-            const priceMatch = inv.match(/\(₹?([\d\.]+)\)/);
-            if (priceMatch) {
+            const priceMatch = inv.match(/(?:@|\()?\s*₹?\s*([\d\.]+)(?:\s*\/\s*sh|\s*per share|\))?/i);
+            if (priceMatch && !isNaN(parseFloat(priceMatch[1])) && parseFloat(priceMatch[1]) > 0) {
                 buyPrice = parseFloat(priceMatch[1]);
-                name = inv.replace(/\(₹?[\d\.]+\)/, '').trim();
+                name = inv.replace(/\(₹?[\d\.]+\)/, '').replace(/@\s*₹?[\d\.]+/, '').trim();
             } else {
                 name = inv.trim();
+            }
+        }
+
+        // Fallback for buyPrice if blank: check WACA or allotment face value
+        if (buyPrice === null || isNaN(buyPrice)) {
+            if (inv.waca || companyWaca) {
+                buyPrice = parseFloat(String(inv.waca || companyWaca).replace(/[^0-9.]/g, ''));
+                priceTag = ' (WACA)';
+            } else if (/subscriber|incorporat|par\b|face value/i.test(`${name} ${type}`)) {
+                buyPrice = 10.0;
+                priceTag = ' (Par)';
             }
         }
 
@@ -665,7 +693,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
             discountPct = Math.round(((ipoPrice - buyPrice) / ipoPrice) * 1000) / 10;
         }
 
-        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}` : '—';
+        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}${priceTag}` : (companyWaca ? `₹${companyWaca} (WACA)` : '₹10.00 (Par)');
         const ipoPriceStr = ipoPrice ? `₹${ipoPrice}` : '—';
         
         let discountHtml = '—';
@@ -911,7 +939,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
         });
 
         if (nonPromoters.length > 0) {
-            const tableHtml = renderPreIpoTable(nonPromoters, issuePrice, false);
+            const tableHtml = renderPreIpoTable(nonPromoters, issuePrice, false, waca);
             const wacaHtml = waca ? `<div style="margin-top: 5px; font-size: 11px; font-weight: 600; color: var(--text);">Bonus & Split Adjusted WACA: <span style="color: var(--success); font-weight:700;">₹${waca}</span></div>` : '';
             preIpoBlock.innerHTML = `
                 <details open style="border:none; padding:0;">
@@ -2070,7 +2098,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
 
             if (isFixedPrice) {
                 const preIpoTable = hasPreIpo 
-                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false)}</div>`
+                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.waca)}</div>`
                     : `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">🛡️ 100% Promoter & Early Associate Held (0 external Pre-IPO round — zero pre-IPO selling overhang).</span>`;
 
                 preIpoHtml = `
@@ -2095,7 +2123,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal) {
                 `;
             } else {
                 if (hasPreIpo) {
-                    const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false);
+                    const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.waca);
                     preIpoHtml = `<details><summary style="display:flex; justify-content:space-between; align-items:center;"><span>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
                 } else {
                     preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
