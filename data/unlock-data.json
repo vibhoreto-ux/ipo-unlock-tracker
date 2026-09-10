@@ -1,26 +1,95 @@
 {
   "companies": [
     {
-      "companyName": "Hero Motors Ltd(TENTATIVE DATES)",
-      "issueType": "Mainboard",
-      "exchange": "BSE, NSE",
-      "allotmentDate": null,
+      "companyName": "Vama Wovenfab Ltd.",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-17T18:30:00.000Z",
+        "adjusted": "2026-09-17T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "chittorgarhUrl": null,
-      "issuePrice": null,
-      "priceBand": null,
-      "openDate": null,
-      "closeDate": null,
-      "listingDate": null,
+      "issuePrice": 341,
+      "priceBand": "₹324–341",
+      "lotSize": 400,
+      "openDate": "2026-09-14T18:30:00.000Z",
+      "closeDate": "2026-09-16T18:30:00.000Z",
+      "listingDate": "2026-09-21T18:30:00.000Z",
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
-      "rhpUrl": null,
-      "capitalStructureUrl": null,
+      "totalShares": 1452800,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/vama_wovenfab_ltd_bse_sme_rhp_1789026151.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vama_wovenfab_ltd_bse_sme_capital_structure_1789026506.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "any Applicant",
+        "this Offer",
+        "Mrs. Sheetal Saurabh Gupta",
+        "Mr. Suresh Mohanlal Gupta",
+        "Mrs. Nisha Vaibhav Gupta",
+        "Mr. Saurabh Suresh Gupta",
+        "Vasundhara Chem Plast Industries",
+        "Mrs. Usha Suresh Gupta",
+        "Mr. Vaibhav Suresh Gupta"
+      ],
+      "preIpoChecked": true
+    },
+    {
+      "companyName": "Hero Motors Ltd(TENTATIVE DATES)",
+      "issueType": "Mainboard",
+      "exchange": "BSE, NSE",
+      "allotmentDate": {
+        "original": "2026-09-20T18:30:00.000Z",
+        "adjusted": "2026-09-20T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": null,
+      "issuePrice": 84,
+      "priceBand": "₹79–84",
+      "openDate": "2026-09-15T18:30:00.000Z",
+      "closeDate": "2026-09-17T18:30:00.000Z",
+      "listingDate": "2026-09-22T18:30:00.000Z",
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 119047618,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/hero_motors_ltd_mainboard_rhp_1788979005.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/hero_motors_ltd_mainboard_capital_structure_1789020178.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "Bahadur Chand Investments Private",
+        "Reduction of",
+        "Vimal Kumar Bansal",
+        "Madhu Dalmia",
+        "Vansh Garg",
+        "Abhishek Munjal",
+        "Bh agyoday Investments Private Limited",
+        "Abhishek Munjal,",
+        "Keshav Misra",
+        "Bhagyoday Investments Private Limited",
+        "Pankaj Munjal",
+        "Amit Gupta",
+        "Shyam Sunder Bansal",
+        "Amit Gupta options",
+        "Esha Gupta",
+        "Bhagyoday Investments",
+        "Charu Munjal",
+        "LLC and",
+        "Limited and",
+        "Aditya Munjal",
+        "Vinay Bansal",
+        "Private Limited,",
+        "Amit Gupta,"
+      ],
+      "lotSize": 178,
+      "preIpoChecked": true,
+      "preIpoWaca": 89
     },
     {
       "companyName": "Karamtara Engineering Ltd",
@@ -178,8 +247,8 @@
       "anchorShares": 10334644,
       "totalShares": 34448818,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_rhp_1788537648.pdf",
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_capital_structure_1788537651.pdf",
-      "anchorUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_capital_structure_1788501563.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_anchor_1788878435.pdf",
       "preIpoInvestors": [],
       "name": "Karamtara Engineering Ltd",
       "lotSize": 59,
@@ -196,7 +265,7 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/panchatv-bharat-ipo/2373/",
       "issuePrice": 140,
-      "priceBand": "₹140",
+      "priceBand": "₹140–140",
       "openDate": "2026-09-09T18:30:00.000Z",
       "closeDate": "2026-09-14T18:30:00.000Z",
       "listingDate": "2026-09-17T18:30:00.000Z",
@@ -212,11 +281,21 @@
       "anchorShares": 0,
       "totalShares": 1756000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/panchatv_bharat_ltd_bse_sme_rhp_1788759669.pdf",
-      "capitalStructureUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/panchatv_bharat_ltd_bse_sme_capital_structure_1788981388.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "BRJ Resources Private Limited",
+        "G-Trading India Private Limited (₹10)",
+        "Sooraj Gupta",
+        "Stockify Fintech Private Limited (₹10)",
+        "Sooraj P",
+        "Sanjay Gupta",
+        "Innovest Ventures (₹10)",
+        "Sanjay P"
+      ],
       "name": "Panchatv Bharat Ltd.",
-      "lotSize": 1000
+      "lotSize": 1000,
+      "preIpoChecked": true
     },
     {
       "companyName": "Om Galaxy Ltd",
@@ -351,7 +430,7 @@
       "totalShares": 11667200,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_rhp_1788677424.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_capital_structure_1788677426.pdf",
-      "anchorUrl": null,
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_anchor_1788958865.pdf",
       "preIpoInvestors": [],
       "name": "Om Galaxy Ltd",
       "lotSize": 1600,
@@ -695,11 +774,11 @@
           "percent": 4.4
         }
       ],
-      "anchorShares": 0,
+      "anchorShares": 1227000,
       "totalShares": 4308000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_rhp_1788675381.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_capital_structure_1788675382.pdf",
-      "anchorUrl": null,
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/maharaja_speedex_india_ltd_bse_sme_anchor_1788957544.pdf",
       "preIpoInvestors": [
         {
           "name": "Founders Collective Fund",
@@ -846,7 +925,7 @@
         }
       ],
       "name": "Maharaja & Speedex India Ltd",
-      "lotSize": 1600,
+      "lotSize": 600,
       "preIpoWaca": 96.43,
       "preIpoHoldersCount": 13
     },
@@ -873,15 +952,52 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "HEM GROWTH OPPORTUNITIES FUND",
+          "shares": 164800,
+          "sharesFormatted": "1,64,800",
+          "amountCr": 1.22,
+          "percent": 25.18
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 163200,
+          "sharesFormatted": "1,63,200",
+          "amountCr": 1.21,
+          "percent": 24.94
+        },
+        {
+          "name": "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND",
+          "group": "NAV CAPITAL",
+          "shares": 163200,
+          "sharesFormatted": "1,63,200",
+          "amountCr": 1.21,
+          "percent": 24.94
+        },
+        {
+          "name": "SB OPPORTUNITIES FUND II",
+          "group": "SB OPPORTUNITIES FUND",
+          "shares": 163200,
+          "sharesFormatted": "1,63,200",
+          "amountCr": 1.21,
+          "percent": 24.94
+        }
+      ],
       "anchorShares": 654400,
       "totalShares": 2312000,
       "rhpUrl": "https://hemadmin.hemsecurities.com/images/Files/offer/3167.pdf",
-      "capitalStructureUrl": null,
-      "anchorUrl": null,
-      "preIpoInvestors": [],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/century_business_media_ltd_bse_sme_capital_structure_1789017176.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/century_business_media_ltd_bse_sme_anchor_1789046838.pdf",
+      "preIpoInvestors": [
+        "Exchanges within",
+        "Shashi Kumar Chaudhary",
+        "Shreya Chaudhary"
+      ],
       "name": "Century Business Media Ltd",
-      "lotSize": 1600
+      "lotSize": 1600,
+      "preIpoChecked": true
     },
     {
       "companyName": "Manika Plastech Ltd.",
@@ -906,12 +1022,53 @@
         "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "BHARAT VALUE FUND",
+          "group": "BHARAT VALUE",
+          "shares": 4104199,
+          "sharesFormatted": "41,04,199",
+          "amountCr": 1.76,
+          "percent": 46.87
+        },
+        {
+          "name": "TRUST MF MULTI CAP FUND",
+          "group": "TRUST MUTUAL FUND",
+          "shares": 1395480,
+          "sharesFormatted": "13,95,480",
+          "amountCr": 0.6,
+          "percent": 15.94
+        },
+        {
+          "name": "FINAVENUE CAPITAL TRUST-FINAVENUE GROWTH FUND",
+          "group": "FINAVENUE",
+          "shares": 1162791,
+          "sharesFormatted": "11,62,791",
+          "amountCr": 0.5,
+          "percent": 13.28
+        },
+        {
+          "name": "NOVA GLOBAL OPPORTUNITIES FUND PCC-TOUCHSTONE",
+          "group": "NOVA",
+          "shares": 1162791,
+          "sharesFormatted": "11,62,791",
+          "amountCr": 0.5,
+          "percent": 13.28
+        },
+        {
+          "name": "TRUST MF LARGE & MID CAP FUND",
+          "group": "TRUST MUTUAL FUND",
+          "shares": 930552,
+          "sharesFormatted": "9,30,552",
+          "amountCr": 0.4,
+          "percent": 10.63
+        }
+      ],
       "anchorShares": 0,
       "totalShares": 29186045,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_rhp_1788683576.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_capital_structure_1788684348.pdf",
-      "anchorUrl": null,
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_anchor_1789048085.pdf",
       "preIpoInvestors": [],
       "name": "Manika Plastech Ltd.",
       "lotSize": 348,
@@ -996,15 +1153,397 @@
       "anchorShares": 15333332,
       "totalShares": 51111111,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_rhp_1788515508.pdf",
-      "capitalStructureUrl": null,
-      "anchorUrl": null,
-      "preIpoInvestors": [],
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_capital_structure_1788887345.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/steamhouse_india_ltd_mainboard_anchor_1788868852.pdf",
+      "preIpoInvestors": [
+        {
+          "name": "Singularity Large Value Fund III",
+          "shares": 4794520,
+          "acquisitionPrice": 73,
+          "date": "2026-06-24",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Private Placement"
+        },
+        {
+          "name": "Niveshaay Sambhav Fund",
+          "shares": 1369863,
+          "acquisitionPrice": 73,
+          "date": "2026-06-24",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Private Placement"
+        },
+        {
+          "name": "Singularity Equity Fund I",
+          "shares": 684932,
+          "acquisitionPrice": 73,
+          "date": "2026-06-24",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Private Placement"
+        },
+        {
+          "name": "Suchi Goenka",
+          "shares": 450000,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Allotment & Bonus"
+        },
+        {
+          "name": "Rahul Vijaykumar Agarwal",
+          "shares": 413734,
+          "acquisitionPrice": 38.67,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement & Bonus"
+        },
+        {
+          "name": "Gitadevi Vijaykumar Agrawal",
+          "shares": 382500,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Manish Vijaykumar Agrawal",
+          "shares": 195000,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Ruchi Agrawal",
+          "shares": 195000,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Sweta Agarwal",
+          "shares": 189000,
+          "acquisitionPrice": 1.59,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement & Bonus"
+        },
+        {
+          "name": "Suchika Agrawal",
+          "shares": 187500,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Vikas Vijaykumar Agrawal",
+          "shares": 187500,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Abhishek Yudhishter Batra",
+          "shares": 75000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Anilkumar Hasmukhbhai Patel",
+          "shares": 55000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Rajivkumar Narayandas Batra",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Tanmaya Murarilal Agrawal",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sanjay Kedarmal Sudrania",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Salony Rathi Jhawar",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Swastik Polyprints Private Limited",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Atulkumar Hastimal Mehta",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Komal Rajivkumar Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vinay Yudhisthir Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Samarth Rajivbhai Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sahil Yudhisthir Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Mamta Rahul Sharma",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Saraogi Viniyog Private Limited",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sudarshan Taparia",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vrinda Binay Agarwal",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vedika Vinay Khemka",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Lalit Radhakisan Agarwal",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Taj Vincom Private Limited",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Shah Krunal Shirish",
+          "shares": 17500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Santosh Devi Agarwal",
+          "shares": 15000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Aaditya Bajaj",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Mehta Wealth Limited",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Punitkumar Vijaykumar Agarwal",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vishal Sanghai",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Gaurav Singhvi",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sonam Jain",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Shrikant Goenka",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Suman Sumit Saraogi",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Ashish V Singhal",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Shaileshkumar Ishwarlal Patel",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        }
+      ],
       "priceBand": "₹77–81",
       "listingDate": "2026-09-16T18:30:00.000Z",
       "openDate": "2026-09-09T18:30:00.000Z",
       "closeDate": "2026-09-11T18:30:00.000Z",
       "lotSize": 185,
-      "name": "Steamhouse India Ltd."
+      "name": "Steamhouse India Ltd.",
+      "preIpoChecked": true,
+      "preIpoWaca": 73,
+      "waca": 73
     },
     {
       "companyName": "Vinod Texworld Ltd.",
@@ -1027,7 +1566,7 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 4556800,
+      "totalShares": 4556400,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788685953.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_capital_structure_1788686295.pdf",
       "anchorUrl": null,
@@ -1055,7 +1594,7 @@
           "category": "Corporate Pre-IPO"
         }
       ],
-      "priceBand": "₹94",
+      "priceBand": "₹94–94",
       "lotSize": 1200,
       "listingDate": "2026-09-16T18:30:00.000Z",
       "openDate": "2026-09-09T18:30:00.000Z",
@@ -1394,12 +1933,300 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "MOTILAL OSWAL SMALL CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 1179904,
+          "sharesFormatted": "11,79,904",
+          "amountCr": 40,
+          "percent": 11.04
+        },
+        {
+          "name": "BARODA BNP PARIBAS BANKING & FINANCIAL SERVICES FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 203412,
+          "sharesFormatted": "2,03,412",
+          "amountCr": 6.9,
+          "percent": 1.9
+        },
+        {
+          "name": "BARODA BNP PARIBAS MULTI CAP FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 224444,
+          "sharesFormatted": "2,24,444",
+          "amountCr": 7.61,
+          "percent": 2.1
+        },
+        {
+          "name": "BARODA BNP PARIBAS SMALL CAP FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 224444,
+          "sharesFormatted": "2,24,444",
+          "amountCr": 7.61,
+          "percent": 2.1
+        },
+        {
+          "name": "BARODA BNP PARIBAS INNOVATION FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 177188,
+          "sharesFormatted": "1,77,188",
+          "amountCr": 6.01,
+          "percent": 1.66
+        },
+        {
+          "name": "BARODA BNP PARIBAS VALUE FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 173228,
+          "sharesFormatted": "1,73,228",
+          "amountCr": 5.87,
+          "percent": 1.62
+        },
+        {
+          "name": "BARODA BNP PARIBAS FLEXI CAP FUND",
+          "group": "BARODA BNP PARIBAS MUTUAL FUND",
+          "shares": 177188,
+          "sharesFormatted": "1,77,188",
+          "amountCr": 6.01,
+          "percent": 1.66
+        },
+        {
+          "name": "ABAKKUS EMERGING OPPORTUNITIES FUND I",
+          "group": "ABAKKUS",
+          "shares": 884884,
+          "sharesFormatted": "8,84,884",
+          "amountCr": 30,
+          "percent": 8.28
+        },
+        {
+          "name": "ABAKKUS FLEXI EDGE FUND 1",
+          "group": "ABAKKUS",
+          "shares": 295020,
+          "sharesFormatted": "2,95,020",
+          "amountCr": 10,
+          "percent": 2.76
+        },
+        {
+          "name": "ITI ELSS TAX SAVER FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 143792,
+          "sharesFormatted": "1,43,792",
+          "amountCr": 4.87,
+          "percent": 1.35
+        },
+        {
+          "name": "ITI MID CAP FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 143792,
+          "sharesFormatted": "1,43,792",
+          "amountCr": 4.87,
+          "percent": 1.35
+        },
+        {
+          "name": "ITI BANKING & FINANCIAL SERVICES FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 115060,
+          "sharesFormatted": "1,15,060",
+          "amountCr": 3.9,
+          "percent": 1.08
+        },
+        {
+          "name": "ITI BALANCED ADVANTAGE FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 115060,
+          "sharesFormatted": "1,15,060",
+          "amountCr": 3.9,
+          "percent": 1.08
+        },
+        {
+          "name": "ITI BUSINESS CYCLE FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 57508,
+          "sharesFormatted": "57,508",
+          "amountCr": 1.95,
+          "percent": 0.54
+        },
+        {
+          "name": "GROWW MULTICAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 236060,
+          "sharesFormatted": "2,36,060",
+          "amountCr": 8,
+          "percent": 2.21
+        },
+        {
+          "name": "GROWW SMALL CAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 235972,
+          "sharesFormatted": "2,35,972",
+          "amountCr": 8,
+          "percent": 2.21
+        },
+        {
+          "name": "GROWW BANKING & FINANCIAL SERVICES FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 58960,
+          "sharesFormatted": "58,960",
+          "amountCr": 2,
+          "percent": 0.55
+        },
+        {
+          "name": "GROWW MUTUAL FUND - VALUE FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 44220,
+          "sharesFormatted": "44,220",
+          "amountCr": 1.5,
+          "percent": 0.41
+        },
+        {
+          "name": "NEW MARK CAPITAL AIF LLP",
+          "group": "NEW MARK CAPITAL",
+          "shares": 575212,
+          "sharesFormatted": "5,75,212",
+          "amountCr": 19.5,
+          "percent": 5.38
+        },
+        {
+          "name": "SAGEONE-FLAGSHIP GROWTH OE FUND",
+          "group": "SAGEONE-FLAGSHI",
+          "shares": 575212,
+          "sharesFormatted": "5,75,212",
+          "amountCr": 19.5,
+          "percent": 5.38
+        },
+        {
+          "name": "SANSHI FUND-I",
+          "group": "SANSHI",
+          "shares": 575212,
+          "sharesFormatted": "5,75,212",
+          "amountCr": 19.5,
+          "percent": 5.38
+        },
+        {
+          "name": "ALCHEMY EMERGING LEADERS OF TOMORROW",
+          "group": "ALCHEMY",
+          "shares": 575212,
+          "sharesFormatted": "5,75,212",
+          "amountCr": 19.5,
+          "percent": 5.38
+        },
+        {
+          "name": "CSIM INDIA OPPORTUNITIES FUND I",
+          "group": "CSIM INDIA",
+          "shares": 591096,
+          "sharesFormatted": "5,91,096",
+          "amountCr": 20.04,
+          "percent": 5.53
+        },
+        {
+          "name": "GIRIK MULTICAP GROWTH EQUITY FUND-III",
+          "group": "GIRIK CAPITAL",
+          "shares": 575212,
+          "sharesFormatted": "5,75,212",
+          "amountCr": 19.5,
+          "percent": 5.38
+        },
+        {
+          "name": "NEO PRIME FUND",
+          "group": "NEO",
+          "shares": 295548,
+          "sharesFormatted": "2,95,548",
+          "amountCr": 10.02,
+          "percent": 2.77
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 295548,
+          "sharesFormatted": "2,95,548",
+          "amountCr": 10.02,
+          "percent": 2.77
+        },
+        {
+          "name": "ECL FINANCE LTD.",
+          "group": "EDELWEISS",
+          "shares": 147671,
+          "sharesFormatted": "1,47,671",
+          "amountCr": 5.01,
+          "percent": 1.38
+        },
+        {
+          "name": "ALPHA ALTERNATIVES FINANCIAL SERVICES PVT.LTD.",
+          "group": "ALPHA ALTERNATIVES",
+          "shares": 213421,
+          "sharesFormatted": "2,13,421",
+          "amountCr": 7.23,
+          "percent": 2
+        },
+        {
+          "name": "PRANITYA INDIA OPPORTUNITIES FUND",
+          "group": "EQUINOVA INVESTMENT TRUST",
+          "shares": 147671,
+          "sharesFormatted": "1,47,671",
+          "amountCr": 5.01,
+          "percent": 1.38
+        },
+        {
+          "name": "SVAN VELOCITY FUND",
+          "group": "SVAN INVESTMENT",
+          "shares": 147671,
+          "sharesFormatted": "1,47,671",
+          "amountCr": 5.01,
+          "percent": 1.38
+        },
+        {
+          "name": "ABUNDANTIA CAPITAL VCC-ABUNDANTIA CAPITAL III",
+          "group": "ABUNDANTIA",
+          "shares": 279664,
+          "sharesFormatted": "2,79,664",
+          "amountCr": 9.48,
+          "percent": 2.62
+        },
+        {
+          "name": "EMERGE CAPITAL OPPORTUNITIES SCHEME",
+          "shares": 147671,
+          "sharesFormatted": "1,47,671",
+          "amountCr": 5.01,
+          "percent": 1.38
+        },
+        {
+          "name": "MINT FOCUSED GROWTH FUND PCC-CELL 1",
+          "group": "MINT FOCUSED",
+          "shares": 213421,
+          "sharesFormatted": "2,13,421",
+          "amountCr": 7.23,
+          "percent": 2
+        },
+        {
+          "name": "NOMURA SINGAPORE LTD.",
+          "group": "NOMURA",
+          "shares": 213421,
+          "sharesFormatted": "2,13,421",
+          "amountCr": 7.23,
+          "percent": 2
+        },
+        {
+          "name": "MORGAN STANLEY ASIA (SINGAPORE) PTE.",
+          "group": "MORGAN STANLEY",
+          "shares": 213421,
+          "sharesFormatted": "2,13,421",
+          "amountCr": 7.23,
+          "percent": 2
+        },
+        {
+          "name": "CITIGROUP GLOBAL MARKETS MAURITIUS PVT.LTD.",
+          "group": "CITIGROUP",
+          "shares": 213421,
+          "sharesFormatted": "2,13,421",
+          "amountCr": 7.23,
+          "percent": 2
+        }
+      ],
+      "anchorShares": 10685841,
       "totalShares": 23746313,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_rhp_1788502818.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_capital_structure_1788503149.pdf",
-      "anchorUrl": null,
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/manipal_payment_identity_solutions_ltd_mainboard_anchor_1788883357.pdf",
       "preIpoInvestors": [
         {
           "name": "Touchstone Trust Scheme IV",
@@ -1532,12 +2359,101 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "ASTORNE CAPITAL VCC-ARVEN",
+          "group": "ASTORNE CAPITAL",
+          "shares": 2054790,
+          "sharesFormatted": "20,54,790",
+          "amountCr": 30,
+          "percent": 23.41
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 1027344,
+          "sharesFormatted": "10,27,344",
+          "amountCr": 15,
+          "percent": 11.71
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 685032,
+          "sharesFormatted": "6,85,032",
+          "amountCr": 10,
+          "percent": 7.8
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-ELITE CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 685032,
+          "sharesFormatted": "6,85,032",
+          "amountCr": 10,
+          "percent": 7.8
+        },
+        {
+          "name": "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND",
+          "group": "SUNRISE",
+          "shares": 685032,
+          "sharesFormatted": "6,85,032",
+          "amountCr": 10,
+          "percent": 7.8
+        },
+        {
+          "name": "ASAS GLOBAL FUND INCORPORATED VCC SUB FUND",
+          "group": "ASAS GLOBAL",
+          "shares": 343323,
+          "sharesFormatted": "3,43,323",
+          "amountCr": 5.01,
+          "percent": 3.91
+        },
+        {
+          "name": "NECTA BLOOM VCC-REGAL FUND",
+          "group": "NECTA BLOOM VCC",
+          "shares": 685032,
+          "sharesFormatted": "6,85,032",
+          "amountCr": 10,
+          "percent": 7.8
+        },
+        {
+          "name": "NECTA BLOOM VCC-NECTA BLOOM ONE",
+          "group": "NECTA BLOOM VCC",
+          "shares": 685032,
+          "sharesFormatted": "6,85,032",
+          "amountCr": 10,
+          "percent": 7.8
+        },
+        {
+          "name": "RGSL INVESTMENT LVF I",
+          "group": "RAJASTHAN GLOBAL GROUP",
+          "shares": 821916,
+          "sharesFormatted": "8,21,916",
+          "amountCr": 12,
+          "percent": 9.36
+        },
+        {
+          "name": "RAJASTHAN GLOBAL SECURITIES PVT.LTD.",
+          "group": "RAJASTHAN GLOBAL GROUP",
+          "shares": 419406,
+          "sharesFormatted": "4,19,406",
+          "amountCr": 6.12,
+          "percent": 4.78
+        },
+        {
+          "name": "LRSD SECURITIES PVT.LTD.",
+          "group": "RAJASTHAN GLOBAL GROUP",
+          "shares": 684930,
+          "sharesFormatted": "6,84,930",
+          "amountCr": 10,
+          "percent": 7.8
+        }
+      ],
+      "anchorShares": 8776869,
       "totalShares": 29256232,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
-      "anchorUrl": null,
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_anchor_1788879550.pdf",
       "preIpoInvestors": [
         "Maya Arjan",
         "Maya Arjan Rabari",
@@ -1610,12 +2526,341 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 31080977,
+      "anchorInvestors": [
+        {
+          "name": "KOTAK ELSS TAX SAVER FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 432049,
+          "sharesFormatted": "4,32,049",
+          "amountCr": 17.45,
+          "percent": 4.64
+        },
+        {
+          "name": "KOTAK SERVICES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 135013,
+          "sharesFormatted": "1,35,013",
+          "amountCr": 5.45,
+          "percent": 1.45
+        },
+        {
+          "name": "KOTAK TECHNOLOGY FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 175528,
+          "sharesFormatted": "1,75,528",
+          "amountCr": 7.09,
+          "percent": 1.89
+        },
+        {
+          "name": "ICICI PRUDENTIAL QUALITY FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 495060,
+          "sharesFormatted": "4,95,060",
+          "amountCr": 20,
+          "percent": 5.32
+        },
+        {
+          "name": "ISIF ACTIVE ASSET ALLOCATOR LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 247530,
+          "sharesFormatted": "2,47,530",
+          "amountCr": 10,
+          "percent": 2.66
+        },
+        {
+          "name": "HDFC INNOVATION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 198024,
+          "sharesFormatted": "1,98,024",
+          "amountCr": 8,
+          "percent": 2.13
+        },
+        {
+          "name": "HDFC CONSUMPTION FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 222777,
+          "sharesFormatted": "2,22,777",
+          "amountCr": 9,
+          "percent": 2.39
+        },
+        {
+          "name": "HDFC BUSINESS CYCLE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 198024,
+          "sharesFormatted": "1,98,024",
+          "amountCr": 8,
+          "percent": 2.13
+        },
+        {
+          "name": "GOLDMAN SACHS FUNDS-GOLDMAN SACHS INDIA EQUITY PORTFOLIO",
+          "group": "GOLDMAN SACHS",
+          "shares": 618825,
+          "sharesFormatted": "6,18,825",
+          "amountCr": 25,
+          "percent": 6.65
+        },
+        {
+          "name": "INDIA FUND INC.,THE",
+          "group": "INDIA FUND",
+          "shares": 618825,
+          "sharesFormatted": "6,18,825",
+          "amountCr": 25,
+          "percent": 6.65
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE BAL BHAVISHYA YOJNA",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 297036,
+          "sharesFormatted": "2,97,036",
+          "amountCr": 12,
+          "percent": 3.19
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE SPECIAL OPPORTUNITIES FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 148518,
+          "sharesFormatted": "1,48,518",
+          "amountCr": 6,
+          "percent": 1.6
+        },
+        {
+          "name": "APEX HYBRID LONG-SHORT FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 24753,
+          "sharesFormatted": "24,753",
+          "amountCr": 1,
+          "percent": 0.27
+        },
+        {
+          "name": "APEX EQUITY EX-TOP 100 LONG-SHORT FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 24753,
+          "sharesFormatted": "24,753",
+          "amountCr": 1,
+          "percent": 0.27
+        },
+        {
+          "name": "MIRAE ASSET GREAT CONSUMER FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 495060,
+          "sharesFormatted": "4,95,060",
+          "amountCr": 20,
+          "percent": 5.32
+        },
+        {
+          "name": "BANDHAN INNOVATION FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 371295,
+          "sharesFormatted": "3,71,295",
+          "amountCr": 15,
+          "percent": 3.99
+        },
+        {
+          "name": "EDELWEISS LARGE CAP FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 123765,
+          "sharesFormatted": "1,23,765",
+          "amountCr": 5,
+          "percent": 1.33
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 61901,
+          "sharesFormatted": "61,901",
+          "amountCr": 2.5,
+          "percent": 0.66
+        },
+        {
+          "name": "EDELWEISS BUSINESS CYCLE FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 185629,
+          "sharesFormatted": "1,85,629",
+          "amountCr": 7.5,
+          "percent": 1.99
+        },
+        {
+          "name": "HSBC CONSUMPTION FUND",
+          "group": "HSBC MUTUAL FUND",
+          "shares": 371295,
+          "sharesFormatted": "3,71,295",
+          "amountCr": 15,
+          "percent": 3.99
+        },
+        {
+          "name": "INVESCO INDIA CONSUMPTION FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 132534,
+          "sharesFormatted": "1,32,534",
+          "amountCr": 5.35,
+          "percent": 1.42
+        },
+        {
+          "name": "INVESCO INDIA FLEXI CAP FUND",
+          "group": "INVESCO MUTUAL FUND",
+          "shares": 265031,
+          "sharesFormatted": "2,65,031",
+          "amountCr": 10.71,
+          "percent": 2.85
+        },
+        {
+          "name": "MOTILAL OSWAL LARGE CAP FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 297036,
+          "sharesFormatted": "2,97,036",
+          "amountCr": 12,
+          "percent": 3.19
+        },
+        {
+          "name": "MOTILAL OSWAL INFRASTRUCTURE FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 74259,
+          "sharesFormatted": "74,259",
+          "amountCr": 3,
+          "percent": 0.8
+        },
+        {
+          "name": "HDFC STANDARD LIFE INSURANCE CO.LTD.",
+          "group": "HDFC STANDARD LIFE INSURANCE",
+          "shares": 321789,
+          "sharesFormatted": "3,21,789",
+          "amountCr": 13,
+          "percent": 3.46
+        },
+        {
+          "name": "HELIOS MID CAP FUND",
+          "group": "HELIOS MUTUAL FUND",
+          "shares": 180153,
+          "sharesFormatted": "1,80,153",
+          "amountCr": 7.28,
+          "percent": 1.94
+        },
+        {
+          "name": "HELIOS SMALL CAP FUND",
+          "group": "HELIOS MUTUAL FUND",
+          "shares": 141636,
+          "sharesFormatted": "1,41,636",
+          "amountCr": 5.72,
+          "percent": 1.52
+        },
+        {
+          "name": "ICICI PRUDENTIAL LIFE INSURANCE CO.LTD.",
+          "group": "ICICI PRUDENTIAL LIFE INSURANCE",
+          "shares": 321789,
+          "sharesFormatted": "3,21,789",
+          "amountCr": 13,
+          "percent": 3.46
+        },
+        {
+          "name": "HORNBILL ORCHID INDIA FUND",
+          "group": "HORNBILL ORCHID",
+          "shares": 272283,
+          "sharesFormatted": "2,72,283",
+          "amountCr": 11,
+          "percent": 2.93
+        },
+        {
+          "name": "ADITYA BIRLA HEALTH INSURANCE CO.LTD.",
+          "group": "ADITYA BIRLA HEALTH INSURANCE",
+          "shares": 247530,
+          "sharesFormatted": "2,47,530",
+          "amountCr": 10,
+          "percent": 2.66
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 247530,
+          "sharesFormatted": "2,47,530",
+          "amountCr": 10,
+          "percent": 2.66
+        },
+        {
+          "name": "BAJAJ FINSERV CONSUMPTION FUND",
+          "group": "BAJAJ FINSERV MUTUAL FUND",
+          "shares": 247530,
+          "sharesFormatted": "2,47,530",
+          "amountCr": 10,
+          "percent": 2.66
+        },
+        {
+          "name": "PGIM INDIA MULTI CAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 51245,
+          "sharesFormatted": "51,245",
+          "amountCr": 2.07,
+          "percent": 0.55
+        },
+        {
+          "name": "PGIM INDIA SMALL CAP FUND",
+          "group": "PGIM INDIA MUTUAL FUND",
+          "shares": 196285,
+          "sharesFormatted": "1,96,285",
+          "amountCr": 7.93,
+          "percent": 2.11
+        },
+        {
+          "name": "HSBC INDIAN EQUITY MOTHER FUND",
+          "group": "HSBC",
+          "shares": 123765,
+          "sharesFormatted": "1,23,765",
+          "amountCr": 5,
+          "percent": 1.33
+        },
+        {
+          "name": "HSBC GLOBAL INVESTMENT FUNDS-INDIAN EQUITY",
+          "group": "HSBC",
+          "shares": 123765,
+          "sharesFormatted": "1,23,765",
+          "amountCr": 5,
+          "percent": 1.33
+        },
+        {
+          "name": "THELEME INDIA MASTER FUND LTD.",
+          "group": "THELEME",
+          "shares": 247530,
+          "sharesFormatted": "2,47,530",
+          "amountCr": 10,
+          "percent": 2.66
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 123787,
+          "sharesFormatted": "1,23,787",
+          "amountCr": 5,
+          "percent": 1.33
+        },
+        {
+          "name": "ITI FLEXI CAP FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 123765,
+          "sharesFormatted": "1,23,765",
+          "amountCr": 5,
+          "percent": 1.33
+        },
+        {
+          "name": "JM FOCUSED FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 61864,
+          "sharesFormatted": "61,864",
+          "amountCr": 2.5,
+          "percent": 0.66
+        },
+        {
+          "name": "JM MULTI ASSET ALLOCATION FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 61901,
+          "sharesFormatted": "61,901",
+          "amountCr": 2.5,
+          "percent": 0.66
+        }
+      ],
+      "anchorShares": 9308667,
+      "totalShares": 31080978,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_rhp_1788503780.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_capital_structure_1788503782.pdf",
-      "anchorUrl": null,
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/rentomojo_ltd_mainboard_anchor_1788886538.pdf",
       "preIpoInvestors": [
         {
           "name": "Accel India IV (Mauritius) Limited",
@@ -27310,7 +28555,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/skyways_air_services_ltd_mainboard_anchor_1787315943.pdf",
       "listingDate": "2026-09-03T18:30:00.000Z",
       "openDate": "2026-08-27T18:30:00.000Z",
-      "closeDate": "2026-08-30T18:30:00.000Z"
+      "closeDate": "2026-08-30T18:30:00.000Z",
+      "priceBand": "₹131–138",
+      "lotSize": 100
     },
     {
       "companyName": "Raajmarg Infra Investment Trust InvIT",
@@ -34825,7 +36072,9 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/abh_healthcare_ltd_nse_sme_capital_structure_1786962797.pdf",
       "listingDate": "2026-09-03T18:30:00.000Z",
       "openDate": "2026-08-27T18:30:00.000Z",
-      "closeDate": "2026-08-30T18:30:00.000Z"
+      "closeDate": "2026-08-30T18:30:00.000Z",
+      "priceBand": "₹96–102",
+      "lotSize": 1200
     },
     {
       "companyName": "Tempsens Instruments (India) Ltd.",
@@ -35102,7 +36351,12 @@
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_mainboard_capital_structure_1786906752.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/tempsens_instruments_india_ltd_mainboard_anchor_1787156017.pdf",
-      "preIpoWaca": 51.65
+      "preIpoWaca": 51.65,
+      "priceBand": "₹285–300",
+      "lotSize": 50,
+      "listingDate": "2026-08-27T18:30:00.000Z",
+      "openDate": "2026-08-19T18:30:00.000Z",
+      "closeDate": "2026-08-23T18:30:00.000Z"
     },
     {
       "companyName": "Gaja Alternative Asset Management Ltd.",
@@ -35314,7 +36568,12 @@
         "Mr. Anshuman Goyal"
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternatives_mainboard_capital_structure_1786545628.pdf",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternative_asset_management_ltd_mainboard_anchor_1787065501.pdf"
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/gaja_alternative_asset_management_ltd_mainboard_anchor_1787065501.pdf",
+      "priceBand": "₹152–160",
+      "lotSize": 93,
+      "listingDate": "2026-08-25T18:30:00.000Z",
+      "openDate": "2026-08-18T18:30:00.000Z",
+      "closeDate": "2026-08-20T18:30:00.000Z"
     },
     {
       "companyName": "Mopshop Distribution Ltd.",
@@ -35347,7 +36606,12 @@
         "or NIL",
         "Exchanges within"
       ],
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/mopshop_distribution_ltd_bse_sme_capital_structure_1786859678.pdf"
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/mopshop_distribution_ltd_bse_sme_capital_structure_1786859678.pdf",
+      "priceBand": "₹138–138",
+      "lotSize": 1000,
+      "listingDate": "2026-08-25T18:30:00.000Z",
+      "openDate": "2026-08-18T18:30:00.000Z",
+      "closeDate": "2026-08-20T18:30:00.000Z"
     },
     {
       "companyName": "Dhanwel Hybrid Seeds Ltd.",
@@ -35392,7 +36656,12 @@
         "Ms. Kirti Ravi Kothari",
         "Mr. Kishan Gordhanbhai Meghani Managing",
         "Exchanges within"
-      ]
+      ],
+      "priceBand": "₹95–99",
+      "lotSize": 1200,
+      "listingDate": "2026-08-25T18:30:00.000Z",
+      "openDate": "2026-08-18T18:30:00.000Z",
+      "closeDate": "2026-08-20T18:30:00.000Z"
     },
     {
       "companyName": "Sunshine Pictures Ltd.",
@@ -35494,13 +36763,18 @@
         }
       ],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 7837191,
       "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_capital_structure_1786426762.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_anchor_1786970543.pdf",
       "preIpoInvestors": [
         "any Investor"
-      ]
+      ],
+      "priceBand": "₹342–360",
+      "lotSize": 41,
+      "listingDate": "2026-08-24T18:30:00.000Z",
+      "openDate": "2026-08-17T18:30:00.000Z",
+      "closeDate": "2026-08-19T18:30:00.000Z"
     },
     {
       "companyName": "Shankesh Jewellers Ltd.",
@@ -35693,7 +36967,12 @@
         "Kheemraj Jain,",
         "Suraj Shivprasad",
         "HUF Kheemraj"
-      ]
+      ],
+      "priceBand": "₹88–93",
+      "lotSize": 160,
+      "listingDate": "2026-08-24T18:30:00.000Z",
+      "openDate": "2026-08-17T18:30:00.000Z",
+      "closeDate": "2026-08-19T18:30:00.000Z"
     },
     {
       "companyName": "Lalithaa Jewellery Mart Ltd.",
@@ -35934,7 +37213,12 @@
         "H emaa",
         "A rvind",
         "Krishkiran Mega Mall Private Limited (₹800)"
-      ]
+      ],
+      "priceBand": "₹190–201",
+      "lotSize": 74,
+      "listingDate": "2026-08-23T18:30:00.000Z",
+      "openDate": "2026-08-16T18:30:00.000Z",
+      "closeDate": "2026-08-18T18:30:00.000Z"
     },
     {
       "companyName": "Horizon Industrial Parks Ltd.",
@@ -36441,7 +37725,12 @@
         "Embassy Industrial Park Hosur Private Limited",
         "Share for",
         "BREP Asia II EIP Holding (NQ) Pte. Ltd"
-      ]
+      ],
+      "priceBand": "₹57–60",
+      "lotSize": 250,
+      "listingDate": "2026-08-23T18:30:00.000Z",
+      "openDate": "2026-08-16T18:30:00.000Z",
+      "closeDate": "2026-08-18T18:30:00.000Z"
     },
     {
       "companyName": "Skytech Infinite Platform Ltd.",
@@ -36471,7 +37760,12 @@
         "Held Years",
         "Paramashivam Deiveekan",
         "Suma Deiveekan"
-      ]
+      ],
+      "priceBand": "₹73–77",
+      "lotSize": 1600,
+      "listingDate": "2026-08-20T18:30:00.000Z",
+      "openDate": "2026-08-13T18:30:00.000Z",
+      "closeDate": "2026-08-17T18:30:00.000Z"
     },
     {
       "companyName": "ENS Enterprises Ltd.",
@@ -36534,7 +37828,12 @@
         "Mrs. Sheetal Chauhan",
         "Ruchika Kumari",
         "Avinash Kumar Singh"
-      ]
+      ],
+      "priceBand": "₹87–92",
+      "lotSize": 1200,
+      "listingDate": "2026-08-20T18:30:00.000Z",
+      "openDate": "2026-08-13T18:30:00.000Z",
+      "closeDate": "2026-08-17T18:30:00.000Z"
     },
     {
       "companyName": "Technocrats Plasma Systems Ltd.",
@@ -36647,7 +37946,12 @@
         "Artha 99 Investment AIF Trust",
         "Arun Kumar",
         "Artha99 Investment AIF Trust"
-      ]
+      ],
+      "priceBand": "₹125–132",
+      "lotSize": 1000,
+      "listingDate": "2026-08-20T18:30:00.000Z",
+      "openDate": "2026-08-13T18:30:00.000Z",
+      "closeDate": "2026-08-17T18:30:00.000Z"
     },
     {
       "companyName": "Credent Connect N Care Ltd.",
@@ -36780,7 +38084,12 @@
         "Tarun Sharma HUF",
         "Tarun Sharma",
         "SB Opportunities Fund II"
-      ]
+      ],
+      "priceBand": "₹179–189",
+      "lotSize": 600,
+      "listingDate": "2026-08-19T18:30:00.000Z",
+      "openDate": "2026-08-12T18:30:00.000Z",
+      "closeDate": "2026-08-16T18:30:00.000Z"
     },
     {
       "companyName": "Shiprocket Ltd.",
@@ -37251,7 +38560,12 @@
         "Jatinder Aneja Series A CCPS",
         "Tribe Capital III LLC Series"
       ],
-      "preIpoWaca": 38.99
+      "preIpoWaca": 38.99,
+      "priceBand": "₹92–97",
+      "lotSize": 154,
+      "listingDate": "2026-08-18T18:30:00.000Z",
+      "openDate": "2026-08-11T18:30:00.000Z",
+      "closeDate": "2026-08-13T18:30:00.000Z"
     },
     {
       "companyName": "Behari Lal Engineering Ltd.",
@@ -37375,7 +38689,12 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_rhp_1786028123.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_capital_structure_1786028126.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/behari_lal_engineering_ltd_mainboard_anchor_1786456251.pdf",
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "priceBand": "₹271–285",
+      "lotSize": 52,
+      "listingDate": "2026-08-18T18:30:00.000Z",
+      "openDate": "2026-08-11T18:30:00.000Z",
+      "closeDate": "2026-08-13T18:30:00.000Z"
     },
     {
       "companyName": "Pramodini Medicare Ltd.",
@@ -37520,7 +38839,12 @@
         "Dr. Chalasani Kavitha",
         "Mr. Yash Hitesh Patel",
         "Dr. Chalasani Kuldeep Kumar"
-      ]
+      ],
+      "priceBand": "₹110–118",
+      "lotSize": 1200,
+      "listingDate": "2026-08-18T18:30:00.000Z",
+      "openDate": "2026-08-11T18:30:00.000Z",
+      "closeDate": "2026-08-13T18:30:00.000Z"
     },
     {
       "companyName": "Q&T Foods Ltd.",
@@ -37558,7 +38882,12 @@
         "SN Capital Management Pvt Ltd",
         "Mr. Nishant Raj Gupta",
         "Mr. Rahul Anand"
-      ]
+      ],
+      "priceBand": "₹115–115",
+      "lotSize": 1200,
+      "listingDate": "2026-08-18T18:30:00.000Z",
+      "openDate": "2026-08-11T18:30:00.000Z",
+      "closeDate": "2026-08-13T18:30:00.000Z"
     },
     {
       "companyName": "Fascinate Textiles Ltd.",
@@ -37594,7 +38923,12 @@
         "Narinder Kumar Ahuja",
         "Vishal Nahar HUF",
         "Amount to Amount Estimated"
-      ]
+      ],
+      "priceBand": "₹142–151",
+      "lotSize": 800,
+      "listingDate": "2026-08-23T18:30:00.000Z",
+      "openDate": "2026-08-10T18:30:00.000Z",
+      "closeDate": "2026-08-18T18:30:00.000Z"
     },
     {
       "companyName": "Milky Mist Dairy Food Ltd.",
@@ -37824,7 +39158,12 @@
         "Taurus Family Private Trust by way of gift",
         "Aquarius Family Private",
         "TS Shanjay"
-      ]
+      ],
+      "priceBand": "₹133–140",
+      "lotSize": 107,
+      "listingDate": "2026-08-17T18:30:00.000Z",
+      "openDate": "2026-08-10T18:30:00.000Z",
+      "closeDate": "2026-08-12T18:30:00.000Z"
     },
     {
       "companyName": "Sham Foam Ltd.",
@@ -37869,7 +39208,12 @@
         "Rajinder Kumar Jindal",
         "Mr. Sanjeev Kumar Jindal (₹10)",
         "Monica Jindal"
-      ]
+      ],
+      "priceBand": "₹130–130",
+      "lotSize": 1000,
+      "listingDate": "2026-08-17T18:30:00.000Z",
+      "openDate": "2026-08-10T18:30:00.000Z",
+      "closeDate": "2026-08-12T18:30:00.000Z"
     },
     {
       "companyName": "Molbio Diagnostics Ltd.",
@@ -38231,7 +39575,12 @@
         }
       ],
       "anchorShares": 3487717,
-      "totalShares": 11646246
+      "totalShares": 11646246,
+      "priceBand": "₹768–807",
+      "lotSize": 18,
+      "listingDate": "2026-08-16T18:30:00.000Z",
+      "openDate": "2026-08-09T18:30:00.000Z",
+      "closeDate": "2026-08-11T18:30:00.000Z"
     },
     {
       "companyName": "Dhoot Transmission Ltd.",
@@ -38865,7 +40214,12 @@
         }
       ],
       "anchorShares": 10542657,
-      "totalShares": 35218047
+      "totalShares": 35218047,
+      "priceBand": "₹829–871",
+      "lotSize": 17,
+      "listingDate": "2026-08-16T18:30:00.000Z",
+      "openDate": "2026-08-09T18:30:00.000Z",
+      "closeDate": "2026-08-11T18:30:00.000Z"
     },
     {
       "companyName": "Technocraft Ventures Ltd.",
@@ -38939,7 +40293,12 @@
         }
       ],
       "anchorShares": 3563810,
-      "totalShares": 11881000
+      "totalShares": 11881000,
+      "priceBand": "₹200–212",
+      "lotSize": 70,
+      "listingDate": "2026-08-13T18:30:00.000Z",
+      "openDate": "2026-08-06T18:30:00.000Z",
+      "closeDate": "2026-08-10T18:30:00.000Z"
     },
     {
       "companyName": "LEAP India Ltd.",
@@ -39274,7 +40633,12 @@
         }
       ],
       "anchorShares": 46768854,
-      "totalShares": 155974840
+      "totalShares": 155974840,
+      "priceBand": "₹151–159",
+      "lotSize": 94,
+      "listingDate": "2026-08-13T18:30:00.000Z",
+      "openDate": "2026-08-06T18:30:00.000Z",
+      "closeDate": "2026-08-10T18:30:00.000Z"
     },
     {
       "companyName": "Optimystix Entertainment India Ltd.",
@@ -39430,7 +40794,12 @@
         }
       ],
       "anchorShares": 1670400,
-      "totalShares": 6200000
+      "totalShares": 6200000,
+      "priceBand": "₹166–175",
+      "lotSize": 800,
+      "listingDate": "2026-08-13T18:30:00.000Z",
+      "openDate": "2026-08-06T18:30:00.000Z",
+      "closeDate": "2026-08-10T18:30:00.000Z"
     },
     {
       "companyName": "LAPL Automotive Ltd.",
@@ -39532,7 +40901,12 @@
         }
       ],
       "anchorShares": 976800,
-      "totalShares": 3446400
+      "totalShares": 3446400,
+      "priceBand": "₹88–94",
+      "lotSize": 1200,
+      "listingDate": "2026-08-12T18:30:00.000Z",
+      "openDate": "2026-08-05T18:30:00.000Z",
+      "closeDate": "2026-08-09T18:30:00.000Z"
     },
     {
       "companyName": "Ardee Industries Ltd.",
@@ -39634,7 +41008,12 @@
         }
       ],
       "anchorShares": 24105584,
-      "totalShares": 80351950
+      "totalShares": 80351950,
+      "priceBand": "₹50–53",
+      "lotSize": 281,
+      "listingDate": "2026-08-11T18:30:00.000Z",
+      "openDate": "2026-08-04T18:30:00.000Z",
+      "closeDate": "2026-08-06T18:30:00.000Z"
     },
     {
       "companyName": "Aegeus Technologies Ltd.",
@@ -39706,7 +41085,12 @@
         "Jayawardhan Diwan family trust",
         "Jasmeet Walia",
         "Mukesh Kumar Chhaganlal"
-      ]
+      ],
+      "priceBand": "₹100–105",
+      "lotSize": 1200,
+      "listingDate": "2026-08-10T18:30:00.000Z",
+      "openDate": "2026-08-03T18:30:00.000Z",
+      "closeDate": "2026-08-05T18:30:00.000Z"
     },
     {
       "companyName": "Anawil Wire & Engineering Ltd.",
@@ -39905,7 +41289,12 @@
         }
       ],
       "anchorShares": 1875600,
-      "totalShares": 6585600
+      "totalShares": 6585600,
+      "priceBand": "₹257–270",
+      "lotSize": 400,
+      "listingDate": "2026-08-09T18:30:00.000Z",
+      "openDate": "2026-08-02T18:30:00.000Z",
+      "closeDate": "2026-08-04T18:30:00.000Z"
     },
     {
       "companyName": "G.V.Electricals Ltd. (G.V. Electricals IPO)",
@@ -42288,7 +43677,7 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_capital_structure_1787800455.pdf",
       "preIpoWaca": 26.88,
       "lotSize": 2000,
-      "priceBand": "₹59",
+      "priceBand": "₹59–59",
       "listingDate": "2026-09-10T18:30:00.000Z",
       "openDate": "2026-09-03T18:30:00.000Z",
       "closeDate": "2026-09-06T18:30:00.000Z"
@@ -43465,7 +44854,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/esds_software_solution_ltd_mainboard_anchor_1787844503.pdf",
       "listingDate": "2026-09-06T18:30:00.000Z",
       "openDate": "2026-08-30T18:30:00.000Z",
-      "closeDate": "2026-09-02T18:30:00.000Z"
+      "closeDate": "2026-09-02T18:30:00.000Z",
+      "priceBand": "₹408–429",
+      "lotSize": 34
     },
     {
       "companyName": "Priority Jewels Ltd.",
@@ -43609,7 +45000,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/priority_jewels_ltd_mainboard_anchor_1787837770.pdf",
       "listingDate": "2026-09-06T18:30:00.000Z",
       "openDate": "2026-08-30T18:30:00.000Z",
-      "closeDate": "2026-09-02T18:30:00.000Z"
+      "closeDate": "2026-09-02T18:30:00.000Z",
+      "priceBand": "₹190–200",
+      "lotSize": 75
     },
     {
       "companyName": "Paluck Technologies Ltd.",
@@ -43749,7 +45142,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/paluck_technologies_ltd_bse_sme_anchor_1787835344.pdf",
       "listingDate": "2026-09-06T18:30:00.000Z",
       "openDate": "2026-08-30T18:30:00.000Z",
-      "closeDate": "2026-09-02T18:30:00.000Z"
+      "closeDate": "2026-09-02T18:30:00.000Z",
+      "priceBand": "₹46–48",
+      "lotSize": 3000
     },
     {
       "companyName": "Complete Sports & Management India Ltd. (Complete Sports and Management IPO)",
@@ -43881,7 +45276,9 @@
       "preIpoWaca": "10.00",
       "listingDate": "2026-09-06T18:30:00.000Z",
       "openDate": "2026-08-30T18:30:00.000Z",
-      "closeDate": "2026-09-02T18:30:00.000Z"
+      "closeDate": "2026-09-02T18:30:00.000Z",
+      "priceBand": "₹128–135",
+      "lotSize": 1000
     },
     {
       "companyName": "Lumino Industries Ltd.",
@@ -44225,7 +45622,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/lumino_industries_ltd_mainboard_anchor_1787668203.pdf",
       "listingDate": "2026-09-05T18:30:00.000Z",
       "openDate": "2026-08-29T18:30:00.000Z",
-      "closeDate": "2026-09-01T18:30:00.000Z"
+      "closeDate": "2026-09-01T18:30:00.000Z",
+      "priceBand": "₹78–82",
+      "lotSize": 182
     },
     {
       "companyName": "Kwick Forensic Solutions Ltd.",
@@ -44381,7 +45780,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/kwick_forensic_solutions_ltd_bse_sme_anchor_1787662948.pdf",
       "listingDate": "2026-09-05T18:30:00.000Z",
       "openDate": "2026-08-29T18:30:00.000Z",
-      "closeDate": "2026-09-01T18:30:00.000Z"
+      "closeDate": "2026-09-01T18:30:00.000Z",
+      "priceBand": "₹85–90",
+      "lotSize": 1600
     },
     {
       "companyName": "Annu Projects Ltd.",
@@ -44420,7 +45821,9 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/annu_projects_ltd_mainboard_capital_structure_1787136120.pdf",
       "listingDate": "2026-09-04T18:30:00.000Z",
       "openDate": "2026-08-28T18:30:00.000Z",
-      "closeDate": "2026-08-31T18:30:00.000Z"
+      "closeDate": "2026-08-31T18:30:00.000Z",
+      "priceBand": "₹94–99",
+      "lotSize": 151
     },
     {
       "companyName": "Sumax Engineering Ltd.",
@@ -44549,7 +45952,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/sumax_engineering_ltd_nse_sme_anchor_1787575058.pdf",
       "listingDate": "2026-09-04T18:30:00.000Z",
       "openDate": "2026-08-28T18:30:00.000Z",
-      "closeDate": "2026-08-31T18:30:00.000Z"
+      "closeDate": "2026-08-31T18:30:00.000Z",
+      "priceBand": "₹95–101",
+      "lotSize": 1200
     },
     {
       "companyName": "Hy-Tech Engineers Ltd.",
@@ -44716,7 +46121,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/hy_tech_engineers_ltd_mainboard_anchor_1787310992.pdf",
       "listingDate": "2026-09-03T18:30:00.000Z",
       "openDate": "2026-08-27T18:30:00.000Z",
-      "closeDate": "2026-08-30T18:30:00.000Z"
+      "closeDate": "2026-08-30T18:30:00.000Z",
+      "priceBand": "₹50–53",
+      "lotSize": 283
     },
     {
       "companyName": "Madhur Knit Crafts Ltd.",
@@ -44781,7 +46188,9 @@
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_anchor_1787312793.pdf",
       "listingDate": "2026-09-03T18:30:00.000Z",
       "openDate": "2026-08-27T18:30:00.000Z",
-      "closeDate": "2026-08-30T18:30:00.000Z"
+      "closeDate": "2026-08-30T18:30:00.000Z",
+      "priceBand": "₹95–100",
+      "lotSize": 1200
     },
     {
       "companyName": "Symbiotec Pharmalab Ltd.",
@@ -45165,7 +46574,9 @@
       "preIpoWaca": "147.21",
       "listingDate": "2026-09-03T18:30:00.000Z",
       "openDate": "2026-08-27T18:30:00.000Z",
-      "closeDate": "2026-08-30T18:30:00.000Z"
+      "closeDate": "2026-08-30T18:30:00.000Z",
+      "priceBand": "₹938–988",
+      "lotSize": 15
     },
     {
       "companyName": "Augmont Enterprises Ltd.",
@@ -45412,7 +46823,12 @@
         }
       ],
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_capital_structure_1787037498.pdf",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_anchor_1787236790.pdf"
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/augmont_enterprises_ltd_mainboard_anchor_1787236790.pdf",
+      "priceBand": "₹750–788",
+      "lotSize": 19,
+      "listingDate": "2026-08-30T18:30:00.000Z",
+      "openDate": "2026-08-20T18:30:00.000Z",
+      "closeDate": "2026-08-24T18:30:00.000Z"
     },
     {
       "companyName": "Veegaland Developers Ltd.",
@@ -45441,8 +46857,88 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "EQ INDIA FUND",
+          "group": "EQUITY INTELLIGENCE",
+          "shares": 1071070,
+          "sharesFormatted": "10,71,070",
+          "amountCr": 14.99,
+          "percent": 23.8
+        },
+        {
+          "name": "NAVBHARAT INVESTMENT TRUST-NAVBHARAT INVESTMENT OPPORTUNITIES FUND",
+          "group": "NAVBHARAT",
+          "shares": 357166,
+          "sharesFormatted": "3,57,166",
+          "amountCr": 5,
+          "percent": 7.94
+        },
+        {
+          "name": "TAURUS MID CAP FUND",
+          "group": "TAURUS MUTUAL FUND",
+          "shares": 178583,
+          "sharesFormatted": "1,78,583",
+          "amountCr": 2.5,
+          "percent": 3.97
+        },
+        {
+          "name": "TAURUS FLEXI CAP FUND",
+          "group": "TAURUS MUTUAL FUND",
+          "shares": 178583,
+          "sharesFormatted": "1,78,583",
+          "amountCr": 2.5,
+          "percent": 3.97
+        },
+        {
+          "name": "SWYOM INDIA ALPHA FUND",
+          "group": "SWYOM",
+          "shares": 714332,
+          "sharesFormatted": "7,14,332",
+          "amountCr": 10,
+          "percent": 15.87
+        },
+        {
+          "name": "INNOVATIVE VISION FUND",
+          "group": "INNOVATIVE VISION",
+          "shares": 357166,
+          "sharesFormatted": "3,57,166",
+          "amountCr": 5,
+          "percent": 7.94
+        },
+        {
+          "name": "VISIONARY VALUE FUND",
+          "shares": 357166,
+          "sharesFormatted": "3,57,166",
+          "amountCr": 5,
+          "percent": 7.94
+        },
+        {
+          "name": "VBCUBE VENTURES FUND II",
+          "group": "VBCUBE",
+          "shares": 357166,
+          "sharesFormatted": "3,57,166",
+          "amountCr": 5,
+          "percent": 7.94
+        },
+        {
+          "name": "CP Capital Ltd.",
+          "group": "CP CAPITAL",
+          "shares": 357166,
+          "sharesFormatted": "3,57,166",
+          "amountCr": 5,
+          "percent": 7.94
+        },
+        {
+          "name": "TIGER STRATEGIES FUND 1",
+          "group": "TIGER STRATEGIES",
+          "shares": 571602,
+          "sharesFormatted": "5,71,602",
+          "amountCr": 8,
+          "percent": 12.7
+        }
+      ],
+      "anchorShares": 4500000,
       "totalShares": 15000000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_rhp_1788214693.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_capital_structure_1788214694.pdf",
@@ -45455,7 +46951,8 @@
       "priceBand": "₹130–140",
       "listingDate": "2026-09-20T18:30:00.000Z",
       "openDate": "2026-09-13T18:30:00.000Z",
-      "closeDate": "2026-09-16T18:30:00.000Z"
+      "closeDate": "2026-09-16T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_anchor_1788959972.pdf"
     },
     {
       "companyName": "Amtech Esters Ltd.",
@@ -45484,7 +46981,48 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "HOLANI VENTURE CAPITAL FUND",
+          "group": "HOLANI",
+          "shares": 134400,
+          "sharesFormatted": "1,34,400",
+          "amountCr": 1.01,
+          "percent": 19.86
+        },
+        {
+          "name": "FLUMEN INVESTMENT TRUST-1729 GROWTH FUND I",
+          "group": "FLUMEN INVESTMENT",
+          "shares": 134400,
+          "sharesFormatted": "1,34,400",
+          "amountCr": 1.01,
+          "percent": 19.86
+        },
+        {
+          "name": "GENERATIONAL CAPITAL BREAKOUT FUND I",
+          "group": "GENERATIONAL",
+          "shares": 136000,
+          "sharesFormatted": "1,36,000",
+          "amountCr": 1.02,
+          "percent": 20.09
+        },
+        {
+          "name": "VINEY GROWTH FUND",
+          "group": "VINEY",
+          "shares": 136000,
+          "sharesFormatted": "1,36,000",
+          "amountCr": 1.02,
+          "percent": 20.09
+        },
+        {
+          "name": "KRUSHNAM NEXUS CAPITAL TRUST-KRUSHNAM NEXUS CAPITAL SCHEME 1",
+          "group": "KRUSHNAM NEXUS",
+          "shares": 136000,
+          "sharesFormatted": "1,36,000",
+          "amountCr": 1.02,
+          "percent": 20.09
+        }
+      ],
       "anchorShares": 676800,
       "totalShares": 2384000,
       "rhpUrl": "https://credorapartners.com/wp-content/uploads/2026/08/Amtech-Esters-Limited-RHP.pdf",
@@ -45541,7 +47079,8 @@
       "preIpoWaca": 124.5,
       "listingDate": "2026-09-19T18:30:00.000Z",
       "openDate": "2026-09-12T18:30:00.000Z",
-      "closeDate": "2026-09-15T18:30:00.000Z"
+      "closeDate": "2026-09-15T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/amtech_esters_ltd_bse_sme_anchor_1788868755.pdf"
     },
     {
       "companyName": "Asset Reconstruction Co.(India) Ltd.",
@@ -45570,8 +47109,177 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "GOLDMAN SACHS ETF TRUST-GOLDMAN SACHS INDIA EQUITY ETF",
+          "group": "GOLDMAN SACHS",
+          "shares": 359734,
+          "sharesFormatted": "3,59,734",
+          "amountCr": 5,
+          "percent": 2.27
+        },
+        {
+          "name": "GOLDMAN SACHS FUNDS-GOLDMAN SACHS INDIA EQUITY PORTFOLIO",
+          "group": "GOLDMAN SACHS",
+          "shares": 2517924,
+          "sharesFormatted": "25,17,924",
+          "amountCr": 35,
+          "percent": 15.92
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK INDIA OPPORTUNITIES FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 1438829,
+          "sharesFormatted": "14,38,829",
+          "amountCr": 20,
+          "percent": 9.1
+        },
+        {
+          "name": "WHITEOAK CAPITAL MULTI CAP FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 719361,
+          "sharesFormatted": "7,19,361",
+          "amountCr": 10,
+          "percent": 4.55
+        },
+        {
+          "name": "WHITEOAK CAPITAL BANKING & FINANCIAL SERVICES FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 467590,
+          "sharesFormatted": "4,67,590",
+          "amountCr": 6.5,
+          "percent": 2.96
+        },
+        {
+          "name": "WHITEOAK CAPITAL BALANCED HYBRID FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 107963,
+          "sharesFormatted": "1,07,963",
+          "amountCr": 1.5,
+          "percent": 0.68
+        },
+        {
+          "name": "WHITEOAK CAPITAL AGGRESSIVE HYBRID FUND",
+          "group": "WHITEOAK CAPITAL MUTUAL FUND",
+          "shares": 143915,
+          "sharesFormatted": "1,43,915",
+          "amountCr": 2,
+          "percent": 0.91
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE SMALL CAP FUND",
+          "group": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+          "shares": 1870467,
+          "sharesFormatted": "18,70,467",
+          "amountCr": 26,
+          "percent": 11.82
+        },
+        {
+          "name": "BANDHAN SMALL CAP FUND",
+          "group": "BANDHAN MUTUAL FUND",
+          "shares": 1870467,
+          "sharesFormatted": "18,70,467",
+          "amountCr": 26,
+          "percent": 11.82
+        },
+        {
+          "name": "TATA MULTI ASSET ALLOCATION FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 1870467,
+          "sharesFormatted": "18,70,467",
+          "amountCr": 26,
+          "percent": 11.82
+        },
+        {
+          "name": "JM AGGRESSIVE HYBRID FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 359734,
+          "sharesFormatted": "3,59,734",
+          "amountCr": 5,
+          "percent": 2.27
+        },
+        {
+          "name": "JM VALUE FUND",
+          "group": "JM FINANCIAL MUTUAL FUND",
+          "shares": 359734,
+          "sharesFormatted": "3,59,734",
+          "amountCr": 5,
+          "percent": 2.27
+        },
+        {
+          "name": "GROWW BANKING & FINANCIAL SERVICES FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 50291,
+          "sharesFormatted": "50,291",
+          "amountCr": 0.7,
+          "percent": 0.32
+        },
+        {
+          "name": "GROWW SMALL CAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 237532,
+          "sharesFormatted": "2,37,532",
+          "amountCr": 3.3,
+          "percent": 1.5
+        },
+        {
+          "name": "GROWW MUTUAL FUND - VALUE FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 71911,
+          "sharesFormatted": "71,911",
+          "amountCr": 1,
+          "percent": 0.45
+        },
+        {
+          "name": "BAJAJ LIFE INSURANCE LTD.",
+          "group": "BAJAJ LIFE INSURANCE",
+          "shares": 719468,
+          "sharesFormatted": "7,19,468",
+          "amountCr": 10,
+          "percent": 4.55
+        },
+        {
+          "name": "INDUSIND GENERAL INSURANCE CO.LTD.",
+          "group": "INDUSIND GENERAL INSURANCE",
+          "shares": 359734,
+          "sharesFormatted": "3,59,734",
+          "amountCr": 5,
+          "percent": 2.27
+        },
+        {
+          "name": "SOCIETE GENERALE-ODI",
+          "group": "SOCIETE GENERAL",
+          "shares": 719468,
+          "sharesFormatted": "7,19,468",
+          "amountCr": 10,
+          "percent": 4.55
+        },
+        {
+          "name": "BOFA SECURITIES EUROPE SA-ODI",
+          "group": "BOFA SECURITIES",
+          "shares": 607630,
+          "sharesFormatted": "6,07,630",
+          "amountCr": 8.45,
+          "percent": 3.84
+        },
+        {
+          "name": "INTEGRATED CORE STRATEGIES (ASIA) PTE.LTD.",
+          "group": "INTEGRATED CORE",
+          "shares": 607630,
+          "sharesFormatted": "6,07,630",
+          "amountCr": 8.45,
+          "percent": 3.84
+        },
+        {
+          "name": "GOLDMAN SACHS BANK EUROPE SE-ODI",
+          "group": "GOLDMAN SACHS",
+          "shares": 359734,
+          "sharesFormatted": "3,59,734",
+          "amountCr": 5,
+          "percent": 2.27
+        }
+      ],
+      "anchorShares": 15819583,
       "totalShares": 52731946,
       "rhpUrl": "https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_capital_structure_1788415429.pdf",
@@ -45662,7 +47370,8 @@
       "priceBand": "₹132–139",
       "listingDate": "2026-09-19T18:30:00.000Z",
       "openDate": "2026-09-12T18:30:00.000Z",
-      "closeDate": "2026-09-15T18:30:00.000Z"
+      "closeDate": "2026-09-15T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/asset_reconstruction_company_india_limited_mainboard_anchor_1788886578.pdf"
     },
     {
       "companyName": "Glass Wall Systems (India) Ltd.",
@@ -45691,8 +47400,129 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "HDFC BUSINESS CYCLE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 1098882,
+          "sharesFormatted": "10,98,882",
+          "amountCr": 20,
+          "percent": 15.58
+        },
+        {
+          "name": "HDFC INFRASTRUCTURE FUND",
+          "group": "HDFC MUTUAL FUND",
+          "shares": 549482,
+          "sharesFormatted": "5,49,482",
+          "amountCr": 10,
+          "percent": 7.79
+        },
+        {
+          "name": "BANK OF INDIA ELSS TAX SAVER",
+          "group": "BANK OF INDIA MUTUAL FUND",
+          "shares": 329670,
+          "sharesFormatted": "3,29,670",
+          "amountCr": 6,
+          "percent": 4.67
+        },
+        {
+          "name": "BANK OF INDIA MANUFACTURING & INFRASTRUCTURE FUND",
+          "group": "BANK OF INDIA MUTUAL FUND",
+          "shares": 384632,
+          "sharesFormatted": "3,84,632",
+          "amountCr": 7,
+          "percent": 5.45
+        },
+        {
+          "name": "IKIGAI EMERGING EQUITY FUND",
+          "group": "IKIGAI",
+          "shares": 604422,
+          "sharesFormatted": "6,04,422",
+          "amountCr": 11,
+          "percent": 8.57
+        },
+        {
+          "name": "PINEBRIDGE GLOBAL FUNDS-PINEBRIDGE INDIA EQUITY FUND",
+          "group": "PINEBRIDGE",
+          "shares": 604422,
+          "sharesFormatted": "6,04,422",
+          "amountCr": 11,
+          "percent": 8.57
+        },
+        {
+          "name": "KOTAK MAHINDRA LIFE INSURANCE CO.LTD.",
+          "group": "KOTAK LIFE INSURANCE",
+          "shares": 471992,
+          "sharesFormatted": "4,71,992",
+          "amountCr": 8.59,
+          "percent": 6.69
+        },
+        {
+          "name": "ABAKKUS GROWTH FUND-OPEN ENDED",
+          "group": "ABAKKUS",
+          "shares": 494542,
+          "sharesFormatted": "4,94,542",
+          "amountCr": 9,
+          "percent": 7.01
+        },
+        {
+          "name": "INTEGRATED CORE STRATEGIES (ASIA) PTE.LTD.",
+          "group": "INTEGRATED CORE",
+          "shares": 471992,
+          "sharesFormatted": "4,71,992",
+          "amountCr": 8.59,
+          "percent": 6.69
+        },
+        {
+          "name": "BENGAL FINANCE & INVESTMENT PVT.LTD.",
+          "group": "BENGAL FINANCE & INVESTMENT",
+          "shares": 531852,
+          "sharesFormatted": "5,31,852",
+          "amountCr": 9.68,
+          "percent": 7.54
+        },
+        {
+          "name": "SUBHKAM VENTURES (I) PVT.LTD.",
+          "group": "SUBHKAM VENTURES",
+          "shares": 412132,
+          "sharesFormatted": "4,12,132",
+          "amountCr": 7.5,
+          "percent": 5.84
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 274777,
+          "sharesFormatted": "2,74,777",
+          "amountCr": 5,
+          "percent": 3.9
+        },
+        {
+          "name": "LC PHAROS MULTI STRATEGY FUND VCC-LC PHAROS MULTI STRATEGY FUND SF1",
+          "group": "LC PHAROS",
+          "shares": 274777,
+          "sharesFormatted": "2,74,777",
+          "amountCr": 5,
+          "percent": 3.9
+        },
+        {
+          "name": "AUTHUM INVESTMENT & INFRASTRUCTURE LTD.",
+          "group": "AUTHUM INVESTMENT",
+          "shares": 274776,
+          "sharesFormatted": "2,74,776",
+          "amountCr": 5,
+          "percent": 3.9
+        },
+        {
+          "name": "INDIA CAPITAL GROWTH FUND LTD.",
+          "group": "INDIA CAPITAL",
+          "shares": 274777,
+          "sharesFormatted": "2,74,777",
+          "amountCr": 5,
+          "percent": 3.9
+        }
+      ],
+      "anchorShares": 7053127,
       "totalShares": 23510425,
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_capital_structure_1788410565.pdf",
@@ -45721,7 +47551,8 @@
       "preIpoWaca": 10,
       "listingDate": "2026-09-18T18:30:00.000Z",
       "openDate": "2026-09-11T18:30:00.000Z",
-      "closeDate": "2026-09-14T18:30:00.000Z"
+      "closeDate": "2026-09-14T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/glass_wall_systems_india_ltd_mainboard_anchor_1788791813.pdf"
     },
     {
       "companyName": "Prasol Chemicals Ltd.",
@@ -45750,9 +47581,122 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 7396437,
+      "anchorInvestors": [
+        {
+          "name": "KOTAK SPECIAL OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 117898,
+          "sharesFormatted": "1,17,898",
+          "amountCr": 7.97,
+          "percent": 5.31
+        },
+        {
+          "name": "KOTAK HEALTHCARE FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 117876,
+          "sharesFormatted": "1,17,876",
+          "amountCr": 7.97,
+          "percent": 5.31
+        },
+        {
+          "name": "KOTAK RURAL OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 60104,
+          "sharesFormatted": "60,104",
+          "amountCr": 4.06,
+          "percent": 2.71
+        },
+        {
+          "name": "TATA INDIA PHARMA & HEALTHCARE FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 147950,
+          "sharesFormatted": "1,47,950",
+          "amountCr": 10,
+          "percent": 6.67
+        },
+        {
+          "name": "TATA INDIA INNOVATION FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 147928,
+          "sharesFormatted": "1,47,928",
+          "amountCr": 10,
+          "percent": 6.67
+        },
+        {
+          "name": "ADITYA BIRLA SUN LIFE INSURANCE CO.LTD.",
+          "group": "ADITYA BIRLA SUN LIFE INSURANCE",
+          "shares": 295878,
+          "sharesFormatted": "2,95,878",
+          "amountCr": 20,
+          "percent": 13.33
+        },
+        {
+          "name": "TATA AIA LIFE INSURANCE CO.LTD.-SMALL CAP DISCOVERY FUND (ULIF 071 22/05/23 SCF 110)",
+          "group": "TATA AIA LIFE INSURANCE",
+          "shares": 295878,
+          "sharesFormatted": "2,95,878",
+          "amountCr": 20,
+          "percent": 13.33
+        },
+        {
+          "name": "TURNAROUND OPPORTUNITIES FUND",
+          "group": "TURNAROUND OPPORTUNITIES",
+          "shares": 221892,
+          "sharesFormatted": "2,21,892",
+          "amountCr": 15,
+          "percent": 10
+        },
+        {
+          "name": "360 ONE EQUITY OPPORTUNITY FUND-SERIES IV",
+          "group": "360 ONE",
+          "shares": 73986,
+          "sharesFormatted": "73,986",
+          "amountCr": 5,
+          "percent": 3.33
+        },
+        {
+          "name": "EDELWEISS AGGRESSIVE HYBRID FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 147950,
+          "sharesFormatted": "1,47,950",
+          "amountCr": 10,
+          "percent": 6.67
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 44374,
+          "sharesFormatted": "44,374",
+          "amountCr": 3,
+          "percent": 2
+        },
+        {
+          "name": "ITI SMALL CAP FUND",
+          "group": "ITI MUTUAL FUND",
+          "shares": 221914,
+          "sharesFormatted": "2,21,914",
+          "amountCr": 15,
+          "percent": 10
+        },
+        {
+          "name": "CLARUS CAPITAL I",
+          "group": "CLARUS CAPITAL",
+          "shares": 177352,
+          "sharesFormatted": "1,77,352",
+          "amountCr": 11.99,
+          "percent": 7.99
+        },
+        {
+          "name": "NUVAMA MULTI ASSET STRATEGY RETURN FUND",
+          "group": "NUVAMA",
+          "shares": 147950,
+          "sharesFormatted": "1,47,950",
+          "amountCr": 10,
+          "percent": 6.67
+        }
+      ],
+      "anchorShares": 2218930,
+      "totalShares": 7396438,
       "rhpUrl": "https://www.damcapital.in/files/pdf/639239827470702392_Prasol_Chemicals_Limited_-_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_capital_structure_1788411840.pdf",
       "preIpoInvestors": [
@@ -45772,7 +47716,8 @@
       "preIpoWaca": 400,
       "listingDate": "2026-09-18T18:30:00.000Z",
       "openDate": "2026-09-11T18:30:00.000Z",
-      "closeDate": "2026-09-14T18:30:00.000Z"
+      "closeDate": "2026-09-14T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/prasol_chemicals_ltd_mainboard_anchor_1788792301.pdf"
     },
     {
       "companyName": "Kanohar Electricals Ltd.",
@@ -45801,8 +47746,345 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorInvestors": [
+        {
+          "name": "ISIF EQUITY EX-TOP 100 LONG-SHORT FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 385664,
+          "sharesFormatted": "3,85,664",
+          "amountCr": 24.37,
+          "percent": 7.7
+        },
+        {
+          "name": "ICICI PRUDENTIAL MULTICAP FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 539948,
+          "sharesFormatted": "5,39,948",
+          "amountCr": 34.12,
+          "percent": 10.77
+        },
+        {
+          "name": "KOTAK INFRASTRUCTURE & ECONOMIC REFORM FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 126638,
+          "sharesFormatted": "1,26,638",
+          "amountCr": 8,
+          "percent": 2.53
+        },
+        {
+          "name": "KOTAK MANUFACTURE IN INDIA FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 126638,
+          "sharesFormatted": "1,26,638",
+          "amountCr": 8,
+          "percent": 2.53
+        },
+        {
+          "name": "KOTAK SPECIAL OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 126638,
+          "sharesFormatted": "1,26,638",
+          "amountCr": 8,
+          "percent": 2.53
+        },
+        {
+          "name": "KOTAK ENERGY OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 58604,
+          "sharesFormatted": "58,604",
+          "amountCr": 3.7,
+          "percent": 1.17
+        },
+        {
+          "name": "KOTAK RURAL OPPORTUNITIES FUND",
+          "group": "KOTAK MAHINDRA MUTUAL FUND",
+          "shares": 126638,
+          "sharesFormatted": "1,26,638",
+          "amountCr": 8,
+          "percent": 2.53
+        },
+        {
+          "name": "ASHOKA WHITEOAK ICAV-ASHOKA WHITEOAK EMERGING MARKETS EQUITY FUND",
+          "group": "ASHOKA WHITEOAK",
+          "shares": 332258,
+          "sharesFormatted": "3,32,258",
+          "amountCr": 21,
+          "percent": 6.63
+        },
+        {
+          "name": "WHITEOAK CAPITAL EQUITY FUND-II",
+          "group": "WHITEOAK",
+          "shares": 118680,
+          "sharesFormatted": "1,18,680",
+          "amountCr": 7.5,
+          "percent": 2.37
+        },
+        {
+          "name": "MIRAE ASSET SMALL CAP FUND",
+          "group": "MIRAE ASSET MUTUAL FUND",
+          "shares": 221513,
+          "sharesFormatted": "2,21,513",
+          "amountCr": 14,
+          "percent": 4.42
+        },
+        {
+          "name": "MOTILAL OSWAL BALANCED ADVANTAGE FUND",
+          "group": "MOTILAL OSWAL MUTUAL FUND",
+          "shares": 221513,
+          "sharesFormatted": "2,21,513",
+          "amountCr": 14,
+          "percent": 4.42
+        },
+        {
+          "name": "TATA DIVIDEND YIELD FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 118680,
+          "sharesFormatted": "1,18,680",
+          "amountCr": 7.5,
+          "percent": 2.37
+        },
+        {
+          "name": "TITANIUM HYBRID LONG-SHORT FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "TITANIUM EQUITY LONG-SHORT FUND",
+          "group": "TATA MUTUAL FUND",
+          "shares": 23713,
+          "sharesFormatted": "23,713",
+          "amountCr": 1.5,
+          "percent": 0.47
+        },
+        {
+          "name": "ALLIANZ GLOBAL INVESTORS FUND-ALLIANZ INDIA EQUITY",
+          "group": "ALLIANZ",
+          "shares": 221513,
+          "sharesFormatted": "2,21,513",
+          "amountCr": 14,
+          "percent": 4.42
+        },
+        {
+          "name": "HSBC GLOBAL INVESTMENT FUNDS-ASIA EX JAPAN EQUITY SMALLER COMPANIES",
+          "group": "HSBC",
+          "shares": 221513,
+          "sharesFormatted": "2,21,513",
+          "amountCr": 14,
+          "percent": 4.42
+        },
+        {
+          "name": "VQ FASTERCAP FUND",
+          "group": "VQ FASTERCAP",
+          "shares": 221513,
+          "sharesFormatted": "2,21,513",
+          "amountCr": 14,
+          "percent": 4.42
+        },
+        {
+          "name": "360 ONE FLEXICAP FUND",
+          "group": "360 ONE MUTUAL FUND",
+          "shares": 158240,
+          "sharesFormatted": "1,58,240",
+          "amountCr": 10,
+          "percent": 3.16
+        },
+        {
+          "name": "EDELWEISS AGGRESSIVE HYBRID FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 118680,
+          "sharesFormatted": "1,18,680",
+          "amountCr": 7.5,
+          "percent": 2.37
+        },
+        {
+          "name": "EDELWEISS RECENTLY LISTED IPO FUND",
+          "group": "EDELWEISS MUTUAL FUND",
+          "shares": 39560,
+          "sharesFormatted": "39,560",
+          "amountCr": 2.5,
+          "percent": 0.79
+        },
+        {
+          "name": "HDFC LIFE INSURANCE CO.LTD.",
+          "group": "HDFC LIFE INSURANCE",
+          "shares": 158240,
+          "sharesFormatted": "1,58,240",
+          "amountCr": 10,
+          "percent": 3.16
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 01815/02/13 PENSPRESER 104-PENSION PRESERVER FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 1380,
+          "sharesFormatted": "1,380",
+          "amountCr": 0.09,
+          "percent": 0.03
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 01715/02/13 PENSMAXIMI 104-PENSION MAXIMISER FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 25116,
+          "sharesFormatted": "25,116",
+          "amountCr": 1.59,
+          "percent": 0.5
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULIF 00625/11/05 PENSBALANC 104-PENSION BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 1380,
+          "sharesFormatted": "1,380",
+          "amountCr": 0.09,
+          "percent": 0.03
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-ULGF 00217/04/06 GRATBALANC 104-GROUP GRATUITY BALANCED FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 4025,
+          "sharesFormatted": "4,025",
+          "amountCr": 0.25,
+          "percent": 0.08
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UMFPH-HIGH GROWTH PENSION FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 6992,
+          "sharesFormatted": "6,992",
+          "amountCr": 0.44,
+          "percent": 0.14
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UHG2S-INDIA CONSUMPTION OPPORTUNITIES FUND",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 5566,
+          "sharesFormatted": "5,566",
+          "amountCr": 0.35,
+          "percent": 0.11
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-UEGFH-HIGH GROWTH FUND II",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 78200,
+          "sharesFormatted": "78,200",
+          "amountCr": 4.94,
+          "percent": 1.56
+        },
+        {
+          "name": "AXIS MAX LIFE INSURANCE LTD.-SUSTAINABLE EQUITY FUND-ULIF02505/10/21 SUSTAINEQU104",
+          "group": "AXIS MAX LIFE INSURANCE",
+          "shares": 35581,
+          "sharesFormatted": "35,581",
+          "amountCr": 2.25,
+          "percent": 0.71
+        },
+        {
+          "name": "ABAKKUS FLEXI EDGE FUND 1",
+          "group": "ABAKKUS",
+          "shares": 158240,
+          "sharesFormatted": "1,58,240",
+          "amountCr": 10,
+          "percent": 3.16
+        },
+        {
+          "name": "BANK OF INDIA BUSINESS CYCLE FUND",
+          "group": "BANK OF INDIA MUTUAL FUND",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "UNION SMALL CAP FUND",
+          "group": "UNION MUTUAL FUND",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "TRUST MF MID CAP FUND",
+          "group": "TRUST MUTUAL FUND",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "GROWW SMALL CAP FUND",
+          "group": "GROWW MUTUAL FUND",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "KOTAK MAHINDRA LIFE INSURANCE CO.LTD.",
+          "group": "KOTAK LIFE INSURANCE",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "EDELWEISS LIFE INSURANCE CO.LTD.",
+          "group": "EDELWEISS LIFE INSURANCE",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "BHARTI AXA LIFE INSURANCE CO.LTD.",
+          "group": "BHARTI AXA LIFE INSURANCE",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "NUVAMA CROSSOVER OPPORTUNITIES FUND-SERIES III A",
+          "group": "NUVAMA",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "ICICI PRUDENTIAL SMART FUND",
+          "group": "ICICI PRUDENTIAL MUTUAL FUND",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "INDIA CAPITAL GROWTH FUND LTD.",
+          "group": "INDIA CAPITAL",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "MOTILAL OSWAL FINVEST LTD.",
+          "group": "MOTILAL OSWAL",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        },
+        {
+          "name": "SOCIETE GENERALE",
+          "group": "SOCIETE GENERAL",
+          "shares": 79120,
+          "sharesFormatted": "79,120",
+          "amountCr": 5,
+          "percent": 1.58
+        }
+      ],
+      "anchorShares": 5011424,
       "totalShares": 16704750,
       "rhpUrl": "https://www.iiflcapital.com/institutional-equities/upload/investmentbanking/prospects/kanohar_electricals_limited_-_rhp.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_capital_structure_1788413207.pdf",
@@ -45823,7 +48105,8 @@
       "priceBand": "₹601–632",
       "listingDate": "2026-09-18T18:30:00.000Z",
       "openDate": "2026-09-11T18:30:00.000Z",
-      "closeDate": "2026-09-14T18:30:00.000Z"
+      "closeDate": "2026-09-14T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/kanohar_electricals_ltd_mainboard_anchor_1788799909.pdf"
     },
     {
       "companyName": "Pranav Constructions Ltd.",
@@ -46100,7 +48383,7 @@
         ]
       },
       "lotSize": 2000,
-      "priceBand": "₹60",
+      "priceBand": "₹60–60",
       "preIpoWaca": 10,
       "listingDate": "2026-09-17T18:30:00.000Z",
       "openDate": "2026-09-10T18:30:00.000Z",
@@ -46259,7 +48542,7 @@
         }
       ],
       "lotSize": 1200,
-      "priceBand": "₹102",
+      "priceBand": "₹102–102",
       "preIpoWaca": 10,
       "listingDate": "2026-09-10T18:30:00.000Z",
       "openDate": "2026-09-03T18:30:00.000Z",
@@ -46370,7 +48653,11 @@
       "companyName": "National Stock Exchange of India Ltd. (NSE IPO)",
       "issueType": "Mainboard",
       "exchange": "BSE",
-      "allotmentDate": null,
+      "allotmentDate": {
+        "original": "2026-09-21T18:30:00.000Z",
+        "adjusted": "2026-09-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
       "issuePrice": null,
       "anchor30": null,
@@ -46379,8 +48666,12 @@
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 148905525,
-      "rhpUrl": "",
-      "capitalStructureUrl": ""
+      "rhpUrl": "https://www.bseindia.com/corporates/download/327007/IPO%20Prior/NSEDRHP_20260617214858.pdf",
+      "capitalStructureUrl": "",
+      "priceBand": "₹0–0",
+      "listingDate": "2026-09-23T18:30:00.000Z",
+      "openDate": "2026-09-16T18:30:00.000Z",
+      "closeDate": "2026-09-20T18:30:00.000Z"
     },
     {
       "companyName": "Axiom Gas Engineering Ltd.",
@@ -46402,7 +48693,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1070400,
       "totalShares": 9398000,
       "rhpUrl": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/axiom_gas_engineering_ltd_nse_sme_capital_structure_1788933277.pdf",
@@ -46423,7 +48714,12 @@
         "Alpeshkumar Naginbhai Patel",
         "Mr. Sadique Abdul Kadar Banani",
         "Abdul Kadar Banani and Asma Mohamad Sadique Banani hold"
-      ]
+      ],
+      "priceBand": "₹50–53",
+      "lotSize": 2000,
+      "listingDate": "2026-09-24T18:30:00.000Z",
+      "openDate": "2026-09-17T18:30:00.000Z",
+      "closeDate": "2026-09-21T18:30:00.000Z"
     },
     {
       "companyName": "Kheria Autocomp Ltd.",
@@ -46435,7 +48731,7 @@
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
-      "issuePrice": null,
+      "issuePrice": 101,
       "anchor30": null,
       "anchor90": null,
       "preIPO": {
@@ -46446,9 +48742,23 @@
       },
       "anchorInvestors": [],
       "anchorShares": 1310400,
-      "totalShares": 4600000,
+      "totalShares": 4598400,
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/kheria_autocomp_limited_rhp-1.pdf",
-      "capitalStructureUrl": ""
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/kheria_autocomp_ltd_nse_sme_capital_structure_1789027625.pdf",
+      "priceBand": "₹96–101",
+      "lotSize": 1200,
+      "listingDate": "2026-09-23T18:30:00.000Z",
+      "openDate": "2026-09-16T18:30:00.000Z",
+      "closeDate": "2026-09-20T18:30:00.000Z",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Foreign Direct Investment",
+        "Tara Chand",
+        "Mutual Funds",
+        "Private Limited",
+        "Santosh Devi",
+        "Alternate Investment Funds"
+      ]
     },
     {
       "companyName": "Sonaselection India Ltd.",
@@ -46460,7 +48770,7 @@
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
-      "issuePrice": null,
+      "issuePrice": 99,
       "anchor30": null,
       "anchor90": null,
       "preIPO": {
@@ -46490,7 +48800,12 @@
         "Sona Polyspin Pvt Ltd",
         "Sona Polyspin Private Limited (₹29.19)"
       ],
-      "preIpoWaca": 44.71
+      "preIpoWaca": 44.71,
+      "priceBand": "₹94–99",
+      "lotSize": 150,
+      "listingDate": "2026-09-23T18:30:00.000Z",
+      "openDate": "2026-09-16T18:30:00.000Z",
+      "closeDate": "2026-09-20T18:30:00.000Z"
     },
     {
       "companyName": "Jindal Supreme (India) Ltd.",
@@ -46520,7 +48835,12 @@
       "preIpoInvestors": [
         "any Applicant,",
         "Mange Ram"
-      ]
+      ],
+      "priceBand": "₹88–93",
+      "lotSize": 161,
+      "listingDate": "2026-09-22T18:30:00.000Z",
+      "openDate": "2026-09-15T18:30:00.000Z",
+      "closeDate": "2026-09-17T18:30:00.000Z"
     },
     {
       "companyName": "SS Retail Ltd.",
@@ -46532,7 +48852,7 @@
         "isAdjusted": false
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ss-retail-ipo/2822/",
-      "issuePrice": null,
+      "issuePrice": 424,
       "anchor30": null,
       "anchor90": null,
       "preIPO": {
@@ -46543,7 +48863,7 @@
       },
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 0,
+      "totalShares": 11810182,
       "rhpUrl": "https://ssmobile.com/aboutus/investor/assets/RHP/SS%20Retail%20Limited%20-%20RHP%20-%2008092026.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ss_retail_ltd_mainboard_capital_structure_1788947112.pdf",
       "preIpoChecked": true,
@@ -46553,7 +48873,12 @@
         "Bhavini Harshal",
         "Rakhi Narendra"
       ],
-      "preIpoWaca": 7.57
+      "preIpoWaca": 7.57,
+      "priceBand": "₹403–424",
+      "lotSize": 35,
+      "listingDate": "2026-09-22T18:30:00.000Z",
+      "openDate": "2026-09-15T18:30:00.000Z",
+      "closeDate": "2026-09-17T18:30:00.000Z"
     },
     {
       "companyName": "Quanto Agroworld Ltd.",
@@ -46590,7 +48915,12 @@
         "Incorporat Subscriber",
         "Dushyant Kumar Gupta",
         "Sangeeta Surendra Agarwal"
-      ]
+      ],
+      "priceBand": "₹67–67",
+      "lotSize": 2000,
+      "listingDate": "2026-09-21T18:30:00.000Z",
+      "openDate": "2026-09-14T18:30:00.000Z",
+      "closeDate": "2026-09-16T18:30:00.000Z"
     },
     {
       "companyName": "Shakti Polytarp Ltd.",
@@ -46628,7 +48958,12 @@
         "Ramesh Chandra Siroya",
         "Priyal Singhal",
         "Santosh Kataria"
-      ]
+      ],
+      "priceBand": "₹56–59",
+      "lotSize": 2000,
+      "listingDate": "2026-09-21T18:30:00.000Z",
+      "openDate": "2026-09-14T18:30:00.000Z",
+      "closeDate": "2026-09-16T18:30:00.000Z"
     },
     {
       "companyName": "Injecto Polymers Ltd.",
@@ -46649,14 +48984,115 @@
         "isAdjusted": false,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "LONGTHRIVE CAPITAL VCC-TRENDVIEW CAPITAL FUND",
+          "group": "LONGTHRIVE CAPITAL VCC",
+          "shares": 399600,
+          "sharesFormatted": "3,99,600",
+          "amountCr": 4,
+          "percent": 41.73
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 300000,
+          "sharesFormatted": "3,00,000",
+          "amountCr": 3,
+          "percent": 31.33
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-ELITE CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 258000,
+          "sharesFormatted": "2,58,000",
+          "amountCr": 2.58,
+          "percent": 26.94
+        }
+      ],
       "anchorShares": 957600,
       "totalShares": 5612400,
       "rhpUrl": "https://injectopolymers.in/wp-content/uploads/2026/09/1.-RHP_07.09.2026.pdf",
-      "capitalStructureUrl": ""
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/injecto_polymers_ltdbse_sme_capital_structure_1788850445.pdf",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/injecto_polymers_ltdbse_sme_anchor_1789050368.pdf",
+      "priceBand": "₹98–100",
+      "lotSize": 1200,
+      "listingDate": "2026-09-20T18:30:00.000Z",
+      "openDate": "2026-09-10T18:30:00.000Z",
+      "closeDate": "2026-09-15T18:30:00.000Z",
+      "preIpoChecked": true,
+      "preIpoInvestors": [
+        "Novel Apartments Pvt Ltd. (₹42.55)",
+        "Ultimate Agency Pvt Ltd (₹42.55)",
+        "Nivedeeka Commercial Private Limited (₹10.99)",
+        "Devansh Agarwal",
+        "Prerna Agency Private Limited",
+        "Ashok Kumar Rateria",
+        "Shiv Towers Pvt Ltd (₹42.55)",
+        "Prerna Jain",
+        "Shipra Retailer Private Limited",
+        "Shrey Banka",
+        "Rajat Rateria",
+        "Piyush Mundhra",
+        "Shipra Retailers Private Limited",
+        "Bhagyashri Trading Private",
+        "Mahajan Vyapar Private Limited (₹800)",
+        "Hind Polyfabs Pvt Ltd",
+        "Shivangi Bansal",
+        "Prerna Agency Pvt Ltd (₹42.55)",
+        "Nivedeeka Commercial Private",
+        "Sunil Agarwal",
+        "Holdings Private",
+        "Vikash Agarwal",
+        "Advisory Private",
+        "Nilkanth Commercial Private Limited",
+        "Suman Towers Private Limited (₹12.12)",
+        "Bajrang Lal Garg",
+        "Aparana Mundhra",
+        "Hind Polyfabs Private Limited (₹42.55)",
+        "Sur-Mangal Holdings Private Limited",
+        "Shikha Goel",
+        "Palak Tradelink Private Limited",
+        "Shivarpan Vanijya Private Limited (₹17)",
+        "Vinayak Tie Up Private Limited",
+        "Nihon Impex Private Limited (₹17)",
+        "Amit Garg HUF",
+        "Sampark Consultants Private Limited",
+        "Schemes of Arrangement",
+        "Sumit Garg HUF",
+        "Ankita Baid",
+        "Debraj Pande",
+        "Bhagyashri Trading Private Limited (₹11.43)",
+        "Sidarth Agarwal",
+        "Ramesh Kumar Rateria Chairman and",
+        "Novel Apartments Private Limited",
+        "Uphar Vintrade Pvt Ltd (₹42.55)",
+        "Up Private Limited",
+        "Ankit Singhania",
+        "Ramesh Kumar Rateria",
+        "Sampark Consultants Limited",
+        "Mukesh Baid",
+        "Rupam Rateria",
+        "Vidyuth NV",
+        "Sanchit Goel",
+        "Pets Paradise and Multitrade LLP",
+        "Nupur Somani",
+        "Snehal Rateria",
+        "Kred Hospitality LLP",
+        "Gulab Kathotia",
+        "Crystals Share Broking Pvt Ltd. (₹42.55)",
+        "Palak Tradelink Pvt Ltd. (₹42.55)",
+        "Kaypee Infocom Pvt Ltd. (₹42.55)",
+        "Prem Rateria",
+        "Jayesh Mohata",
+        "Vinayak Tie-up Private Limited (₹11.32)",
+        "Trading Private",
+        "Sunita Agarwal",
+        "Shiv Towers Private Limited"
+      ]
     }
   ],
-  "lastUpdated": "2026-09-09T16:59:21.037Z",
+  "lastUpdated": "2026-09-10T15:09:54.055Z",
   "lastScraped": {
     "time": "2026-09-09T16:57:44.724Z",
     "scraped2025": 6,
@@ -47346,6 +49782,394 @@
       "preIpoWaca": 63.15,
       "isScannedPDF": false,
       "fetchedAt": "2026-09-10T14:58:00.488Z"
+    },
+    "Steamhouse India Ltd.": {
+      "found": true,
+      "source": "RHP",
+      "totalShares": 232826065,
+      "preIpoInvestors": [
+        {
+          "name": "Singularity Large Value Fund III",
+          "shares": 4794520,
+          "acquisitionPrice": 73,
+          "date": "2026-06-24",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Private Placement"
+        },
+        {
+          "name": "Niveshaay Sambhav Fund",
+          "shares": 1369863,
+          "acquisitionPrice": 73,
+          "date": "2026-06-24",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Private Placement"
+        },
+        {
+          "name": "Singularity Equity Fund I",
+          "shares": 684932,
+          "acquisitionPrice": 73,
+          "date": "2026-06-24",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Private Placement"
+        },
+        {
+          "name": "Suchi Goenka",
+          "shares": 450000,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Pre-IPO Allotment & Bonus"
+        },
+        {
+          "name": "Rahul Vijaykumar Agarwal",
+          "shares": 413734,
+          "acquisitionPrice": 38.67,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement & Bonus"
+        },
+        {
+          "name": "Gitadevi Vijaykumar Agrawal",
+          "shares": 382500,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Manish Vijaykumar Agrawal",
+          "shares": 195000,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Ruchi Agrawal",
+          "shares": 195000,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Sweta Agarwal",
+          "shares": 189000,
+          "acquisitionPrice": 1.59,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement & Bonus"
+        },
+        {
+          "name": "Suchika Agrawal",
+          "shares": 187500,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Vikas Vijaykumar Agrawal",
+          "shares": 187500,
+          "acquisitionPrice": 0,
+          "date": "2023-10-05",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Bonus Allotment"
+        },
+        {
+          "name": "Abhishek Yudhishter Batra",
+          "shares": 75000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Anilkumar Hasmukhbhai Patel",
+          "shares": 55000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Rajivkumar Narayandas Batra",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Tanmaya Murarilal Agrawal",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sanjay Kedarmal Sudrania",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Salony Rathi Jhawar",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Swastik Polyprints Private Limited",
+          "shares": 50000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Atulkumar Hastimal Mehta",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Komal Rajivkumar Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vinay Yudhisthir Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Samarth Rajivbhai Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sahil Yudhisthir Batra",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Mamta Rahul Sharma",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Saraogi Viniyog Private Limited",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sudarshan Taparia",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vrinda Binay Agarwal",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vedika Vinay Khemka",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Lalit Radhakisan Agarwal",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Taj Vincom Private Limited",
+          "shares": 25000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Shah Krunal Shirish",
+          "shares": 17500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Santosh Devi Agarwal",
+          "shares": 15000,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Aaditya Bajaj",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Mehta Wealth Limited",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Punitkumar Vijaykumar Agarwal",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Vishal Sanghai",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Gaurav Singhvi",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Sonam Jain",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Shrikant Goenka",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Suman Sumit Saraogi",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Ashish V Singhal",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        },
+        {
+          "name": "Shaileshkumar Ishwarlal Patel",
+          "shares": 12500,
+          "acquisitionPrice": 200,
+          "date": "2024-03-28",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-17",
+          "type": "Private Placement"
+        }
+      ],
+      "preIpoWaca": 73,
+      "isScannedPDF": false,
+      "fetchedAt": "2026-09-10T15:13:13.157Z"
     }
   }
 }
