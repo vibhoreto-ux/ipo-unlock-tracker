@@ -1,6 +1,33 @@
 {
   "companies": [
     {
+      "companyName": "Spectraa Technology Ltd. (NSE SME )",
+      "issueType": "SME",
+      "exchange": "NSE SME",
+      "allotmentDate": {
+        "original": "2026-09-21T18:30:00.000Z",
+        "adjusted": "2026-09-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": null,
+      "issuePrice": 118,
+      "priceBand": "₹112–118",
+      "lotSize": 1200,
+      "openDate": "2026-09-16T18:30:00.000Z",
+      "closeDate": "2026-09-20T18:30:00.000Z",
+      "listingDate": "2026-09-23T18:30:00.000Z",
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 3476000,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/spectraa_technology_ltd_nse_sme_rhp_1789109894.pdf",
+      "capitalStructureUrl": null,
+      "anchorUrl": null,
+      "preIpoInvestors": []
+    },
+    {
       "companyName": "Vama Wovenfab Ltd.",
       "issueType": "SME",
       "exchange": "BSE SME",
@@ -25,7 +52,17 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vama_wovenfab_ltd_bse_sme_rhp_1789026151.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vama_wovenfab_ltd_bse_sme_capital_structure_1789026506.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Mrs. Usha Suresh Gupta",
+        "Vasundhara Chem Plast Industries",
+        "Mrs. Nisha Vaibhav Gupta",
+        "Mr. Vaibhav Suresh Gupta",
+        "Mr. Saurabh Suresh Gupta",
+        "Mr. Suresh Mohanlal Gupta",
+        "any Applicant",
+        "Mrs. Sheetal Saurabh Gupta",
+        "this Offer"
+      ],
       "preIpoChecked": true,
       "preIpoWaca": 105,
       "waca": 105
@@ -309,7 +346,41 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_rhp_1788537648.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_capital_structure_1788501563.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/karamtara_engineering_ltd_mainboard_anchor_1788878435.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Aquamarine Trading & Investments Private Limited (₹310)",
+        "Tanveer Singh, Rajiv Singh, Inderjeet Singh and",
+        "Axia Select (₹10)",
+        "Jignesh Anantrai Shah, (₹10)",
+        "Inderjeet Tanveer Singh",
+        "Gaitri Singh and Sonal Singh, and (₹10)",
+        "Inderjeet Singh, and",
+        "Kumar Nath, (₹10)",
+        "Tanveer Singh and Rajiv Singh, and",
+        "Opportunities Fund,",
+        "Tanveer every (₹10)",
+        "Govind Kripa Enclave LLP (₹310)",
+        "Tanveer Singh and Rajiv Singh. (₹10)",
+        "I and Gaurav Trehan,",
+        "Amara Partners Growth Fund -I (₹10)",
+        "Tancom Electronics Private Limited (₹310)",
+        "Hina J Parekh Family Trust and Jayesh D Parekh Family",
+        "Quantum State Investment Fund, (₹10)",
+        "Tanveer Singh and Rajiv Singh (₹10)",
+        "Akshay Tanna, (₹10)",
+        "India Opportunities Growth Fund Ltd – Pinewood Strategy (₹310)",
+        "Jayesh Pillai and Vinodkumar Mg Nair, (₹10)",
+        "Mithun Padam Sacheti and (₹10)",
+        "Inderjeet Tanveer (₹10)",
+        "Siddhartha Sacheti,",
+        "Ananta Capital Venture Fund",
+        "Inderjeet Singh",
+        "MNI Ventures (₹10)",
+        "Private placement* (₹10)",
+        "Bhansali Trade Ventures LLP (₹310)",
+        "their respective Offered Shares,",
+        "Enterprises Private Limited,",
+        "Singh, and"
+      ],
       "name": "Karamtara Engineering Ltd",
       "lotSize": 59,
       "preIpoChecked": true
@@ -1246,7 +1317,11 @@
       "rhpUrl": "https://hemadmin.hemsecurities.com/images/Files/offer/3167.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/century_business_media_ltd_bse_sme_capital_structure_1789017176.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/century_business_media_ltd_bse_sme_anchor_1789046838.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Exchanges within",
+        "Shreya Chaudhary",
+        "Shashi Kumar Chaudhary"
+      ],
       "name": "Century Business Media Ltd",
       "lotSize": 1600,
       "preIpoChecked": true,
@@ -1318,8 +1393,8 @@
           "percent": 10.63
         }
       ],
-      "anchorShares": 0,
-      "totalShares": 29186045,
+      "anchorShares": 8755813,
+      "totalShares": 29186046,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_rhp_1788683576.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_capital_structure_1788684348.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/manika_plastech_ltd_mainboard_anchor_1789048085.pdf",
@@ -2764,7 +2839,11 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_rhp_1788505178.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_capital_structure_1788505310.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/lcc_projects_ltd_mainboard_anchor_1788879550.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Arjan Suja",
+        "Maya Arjan",
+        "Maya Arjan Rabari"
+      ],
       "preIpoWaca": 0,
       "preIpoChecked": true,
       "priceBand": "₹139–146",
@@ -2784,7 +2863,7 @@
         "isAdjusted": false
       },
       "chittorgarhUrl": null,
-      "issuePrice": null,
+      "issuePrice": 1785,
       "anchor30": null,
       "anchor90": null,
       "preIPO": null,
@@ -2798,7 +2877,8 @@
       "priceBand": "₹0–0",
       "listingDate": "2026-09-23T18:30:00.000Z",
       "openDate": "2026-09-16T18:30:00.000Z",
-      "closeDate": "2026-09-20T18:30:00.000Z"
+      "closeDate": "2026-09-20T18:30:00.000Z",
+      "lotSize": 8
     },
     {
       "companyName": "Rentomojo Ltd.",
@@ -30899,22 +30979,8 @@
       "totalShares": 5269200,
       "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/06/rhphorizon.pdf",
       "preIpoInvestors": [
-        {
-          "name": "Gracious Advisors LLP",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 103,
-          "acquisitionPrice": 103,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Yogesh Chaudhary",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 103,
-          "acquisitionPrice": 103,
-          "category": "Pre-IPO Shareholder"
-        }
+        "Gracious Advisors LLP (₹103.00)",
+        "Yogesh Chaudhary (₹103.00)"
       ],
       "preIpoWaca": 103,
       "peerComparison": {
@@ -31030,46 +31096,11 @@
       "totalShares": 30859704,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_HEXAGON.zip",
       "preIpoInvestors": [
-        {
-          "name": "Tata Capital Financial Services Limited",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 20,
-          "acquisitionPrice": 20,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Investcorp PE Fund II",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 20,
-          "acquisitionPrice": 20,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Malabar India Fund Limited",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 20,
-          "acquisitionPrice": 20,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Malabar Value Fund",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 20,
-          "acquisitionPrice": 20,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Ohm Capital",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 20,
-          "acquisitionPrice": 20,
-          "category": "Pre-IPO Shareholder"
-        }
+        "Tata Capital Financial Services Limited (₹20.00)",
+        "Investcorp PE Fund II (₹20.00)",
+        "Malabar India Fund Limited (₹20.00)",
+        "Malabar Value Fund (₹20.00)",
+        "Ohm Capital (₹20.00)"
       ],
       "preIpoWaca": 20,
       "peerComparison": {
@@ -31243,182 +31274,28 @@
       "totalShares": 4728000,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_GENXAI.zip",
       "preIpoInvestors": [
-        {
-          "name": "Aadishakti Steels",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Anshu Gupta",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Garv Agarwal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Sunita Agrawal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "SP Holdings",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Abhishek Tibrewal HUF",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Mridul Agarwal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Nidhi Aggarwal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Saloni Ramratan Chirania",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Nitesh Agarwal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Poonam Sunil Bagaria",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Sandeep Mandawewala",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Accufolio Risers LLP",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "YBRA Ventures LLP",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Shaily Dinesh Jain",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Shriram Chandak",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Sunil Kumar Khandal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Seema Sharma",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Sunil Kumar Khandal HUF",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Sushila Sharma",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Rakesh Khandelwal",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Namrta Arora",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 70.4,
-          "acquisitionPrice": 70.4,
-          "category": "Pre-IPO Shareholder"
-        }
+        "Aadishakti Steels (₹70.40)",
+        "Anshu Gupta (₹70.40)",
+        "Garv Agarwal (₹70.40)",
+        "Sunita Agrawal (₹70.40)",
+        "SP Holdings (₹70.40)",
+        "Abhishek Tibrewal HUF (₹70.40)",
+        "Mridul Agarwal (₹70.40)",
+        "Nidhi Aggarwal (₹70.40)",
+        "Saloni Ramratan Chirania (₹70.40)",
+        "Nitesh Agarwal (₹70.40)",
+        "Poonam Sunil Bagaria (₹70.40)",
+        "Sandeep Mandawewala (₹70.40)",
+        "Accufolio Risers LLP (₹70.40)",
+        "YBRA Ventures LLP (₹70.40)",
+        "Shaily Dinesh Jain (₹70.40)",
+        "Shriram Chandak (₹70.40)",
+        "Sunil Kumar Khandal (₹70.40)",
+        "Seema Sharma (₹70.40)",
+        "Sunil Kumar Khandal HUF (₹70.40)",
+        "Sushila Sharma (₹70.40)",
+        "Rakesh Khandelwal (₹70.40)",
+        "Namrta Arora (₹70.40)"
       ],
       "preIpoWaca": 70.4
     },
@@ -31446,86 +31323,16 @@
       "totalShares": 2242000,
       "rhpUrl": "https://www.bsesme.com/download/329359/SME_IPO%20InPrinciple/VahhDRHP03122025_20251203235722.pdf",
       "preIpoInvestors": [
-        {
-          "name": "Aayush Hiren Desai",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Ruchik Kirtikumar Mehta",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Hiren Indravadan Desai",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Hetal Hirenbhai Desai",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Gita Mukeshkumar Mehta",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Mukeshkumar Rameshchandra Mehta",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Vishnudatt Vidhyasagar Tiwari",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Cravexnuts Foods LLP",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "HSHS Nutraceuticals Limited",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        },
-        {
-          "name": "Vedant Nutraceuticals Limited",
-          "shares": "—",
-          "date": "Pre-IPO",
-          "buyPrice": 6.06,
-          "acquisitionPrice": 6.06,
-          "category": "Pre-IPO Shareholder"
-        }
+        "Aayush Hiren Desai (₹6.06)",
+        "Ruchik Kirtikumar Mehta (₹6.06)",
+        "Hiren Indravadan Desai (₹6.06)",
+        "Hetal Hirenbhai Desai (₹6.06)",
+        "Gita Mukeshkumar Mehta (₹6.06)",
+        "Mukeshkumar Rameshchandra Mehta (₹6.06)",
+        "Vishnudatt Vidhyasagar Tiwari (₹6.06)",
+        "Cravexnuts Foods LLP (₹6.06)",
+        "HSHS Nutraceuticals Limited (₹6.06)",
+        "Vedant Nutraceuticals Limited (₹6.06)"
       ],
       "preIpoWaca": 6.06
     },
@@ -40337,12 +40144,15 @@
       "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_capital_structure_1786426762.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_anchor_1786970543.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "any Investor"
+      ],
       "priceBand": "₹342–360",
       "lotSize": 41,
       "listingDate": "2026-08-24T18:30:00.000Z",
       "openDate": "2026-08-17T18:30:00.000Z",
-      "closeDate": "2026-08-19T18:30:00.000Z"
+      "closeDate": "2026-08-19T18:30:00.000Z",
+      "preIpoChecked": true
     },
     {
       "companyName": "Shankesh Jewellers Ltd.",
@@ -40366,9 +40176,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-02-26T00:00:00.000Z",
+        "expiryDate": "2027-02-25",
         "originalDate": "2027-02-26T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -46105,7 +45915,12 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_capital_structure_1785491886.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_anchor_1786026596.pdf",
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/technocraft_ventures_ltd_mainboard_rhp_1785490282.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Rekha Tyagi",
+        "Sanjay Tyagi",
+        "Sanjay Tyagi HUF",
+        "Kartikey Tyagi"
+      ],
       "preIpoWaca": 121.76,
       "anchorInvestors": [
         {
@@ -46147,7 +45962,8 @@
       "lotSize": 70,
       "listingDate": "2026-08-13T18:30:00.000Z",
       "openDate": "2026-08-06T18:30:00.000Z",
-      "closeDate": "2026-08-10T18:30:00.000Z"
+      "closeDate": "2026-08-10T18:30:00.000Z",
+      "preIpoChecked": true
     },
     {
       "companyName": "LEAP India Ltd.",
@@ -53557,7 +53373,9 @@
       "totalShares": 15000000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_rhp_1788214693.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/veegaland_developers_ltd_mainboard_capital_structure_1788214694.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "any Investor"
+      ],
       "preIpoWaca": 62.3,
       "preIpoChecked": true,
       "lotSize": 107,
@@ -55034,7 +54852,7 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-09-13T00:00:00.000Z",
+        "expiryDate": "2027-09-09",
         "originalDate": "2027-09-11T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
@@ -55266,35 +55084,12 @@
       ],
       "anchorShares": 1579000,
       "totalShares": 5550000,
-      "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_270820262204.zip",
-      "capitalStructureUrl": null,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_rhp_1787401623.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_capital_structure_1787401598.pdf",
       "listingDate": "2026-09-06T18:30:00.000Z",
       "openDate": "2026-08-30T18:30:00.000Z",
-      "closeDate": "2026-09-02T18:30:00.000Z"
-    },
-    {
-      "companyName": "National Stock Exchange of India Ltd. (NSE IPO)",
-      "issueType": "Mainboard",
-      "exchange": "BSE",
-      "allotmentDate": {
-        "original": "2026-09-21T18:30:00.000Z",
-        "adjusted": "2026-09-21T18:30:00.000Z",
-        "isAdjusted": false
-      },
-      "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
-      "issuePrice": null,
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 148905525,
-      "rhpUrl": "https://www.bseindia.com/corporates/download/327007/IPO%20Prior/NSEDRHP_20260617214858.pdf",
-      "capitalStructureUrl": "",
-      "priceBand": "₹0–0",
-      "listingDate": "2026-09-23T18:30:00.000Z",
-      "openDate": "2026-09-16T18:30:00.000Z",
-      "closeDate": "2026-09-20T18:30:00.000Z"
+      "closeDate": "2026-09-02T18:30:00.000Z",
+      "anchorUrl": "https://assets.ipopremium.in/images/ipo/complete_sports_management_india_ltd_bse_sme_anchor_1787838346.pdf"
     },
     {
       "companyName": "Axiom Gas Engineering Ltd.",
@@ -55321,7 +55116,23 @@
       "rhpUrl": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/axiom_gas_engineering_ltd_nse_sme_capital_structure_1788933277.pdf",
       "preIpoChecked": true,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Naginbhai Nathabai Patel",
+        "Kinnari Alpeshkumar Patel",
+        "Kadar Banani",
+        "Sadique Abdul Kadar Banani",
+        "Mr. Alpeshkumar Naginbhai Patel",
+        "Asma Mohamad Sadique Banani",
+        "Abdul Kadar Banani and Asma Mohamad Sadique Banani hold",
+        "Mrs. Kinnari Alpeshkumar Patel",
+        "Sushilaben Naginbhai Patel",
+        "Naginbhai Patel",
+        "Vedanti Alpeshkumar Patel",
+        "Gift of",
+        "Mr. Sadique Abdul Kadar Banani",
+        "Alpeshkumar Naginbhai Patel",
+        "Mrs. Asma Mohamad Sadique Banani"
+      ],
       "priceBand": "₹50–53",
       "lotSize": 2000,
       "listingDate": "2026-09-24T18:30:00.000Z",
@@ -55358,7 +55169,14 @@
       "openDate": "2026-09-16T18:30:00.000Z",
       "closeDate": "2026-09-20T18:30:00.000Z",
       "preIpoChecked": true,
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "Alternate Investment Funds",
+        "Private Limited",
+        "Foreign Direct Investment",
+        "Tara Chand",
+        "Santosh Devi",
+        "Mutual Funds"
+      ]
     },
     {
       "companyName": "Sonaselection India Ltd.",
@@ -55523,7 +55341,10 @@
       "rhpUrl": "https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/jindal_supreme_india_ltd_mainboard_capital_structure_1788861284.pdf",
       "preIpoChecked": true,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "any Applicant,",
+        "Mange Ram"
+      ],
       "priceBand": "₹88–93",
       "lotSize": 161,
       "listingDate": "2026-09-22T18:30:00.000Z",
@@ -55555,7 +55376,12 @@
       "rhpUrl": "https://ssmobile.com/aboutus/investor/assets/RHP/SS%20Retail%20Limited%20-%20RHP%20-%2008092026.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ss_retail_ltd_mainboard_capital_structure_1788947112.pdf",
       "preIpoChecked": true,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Deepa Siddharth",
+        "Bhavini Harshal",
+        "Rakhi Narendra",
+        "Harshal Kishor"
+      ],
       "preIpoWaca": 7.57,
       "priceBand": "₹403–424",
       "lotSize": 35,
@@ -55588,7 +55414,17 @@
       "rhpUrl": "https://syjjlswidlmfzafnyaen.supabase.co/storage/v1/object/public/investor-documents/DRAFT_PROSPECTUS_QUANTO_27-02-2026.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/quanto_agroworld_ltd_bse_sme_capital_structure_1788936040.pdf",
       "preIpoChecked": true,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Surendra Kumar Babulal Agarwal",
+        "Ruchi Ritesh Kakkad",
+        "Padam were",
+        "Dushyant Kumar Gupta",
+        "Dushyant Kumar Yatendra Gupta",
+        "Krushnarao Bhaskarrao Nimbalkar",
+        "Meghna Hitesh Kakkad",
+        "Sangeeta Surendra Agarwal",
+        "Incorporat Subscriber"
+      ],
       "priceBand": "₹67–67",
       "lotSize": 2000,
       "listingDate": "2026-09-21T18:30:00.000Z",
@@ -55620,7 +55456,18 @@
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/shakti-polytarp-ltd-rhp.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shakti_polytarp_ltd_bse_sme_capital_structure_1788934843.pdf",
       "preIpoChecked": true,
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        "Ajay Gangrade",
+        "Vivek Singhal",
+        "Ramesh Chandra Siroya",
+        "Ravi Singhal",
+        "Gaurav Gangrade",
+        "Priyal Singhal",
+        "Santosh Kataria",
+        "Vijay Gangrade",
+        "Trisha Singhal",
+        "Jyoti Gangrade"
+      ],
       "priceBand": "₹56–59",
       "lotSize": 2000,
       "listingDate": "2026-09-21T18:30:00.000Z",
@@ -56183,7 +56030,7 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-10T15:09:54.055Z",
+  "lastUpdated": "2026-09-11T11:46:33.411Z",
   "lastScraped": {
     "time": "2026-09-09T16:57:44.724Z",
     "scraped2025": 6,
@@ -57261,6 +57108,93 @@
       "preIpoWaca": 73,
       "isScannedPDF": false,
       "fetchedAt": "2026-09-10T15:13:13.157Z"
+    },
+    "Qualiance International Ltd.": {
+      "found": true,
+      "totalShares": 13452000,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 2543000,
+          "percentage": 18.9,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-10-08",
+          "shares": 502000,
+          "percentage": 3.7
+        },
+        {
+          "date": "2026-12-07",
+          "shares": 507000,
+          "percentage": 3.8
+        },
+        {
+          "date": "2027-08-29",
+          "shares": 72000,
+          "percentage": 0.5
+        },
+        {
+          "date": "2027-08-31",
+          "shares": 315000,
+          "percentage": 2.3
+        },
+        {
+          "date": "2027-09-09",
+          "shares": 4311000,
+          "percentage": 32
+        },
+        {
+          "date": "2028-09-09",
+          "shares": 2510000,
+          "percentage": 18.7
+        },
+        {
+          "date": "2030-03-30",
+          "shares": 2692000,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/76294",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76294.zip",
+      "fetchedAt": "2026-09-11T11:37:56.821Z"
+    },
+    "Shankesh Jewellers Ltd.": {
+      "found": true,
+      "totalShares": 147031420,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 27637400,
+          "percentage": 18.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-19",
+          "shares": 5922300,
+          "percentage": 4
+        },
+        {
+          "date": "2026-11-18",
+          "shares": 5922300,
+          "percentage": 4
+        },
+        {
+          "date": "2027-02-25",
+          "shares": 92092540,
+          "percentage": 62.6
+        },
+        {
+          "date": "2028-02-25",
+          "shares": 15456880,
+          "percentage": 10.5
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75930",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75930.zip",
+      "fetchedAt": "2026-09-11T11:37:57.627Z"
     }
   }
 }

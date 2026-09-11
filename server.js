@@ -688,7 +688,7 @@ async function probeUpcomingData() {
                 !company.capitalStructureUrl.toLowerCase().includes('capital_structure');
             const isPreIpoMissing = !company.preIpoInvestors || company.preIpoInvestors.length === 0;
 
-            if (isCsMissingOrRhp || isPreIpoMissing || !company.anchorUrl) {
+            if (isCsMissingOrRhp || isPreIpoMissing || !company.anchorUrl || !company.rhpUrl) {
                 try {
                     const docUrl = await resolveCompanyDocUrl(company, false);
                     if (docUrl && docUrl !== company.capitalStructureUrl) {
@@ -699,21 +699,21 @@ async function probeUpcomingData() {
 
                     const targetDoc = (company.capitalStructureUrl && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) 
                         ? company.capitalStructureUrl 
-                        : null;
+                        : (company.rhpUrl && company.rhpUrl.toLowerCase().includes('.pdf') ? company.rhpUrl : null);
+                    
                     if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
-                        // Background non-blocking extraction so HTTP response returns fast
-                        extractFromCapitalStructure(company.companyName, targetDoc).then(csRes => {
+                        try {
+                            const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
                             if (csRes && Array.isArray(csRes.preIpoInvestors) && csRes.preIpoInvestors.length > 0) {
-                                const curDb = readDB();
-                                const target = curDb.companies.find(c => c.companyName === company.companyName);
-                                if (target) {
-                                    target.preIpoInvestors = csRes.preIpoInvestors;
-                                    if (csRes.waca) target.preIpoWaca = csRes.waca;
-                                    if (csRes.peerComparison) target.peerComparison = csRes.peerComparison;
-                                    writeDB(curDb);
-                                }
+                                company.preIpoInvestors = csRes.preIpoInvestors;
+                                if (csRes.waca) company.preIpoWaca = csRes.waca;
+                                if (csRes.peerComparison) company.peerComparison = csRes.peerComparison;
+                                changed = true;
+                                if (!updatedFields.includes('Pre-IPO Data')) updatedFields.push('Pre-IPO Data');
                             }
-                        }).catch(() => {});
+                        } catch (err) {
+                            console.warn(`[ProbeUpcoming] Extraction warning for ${name}:`, err.message);
+                        }
                     }
                 } catch (e) {
                     console.warn(`[ProbeUpcoming] Pre-IPO error for ${name}: ${e.message}`);
@@ -872,13 +872,10 @@ async function probeUpcomingData() {
  */
 app.post('/api/probe-upcoming', async (req, res) => {
     try {
-        // Fast sync: Discover newly published IPOs from IPO Premium homepage and attach capital structure links
-        await syncAllCapitalStructures({ forceHomepage: true, scrapeDetails: true, extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
+        // Full sync: Discover newly published IPOs, scrape detail pages for CS & RHP PDFs, and extract pre-IPO data
+        await syncAllCapitalStructures({ forceHomepage: true, scrapeDetails: true, extractPreIpo: true }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
         const result = await probeUpcomingData();
         res.json({ success: true, ...result });
-
-        // Trigger background pre-IPO extraction non-blocking
-        syncAllCapitalStructures({ extractPreIpo: true }).catch(() => {});
     } catch (e) {
         console.error('[ProbeUpcoming API] Error:', e.message);
         res.status(500).json({ error: e.message });
@@ -887,11 +884,9 @@ app.post('/api/probe-upcoming', async (req, res) => {
 
 app.get('/api/probe-upcoming', async (req, res) => {
     try {
-        await syncAllCapitalStructures({ forceHomepage: true, scrapeDetails: true, extractPreIpo: false }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
+        await syncAllCapitalStructures({ forceHomepage: true, scrapeDetails: true, extractPreIpo: true }).catch(e => console.warn('[ProbeUpcoming] Sync warning:', e.message));
         const result = await probeUpcomingData();
         res.json({ success: true, ...result });
-
-        syncAllCapitalStructures({ extractPreIpo: true }).catch(() => {});
     } catch (e) {
         console.error('[ProbeUpcoming API] Error:', e.message);
         res.status(500).json({ error: e.message });
