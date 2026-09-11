@@ -2854,9 +2854,9 @@
       "waca": 0
     },
     {
-      "companyName": "National Stock Exchange of India Ltd",
+      "companyName": "National Stock Exchange of India Ltd.",
       "issueType": "Mainboard",
-      "exchange": "BSE, NSE",
+      "exchange": "BSE",
       "allotmentDate": {
         "original": "2026-09-21T18:30:00.000Z",
         "adjusted": "2026-09-21T18:30:00.000Z",
@@ -2869,16 +2869,169 @@
       "preIPO": null,
       "anchorInvestors": [],
       "anchorShares": 0,
-      "totalShares": 148905525,
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
-      "capitalStructureUrl": null,
+      "totalShares": 494400000,
+      "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/dec-2016/national-stock-exchange-of-india-limited-drhp_33967.html",
+      "capitalStructureUrl": "https://www.sebi.gov.in/filings/public-issues/dec-2016/national-stock-exchange-of-india-limited-drhp_33967.html",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "priceBand": "₹0–0",
-      "listingDate": "2026-09-23T18:30:00.000Z",
+      "preIpoInvestors": [
+        {
+          "name": "Life Insurance Corporation of India (LIC)",
+          "shares": 51939570,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / Institutional (10.51%)",
+          "date": "Original Subscription & Bonus (Face Value ₹1)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "State Bank of India (SBI)",
+          "shares": 24720000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / Promoter Bank (5.00%)",
+          "date": "Founding Institutional Allotment (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "Aranda Investments (Mauritius) Pte Ltd (Temasek)",
+          "shares": 24720000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Sovereign Wealth / Selling Shareholder (5.00%)",
+          "date": "Strategic Pre-IPO Equity Allotment",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "Stock Holding Corporation of India Limited (SHCIL)",
+          "shares": 21950000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Institutional Selling Shareholder (4.44%)",
+          "date": "Founding Institutional Round (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "SBI Capital Markets Limited",
+          "shares": 21400000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Institutional Selling Shareholder (4.33%)",
+          "date": "Founding Institutional Round (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "IFCI Limited",
+          "shares": 15000000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / DFI (3.03%)",
+          "date": "Founding Institutional Allotment (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "IDBI Bank Limited",
+          "shares": 14832000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / Institutional (3.00%)",
+          "date": "Founding Institutional Allotment (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "Verodina Private Limited",
+          "shares": 14832000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Corporate Pre-IPO Shareholder (3.00%)",
+          "date": "Pre-IPO Strategic Round",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "Canada Pension Plan Investment Board (CPPIB)",
+          "shares": 12360000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Global Pension Fund (2.50%)",
+          "date": "Strategic Pre-IPO Equity Allotment",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "PremjiInvest (PI Opportunities Fund I)",
+          "shares": 11124000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Strategic Institutional Fund (2.25%)",
+          "date": "Pre-IPO Secondary Round",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "MS Strategic (Mauritius) Limited (Morgan Stanley)",
+          "shares": 10000000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / Institutional (2.02%)",
+          "date": "Strategic Pre-IPO Allotment",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "General Insurance Corporation of India (GIC Re)",
+          "shares": 9888000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / PSU Insurer (2.00%)",
+          "date": "Founding Institutional Round (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "Bank of Baroda",
+          "shares": 9888000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Selling Shareholder / PSU Bank (2.00%)",
+          "date": "Founding Institutional Round (₹1 Par)",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "SAIF II-SE Investments Mauritius Limited",
+          "shares": 9888000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Foreign PE Investor (2.00%)",
+          "date": "Pre-IPO Institutional Round",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        },
+        {
+          "name": "Tiger Global Five Holdings",
+          "shares": 7416000,
+          "buyPrice": 1,
+          "acquisitionPrice": 1,
+          "category": "Global Growth Fund (1.50%)",
+          "date": "Pre-IPO Secondary Round",
+          "lockInPeriod": "6 Months",
+          "lockInExpiry": "2027-03-24"
+        }
+      ],
+      "priceBand": "₹1,700–1,785",
+      "listingDate": "2026-09-24T18:30:00.000Z",
       "openDate": "2026-09-16T18:30:00.000Z",
-      "closeDate": "2026-09-20T18:30:00.000Z",
-      "lotSize": 8
+      "closeDate": "2026-09-18T18:30:00.000Z",
+      "lotSize": 8,
+      "waca": 1,
+      "preIpoWaca": 1
     },
     {
       "companyName": "Rentomojo Ltd.",
@@ -56030,7 +56183,7 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-11T11:46:33.411Z",
+  "lastUpdated": "2026-09-11T12:06:42.108Z",
   "lastScraped": {
     "time": "2026-09-09T16:57:44.724Z",
     "scraped2025": 6,
