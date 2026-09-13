@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10T15:04:00.810Z",
+  "lastUpdated": "2026-09-13T12:17:07.713Z",
   "companies": {
     "deepajewellers": {
       "name": "Deepa Jewellers",
@@ -984,18 +984,20 @@
       "id": 1325,
       "slug": "national-stock-exchange-of-india-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1325/national-stock-exchange-of-india-ltd",
-      "capitalStructureUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_capital_structure_1789068755.pdf",
       "anchorPdfUrl": null,
       "companyName": "National Stock Exchange of India Ltd(Tentative dates)",
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
-      "updatedAt": "2026-09-10T15:06:53.448Z",
-      "lastScrapedAt": 1789052811110,
-      "priceBand": "₹0–0",
-      "totalShares": 148905525,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_tentative_dates_rhp_1789062008.pdf",
+      "updatedAt": "2026-09-13T12:17:13.597Z",
+      "lastScrapedAt": 1789301830732,
+      "priceBand": "₹1700–1785",
+      "totalShares": 126436650,
       "openDate": "2026-09-16T18:30:00.000Z",
       "closeDate": "2026-09-20T18:30:00.000Z",
       "allotmentDate": "2026-09-21T18:30:00.000Z",
-      "listingDate": "2026-09-23T18:30:00.000Z"
+      "listingDate": "2026-09-23T18:30:00.000Z",
+      "issuePrice": 1785,
+      "lotSize": 8
     },
     "veegalanddevelopers": {
       "name": "Veegaland Developers Ltd",
@@ -1182,17 +1184,20 @@
       "id": 1325,
       "slug": "national-stock-exchange-of-india-ltd",
       "detailUrl": "https://www.ipopremium.in/view/ipo/1325/national-stock-exchange-of-india-ltd",
-      "capitalStructureUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_capital_structure_1789068755.pdf",
       "anchorPdfUrl": null,
-      "updatedAt": "2026-09-10T15:04:03.180Z",
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_rhp_1788166429.pdf",
-      "lastScrapedAt": 1789052640842,
-      "priceBand": "₹0–0",
+      "updatedAt": "2026-09-13T12:17:10.130Z",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_tentative_dates_rhp_1789062008.pdf",
+      "lastScrapedAt": 1789301827749,
+      "priceBand": "₹1700–1785",
       "allotmentDate": "2026-09-21T18:30:00.000Z",
       "listingDate": "2026-09-23T18:30:00.000Z",
       "openDate": "2026-09-16T18:30:00.000Z",
       "closeDate": "2026-09-20T18:30:00.000Z",
-      "totalShares": 148905525
+      "totalShares": 126436650,
+      "name": "National Stock Exchange of India Ltd",
+      "issuePrice": 1785,
+      "lotSize": 8
     },
     "rentomojo": {
       "companyName": "Rentomojo Ltd.",
@@ -1807,6 +1812,43 @@
       "closeDate": "2026-09-16T18:30:00.000Z",
       "allotmentDate": "2026-09-17T18:30:00.000Z",
       "listingDate": "2026-09-21T18:30:00.000Z"
+    },
+    "spectraatechnologynsesme": {
+      "name": "Spectraa Technology Ltd. (NSE SME )",
+      "id": 1359,
+      "slug": "spectraa-technology-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1359/spectraa-technology-ltd",
+      "capitalStructureUrl": null,
+      "anchorPdfUrl": null,
+      "companyName": "Spectraa Technology Ltd. (NSE SME )",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/spectraa_technology_ltd_nse_sme_rhp_1789109894.pdf",
+      "updatedAt": "2026-09-13T12:17:16.529Z",
+      "lastScrapedAt": 1789301834199,
+      "priceBand": "₹112–118",
+      "issuePrice": 118,
+      "lotSize": 1200,
+      "totalShares": 3476000,
+      "openDate": "2026-09-16T18:30:00.000Z",
+      "closeDate": "2026-09-20T18:30:00.000Z",
+      "allotmentDate": "2026-09-21T18:30:00.000Z",
+      "listingDate": "2026-09-23T18:30:00.000Z"
+    },
+    "aonesteels": {
+      "name": "A-One Steels India Ltd",
+      "id": 1360,
+      "slug": "a-one-steels-india-ltd",
+      "detailUrl": "https://www.ipopremium.in/view/ipo/1360/a-one-steels-india-ltd",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/a_one_steels_india_ltd_mainboard_capital_structure_1789278325.pdf",
+      "anchorPdfUrl": null,
+      "companyName": "A-One Steels India Ltd",
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/a_one_steels_india_ltd_mainboard_rhp_1789278324.pdf",
+      "updatedAt": "2026-09-13T12:17:19.840Z",
+      "lastScrapedAt": 1789301837130,
+      "priceBand": "₹0–0",
+      "openDate": "2026-09-23T18:30:00.000Z",
+      "closeDate": "2026-09-27T18:30:00.000Z",
+      "allotmentDate": "2026-09-28T18:30:00.000Z",
+      "listingDate": "2026-09-30T18:30:00.000Z"
     }
   }
 }

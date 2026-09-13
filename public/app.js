@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!url) return false;
         const l = url.toLowerCase();
         if (l.includes('keyword/rhp-detail')) return false;
-        return l.endsWith('.pdf') || l.endsWith('.zip');
+        return l.includes('.pdf') || l.includes('.zip') || l.includes('sebi.gov.in') || l.includes('bseindia.com') || l.includes('nseindia.com') || l.includes('chittorgarh');
     }
     // Elements
     const tableBody = document.getElementById('tableBody');
@@ -629,7 +629,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
         const cat = typeof inv === 'object' ? (inv.category || inv.type || '') : '';
         const date = typeof inv === 'object' ? (inv.date || '') : '';
         const text = `${name} ${cat} ${date}`.toLowerCase();
-        if (/\bpromoter\b/i.test(text) || /\bpromoters\b/i.test(text) || /\bfounding equity\b/i.test(text)) return false;
+        if (/\bpromoter\b/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee/i.test(cat)) return false;
+        if (/\bpromoters\b/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee/i.test(cat)) return false;
+        if (/\bfounding equity\b/i.test(cat)) return false;
         if (junkRegex.test(name.trim())) return false;
         if (/securities,?\s*allotted/i.test(name) || /capital existing in/i.test(name) || /capital build-up/i.test(name)) return false;
         return name.trim().length >= 3;
@@ -902,14 +904,14 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
         const anchorUrl = (customData && customData.anchorUrl) || company.anchorUrl;
         const issuePrice = company.issuePrice || (customData && customData.issuePrice);
 
-        let bottomDocLinks = [];
-        if (rhpUrl && isValidRHPUrl(rhpUrl)) {
-            bottomDocLinks.push(`<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 6px;"><i class="ph ph-file-pdf"></i> RHP Document</a>`);
+        let topDocLinks = [];
+        if (capUrl && capUrl.toLowerCase().includes('capital_structure')) {
+            topDocLinks.push(`<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
         }
-        const docsHtml = bottomDocLinks.length > 0 ? `<div class="card-doc-links" style="margin-top:4px;">${bottomDocLinks.join('')}</div>` : '';
-        const topDocLink = capUrl 
-            ? `<a href="${capUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`
-            : (rhpUrl && isValidRHPUrl(rhpUrl) ? `<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"><i class="ph ph-file-pdf"></i> RHP Document</a>` : '');
+        if (rhpUrl && isValidRHPUrl(rhpUrl) && (!capUrl || capUrl !== rhpUrl)) {
+            topDocLinks.push(`<a href="${rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 6px; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"><i class="ph ph-file-pdf"></i> RHP Document</a>`);
+        }
+        const topDocLink = topDocLinks.length > 0 ? `<div style="display:flex; align-items:center; gap:4px; flex-wrap:wrap;">${topDocLinks.join('')}</div>` : '';
 
         if (investors === undefined) {
             preIpoBlock.innerHTML = `
@@ -933,7 +935,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             const cat = typeof inv === 'object' ? (inv.category || inv.type || '') : '';
             const date = typeof inv === 'object' ? (inv.date || '') : '';
             const text = `${name} ${cat} ${date}`.toLowerCase();
-            if (/\bpromoter\b/i.test(text) || /\bpromoters\b/i.test(text) || /\bfounding equity\b/i.test(text)) return false;
+            if (/\bpromoter\b/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee/i.test(cat)) return false;
+            if (/\bfounding equity\b/i.test(cat)) return false;
+            if (junkRegex.test(name.trim())) return false;
             if (/securities,?\s*allotted/i.test(name) || /capital existing in/i.test(name) || /capital build-up/i.test(name)) return false;
             return name.trim().length >= 3;
         });
@@ -2091,10 +2095,17 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             // Pre-IPO HTML: Special emphasis and open by default for Fixed Price
             let preIpoHtml = '';
             const hasPreIpo = ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0;
-            const hasRealCapDoc = ipo.capitalStructureUrl && ipo.capitalStructureUrl.toLowerCase().includes('capital_structure');
-            const capDocBtn = hasRealCapDoc 
-                ? `<a href="${ipo.capitalStructureUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>` 
-                : (ipo.rhpUrl && isValidRHPUrl(ipo.rhpUrl) ? `<a href="${ipo.rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-pdf"></i> RHP Document</a>` : '');
+            let docButtons = [];
+            if (ipo.capitalStructureUrl && ipo.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
+                docButtons.push(`<a href="${ipo.capitalStructureUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
+            }
+            if (ipo.rhpUrl && isValidRHPUrl(ipo.rhpUrl) && (!ipo.capitalStructureUrl || ipo.capitalStructureUrl !== ipo.rhpUrl)) {
+                docButtons.push(`<a href="${ipo.rhpUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-pdf"></i> RHP Document</a>`);
+            }
+            if (ipo.anchorUrl && ipo.anchorUrl.toLowerCase().includes('anchor')) {
+                docButtons.push(`<a href="${ipo.anchorUrl}" target="_blank" class="doc-btn" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-anchor"></i> Anchor PDF</a>`);
+            }
+            const capDocBtn = docButtons.length > 0 ? `<div style="display:flex; align-items:center; gap:5px; flex-wrap:wrap;">${docButtons.join('')}</div>` : '';
 
             if (isFixedPrice) {
                 const preIpoTable = hasPreIpo 
