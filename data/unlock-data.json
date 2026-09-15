@@ -1,6 +1,136 @@
 {
   "companies": [
     {
+      "companyName": "Robokidz Eduventures Ltd",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-23T18:30:00.000Z",
+        "adjusted": "2026-09-23T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": null,
+      "issuePrice": 106,
+      "priceBand": "₹100–106",
+      "lotSize": 1200,
+      "openDate": "2026-09-20T18:30:00.000Z",
+      "closeDate": "2026-09-22T18:30:00.000Z",
+      "listingDate": "2026-09-27T18:30:00.000Z",
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 2932800,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/robokidz_eduventures_ltd_bse_sme_rhp_1789364585.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/robokidz_eduventures_ltd_bse_sme_capital_structure_1789364586.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "Mridul Kotawala Sagar Lalit Sanghvi",
+        "Rahul Jayantilal Shah Sagar Lalit Sanghvi",
+        "Ishoo Garg Sagar Lalit Sanghvi",
+        "Priya Maroti Sagar Lalit Sanghvi",
+        "Private Placement, (₹81)",
+        "Nikita Sandeep Shah Sagar Lalit Sanghvi",
+        "Vira AIF Trust - VIRA Bharat Opportunities Fund (₹81)",
+        "Kirthi Kisan Jain Sagar Lalit Sanghvi",
+        "Private Placement, details (₹10)",
+        "Zion Infraventure LLP (₹80.58)",
+        "Nine Alps Trust – Nine Alps Opportunity Fund (₹81)",
+        "Deepak Kumar Kedia Sagar Lalit Sanghvi",
+        "Sachin Sodhi Sagar Lalit Sanghvi",
+        "SRI GBK Resources Private Limited",
+        "Nine Alps Trust - Nine Alps Opportunity Fund (₹81)",
+        "Sagar Lalit Sanghvi",
+        "M/s. Kedia Securities Private Limited (₹73.55)",
+        "Nine Alps Trust-Nine Alps Opportunity Fund",
+        "Raygun Management Consultants Private Limited (₹81)",
+        "Vira AIF Trust – VIRA Bharat Opportunities Fund (₹81)",
+        "Ankit Jain Sagar Lalit Sanghvi",
+        "Private Placement(1) (₹81)",
+        "Jayesh Taori Sagar Lalit Sanghvi",
+        "Tanveer Kaur Sagar Lalit Sanghvi",
+        "Ankit Kumar Jain Sagar Lalit Sanghvi",
+        "Shristi Kedia Sagar Lalit Sanghvi"
+      ],
+      "preIpoChecked": true
+    },
+    {
+      "companyName": "FX Multitech Ltd",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-23T18:30:00.000Z",
+        "adjusted": "2026-09-23T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": null,
+      "issuePrice": null,
+      "priceBand": "₹0–0",
+      "openDate": "2026-09-20T18:30:00.000Z",
+      "closeDate": "2026-09-22T18:30:00.000Z",
+      "listingDate": "2026-09-27T18:30:00.000Z",
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 3900000,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/fx_multitech_ltd_bse_sme_rhp_1789384353.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/fx_multitech_ltd_bse_sme_capital_structure_1789384355.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "Subhash Agarwal",
+        "On Incorporation",
+        "Rangaswamy holds",
+        "any Person",
+        "Anita Agarwal",
+        "Selvaraj Rangaswamy",
+        "Selvaraj holds",
+        "Kanagalakshmi Selvaraj",
+        "this Offer"
+      ],
+      "preIpoChecked": true
+    },
+    {
+      "companyName": "S.K.Offset Ltd",
+      "issueType": "SME",
+      "exchange": "BSE SME",
+      "allotmentDate": {
+        "original": "2026-09-27T18:30:00.000Z",
+        "adjusted": "2026-09-27T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "chittorgarhUrl": null,
+      "issuePrice": 125,
+      "priceBand": "₹119–125",
+      "lotSize": 1000,
+      "openDate": "2026-09-22T18:30:00.000Z",
+      "closeDate": "2026-09-24T18:30:00.000Z",
+      "listingDate": "2026-09-29T18:30:00.000Z",
+      "anchor30": null,
+      "anchor90": null,
+      "preIPO": null,
+      "anchorInvestors": [],
+      "anchorShares": 0,
+      "totalShares": 2325000,
+      "rhpUrl": "https://assets.ipopremium.in/images/ipo/skoffset_ltd_bse_sme_rhp_1789367297.pdf",
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skoffset_ltd_bse_sme_capital_structure_1789367298.pdf",
+      "anchorUrl": null,
+      "preIpoInvestors": [
+        "Mrs. Neelam Agarwal",
+        "Mr. Ayush Agarwal",
+        "Marketing Service Limited",
+        "Mrs. Pallavi Agarwal",
+        "Mr. Pradeep Agarwal",
+        "Mrs. Nikita Agarwal",
+        "Mrs. Sudha Singhal",
+        "Priyanshu Agarwal hold",
+        "Mr. Priyanshu Agarwal"
+      ],
+      "preIpoChecked": true
+    },
+    {
       "companyName": "A-One Steels India Ltd",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
@@ -166,9 +296,20 @@
       "anchorShares": 0,
       "totalShares": 3476000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/spectraa_technology_ltd_nse_sme_rhp_1789109894.pdf",
-      "capitalStructureUrl": null,
+      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/spectraa_technology_ltd_nse_sme_capital_structure_1789466069.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": []
+      "preIpoInvestors": [
+        "Divya Praveen",
+        "A L Arun Kumar",
+        "R Nalini",
+        "Convivial Advisors LLP",
+        "Sailaja Arun",
+        "Sailaja Arun Kumar",
+        "Praveen Kumar",
+        "Leela Nair",
+        "Convivial Advisors"
+      ],
+      "preIpoChecked": true
     },
     {
       "companyName": "Vama Wovenfab Ltd.",
@@ -1060,7 +1201,8 @@
         }
       ],
       "anchorShares": 1570000,
-      "totalShares": 12586800,
+      "totalShares": 5532800,
+      "totalCompanyShares": 12586800,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/raksan_transformers_ltd_bse_sme_rhp_1788595232.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/raksan_transformers_ltd_bse_sme_capital_structure_1788620167.pdf",
       "anchorUrl": null,
@@ -55751,7 +55893,48 @@
         "isAdjusted": false,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
-      "anchorInvestors": [],
+      "anchorInvestors": [
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-ARBITRAGE STRATEGY FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 1340104,
+          "sharesFormatted": "13,40,104",
+          "amountCr": 12.46,
+          "percent": 33.27
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-CITADEL CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 1075319,
+          "sharesFormatted": "10,75,319",
+          "amountCr": 10,
+          "percent": 26.69
+        },
+        {
+          "name": "MINERVA EMERGING OPPORTUNITIES FUND LTD.",
+          "group": "MINERVA",
+          "shares": 537659,
+          "sharesFormatted": "5,37,659",
+          "amountCr": 5,
+          "percent": 13.35
+        },
+        {
+          "name": "EKAMYA PRAGATI SCHEME 1",
+          "group": "EKAMYA",
+          "shares": 537659,
+          "sharesFormatted": "5,37,659",
+          "amountCr": 5,
+          "percent": 13.35
+        },
+        {
+          "name": "CRAFT EMERGING MARKET FUND PCC-ELITE CAPITAL FUND",
+          "group": "CRAFT EMERGING MARKET FUND PCC",
+          "shares": 537659,
+          "sharesFormatted": "5,37,659",
+          "amountCr": 5,
+          "percent": 13.35
+        }
+      ],
       "anchorShares": 0,
       "totalShares": 13428000,
       "rhpUrl": "https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf",
@@ -56479,7 +56662,7 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-13T12:19:29.807Z",
+  "lastUpdated": "2026-09-15T12:19:26.597Z",
   "lastScraped": {
     "time": "2026-09-09T16:57:44.724Z",
     "scraped2025": 6,
