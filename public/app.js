@@ -2077,19 +2077,28 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             const price = ipo.priceBand || (ipo.issuePrice ? `₹${ipo.issuePrice}` : 'TBD');
             const exc = ipo.exchange ? ` (${ipo.exchange})` : '';
 
+            const isSME = (ipo.issueType && ipo.issueType.toLowerCase().includes('sme')) || (card.dataset.board === 'sme');
             const isFixedPrice = ipo.pricingType === 'Fixed Price' || 
-                (ipo.issueType === 'SME' && ipo.pricingType !== 'Book Built' &&
-                 ipo.allotmentDate !== null &&
+                (isSME && ipo.pricingType !== 'Book Built' &&
+                 ipo.priceBand && !ipo.priceBand.includes('–') && !ipo.priceBand.includes('-') && !ipo.priceBand.includes('to') &&
                  (!ipo.anchorInvestors || ipo.anchorInvestors.length === 0) && 
                  (!ipo.anchorShares || ipo.anchorShares === 0) && 
                  (!ipo.anchor30 || !ipo.anchor30.original));
 
+            let ancNum = ipo.anchorShares || 0;
+            const anchorRatio = isSME ? 0.2847 : 0.30;
+            if (ancNum === 0 && !isFixedPrice && ipo.totalShares > 0) {
+                ancNum = Math.round(ipo.totalShares * anchorRatio);
+            }
+
             let sharesStr = '';
             if (ipo.totalShares) {
-                const ancNum = ipo.anchorShares || 0;
                 const pubNum = Math.max(0, ipo.totalShares - ancNum);
-                if (ancNum > 0) sharesStr = `${toLk(ancNum)} anc., ${toLk(pubNum)} pub.`;
-                else sharesStr = `${toLk(ipo.totalShares)} shares`;
+                if (ancNum > 0 && !isFixedPrice) {
+                    sharesStr = `${toLk(ancNum)} anc., ${toLk(pubNum)} pub.`;
+                } else {
+                    sharesStr = `${toLk(ipo.totalShares)} shares`;
+                }
             } else {
                 sharesStr = 'TBD';
             }
@@ -2110,8 +2119,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                     return `<span>${name}${detail}</span>`;
                 }).filter(Boolean).join('') + `</div>`;
             } else {
-                anchorSummaryText = 'Anchor Investors (0)';
-                anchorsHtml = '<span class="empty">No anchors yet</span>';
+                anchorSummaryText = ancNum > 0 ? `Anchor Bidding (Quota: ${toLk(ancNum)} shares)` : 'Anchor Investors (0)';
+                anchorsHtml = ancNum > 0 
+                    ? `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">Anchor allotment disclosed 1 day prior to open. Statutory quota: <strong>${toLk(ancNum)} shares</strong> (${(anchorRatio * 100).toFixed(1)}% of issue).</span>`
+                    : '<span class="empty">No anchors yet</span>';
             }
 
             // Pre-IPO HTML: Special emphasis and open by default for Fixed Price

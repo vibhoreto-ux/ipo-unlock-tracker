@@ -33,7 +33,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 834968,
       "totalShares": 2932800,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/robokidz_eduventures_ltd_bse_sme_rhp_1789364585.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/robokidz_eduventures_ltd_bse_sme_capital_structure_1789364586.pdf",
@@ -100,7 +100,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1110330,
       "totalShares": 3900000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/fx_multitech_ltd_bse_sme_rhp_1789384353.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/fx_multitech_ltd_bse_sme_capital_structure_1789384355.pdf",
@@ -151,7 +151,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 661928,
       "totalShares": 2325000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/skoffset_ltd_bse_sme_rhp_1789367297.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skoffset_ltd_bse_sme_capital_structure_1789367298.pdf",
@@ -409,7 +409,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 413612,
       "totalShares": 1452800,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vama_wovenfab_ltd_bse_sme_rhp_1789026151.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vama_wovenfab_ltd_bse_sme_capital_structure_1789026506.pdf",
@@ -461,7 +461,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 35714285,
       "totalShares": 119047618,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/hero_motors_ltd_mainboard_rhp_1788979005.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/hero_motors_ltd_mainboard_capital_structure_1789020178.pdf",
@@ -792,7 +792,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 499933,
       "totalShares": 1756000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/panchatv_bharat_ltd_bse_sme_rhp_1788759669.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/panchatv_bharat_ltd_bse_sme_capital_structure_1788981388.pdf",
@@ -2344,7 +2344,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1297207,
       "totalShares": 4556400,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_rhp_1788685953.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vinod_texworld_ltd_nse_sme_capital_structure_1788686295.pdf",
@@ -2412,7 +2412,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1119213,
       "totalShares": 3931200,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_rhp_1788532229.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/infrax_renewable_ltd_bse_sme_capital_structure_1788532230.pdf",
@@ -3297,7 +3297,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 148320000,
       "totalShares": 494400000,
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/dec-2016/national-stock-exchange-of-india-limited-drhp_33967.html",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/national_stock_exchange_of_india_ltd_mainboard_capital_structure_1789068755.pdf",
@@ -10799,7 +10799,8 @@
         }
       ],
       "totalShares": 24406491,
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "anchorShares": 6948528
     },
     {
       "companyName": "Ivalue Infosolutions Ltd.",
@@ -11387,7 +11388,8 @@
           "percentage": 10
         }
       ],
-      "totalShares": 16962200
+      "totalShares": 16962200,
+      "anchorShares": 4829138
     },
     {
       "companyName": "Euro Pratik Sales Ltd.",
@@ -11474,7 +11476,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 38386000
+      "totalShares": 38386000,
+      "anchorShares": 10928494
     },
     {
       "companyName": "L.T.Elevator Ltd.",
@@ -12142,7 +12145,8 @@
       ],
       "totalShares": 15171983,
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/om_galaxy_ltd_bse_sme_capital_structure_1788677426.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "anchorShares": 4319464
     },
     {
       "companyName": "Jay Ambe Supermarkets Ltd.",
@@ -12206,7 +12210,8 @@
           "percentage": 25
         }
       ],
-      "totalShares": 8879954
+      "totalShares": 8879954,
+      "anchorShares": 2528123
     },
     {
       "companyName": "Urban Co.Ltd. IPO (Urban Company IPO)",
@@ -12643,7 +12648,8 @@
           "percentage": 20.2
         }
       ],
-      "totalShares": 14141822
+      "totalShares": 14141822,
+      "anchorShares": 4026177
     },
     {
       "companyName": "Nilachal Carbo Metalicks Ltd.",
@@ -12697,7 +12703,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 24926990
+      "totalShares": 24926990,
+      "anchorShares": 7096714
     },
     {
       "companyName": "Krupalu Metals Ltd.",
@@ -12751,7 +12758,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 5872000
+      "totalShares": 5872000,
+      "anchorShares": 1671758
     },
     {
       "companyName": "Vashishtha Luxury Fashion Ltd.",
@@ -12805,7 +12813,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 2356693
+      "totalShares": 2356693,
+      "anchorShares": 670950
     },
     {
       "companyName": "Sharvaya Metals Ltd.",
@@ -12869,7 +12878,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 10030000
+      "totalShares": 10030000,
+      "anchorShares": 2855541
     },
     {
       "companyName": "Vigor Plast India Ltd.",
@@ -12933,7 +12943,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 10351700
+      "totalShares": 10351700,
+      "anchorShares": 2947129
     },
     {
       "companyName": "Austere Systems Ltd.",
@@ -12997,7 +13008,8 @@
           "percentage": 29.4
         }
       ],
-      "totalShares": 11875219
+      "totalShares": 11875219,
+      "anchorShares": 3380875
     },
     {
       "companyName": "Optivalue Tek Consulting Ltd.",
@@ -13146,7 +13158,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 14449600
+      "totalShares": 14449600,
+      "anchorShares": 4113801
     },
     {
       "companyName": "Amanta Healthcare Ltd.",
@@ -13228,7 +13241,8 @@
           "percentage": 20.3
         }
       ],
-      "totalShares": 4937100
+      "totalShares": 4937100,
+      "anchorShares": 1405592
     },
     {
       "companyName": "Sugs Lloyd Ltd.",
@@ -13334,7 +13348,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 10179000
+      "totalShares": 10179000,
+      "anchorShares": 2897961
     },
     {
       "companyName": "Abril Paper Tech Ltd.",
@@ -13388,7 +13403,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 7981840
+      "totalShares": 7981840,
+      "anchorShares": 2272430
     },
     {
       "companyName": "Oval Projects Engineering Ltd.",
@@ -13452,7 +13468,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 20768336
+      "totalShares": 20768336,
+      "anchorShares": 5912745
     },
     {
       "companyName": "Anlon Healthcare Ltd.",
@@ -13577,7 +13594,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 19148000
+      "totalShares": 19148000,
+      "anchorShares": 5451436
     },
     {
       "companyName": "Sattva Engineering Construction Ltd.",
@@ -13646,7 +13664,8 @@
           "percentage": 20.1
         }
       ],
-      "totalShares": 17468616
+      "totalShares": 17468616,
+      "anchorShares": 4973315
     },
     {
       "companyName": "Globtier Infotech Ltd.",
@@ -13700,7 +13719,8 @@
           "percentage": 20.5
         }
       ],
-      "totalShares": 15121200
+      "totalShares": 15121200,
+      "anchorShares": 4305006
     },
     {
       "companyName": "NIS Management Ltd.",
@@ -13834,7 +13854,8 @@
           "acquisitionPrice": 56,
           "category": "Pre-IPO Shareholder"
         }
-      ]
+      ],
+      "anchorShares": 5636870
     },
     {
       "companyName": "Anondita Medicare Ltd.",
@@ -13986,7 +14007,8 @@
           "percentage": 20.1
         }
       ],
-      "totalShares": 18086618
+      "totalShares": 18086618,
+      "anchorShares": 5149260
     },
     {
       "companyName": "Shivashrit Foods Ltd.",
@@ -14050,7 +14072,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 18269000
+      "totalShares": 18269000,
+      "anchorShares": 5201184
     },
     {
       "companyName": "Classic Electrodes (India) Ltd.",
@@ -14114,7 +14137,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 17964950
+      "totalShares": 17964950,
+      "anchorShares": 5114621
     },
     {
       "companyName": "ARC Insulation & Insulators Ltd.",
@@ -29900,7 +29924,8 @@
           "percentage": 20
         }
       ],
-      "totalShares": 7479733
+      "totalShares": 7479733,
+      "anchorShares": 2129480
     },
     {
       "companyName": "Urban Co.Ltd. (Urban Company IPO)",
@@ -30112,7 +30137,8 @@
         }
       ],
       "totalShares": 7479733,
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "anchorShares": 2129480
     },
     {
       "companyName": "Urban Co.Ltd.",
@@ -30702,7 +30728,8 @@
       ],
       "totalShares": 31698400,
       "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1770784868359.pdf",
-      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1770784868359.pdf"
+      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1770784868359.pdf",
+      "anchorShares": 9509520
     },
     {
       "companyName": "Clean Max Enviro Energy Solutions Ltd.",
@@ -30904,7 +30931,8 @@
           "percentage": 20.1
         }
       ],
-      "totalShares": 117079174
+      "totalShares": 117079174,
+      "anchorShares": 35123752
     },
     {
       "companyName": "Accord Transformer & Switchgear Ltd.",
@@ -31069,7 +31097,8 @@
       ],
       "totalShares": 39975000,
       "rhpUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1770985559934.pdf",
-      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1770985559934.pdf"
+      "capitalStructureUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/feb-2026/1770985559934.pdf",
+      "anchorShares": 11992500
     },
     {
       "companyName": "Kiaasa Retail Ltd.",
@@ -32162,7 +32191,7 @@
       },
       "anchorInvestors": [],
       "preIpoInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 6270000,
       "totalShares": 20900000,
       "nseCircularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73352.zip",
       "circularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73352.zip",
@@ -32435,7 +32464,7 @@
           "percent": 5.5
         }
       ],
-      "anchorShares": 0,
+      "anchorShares": 12669480,
       "totalShares": 42231600,
       "issuePrice": 138,
       "rhpUrl": "https://r2.skyways-air.in/RHP-Skyways.pdf",
@@ -32727,7 +32756,7 @@
       },
       "anchorInvestors": [],
       "preIpoInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1845389,
       "totalShares": 6151295,
       "nseCircularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73387.zip",
       "circularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73387.zip",
@@ -32780,7 +32809,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1172964,
       "totalShares": 4120000
     },
     {
@@ -32829,7 +32858,7 @@
         }
       ],
       "preIpoInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 3750000,
       "totalShares": 12500000,
       "nseCircularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73418.zip",
       "circularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73418.zip",
@@ -32954,7 +32983,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 214200000,
       "totalShares": 714000000,
       "preIpoInvestors": [],
       "nseCircularUrl": "https://nsearchives.nseindia.com/content/circulars/CML73487.zip",
@@ -33601,7 +33630,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 638297,
       "totalShares": 2242000,
       "rhpUrl": "https://www.bsesme.com/download/329359/SME_IPO%20InPrinciple/VahhDRHP03122025_20251203235722.pdf",
       "preIpoInvestors": [
@@ -33646,7 +33675,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 617685,
       "totalShares": 2169600,
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP_030620261736.zip",
       "preIpoInvestors": [
@@ -34383,7 +34412,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1417806,
       "totalShares": 4980000,
       "rhpUrl": "https://www.bsesme.com/download/372201/SME_IPO%20Open/SMR%20Jewels%20RHP_20260515141820.pdf"
     },
@@ -35349,7 +35378,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 10956395,
       "totalShares": 38484000,
       "rhpUrl": ""
     },
@@ -35381,7 +35410,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 319433,
       "totalShares": 1122000,
       "rhpUrl": "https://www.bsesme.com/download/358221/SME_IPO%20InPrinciple/DraftProspectusLiotech_20250812221538.pdf",
       "preIpoInvestors": [],
@@ -35415,7 +35444,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 455064,
       "totalShares": 1598400,
       "rhpUrl": "https://www.bsesme.com/download/338226/SME_IPO%20InPrinciple/Draft_Prospectus_Diksha_Polymers_Ltd__20251216175040.pdf",
       "preIpoInvestors": []
@@ -35555,7 +35584,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1518590,
       "totalShares": 5334000,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_UTKAL.zip",
       "preIpoInvestors": [],
@@ -35690,7 +35719,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 483421,
       "totalShares": 1698000,
       "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/DRHP_TejaEngineering.zip",
       "preIpoInvestors": []
@@ -35956,7 +35985,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 398580,
       "totalShares": 1400000,
       "rhpUrl": "https://seemaxresources.com/img/ipo/RHP-Seemax-with-binder.pdf",
       "preIpoInvestors": []
@@ -36022,7 +36051,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 614952,
       "totalShares": 2160000,
       "rhpUrl": "https://res.cloudinary.com/dmtuhujus/image/upload/v1782227820/Vinit_RHP_23.06.2026_VML_wcxwbv.pdf",
       "preIpoInvestors": []
@@ -36088,7 +36117,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1135384,
       "totalShares": 3988000,
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/twinkle-papers-ipo-rhp.pdf",
       "preIpoInvestors": [
@@ -36435,7 +36464,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1790763,
       "totalShares": 6290000,
       "rhpUrl": "https://www.bsesme.com/download/327529/SME_IPO%20InPrinciple/DraftOfferDocument_20260420212924.zip",
       "preIpoInvestors": [
@@ -36793,7 +36822,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 107617,
       "totalShares": 378000,
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP&GID_240620262132.zip",
       "preIpoInvestors": []
@@ -36826,7 +36855,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1269193,
       "totalShares": 4458000,
       "rhpUrl": "https://nsearchives.nseindia.com/emerge/corporates/content/SriPriyankaGeoCommexLimited_RHP.zip",
       "preIpoInvestors": []
@@ -37031,7 +37060,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 464630,
       "totalShares": 1632000,
       "rhpUrl": "https://www.bsesme.com/download/341266/SME_IPO%20InPrinciple/JIVIAL_20250930225941.pdf",
       "preIpoInvestors": []
@@ -37912,7 +37941,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 811053,
       "totalShares": 2848800,
       "rhpUrl": "https://www.bsesme.com/download/389631/SME_IPO%20Open/1.RHP_Riyaasat_12062026_Final_20260615201158.pdf",
       "preIpoInvestors": [
@@ -38199,7 +38228,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 24671052,
       "totalShares": 82236840,
       "rhpUrl": "https://investmentbank.kotak.com//kib-cms/sites/default/files/offer-documets/Cube_Highways_Trust_Offer_Document_July_13_2026.pdf",
       "preIpoInvestors": [],
@@ -38237,7 +38266,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 517926,
       "totalShares": 1819200,
       "rhpUrl": "https://www.bsesme.com/download/346052/SME_IPO%20InPrinciple/DraftProspectus_20260319205957.pdf",
       "preIpoInvestors": [],
@@ -38730,7 +38759,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 3607200,
       "totalShares": 12024000,
       "rhpUrl": "",
       "managementHighlights": [
@@ -41591,7 +41620,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 976407,
       "totalShares": 3429600,
       "rhpUrl": "https://www.fedsec.in/download-section/IPO%20Documents/SME/2026-27/ABH%20Healthcare%20Limited/ABH%20healthcare%20_RHP_13.08.2026.pdf",
       "preIpoInvestors": [
@@ -42340,7 +42369,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 562283,
       "totalShares": 1975000,
       "rhpUrl": "https://www.bsesme.com/download/304088/SME_IPO%20InPrinciple/MOPSHOPDPFINAL_20250930232838.pdf",
       "preIpoInvestors": [
@@ -42412,7 +42441,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 768690,
       "totalShares": 2700000,
       "rhpUrl": "https://www.chittorgarh.net/reports/ipo_notes/dhanwel-hybrid-seeds-rhp.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dhanwel_hybrid_seeds_ltd_bse_sme_capital_structure_1781679094.pdf",
@@ -42659,7 +42688,7 @@
           "percent": 11.39
         }
       ],
-      "anchorShares": 0,
+      "anchorShares": 2351157,
       "totalShares": 7837191,
       "rhpUrl": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sunshine_pictures_ltd_mainboard_capital_structure_1786426762.pdf",
@@ -44434,7 +44463,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 838612,
       "totalShares": 2945600,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/skytech_infinite_platform_ltd_nse_sme_rhp_1786356403.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skytech_infinite_platform_ltd_nse_sme_capital_structure_1786356609.pdf",
@@ -45716,9 +45745,9 @@
         "isAdjusted": true
       },
       "preIPO": {
-        "expiryDate": "2027-02-19T00:00:00.000Z",
+        "expiryDate": "2027-02-21",
         "originalDate": "2027-02-19T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -46079,7 +46108,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 649799,
       "totalShares": 2282400,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/qt_foods_ltd_bse_sme_rhp_1786258671.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/qt_foods_ltd_bse_sme_capital_structure_1786258672.pdf",
@@ -46207,7 +46236,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1222388,
       "totalShares": 4293600,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/fascinate_textiles_ltd_nse_sme_rhp_1786170942.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/fascinate_textiles_ltd_nse_sme_capital_structure_1786170743.pdf",
@@ -46832,7 +46861,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 886556,
       "totalShares": 3114000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/sham_foam_ltd_bse_sme_rhp_1786257769.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sham_foam_ltd_bse_sme_capital_structure_1786257773.pdf",
@@ -52402,7 +52431,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1544213,
       "totalShares": 5424000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/farm_peace_ltd_bse_sme_rhp_1787800455.pdf",
       "preIpoInvestors": [
@@ -54793,7 +54822,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 5304900,
       "totalShares": 17683000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/annu_projects_ltd_mainboard_rhp_1787134129.pdf",
       "preIpoInvestors": [
@@ -57355,7 +57384,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1619943,
       "totalShares": 5690000,
       "rhpUrl": "https://www.bsesme.com/download/339300/SME_IPO%20InPrinciple/ApanaDP_20250930235823.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/apana_logistics_ltd_bse_sme_capital_structure_1788343453.pdf",
@@ -57570,7 +57599,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1469052,
       "totalShares": 5160000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/fly_hi_maritime_travels_ltd_bse_sme_rhp_1788095496.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/fly_hi_maritime_travels_ltd_bse_sme_capital_structure_1788095498.pdf",
@@ -57903,7 +57932,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 4290000,
       "totalShares": 14300000,
       "rhpUrl": "",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sonaselection_india_ltd_mainboard_capital_structure_1788943748.pdf",
@@ -58090,7 +58119,7 @@
           "percent": 13.35
         }
       ],
-      "anchorShares": 0,
+      "anchorShares": 4028400,
       "totalShares": 13428000,
       "rhpUrl": "https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/jindal_supreme_india_ltd_mainboard_capital_structure_1788861284.pdf",
@@ -58133,7 +58162,7 @@
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 3543055,
       "totalShares": 11810182,
       "rhpUrl": "https://ssmobile.com/aboutus/investor/assets/RHP/SS%20Retail%20Limited%20-%20RHP%20-%2008092026.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/ss_retail_ltd_mainboard_capital_structure_1788947112.pdf",
@@ -58179,7 +58208,7 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
+      "anchorShares": 1318161,
       "totalShares": 4630000,
       "rhpUrl": "https://syjjlswidlmfzafnyaen.supabase.co/storage/v1/object/public/investor-documents/DRAFT_PROSPECTUS_QUANTO_27-02-2026.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/quanto_agroworld_ltd_bse_sme_capital_structure_1788936040.pdf",
@@ -60096,6 +60125,47 @@
       "noticeId": "20250917-52",
       "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
       "fetchedAt": "2026-09-13T15:50:09.124Z"
+    },
+    "Behari Lal Engineering Ltd.": {
+      "found": true,
+      "totalShares": 42302482,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 7408212,
+          "percentage": 17.5,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-15",
+          "shares": 1587471,
+          "percentage": 3.8
+        },
+        {
+          "date": "2026-11-14",
+          "shares": 1587475,
+          "percentage": 3.8
+        },
+        {
+          "date": "2027-02-21",
+          "shares": 15511802,
+          "percentage": 36.7
+        },
+        {
+          "date": "2027-08-22",
+          "shares": 7747025,
+          "percentage": 18.3
+        },
+        {
+          "date": "2029-08-22",
+          "shares": 8460497,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75817",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75817.zip",
+      "fetchedAt": "2026-09-15T15:39:00.317Z"
     }
   }
 }
