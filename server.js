@@ -834,6 +834,57 @@ async function probeUpcomingData() {
                 }
             }
 
+            // 4. Calculate Anchor 30d, Anchor 90d and Pre-IPO lock-in dates if missing and dates are available
+            const isFixed = company.pricingType === 'Fixed Price' || 
+                (company.priceBand && !company.priceBand.includes('–') && !company.priceBand.includes('-') && !company.priceBand.includes('to'));
+
+            const allotStr = company.allotmentDate ? (company.allotmentDate.adjusted || company.allotmentDate.original) : null;
+            const listStr = company.listingDate || null;
+            let baseDate = null;
+            if (listStr) {
+                baseDate = new Date(listStr);
+            } else if (allotStr) {
+                baseDate = new Date(allotStr);
+                baseDate.setDate(baseDate.getDate() + 2);
+            }
+
+            if (baseDate && !isNaN(baseDate.getTime())) {
+                if (!isFixed) {
+                    if (!company.anchor30 || !company.anchor30.original) {
+                        const d30 = new Date(baseDate);
+                        d30.setDate(d30.getDate() + 30);
+                        const adj30 = getNextBusinessDay(d30);
+                        company.anchor30 = {
+                            original: d30.toISOString(),
+                            adjusted: adj30.toISOString(),
+                            isAdjusted: d30.getTime() !== adj30.getTime()
+                        };
+                        changed = true;
+                        if (!updatedFields.includes('Anchor 30-d Date')) updatedFields.push('Anchor 30-d Date');
+                    }
+                    if (!company.anchor90 || !company.anchor90.original) {
+                        const d90 = new Date(baseDate);
+                        d90.setDate(d90.getDate() + 90);
+                        const adj90 = getNextBusinessDay(d90);
+                        company.anchor90 = {
+                            original: d90.toISOString(),
+                            adjusted: adj90.toISOString(),
+                            isAdjusted: d90.getTime() !== adj90.getTime()
+                        };
+                        changed = true;
+                        if (!updatedFields.includes('Anchor 90-d Date')) updatedFields.push('Anchor 90-d Date');
+                    }
+                }
+                if (!company.preIPO || !company.preIPO.expiryDate) {
+                    const preIpo = calculatePreIPOLockin(allotStr || baseDate.toISOString(), company.issueType);
+                    if (preIpo) {
+                        company.preIPO = preIpo;
+                        changed = true;
+                        if (!updatedFields.includes('Pre-IPO Date')) updatedFields.push('Pre-IPO Date');
+                    }
+                }
+            }
+
             if (changed) {
                 updatedCount++;
                 probeLog.push({

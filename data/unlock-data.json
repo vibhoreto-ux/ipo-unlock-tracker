@@ -16,9 +16,22 @@
       "openDate": "2026-09-20T18:30:00.000Z",
       "closeDate": "2026-09-22T18:30:00.000Z",
       "listingDate": "2026-09-27T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-27T18:30:00.000Z",
+        "adjusted": "2026-10-27T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-26T18:30:00.000Z",
+        "adjusted": "2026-12-27T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-23T18:30:00.000Z",
+        "originalDate": "2027-09-23T18:30:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 2932800,
@@ -70,9 +83,22 @@
       "openDate": "2026-09-20T18:30:00.000Z",
       "closeDate": "2026-09-22T18:30:00.000Z",
       "listingDate": "2026-09-27T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-27T18:30:00.000Z",
+        "adjusted": "2026-10-27T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-26T18:30:00.000Z",
+        "adjusted": "2026-12-27T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-23T18:30:00.000Z",
+        "originalDate": "2027-09-23T18:30:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 3900000,
@@ -108,9 +134,22 @@
       "openDate": "2026-09-22T18:30:00.000Z",
       "closeDate": "2026-09-24T18:30:00.000Z",
       "listingDate": "2026-09-29T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-29T18:30:00.000Z",
+        "adjusted": "2026-10-29T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-28T18:30:00.000Z",
+        "adjusted": "2026-12-28T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-27T18:30:00.000Z",
+        "originalDate": "2027-09-27T18:30:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 2325000,
@@ -145,9 +184,22 @@
       "openDate": "2026-09-23T18:30:00.000Z",
       "closeDate": "2026-09-27T18:30:00.000Z",
       "listingDate": "2026-09-30T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-30T18:30:00.000Z",
+        "adjusted": "2026-11-01T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-29T18:30:00.000Z",
+        "adjusted": "2026-12-29T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-28T18:30:00.000Z",
+        "originalDate": "2027-03-28T18:30:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 0,
@@ -274,27 +326,40 @@
       "preIpoWaca": 22
     },
     {
-      "companyName": "Spectraa Technology Ltd. (NSE SME )",
+      "companyName": "Spectraa Technology Solutions Ltd.",
       "issueType": "SME",
       "exchange": "NSE SME",
       "allotmentDate": {
-        "original": "2026-09-21T18:30:00.000Z",
-        "adjusted": "2026-09-21T18:30:00.000Z",
+        "original": "2026-09-22T00:00:00.000Z",
+        "adjusted": "2026-09-22T00:00:00.000Z",
         "isAdjusted": false
       },
       "chittorgarhUrl": null,
       "issuePrice": 118,
       "priceBand": "₹112–118",
       "lotSize": 1200,
-      "openDate": "2026-09-16T18:30:00.000Z",
-      "closeDate": "2026-09-20T18:30:00.000Z",
-      "listingDate": "2026-09-23T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "openDate": "2026-09-17T00:00:00.000Z",
+      "closeDate": "2026-09-21T00:00:00.000Z",
+      "listingDate": "2026-09-24T00:00:00.000Z",
+      "anchor30": {
+        "original": "2026-10-24T00:00:00.000Z",
+        "adjusted": "2026-10-26T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-23T00:00:00.000Z",
+        "adjusted": "2026-12-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-22T00:00:00.000Z",
+        "originalDate": "2027-09-22T00:00:00.000Z",
+        "isAdjusted": false,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 3476000,
+      "anchorShares": 1026000,
+      "totalShares": 3603600,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/spectraa_technology_ltd_nse_sme_rhp_1789109894.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/spectraa_technology_ltd_nse_sme_capital_structure_1789466069.pdf",
       "anchorUrl": null,
@@ -327,9 +392,22 @@
       "openDate": "2026-09-14T18:30:00.000Z",
       "closeDate": "2026-09-16T18:30:00.000Z",
       "listingDate": "2026-09-21T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-21T18:30:00.000Z",
+        "adjusted": "2026-10-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-20T18:30:00.000Z",
+        "adjusted": "2026-12-20T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-09-19T18:30:00.000Z",
+        "originalDate": "2027-09-17T18:30:00.000Z",
+        "isAdjusted": true,
+        "type": "SME Pre-IPO (1 Yr)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 1452800,
@@ -366,9 +444,22 @@
       "openDate": "2026-09-15T18:30:00.000Z",
       "closeDate": "2026-09-17T18:30:00.000Z",
       "listingDate": "2026-09-22T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-22T18:30:00.000Z",
+        "adjusted": "2026-10-22T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-21T18:30:00.000Z",
+        "adjusted": "2026-12-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-21T18:30:00.000Z",
+        "originalDate": "2027-03-20T18:30:00.000Z",
+        "isAdjusted": true,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 119047618,
@@ -684,8 +775,16 @@
       "openDate": "2026-09-09T18:30:00.000Z",
       "closeDate": "2026-09-14T18:30:00.000Z",
       "listingDate": "2026-09-17T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-17T18:30:00.000Z",
+        "adjusted": "2026-10-18T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-16T18:30:00.000Z",
+        "adjusted": "2026-12-16T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-20T00:00:00.000Z",
         "originalDate": "2027-09-18T00:00:00.000Z",
@@ -1556,8 +1655,16 @@
       "openDate": "2026-09-10T18:30:00.000Z",
       "closeDate": "2026-09-15T18:30:00.000Z",
       "listingDate": "2026-09-20T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-20T18:30:00.000Z",
+        "adjusted": "2026-10-21T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-19T18:30:00.000Z",
+        "adjusted": "2026-12-20T18:30:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-09-21T00:00:00.000Z",
         "originalDate": "2027-09-21T00:00:00.000Z",
@@ -1628,8 +1735,16 @@
       "openDate": "2026-09-10T18:30:00.000Z",
       "closeDate": "2026-09-15T18:30:00.000Z",
       "listingDate": "2026-09-20T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-20T18:30:00.000Z",
+        "adjusted": "2026-10-21T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-19T18:30:00.000Z",
+        "adjusted": "2026-12-20T18:30:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-03-22T00:00:00.000Z",
         "originalDate": "2027-03-21T00:00:00.000Z",
@@ -2212,8 +2327,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vinod-texworld-ipo/2718/",
       "issuePrice": 94,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-16T18:30:00.000Z",
+        "adjusted": "2026-10-18T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-15T18:30:00.000Z",
+        "adjusted": "2026-12-15T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-17T00:00:00.000Z",
         "originalDate": "2027-09-17T00:00:00.000Z",
@@ -2272,8 +2395,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/infrax-renewable-ipo/3163/",
       "issuePrice": 104,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-16T18:30:00.000Z",
+        "adjusted": "2026-10-18T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-15T18:30:00.000Z",
+        "adjusted": "2026-12-15T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-17T00:00:00.000Z",
         "originalDate": "2027-09-17T00:00:00.000Z",
@@ -3149,9 +3280,22 @@
       },
       "chittorgarhUrl": null,
       "issuePrice": 1785,
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
+      "anchor30": {
+        "original": "2026-10-24T18:30:00.000Z",
+        "adjusted": "2026-10-25T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-23T18:30:00.000Z",
+        "adjusted": "2026-12-23T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "preIPO": {
+        "expiryDate": "2027-03-21T18:30:00.000Z",
+        "originalDate": "2027-03-21T18:30:00.000Z",
+        "isAdjusted": false,
+        "type": "Mainboard Pre-IPO (6 Mo)"
+      },
       "anchorInvestors": [],
       "anchorShares": 0,
       "totalShares": 494400000,
@@ -4321,8 +4465,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sundrex-oil-company-ipo/2186/",
       "issuePrice": 86,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-31T00:00:00.000Z",
+        "adjusted": "2026-02-02T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-04-01T00:00:00.000Z",
+        "adjusted": "2026-04-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-30T00:00:00.000Z",
         "originalDate": "2026-12-30T00:00:00.000Z",
@@ -4531,8 +4683,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/phytochem-remedies-india-ipo/2496/",
       "issuePrice": null,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-27T00:00:00.000Z",
+        "adjusted": "2026-01-27T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-28T00:00:00.000Z",
+        "adjusted": "2026-03-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-12-28T00:00:00.000Z",
         "originalDate": "2026-12-26T00:00:00.000Z",
@@ -4666,8 +4826,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/marc-technocrats-ipo/2084/",
       "issuePrice": 93,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-25T00:00:00.000Z",
+        "adjusted": "2026-01-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-03-26T00:00:00.000Z",
+        "adjusted": "2026-03-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-24T00:00:00.000Z",
         "originalDate": "2026-12-24T00:00:00.000Z",
@@ -4763,8 +4931,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/neptune-logitek-ipo/2461/",
       "issuePrice": 126,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-23T00:00:00.000Z",
+        "adjusted": "2026-01-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-24T00:00:00.000Z",
+        "adjusted": "2026-03-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-22T00:00:00.000Z",
         "originalDate": "2026-12-22T00:00:00.000Z",
@@ -5124,8 +5300,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/stanbik-agro-ipo/2602/",
       "issuePrice": 30,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-20T00:00:00.000Z",
+        "adjusted": "2026-01-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-21T00:00:00.000Z",
+        "adjusted": "2026-03-23T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-12-21T00:00:00.000Z",
         "originalDate": "2026-12-19T00:00:00.000Z",
@@ -5386,8 +5570,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shipwaves-online-ipo/2296/",
       "issuePrice": 12,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-18T00:00:00.000Z",
+        "adjusted": "2026-01-19T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-03-19T00:00:00.000Z",
+        "adjusted": "2026-03-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-17T00:00:00.000Z",
         "originalDate": "2026-12-17T00:00:00.000Z",
@@ -5524,8 +5716,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/riddhi-display-ipo/2260/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-16T00:00:00.000Z",
+        "adjusted": "2026-01-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-17T00:00:00.000Z",
+        "adjusted": "2026-03-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-15T00:00:00.000Z",
         "originalDate": "2026-12-15T00:00:00.000Z",
@@ -5982,8 +6182,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/western-overseas-ipo/2089/",
       "issuePrice": 56,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-12T00:00:00.000Z",
+        "adjusted": "2026-01-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-13T00:00:00.000Z",
+        "adjusted": "2026-03-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-11T00:00:00.000Z",
         "originalDate": "2026-12-11T00:00:00.000Z",
@@ -6206,8 +6414,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shri-kanha-stainless-ipo/2530/",
       "issuePrice": 90,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-11T00:00:00.000Z",
+        "adjusted": "2026-01-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-03-12T00:00:00.000Z",
+        "adjusted": "2026-03-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-10T00:00:00.000Z",
         "originalDate": "2026-12-10T00:00:00.000Z",
@@ -6590,8 +6806,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/astron-multigrain-ipo/2636/",
       "issuePrice": 63,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-09T00:00:00.000Z",
+        "adjusted": "2026-01-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-10T00:00:00.000Z",
+        "adjusted": "2026-03-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-08T00:00:00.000Z",
         "originalDate": "2026-12-08T00:00:00.000Z",
@@ -6677,8 +6901,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/logiciel-solutions-ipo/2561/",
       "issuePrice": 193,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-06T00:00:00.000Z",
+        "adjusted": "2026-01-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-03-07T00:00:00.000Z",
+        "adjusted": "2026-03-09T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-12-07T00:00:00.000Z",
         "originalDate": "2026-12-05T00:00:00.000Z",
@@ -6986,8 +7218,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/k-k-silk-mills-ipo/2489/",
       "issuePrice": 38,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-04T00:00:00.000Z",
+        "adjusted": "2026-01-05T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-03-05T00:00:00.000Z",
+        "adjusted": "2026-03-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-03T00:00:00.000Z",
         "originalDate": "2026-12-03T00:00:00.000Z",
@@ -7174,8 +7414,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ssmd-agrotech-india-ipo/2523/",
       "issuePrice": 121,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-01-03T00:00:00.000Z",
+        "adjusted": "2026-01-05T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-03-04T00:00:00.000Z",
+        "adjusted": "2026-03-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-12-02T00:00:00.000Z",
         "originalDate": "2026-12-02T00:00:00.000Z",
@@ -7485,8 +7733,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shining-tools-ipo/2076/",
       "issuePrice": 114,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-12-16T00:00:00.000Z",
+        "adjusted": "2025-12-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-02-14T00:00:00.000Z",
+        "adjusted": "2026-02-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-11-16T00:00:00.000Z",
         "originalDate": "2026-11-14T00:00:00.000Z",
@@ -7709,8 +7965,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/safecure-services-ipo/2154/",
       "issuePrice": 102,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-12-08T00:00:00.000Z",
+        "adjusted": "2025-12-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-02-06T00:00:00.000Z",
+        "adjusted": "2026-02-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-11-06T00:00:00.000Z",
         "originalDate": "2026-11-06T00:00:00.000Z",
@@ -7904,8 +8168,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sihora-industries-ipo/2566/",
       "issuePrice": 66,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-18T00:00:00.000Z",
+        "adjusted": "2025-11-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-17T00:00:00.000Z",
+        "adjusted": "2026-01-19T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-10-19T00:00:00.000Z",
         "originalDate": "2026-10-17T00:00:00.000Z",
@@ -8012,8 +8284,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mittal-sections-ipo/2269/",
       "issuePrice": 143,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-15T00:00:00.000Z",
+        "adjusted": "2025-11-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-14T00:00:00.000Z",
+        "adjusted": "2026-01-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-14T00:00:00.000Z",
         "originalDate": "2026-10-14T00:00:00.000Z",
@@ -8119,8 +8399,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shlokka-dyes-ipo/2118/",
       "issuePrice": 91,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-18T00:00:00.000Z",
+        "adjusted": "2025-11-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-17T00:00:00.000Z",
+        "adjusted": "2026-01-19T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-10-19T00:00:00.000Z",
         "originalDate": "2026-10-17T00:00:00.000Z",
@@ -8140,8 +8428,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/greenleaf-envirotech-ipo/2515/",
       "issuePrice": 136,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-10T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-09T00:00:00.000Z",
+        "adjusted": "2026-01-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-09T00:00:00.000Z",
         "originalDate": "2026-10-09T00:00:00.000Z",
@@ -8434,8 +8730,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sunsky-logistics-ipo/2460/",
       "issuePrice": 46,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-09T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-08T00:00:00.000Z",
+        "adjusted": "2026-01-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-08T00:00:00.000Z",
         "originalDate": "2026-10-08T00:00:00.000Z",
@@ -8455,8 +8759,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/chiraharit-ipo/2262/",
       "issuePrice": 21,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-09T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-08T00:00:00.000Z",
+        "adjusted": "2026-01-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-08T00:00:00.000Z",
         "originalDate": "2026-10-08T00:00:00.000Z",
@@ -8534,8 +8846,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sodhani-capital-ipo/2270/",
       "issuePrice": 51,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-08T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-07T00:00:00.000Z",
+        "adjusted": "2026-01-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-07T00:00:00.000Z",
         "originalDate": "2026-10-07T00:00:00.000Z",
@@ -8555,8 +8875,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vijaypd-ceutical-ipo/2313/",
       "issuePrice": 35,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-08T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-07T00:00:00.000Z",
+        "adjusted": "2026-01-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-07T00:00:00.000Z",
         "originalDate": "2026-10-07T00:00:00.000Z",
@@ -8576,8 +8904,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/om-metallogic-ipo/2326/",
       "issuePrice": 86,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-08T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-07T00:00:00.000Z",
+        "adjusted": "2026-01-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-07T00:00:00.000Z",
         "originalDate": "2026-10-07T00:00:00.000Z",
@@ -8626,8 +8962,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/dhillon-freight-carrier-ipo/2446/",
       "issuePrice": 72,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-08T00:00:00.000Z",
+        "adjusted": "2025-11-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-07T00:00:00.000Z",
+        "adjusted": "2026-01-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-07T00:00:00.000Z",
         "originalDate": "2026-10-07T00:00:00.000Z",
@@ -8734,8 +9078,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rukmani-devi-garg-ipo/2209/",
       "issuePrice": 99,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-07T00:00:00.000Z",
+        "adjusted": "2025-11-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-06T00:00:00.000Z",
+        "adjusted": "2026-01-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-06T00:00:00.000Z",
         "originalDate": "2026-10-06T00:00:00.000Z",
@@ -8755,8 +9107,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/m-p-k-steels-ipo/2272/",
       "issuePrice": 79,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-07T00:00:00.000Z",
+        "adjusted": "2025-11-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-06T00:00:00.000Z",
+        "adjusted": "2026-01-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-06T00:00:00.000Z",
         "originalDate": "2026-10-06T00:00:00.000Z",
@@ -8834,8 +9194,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/manas-polymers-and-energies-ipo/2341/",
       "issuePrice": 81,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-07T00:00:00.000Z",
+        "adjusted": "2025-11-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-06T00:00:00.000Z",
+        "adjusted": "2026-01-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-06T00:00:00.000Z",
         "originalDate": "2026-10-06T00:00:00.000Z",
@@ -8855,8 +9223,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/bhavik-enterprises-ipo/2422/",
       "issuePrice": 140,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-07T00:00:00.000Z",
+        "adjusted": "2025-11-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-06T00:00:00.000Z",
+        "adjusted": "2026-01-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-06T00:00:00.000Z",
         "originalDate": "2026-10-06T00:00:00.000Z",
@@ -8934,8 +9310,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gujarat-peanut-and-agri-products-ipo/2336/",
       "issuePrice": 80,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-04T00:00:00.000Z",
+        "adjusted": "2025-11-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-03T00:00:00.000Z",
+        "adjusted": "2026-01-05T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-10-05T00:00:00.000Z",
         "originalDate": "2026-10-03T00:00:00.000Z",
@@ -8984,8 +9368,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/earkart-ipo/2473/",
       "issuePrice": 135,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-04T00:00:00.000Z",
+        "adjusted": "2025-11-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-03T00:00:00.000Z",
+        "adjusted": "2026-01-05T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-10-05T00:00:00.000Z",
         "originalDate": "2026-10-03T00:00:00.000Z",
@@ -9063,8 +9455,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/bmw-ventures-ipo/2212/",
       "issuePrice": 99,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-02T00:00:00.000Z",
+        "adjusted": "2025-11-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-01T00:00:00.000Z",
+        "adjusted": "2026-01-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-04-01T00:00:00.000Z",
         "originalDate": "2026-04-01T00:00:00.000Z",
@@ -9113,8 +9513,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gurunanak-agriculture-ipo/2246/",
       "issuePrice": 75,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-02T00:00:00.000Z",
+        "adjusted": "2025-11-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-01T00:00:00.000Z",
+        "adjusted": "2026-01-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-01T00:00:00.000Z",
         "originalDate": "2026-10-01T00:00:00.000Z",
@@ -9223,8 +9631,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nsb-bpo-ipo/2195/",
       "issuePrice": 121,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-11T00:00:00.000Z",
+        "adjusted": "2025-11-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-10T00:00:00.000Z",
+        "adjusted": "2026-01-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-10-12T00:00:00.000Z",
         "originalDate": "2026-10-10T00:00:00.000Z",
@@ -10044,8 +10460,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/solvex-edibles-ipo/2093/",
       "issuePrice": 72,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-02T00:00:00.000Z",
+        "adjusted": "2025-11-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-01-01T00:00:00.000Z",
+        "adjusted": "2026-01-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-01T00:00:00.000Z",
         "originalDate": "2026-10-01T00:00:00.000Z",
@@ -10332,8 +10756,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/siddhi-cotspin-ipo/2615/",
       "issuePrice": 108,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-28T00:00:00.000Z",
+        "adjusted": "2025-10-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-12-27T00:00:00.000Z",
+        "adjusted": "2025-12-29T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-09-28T00:00:00.000Z",
         "originalDate": "2026-09-26T00:00:00.000Z",
@@ -11667,8 +12099,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/galaxy-medicare-ipo/2190/",
       "issuePrice": 54,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-19T00:00:00.000Z",
+        "adjusted": "2025-10-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-12-18T00:00:00.000Z",
+        "adjusted": "2025-12-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-17T00:00:00.000Z",
         "originalDate": "2026-09-17T00:00:00.000Z",
@@ -12216,8 +12656,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nilachal-carbo-ipo/2215/",
       "issuePrice": 85,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-18T00:00:00.000Z",
+        "adjusted": "2025-10-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-12-17T00:00:00.000Z",
+        "adjusted": "2025-12-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-16T00:00:00.000Z",
         "originalDate": "2026-09-16T00:00:00.000Z",
@@ -12262,8 +12710,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/krupalu-metals-ipo/2431/",
       "issuePrice": 72,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-18T00:00:00.000Z",
+        "adjusted": "2025-10-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-12-17T00:00:00.000Z",
+        "adjusted": "2025-12-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-16T00:00:00.000Z",
         "originalDate": "2026-09-16T00:00:00.000Z",
@@ -12308,8 +12764,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vashishtha-luxury-ipo/2359/",
       "issuePrice": 111,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-17T00:00:00.000Z",
+        "adjusted": "2025-10-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-12-16T00:00:00.000Z",
+        "adjusted": "2025-12-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-15T00:00:00.000Z",
         "originalDate": "2026-09-15T00:00:00.000Z",
@@ -12723,8 +13187,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rachit-prints-ipo/2198/",
       "issuePrice": 149,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-10T00:00:00.000Z",
+        "adjusted": "2025-10-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-12-09T00:00:00.000Z",
+        "adjusted": "2025-12-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-08T00:00:00.000Z",
         "originalDate": "2026-09-08T00:00:00.000Z",
@@ -12821,8 +13293,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/snehaa-organics-ipo/2275/",
       "issuePrice": 122,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-07T00:00:00.000Z",
+        "adjusted": "2025-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-12-06T00:00:00.000Z",
+        "adjusted": "2025-12-08T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-09-07T00:00:00.000Z",
         "originalDate": "2026-09-05T00:00:00.000Z",
@@ -12867,8 +13347,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/abril-paper-tech-ipo/2506/",
       "issuePrice": 61,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-07T00:00:00.000Z",
+        "adjusted": "2025-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-12-06T00:00:00.000Z",
+        "adjusted": "2025-12-08T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-09-07T00:00:00.000Z",
         "originalDate": "2026-09-05T00:00:00.000Z",
@@ -12977,8 +13465,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/anlon-healthcare-ipo/2053/",
       "issuePrice": 91,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-05T00:00:00.000Z",
+        "adjusted": "2025-10-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-12-04T00:00:00.000Z",
+        "adjusted": "2025-12-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-04T00:00:00.000Z",
         "originalDate": "2026-03-03T00:00:00.000Z",
@@ -13163,8 +13659,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/globtier-infotech-ipo/2135/",
       "issuePrice": 72,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-10-04T00:00:00.000Z",
+        "adjusted": "2025-10-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-12-03T00:00:00.000Z",
+        "adjusted": "2025-12-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-02T00:00:00.000Z",
         "originalDate": "2026-09-02T00:00:00.000Z",
@@ -13735,8 +14239,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/lgt-business-ipo/2091/",
       "issuePrice": 107,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-27T00:00:00.000Z",
+        "adjusted": "2025-09-29T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-11-26T00:00:00.000Z",
+        "adjusted": "2025-11-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-26T00:00:00.000Z",
         "originalDate": "2026-08-26T00:00:00.000Z",
@@ -13811,8 +14323,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/studio-lsd-ipo/2113/",
       "issuePrice": 54,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-26T00:00:00.000Z",
+        "adjusted": "2025-09-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-25T00:00:00.000Z",
+        "adjusted": "2025-11-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-26T00:00:00.000Z",
         "originalDate": "2026-08-25T00:00:00.000Z",
@@ -13859,8 +14379,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mahendra-realtors-ipo/2043/",
       "issuePrice": 85,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-21T00:00:00.000Z",
+        "adjusted": "2025-09-22T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-11-20T00:00:00.000Z",
+        "adjusted": "2025-11-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-20T00:00:00.000Z",
         "originalDate": "2026-08-20T00:00:00.000Z",
@@ -13907,8 +14435,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/icodex-publishing-ipo/2079/",
       "issuePrice": 102,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-20T00:00:00.000Z",
+        "adjusted": "2025-09-22T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-11-19T00:00:00.000Z",
+        "adjusted": "2025-11-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-19T00:00:00.000Z",
         "originalDate": "2026-08-19T00:00:00.000Z",
@@ -13955,8 +14491,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/medistep-healthcare-ipo/2178/",
       "issuePrice": 43,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-19T00:00:00.000Z",
+        "adjusted": "2025-09-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-18T00:00:00.000Z",
+        "adjusted": "2025-11-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-18T00:00:00.000Z",
         "originalDate": "2026-08-18T00:00:00.000Z",
@@ -14256,8 +14800,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/aaradhya-disposal-industries-ipo/2311/",
       "issuePrice": 116,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-12T00:00:00.000Z",
+        "adjusted": "2025-09-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-11T00:00:00.000Z",
+        "adjusted": "2025-11-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-11T00:00:00.000Z",
         "originalDate": "2026-08-11T00:00:00.000Z",
@@ -14304,8 +14856,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/essex-marine-ipo/2333/",
       "issuePrice": 54,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-12T00:00:00.000Z",
+        "adjusted": "2025-09-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-11T00:00:00.000Z",
+        "adjusted": "2025-11-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-11T00:00:00.000Z",
         "originalDate": "2026-08-11T00:00:00.000Z",
@@ -14796,8 +15356,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/umiya-mobile-ipo/2273/",
       "issuePrice": 66,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-05T00:00:00.000Z",
+        "adjusted": "2025-09-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-04T00:00:00.000Z",
+        "adjusted": "2025-11-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-08-04T00:00:00.000Z",
         "originalDate": "2026-08-04T00:00:00.000Z",
@@ -15071,8 +15639,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/propshare-titania-ipo/2533/",
       "issuePrice": 1060000,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-09-05T00:00:00.000Z",
+        "adjusted": "2025-09-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-11-04T00:00:00.000Z",
+        "adjusted": "2025-11-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-02-04T00:00:00.000Z",
         "originalDate": "2026-02-04T00:00:00.000Z",
@@ -15091,8 +15667,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/swastika-castal-ipo/2279/",
       "issuePrice": 65,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-29T00:00:00.000Z",
+        "adjusted": "2025-08-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-10-28T00:00:00.000Z",
+        "adjusted": "2025-10-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-28T00:00:00.000Z",
         "originalDate": "2026-07-28T00:00:00.000Z",
@@ -15279,8 +15863,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/cff-fluid-control-fpo/2440/",
       "issuePrice": 585,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-17T00:00:00.000Z",
+        "adjusted": "2025-08-18T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-10-16T00:00:00.000Z",
+        "adjusted": "2025-10-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-16T00:00:00.000Z",
         "originalDate": "2026-07-16T00:00:00.000Z",
@@ -15355,8 +15947,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/smarten-power-systems-ipo/2177/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-15T00:00:00.000Z",
+        "adjusted": "2025-08-18T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-10-14T00:00:00.000Z",
+        "adjusted": "2025-10-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-14T00:00:00.000Z",
         "originalDate": "2026-07-14T00:00:00.000Z",
@@ -15515,8 +16115,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vandan-foods-ipo/2169/",
       "issuePrice": 115,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-08T00:00:00.000Z",
+        "adjusted": "2025-08-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-10-07T00:00:00.000Z",
+        "adjusted": "2025-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-07T00:00:00.000Z",
         "originalDate": "2026-07-07T00:00:00.000Z",
@@ -15535,8 +16143,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/marc-loire-ipo/2191/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-08T00:00:00.000Z",
+        "adjusted": "2025-08-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-10-07T00:00:00.000Z",
+        "adjusted": "2025-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-07T00:00:00.000Z",
         "originalDate": "2026-07-07T00:00:00.000Z",
@@ -16051,8 +16667,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/valencia-india-ipo/2167/",
       "issuePrice": 110,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-04T00:00:00.000Z",
+        "adjusted": "2025-08-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-10-03T00:00:00.000Z",
+        "adjusted": "2025-10-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-03T00:00:00.000Z",
         "originalDate": "2026-07-03T00:00:00.000Z",
@@ -16183,8 +16807,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rama-telecom-ipo/2144/",
       "issuePrice": 68,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-03T00:00:00.000Z",
+        "adjusted": "2025-08-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-10-02T00:00:00.000Z",
+        "adjusted": "2025-10-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-07-02T00:00:00.000Z",
         "originalDate": "2026-07-02T00:00:00.000Z",
@@ -16231,8 +16863,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/supertech-ev-ipo/2388/",
       "issuePrice": 92,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-03T00:00:00.000Z",
+        "adjusted": "2025-08-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-10-02T00:00:00.000Z",
+        "adjusted": "2025-10-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-07-02T00:00:00.000Z",
         "originalDate": "2026-07-02T00:00:00.000Z",
@@ -16251,8 +16891,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/abram-food-ipo/2112/",
       "issuePrice": 98,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-02T00:00:00.000Z",
+        "adjusted": "2025-08-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-10-01T00:00:00.000Z",
+        "adjusted": "2025-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-01T00:00:00.000Z",
         "originalDate": "2026-07-01T00:00:00.000Z",
@@ -16355,8 +17003,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/icon-facilitators-ipo/2312/",
       "issuePrice": 91,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-02T00:00:00.000Z",
+        "adjusted": "2025-08-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-10-01T00:00:00.000Z",
+        "adjusted": "2025-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-07-01T00:00:00.000Z",
         "originalDate": "2026-07-01T00:00:00.000Z",
@@ -16951,8 +17607,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/aten-papers-foam-ipo/2224/",
       "issuePrice": 96,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-07-22T00:00:00.000Z",
+        "adjusted": "2025-07-22T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-09-20T00:00:00.000Z",
+        "adjusted": "2025-09-22T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-06-22T00:00:00.000Z",
         "originalDate": "2026-06-20T00:00:00.000Z",
@@ -16999,8 +17663,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/jainik-power-and-cables-ipo/2293/",
       "issuePrice": 110,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-07-19T00:00:00.000Z",
+        "adjusted": "2025-07-21T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-09-17T00:00:00.000Z",
+        "adjusted": "2025-09-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-06-17T00:00:00.000Z",
         "originalDate": "2026-06-17T00:00:00.000Z",
@@ -17123,8 +17795,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ganga-bath-fittings-ipo/2294/",
       "issuePrice": 49,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-07-13T00:00:00.000Z",
+        "adjusted": "2025-07-14T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-09-11T00:00:00.000Z",
+        "adjusted": "2025-09-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-06-11T00:00:00.000Z",
         "originalDate": "2026-06-11T00:00:00.000Z",
@@ -17143,8 +17823,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/3b-films-ipo/2216/",
       "issuePrice": 50,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-07-08T00:00:00.000Z",
+        "adjusted": "2025-07-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-09-06T00:00:00.000Z",
+        "adjusted": "2025-09-08T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-06-08T00:00:00.000Z",
         "originalDate": "2026-06-06T00:00:00.000Z",
@@ -17555,8 +18243,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/integrity-infrabuild-developers-ipo/2348/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-06-21T00:00:00.000Z",
+        "adjusted": "2025-06-23T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-08-20T00:00:00.000Z",
+        "adjusted": "2025-08-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-05-20T00:00:00.000Z",
         "originalDate": "2026-05-20T00:00:00.000Z",
@@ -17603,8 +18299,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/manoj-jewellers-ipo/2146/",
       "issuePrice": 54,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-06-13T00:00:00.000Z",
+        "adjusted": "2025-06-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-08-12T00:00:00.000Z",
+        "adjusted": "2025-08-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-05-12T00:00:00.000Z",
         "originalDate": "2026-05-12T00:00:00.000Z",
@@ -17651,8 +18355,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kenrik-industries-ipo/2382/",
       "issuePrice": 25,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-06-10T00:00:00.000Z",
+        "adjusted": "2025-06-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-08-09T00:00:00.000Z",
+        "adjusted": "2025-08-11T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-05-11T00:00:00.000Z",
         "originalDate": "2026-05-09T00:00:00.000Z",
@@ -17671,8 +18383,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/arunaya-organics-ipo/2419/",
       "issuePrice": 58,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-06-08T00:00:00.000Z",
+        "adjusted": "2025-06-09T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-08-07T00:00:00.000Z",
+        "adjusted": "2025-08-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-05-07T00:00:00.000Z",
         "originalDate": "2026-05-07T00:00:00.000Z",
@@ -17691,8 +18411,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/iware-supplychain-services-ipo/2170/",
       "issuePrice": 95,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-06-07T00:00:00.000Z",
+        "adjusted": "2025-06-09T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-08-06T00:00:00.000Z",
+        "adjusted": "2025-08-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-05-06T00:00:00.000Z",
         "originalDate": "2026-05-06T00:00:00.000Z",
@@ -17767,8 +18495,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/spinaroo-commercial-ipo/2201/",
       "issuePrice": 51,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-05-10T00:00:00.000Z",
+        "adjusted": "2025-05-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-07-09T00:00:00.000Z",
+        "adjusted": "2025-07-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-04-08T00:00:00.000Z",
         "originalDate": "2026-04-08T00:00:00.000Z",
@@ -17787,8 +18523,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/infonative-solutions-ipo/2223/",
       "issuePrice": 79,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-05-10T00:00:00.000Z",
+        "adjusted": "2025-05-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-07-09T00:00:00.000Z",
+        "adjusted": "2025-07-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-04-08T00:00:00.000Z",
         "originalDate": "2026-04-08T00:00:00.000Z",
@@ -17807,8 +18551,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/retaggio-industries-ipo/2222/",
       "issuePrice": 25,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-05-09T00:00:00.000Z",
+        "adjusted": "2025-05-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-07-08T00:00:00.000Z",
+        "adjusted": "2025-07-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-04-07T00:00:00.000Z",
         "originalDate": "2026-04-07T00:00:00.000Z",
@@ -18051,8 +18803,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/divine-hira-jewellers-ipo/2155/",
       "issuePrice": 90,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-25T00:00:00.000Z",
+        "adjusted": "2025-04-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-06-24T00:00:00.000Z",
+        "adjusted": "2025-06-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-24T00:00:00.000Z",
         "originalDate": "2026-03-24T00:00:00.000Z",
@@ -18071,8 +18831,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/super-iron-foundry-ipo/2132/",
       "issuePrice": 108,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-20T00:00:00.000Z",
+        "adjusted": "2025-04-21T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-06-19T00:00:00.000Z",
+        "adjusted": "2025-06-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-19T00:00:00.000Z",
         "originalDate": "2026-03-19T00:00:00.000Z",
@@ -18091,8 +18859,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/pdp-shipping-projects-ipo/2115/",
       "issuePrice": 135,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-19T00:00:00.000Z",
+        "adjusted": "2025-04-21T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-06-18T00:00:00.000Z",
+        "adjusted": "2025-06-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-18T00:00:00.000Z",
         "originalDate": "2026-03-18T00:00:00.000Z",
@@ -18111,8 +18887,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/naps-global-india-ipo/2052/",
       "issuePrice": 90,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-12T00:00:00.000Z",
+        "adjusted": "2025-04-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-06-11T00:00:00.000Z",
+        "adjusted": "2025-06-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-11T00:00:00.000Z",
         "originalDate": "2026-03-11T00:00:00.000Z",
@@ -18159,8 +18943,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shreenath-paper-ipo/2022/",
       "issuePrice": 44,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-06T00:00:00.000Z",
+        "adjusted": "2025-04-07T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-06-05T00:00:00.000Z",
+        "adjusted": "2025-06-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-05T00:00:00.000Z",
         "originalDate": "2026-03-05T00:00:00.000Z",
@@ -18179,8 +18971,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nukleus-office-solutions-ipo/2021/",
       "issuePrice": 234,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-05T00:00:00.000Z",
+        "adjusted": "2025-04-07T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-06-04T00:00:00.000Z",
+        "adjusted": "2025-06-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-03-04T00:00:00.000Z",
         "originalDate": "2026-03-04T00:00:00.000Z",
@@ -18227,8 +19027,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/hp-telecom-india-ipo/1994/",
       "issuePrice": 108,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-01T00:00:00.000Z",
+        "adjusted": "2025-04-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-05-31T00:00:00.000Z",
+        "adjusted": "2025-06-02T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-03-02T00:00:00.000Z",
         "originalDate": "2026-02-28T00:00:00.000Z",
@@ -18247,8 +19055,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/swasth-foodtech-ipo/1996/",
       "issuePrice": 94,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-04-01T00:00:00.000Z",
+        "adjusted": "2025-04-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-05-31T00:00:00.000Z",
+        "adjusted": "2025-06-02T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-03-02T00:00:00.000Z",
         "originalDate": "2026-02-28T00:00:00.000Z",
@@ -18351,8 +19167,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/lk-mehta-polymers-ipo/1989/",
       "issuePrice": 71,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-03-25T00:00:00.000Z",
+        "adjusted": "2025-03-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-05-24T00:00:00.000Z",
+        "adjusted": "2025-05-26T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-02-23T00:00:00.000Z",
         "originalDate": "2026-02-21T00:00:00.000Z",
@@ -18371,8 +19195,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shanmuga-hospital-ipo/1990/",
       "issuePrice": 54,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-03-25T00:00:00.000Z",
+        "adjusted": "2025-03-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-05-24T00:00:00.000Z",
+        "adjusted": "2025-05-26T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-02-23T00:00:00.000Z",
         "originalDate": "2026-02-21T00:00:00.000Z",
@@ -18643,8 +19475,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ken-enterprises-ipo/1977/",
       "issuePrice": 94,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-03-16T00:00:00.000Z",
+        "adjusted": "2025-03-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-05-15T00:00:00.000Z",
+        "adjusted": "2025-05-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-02-12T00:00:00.000Z",
         "originalDate": "2026-02-12T00:00:00.000Z",
@@ -18663,8 +19503,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/amwill-healthcare-ipo/1979/",
       "issuePrice": 111,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-03-16T00:00:00.000Z",
+        "adjusted": "2025-03-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-05-15T00:00:00.000Z",
+        "adjusted": "2025-05-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-02-12T00:00:00.000Z",
         "originalDate": "2026-02-12T00:00:00.000Z",
@@ -18851,8 +19699,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rexpro-enterprises-ipo/1969/",
       "issuePrice": 145,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-03-02T00:00:00.000Z",
+        "adjusted": "2025-03-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-05-01T00:00:00.000Z",
+        "adjusted": "2025-05-02T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-01-29T00:00:00.000Z",
         "originalDate": "2026-01-29T00:00:00.000Z",
@@ -19151,8 +20007,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/avax-apparels-and-ornaments-ipo/1862/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-02-15T00:00:00.000Z",
+        "adjusted": "2025-02-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-04-16T00:00:00.000Z",
+        "adjusted": "2025-04-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-01-14T00:00:00.000Z",
         "originalDate": "2026-01-14T00:00:00.000Z",
@@ -19311,8 +20175,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/indobell-insulations-ipo/1956/",
       "issuePrice": 46,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-02-14T00:00:00.000Z",
+        "adjusted": "2025-02-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-04-15T00:00:00.000Z",
+        "adjusted": "2025-04-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-01-13T00:00:00.000Z",
         "originalDate": "2026-01-13T00:00:00.000Z",
@@ -19359,8 +20231,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/davin-sons-ipo/1952/",
       "issuePrice": 55,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-02-10T00:00:00.000Z",
+        "adjusted": "2025-02-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-04-11T00:00:00.000Z",
+        "adjusted": "2025-04-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-01-09T00:00:00.000Z",
         "originalDate": "2026-01-09T00:00:00.000Z",
@@ -19491,8 +20371,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/citichem-india-ipo/1947/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-02-04T00:00:00.000Z",
+        "adjusted": "2025-02-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-04-05T00:00:00.000Z",
+        "adjusted": "2025-04-07T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-01-05T00:00:00.000Z",
         "originalDate": "2026-01-03T00:00:00.000Z",
@@ -19735,8 +20623,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/newmalayalam-steel-ipo/1938/",
       "issuePrice": 90,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-01-28T00:00:00.000Z",
+        "adjusted": "2025-01-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-03-29T00:00:00.000Z",
+        "adjusted": "2025-04-01T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-12-29T00:00:00.000Z",
         "originalDate": "2025-12-27T00:00:00.000Z",
@@ -19895,8 +20791,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/hamps-bio-ipo/1931/",
       "issuePrice": 51,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-01-21T00:00:00.000Z",
+        "adjusted": "2025-01-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-03-22T00:00:00.000Z",
+        "adjusted": "2025-03-24T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-12-22T00:00:00.000Z",
         "originalDate": "2025-12-20T00:00:00.000Z",
@@ -20055,8 +20959,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/supreme-facility-management-ipo/1927/",
       "issuePrice": 76,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-01-19T00:00:00.000Z",
+        "adjusted": "2025-01-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-03-20T00:00:00.000Z",
+        "adjusted": "2025-03-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-12-18T00:00:00.000Z",
         "originalDate": "2025-12-18T00:00:00.000Z",
@@ -20243,8 +21155,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/property-share-reit-ipo/1917/",
       "issuePrice": 1050000,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-01-11T00:00:00.000Z",
+        "adjusted": "2025-01-13T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-03-12T00:00:00.000Z",
+        "adjusted": "2025-03-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-10T00:00:00.000Z",
         "originalDate": "2025-06-10T00:00:00.000Z",
@@ -20375,8 +21295,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/abha-power-and-steel-ipo/1916/",
       "issuePrice": 75,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-01-05T00:00:00.000Z",
+        "adjusted": "2025-01-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-03-06T00:00:00.000Z",
+        "adjusted": "2025-03-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-12-04T00:00:00.000Z",
         "originalDate": "2025-12-04T00:00:00.000Z",
@@ -20506,8 +21434,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/lamosaic-india-ipo/1908/",
       "issuePrice": 200,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-12-31T00:00:00.000Z",
+        "adjusted": "2024-12-31T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-03-01T00:00:00.000Z",
+        "adjusted": "2025-03-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-12-01T00:00:00.000Z",
         "originalDate": "2025-11-29T00:00:00.000Z",
@@ -20610,8 +21546,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mangal-compusolution-ipo/1905/",
       "issuePrice": 45,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-12-23T00:00:00.000Z",
+        "adjusted": "2024-12-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-02-21T00:00:00.000Z",
+        "adjusted": "2025-02-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-11-21T00:00:00.000Z",
         "originalDate": "2025-11-21T00:00:00.000Z",
@@ -20996,8 +21940,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/premium-plast-ipo/1891/",
       "issuePrice": 49,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-11-29T00:00:00.000Z",
+        "adjusted": "2024-11-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-01-28T00:00:00.000Z",
+        "adjusted": "2025-01-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-10-28T00:00:00.000Z",
         "originalDate": "2025-10-28T00:00:00.000Z",
@@ -21184,8 +22136,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/khyati-global-ventures-ipo/1882/",
       "issuePrice": 99,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-11-12T00:00:00.000Z",
+        "adjusted": "2024-11-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-01-11T00:00:00.000Z",
+        "adjusted": "2025-01-13T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-10-13T00:00:00.000Z",
         "originalDate": "2025-10-11T00:00:00.000Z",
@@ -21204,8 +22164,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/neopolitan-pizza-and-foods-ipo/1880/",
       "issuePrice": 20,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-11-10T00:00:00.000Z",
+        "adjusted": "2024-11-11T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2025-01-09T00:00:00.000Z",
+        "adjusted": "2025-01-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-10-09T00:00:00.000Z",
         "originalDate": "2025-10-09T00:00:00.000Z",
@@ -21280,8 +22248,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/saj-hotels-ipo/1871/",
       "issuePrice": 65,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-11-08T00:00:00.000Z",
+        "adjusted": "2024-11-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-01-07T00:00:00.000Z",
+        "adjusted": "2025-01-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-10-07T00:00:00.000Z",
         "originalDate": "2025-10-07T00:00:00.000Z",
@@ -21440,8 +22416,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nexxus-petro-industries-ipo/1875/",
       "issuePrice": 105,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-11-05T00:00:00.000Z",
+        "adjusted": "2024-11-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-01-04T00:00:00.000Z",
+        "adjusted": "2025-01-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-10-06T00:00:00.000Z",
         "originalDate": "2025-10-04T00:00:00.000Z",
@@ -21544,8 +22528,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/thinking-hats-entertainment-solutions-ipo/1870/",
       "issuePrice": 44,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-11-04T00:00:00.000Z",
+        "adjusted": "2024-11-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-01-03T00:00:00.000Z",
+        "adjusted": "2025-01-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-10-03T00:00:00.000Z",
         "originalDate": "2025-10-03T00:00:00.000Z",
@@ -21648,8 +22640,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/bikewo-greentech-ipo/1857/",
       "issuePrice": 62,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-29T00:00:00.000Z",
+        "adjusted": "2024-10-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-28T00:00:00.000Z",
+        "adjusted": "2024-12-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-09-29T00:00:00.000Z",
         "originalDate": "2025-09-27T00:00:00.000Z",
@@ -21696,8 +22696,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/phoenix-overseas-ipo/1860/",
       "issuePrice": 64,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-29T00:00:00.000Z",
+        "adjusted": "2024-10-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-28T00:00:00.000Z",
+        "adjusted": "2024-12-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-09-29T00:00:00.000Z",
         "originalDate": "2025-09-27T00:00:00.000Z",
@@ -21716,8 +22724,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/avi-ansh-textile-ipo/1863/",
       "issuePrice": 62,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-29T00:00:00.000Z",
+        "adjusted": "2024-10-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-28T00:00:00.000Z",
+        "adjusted": "2024-12-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-09-29T00:00:00.000Z",
         "originalDate": "2025-09-27T00:00:00.000Z",
@@ -21736,8 +22752,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kalana-ispat-ipo/1865/",
       "issuePrice": 66,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-28T00:00:00.000Z",
+        "adjusted": "2024-10-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-27T00:00:00.000Z",
+        "adjusted": "2024-12-27T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-26T00:00:00.000Z",
         "originalDate": "2025-09-26T00:00:00.000Z",
@@ -21980,8 +23004,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/popular-foundations-ipo/1852/",
       "issuePrice": 37,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-26T00:00:00.000Z",
+        "adjusted": "2024-10-28T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-12-25T00:00:00.000Z",
+        "adjusted": "2024-12-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-24T00:00:00.000Z",
         "originalDate": "2025-09-24T00:00:00.000Z",
@@ -22000,8 +23032,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sodhani-academy-of-fintech-enablers-ipo/1851/",
       "issuePrice": 40,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-25T00:00:00.000Z",
+        "adjusted": "2024-10-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-24T00:00:00.000Z",
+        "adjusted": "2024-12-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-23T00:00:00.000Z",
         "originalDate": "2025-09-23T00:00:00.000Z",
@@ -22020,8 +23060,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/excellent-wires-and-packaging-ipo/1830/",
       "issuePrice": 90,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-21T00:00:00.000Z",
+        "adjusted": "2024-10-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-20T00:00:00.000Z",
+        "adjusted": "2024-12-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-19T00:00:00.000Z",
         "originalDate": "2025-09-19T00:00:00.000Z",
@@ -22040,8 +23088,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/innomet-advanced-materials-ipo/1845/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-20T00:00:00.000Z",
+        "adjusted": "2024-10-21T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-12-19T00:00:00.000Z",
+        "adjusted": "2024-12-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-18T00:00:00.000Z",
         "originalDate": "2025-09-18T00:00:00.000Z",
@@ -22088,8 +23144,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/spp-polymer-ipo/1843/",
       "issuePrice": 59,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-19T00:00:00.000Z",
+        "adjusted": "2024-10-21T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-12-18T00:00:00.000Z",
+        "adjusted": "2024-12-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-17T00:00:00.000Z",
         "originalDate": "2025-09-17T00:00:00.000Z",
@@ -22108,8 +23172,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/trafiksol-its-technologies-ipo/1847/",
       "issuePrice": null,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-14T00:00:00.000Z",
+        "adjusted": "2024-10-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-13T00:00:00.000Z",
+        "adjusted": "2024-12-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-12T00:00:00.000Z",
         "originalDate": "2025-09-12T00:00:00.000Z",
@@ -22184,8 +23256,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/aditya-ultra-steel-ipo/1838/",
       "issuePrice": 62,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-18T00:00:00.000Z",
+        "adjusted": "2024-10-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-17T00:00:00.000Z",
+        "adjusted": "2024-12-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-16T00:00:00.000Z",
         "originalDate": "2025-09-16T00:00:00.000Z",
@@ -22288,8 +23368,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gajanand-international-ipo/1846/",
       "issuePrice": 36,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-18T00:00:00.000Z",
+        "adjusted": "2024-10-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-17T00:00:00.000Z",
+        "adjusted": "2024-12-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-16T00:00:00.000Z",
         "originalDate": "2025-09-16T00:00:00.000Z",
@@ -22448,8 +23536,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/naturewings-holidays-ipo/1834/",
       "issuePrice": 74,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-12T00:00:00.000Z",
+        "adjusted": "2024-10-14T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-12-11T00:00:00.000Z",
+        "adjusted": "2024-12-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-10T00:00:00.000Z",
         "originalDate": "2025-09-10T00:00:00.000Z",
@@ -22552,8 +23648,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/boss-packaging-solutions-ipo/1826/",
       "issuePrice": 66,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-08T00:00:00.000Z",
+        "adjusted": "2024-10-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-07T00:00:00.000Z",
+        "adjusted": "2024-12-09T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-09-08T00:00:00.000Z",
         "originalDate": "2025-09-06T00:00:00.000Z",
@@ -22572,8 +23676,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/travels-rentals-ipo/1828/",
       "issuePrice": 40,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-07T00:00:00.000Z",
+        "adjusted": "2024-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-12-06T00:00:00.000Z",
+        "adjusted": "2024-12-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-05T00:00:00.000Z",
         "originalDate": "2025-09-05T00:00:00.000Z",
@@ -22648,8 +23760,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/paramatrix-technologies-ipo/1819/",
       "issuePrice": 110,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-06T00:00:00.000Z",
+        "adjusted": "2024-10-07T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-12-05T00:00:00.000Z",
+        "adjusted": "2024-12-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-04T00:00:00.000Z",
         "originalDate": "2025-09-04T00:00:00.000Z",
@@ -22724,8 +23844,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vdeal-system-ipo/1824/",
       "issuePrice": 112,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-05T00:00:00.000Z",
+        "adjusted": "2024-10-07T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-12-04T00:00:00.000Z",
+        "adjusted": "2024-12-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-09-03T00:00:00.000Z",
         "originalDate": "2025-09-03T00:00:00.000Z",
@@ -22772,8 +23900,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rapid-multimodal-logistics-ipo/1816/",
       "issuePrice": 84,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-10-01T00:00:00.000Z",
+        "adjusted": "2024-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-11-30T00:00:00.000Z",
+        "adjusted": "2024-12-02T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-09-01T00:00:00.000Z",
         "originalDate": "2025-08-30T00:00:00.000Z",
@@ -22792,8 +23928,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/resourceful-automobile-ipo/1814/",
       "issuePrice": 117,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-30T00:00:00.000Z",
+        "adjusted": "2024-09-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-11-29T00:00:00.000Z",
+        "adjusted": "2024-11-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-29T00:00:00.000Z",
         "originalDate": "2025-08-29T00:00:00.000Z",
@@ -22840,8 +23984,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/qvc-exports-ipo/1812/",
       "issuePrice": 86,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-29T00:00:00.000Z",
+        "adjusted": "2024-09-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-11-28T00:00:00.000Z",
+        "adjusted": "2024-11-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-28T00:00:00.000Z",
         "originalDate": "2025-08-28T00:00:00.000Z",
@@ -22860,8 +24012,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ideal-technoplast-industries-ipo/1813/",
       "issuePrice": 121,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-29T00:00:00.000Z",
+        "adjusted": "2024-09-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-11-28T00:00:00.000Z",
+        "adjusted": "2024-11-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-28T00:00:00.000Z",
         "originalDate": "2025-08-28T00:00:00.000Z",
@@ -22964,8 +24124,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/broach-lifecare-hospital-ipo/1807/",
       "issuePrice": 25,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-22T00:00:00.000Z",
+        "adjusted": "2024-09-23T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-11-21T00:00:00.000Z",
+        "adjusted": "2024-11-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-21T00:00:00.000Z",
         "originalDate": "2025-08-21T00:00:00.000Z",
@@ -22984,8 +24152,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/solve-plastic-products-ipo/1808/",
       "issuePrice": 91,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-22T00:00:00.000Z",
+        "adjusted": "2024-09-23T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-11-21T00:00:00.000Z",
+        "adjusted": "2024-11-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-21T00:00:00.000Z",
         "originalDate": "2025-08-21T00:00:00.000Z",
@@ -23004,8 +24180,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/saraswati-saree-depot-ipo/1542/",
       "issuePrice": 160,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-21T00:00:00.000Z",
+        "adjusted": "2024-09-23T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-11-20T00:00:00.000Z",
+        "adjusted": "2024-11-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-02-20T00:00:00.000Z",
         "originalDate": "2025-02-20T00:00:00.000Z",
@@ -23472,8 +24656,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kizi-apparels-ipo/1795/",
       "issuePrice": 21,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-07T00:00:00.000Z",
+        "adjusted": "2024-09-09T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-11-06T00:00:00.000Z",
+        "adjusted": "2024-11-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-06T00:00:00.000Z",
         "originalDate": "2025-08-06T00:00:00.000Z",
@@ -23548,8 +24740,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/clinitech-laboratory-ipo/1783/",
       "issuePrice": 96,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-09-02T00:00:00.000Z",
+        "adjusted": "2024-09-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-11-01T00:00:00.000Z",
+        "adjusted": "2024-11-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-08-01T00:00:00.000Z",
         "originalDate": "2025-08-01T00:00:00.000Z",
@@ -23736,8 +24936,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sar-televenture-fpo/1776/",
       "issuePrice": 210,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-08-30T00:00:00.000Z",
+        "adjusted": "2024-08-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-10-29T00:00:00.000Z",
+        "adjusted": "2024-10-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-07-29T00:00:00.000Z",
         "originalDate": "2025-07-29T00:00:00.000Z",
@@ -23868,8 +25076,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/tunwal-e-motors-ipo/1775/",
       "issuePrice": 59,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-08-24T00:00:00.000Z",
+        "adjusted": "2024-08-26T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-10-23T00:00:00.000Z",
+        "adjusted": "2024-10-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-07-23T00:00:00.000Z",
         "originalDate": "2025-07-23T00:00:00.000Z",
@@ -24392,8 +25608,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sylvan-plyboard-ipo/1757/",
       "issuePrice": 55,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-08-02T00:00:00.000Z",
+        "adjusted": "2024-08-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-10-01T00:00:00.000Z",
+        "adjusted": "2024-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-07-01T00:00:00.000Z",
         "originalDate": "2025-07-01T00:00:00.000Z",
@@ -24440,8 +25664,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/visaman-global-sales-ipo/1761/",
       "issuePrice": 43,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-08-02T00:00:00.000Z",
+        "adjusted": "2024-08-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-10-01T00:00:00.000Z",
+        "adjusted": "2024-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-07-01T00:00:00.000Z",
         "originalDate": "2025-07-01T00:00:00.000Z",
@@ -24544,8 +25776,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/winny-immigration-ipo/1753/",
       "issuePrice": 140,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-29T00:00:00.000Z",
+        "adjusted": "2024-07-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-09-27T00:00:00.000Z",
+        "adjusted": "2024-09-27T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-27T00:00:00.000Z",
         "originalDate": "2025-06-27T00:00:00.000Z",
@@ -24648,8 +25888,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/falcon-technoprojects-india-ipo/1748/",
       "issuePrice": 92,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-28T00:00:00.000Z",
+        "adjusted": "2024-07-29T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-09-26T00:00:00.000Z",
+        "adjusted": "2024-09-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-26T00:00:00.000Z",
         "originalDate": "2025-06-26T00:00:00.000Z",
@@ -24724,8 +25972,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/united-cotfab-ipo/1743/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-26T00:00:00.000Z",
+        "adjusted": "2024-07-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-09-24T00:00:00.000Z",
+        "adjusted": "2024-09-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-24T00:00:00.000Z",
         "originalDate": "2025-06-24T00:00:00.000Z",
@@ -24772,8 +26028,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sattrix-ipo/1739/",
       "issuePrice": 121,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-14T00:00:00.000Z",
+        "adjusted": "2024-07-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-09-12T00:00:00.000Z",
+        "adjusted": "2024-09-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-12T00:00:00.000Z",
         "originalDate": "2025-06-12T00:00:00.000Z",
@@ -24792,8 +26056,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/magenta-lifecare-ipo/1740/",
       "issuePrice": 35,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-14T00:00:00.000Z",
+        "adjusted": "2024-07-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-09-12T00:00:00.000Z",
+        "adjusted": "2024-09-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-12T00:00:00.000Z",
         "originalDate": "2025-06-12T00:00:00.000Z",
@@ -24812,8 +26084,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/3c-it-ipo/1741/",
       "issuePrice": 52,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-14T00:00:00.000Z",
+        "adjusted": "2024-07-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-09-12T00:00:00.000Z",
+        "adjusted": "2024-09-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-12T00:00:00.000Z",
         "originalDate": "2025-06-12T00:00:00.000Z",
@@ -24916,8 +26196,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/associated-coaters-ipo/1737/",
       "issuePrice": 121,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-08T00:00:00.000Z",
+        "adjusted": "2024-07-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-09-06T00:00:00.000Z",
+        "adjusted": "2024-09-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-06-06T00:00:00.000Z",
         "originalDate": "2025-06-06T00:00:00.000Z",
@@ -25020,8 +26308,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gsm-foils-ipo/1732/",
       "issuePrice": 32,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-07-02T00:00:00.000Z",
+        "adjusted": "2024-07-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-08-31T00:00:00.000Z",
+        "adjusted": "2024-09-02T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-06-02T00:00:00.000Z",
         "originalDate": "2025-05-31T00:00:00.000Z",
@@ -25096,8 +26392,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/hariom-atta-spices-ipo/1729/",
       "issuePrice": 48,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-25T00:00:00.000Z",
+        "adjusted": "2024-06-25T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-08-24T00:00:00.000Z",
+        "adjusted": "2024-08-26T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-05-26T00:00:00.000Z",
         "originalDate": "2025-05-24T00:00:00.000Z",
@@ -25200,8 +26504,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mandeep-auto-industries-ipo/1708/",
       "issuePrice": 67,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-22T00:00:00.000Z",
+        "adjusted": "2024-06-24T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-08-21T00:00:00.000Z",
+        "adjusted": "2024-08-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-05-21T00:00:00.000Z",
         "originalDate": "2025-05-21T00:00:00.000Z",
@@ -25332,8 +26644,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/piotex-industries-ipo/1725/",
       "issuePrice": 94,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-18T00:00:00.000Z",
+        "adjusted": "2024-06-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-08-17T00:00:00.000Z",
+        "adjusted": "2024-08-19T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-05-19T00:00:00.000Z",
         "originalDate": "2025-05-17T00:00:00.000Z",
@@ -25436,8 +26756,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/tgif-agribusiness-ipo/1718/",
       "issuePrice": 93,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-16T00:00:00.000Z",
+        "adjusted": "2024-06-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-08-15T00:00:00.000Z",
+        "adjusted": "2024-08-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-05-15T00:00:00.000Z",
         "originalDate": "2025-05-15T00:00:00.000Z",
@@ -25456,8 +26784,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/silkflex-polymers-ipo/1720/",
       "issuePrice": 52,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-16T00:00:00.000Z",
+        "adjusted": "2024-06-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-08-15T00:00:00.000Z",
+        "adjusted": "2024-08-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-05-15T00:00:00.000Z",
         "originalDate": "2025-05-15T00:00:00.000Z",
@@ -25476,8 +26812,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/finelistings-technologies-ipo/1698/",
       "issuePrice": 123,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-15T00:00:00.000Z",
+        "adjusted": "2024-06-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-08-14T00:00:00.000Z",
+        "adjusted": "2024-08-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-05-14T00:00:00.000Z",
         "originalDate": "2025-05-14T00:00:00.000Z",
@@ -25580,8 +26924,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/slone-infosystems-ipo/1712/",
       "issuePrice": 79,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-11T00:00:00.000Z",
+        "adjusted": "2024-06-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-08-10T00:00:00.000Z",
+        "adjusted": "2024-08-12T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-05-12T00:00:00.000Z",
         "originalDate": "2025-05-10T00:00:00.000Z",
@@ -25656,8 +27008,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sai-swami-metals-and-alloys-ipo/1711/",
       "issuePrice": 60,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-09T00:00:00.000Z",
+        "adjusted": "2024-06-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-08-08T00:00:00.000Z",
+        "adjusted": "2024-08-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-05-08T00:00:00.000Z",
         "originalDate": "2025-05-08T00:00:00.000Z",
@@ -25732,8 +27092,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shivam-chemicals-ipo/1706/",
       "issuePrice": 44,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-01T00:00:00.000Z",
+        "adjusted": "2024-06-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-31T00:00:00.000Z",
+        "adjusted": "2024-07-31T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-30T00:00:00.000Z",
         "originalDate": "2025-04-30T00:00:00.000Z",
@@ -25752,8 +27120,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/varyaa-creations-ipo/1705/",
       "issuePrice": 150,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-06-01T00:00:00.000Z",
+        "adjusted": "2024-06-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-31T00:00:00.000Z",
+        "adjusted": "2024-07-31T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-30T00:00:00.000Z",
         "originalDate": "2025-04-30T00:00:00.000Z",
@@ -25772,8 +27148,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/faalcon-concepts-ipo/1703/",
       "issuePrice": 62,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-28T00:00:00.000Z",
+        "adjusted": "2024-05-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-07-27T00:00:00.000Z",
+        "adjusted": "2024-07-29T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-04-28T00:00:00.000Z",
         "originalDate": "2025-04-26T00:00:00.000Z",
@@ -25792,8 +27176,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vi-fpo/1702/",
       "issuePrice": 11,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-27T00:00:00.000Z",
+        "adjusted": "2024-05-27T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-07-26T00:00:00.000Z",
+        "adjusted": "2024-07-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2024-10-25T00:00:00.000Z",
         "originalDate": "2024-10-25T00:00:00.000Z",
@@ -25840,8 +27232,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/birdy-s-ipo/1700/",
       "issuePrice": 120,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-25T00:00:00.000Z",
+        "adjusted": "2024-05-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-24T00:00:00.000Z",
+        "adjusted": "2024-07-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-23T00:00:00.000Z",
         "originalDate": "2025-04-23T00:00:00.000Z",
@@ -25860,8 +27260,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/greenhitech-ventures-ipo/1699/",
       "issuePrice": 50,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-24T00:00:00.000Z",
+        "adjusted": "2024-05-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-07-23T00:00:00.000Z",
+        "adjusted": "2024-07-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-22T00:00:00.000Z",
         "originalDate": "2025-04-22T00:00:00.000Z",
@@ -25880,8 +27288,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/dcg-cables-wires-ipo/1695/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-18T00:00:00.000Z",
+        "adjusted": "2024-05-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-17T00:00:00.000Z",
+        "adjusted": "2024-07-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-16T00:00:00.000Z",
         "originalDate": "2025-04-16T00:00:00.000Z",
@@ -25900,8 +27316,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/teerth-gopicon-ipo/1696/",
       "issuePrice": 111,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-18T00:00:00.000Z",
+        "adjusted": "2024-05-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-17T00:00:00.000Z",
+        "adjusted": "2024-07-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-16T00:00:00.000Z",
         "originalDate": "2025-04-16T00:00:00.000Z",
@@ -25948,8 +27372,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/aluwind-architectural-ipo/1691/",
       "issuePrice": 45,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-11T00:00:00.000Z",
+        "adjusted": "2024-05-13T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-10T00:00:00.000Z",
+        "adjusted": "2024-07-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-09T00:00:00.000Z",
         "originalDate": "2025-04-09T00:00:00.000Z",
@@ -25996,8 +27428,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/jay-kailash-namkeen-ipo/1690/",
       "issuePrice": 73,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-10T00:00:00.000Z",
+        "adjusted": "2024-05-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-07-09T00:00:00.000Z",
+        "adjusted": "2024-07-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-08T00:00:00.000Z",
         "originalDate": "2025-04-08T00:00:00.000Z",
@@ -26184,8 +27624,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vruddhi-engineering-works-ipo/1683/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-05T00:00:00.000Z",
+        "adjusted": "2024-05-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-04T00:00:00.000Z",
+        "adjusted": "2024-07-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-03T00:00:00.000Z",
         "originalDate": "2025-04-03T00:00:00.000Z",
@@ -26260,8 +27708,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gconnect-logitech-ipo/1688/",
       "issuePrice": 40,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-05T00:00:00.000Z",
+        "adjusted": "2024-05-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-07-04T00:00:00.000Z",
+        "adjusted": "2024-07-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-03T00:00:00.000Z",
         "originalDate": "2025-04-03T00:00:00.000Z",
@@ -26308,8 +27764,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vishwas-agri-seeds-ipo/1679/",
       "issuePrice": 86,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-05-03T00:00:00.000Z",
+        "adjusted": "2024-05-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-07-02T00:00:00.000Z",
+        "adjusted": "2024-07-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-04-01T00:00:00.000Z",
         "originalDate": "2025-04-01T00:00:00.000Z",
@@ -26328,8 +27792,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/omfurn-india-fpo/1680/",
       "issuePrice": 75,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-29T00:00:00.000Z",
+        "adjusted": "2024-04-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-06-28T00:00:00.000Z",
+        "adjusted": "2024-06-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-03-28T00:00:00.000Z",
         "originalDate": "2025-03-28T00:00:00.000Z",
@@ -26432,8 +27904,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/enser-communications-ipo/1677/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-23T00:00:00.000Z",
+        "adjusted": "2024-04-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-06-22T00:00:00.000Z",
+        "adjusted": "2024-06-24T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-03-24T00:00:00.000Z",
         "originalDate": "2025-03-22T00:00:00.000Z",
@@ -26564,8 +28044,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/royal-sense-ipo/1674/",
       "issuePrice": 68,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-20T00:00:00.000Z",
+        "adjusted": "2024-04-22T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-06-19T00:00:00.000Z",
+        "adjusted": "2024-06-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-03-19T00:00:00.000Z",
         "originalDate": "2025-03-19T00:00:00.000Z",
@@ -26696,8 +28184,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/koura-fine-diamond-jewelry-ipo/1669/",
       "issuePrice": 55,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-15T00:00:00.000Z",
+        "adjusted": "2024-04-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-06-14T00:00:00.000Z",
+        "adjusted": "2024-06-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-03-17T00:00:00.000Z",
         "originalDate": "2025-03-14T00:00:00.000Z",
@@ -26800,8 +28296,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/v-r-infraspace-ipo/1666/",
       "issuePrice": 85,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-13T00:00:00.000Z",
+        "adjusted": "2024-04-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-06-12T00:00:00.000Z",
+        "adjusted": "2024-06-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-03-12T00:00:00.000Z",
         "originalDate": "2025-03-12T00:00:00.000Z",
@@ -26848,8 +28352,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/m-v-k-agro-food-ipo/1661/",
       "issuePrice": 120,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-08T00:00:00.000Z",
+        "adjusted": "2024-04-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-06-07T00:00:00.000Z",
+        "adjusted": "2024-06-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-03-07T00:00:00.000Z",
         "originalDate": "2025-03-07T00:00:00.000Z",
@@ -26868,8 +28380,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/bharat-highways-invit/1660/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-13T00:00:00.000Z",
+        "adjusted": "2024-04-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-06-12T00:00:00.000Z",
+        "adjusted": "2024-06-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2024-09-12T00:00:00.000Z",
         "originalDate": "2024-09-12T00:00:00.000Z",
@@ -27000,8 +28520,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sadhav-shipping-ipo/1657/",
       "issuePrice": 95,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-04-02T00:00:00.000Z",
+        "adjusted": "2024-04-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-06-01T00:00:00.000Z",
+        "adjusted": "2024-06-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-03-03T00:00:00.000Z",
         "originalDate": "2025-03-01T00:00:00.000Z",
@@ -27076,8 +28604,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/deem-roll-tech-ipo/1656/",
       "issuePrice": 129,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-30T00:00:00.000Z",
+        "adjusted": "2024-04-01T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-05-29T00:00:00.000Z",
+        "adjusted": "2024-05-29T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-02-27T00:00:00.000Z",
         "originalDate": "2025-02-27T00:00:00.000Z",
@@ -27152,8 +28688,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kalahridhaan-trendz-ipo/1647/",
       "issuePrice": 45,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-26T00:00:00.000Z",
+        "adjusted": "2024-03-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-25T00:00:00.000Z",
+        "adjusted": "2024-05-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-02-24T00:00:00.000Z",
         "originalDate": "2025-02-23T00:00:00.000Z",
@@ -27200,8 +28744,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/atmastco-ipo/1649/",
       "issuePrice": 77,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-26T00:00:00.000Z",
+        "adjusted": "2024-03-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-25T00:00:00.000Z",
+        "adjusted": "2024-05-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-02-24T00:00:00.000Z",
         "originalDate": "2025-02-23T00:00:00.000Z",
@@ -27332,8 +28884,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/polysil-irrigation-systems-ipo/1645/",
       "issuePrice": 54,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-19T00:00:00.000Z",
+        "adjusted": "2024-03-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-18T00:00:00.000Z",
+        "adjusted": "2024-05-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-02-17T00:00:00.000Z",
         "originalDate": "2025-02-16T00:00:00.000Z",
@@ -27380,8 +28940,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rudra-gas-enterprise-ipo/1644/",
       "issuePrice": 63,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-18T00:00:00.000Z",
+        "adjusted": "2024-03-18T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-17T00:00:00.000Z",
+        "adjusted": "2024-05-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-02-17T00:00:00.000Z",
         "originalDate": "2025-02-15T00:00:00.000Z",
@@ -27512,8 +29080,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/italian-edibles-ipo/1636/",
       "issuePrice": 68,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-15T00:00:00.000Z",
+        "adjusted": "2024-03-15T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-14T00:00:00.000Z",
+        "adjusted": "2024-05-14T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-02-12T00:00:00.000Z",
         "originalDate": "2025-02-12T00:00:00.000Z",
@@ -27532,8 +29108,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gabriel-pet-straps-ipo/1633/",
       "issuePrice": 101,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-10T00:00:00.000Z",
+        "adjusted": "2024-03-11T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-05-09T00:00:00.000Z",
+        "adjusted": "2024-05-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-02-07T00:00:00.000Z",
         "originalDate": "2025-02-07T00:00:00.000Z",
@@ -27664,8 +29248,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mayank-cattle-food-ipo/1631/",
       "issuePrice": 108,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-08T00:00:00.000Z",
+        "adjusted": "2024-03-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-07T00:00:00.000Z",
+        "adjusted": "2024-05-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-02-05T00:00:00.000Z",
         "originalDate": "2025-02-05T00:00:00.000Z",
@@ -27740,8 +29332,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/docmode-health-technologies-ipo/1630/",
       "issuePrice": 79,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-05T00:00:00.000Z",
+        "adjusted": "2024-03-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-05-04T00:00:00.000Z",
+        "adjusted": "2024-05-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-02-03T00:00:00.000Z",
         "originalDate": "2025-02-02T00:00:00.000Z",
@@ -27788,8 +29388,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/brisk-technovision-ipo/1624/",
       "issuePrice": 156,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-03T00:00:00.000Z",
+        "adjusted": "2024-03-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-05-02T00:00:00.000Z",
+        "adjusted": "2024-05-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-01-31T00:00:00.000Z",
         "originalDate": "2025-01-31T00:00:00.000Z",
@@ -27892,8 +29500,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/euphoria-infotech-india-ipo/1622/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-02T00:00:00.000Z",
+        "adjusted": "2024-03-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-05-01T00:00:00.000Z",
+        "adjusted": "2024-05-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-01-30T00:00:00.000Z",
         "originalDate": "2025-01-30T00:00:00.000Z",
@@ -27912,8 +29528,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/qualitek-labs-ipo/1623/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-03-01T00:00:00.000Z",
+        "adjusted": "2024-03-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-04-30T00:00:00.000Z",
+        "adjusted": "2024-04-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-01-29T00:00:00.000Z",
         "originalDate": "2025-01-29T00:00:00.000Z",
@@ -27988,8 +29612,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shree-marutinandan-tubes-ipo/1617/",
       "issuePrice": 143,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-02-20T00:00:00.000Z",
+        "adjusted": "2024-02-20T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2024-04-20T00:00:00.000Z",
+        "adjusted": "2024-04-22T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2025-01-20T00:00:00.000Z",
         "originalDate": "2025-01-19T00:00:00.000Z",
@@ -28092,8 +29724,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ibl-finance-ipo/1613/",
       "issuePrice": 51,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2024-02-17T00:00:00.000Z",
+        "adjusted": "2024-02-19T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2024-04-17T00:00:00.000Z",
+        "adjusted": "2024-04-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2025-01-16T00:00:00.000Z",
         "originalDate": "2025-01-16T00:00:00.000Z",
@@ -28184,8 +29824,16 @@
         "adjusted": "2025-10-08T18:30:00.000Z",
         "isAdjusted": false
       },
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-11-09T18:30:00.000Z",
+        "adjusted": "2025-11-09T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-01-08T18:30:00.000Z",
+        "adjusted": "2026-01-08T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-04-08T18:30:00.000Z",
         "originalDate": "2026-04-08T18:30:00.000Z",
@@ -28312,8 +29960,16 @@
         "adjusted": "2025-07-24T18:30:00.000Z",
         "isAdjusted": false
       },
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2025-08-25T18:30:00.000Z",
+        "adjusted": "2025-08-25T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2025-10-24T18:30:00.000Z",
+        "adjusted": "2025-10-26T18:30:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-01-25T18:30:00.000Z",
         "originalDate": "2026-01-24T18:30:00.000Z",
@@ -28750,8 +30406,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/acetech-e-commerce-ipo/2616/",
       "issuePrice": 112,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-04-10T00:00:00.000Z",
+        "adjusted": "2026-04-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-06-09T00:00:00.000Z",
+        "adjusted": "2026-06-09T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-09T00:00:00.000Z",
         "originalDate": "2027-03-09T00:00:00.000Z",
@@ -29349,8 +31013,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shree-ram-twistex-ipo/2502/",
       "issuePrice": 104,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-04-03T00:00:00.000Z",
+        "adjusted": "2026-04-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-06-02T00:00:00.000Z",
+        "adjusted": "2026-06-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-02T00:00:00.000Z",
         "originalDate": "2026-09-02T00:00:00.000Z",
@@ -29410,8 +31082,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kiaasa-retail-ipo/2417/",
       "issuePrice": 127,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-04-03T00:00:00.000Z",
+        "adjusted": "2026-04-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-06-02T00:00:00.000Z",
+        "adjusted": "2026-06-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-02T00:00:00.000Z",
         "originalDate": "2027-03-02T00:00:00.000Z",
@@ -29540,8 +31220,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/yashhtej-industries-india-ipo/2700/",
       "issuePrice": 110,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-03-29T00:00:00.000Z",
+        "adjusted": "2026-03-30T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-05-28T00:00:00.000Z",
+        "adjusted": "2026-05-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-02-25T00:00:00.000Z",
         "originalDate": "2027-02-25T00:00:00.000Z",
@@ -29672,8 +31360,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/biopol-chemicals-ipo/2721/",
       "issuePrice": 108,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-03-17T00:00:00.000Z",
+        "adjusted": "2026-03-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-05-16T00:00:00.000Z",
+        "adjusted": "2026-05-18T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-02-15T00:00:00.000Z",
         "originalDate": "2027-02-13T00:00:00.000Z",
@@ -29832,8 +31528,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kanishk-aluminium-india-ipo/2555/",
       "issuePrice": 73,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-03-08T00:00:00.000Z",
+        "adjusted": "2026-03-09T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-05-07T00:00:00.000Z",
+        "adjusted": "2026-05-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-02-04T00:00:00.000Z",
         "originalDate": "2027-02-04T00:00:00.000Z",
@@ -29936,8 +31640,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shayona-engineering-ipo/2173/",
       "issuePrice": 144,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-03-03T00:00:00.000Z",
+        "adjusted": "2026-03-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-05-02T00:00:00.000Z",
+        "adjusted": "2026-05-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-02-01T00:00:00.000Z",
         "originalDate": "2027-01-30T00:00:00.000Z",
@@ -30040,8 +31752,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/aritas-vinyl-ipo/2421/",
       "issuePrice": 47,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-02-24T00:00:00.000Z",
+        "adjusted": "2026-02-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-04-25T00:00:00.000Z",
+        "adjusted": "2026-04-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-01-25T00:00:00.000Z",
         "originalDate": "2027-01-23T00:00:00.000Z",
@@ -30060,8 +31780,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/armour-security-india-ipo/2138/",
       "issuePrice": 57,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-02-23T00:00:00.000Z",
+        "adjusted": "2026-02-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-04-24T00:00:00.000Z",
+        "adjusted": "2026-04-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-01-22T00:00:00.000Z",
         "originalDate": "2027-01-22T00:00:00.000Z",
@@ -30164,8 +31892,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/narmadesh-brass-industries-ipo/2580/",
       "issuePrice": 515,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-02-22T00:00:00.000Z",
+        "adjusted": "2026-02-23T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-04-23T00:00:00.000Z",
+        "adjusted": "2026-04-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-01-21T00:00:00.000Z",
         "originalDate": "2027-01-21T00:00:00.000Z",
@@ -30268,8 +32004,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/victory-electric-vehicles-ipo/2315/",
       "issuePrice": 41,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-02-15T00:00:00.000Z",
+        "adjusted": "2026-02-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-04-16T00:00:00.000Z",
+        "adjusted": "2026-04-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-01-14T00:00:00.000Z",
         "originalDate": "2027-01-14T00:00:00.000Z",
@@ -30288,8 +32032,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/yajur-fibres-ipo/2128/",
       "issuePrice": 174,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-02-15T00:00:00.000Z",
+        "adjusted": "2026-02-17T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-04-16T00:00:00.000Z",
+        "adjusted": "2026-04-16T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-01-14T00:00:00.000Z",
         "originalDate": "2027-01-14T00:00:00.000Z",
@@ -30446,8 +32198,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/srinibas-pradhan-ipo/2402/",
       "issuePrice": 98,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-04-14T00:00:00.000Z",
+        "adjusted": "2026-04-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-06-13T00:00:00.000Z",
+        "adjusted": "2026-06-15T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-03-15T00:00:00.000Z",
         "originalDate": "2027-03-13T00:00:00.000Z",
@@ -30480,8 +32240,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/elfin-agro-india-ipo/2696/",
       "issuePrice": 47,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-04-13T00:00:00.000Z",
+        "adjusted": "2026-04-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-06-12T00:00:00.000Z",
+        "adjusted": "2026-06-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-12T00:00:00.000Z",
         "originalDate": "2027-03-12T00:00:00.000Z",
@@ -30941,8 +32709,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/innovision-limited-ipo/2039/",
       "issuePrice": 519,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-04-24T00:00:00.000Z",
+        "adjusted": "2026-04-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-06-23T00:00:00.000Z",
+        "adjusted": "2026-06-23T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-09-23T00:00:00.000Z",
         "originalDate": "2026-09-23T00:00:00.000Z",
@@ -31384,8 +33160,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/speciality-medicines-ipo/2381/",
       "issuePrice": 124,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-05-01T00:00:00.000Z",
+        "adjusted": "2026-05-04T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-06-30T00:00:00.000Z",
+        "adjusted": "2026-06-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-30T00:00:00.000Z",
         "originalDate": "2027-03-30T00:00:00.000Z",
@@ -31800,8 +33584,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vahh-chemicals-ipo/2802/",
       "issuePrice": 60,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-13T00:00:00.000Z",
+        "adjusted": "2026-07-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-09-11T00:00:00.000Z",
+        "adjusted": "2026-09-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-11T00:00:00.000Z",
         "originalDate": "2027-06-11T00:00:00.000Z",
@@ -31837,8 +33629,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/uhm-vacation-ipo/2841/",
       "issuePrice": 166,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-13T00:00:00.000Z",
+        "adjusted": "2026-07-13T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-09-11T00:00:00.000Z",
+        "adjusted": "2026-09-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-11T00:00:00.000Z",
         "originalDate": "2027-06-11T00:00:00.000Z",
@@ -32538,8 +34338,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/aureate-tradde-ipo/2817/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-07T00:00:00.000Z",
+        "adjusted": "2026-07-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-09-05T00:00:00.000Z",
+        "adjusted": "2026-09-07T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-06-07T00:00:00.000Z",
         "originalDate": "2027-06-05T00:00:00.000Z",
@@ -32558,8 +34366,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/smr-jewels-ipo/2597/",
       "issuePrice": 128,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-10T00:00:00.000Z",
+        "adjusted": "2026-07-10T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-09-08T00:00:00.000Z",
+        "adjusted": "2026-09-08T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-08T00:00:00.000Z",
         "originalDate": "2027-06-08T00:00:00.000Z",
@@ -32610,8 +34426,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/yaashvi-jewellers-ipo/2820/",
       "issuePrice": 83,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-04T00:00:00.000Z",
+        "adjusted": "2026-07-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-09-02T00:00:00.000Z",
+        "adjusted": "2026-09-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-02T00:00:00.000Z",
         "originalDate": "2027-06-02T00:00:00.000Z",
@@ -32686,8 +34510,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/autofurnish-ipo/2738/",
       "issuePrice": 41,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-06-30T00:00:00.000Z",
+        "adjusted": "2026-06-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-08-29T00:00:00.000Z",
+        "adjusted": "2026-08-31T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-05-31T00:00:00.000Z",
         "originalDate": "2027-05-29T00:00:00.000Z",
@@ -32706,8 +34538,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/bio-medica-laboratories-ipo/2564/",
       "issuePrice": 139,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-06-30T00:00:00.000Z",
+        "adjusted": "2026-06-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-08-29T00:00:00.000Z",
+        "adjusted": "2026-08-31T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-05-31T00:00:00.000Z",
         "originalDate": "2027-05-29T00:00:00.000Z",
@@ -32726,8 +34566,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/harikanta-overseas-ipo/2697/",
       "issuePrice": 91,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-04T00:00:00.000Z",
+        "adjusted": "2026-07-06T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-09-02T00:00:00.000Z",
+        "adjusted": "2026-09-02T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-02T00:00:00.000Z",
         "originalDate": "2027-06-02T00:00:00.000Z",
@@ -32802,8 +34650,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/nfp-sampoorna-foods-ipo/2397/",
       "issuePrice": 55,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-06-26T00:00:00.000Z",
+        "adjusted": "2026-06-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-08-25T00:00:00.000Z",
+        "adjusted": "2026-08-26T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-05-25T00:00:00.000Z",
         "originalDate": "2027-05-25T00:00:00.000Z",
@@ -32822,8 +34678,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/rfbl-flexi-pack-ipo/2962/",
       "issuePrice": 50,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-06-20T00:00:00.000Z",
+        "adjusted": "2026-06-22T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-08-19T00:00:00.000Z",
+        "adjusted": "2026-08-19T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-05-19T00:00:00.000Z",
         "originalDate": "2027-05-19T00:00:00.000Z",
@@ -32999,8 +34863,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/value-360-communications-ipo/2552/",
       "issuePrice": 98,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-06-12T00:00:00.000Z",
+        "adjusted": "2026-06-12T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-08-11T00:00:00.000Z",
+        "adjusted": "2026-08-11T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-05-11T00:00:00.000Z",
         "originalDate": "2027-05-11T00:00:00.000Z",
@@ -33049,8 +34921,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/amba-auto-sales-services-ipo/2644/",
       "issuePrice": 135,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-06-06T00:00:00.000Z",
+        "adjusted": "2026-06-08T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-08-05T00:00:00.000Z",
+        "adjusted": "2026-08-05T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-05-05T00:00:00.000Z",
         "originalDate": "2027-05-05T00:00:00.000Z",
@@ -33130,7 +35010,11 @@
         "adjusted": "2026-05-25T00:00:00.000Z",
         "isAdjusted": true
       },
-      "anchor90": null,
+      "anchor90": {
+        "original": "2026-07-30T00:00:00.000Z",
+        "adjusted": "2026-07-30T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2026-10-29T00:00:00.000Z",
         "originalDate": "2026-10-29T00:00:00.000Z",
@@ -33149,8 +35033,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/propshare-celestia-scheme-ipo/2965/",
       "issuePrice": 1050000,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-05-26T00:00:00.000Z",
+        "adjusted": "2026-05-26T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-07-25T00:00:00.000Z",
+        "adjusted": "2026-07-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2026-10-26T00:00:00.000Z",
         "originalDate": "2026-10-24T00:00:00.000Z",
@@ -33472,8 +35364,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/liotech-industries-ipo/2367/",
       "issuePrice": 321,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-26T00:00:00.000Z",
+        "adjusted": "2026-07-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-09-24T00:00:00.000Z",
+        "adjusted": "2026-09-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-24T00:00:00.000Z",
         "originalDate": "2027-06-24T00:00:00.000Z",
@@ -33498,8 +35398,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/diksha-polymers-ipo/2568/",
       "issuePrice": 112,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-26T00:00:00.000Z",
+        "adjusted": "2026-07-27T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-09-24T00:00:00.000Z",
+        "adjusted": "2026-09-24T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-24T00:00:00.000Z",
         "originalDate": "2027-06-24T00:00:00.000Z",
@@ -33630,8 +35538,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/utkal-speciality-ipo/2638/",
       "issuePrice": 66,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-07-19T00:00:00.000Z",
+        "adjusted": "2026-07-20T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-09-17T00:00:00.000Z",
+        "adjusted": "2026-09-17T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-06-17T00:00:00.000Z",
         "originalDate": "2027-06-17T00:00:00.000Z",
@@ -33757,8 +35673,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/teja-engineering-industries-ipo/2308/",
       "issuePrice": 220,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-08T00:00:00.000Z",
+        "adjusted": "2026-08-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-10-07T00:00:00.000Z",
+        "adjusted": "2026-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-07T00:00:00.000Z",
         "originalDate": "2027-07-07T00:00:00.000Z",
@@ -34015,8 +35939,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/seemax-resources-ipo/2707/",
       "issuePrice": 141,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-08T00:00:00.000Z",
+        "adjusted": "2026-08-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-10-07T00:00:00.000Z",
+        "adjusted": "2026-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-07T00:00:00.000Z",
         "originalDate": "2027-07-07T00:00:00.000Z",
@@ -34073,8 +36005,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/vinit-mobile-ipo/2831/",
       "issuePrice": 158,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-08T00:00:00.000Z",
+        "adjusted": "2026-08-10T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-10-07T00:00:00.000Z",
+        "adjusted": "2026-10-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-07T00:00:00.000Z",
         "originalDate": "2027-07-07T00:00:00.000Z",
@@ -34131,8 +36071,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/twinkle-papers-ipo/2438/",
       "issuePrice": 69,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-07T00:00:00.000Z",
+        "adjusted": "2026-08-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-10-06T00:00:00.000Z",
+        "adjusted": "2026-10-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-06T00:00:00.000Z",
         "originalDate": "2027-07-06T00:00:00.000Z",
@@ -34470,8 +36418,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/adon-agro-commodities-ipo/2467/",
       "issuePrice": 70,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-07T00:00:00.000Z",
+        "adjusted": "2026-08-07T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-10-06T00:00:00.000Z",
+        "adjusted": "2026-10-06T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-06T00:00:00.000Z",
         "originalDate": "2027-07-06T00:00:00.000Z",
@@ -34820,8 +36776,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/crazy-snacks-ipo/2133/",
       "issuePrice": 42,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-04T00:00:00.000Z",
+        "adjusted": "2026-08-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-10-03T00:00:00.000Z",
+        "adjusted": "2026-10-05T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-07-05T00:00:00.000Z",
         "originalDate": "2027-07-03T00:00:00.000Z",
@@ -34845,8 +36809,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sri-priyanka-geo-commex-ipo/2572/",
       "issuePrice": 212,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-03T00:00:00.000Z",
+        "adjusted": "2026-08-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-10-02T00:00:00.000Z",
+        "adjusted": "2026-10-05T00:00:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-07-02T00:00:00.000Z",
         "originalDate": "2027-07-02T00:00:00.000Z",
@@ -35042,8 +37014,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/jivial-industries-ipo/2771/",
       "issuePrice": 196,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-02T00:00:00.000Z",
+        "adjusted": "2026-08-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-10-01T00:00:00.000Z",
+        "adjusted": "2026-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-01T00:00:00.000Z",
         "originalDate": "2027-07-01T00:00:00.000Z",
@@ -35915,8 +37895,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/riyaasat-lifestyle-ipo/2538/",
       "issuePrice": 106,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-02T00:00:00.000Z",
+        "adjusted": "2026-08-03T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-10-01T00:00:00.000Z",
+        "adjusted": "2026-10-01T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-01T00:00:00.000Z",
         "originalDate": "2027-07-01T00:00:00.000Z",
@@ -36232,8 +38220,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/gulf-lloyds-ipo/2953/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-28T00:00:00.000Z",
+        "adjusted": "2026-08-28T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-10-27T00:00:00.000Z",
+        "adjusted": "2026-10-27T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-07-27T00:00:00.000Z",
         "originalDate": "2027-07-27T00:00:00.000Z",
@@ -36717,8 +38713,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/alpine-texworld-ipo/2675/",
       "issuePrice": 105,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-08-22T00:00:00.000Z",
+        "adjusted": "2026-08-24T00:00:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-10-21T00:00:00.000Z",
+        "adjusted": "2026-10-21T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-01-21T00:00:00.000Z",
         "originalDate": "2027-01-21T00:00:00.000Z",
@@ -39570,8 +41574,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/abh-healthcare-ipo/2517/",
       "issuePrice": 102,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-03T18:30:00.000Z",
+        "adjusted": "2026-10-04T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-02T18:30:00.000Z",
+        "adjusted": "2026-12-02T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-01T00:00:00.000Z",
         "originalDate": "2027-09-01T00:00:00.000Z",
@@ -40311,8 +42323,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/mopshop-distribution-ipo/2769/",
       "issuePrice": 138,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-24T18:30:00.000Z",
+        "adjusted": "2026-09-24T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-23T18:30:00.000Z",
+        "adjusted": "2026-11-23T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-26T00:00:00.000Z",
         "originalDate": "2027-08-26T00:00:00.000Z",
@@ -40375,8 +42395,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/dhanwel-hybrid-seeds-ipo/2846/",
       "issuePrice": 99,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-24T18:30:00.000Z",
+        "adjusted": "2026-09-24T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-23T18:30:00.000Z",
+        "adjusted": "2026-11-23T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-26T00:00:00.000Z",
         "originalDate": "2027-08-26T00:00:00.000Z",
@@ -42389,8 +44417,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/skytech-infinite-platform-ipo/2739/",
       "issuePrice": 77,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-19T18:30:00.000Z",
+        "adjusted": "2026-09-20T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-11-18T18:30:00.000Z",
+        "adjusted": "2026-11-18T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-23T00:00:00.000Z",
         "originalDate": "2027-08-21T00:00:00.000Z",
@@ -44026,8 +46062,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/qt-foods-ipo/3145/",
       "issuePrice": 115,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-17T18:30:00.000Z",
+        "adjusted": "2026-09-17T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-16T18:30:00.000Z",
+        "adjusted": "2026-11-16T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-19T00:00:00.000Z",
         "originalDate": "2027-08-19T00:00:00.000Z",
@@ -44146,8 +46190,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/fascinate-textiles-ipo/2734/",
       "issuePrice": 151,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-22T18:30:00.000Z",
+        "adjusted": "2026-09-22T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-21T18:30:00.000Z",
+        "adjusted": "2026-11-22T18:30:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-08-24T00:00:00.000Z",
         "originalDate": "2027-08-24T00:00:00.000Z",
@@ -44763,8 +46815,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sham-foam-ipo/2869/",
       "issuePrice": 130,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-16T18:30:00.000Z",
+        "adjusted": "2026-09-16T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-15T18:30:00.000Z",
+        "adjusted": "2026-11-15T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-18T00:00:00.000Z",
         "originalDate": "2027-08-18T00:00:00.000Z",
@@ -50125,8 +52185,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/advance-technoforge-ipo/2307/",
       "issuePrice": 95,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-04T00:00:00.000Z",
+        "adjusted": "2026-09-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-03T00:00:00.000Z",
+        "adjusted": "2026-11-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-03T00:00:00.000Z",
         "originalDate": "2027-08-03T00:00:00.000Z",
@@ -50145,8 +52213,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/propshop-events-exhibitions-ipo/2732/",
       "issuePrice": 69,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-09-04T00:00:00.000Z",
+        "adjusted": "2026-09-04T00:00:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-11-03T00:00:00.000Z",
+        "adjusted": "2026-11-03T00:00:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-08-03T00:00:00.000Z",
         "originalDate": "2027-08-03T00:00:00.000Z",
@@ -50309,8 +52385,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/farm-peace-ipo/2632/",
       "issuePrice": 59,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-10T18:30:00.000Z",
+        "adjusted": "2026-10-11T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-09T18:30:00.000Z",
+        "adjusted": "2026-12-09T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-08T00:00:00.000Z",
         "originalDate": "2027-09-08T00:00:00.000Z",
@@ -52692,8 +54776,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/annu-projects-ipo/2500/",
       "issuePrice": 99,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-04T18:30:00.000Z",
+        "adjusted": "2026-10-04T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-03T18:30:00.000Z",
+        "adjusted": "2026-12-03T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-02T00:00:00.000Z",
         "originalDate": "2027-03-02T00:00:00.000Z",
@@ -55246,8 +57338,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/apana-logistics-ipo/2762/",
       "issuePrice": 60,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-17T18:30:00.000Z",
+        "adjusted": "2026-10-18T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-16T18:30:00.000Z",
+        "adjusted": "2026-12-16T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-15T00:00:00.000Z",
         "originalDate": "2027-09-15T00:00:00.000Z",
@@ -55453,8 +57553,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/fly-hi-maritime-ipo/2845/",
       "issuePrice": 102,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-10T18:30:00.000Z",
+        "adjusted": "2026-10-11T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-09T18:30:00.000Z",
+        "adjusted": "2026-12-09T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-08T00:00:00.000Z",
         "originalDate": "2027-09-08T00:00:00.000Z",
@@ -55597,8 +57705,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
       "issuePrice": 53,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-24T18:30:00.000Z",
+        "adjusted": "2026-10-25T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-23T18:30:00.000Z",
+        "adjusted": "2026-12-23T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-27T00:00:00.000Z",
         "originalDate": "2027-09-25T00:00:00.000Z",
@@ -55606,8 +57722,8 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 3756000,
+      "anchorShares": 1070400,
+      "totalShares": 9398000,
       "rhpUrl": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/axiom_gas_engineering_ltd_nse_sme_capital_structure_1788933277.pdf",
       "preIpoChecked": true,
@@ -55723,8 +57839,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
       "issuePrice": 101,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-23T18:30:00.000Z",
+        "adjusted": "2026-10-25T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-22T18:30:00.000Z",
+        "adjusted": "2026-12-22T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-24T00:00:00.000Z",
         "originalDate": "2027-09-24T00:00:00.000Z",
@@ -55762,8 +57886,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
       "issuePrice": 99,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-23T18:30:00.000Z",
+        "adjusted": "2026-10-25T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-22T18:30:00.000Z",
+        "adjusted": "2026-12-22T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-24T00:00:00.000Z",
         "originalDate": "2027-03-24T00:00:00.000Z",
@@ -55900,8 +58032,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/jindal-supreme-ipo/2803/",
       "issuePrice": 93,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-22T18:30:00.000Z",
+        "adjusted": "2026-10-22T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-21T18:30:00.000Z",
+        "adjusted": "2026-12-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-23T00:00:00.000Z",
         "originalDate": "2027-03-23T00:00:00.000Z",
@@ -55976,8 +58116,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/ss-retail-ipo/2822/",
       "issuePrice": 424,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-22T18:30:00.000Z",
+        "adjusted": "2026-10-22T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-21T18:30:00.000Z",
+        "adjusted": "2026-12-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-03-23T00:00:00.000Z",
         "originalDate": "2027-03-23T00:00:00.000Z",
@@ -56014,8 +58162,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/quanto-agroworld-ipo/2390/",
       "issuePrice": 67,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-21T18:30:00.000Z",
+        "adjusted": "2026-10-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-20T18:30:00.000Z",
+        "adjusted": "2026-12-20T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-22T00:00:00.000Z",
         "originalDate": "2027-09-22T00:00:00.000Z",
@@ -56056,8 +58212,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/shakti-polytarp-ipo/2427/",
       "issuePrice": 59,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-21T18:30:00.000Z",
+        "adjusted": "2026-10-21T18:30:00.000Z",
+        "isAdjusted": false
+      },
+      "anchor90": {
+        "original": "2026-12-20T18:30:00.000Z",
+        "adjusted": "2026-12-20T18:30:00.000Z",
+        "isAdjusted": false
+      },
       "preIPO": {
         "expiryDate": "2027-09-22T00:00:00.000Z",
         "originalDate": "2027-09-22T00:00:00.000Z",
@@ -56132,8 +58296,16 @@
       },
       "chittorgarhUrl": "https://www.chittorgarh.com/ipo/injecto-polymers-ipo/2625/",
       "issuePrice": 100,
-      "anchor30": null,
-      "anchor90": null,
+      "anchor30": {
+        "original": "2026-10-20T18:30:00.000Z",
+        "adjusted": "2026-10-21T18:30:00.000Z",
+        "isAdjusted": true
+      },
+      "anchor90": {
+        "original": "2026-12-19T18:30:00.000Z",
+        "adjusted": "2026-12-20T18:30:00.000Z",
+        "isAdjusted": true
+      },
       "preIPO": {
         "expiryDate": "2027-09-21T00:00:00.000Z",
         "originalDate": "2027-09-21T00:00:00.000Z",
@@ -56677,7 +58849,7 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-15T12:19:26.597Z",
+  "lastUpdated": "2026-09-15T15:13:47.774Z",
   "lastScraped": {
     "time": "2026-09-09T16:57:44.724Z",
     "scraped2025": 6,
