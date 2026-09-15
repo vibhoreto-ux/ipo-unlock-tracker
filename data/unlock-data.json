@@ -12446,7 +12446,27 @@
           "percentage": 20
         }
       ],
-      "totalShares": 23411400
+      "totalShares": 23411400,
+      "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_OPTIVALUE.zip",
+      "anchorInvestors": [
+        {
+          "name": "MINT FOCUSED GROWTH FUND PCC-CELL 1",
+          "group": "MINT FOCUSED",
+          "shares": 356800,
+          "sharesFormatted": "3,56,800",
+          "amountCr": 3,
+          "percent": 20.55
+        },
+        {
+          "name": "SUNRISE INVESTMENT TRUST-SUNRISE INVESTMENT OPPORTUNITIES FUND",
+          "group": "SUNRISE",
+          "shares": 182400,
+          "sharesFormatted": "1,82,400",
+          "amountCr": 1.53,
+          "percent": 10.51
+        }
+      ],
+      "anchorShares": 1736000
     },
     {
       "companyName": "Goel Construction Co.Ltd.",
@@ -12613,8 +12633,29 @@
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
       },
-      "rhpUrl": "https://www.bseindia.com/corporates/download/352046/SUGSLLOYDDRHP_20241112193255.pdf",
-      "capitalStructureUrl": "https://www.bseindia.com/corporates/download/352046/SUGSLLOYDDRHP_20241112193255.pdf"
+      "rhpUrl": "https://www.bsesme.com/download/352046/SME_IPO%20Open/Sugs%20Lloyd%20RHP_Final%20RHP_20250825190248.pdf",
+      "capitalStructureUrl": "https://www.bseindia.com/corporates/download/352046/SUGSLLOYDDRHP_20241112193255.pdf",
+      "anchorInvestors": [
+        {
+          "name": "NAV CAPITAL VCC-NAV CAPITAL EMERGING STAR FUND",
+          "group": "NAV CAPITAL",
+          "shares": 244000,
+          "sharesFormatted": "2,44,000",
+          "amountCr": 3,
+          "percent": 60.1
+        },
+        {
+          "name": "RAJASTHAN GLOBAL SECURITIES PVT.LTD.",
+          "group": "RAJASTHAN GLOBAL SECURITIES",
+          "shares": 162000,
+          "sharesFormatted": "1,62,000",
+          "amountCr": 1.99,
+          "percent": 39.9
+        }
+      ],
+      "anchorShares": 406000,
+      "totalShares": 6964000,
+      "preIpoInvestors": []
     },
     {
       "companyName": "Snehaa Organics Ltd.",
@@ -46925,7 +46966,7 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-08-16T00:00:00.000Z",
+        "expiryDate": "2027-08-17",
         "originalDate": "2027-08-14T00:00:00.000Z",
         "isAdjusted": true,
         "type": "SME Pre-IPO (1 Yr)"
@@ -56485,7 +56526,7 @@
       "source": "NSE",
       "noticeId": "NSE/CML/70199",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML70199.zip",
-      "fetchedAt": "2026-09-09T17:42:33.272Z"
+      "fetchedAt": "2026-09-13T15:53:02.796Z"
     },
     "L.T.Elevator Ltd.": {
       "found": true,
@@ -57603,6 +57644,88 @@
       "noticeId": "NSE/CML/75930",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75930.zip",
       "fetchedAt": "2026-09-11T11:37:57.627Z"
+    },
+    "Optimystix Entertainment India Ltd.": {
+      "found": true,
+      "totalShares": 23268900,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 4614100,
+          "percentage": 19.8,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-12",
+          "shares": 832800,
+          "percentage": 3.6
+        },
+        {
+          "date": "2026-11-11",
+          "shares": 837600,
+          "percentage": 3.6
+        },
+        {
+          "date": "2027-08-17",
+          "shares": 8184400,
+          "percentage": 35.2
+        },
+        {
+          "date": "2028-08-17",
+          "shares": 4120000,
+          "percentage": 17.7
+        },
+        {
+          "date": "2029-08-17",
+          "shares": 4680000,
+          "percentage": 20.1
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/75736",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML75736.zip",
+      "fetchedAt": "2026-09-13T15:46:56.964Z"
+    },
+    "Airfloa Rail Technology Ltd.": {
+      "found": true,
+      "totalShares": 23969954,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 4655000,
+          "percentage": 19.4,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2025-10-15",
+          "shares": 926000,
+          "percentage": 3.9
+        },
+        {
+          "date": "2025-12-14",
+          "shares": 926000,
+          "percentage": 3.9
+        },
+        {
+          "date": "2026-09-25",
+          "shares": 8569554,
+          "percentage": 35.8
+        },
+        {
+          "date": "2027-09-25",
+          "shares": 4794500,
+          "percentage": 20
+        },
+        {
+          "date": "2028-09-25",
+          "shares": 4098900,
+          "percentage": 17.1
+        }
+      ],
+      "source": "BSE",
+      "noticeId": "20250917-52",
+      "pdfUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
+      "fetchedAt": "2026-09-13T15:50:09.124Z"
     }
   }
 }
