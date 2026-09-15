@@ -9382,7 +9382,7 @@
           "percentage": 20.5
         }
       ],
-      "totalShares": 20515376,
+      "totalShares": 5400000,
       "preIpoInvestors": [],
       "anchorInvestors": [
         {
@@ -9482,7 +9482,8 @@
           "percent": 4.93
         }
       ],
-      "anchorShares": 1543000
+      "anchorShares": 1543000,
+      "totalCompanyShares": 20515376
     },
     {
       "companyName": "Solarworld Energy Solutions Ltd.",
@@ -9575,7 +9576,7 @@
           "percentage": 20.2
         }
       ],
-      "totalShares": 14581832,
+      "totalShares": 3816000,
       "preIpoInvestors": [],
       "anchorInvestors": [
         {
@@ -9595,7 +9596,8 @@
           "percent": 22
         }
       ],
-      "anchorShares": 1090800
+      "anchorShares": 1090800,
+      "totalCompanyShares": 14581832
     },
     {
       "companyName": "True Colors Ltd.",
@@ -9662,7 +9664,7 @@
           "percentage": 20
         }
       ],
-      "totalShares": 24654600,
+      "totalShares": 6672000,
       "anchorInvestors": [
         {
           "name": "SANTOSH INDUSTRIES LTD.",
@@ -9856,7 +9858,8 @@
           "percent": 2.77
         }
       ],
-      "anchorShares": 1905600
+      "anchorShares": 1905600,
+      "totalCompanyShares": 24654600
     },
     {
       "companyName": "Aptus Pharma Ltd.",
@@ -9920,7 +9923,7 @@
           "percentage": 20
         }
       ],
-      "totalShares": 6860000,
+      "totalShares": 1850000,
       "rhpUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2025/aptus-pharma-limited_97275.html",
       "anchorInvestors": [
         {
@@ -9941,7 +9944,8 @@
         }
       ],
       "anchorShares": 528000,
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "totalCompanyShares": 6860000
     },
     {
       "companyName": "BharatRohan Airborne Innovations Ltd.",
@@ -10005,7 +10009,7 @@
           "percentage": 21.1
         }
       ],
-      "totalShares": 19922518,
+      "totalShares": 5160000,
       "rhpUrl": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_180920251306.zip",
       "anchorInvestors": [
         {
@@ -10026,7 +10030,8 @@
         }
       ],
       "anchorShares": 1475200,
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "totalCompanyShares": 19922518
     },
     {
       "companyName": "Solvex Edibles Ltd.",
@@ -10173,7 +10178,7 @@
           "label": "Promoter Lock-in (3 Years)"
         }
       ],
-      "totalShares": 18333225,
+      "totalShares": 4800000,
       "preIpoInvestors": [
         {
           "name": "Vineet Gupta",
@@ -10257,7 +10262,8 @@
       "anchorShares": 1372800,
       "preIpoWaca": 63.15,
       "waca": 63.15,
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "totalCompanyShares": 18333225
     },
     {
       "companyName": "GK Energy Ltd.",
@@ -10438,7 +10444,7 @@
         }
       ],
       "anchorShares": 1780000,
-      "totalShares": 22551112,
+      "totalShares": 6232000,
       "preIpoInvestors": [
         {
           "name": "Venturex Fund I",
@@ -10855,7 +10861,8 @@
       ],
       "preIpoWaca": 116.45,
       "waca": 116.45,
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "totalCompanyShares": 22551112
     },
     {
       "companyName": "VMS TMT Ltd.",
@@ -11551,7 +11558,7 @@
         }
       ],
       "anchorShares": 1852000,
-      "totalShares": 23969954,
+      "totalShares": 6480000,
       "bseCircularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
       "circularUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
       "lockInEvents": [
@@ -11590,7 +11597,8 @@
       "annexureUrl": "https://www.bseindia.com/markets/MarketInfo/DownloadAttach.aspx?id=20250917-52&attachedId=e275bbf0-7a59-43f4-8493-5dbb1fb15f3e",
       "preIpoWaca": 108.55,
       "waca": 108.55,
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "totalCompanyShares": 23969954
     },
     {
       "companyName": "Shringar House of Mangalsutra Ltd.",
@@ -11835,7 +11843,7 @@
         }
       ],
       "anchorShares": 655200,
-      "totalShares": 8883200,
+      "totalShares": 2293200,
       "preIpoInvestors": [
         {
           "name": "India Inflection Opportunity Trust – India Inflection Opportunity Fund",
@@ -12130,7 +12138,8 @@
       ],
       "preIpoWaca": 139.05,
       "waca": 139.05,
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "totalCompanyShares": 8883200
     },
     {
       "companyName": "Karbonsteel Engineering Ltd.",
@@ -12588,7 +12597,7 @@
           "percentage": 20
         }
       ],
-      "totalShares": 23411400,
+      "totalShares": 6080000,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_OPTIVALUE.zip",
       "anchorInvestors": [
         {
@@ -12608,7 +12617,8 @@
           "percent": 10.51
         }
       ],
-      "anchorShares": 1736000
+      "anchorShares": 1736000,
+      "totalCompanyShares": 23411400
     },
     {
       "companyName": "Goel Construction Co.Ltd.",
@@ -12796,8 +12806,9 @@
         }
       ],
       "anchorShares": 406000,
-      "totalShares": 6964000,
-      "preIpoInvestors": []
+      "totalShares": 1420000,
+      "preIpoInvestors": [],
+      "totalCompanyShares": 6964000
     },
     {
       "companyName": "Snehaa Organics Ltd.",
@@ -32946,7 +32957,8 @@
         }
       ],
       "anchorShares": 801600,
-      "totalShares": 10644344
+      "totalShares": 2804000,
+      "totalCompanyShares": 10644344
     },
     {
       "companyName": "Bagmane Prime Office REIT (Bagmane REIT)",
@@ -34893,9 +34905,10 @@
         }
       ],
       "anchorShares": 1770120,
-      "totalShares": 12901000,
+      "totalShares": 6200000,
       "rhpUrl": "https://www.sbisecurities.in/fileserver/research/reports/CSM%20Technologies%20Ltd._%20IPO%20Note.pdf",
-      "preIpoInvestors": []
+      "preIpoInvestors": [],
+      "totalCompanyShares": 12901000
     },
     {
       "companyName": "Waterways Leisure Tourism Ltd.",
@@ -53064,7 +53077,7 @@
         }
       ],
       "anchorShares": 302400,
-      "totalShares": 5326800,
+      "totalShares": 1056000,
       "rhpUrl": "https://nsearchives.nseindia.com/content/ipo/RHP_MADHURKNIT.zip",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/madhur_knit_crafts_ltd_nse_sme_capital_structure_1787008949.pdf",
       "preIpoInvestors": [
@@ -53084,7 +53097,8 @@
       "openDate": "2026-08-27T18:30:00.000Z",
       "closeDate": "2026-08-30T18:30:00.000Z",
       "priceBand": "₹95–100",
-      "lotSize": 1200
+      "lotSize": 1200,
+      "totalCompanyShares": 5326800
     },
     {
       "companyName": "Symbiotec Pharmalab Ltd.",
@@ -55592,8 +55606,8 @@
         "type": "SME Pre-IPO (1 Yr)"
       },
       "anchorInvestors": [],
-      "anchorShares": 1070400,
-      "totalShares": 9398000,
+      "anchorShares": 0,
+      "totalShares": 3756000,
       "rhpUrl": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/axiom_gas_engineering_ltd_nse_sme_capital_structure_1788933277.pdf",
       "preIpoChecked": true,
@@ -55695,7 +55709,8 @@
       "openDate": "2026-09-17T18:30:00.000Z",
       "closeDate": "2026-09-21T18:30:00.000Z",
       "waca": 50,
-      "preIpoWaca": 50
+      "preIpoWaca": 50,
+      "totalCompanyShares": 9398000
     },
     {
       "companyName": "Kheria Autocomp Ltd.",
