@@ -691,23 +691,17 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             }
         }
 
-        if (buyPrice !== null && !isNaN(buyPrice) && ipoPrice && !isNaN(ipoPrice) && ipoPrice > 0 && discountPct === null) {
-            discountPct = Math.round(((ipoPrice - buyPrice) / ipoPrice) * 1000) / 10;
-        }
-
-        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}${priceTag}` : (companyWaca ? `₹${companyWaca} (WACA)` : '—');
-        const ipoPriceStr = ipoPrice ? `₹${ipoPrice}` : '—';
-        
         let discountHtml = '—';
-        if (discountPct !== null && !isNaN(discountPct)) {
-            if (discountPct > 0) {
-                discountHtml = `<span class="disc-pill disc-below" title="${discountPct}% below IPO price">-${discountPct}%</span>`;
-            } else if (discountPct < 0) {
-                discountHtml = `<span class="disc-pill disc-above" title="${Math.abs(discountPct)}% above IPO price">+${Math.abs(discountPct)}%</span>`;
-            } else {
-                discountHtml = `<span class="disc-pill disc-same">At IPO</span>`;
+        if (buyPrice !== null && !isNaN(buyPrice) && ipoPrice && !isNaN(ipoPrice) && ipoPrice > 0) {
+            const diffPct = Math.round(((buyPrice - ipoPrice) / ipoPrice) * 1000) / 10;
+            if (diffPct < -0.1) {
+                discountHtml = `<span class="disc-pill disc-below" title="${Math.abs(diffPct)}% below IPO price">-${Math.abs(diffPct)}%</span>`;
+            } else if (diffPct > 0.1) {
+                discountHtml = `<span class="disc-pill disc-above" title="${diffPct}% above IPO price">+${diffPct}%</span>`;
             }
         }
+        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}${priceTag}` : (companyWaca ? `₹${companyWaca} (WACA)` : '—');
+        const ipoPriceStr = ipoPrice ? `₹${ipoPrice}` : '—';
 
         return `
             <tr>
