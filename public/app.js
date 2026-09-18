@@ -685,7 +685,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             if (inv.waca || companyWaca) {
                 buyPrice = parseFloat(String(inv.waca || companyWaca).replace(/[^0-9.]/g, ''));
                 priceTag = ' (WACA)';
-            } else if (/subscriber|incorporat|par\b|face value/i.test(`${name} ${type}`)) {
+            } else if (/subscriber|incorporat|face value\s*only/i.test(`${name} ${type}`)) {
                 buyPrice = 10.0;
                 priceTag = ' (Par)';
             }
@@ -695,7 +695,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             discountPct = Math.round(((ipoPrice - buyPrice) / ipoPrice) * 1000) / 10;
         }
 
-        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}${priceTag}` : (companyWaca ? `₹${companyWaca} (WACA)` : '₹10.00 (Par)');
+        const buyPriceStr = buyPrice !== null && !isNaN(buyPrice) ? `₹${buyPrice}${priceTag}` : (companyWaca ? `₹${companyWaca} (WACA)` : '—');
         const ipoPriceStr = ipoPrice ? `₹${ipoPrice}` : '—';
         
         let discountHtml = '—';
