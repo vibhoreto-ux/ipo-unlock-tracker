@@ -260,8 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         });
 
-        // 3. Apply Date Filter (This Week / This Month / Last Month / Upcoming)
+        // 3. Apply Date Filter (This Week / Next Week / This Month / Last Month / Upcoming)
         const { start: weekStart, end: weekEnd } = getThisWeekRange();
+        const { start: nextWeekStart, end: nextWeekEnd } = getNextWeekRange();
         const { start: monthStart, end: monthEnd } = getThisMonthRange();
         const { start: lastMonthStart, end: lastMonthEnd } = getLastMonthRange();
 
@@ -280,6 +281,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (currentFilter === 'week') {
                 return dates.some(d => d >= weekStart && d <= weekEnd);
+            }
+            if (currentFilter === 'nextWeek' || currentFilter === 'next_week') {
+                return dates.some(d => d >= nextWeekStart && d <= nextWeekEnd);
             }
             if (currentFilter === 'thisMonth') {
                 return dates.some(d => d >= monthStart && d <= monthEnd);
@@ -497,6 +501,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return { start, end };
     }
 
+    // Helper: Next Week Range (Mon-Sun of next week)
+    function getNextWeekRange() {
+        const now = new Date();
+        const day = now.getDay(); // 0-6 (Sun-Sat)
+        const diff = now.getDate() - day + (day === 0 ? -6 : 1) + 7; // Adjust to next Monday
+
+        const start = new Date(now.setDate(diff));
+        start.setHours(0, 0, 0, 0);
+
+        const end = new Date(start);
+        end.setDate(start.getDate() + 6);
+        end.setHours(23, 59, 59, 999);
+
+        return { start, end };
+    }
+
     // Helper: This Month Range (1st to last day)
     function getThisMonthRange() {
         const now = new Date();
@@ -670,6 +690,16 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             }
             discountPct = inv.discountPct !== undefined ? inv.discountPct : null;
             type = inv.type || inv.category || '';
+
+            // Check if price is embedded in name, category, or date string (e.g. "Transfer @ ₹90.00", "Round @ ₹250.00", "@ ₹165")
+            if (buyPrice === null || isNaN(buyPrice)) {
+                const combinedStr = `${name} ${type} ${date}`;
+                const m = combinedStr.match(/(?:@|at\s+price\s+of|cost\s*:?|price\s*:?)\s*₹?\s*([\d\.]+)/i) ||
+                          combinedStr.match(/₹\s*([\d\.]+)(?:\s*\/\s*sh|\s*per share)?/i);
+                if (m && !isNaN(parseFloat(m[1])) && parseFloat(m[1]) > 0) {
+                    buyPrice = parseFloat(m[1]);
+                }
+            }
         } else if (typeof inv === 'string') {
             const priceMatch = inv.match(/(?:@|\()?\s*₹?\s*([\d\.]+)(?:\s*\/\s*sh|\s*per share|\))?/i);
             if (priceMatch && !isNaN(parseFloat(priceMatch[1])) && parseFloat(priceMatch[1]) > 0) {
@@ -682,9 +712,13 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
         // Fallback for buyPrice if blank: check WACA or allotment face value
         if (buyPrice === null || isNaN(buyPrice)) {
-            if (inv.waca || companyWaca) {
-                buyPrice = parseFloat(String(inv.waca || companyWaca).replace(/[^0-9.]/g, ''));
-                priceTag = ' (WACA)';
+            const effectiveWaca = (inv && inv.waca !== undefined && inv.waca !== null) ? inv.waca : companyWaca;
+            if (effectiveWaca !== undefined && effectiveWaca !== null && effectiveWaca !== '') {
+                const parsedWaca = parseFloat(String(effectiveWaca).replace(/[^0-9.]/g, ''));
+                if (!isNaN(parsedWaca) && parsedWaca > 0) {
+                    buyPrice = parsedWaca;
+                    priceTag = ' (WACA)';
+                }
             } else if (/subscriber|incorporat|face value\s*only/i.test(`${name} ${type}`)) {
                 buyPrice = 10.0;
                 priceTag = ' (Par)';
@@ -1600,22 +1634,22 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
     // --- Views Logic ---
     const navTrackerBtn = document.getElementById('navTrackerBtn');
     const navUpcomingBtn = document.getElementById('navUpcomingBtn');
-    const navPreferentialBtn = document.getElementById('navPreferentialBtn');
+    const navCircuitBtn = document.getElementById('navCircuitBtn');
 
     const viewTracker = document.getElementById('viewTracker');
     const viewUpcomingIPOs = document.getElementById('viewUpcomingIPOs');
-    const viewPreferentialUnlock = document.getElementById('viewPreferentialUnlock');
+    const viewCircuitFilter = document.getElementById('viewCircuitFilter');
     const upcomingList = document.getElementById('upcomingList');
 
     function switchView(activeNav, activeView) {
         if (navTrackerBtn) navTrackerBtn.classList.remove('active');
         if (navUpcomingBtn) navUpcomingBtn.classList.remove('active');
-        if (navPreferentialBtn) navPreferentialBtn.classList.remove('active');
+        if (navCircuitBtn) navCircuitBtn.classList.remove('active');
         if (activeNav) activeNav.classList.add('active');
 
         if (viewTracker) { viewTracker.classList.remove('active'); viewTracker.classList.add('hidden'); }
         if (viewUpcomingIPOs) { viewUpcomingIPOs.classList.remove('active'); viewUpcomingIPOs.classList.add('hidden'); }
-        if (viewPreferentialUnlock) { viewPreferentialUnlock.classList.remove('active'); viewPreferentialUnlock.classList.add('hidden'); }
+        if (viewCircuitFilter) { viewCircuitFilter.classList.remove('active'); viewCircuitFilter.classList.add('hidden'); }
         if (activeView) { activeView.classList.add('active'); activeView.classList.remove('hidden'); }
     }
 
@@ -1711,222 +1745,270 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
         });
     }
 
-    if (navPreferentialBtn) {
-        navPreferentialBtn.addEventListener('click', () => {
-            switchView(navPreferentialBtn, viewPreferentialUnlock);
-            // Auto-load from cache on tab switch (no scan)
-            loadPrefFromCache();
+    if (navCircuitBtn) {
+        navCircuitBtn.addEventListener('click', () => {
+            switchView(navCircuitBtn, viewCircuitFilter);
+            loadCircuitFilterData();
         });
     }
 
-    // --- Preferential Unlock Logic ---
-    let preferentialDataLoaded = false;
-    let prefAllResults = [];       // merged NSE + BSE results
-    let prefSortMode = 'expiry';   // 'expiry' | 'recent'
+    // --- 10 Trading Days Post-Listing (20% Circuit Filter) Logic ---
+    let circuitAllResults = [];
+    let circuitFilterType = 'all'; // 'all' | 'imminent' | 'Mainboard' | 'SME' | 'upcoming'
+    let circuitSortMode = 'circuitDate'; // 'circuitDate' | 'remaining' | 'name'
+    let circuitDataLoaded = false;
 
-    const refreshPrefBtn = document.getElementById('refreshPrefBtn');
-    const prefSearchInput = document.getElementById('prefSearch');
+    const refreshCircuitBtn = document.getElementById('refreshCircuitBtn');
+    const circuitSearchInput = document.getElementById('circuitSearch');
 
-    // Wire sort buttons (only 2 now: expiry, recent)
-    ['prefSortExpiry', 'prefSortRecent'].forEach(id => {
+    // Type filter buttons
+    document.querySelectorAll('.circuit-type-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            circuitFilterType = btn.dataset.type;
+            document.querySelectorAll('.circuit-type-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyCircuitFilter();
+        });
+    });
+
+    // Sort buttons
+    ['circuitSortDate', 'circuitSortRemaining', 'circuitSortName'].forEach(id => {
         const btn = document.getElementById(id);
         if (btn) {
             btn.addEventListener('click', () => {
-                prefSortMode = btn.dataset.sort;
-                ['prefSortExpiry', 'prefSortRecent'].forEach(b => {
+                circuitSortMode = btn.dataset.sort;
+                ['circuitSortDate', 'circuitSortRemaining', 'circuitSortName'].forEach(b => {
                     const el = document.getElementById(b);
                     if (el) el.classList.remove('active');
                 });
                 btn.classList.add('active');
-                applyPrefFilter();
+                applyCircuitFilter();
             });
         }
     });
 
-    if (prefSearchInput) prefSearchInput.addEventListener('input', applyPrefFilter);
+    if (circuitSearchInput) circuitSearchInput.addEventListener('input', applyCircuitFilter);
 
-    function applyPrefFilter() {
-        const query = (prefSearchInput ? prefSearchInput.value : '').toLowerCase().trim();
-
-        let data = prefAllResults.filter(item => {
-            if (!query) return true;
-            return (item.company || '').toLowerCase().includes(query) ||
-                (item.symbol || '').toLowerCase().includes(query);
-        });
-
-        data = [...data].sort((a, b) => {
-            if (prefSortMode === 'recent') {
-                const da = a.broadcast_dt || '';
-                const db = b.broadcast_dt || '';
-                return db.localeCompare(da); // most recent first
-            }
-            // expiry: unknown dates go last
-            const da = a.unlock_date || '9999-12-31';
-            const db = b.unlock_date || '9999-12-31';
-            return da.localeCompare(db);
-        });
-
-        const prefNoData = document.getElementById('prefNoData');
-        if (!data.length) {
-            if (prefNoData) {
-                prefNoData.classList.remove('hidden');
-                prefNoData.innerHTML = query
-                    ? `<p>No results matching "<strong>${query}</strong>".</p>`
-                    : '<p>No trading approvals found in the last 365 days.</p>';
-            }
-        } else {
-            if (prefNoData) prefNoData.classList.add('hidden');
-            renderPreferentialTable(data);
-        }
+    if (refreshCircuitBtn) {
+        refreshCircuitBtn.addEventListener('click', () => loadCircuitFilterData(true));
     }
 
-    if (refreshPrefBtn) {
-        // Refresh = delta scan (not force)
-        refreshPrefBtn.addEventListener('click', () => triggerPrefScan());
-    }
+    async function loadCircuitFilterData(force = false) {
+        if (circuitDataLoaded && !force) return;
+        const circuitLoading = document.getElementById('circuitLoading');
+        const circuitNoData = document.getElementById('circuitNoData');
+        const circuitTableBody = document.getElementById('circuitTableBody');
+        const circuitLastUpdated = document.getElementById('circuitLastUpdated');
+        if (!circuitTableBody) return;
 
-    // Load cached data from disk — called on tab switch, no NSE/BSE scan
-    async function loadPrefFromCache() {
-        if (preferentialDataLoaded) return; // already loaded this session
-        const prefLoading = document.getElementById('prefLoading');
-        const prefNoData = document.getElementById('prefNoData');
-        const prefTableBody = document.getElementById('prefTableBody');
-        const prefLastUpdated = document.getElementById('prefLastUpdated');
-        if (!prefTableBody) return;
-
-        prefLoading.classList.remove('hidden');
-        const loadingP = prefLoading.querySelector('p');
-        if (loadingP) loadingP.textContent = 'Loading saved data...';
+        if (circuitLoading) circuitLoading.classList.remove('hidden');
+        if (circuitNoData) circuitNoData.classList.add('hidden');
 
         try {
-            const resp = await fetch('/api/pref-cache');
+            const resp = await fetch('/api/circuit-filter-ipos');
             const data = await resp.json();
-            prefLoading.classList.add('hidden');
-            if (data.results && data.results.length) {
-                prefAllResults = data.results;
-                preferentialDataLoaded = true;
-                if (prefLastUpdated) prefLastUpdated.textContent = data.savedAt ? new Date(data.savedAt).toLocaleString() : '--';
-                const prefCountEl = document.getElementById('prefCountNum');
-                if (prefCountEl) prefCountEl.textContent = prefAllResults.length;
-                applyPrefFilter();
+            if (circuitLoading) circuitLoading.classList.add('hidden');
+
+            if (data.results && Array.isArray(data.results)) {
+                circuitAllResults = data.results;
+                circuitDataLoaded = true;
+
+                if (circuitLastUpdated) {
+                    circuitLastUpdated.textContent = data.lastRefreshed ? new Date(data.lastRefreshed).toLocaleString() : new Date().toLocaleString();
+                }
+
+                // Update summary metrics
+                const stats = data.stats || {};
+                const statActive = document.getElementById('statTotalActive');
+                const statFlipping = document.getElementById('statFlippingThisWeek');
+                const statMb = document.getElementById('statMainboardCount');
+                const statSme = document.getElementById('statSmeCount');
+                const countBadge = document.getElementById('circuitCountNum');
+
+                if (statActive) statActive.textContent = stats.totalActive || circuitAllResults.length;
+                if (statFlipping) statFlipping.textContent = stats.flippingThisWeek || 0;
+                if (statMb) statMb.textContent = stats.mainboardCount || 0;
+                if (statSme) statSme.textContent = stats.smeCount || 0;
+                if (countBadge) countBadge.textContent = circuitAllResults.length;
+
+                applyCircuitFilter();
             } else {
-                // No cache yet — show prompt to scan
-                prefNoData.classList.remove('hidden');
-                prefNoData.innerHTML = '<p>No saved data yet. Click <strong>Refresh Data</strong> to scan.</p>';
+                if (circuitNoData) circuitNoData.classList.remove('hidden');
             }
         } catch (e) {
-            prefLoading.classList.add('hidden');
-            prefNoData.classList.remove('hidden');
-            prefNoData.innerHTML = '<p style="color:var(--danger)">Error loading cache.</p>';
+            console.error('[Circuit Filter] Error:', e);
+            if (circuitLoading) circuitLoading.classList.add('hidden');
+            if (circuitNoData) {
+                circuitNoData.classList.remove('hidden');
+                circuitNoData.innerHTML = '<p style="color:var(--danger)">Error loading circuit filter data. Please retry.</p>';
+            }
         }
     }
 
-    // Trigger a delta scan (Refresh button) — fetches only new data since last scan
-    async function triggerPrefScan() {
-        const prefLoading = document.getElementById('prefLoading');
-        const prefNoData = document.getElementById('prefNoData');
-        const prefTableBody = document.getElementById('prefTableBody');
-        const prefLastUpdated = document.getElementById('prefLastUpdated');
-        if (!prefTableBody || !prefLoading || !prefNoData) return;
+    function applyCircuitFilter() {
+        const query = (circuitSearchInput ? circuitSearchInput.value : '').toLowerCase().trim();
 
-        prefLoading.classList.remove('hidden');
-        prefNoData.classList.add('hidden');
-        if (refreshPrefBtn) refreshPrefBtn.disabled = true;
-        const loadingP = prefLoading.querySelector('p');
-        if (loadingP) loadingP.textContent = 'Starting delta scan...';
+        let filtered = circuitAllResults.filter(item => {
+            // Text search
+            if (query) {
+                const matchName = (item.companyName || '').toLowerCase().includes(query);
+                const matchExch = (item.exchange || '').toLowerCase().includes(query);
+                const matchType = (item.issueType || '').toLowerCase().includes(query);
+                if (!matchName && !matchExch && !matchType) return false;
+            }
 
-        try {
-            const startResp = await fetch('/api/scan-preferential/start', { method: 'POST' });
-            const startData = await startResp.json();
+            // Type / Status segment filter
+            if (circuitFilterType === 'imminent') {
+                return item.daysRemaining <= 3 && !item.isUpcomingListing;
+            } else if (circuitFilterType === 'upcoming') {
+                return item.isUpcomingListing;
+            } else if (circuitFilterType === 'Mainboard') {
+                return item.issueType === 'Mainboard';
+            } else if (circuitFilterType === 'SME') {
+                return item.issueType && item.issueType.includes('SME');
+            }
+            return true;
+        });
 
-            // Poll until done
-            let dots = 0;
-            const pollInterval = setInterval(async () => {
-                dots = (dots % 3) + 1;
-                try {
-                    const st = await fetch('/api/scan-preferential/status');
-                    const sd = await st.json();
-                    if (loadingP) loadingP.textContent = sd.message || `Scanning${'.'.repeat(dots)}`;
-                    if (sd.status === 'done') {
-                        clearInterval(pollInterval);
-                        prefAllResults = sd.results || [];
-                        preferentialDataLoaded = true;
-                        prefLoading.classList.add('hidden');
-                        if (prefLastUpdated) prefLastUpdated.textContent = new Date().toLocaleString();
-                        const prefCountEl2 = document.getElementById('prefCountNum');
-                        if (prefCountEl2) prefCountEl2.textContent = prefAllResults.length;
-                        if (!prefAllResults.length) {
-                            prefNoData.classList.remove('hidden');
-                            prefNoData.innerHTML = '<p>No trading approvals found.</p>';
-                        } else {
-                            applyPrefFilter();
-                        }
-                        if (refreshPrefBtn) refreshPrefBtn.disabled = false;
-                    } else if (sd.status === 'error') {
-                        clearInterval(pollInterval);
-                        prefLoading.classList.add('hidden');
-                        prefNoData.classList.remove('hidden');
-                        prefNoData.innerHTML = `<p style="color:var(--danger)">Scan failed: ${sd.error || 'Unknown'}</p>`;
-                        if (refreshPrefBtn) refreshPrefBtn.disabled = false;
-                    }
-                } catch (e) { /* keep polling */ }
-            }, 3000);
-        } catch (error) {
-            prefLoading.classList.add('hidden');
-            prefNoData.classList.remove('hidden');
-            prefNoData.innerHTML = '<p style="color:var(--danger)">Error connecting to server.</p>';
-            if (refreshPrefBtn) refreshPrefBtn.disabled = false;
+        // Sort
+        filtered.sort((a, b) => {
+            if (circuitSortMode === 'name') {
+                return (a.companyName || '').localeCompare(b.companyName || '');
+            } else if (circuitSortMode === 'remaining') {
+                return a.daysRemaining - b.daysRemaining;
+            } else {
+                // circuitDate ascending
+                return new Date(a.circuit20Date) - new Date(b.circuit20Date);
+            }
+        });
+
+        const circuitNoData = document.getElementById('circuitNoData');
+        if (!filtered.length) {
+            if (circuitNoData) {
+                circuitNoData.classList.remove('hidden');
+                circuitNoData.innerHTML = query
+                    ? `<p>No IPOs matching "<strong>${query}</strong>" in the 10-trading-day window.</p>`
+                    : '<p>No IPOs currently in the 10-trading-day window.</p>';
+            }
+            const circuitTableBody = document.getElementById('circuitTableBody');
+            if (circuitTableBody) circuitTableBody.innerHTML = '';
+        } else {
+            if (circuitNoData) circuitNoData.classList.add('hidden');
+            renderCircuitTable(filtered);
         }
     }
 
-    function renderPreferentialTable(data) {
-        const prefTableBody = document.getElementById('prefTableBody');
-        if (!prefTableBody) return;
-        prefTableBody.innerHTML = '';
+    function renderCircuitTable(items) {
+        const tbody = document.getElementById('circuitTableBody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
 
-        data.forEach(item => {
+        items.forEach(item => {
             const row = document.createElement('tr');
-            const isBSE = item.source === 'BSE';
 
-            // Exchange badge
-            const exchBadge = isBSE
-                ? '<span class="badge" style="background:#e65c00;color:#fff;font-size:10px;padding:2px 6px;">BSE</span>'
-                : '<span class="badge" style="background:#0066a1;color:#fff;font-size:10px;padding:2px 6px;">NSE</span>';
+            const isSME = item.issueType && item.issueType.includes('SME');
+            const typeBadge = isSME
+                ? '<span class="badge badge-sme" style="font-size:10.5px; padding:2px 7px;">SME</span>'
+                : '<span class="badge badge-main" style="font-size:10.5px; padding:2px 7px;">Mainboard</span>';
 
-            // Notice / Listing Date: use listing_date for NSE, broadcast_dt for BSE
-            let listingHtml = '<span class="text-muted">--</span>';
-            const noticeDate = item.listing_date || (isBSE ? item.broadcast_dt : null);
-            if (noticeDate) {
-                listingHtml = `<span class="date-text">${formatDateSimple(noticeDate)}</span>`;
+            const exchBadge = `<span style="font-size:11px; font-weight:600; color:var(--text-muted);">${item.exchange || 'BSE, NSE'}</span>`;
+
+            // Listing Date Cell
+            const listDateStr = formatDateSimple(item.listingDate);
+            const isUpcoming = item.isUpcomingListing;
+            const listDateHtml = `
+                <div style="display:flex; flex-direction:column; gap:2px;">
+                    <span style="font-weight:600; color:var(--text);">${listDateStr}</span>
+                    <span style="font-size:11px; color:${isUpcoming ? '#3b82f6' : 'var(--text-muted)'}; font-weight:500;">
+                        ${isUpcoming ? '📅 Upcoming Listing' : `Listed ${item.daysCompleted} trading day${item.daysCompleted === 1 ? '' : 's'} ago`}
+                    </span>
+                </div>
+            `;
+
+            // Progress Bar Cell
+            let fillClass = 'circuit-progress-fill';
+            let badgeClass = 'circuit-badge circuit-badge-active';
+            let badgeText = `Day ${item.daysCompleted} of 10`;
+
+            if (isUpcoming) {
+                fillClass += ' upcoming';
+                badgeClass = 'circuit-badge circuit-badge-upcoming';
+                badgeText = 'Upcoming';
+            } else if (item.daysRemaining <= 3) {
+                fillClass += ' imminent';
+                badgeClass = 'circuit-badge circuit-badge-imminent';
+                badgeText = `⚡ ${item.daysRemaining} Day${item.daysRemaining === 1 ? '' : 's'} Left`;
             }
 
-            // Lock-in Expiry
-            let unlockHtml = '<span class="text-muted">Pending</span>';
-            if (item.unlock_date) {
-                const isPast = new Date(item.unlock_date) < new Date();
-                unlockHtml = `<div class="date-cell">
-                    <span class="date-text ${isPast ? 'text-past' : ''}">${formatDateSimple(item.unlock_date)}</span>
-                    ${getStatusBadge(item.unlock_date)}
-                </div>`;
-            }
+            const progressHtml = `
+                <div class="circuit-progress-container">
+                    <div class="circuit-progress-header">
+                        <span class="${badgeClass}">${badgeText}</span>
+                        <span style="color:var(--text-muted); font-size:11px;">${item.progressPct}%</span>
+                    </div>
+                    <div class="circuit-progress-bar">
+                        <div class="${fillClass}" style="width:${Math.max(4, item.progressPct)}%;"></div>
+                    </div>
+                </div>
+            `;
 
-            // PDF link
-            let linkHtml = '<span class="text-muted">—</span>';
-            if (item.pdf_url) {
-                linkHtml = `<a href="${item.pdf_url}" target="_blank" class="badge badge-main" style="text-decoration:none;padding:4px 10px;font-size:11px;">View PDF</a>`;
+            // 10th Trading Day
+            const day10Str = formatDateSimple(item.tenthTradingDay);
+            const day10Html = `
+                <div style="display:flex; flex-direction:column; gap:2px;">
+                    <span style="font-weight:600; color:var(--text);">${day10Str}</span>
+                    <span style="font-size:10.5px; color:var(--text-muted);">Day 10 Conclusion</span>
+                </div>
+            `;
+
+            // 20% Circuit Effective Date (Day 11)
+            const circuit20Str = formatDateSimple(item.circuit20Date);
+            const isImminent = item.daysRemaining <= 3 && !isUpcoming;
+            const circuit20Html = `
+                <div class="circuit-effective-pill">
+                    <span class="circuit-flip-date" style="${isImminent ? 'color:#047857; font-weight:800;' : ''}">
+                        ${isImminent ? '🔥 ' : '🎯 '}${circuit20Str}
+                    </span>
+                    <span class="circuit-flip-note" style="${isImminent ? 'color:#059669; font-weight:700;' : ''}">
+                        ${isImminent ? '⚡ Relaxes to 20% Limit!' : '20% Circuit Effective'}
+                    </span>
+                </div>
+            `;
+
+            // Issue Price / CMP Cell
+            let priceHtml = '';
+            if (item.issuePrice) {
+                priceHtml = `
+                    <div style="display:flex; flex-direction:column; gap:2px;">
+                        <span style="font-weight:700; color:var(--text);">₹${item.issuePrice}</span>
+                        ${item.lotSize ? `<span style="font-size:10.5px; color:var(--text-muted);">Lot: ${item.lotSize} shs</span>` : ''}
+                    </div>
+                `;
+            } else {
+                priceHtml = '<span class="text-muted">--</span>';
             }
 
             row.innerHTML = `
-                <td data-label="Company"><strong>${item.company || item.symbol || '--'}</strong></td>
-                <td data-label="Symbol">${exchBadge} <span class="badge badge-main" style="margin-left:2px;">${item.symbol || item.scrip_cd || '--'}</span></td>
-                <td data-label="Shares">${item.shares ? item.shares.toLocaleString('en-IN') : '--'}</td>
-                <td data-label="Notice / Listing Date">${listingHtml}</td>
-                <td data-label="Lock-in Expiry">${unlockHtml}</td>
-                <td data-label="Circular">${linkHtml}</td>
+                <td>
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                        <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+                            <span style="font-weight:700; color:var(--text); font-size:13.5px;">${item.companyName}</span>
+                            ${typeBadge}
+                        </div>
+                        <div>${exchBadge}</div>
+                    </div>
+                </td>
+                <td>${listDateHtml}</td>
+                <td>${progressHtml}</td>
+                <td>${day10Html}</td>
+                <td>${circuit20Html}</td>
+                <td>${priceHtml}</td>
             `;
-            prefTableBody.appendChild(row);
+
+            tbody.appendChild(row);
         });
     }
+
 
     function renderUpcomingIPOs() {
         if (!upcomingList) return;
@@ -1940,14 +2022,22 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        // Get all IPOs that haven't listed yet (allotment date in future or no date)
+        // Get all IPOs that haven't listed yet (listingDate >= today, or allotmentDate >= today, or no date)
         const allUpcomingIPOs = allCompanies.filter(c => {
             if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
-            const listDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
-            if (!listDateStr) return true;
-            const listDate = new Date(listDateStr);
-            listDate.setHours(0, 0, 0, 0);
-            return listDate > today;
+            const lDateStr = c.listingDate || null;
+            const aDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
+            if (lDateStr) {
+                const lDate = new Date(lDateStr);
+                lDate.setHours(0, 0, 0, 0);
+                return lDate >= today;
+            }
+            if (aDateStr) {
+                const aDate = new Date(aDateStr);
+                aDate.setHours(0, 0, 0, 0);
+                return aDate >= today;
+            }
+            return true;
         });
 
         // Classify each IPO: "open" = subscription currently active, "upcoming" = not yet open
@@ -2136,7 +2226,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
             if (isFixedPrice) {
                 const preIpoTable = hasPreIpo 
-                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.waca)}</div>`
+                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca)}</div>`
                     : `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">🛡️ 100% Promoter & Early Associate Held (0 external Pre-IPO round — zero pre-IPO selling overhang).</span>`;
 
                 preIpoHtml = `
@@ -2161,7 +2251,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 `;
             } else {
                 if (hasPreIpo) {
-                    const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.waca);
+                    const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca);
                     preIpoHtml = `<details><summary style="display:flex; justify-content:space-between; align-items:center;"><span>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
                 } else {
                     preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;

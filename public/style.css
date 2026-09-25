@@ -1673,3 +1673,122 @@ table.pre-ipo-table tbody tr:hover {
   background: var(--accent);
   color: #fff;
 }
+
+/* --- 10 Trading Days Circuit Filter Tab Styles --- */
+.circuit-type-btn {
+  padding: 6px 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--card-bg, #fff);
+  color: var(--text-secondary, #64748b);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.circuit-type-btn:hover {
+  background: rgba(79, 70, 229, 0.06);
+  color: var(--primary, #4f46e5);
+  border-color: rgba(79, 70, 229, 0.3);
+}
+
+.circuit-type-btn.active {
+  background: var(--primary, #4f46e5);
+  color: #fff;
+  border-color: var(--primary, #4f46e5);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+}
+
+.circuit-progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.circuit-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.circuit-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.circuit-progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+}
+
+.circuit-progress-fill.imminent {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.circuit-progress-fill.upcoming {
+  background: #94a3b8;
+}
+
+.circuit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.circuit-badge-imminent {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  animation: pulse-emerald 2s infinite ease-in-out;
+}
+
+@keyframes pulse-emerald {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15); }
+}
+
+.circuit-badge-active {
+  background: rgba(99, 102, 241, 0.1);
+  color: #4338ca;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.circuit-badge-upcoming {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.circuit-effective-pill {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.circuit-flip-date {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.circuit-flip-note {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #10b981;
+}
+

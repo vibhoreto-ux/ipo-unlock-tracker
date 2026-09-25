@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 const { scrapeUnlockData } = require('./scraper');
 const { scrapeWithBrowser, fetchAnchorInvestorNames } = require('./browser-scraper');
 const { autoFetchMissingRHP } = require('./auto-rhp');
@@ -17,7 +18,7 @@ app.use(cors());
 app.use(express.static('public'));
 app.use(express.json({ limit: '10mb' }));
 
-const { getNextBusinessDay, calculatePreIPOLockin } = require('./holidays');
+const { getNextBusinessDay, calculatePreIPOLockin, getCircuitFilterIpos, getTradingDayOffset, getTradingDaysPassed, getNextTradingDay } = require('./holidays');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const unzipper = require('unzipper');
@@ -342,52 +343,48 @@ function parseImportDate(dateStr) {
     return isNaN(d.getTime()) ? null : d;
 }
 
-// ---------- Async preferential scan job system ----------
-let prefScanJob = { status: 'idle', results: [], error: null, startedAt: null, message: '' };
-
-// GET to load cached data instantly (no scan) — used on tab switch / page load
-app.get('/api/pref-cache', (req, res) => {
-    const _fs = require('fs');
-    const _path = require('path');
-    const COMBINED_CACHE = _path.join(__dirname, 'pref-cache.json');
+// ---------- 10 Trading Days Post-Listing (20% Circuit Filter) System ----------
+app.get('/api/circuit-filter-ipos', (req, res) => {
     try {
-        if (_fs.existsSync(COMBINED_CACHE)) {
-            const raw = JSON.parse(_fs.readFileSync(COMBINED_CACHE, 'utf8'));
-            return res.json({ status: 'ok', results: raw.results || [], savedAt: raw.savedAt });
+        const unlockPath = path.join(__dirname, 'data', 'unlock-data.json');
+        let companies = [];
+        if (fs.existsSync(unlockPath)) {
+            const raw = JSON.parse(fs.readFileSync(unlockPath, 'utf8'));
+            companies = Array.isArray(raw) ? raw : (raw.data || raw.companies || []);
         }
-    } catch (e) { console.error('[pref-cache]', e.message); }
-    return res.json({ status: 'empty', results: [] });
-});
+        
+        const results = getCircuitFilterIpos(companies, new Date());
+        
+        const totalActive = results.length;
+        const flippingThisWeek = results.filter(r => r.daysRemaining <= 5 && !r.isUpcomingListing).length;
+        const mainboardCount = results.filter(r => r.issueType === 'Mainboard').length;
+        const smeCount = results.filter(r => r.issueType && r.issueType.includes('SME')).length;
+        const upcomingCount = results.filter(r => r.isUpcomingListing).length;
 
-
-// POST to kick off a DELTA background scan (or force full refresh with ?force=true)
-app.post('/api/scan-preferential/start', (req, res) => {
-    if (prefScanJob.status === 'running') {
-        return res.json({ status: 'running', message: 'Scan already in progress' });
+        return res.json({
+            status: 'ok',
+            results,
+            stats: {
+                totalActive,
+                flippingThisWeek,
+                mainboardCount,
+                smeCount,
+                upcomingCount
+            },
+            asOfDate: new Date().toISOString(),
+            lastRefreshed: new Date().toISOString()
+        });
+    } catch (e) {
+        console.error('[circuit-filter-ipos] Error:', e.message);
+        return res.status(500).json({ status: 'error', error: e.message, results: [] });
     }
-    // Start scan in background — delta by default, full if force=true
-    const force = req.query.force === 'true';
-    prefScanJob = { status: 'running', results: [], error: null, startedAt: Date.now(), message: 'Scanning...' };
-    scanPreferential(force).then(results => {
-        prefScanJob = { status: 'done', results, error: null, startedAt: prefScanJob.startedAt };
-        console.log(`[PREF] Scan complete: ${results.length} results`);
-    }).catch(err => {
-        prefScanJob = { status: 'error', results: [], error: err.message, startedAt: prefScanJob.startedAt };
-        console.error('[PREF] Scan error:', err.message);
-    });
-    res.json({ status: 'running', message: force ? 'Full scan started' : 'Delta scan started' });
 });
 
-// GET to poll scan status
-app.get('/api/scan-preferential/status', (req, res) => {
-    res.json({
-        status: prefScanJob.status,
-        count: prefScanJob.results.length,
-        results: prefScanJob.status === 'done' ? prefScanJob.results : [],
-        error: prefScanJob.error,
-        message: prefScanJob.message || ''
-    });
-});
+// Legacy stub for backward compatibility
+app.get('/api/pref-cache', (req, res) => res.json({ status: 'empty', results: [] }));
+app.post('/api/scan-preferential/start', (req, res) => res.json({ status: 'done', message: 'Preferential scanning deprecated' }));
+app.get('/api/scan-preferential/status', (req, res) => res.json({ status: 'done', count: 0, results: [], message: '' }));
+
 
 
 /**
@@ -613,14 +610,22 @@ async function probeUpcomingData() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    // Filter upcoming unlisted companies (allotment date is in the future or not yet set)
+    // Filter upcoming unlisted companies (listingDate or allotmentDate is in future or not yet set)
     const upcoming = db.companies.filter(c => {
         if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
-        const listDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
-        if (!listDateStr) return true;
-        const listDate = new Date(listDateStr);
-        listDate.setHours(0, 0, 0, 0);
-        return listDate >= today;
+        const lDateStr = c.listingDate || null;
+        const aDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
+        if (lDateStr) {
+            const lDate = new Date(lDateStr);
+            lDate.setHours(0, 0, 0, 0);
+            return lDate >= today;
+        }
+        if (aDateStr) {
+            const aDate = new Date(aDateStr);
+            aDate.setHours(0, 0, 0, 0);
+            return aDate >= today;
+        }
+        return true;
     });
 
     console.log(`[ProbeUpcoming] Probing ${upcoming.length} upcoming IPOs for missing Anchor and Pre-IPO data...`);
@@ -636,7 +641,19 @@ async function probeUpcomingData() {
             const updatedFields = [];
             const name = company.companyName;
 
-            // 1. Probe Anchors & True Total Shares if anchorInvestors is 0 or missing
+            // 1. Resolve Document URLs (Capital Structure, Anchor PDF, RHP)
+            try {
+                const docUrl = await resolveCompanyDocUrl(company, true);
+                if (docUrl && docUrl !== company.capitalStructureUrl) {
+                    company.capitalStructureUrl = docUrl;
+                    changed = true;
+                    if (!updatedFields.includes('Capital Structure Doc')) updatedFields.push('Capital Structure Doc');
+                }
+            } catch (e) {
+                console.warn(`[ProbeUpcoming] Doc resolve error for ${name}: ${e.message}`);
+            }
+
+            // 2. Probe Anchors & True Total Shares if anchorInvestors is 0 or missing
             if (!company.anchorInvestors || company.anchorInvestors.length === 0 || !company.anchorShares || company.anchorShares === 0 || !company.totalShares || company.totalShares === 0) {
                 try {
                     if (company.chittorgarhUrl) {
@@ -655,6 +672,33 @@ async function probeUpcomingData() {
                             company.totalShares = parsed.totalShares;
                             changed = true;
                             if (!updatedFields.includes('Total Shares')) updatedFields.push('Total Shares');
+                        }
+                    }
+
+                    // Fallback to direct Anchor PDF parsing if anchorInvestors is still missing and anchorUrl exists
+                    if ((!company.anchorInvestors || company.anchorInvestors.length === 0) && company.anchorUrl) {
+                        try {
+                            const pythonPath = fs.existsSync(path.join(__dirname, 'venv', 'bin', 'python')) 
+                                ? path.join(__dirname, 'venv', 'bin', 'python') 
+                                : 'python3';
+                            const out = execFileSync(pythonPath, [
+                                path.join(__dirname, 'scripts', 'parse_anchor_pdf.py'),
+                                company.anchorUrl,
+                                String(company.issuePrice || '')
+                            ], { encoding: 'utf8' });
+                            const jsonStr = out.slice(out.indexOf('{'), out.lastIndexOf('}') + 1);
+                            if (jsonStr) {
+                                const parsed = JSON.parse(jsonStr);
+                                if (parsed.anchorInvestors && parsed.anchorInvestors.length > 0) {
+                                    company.anchorInvestors = parsed.anchorInvestors;
+                                    if (parsed.anchorShares > 0) company.anchorShares = parsed.anchorShares;
+                                    if (parsed.anchorDate) company.anchorDate = parsed.anchorDate;
+                                    changed = true;
+                                    if (!updatedFields.includes('Anchor Allotment (PDF)')) updatedFields.push('Anchor Allotment (PDF)');
+                                }
+                            }
+                        } catch (err) {
+                            console.warn(`[ProbeUpcoming] Anchor PDF error for ${name}: ${err.message}`);
                         }
                     }
                 } catch (e) {
@@ -682,26 +726,15 @@ async function probeUpcomingData() {
                 }
             }
 
-            // 2. Probe Capital Structure, Anchor Doc & Pre-IPO Data
-            const isCsMissingOrRhp = !company.capitalStructureUrl || 
-                company.capitalStructureUrl.toLowerCase().includes('rhp') || 
-                !company.capitalStructureUrl.toLowerCase().includes('capital_structure');
+            // 3. Probe Pre-IPO Data
             const isPreIpoMissing = !company.preIpoInvestors || company.preIpoInvestors.length === 0;
-
-            if (isCsMissingOrRhp || isPreIpoMissing || !company.anchorUrl || !company.rhpUrl) {
+            if (isPreIpoMissing) {
                 try {
-                    const docUrl = await resolveCompanyDocUrl(company, false);
-                    if (docUrl && docUrl !== company.capitalStructureUrl) {
-                        company.capitalStructureUrl = docUrl;
-                        changed = true;
-                        if (!updatedFields.includes('Capital Structure Doc')) updatedFields.push('Capital Structure Doc');
-                    }
-
                     const targetDoc = (company.capitalStructureUrl && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) 
                         ? company.capitalStructureUrl 
                         : (company.rhpUrl && company.rhpUrl.toLowerCase().includes('.pdf') ? company.rhpUrl : null);
                     
-                    if (targetDoc && (!company.preIpoInvestors || company.preIpoInvestors.length === 0)) {
+                    if (targetDoc) {
                         try {
                             const csRes = await extractFromCapitalStructure(company.companyName, targetDoc);
                             if (csRes && Array.isArray(csRes.preIpoInvestors) && csRes.preIpoInvestors.length > 0) {
@@ -944,17 +977,6 @@ app.get('/api/probe-upcoming', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    const db = readDB();
-    console.log(`\n🔓 IPO Unlock Tracker running at http://localhost:${PORT}`);
-    console.log(`📦 Database: ${db.companies.length} companies stored`);
-    if (db.lastUpdated) {
-        console.log(`⏰ Last updated: ${new Date(db.lastUpdated).toLocaleString()}`);
-    } else {
-        console.log('📭 No data yet — click "Refresh Data" to fetch');
-    }
-});
-
 // ----- BSE Circular / Unlock Details -----
 const { getUnlockPercentages, parseLockInData } = require('./circular-scraper');
 const { getLivePrice } = require('./price-scraper');
@@ -1001,18 +1023,27 @@ async function resolveCompanyDocUrl(company, forceCheckDetailPage = false) {
         }
     }
 
-    // If we already have a genuine capital structure URL cached
-    if (matchedItem && matchedItem.capitalStructureUrl && matchedItem.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
-        company.capitalStructureUrl = matchedItem.capitalStructureUrl;
+    // If we already have cached URLs
+    if (matchedItem) {
+        if (matchedItem.capitalStructureUrl && matchedItem.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
+            company.capitalStructureUrl = matchedItem.capitalStructureUrl;
+        }
         if (matchedItem.anchorPdfUrl && !company.anchorUrl) company.anchorUrl = matchedItem.anchorPdfUrl;
         if (matchedItem.rhpUrl && !company.rhpUrl) company.rhpUrl = matchedItem.rhpUrl;
-        return matchedItem.capitalStructureUrl;
+        
+        // If we have both or don't need to probe detail page, return early
+        const hasAllDocs = matchedItem.capitalStructureUrl && matchedItem.anchorPdfUrl;
+        if (hasAllDocs || !forceCheckDetailPage || !matchedItem.detailUrl) {
+            if (company.capitalStructureUrl) return company.capitalStructureUrl;
+        }
     }
 
-    // If capital structure URL is missing in cache and forceCheckDetailPage is true, and detailUrl is available:
+    // If anchor or capital structure URL is missing in cache and forceCheckDetailPage is true, and detailUrl is available:
     const ONE_DAY = 24 * 60 * 60 * 1000;
     const scrapedRecently = matchedItem && matchedItem.lastScrapedAt && (Date.now() - matchedItem.lastScrapedAt < ONE_DAY);
-    if (matchedItem && matchedItem.detailUrl && !matchedItem.capitalStructureUrl && !scrapedRecently && forceCheckDetailPage) {
+    const needsDocCheck = matchedItem && (!matchedItem.anchorPdfUrl || !matchedItem.capitalStructureUrl);
+
+    if (matchedItem && matchedItem.detailUrl && (needsDocCheck || !scrapedRecently) && forceCheckDetailPage) {
         try {
             matchedItem.lastScrapedAt = Date.now();
             console.log(`[resolveCompanyDocUrl] Probing IPO Premium detail page for ${company.companyName}: ${matchedItem.detailUrl}`);
@@ -1032,6 +1063,11 @@ async function resolveCompanyDocUrl(company, forceCheckDetailPage = false) {
             if (scraped && scraped.rhpUrl) {
                 matchedItem.rhpUrl = scraped.rhpUrl;
                 company.rhpUrl = scraped.rhpUrl;
+                cacheUpdated = true;
+            }
+            if (scraped && scraped.totalShares && !company.totalShares) {
+                company.totalShares = scraped.totalShares;
+                matchedItem.totalShares = scraped.totalShares;
                 cacheUpdated = true;
             }
 
@@ -1307,5 +1343,16 @@ app.post('/api/parse-bse-pdf', express.raw({ type: '*/*', limit: '10mb' }), asyn
     } catch (error) {
         console.error('[BSE/Client] PDF parse error:', error.message);
         res.status(500).json({ error: 'Failed to parse PDF' });
+    }
+});
+
+app.listen(PORT, () => {
+    const db = readDB();
+    console.log(`\n🔓 IPO Unlock Tracker running at http://localhost:${PORT}`);
+    console.log(`📦 Database: ${db.companies.length} companies stored`);
+    if (db.lastUpdated) {
+        console.log(`⏰ Last updated: ${new Date(db.lastUpdated).toLocaleString()}`);
+    } else {
+        console.log('📭 No data yet — click "Refresh Data" to fetch');
     }
 });

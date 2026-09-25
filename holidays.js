@@ -133,9 +133,146 @@ function calculatePreIPOLockin(allotmentDateStr, issueType) {
     };
 }
 
+/**
+ * Get the N-th trading day starting from a given date.
+ * startDate is Day 1 (if it is a trading day, otherwise adjusted to next trading day).
+ * @param {Date|string} startDateStr 
+ * @param {number} numTradingDays - default 10
+ * @returns {Date|null}
+ */
+function getTradingDayOffset(startDateStr, numTradingDays = 10) {
+    if (!startDateStr) return null;
+    let curr = new Date(startDateStr);
+    if (isNaN(curr.getTime())) return null;
+
+    // Ensure start day is a business day (if listed on holiday/weekend, start on next trading day)
+    while (isHoliday(curr)) {
+        curr.setDate(curr.getDate() + 1);
+    }
+
+    let count = 1;
+    while (count < numTradingDays) {
+        curr.setDate(curr.getDate() + 1);
+        if (!isHoliday(curr)) {
+            count++;
+        }
+    }
+    return new Date(curr);
+}
+
+/**
+ * Calculate how many trading days have passed as of a given target date
+ * @param {Date|string} startDateStr 
+ * @param {Date|string} asOfDateStr 
+ * @returns {number}
+ */
+function getTradingDaysPassed(startDateStr, asOfDateStr = new Date()) {
+    if (!startDateStr) return 0;
+    let curr = new Date(startDateStr);
+    const target = new Date(asOfDateStr);
+    if (isNaN(curr.getTime()) || isNaN(target.getTime())) return 0;
+
+    // Adjust start date to valid trading day
+    while (isHoliday(curr)) {
+        curr.setDate(curr.getDate() + 1);
+    }
+
+    // If listing date is in the future
+    if (curr > target) return 0;
+
+    let count = 0;
+    let iter = new Date(curr);
+    while (iter <= target) {
+        if (!isHoliday(iter)) {
+            count++;
+        }
+        iter.setDate(iter.getDate() + 1);
+    }
+    return count;
+}
+
+/**
+ * Get the very next trading day after a given date
+ * @param {Date|string} dateInput 
+ * @returns {Date}
+ */
+function getNextTradingDay(dateInput) {
+    let date = new Date(dateInput);
+    if (isNaN(date.getTime())) return null;
+    date.setDate(date.getDate() + 1);
+    while (isHoliday(date)) {
+        date.setDate(date.getDate() + 1);
+    }
+    return date;
+}
+
+/**
+ * Process a list of companies to find all IPOs in their 10 trading days window
+ * Significance: On completion of Day 10 (i.e. on Day 11), circuit filter moves to 20%.
+ * Excludes companies that have already completed 10 trading days.
+ * @param {Array} companiesList 
+ * @param {Date|string} asOfDate 
+ * @returns {Array}
+ */
+function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
+    const today = new Date(asOfDate);
+    const results = [];
+
+    for (const c of companiesList) {
+        if (!c || !c.listingDate) continue;
+        const lDate = new Date(c.listingDate);
+        if (isNaN(lDate.getTime())) continue;
+
+        const day10 = getTradingDayOffset(c.listingDate, 10);
+        if (!day10) continue;
+
+        // Day 11 is when 20% circuit filter takes effect
+        const day11 = getNextTradingDay(day10);
+        const daysCompleted = getTradingDaysPassed(c.listingDate, today);
+
+        // Exclude companies that have already completed 10 trading days
+        if (daysCompleted >= 10) continue;
+
+        const daysRemaining = Math.max(0, 10 - daysCompleted);
+        const isUpcomingListing = daysCompleted === 0 && lDate > today;
+        const isTodayDay10 = daysCompleted === 10 || (daysRemaining === 1 && today.toISOString().split('T')[0] === day10.toISOString().split('T')[0]);
+
+        results.push({
+            companyName: c.companyName || c.name,
+            issueType: c.issueType || 'Mainboard',
+            exchange: c.exchange || (c.issueType === 'SME' ? 'BSE SME' : 'BSE, NSE'),
+            listingDate: lDate.toISOString().split('T')[0],
+            tenthTradingDay: day10.toISOString().split('T')[0],
+            circuit20Date: day11.toISOString().split('T')[0],
+            daysCompleted,
+            daysRemaining,
+            isUpcomingListing,
+            isTodayDay10,
+            status: isUpcomingListing ? 'Upcoming Listing' : `Day ${daysCompleted} of 10`,
+            progressPct: Math.min(100, Math.round((daysCompleted / 10) * 100)),
+            issuePrice: c.issuePrice || null,
+            cmp: c.cmp || c.currentPrice || c.issuePrice || null,
+            lotSize: c.lotSize || null,
+            totalShares: c.totalShares || null,
+            chittorgarhUrl: c.chittorgarhUrl || null,
+            rhpUrl: c.rhpUrl || null,
+            capitalStructureUrl: c.capitalStructureUrl || null
+        });
+    }
+
+    // Sort by circuit20Date ascending (companies flipping to 20% soonest first)
+    results.sort((a, b) => new Date(a.circuit20Date) - new Date(b.circuit20Date));
+    return results;
+}
+
 module.exports = {
     isHoliday,
     getNextBusinessDay,
+    getTradingDayOffset,
+    getTradingDaysPassed,
+    getNextTradingDay,
     calculatePreIPOLockin,
+    getCircuitFilterIpos,
     holidays: allHolidays
 };
+

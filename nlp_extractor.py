@@ -7,6 +7,28 @@ import re
 from io import BytesIO
 
 
+def get_page_texts(pdf_bytes, max_pages=250):
+    """Ultra-fast page text extraction with PyMuPDF (fitz) fallback to pdfplumber."""
+    try:
+        import fitz
+        doc = fitz.open(stream=pdf_bytes, filetype='pdf')
+        texts = []
+        for i in range(min(max_pages, len(doc))):
+            texts.append(doc[i].get_text() or "")
+        return texts
+    except Exception:
+        pass
+
+    try:
+        texts = []
+        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
+            for i, page in enumerate(pdf.pages[:max_pages]):
+                texts.append(page.extract_text() or "")
+        return texts
+    except Exception:
+        return []
+
+
 def extract_peer_comparison(pdf_bytes):
     """
     Extract the Peer Comparison / Comparison of Accounting Ratios table from an RHP.
@@ -60,7 +82,7 @@ def extract_peer_comparison(pdf_bytes):
                 break
         return cnt
 
-    # Words that indicate the first token of a row that should be skipped
+    # Common non-company first words to skip if line looks like a subheader
     SKIP_FIRST_WORD = re.compile(
         r'^(?:source|note|notes|\*|\^|\#|\d+\.|for|set|comparison|name|face|revenue|basic|diluted|'
         r'return|nav|roe|ronw|cmp|total|income|ebitda|ebit|pat|debt|equity|kpi|'
@@ -75,11 +97,7 @@ def extract_peer_comparison(pdf_bytes):
     )
 
     try:
-        page_texts = []
-        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
-            for i, page in enumerate(pdf.pages[:250]):
-                t = page.extract_text() or ""
-                page_texts.append(t)
+        page_texts = get_page_texts(pdf_bytes, 250)
 
         # Find pages that contain peer comparison sections
         peer_pages = []
@@ -323,164 +341,117 @@ def extract_preipo_names(pdf_bytes, company_name=None):
         
                 
         full_text = ""
-        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
-            in_share_history = False
-            parse_window_left = 0
-            for i, page in enumerate(pdf.pages[:250]):
-                text = page.extract_text()
-                if not text:
-                    continue
-                full_text += text + "\n"
-                
-                text_lower = text.lower()
-                
-                if ('history of equity' in text_lower or 
-                    'build up' in text_lower or
-                    'equity share capital' in text_lower or
-                    'capital structure' in text_lower):
-                    in_share_history = True
-                
-                if re.search(r'pre-ipo|pre ipo|preferential allotment|private placement|major shareholders', text_lower):
-                    parse_window_left = 5
-                elif re.search(r'(?:^\d+\.\s+)?[A-Z][A-Za-z\s\.,&]+?\s+[\d,]+\s+[\d\.]+%', text):
-                    parse_window_left = 5
-                
-                if not (in_share_history and parse_window_left > 0):
-                    continue
-                
-                parse_window_left -= 1
-                
-                # Snatch floating prices that wrap across newlines before the table
-                current_context_price = None
-                text_flat = text_lower.replace('\n', ' ')
-                
-                ip_match_global = re.search(r'(?:issue price|price of|at a price)\s*(?:of\s*)?(?:(?:inr|rs\.?|₹)\s*)?([\d\.]+)', text_flat)
-                if ip_match_global:
+        in_share_history = False
+        parse_window_left = 0
+        pages = get_page_texts(pdf_bytes, 250)
+        for i, text in enumerate(pages):
+            if not text:
+                continue
+            full_text += text + "\n"
+            
+            text_lower = text.lower()
+            
+            if ('history of equity' in text_lower or 
+                'build up' in text_lower or
+                'equity share capital' in text_lower or
+                'capital structure' in text_lower):
+                in_share_history = True
+            
+            if re.search(r'pre-ipo|pre ipo|preferential allotment|private placement|major shareholders', text_lower):
+                parse_window_left = 5
+            elif re.search(r'(?:^\d+\.\s+)?[A-Z][A-Za-z\s\.,&]+?\s+[\d,]+\s+[\d\.]+%', text):
+                parse_window_left = 5
+            
+            if not (in_share_history and parse_window_left > 0):
+                continue
+            
+            parse_window_left -= 1
+            
+            # Snatch floating prices that wrap across newlines before the table
+            current_context_price = None
+            text_flat = text_lower.replace('\n', ' ')
+            
+            ip_match_global = re.search(r'(?:issue price|price of|at a price)\s*(?:of\s*)?(?:(?:inr|rs\.?|₹)\s*)?([\d\.]+)', text_flat)
+            if ip_match_global:
+                try:
+                    val = float(ip_match_global.group(1))
+                    if 10 <= val <= 5000:
+                        current_context_price = f" (₹{val:g})"
+                except: pass
+            
+            if not current_context_price:
+                prem_match_global = re.search(r'premium of\s*(?:(?:inr|rs\.?|₹)\s*)?([\d\.]+)', text_flat)
+                if prem_match_global:
                     try:
-                        val = float(ip_match_global.group(1))
-                        if 10 <= val <= 5000:
-                            current_context_price = f" (₹{val:g})"
+                        val = float(prem_match_global.group(1))
+                        if 1 <= val <= 5000:
+                            current_context_price = f" (₹{val+10:g})"
                     except: pass
+            
+            lines = text.split('\n')
+            for line in lines:
+                line_lower = line.lower()
                 
-                if not current_context_price:
-                    prem_match_global = re.search(r'premium of\s*(?:(?:inr|rs\.?|₹)\s*)?([\d\.]+)', text_flat)
-                    if prem_match_global:
+                # Capture grouped Private Placement rows (e.g. "Private Placement **** 40,19,326 10/- 120/- Cash ... 42")
+                grouped_match = re.search(r'(private placement|preferential allotment)[\*#\^]*\s+([\d,]+)\s+[\d\.]+/-\s+([\d\.]+)/-\s+cash.*?\s+(\d+)\s*$', line_lower)
+                if grouped_match:
+                    label = grouped_match.group(1).title()
+                    shares_str = grouped_match.group(2)
+                    price_str = grouped_match.group(3)
+                    investors_count = grouped_match.group(4)
+                    
+                    shares_num = int(shares_str.replace(',', ''))
+                    if shares_num > 10000:
+                        rep_key = f"grouped_{shares_num}"
+                        investors_dict[rep_key] = f"{label} of {shares_str} shares to {investors_count} investors (@ ₹{price_str})"
+                        continue
+
+                # Default helper to extract price from text line
+                price_suffix = current_context_price or ""
+                price_val_match = re.search(r'(?:at|price of)\s*(?:(?:inr|rs\.?|₹)\s*)?([\d\.]+)|(?:inr|rs\.?|₹)\s*([\d\.]+)[\s/-]|([\d\.]+)/-', line_lower)
+                if price_val_match:
+                    extracted = price_val_match.group(1) or price_val_match.group(2) or price_val_match.group(3)
+                    if extracted:
                         try:
-                            val = float(prem_match_global.group(1))
-                            if 1 <= val <= 5000:
-                                current_context_price = f" (₹{val+10:g})"
-                        except: pass
+                            pval = float(extracted)
+                            if 10 <= pval <= 5000:
+                                price_suffix = f" (₹{pval:g})"
+                        except:
+                            pass
+
+                # Common format: Allotment to XYZ Fund pursuant to Pre-IPO Placement
+                name_match = re.search(r'(?:to|by)\s+([A-Z][A-Za-z\s\.,]+?)(?:\s+(?:pursuant|under|through|vide|on|at|aggregating))', line)
+                if name_match:
+                    name = name_match.group(1).strip()
+                    if is_valid_investor_name(name):
+                        investors_dict[name.lower()] = f"{name}{price_suffix}"
                 
-                # Also use table extraction to catch secondary transfers wrapped in columns
-                tables = page.extract_tables()
-                if tables:
-                    fund_kws = ['fund', 'ventures', 'capital', 'opportunities', 'limited', 'ltd', 'pvt', 'private', 'investment', 'llp', 'trust', 'holdings', 'advisors', 'partners', 'ccv', 'finavenue']
-                    ignore_exact = ["authorized share capital", "offer capital", "capital (₹)", "capital", "equity share capital", "issued, subscribed", "offer equity"]
-                    for table in tables:
-                        for row in table:
-                            for cell in row:
-                                if cell and isinstance(cell, str):
-                                    cell_clean = re.sub(r'\s+', ' ', cell).strip()
-                                    if 5 < len(cell_clean) < 100:
-                                        # Filter out headers containing generic phrasing
-                                        lower_c = cell_clean.lower()
-                                        if any(ignore in lower_c for ignore in ignore_exact):
-                                            continue
-                                        if any(kw in lower_c.split() for kw in fund_kws):
-                                            # ensure it is capitalized properly, ignore full lowercase
-                                            if re.match(r'^[A-Z]', cell_clean):
-                                                # remove "transfer to " if present
-                                                name = re.sub(r'^Transfer to\s+', '', cell_clean, flags=re.IGNORECASE)
-                                                name = re.sub(r'^Allotment to\s+', '', name, flags=re.IGNORECASE)
-                                                
-                                                price_str = None
-                                                for other_cell in row:
-                                                    if other_cell and isinstance(other_cell, str) and other_cell != cell:
-                                                        oc_clean = re.sub(r'\s+', '', other_cell)
-                                                        if re.match(r'^₹?\d{2,4}(?:\.\d{1,2})?$', oc_clean):
-                                                            pval_str = re.sub(r'[^0-9.]', '', oc_clean)
-                                                            if pval_str:
-                                                                try:
-                                                                    pval = float(pval_str)
-                                                                    if 10 <= pval <= 5000:
-                                                                        price_str = f"₹{pval:g}"
-                                                                except:
-                                                                    pass
-                                                
-                                                if not is_valid_investor_name(name):
-                                                    continue
-                                                    
-                                                if price_str:
-                                                    investors_dict[name.lower()] = f"{name} ({price_str})"
-                                                elif current_context_price:
-                                                    investors_dict[name.lower()] = f"{name}{current_context_price}"
-                                                else:
-                                                    investors_dict[name.lower()] = name
-                
-                lines = text.split('\n')
-                for line in lines:
-                    line_lower = line.lower()
-                    
-                    # Capture grouped Private Placement rows (e.g. "Private Placement **** 40,19,326 10/- 120/- Cash ... 42")
-                    grouped_match = re.search(r'(private placement|preferential allotment)[\*#\^]*\s+([\d,]+)\s+[\d\.]+/-\s+([\d\.]+)/-\s+cash.*?\s+(\d+)\s*$', line_lower)
-                    if grouped_match:
-                        label = grouped_match.group(1).title()
-                        shares_str = grouped_match.group(2)
-                        price_str = grouped_match.group(3)
-                        investors_count = grouped_match.group(4)
+                # Alternative: "Name | shares | price | Pre-IPO Placement"
+                name_match2 = re.match(r'^([A-Z][A-Za-z\s\.,&]+?)\s+[\d,]+\s', line)
+                if name_match2:
+                    name = name_match2.group(1).strip()
+                    if is_valid_investor_name(name):
+                        investors_dict[name.lower()] = f"{name}{price_suffix}"
+
+                # Alternative 3: "Preferential allotment of [x] Equity Shares to Mr. John Doe"
+                name_match3 = re.search(r'to\s+(?:mr\.|mrs\.|ms\.|m/s\.)?\s*([A-Z][A-Za-z\s\.,&]+?)(?:\s+for|\s+at|\s+aggregating|\.|$)', line, re.IGNORECASE)
+                if name_match3:
+                    name = name_match3.group(1).strip()
+                    if is_valid_investor_name(name):
+                        investors_dict[name.lower()] = f"{name}{price_suffix}"
+
+                # Pace Digitek massive inline list: "(i) 238 Equity Shares to Mudduluru Dheeraj Varma;"
+                for match in re.finditer(r'([\d,]+)\s+(?:Equity\s+)?(?:shares|Shares)(?:\s+were\s+allotted)?\s+to\s+(?:m/s\.?\s+)?([A-Z][A-Za-z\s\.\&\,\-\(\)]+?)(?:;|(?=\s+\(|$))', line, re.IGNORECASE):
+                    name = match.group(2).strip()
+                    if is_valid_investor_name(name):
+                        investors_dict[name.lower()] = name
                         
-                        shares_num = int(shares_str.replace(',', ''))
-                        if shares_num > 10000:
-                            rep_key = f"grouped_{shares_num}"
-                            investors_dict[rep_key] = f"{label} of {shares_str} shares to {investors_count} investors (@ ₹{price_str})"
-                            continue
-
-                    # Default helper to extract price from text line
-                    price_suffix = current_context_price or ""
-                    price_val_match = re.search(r'(?:at|price of)\s*(?:(?:inr|rs\.?|₹)\s*)?([\d\.]+)|(?:inr|rs\.?|₹)\s*([\d\.]+)[\s/-]|([\d\.]+)/-', line_lower)
-                    if price_val_match:
-                        extracted = price_val_match.group(1) or price_val_match.group(2) or price_val_match.group(3)
-                        if extracted:
-                            try:
-                                pval = float(extracted)
-                                if 10 <= pval <= 5000:
-                                    price_suffix = f" (₹{pval:g})"
-                            except:
-                                pass
-
-                    # Common format: Allotment to XYZ Fund pursuant to Pre-IPO Placement
-                    name_match = re.search(r'(?:to|by)\s+([A-Z][A-Za-z\s\.,]+?)(?:\s+(?:pursuant|under|through|vide|on|at|aggregating))', line)
-                    if name_match:
-                        name = name_match.group(1).strip()
-                        if is_valid_investor_name(name):
-                            investors_dict[name.lower()] = f"{name}{price_suffix}"
-                    
-                    # Alternative: "Name | shares | price | Pre-IPO Placement"
-                    name_match2 = re.match(r'^([A-Z][A-Za-z\s\.,&]+?)\s+[\d,]+\s', line)
-                    if name_match2:
-                        name = name_match2.group(1).strip()
-                        if is_valid_investor_name(name):
-                            investors_dict[name.lower()] = f"{name}{price_suffix}"
-
-                    # Alternative 3: "Preferential allotment of [x] Equity Shares to Mr. John Doe"
-                    name_match3 = re.search(r'to\s+(?:mr\.|mrs\.|ms\.|m/s\.)?\s*([A-Z][A-Za-z\s\.,&]+?)(?:\s+for|\s+at|\s+aggregating|\.|$)', line, re.IGNORECASE)
-                    if name_match3:
-                        name = name_match3.group(1).strip()
-                        if is_valid_investor_name(name):
-                            investors_dict[name.lower()] = f"{name}{price_suffix}"
-
-                    # Pace Digitek massive inline list: "(i) 238 Equity Shares to Mudduluru Dheeraj Varma;"
-                    for match in re.finditer(r'([\d,]+)\s+(?:Equity\s+)?(?:shares|Shares)(?:\s+were\s+allotted)?\s+to\s+(?:m/s\.?\s+)?([A-Z][A-Za-z\s\.\&\,\-\(\)]+?)(?:;|(?=\s+\(|$))', line, re.IGNORECASE):
-                        name = match.group(2).strip()
-                        if is_valid_investor_name(name):
-                            investors_dict[name.lower()] = name
-                            
-                    # Yash Hitesh Patel "List of major shareholders" extraction: "5. Yash Hitesh Patel 2,00,000 3.11%"
-                    sh_match = re.search(r'(?:^\d+\.\s+)?([A-Z][A-Za-z\s\.,&]+?)\s+([\d,]+)\s+[\d\.]+%', line)
-                    if sh_match:
-                        name = sh_match.group(1).strip()
-                        if is_valid_investor_name(name):
-                            investors_dict[name.lower()] = name
+                # Yash Hitesh Patel "List of major shareholders" extraction: "5. Yash Hitesh Patel 2,00,000 3.11%"
+                sh_match = re.search(r'(?:^\d+\.\s+)?([A-Z][A-Za-z\s\.,&]+?)\s+([\d,]+)\s+[\d\.]+%', line)
+                if sh_match:
+                    name = sh_match.group(1).strip()
+                    if is_valid_investor_name(name):
+                        investors_dict[name.lower()] = name
         
         # Filter down names that represent just random text or promoters
         final_list = []

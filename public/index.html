@@ -37,7 +37,7 @@
             </div>
             <div class="header-nav">
                 <button id="navTrackerBtn" class="nav-btn active">Tracker</button>
-                <button id="navPreferentialBtn" class="nav-btn">Preferential Unlock</button>
+                <button id="navCircuitBtn" class="nav-btn">⚡ 10-Day Circuit Filter</button>
                 <button id="navUpcomingBtn" class="nav-btn">Upcoming IPOs</button>
             </div>
             <div class="header-actions">
@@ -76,6 +76,7 @@
             <section class="controls">
                 <div class="filter-group">
                     <button class="filter-btn active" data-filter="week">This Week</button>
+                    <button class="filter-btn" data-filter="nextWeek">Next Week</button>
                     <button class="filter-btn" data-filter="thisMonth">This Month</button>
                     <button class="filter-btn" data-filter="lastMonth">Last Month</button>
                     <button class="filter-btn" data-filter="upcoming">Upcoming</button>
@@ -132,61 +133,98 @@
             </div>
         </div>
 
-        <!-- View Preferential Unlock -->
-        <div id="viewPreferentialUnlock" class="view-panel hidden">
+        <!-- View 2: 10 Trading Days Post-Listing (20% Circuit Filter) -->
+        <div id="viewCircuitFilter" class="view-panel hidden">
             <div class="upcoming-header">
                 <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
                     <div>
-                        <h2>Preferential Unlocks</h2>
-                        <p>NSE &amp; BSE trading approvals for preferential issues (last 12 months).</p>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <h2 style="margin:0;">10 Trading Days Post-Listing</h2>
+                            <span class="badge" style="background:rgba(16, 185, 129, 0.15); color:#10b981; border:1px solid rgba(16, 185, 129, 0.3); font-size:11px; padding:3px 8px; border-radius:6px; font-weight:700;">20% Circuit Filter Flip</span>
+                        </div>
+                        <p style="margin:4px 0 0 0; font-size:13px; color:var(--text-muted);">
+                            New IPOs undergo mandatory 10 trading days before circuit limit relaxes to 20%. Only active &amp; upcoming IPOs shown (completed 10 days are filtered out).
+                        </p>
                     </div>
                     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-                        <div class="last-updated" style="font-size:12px;">Updated: <span id="prefLastUpdated">--</span>
+                        <div class="last-updated" style="font-size:12px;">Updated: <span id="circuitLastUpdated">--</span></div>
+                        <div id="circuitTrackedCount" style="font-size:13px; font-weight:600; color:var(--primary); padding:4px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:8px;">
+                            Active: <span id="circuitCountNum">0</span>
                         </div>
-                        <div id="prefTrackedCount" style="font-size:13px; font-weight:600; color:var(--primary); padding:4px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:8px;">
-                            Tracked: <span id="prefCountNum">--</span>
-                        </div>
-                        <button id="refreshPrefBtn" class="refresh-btn">
-                            <span class="icon">↻</span> Reload Data
+                        <button id="refreshCircuitBtn" class="refresh-btn">
+                            <span class="icon">↻</span> Refresh Status
                         </button>
                     </div>
                 </div>
 
-                <div class="controls"
-                    style="margin-top:12px; display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
-                    <div class="search-box" style="flex:1; min-width:200px; max-width:320px;">
-                        <input type="text" id="prefSearch" placeholder="Search company or symbol...">
+                <!-- Stats Cards for 10-Day Circuit Filter -->
+                <div class="stats-grid" style="margin:16px 0; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:12px;">
+                    <div class="stat-card" style="padding:12px 16px; border-left:4px solid #10b981;">
+                        <h3 style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted);">Flipping to 20% This Week</h3>
+                        <div class="stat-value" id="statFlippingThisWeek" style="font-size:22px; color:#10b981;">0</div>
+                        <div class="stat-label">Imminent (Days 6–10)</div>
                     </div>
-                    <div class="filter-group" style="margin-left:auto;">
-                        <span style="font-size:12px; color:var(--text-muted); padding:0 6px;">Sort:</span>
-                        <button class="filter-btn active" id="prefSortExpiry" data-sort="expiry">🔒 Lock-in Expiry
-                            ↑</button>
-                        <button class="filter-btn" id="prefSortRecent" data-sort="recent">🗓 Most Recent</button>
+                    <div class="stat-card" style="padding:12px 16px; border-left:4px solid #6366f1;">
+                        <h3 style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted);">Total In 10-Day Window</h3>
+                        <div class="stat-value" id="statTotalActive" style="font-size:22px; color:#6366f1;">0</div>
+                        <div class="stat-label">Currently Trading (Days 1–10)</div>
+                    </div>
+                    <div class="stat-card" style="padding:12px 16px; border-left:4px solid #3b82f6;">
+                        <h3 style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted);">Mainboard IPOs</h3>
+                        <div class="stat-value" id="statMainboardCount" style="font-size:22px; color:#3b82f6;">0</div>
+                        <div class="stat-label">BSE / NSE Mainboard</div>
+                    </div>
+                    <div class="stat-card" style="padding:12px 16px; border-left:4px solid #f59e0b;">
+                        <h3 style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:var(--text-muted);">SME IPOs</h3>
+                        <div class="stat-value" id="statSmeCount" style="font-size:22px; color:#f59e0b;">0</div>
+                        <div class="stat-label">BSE / NSE SME</div>
                     </div>
                 </div>
 
-                <div class="table-container">
-                    <table id="prefTable">
+                <!-- Controls & Filters -->
+                <div class="controls" style="margin-top:12px; display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+                    <div class="search-box" style="flex:1; min-width:220px; max-width:340px;">
+                        <input type="text" id="circuitSearch" placeholder="Search company, exchange, or type...">
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="circuit-type-btn active" data-type="all">All</button>
+                        <button class="circuit-type-btn" data-type="imminent">⚡ Flipping Soon (&le;3 Days)</button>
+                        <button class="circuit-type-btn" data-type="Mainboard">Mainboard</button>
+                        <button class="circuit-type-btn" data-type="SME">SME</button>
+                        <button class="circuit-type-btn" data-type="upcoming">Upcoming Listing</button>
+                    </div>
+
+                    <div class="filter-group" style="margin-left:auto;">
+                        <span style="font-size:12px; color:var(--text-muted); padding:0 4px;">Sort:</span>
+                        <button class="filter-btn active" id="circuitSortDate" data-sort="circuitDate">🗓 20% Date ↑</button>
+                        <button class="filter-btn" id="circuitSortRemaining" data-sort="remaining">⏳ Days Left ↑</button>
+                        <button class="filter-btn" id="circuitSortName" data-sort="name">🏢 Name</button>
+                    </div>
+                </div>
+
+                <div class="table-container" style="margin-top:14px;">
+                    <table id="circuitTable">
                         <thead>
                             <tr>
-                                <th style="width:22%">Company</th>
-                                <th style="width:12%">Symbol</th>
-                                <th style="width:14%">Shares</th>
-                                <th style="width:16%">Notice / Listing Date</th>
-                                <th style="width:18%">Lock-in Expiry ↑</th>
-                                <th style="width:18%">Circular</th>
+                                <th style="width:24%">Company</th>
+                                <th style="width:13%">Listing Date</th>
+                                <th style="width:20%">10-Day Progress</th>
+                                <th style="width:13%">10th Trading Day</th>
+                                <th style="width:16%">20% Circuit Effective</th>
+                                <th style="width:14%">Issue Price / CMP</th>
                             </tr>
                         </thead>
-                        <tbody id="prefTableBody">
+                        <tbody id="circuitTableBody">
                             <!-- Data injected here -->
                         </tbody>
                     </table>
-                    <div id="prefLoading" class="loading hidden">
+                    <div id="circuitLoading" class="loading hidden">
                         <div class="spinner"></div>
-                        <p>Loading cached data...</p>
+                        <p>Calculating 10-day trading schedules...</p>
                     </div>
-                    <div id="prefNoData" class="no-data hidden">
-                        <p>No preferential unlock data found. Click <strong>Reload Data</strong> to scan.</p>
+                    <div id="circuitNoData" class="no-data hidden">
+                        <p>No IPOs currently in the 10-trading-day window.</p>
                     </div>
                 </div>
             </div>
