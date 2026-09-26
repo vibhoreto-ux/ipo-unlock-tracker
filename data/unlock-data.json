@@ -54513,9 +54513,9 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-03-01T00:00:00.000Z",
+        "expiryDate": "2027-02-28",
         "originalDate": "2027-03-01T00:00:00.000Z",
-        "isAdjusted": false,
+        "isAdjusted": true,
         "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
@@ -56953,7 +56953,7 @@
       ],
       "lotSize": 1000,
       "priceBand": "₹120–127",
-      "listingDate": "2026-09-13T18:30:00.000Z",
+      "listingDate": "2026-09-11T00:00:00.000Z",
       "openDate": "2026-09-06T18:30:00.000Z",
       "closeDate": "2026-09-09T18:30:00.000Z",
       "waca": 127
@@ -59416,6 +59416,47 @@
       "noticeId": "NSE/CML/76037",
       "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76037.zip",
       "fetchedAt": "2026-09-25T07:03:34.414Z"
+    },
+    "Hy-Tech Engineers Ltd.": {
+      "found": true,
+      "totalShares": 94852594,
+      "unlockEvents": [
+        {
+          "date": null,
+          "shares": 17927144,
+          "percentage": 18.9,
+          "label": "Not under lock-in"
+        },
+        {
+          "date": "2026-09-26",
+          "shares": 3841530,
+          "percentage": 4
+        },
+        {
+          "date": "2026-11-25",
+          "shares": 3841530,
+          "percentage": 4
+        },
+        {
+          "date": "2027-02-28",
+          "shares": 1680000,
+          "percentage": 1.8
+        },
+        {
+          "date": "2027-08-30",
+          "shares": 48591790,
+          "percentage": 51.2
+        },
+        {
+          "date": "2029-08-30",
+          "shares": 18970600,
+          "percentage": 20
+        }
+      ],
+      "source": "NSE",
+      "noticeId": "NSE/CML/76064",
+      "pdfUrl": "https://nsearchives.nseindia.com/content/circulars/CML76064.zip",
+      "fetchedAt": "2026-09-26T04:34:50.832Z"
     }
   }
 }

@@ -41,7 +41,8 @@ const holidays2026 = [
     '2026-05-27', // Bakri Id
     '2026-08-15', // Independence Day
     '2026-08-25', // Parsi New Year (approx)
-        '2026-10-02', // Gandhi Jayanti
+    '2026-09-14', // Ganesh Chaturthi
+    '2026-10-02', // Gandhi Jayanti
     '2026-10-20', // Dussehra
     '2026-11-08', // Diwali
     '2026-11-09', // Diwali Balipratipada
@@ -260,8 +261,12 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
     const results = [];
 
     for (const c of companiesList) {
-        if (!c || !c.listingDate) continue;
-        const lDateClean = parseDateClean(c.listingDate);
+        if (!c) continue;
+        // Prioritize allotmentDate (which holds the verified listing date on the Tracker tab)
+        const rawDate = (c.allotmentDate && (c.allotmentDate.original || c.allotmentDate.adjusted || c.allotmentDate)) || c.listingDate;
+        if (!rawDate) continue;
+
+        const lDateClean = parseDateClean(rawDate);
         if (!lDateClean) continue;
 
         const listingDateStr = formatYYYYMMDD(lDateClean);
