@@ -1957,6 +1957,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 fillClass += ' upcoming';
                 badgeClass = 'circuit-badge circuit-badge-upcoming';
                 badgeText = 'Upcoming';
+            } else if (item.isDay10Complete || item.daysRemaining === 0) {
+                fillClass += ' imminent';
+                badgeClass = 'circuit-badge circuit-badge-imminent';
+                badgeText = item.isTodayCircuitFlip ? '⚡ 20% Ckt Today' : '⚡ Day 10 Complete';
             } else if (item.daysRemaining <= 3) {
                 fillClass += ' imminent';
                 badgeClass = 'circuit-badge circuit-badge-imminent';

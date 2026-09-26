@@ -41,8 +41,7 @@ const holidays2026 = [
     '2026-05-27', // Bakri Id
     '2026-08-15', // Independence Day
     '2026-08-25', // Parsi New Year (approx)
-    '2026-09-14', // Ganesh Chaturthi
-    '2026-10-02', // Gandhi Jayanti
+        '2026-10-02', // Gandhi Jayanti
     '2026-10-20', // Dussehra
     '2026-11-08', // Diwali
     '2026-11-09', // Diwali Balipratipada
@@ -278,14 +277,21 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
         const tenthTradingDayStr = formatYYYYMMDD(day10);
         const circuit20DateStr = formatYYYYMMDD(day11);
 
-        const daysCompleted = getTradingDaysPassed(listingDateStr, todayClean);
+        // Exclude only after the 20% circuit day has passed
+        if (todayClean > day11) continue;
 
-        // Exclude companies that have already completed 10 trading days
-        if (daysCompleted >= 10) continue;
-
+        const daysCompleted = Math.min(10, getTradingDaysPassed(listingDateStr, todayClean));
         const daysRemaining = Math.max(0, 10 - daysCompleted);
         const isUpcomingListing = daysCompleted === 0 && lDateClean > todayClean;
-        const isTodayDay10 = daysCompleted === 10 || (daysRemaining === 1 && todayStr === tenthTradingDayStr);
+        const isTodayCircuitFlip = todayStr === circuit20DateStr;
+        const isTodayDay10 = (daysCompleted === 10 && todayStr === tenthTradingDayStr);
+        const isDay10Complete = daysCompleted >= 10;
+
+        let statusText = `Day ${daysCompleted} of 10`;
+        if (isUpcomingListing) statusText = 'Upcoming Listing';
+        else if (isTodayCircuitFlip) statusText = '⚡ 20% Circuit Effective Today';
+        else if (isDay10Complete) statusText = '⚡ Day 10 Complete';
+        else if (isTodayDay10) statusText = '🔥 Today is Day 10';
 
         results.push({
             companyName: c.companyName || c.name,
@@ -298,7 +304,9 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
             daysRemaining,
             isUpcomingListing,
             isTodayDay10,
-            status: isUpcomingListing ? 'Upcoming Listing' : `Day ${daysCompleted} of 10`,
+            isDay10Complete,
+            isTodayCircuitFlip,
+            status: statusText,
             progressPct: Math.min(100, Math.round((daysCompleted / 10) * 100)),
             issuePrice: c.issuePrice || null,
             cmp: c.cmp || c.currentPrice || c.issuePrice || null,
