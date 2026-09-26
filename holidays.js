@@ -53,39 +53,72 @@ const holidays2026 = [
 const allHolidays = new Set([...holidays2025, ...holidays2026]);
 
 /**
- * Check if a date is a weekend (Sat/Sun) or a market holiday
- * @param {Date} date 
+ * Convert any date input (ISO string, Date object, or date string) to IST YYYY-MM-DD
+ * @param {Date|string} dateInput 
+ * @returns {string|null}
+ */
+function toISTDateString(dateInput) {
+    if (!dateInput) return null;
+    const date = new Date(dateInput);
+    if (isNaN(date.getTime())) return null;
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(date);
+}
+
+/**
+ * Parse an IST YYYY-MM-DD string into a clean UTC-noon Date object for safe arithmetic
+ * @param {Date|string} dateInput 
+ * @returns {Date|null}
+ */
+function parseDateClean(dateInput) {
+    if (!dateInput) return null;
+    const istStr = toISTDateString(dateInput);
+    if (!istStr) return null;
+    const parts = istStr.split('-').map(Number);
+    if (parts.length !== 3 || parts.some(isNaN)) return null;
+    return new Date(Date.UTC(parts[0], parts[1] - 1, parts[2], 12, 0, 0));
+}
+
+/**
+ * Format a Date object to YYYY-MM-DD
+ * @param {Date} d 
+ * @returns {string|null}
+ */
+function formatYYYYMMDD(d) {
+    if (!d || isNaN(d.getTime())) return null;
+    return d.toISOString().split('T')[0];
+}
+
+/**
+ * Check if a date is a weekend (Sat/Sun) or an NSE/BSE market holiday
+ * @param {Date|string} dateInput 
  * @returns {boolean}
  */
-function isHoliday(date) {
-    const day = date.getDay(); // 0 = Sunday, 6 = Saturday
+function isHoliday(dateInput) {
+    const d = parseDateClean(dateInput);
+    if (!d) return false;
+    const day = d.getUTCDay(); // 0 = Sunday, 6 = Saturday
 
     // Check for Weekend
     if (day === 0 || day === 6) return true;
 
-    // Check for NSE/BSE Holiday
-    const dateString = date.toISOString().split('T')[0];
+    // Check for NSE/BSE Holiday (YYYY-MM-DD)
+    const dateString = formatYYYYMMDD(d);
     return allHolidays.has(dateString);
 }
 
 /**
- * Get the next valid business day
- * If the date falls on a weekend or holiday, it moves forward
+ * Get the next valid business/trading day
+ * If the date falls on a weekend or holiday, it moves forward to next working day
  * @param {Date|string} inputDate
  * @returns {Date}
  */
 function getNextBusinessDay(inputDate) {
-    let date = new Date(inputDate);
+    let date = parseDateClean(inputDate);
+    if (!date) return null;
 
-    // Validate date
-    if (isNaN(date.getTime())) return null;
-
-    // Limit infinite loop safety (max 365 days lookahead)
     let safetyCounter = 0;
-
-    // While it is a holiday, move to next day
     while (isHoliday(date) && safetyCounter < 365) {
-        date.setDate(date.getDate() + 1);
+        date.setUTCDate(date.getUTCDate() + 1);
         safetyCounter++;
     }
 
@@ -104,26 +137,26 @@ function getNextBusinessDay(inputDate) {
 function calculatePreIPOLockin(allotmentDateStr, issueType) {
     if (!allotmentDateStr) return null;
 
-    const allotmentDate = new Date(allotmentDateStr);
-    if (isNaN(allotmentDate.getTime())) return null;
+    const baseDate = parseDateClean(allotmentDateStr);
+    if (!baseDate) return null;
 
-    let expiryDate = new Date(allotmentDate);
+    let expiryDate = new Date(baseDate);
     const isSME = issueType && issueType.toLowerCase().includes('sme');
 
     // Add duration based on IPO type
     if (isSME) {
         // 1 Year for SME
-        expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+        expiryDate.setUTCFullYear(expiryDate.getUTCFullYear() + 1);
     } else {
         // 6 Months for Mainboard
-        expiryDate.setMonth(expiryDate.getMonth() + 6);
+        expiryDate.setUTCMonth(expiryDate.getUTCMonth() + 6);
     }
 
     const originalDate = new Date(expiryDate);
     const adjustedDate = getNextBusinessDay(expiryDate);
 
     // Check if date was adjusted
-    const isAdjusted = originalDate.getTime() !== adjustedDate.getTime();
+    const isAdjusted = formatYYYYMMDD(originalDate) !== formatYYYYMMDD(adjustedDate);
 
     return {
         expiryDate: adjustedDate,
@@ -135,29 +168,30 @@ function calculatePreIPOLockin(allotmentDateStr, issueType) {
 
 /**
  * Get the N-th trading day starting from a given date.
- * startDate is Day 1 (if it is a trading day, otherwise adjusted to next trading day).
+ * Listing Day is Day 1 (if listing falls on weekend/holiday, starts on next trading day).
+ * Counts only valid trading days, skipping weekends & holidays.
  * @param {Date|string} startDateStr 
  * @param {number} numTradingDays - default 10
  * @returns {Date|null}
  */
 function getTradingDayOffset(startDateStr, numTradingDays = 10) {
     if (!startDateStr) return null;
-    let curr = new Date(startDateStr);
-    if (isNaN(curr.getTime())) return null;
+    let curr = parseDateClean(startDateStr);
+    if (!curr) return null;
 
     // Ensure start day is a business day (if listed on holiday/weekend, start on next trading day)
     while (isHoliday(curr)) {
-        curr.setDate(curr.getDate() + 1);
+        curr.setUTCDate(curr.getUTCDate() + 1);
     }
 
     let count = 1;
     while (count < numTradingDays) {
-        curr.setDate(curr.getDate() + 1);
+        curr.setUTCDate(curr.getUTCDate() + 1);
         if (!isHoliday(curr)) {
             count++;
         }
     }
-    return new Date(curr);
+    return curr;
 }
 
 /**
@@ -168,13 +202,13 @@ function getTradingDayOffset(startDateStr, numTradingDays = 10) {
  */
 function getTradingDaysPassed(startDateStr, asOfDateStr = new Date()) {
     if (!startDateStr) return 0;
-    let curr = new Date(startDateStr);
-    const target = new Date(asOfDateStr);
-    if (isNaN(curr.getTime()) || isNaN(target.getTime())) return 0;
+    let curr = parseDateClean(startDateStr);
+    const target = parseDateClean(asOfDateStr);
+    if (!curr || !target) return 0;
 
     // Adjust start date to valid trading day
     while (isHoliday(curr)) {
-        curr.setDate(curr.getDate() + 1);
+        curr.setUTCDate(curr.getUTCDate() + 1);
     }
 
     // If listing date is in the future
@@ -186,64 +220,80 @@ function getTradingDaysPassed(startDateStr, asOfDateStr = new Date()) {
         if (!isHoliday(iter)) {
             count++;
         }
-        iter.setDate(iter.getDate() + 1);
+        iter.setUTCDate(iter.getUTCDate() + 1);
     }
     return count;
 }
 
 /**
- * Get the very next trading day after a given date
+ * Get the very next trading day (working day) after a given date.
+ * Strictly skips weekends and market holidays.
+ * If input date falls on Friday, returns Monday (or next working day).
+ * If 10th day is on weekend or holiday, moves to next working day.
  * @param {Date|string} dateInput 
  * @returns {Date}
  */
 function getNextTradingDay(dateInput) {
-    let date = new Date(dateInput);
-    if (isNaN(date.getTime())) return null;
-    date.setDate(date.getDate() + 1);
+    let date = parseDateClean(dateInput);
+    if (!date) return null;
+
+    date.setUTCDate(date.getUTCDate() + 1);
     while (isHoliday(date)) {
-        date.setDate(date.getDate() + 1);
+        date.setUTCDate(date.getUTCDate() + 1);
     }
     return date;
 }
 
 /**
- * Process a list of companies to find all IPOs in their 10 trading days window
- * Significance: On completion of Day 10 (i.e. on Day 11), circuit filter moves to 20%.
+ * Process a list of companies to find all IPOs in their 10 trading days window.
+ * Significance: On completion of Day 10, circuit filter relaxes to 20% on the Next Trading/Working Day (Day 11).
+ * If the 10th day falls before a weekend or market holiday, the 20% circuit filter day is adjusted
+ * to the immediately following working day.
  * Excludes companies that have already completed 10 trading days.
+ * 
  * @param {Array} companiesList 
  * @param {Date|string} asOfDate 
  * @returns {Array}
  */
 function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
-    const today = new Date(asOfDate);
+    const todayClean = parseDateClean(asOfDate) || parseDateClean(new Date());
+    const todayStr = formatYYYYMMDD(todayClean);
     const results = [];
 
     for (const c of companiesList) {
         if (!c || !c.listingDate) continue;
-        const lDate = new Date(c.listingDate);
-        if (isNaN(lDate.getTime())) continue;
+        const lDateClean = parseDateClean(c.listingDate);
+        if (!lDateClean) continue;
 
-        const day10 = getTradingDayOffset(c.listingDate, 10);
+        const listingDateStr = formatYYYYMMDD(lDateClean);
+
+        // Day 10 (10th Trading Day)
+        const day10 = getTradingDayOffset(listingDateStr, 10);
         if (!day10) continue;
 
-        // Day 11 is when 20% circuit filter takes effect
+        // Day 11 (20% Circuit Effective Day - strictly next working trading day)
         const day11 = getNextTradingDay(day10);
-        const daysCompleted = getTradingDaysPassed(c.listingDate, today);
+        if (!day11) continue;
+
+        const tenthTradingDayStr = formatYYYYMMDD(day10);
+        const circuit20DateStr = formatYYYYMMDD(day11);
+
+        const daysCompleted = getTradingDaysPassed(listingDateStr, todayClean);
 
         // Exclude companies that have already completed 10 trading days
         if (daysCompleted >= 10) continue;
 
         const daysRemaining = Math.max(0, 10 - daysCompleted);
-        const isUpcomingListing = daysCompleted === 0 && lDate > today;
-        const isTodayDay10 = daysCompleted === 10 || (daysRemaining === 1 && today.toISOString().split('T')[0] === day10.toISOString().split('T')[0]);
+        const isUpcomingListing = daysCompleted === 0 && lDateClean > todayClean;
+        const isTodayDay10 = daysCompleted === 10 || (daysRemaining === 1 && todayStr === tenthTradingDayStr);
 
         results.push({
             companyName: c.companyName || c.name,
             issueType: c.issueType || 'Mainboard',
             exchange: c.exchange || (c.issueType === 'SME' ? 'BSE SME' : 'BSE, NSE'),
-            listingDate: lDate.toISOString().split('T')[0],
-            tenthTradingDay: day10.toISOString().split('T')[0],
-            circuit20Date: day11.toISOString().split('T')[0],
+            listingDate: listingDateStr,
+            tenthTradingDay: tenthTradingDayStr,
+            circuit20Date: circuit20DateStr,
             daysCompleted,
             daysRemaining,
             isUpcomingListing,
@@ -266,6 +316,9 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
 }
 
 module.exports = {
+    toISTDateString,
+    parseDateClean,
+    formatYYYYMMDD,
     isHoliday,
     getNextBusinessDay,
     getTradingDayOffset,

@@ -544,10 +544,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Helper: Date Format
     function formatDateSimple(dateStr) {
         if (!dateStr) return '--';
+        if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr.trim())) {
+            const [y, m, d] = dateStr.trim().split('-').map(Number);
+            const date = new Date(y, m - 1, d, 12, 0, 0);
+            return date.toLocaleDateString('en-GB', {
+                day: '2-digit', month: 'short', year: 'numeric'
+            });
+        }
         const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return '--';
         return date.toLocaleDateString('en-GB', {
             day: '2-digit', month: 'short', year: 'numeric'
         });
+    }
+
+    function formatDateWithDay(dateStr) {
+        if (!dateStr) return '--';
+        let date;
+        if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr.trim())) {
+            const [y, m, d] = dateStr.trim().split('-').map(Number);
+            date = new Date(y, m - 1, d, 12, 0, 0);
+        } else {
+            date = new Date(dateStr);
+        }
+        if (isNaN(date.getTime())) return '--';
+        const weekday = date.toLocaleDateString('en-GB', { weekday: 'short' });
+        const datePart = date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+        return `${weekday}, ${datePart}`;
     }
 
     // ===== Unlock Timeline Modal =====
@@ -1953,7 +1976,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             `;
 
             // 10th Trading Day
-            const day10Str = formatDateSimple(item.tenthTradingDay);
+            const day10Str = formatDateWithDay(item.tenthTradingDay);
             const day10Html = `
                 <div style="display:flex; flex-direction:column; gap:2px;">
                     <span style="font-weight:600; color:var(--text);">${day10Str}</span>
@@ -1961,8 +1984,8 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 </div>
             `;
 
-            // 20% Circuit Effective Date (Day 11)
-            const circuit20Str = formatDateSimple(item.circuit20Date);
+            // 20% Circuit Effective Date (Day 11 - Next Working Day)
+            const circuit20Str = formatDateWithDay(item.circuit20Date);
             const isImminent = item.daysRemaining <= 3 && !isUpcoming;
             const circuit20Html = `
                 <div class="circuit-effective-pill">
@@ -1970,7 +1993,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                         ${isImminent ? '🔥 ' : '🎯 '}${circuit20Str}
                     </span>
                     <span class="circuit-flip-note" style="${isImminent ? 'color:#059669; font-weight:700;' : ''}">
-                        ${isImminent ? '⚡ Relaxes to 20% Limit!' : '20% Circuit Effective'}
+                        ${isImminent ? '⚡ Relaxes to 20% Limit!' : 'Next Working Day (20% Limit)'}
                     </span>
                 </div>
             `;
