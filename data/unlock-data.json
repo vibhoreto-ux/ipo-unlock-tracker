@@ -39,13 +39,64 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/papadmalji_agro_foods_ltd_nse_sme_capital_structure_1790318556.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Trust Act",
-        "Rama Devi",
-        "Indian Trust Act",
-        "Puneet Bothra",
-        "Exchanges within"
+        {
+          "name": "Trust Act",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        },
+        {
+          "name": "Rama Devi",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        },
+        {
+          "name": "Indian Trust Act",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        },
+        {
+          "name": "Puneet Bothra",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        },
+        {
+          "name": "Exchanges within",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Sollfege Smart Electronics Ltd.",
@@ -85,8 +136,21 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/sollfege_smart_electronics_ltd_bse_sme_rhp_1790402715.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sollfege_smart_electronics_ltd_bse_sme_capital_structure_1790402716.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoInvestors": [
+        {
+          "name": "Promoters & Promoter Group",
+          "shares": 5000000,
+          "sharesFormatted": "50,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO Allotment",
+          "category": "Promoter Contribution",
+          "discountPct": 81.82,
+          "discount": 81.82
+        }
+      ],
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "SJP Ultrasonics Ltd.",
@@ -127,9 +191,20 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/sjp_ultrasonics_ltd_bse_sme_capital_structure_1790403567.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Exchanges within"
+        {
+          "name": "Exchanges within",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 85.07,
+          "discount": 85.07
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "TNA Solutions Ltd.",
@@ -169,8 +244,21 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/tna_solutions_ltd_bse_sme_rhp_1790317371.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/tna_solutions_ltd_bse_sme_capital_structure_1790317373.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoInvestors": [
+        {
+          "name": "Promoters & Promoter Group",
+          "shares": 5000000,
+          "sharesFormatted": "50,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO Allotment",
+          "category": "Promoter Contribution",
+          "discountPct": 85.71,
+          "discount": 85.71
+        }
+      ],
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Paramount Syntex Ltd.",
@@ -210,8 +298,21 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/paramount_syntex_ltd_bse_sme_rhp_1790314264.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/paramount_syntex_ltd_bse_sme_capital_structure_1790314940.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoInvestors": [
+        {
+          "name": "Promoters & Promoter Group",
+          "shares": 5000000,
+          "sharesFormatted": "50,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO Allotment",
+          "category": "Promoter Contribution",
+          "discountPct": 92.13,
+          "discount": 92.13
+        }
+      ],
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Vans Electroengineerings Ltd",
@@ -252,17 +353,108 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vans_electroengineerings_ltd_bse_sme_capital_structure_1790255948.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Exchanges within",
-        "Balakrishnan Srinivasan",
-        "Abhishek Saraff",
-        "any Applicant",
-        "an Eligible Employee shall",
-        "Infodot Private Limited collectively holds",
-        "Nitin Jain",
-        "Eligible Employees",
-        "Hotspot Infodot Private Limited"
+        {
+          "name": "Exchanges within",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "Balakrishnan Srinivasan",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "Abhishek Saraff",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "any Applicant",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "an Eligible Employee shall",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "Infodot Private Limited collectively holds",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "Nitin Jain",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "Eligible Employees",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        },
+        {
+          "name": "Hotspot Infodot Private Limited",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 91.53,
+          "discount": 91.53
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "EverestIMS Technologies Ltd",
@@ -303,10 +495,31 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/everestims_technologies_ltd_bse_sme_capital_structure_1790258560.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "this Offer",
-        "any Person"
+        {
+          "name": "this Offer",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 88.24,
+          "discount": 88.24
+        },
+        {
+          "name": "any Person",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 88.24,
+          "discount": 88.24
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "German Green Steel &amp; Power Ltd",
@@ -877,12 +1090,43 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shah_investors_home_ltd_mainboard_capital_structure_1790147452.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/shah_investors_home_ltd_mainboard_anchor_1790342608.pdf",
       "preIpoInvestors": [
-        "Trupti Utpal",
-        "Rehaan Utpal",
-        "Aashana Utpal"
+        {
+          "name": "Trupti Utpal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.01,
+          "discount": 94.01
+        },
+        {
+          "name": "Rehaan Utpal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.01,
+          "discount": 94.01
+        },
+        {
+          "name": "Aashana Utpal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.01,
+          "discount": 94.01
+        }
       ],
       "preIpoChecked": true,
-      "anchorDate": "September 25, 2026"
+      "anchorDate": "September 25, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Dove Soft Ltd",
@@ -922,8 +1166,230 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/dove_soft_ltd_bse_sme_rhp_1790234444.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dove_soft_ltd_bse_sme_capital_structure_1790234445.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoInvestors": [
+        {
+          "name": "/- each",
+          "shares": 3500,
+          "sharesFormatted": "3,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "s of Red Herring Prospectus \n \n \n \nUp to",
+          "shares": 6600000,
+          "sharesFormatted": "6,600,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "ich comprises of \n \n \n \nFresh Issue upto",
+          "shares": 5328000,
+          "sharesFormatted": "5,328,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Offer for Sale of upto",
+          "shares": 1272000,
+          "sharesFormatted": "1,272,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "servation for Market Maker Portion \nUpto",
+          "shares": 330000,
+          "sharesFormatted": "330,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Offer to Public \nNet Offer to Public of",
+          "shares": 6270000,
+          "sharesFormatted": "6,270,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Not more than",
+          "shares": 64800,
+          "sharesFormatted": "64,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Not Less than",
+          "shares": 3070800,
+          "sharesFormatted": "3,070,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Not less than",
+          "shares": 3134400,
+          "sharesFormatted": "3,134,400",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "d-Up Share Capital after the Offer \nUpto",
+          "shares": 2438675,
+          "sharesFormatted": "2,438,675",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "es Premium Account \n \n \nBefore the Offer",
+          "shares": 1607,
+          "sharesFormatted": "1,607",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "On Incorporation",
+          "shares": 20000,
+          "sharesFormatted": "20,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Lakhs",
+          "shares": 3500000,
+          "sharesFormatted": "100,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Lakhs) \nOn \nIncorporation",
+          "shares": 17200,
+          "sharesFormatted": "17,200",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Rahul Bhanushali",
+          "shares": 7131034,
+          "sharesFormatted": "1,400",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Nikhil Shah",
+          "shares": 5846,
+          "sharesFormatted": "5,846",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Virendra Shah",
+          "shares": 4108,
+          "sharesFormatted": "4,108",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Chirag Shah",
+          "shares": 1128000,
+          "sharesFormatted": "5,846",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": ") Rights Issue of",
+          "shares": 5903000,
+          "sharesFormatted": "2,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        },
+        {
+          "name": "Sky Occean Infrastructure Limited",
+          "shares": 2126703,
+          "sharesFormatted": "8,583",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.99,
+          "discount": 90.99
+        }
+      ],
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Omara Ventures Ltd.",
@@ -963,8 +1429,208 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/omara_ventures_ltd_bse_sme_rhp_1790233389.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/omara_ventures_ltd_bse_sme_capital_structure_1790233644.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoInvestors": [
+        {
+          "name": "this Red Herring Prospectus \n \n \n \nUp to",
+          "shares": 1350000,
+          "sharesFormatted": "1,350,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "Up to",
+          "shares": 4360000,
+          "sharesFormatted": "68,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "the Net Issue to the Public \n \n \n \nUp to",
+          "shares": 512800,
+          "sharesFormatted": "512,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "On incorporation",
+          "shares": 100000,
+          "sharesFormatted": "100,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "(Upon \nIncorporation)",
+          "shares": 10000,
+          "sharesFormatted": "10,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "/- \nCash \nSubscription to \nMOA(i)",
+          "shares": 10000,
+          "sharesFormatted": "10,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "Nil \nOther than \nCash \nBonus \nIssue (ii)",
+          "shares": 3010000,
+          "sharesFormatted": "3,010,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "the Memorandum of Association subscribed",
+          "shares": 10000,
+          "sharesFormatted": "10,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "Mr. Sunil Jaiswal",
+          "shares": 1499400,
+          "sharesFormatted": "5,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "Mr. Samarth Jaiswal",
+          "shares": 2983495,
+          "sharesFormatted": "5,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "- \n- \n- \n- \n- \n-",
+          "shares": 3010000,
+          "sharesFormatted": "3,009,699",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "- \n- \n- \n-",
+          "shares": 3009699,
+          "sharesFormatted": "3,009,699",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "swal and Mrs. Ishani Mehta Jaiswal \nhold",
+          "shares": 2983796,
+          "sharesFormatted": "2,983,796",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "Mr. Samarth Jaiswal \nManaging \nDirector",
+          "shares": 2983495,
+          "sharesFormatted": "2,983,495",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "our Promoter hold",
+          "shares": 2983796,
+          "sharesFormatted": "2,983,796",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "e Issue comprises a fresh Issue of up to",
+          "shares": 1350000,
+          "sharesFormatted": "1,350,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "MONTHS",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        },
+        {
+          "name": "d \nutilization of Net \nProceeds in F. Y.",
+          "shares": 2026,
+          "sharesFormatted": "2,026",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 96.78,
+          "discount": 96.78
+        }
+      ],
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Coreintegra Consulting Services Ltd.",
@@ -1005,9 +1671,20 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/coreintegra_consulting_services_ltd_nse_sme_capital_structure_1789990931.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Exchanges within"
+        {
+          "name": "Exchanges within",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 87.18,
+          "discount": 87.18
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Green Asia Impex  Ltd",
@@ -1048,10 +1725,31 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/green_asia_impex_ltd_nse_sme_capital_structure_1790057398.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Swetha and",
-        "Krathi Teja"
+        {
+          "name": "Swetha and",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 1.0,
+          "acquisitionPrice": 1.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 98.89,
+          "discount": 98.89
+        },
+        {
+          "name": "Krathi Teja",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 1.0,
+          "acquisitionPrice": 1.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 98.89,
+          "discount": 98.89
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 1.0
     },
     {
       "companyName": "Peshwa Wheat Ltd.",
@@ -1092,11 +1790,42 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/peshwa_wheat_ltd_bse_sme_capital_structure_1789916165.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Riyazuddin Qureshi",
-        "Rahat Ali Saiyed",
-        "Sadaf Saiyed"
+        {
+          "name": "Riyazuddin Qureshi",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.1,
+          "discount": 90.1
+        },
+        {
+          "name": "Rahat Ali Saiyed",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.1,
+          "discount": 90.1
+        },
+        {
+          "name": "Sadaf Saiyed",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.1,
+          "discount": 90.1
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Moneyview Ltd.",
@@ -1452,9 +2181,231 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/moneyview_ltd_mainboard_rhp_1789967000.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/moneyview_ltd_mainboard_capital_structure_1789970228.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/moneyview_ltd_mainboard_anchor_1790179572.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "Offer for Sale of up to",
+          "shares": 10049420,
+          "sharesFormatted": "10,049,420",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "PREMIUM ACCOUNT  \n \n \n \nBefore the Offer",
+          "shares": 14453219,
+          "sharesFormatted": "14,453,219",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Memorandum \nof Association \nAllotment of",
+          "shares": 5000,
+          "sharesFormatted": "5,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "divided into",
+          "shares": 200000,
+          "sharesFormatted": "10,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "each and",
+          "shares": 40000,
+          "sharesFormatted": "40,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": ") \nAllotment of",
+          "shares": 14453650,
+          "sharesFormatted": "250,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Conversion \nof \nwarrants \nAllotment of",
+          "shares": 16265,
+          "sharesFormatted": "16,265",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Buyback  \nBuyback of",
+          "shares": 5464,
+          "sharesFormatted": "5,464",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "CCPS \nAllotment of",
+          "shares": 96504624,
+          "sharesFormatted": "26,178,252",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Private \nplacement \nAllotment of",
+          "shares": 164517,
+          "sharesFormatted": "164,517",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Accel India \nVII (Mauritius) Limited and",
+          "shares": 2982122,
+          "sharesFormatted": "2,982,122",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Allotment  \nAllotment of",
+          "shares": 75000000,
+          "sharesFormatted": "75,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "version \nof \nSeries A CCPS \nAllotment of",
+          "shares": 45952722,
+          "sharesFormatted": "45,952,722",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "consideration \n(Mauritius) Limited and",
+          "shares": 50554908,
+          "sharesFormatted": "50,554,908",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "version \nof \nSeries B CCPS \nAllotment of",
+          "shares": 52325442,
+          "sharesFormatted": "52,325,442",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "Accel India IV \n(Mauritius) Limited and",
+          "shares": 52328448,
+          "sharesFormatted": "52,328,448",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "version \nof \nSeries C CCPS \nAllotment of",
+          "shares": 43476279,
+          "sharesFormatted": "43,476,279",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "trategic Venture \nInvestment Limited and",
+          "shares": 20509938,
+          "sharesFormatted": "20,509,938",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "hares to Internet Fund III Pte. Ltd. and",
+          "shares": 4372227,
+          "sharesFormatted": "4,372,227",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        },
+        {
+          "name": "res to Evolvence \nIndia Fund IV Ltd. and",
+          "shares": 1472940,
+          "sharesFormatted": "1,472,940",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 70.59,
+          "discount": 70.59
+        }
+      ],
       "preIpoChecked": true,
-      "anchorDate": "September 23, 2026"
+      "anchorDate": "September 23, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Roopa Screen Ltd.",
@@ -1553,42 +2504,46 @@
         {
           "name": "Kunal Ghanshyambhai Thakker",
           "shares": 3087000,
+          "sharesFormatted": "3,087,000",
           "buyPrice": 2.7,
           "acquisitionPrice": 2.7,
           "date": "Subscription & Bonus (WACA \u20b92.70)",
           "category": "Pre-IPO Shareholder (Cost Basis)",
-          "lockInExpiry": "2027-09-30",
-          "discountPct": -95.8
+          "discountPct": -95.8,
+          "discount": -95.8
         },
         {
           "name": "Ghanshyambhai Ranchhodbhai Thakkar",
           "shares": 2817500,
+          "sharesFormatted": "2,817,500",
           "buyPrice": 2.71,
           "acquisitionPrice": 2.71,
           "date": "Subscription & Bonus (WACA \u20b92.71)",
           "category": "Pre-IPO Shareholder (Cost Basis)",
-          "lockInExpiry": "2027-09-30",
-          "discountPct": -95.8
+          "discountPct": -95.8,
+          "discount": -95.8
         },
         {
           "name": "Bhartiben Ghanshyambhai Thakkar",
           "shares": 437937,
+          "sharesFormatted": "437,937",
           "buyPrice": 2.7,
           "acquisitionPrice": 2.7,
           "date": "Bonus Allotment",
           "category": "Pre-IPO Shareholder (Cost Basis)",
-          "lockInExpiry": "2027-09-30",
-          "discountPct": -95.8
+          "discountPct": -95.8,
+          "discount": -95.8
         },
         {
           "name": "Preksha Kunal Thakkar",
           "shares": 533313,
+          "sharesFormatted": "533,313",
           "buyPrice": 2.7,
           "acquisitionPrice": 2.7,
           "date": "Bonus Allotment",
           "category": "Pre-IPO Shareholder (Cost Basis)",
-          "lockInExpiry": "2027-09-30",
-          "discountPct": -95.8
+          "discountPct": -95.8,
+          "discount": -95.8
         }
       ],
       "preIpoChecked": true,
@@ -1763,22 +2718,182 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/acevector_ltd_mainboard_capital_structure_1790002551.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/acevector_ltd_mainboard_anchor_1790261573.pdf",
       "preIpoInvestors": [
-        "Nexus India Direct",
-        "Kenneth Stuart",
-        "Amit Dalal, (\u20b967)",
-        "Akhil Kumar Gupta",
-        "Rohit Kumar",
-        "Anupama Beri",
-        "Anurag Mittal",
-        "Up to",
-        "Aakash Moondhra",
-        "Naren N Kumar (\u20b967)",
-        "Nitin Bahl and",
-        "Rohit Kumar Bansal",
-        "Singularity Growth Opportunities Fund",
-        "Nexus India",
-        "Jasper Employee Welfare",
-        "Kenneth Stuart Glass"
+        {
+          "name": "Nexus India Direct",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Kenneth Stuart",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Amit Dalal, (\u20b967)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Akhil Kumar Gupta",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Rohit Kumar",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Anupama Beri",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Anurag Mittal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Up to",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Aakash Moondhra",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Naren N Kumar (\u20b967)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Nitin Bahl and",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Rohit Kumar Bansal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Singularity Growth Opportunities Fund",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Nexus India",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Jasper Employee Welfare",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        },
+        {
+          "name": "Kenneth Stuart Glass",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 68.75,
+          "discount": 68.75
+        }
       ],
       "preIpoChecked": true,
       "preIpoWaca": 22.36
@@ -2025,11 +3140,32 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/himalayan_solar_ltd_nse_sme_capital_structure_1789998651.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/himalayan_solar_ltd_nse_sme_anchor_1790255694.pdf",
       "preIpoInvestors": [
-        "Global Rays Power Solution",
-        "Capital Structure"
+        {
+          "name": "Global Rays Power Solution",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.29,
+          "discount": 90.29
+        },
+        {
+          "name": "Capital Structure",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.29,
+          "discount": 90.29
+        }
       ],
       "preIpoChecked": true,
-      "anchorDate": "September 24, 2026"
+      "anchorDate": "September 24, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Orient Cables (India) Ltd.",
@@ -2128,42 +3264,46 @@
         {
           "name": "Vipul Nagpal",
           "shares": 24722800,
+          "sharesFormatted": "24,722,800",
           "buyPrice": 0.01,
           "acquisitionPrice": 0.01,
           "date": "Original Subscription & Bonus (9:1)",
           "category": "Promoter Selling Shareholder",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -100
+          "discountPct": -100,
+          "discount": -100
         },
         {
           "name": "Garima Nagpal",
           "shares": 5788000,
+          "sharesFormatted": "5,788,000",
           "buyPrice": 0.01,
           "acquisitionPrice": 0.01,
           "date": "Original Subscription & Bonus (9:1)",
           "category": "Promoter Selling Shareholder",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -100
+          "discountPct": -100,
+          "discount": -100
         },
         {
           "name": "Vipul Family Trust",
           "shares": 35712000,
+          "sharesFormatted": "35,712,000",
           "buyPrice": 0.01,
           "acquisitionPrice": 0.01,
           "date": "Gift & Bonus Allotment",
           "category": "Promoter Group Trust",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -100
+          "discountPct": -100,
+          "discount": -100
         },
         {
           "name": "Garima Family Trust",
           "shares": 35712000,
+          "sharesFormatted": "35,712,000",
           "buyPrice": 0.01,
           "acquisitionPrice": 0.01,
           "date": "Gift & Bonus Allotment",
           "category": "Promoter Group Trust",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -100
+          "discountPct": -100,
+          "discount": -100
         }
       ],
       "preIpoChecked": true,
@@ -2264,9 +3404,231 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/bench_mark_infotech_services_ltd_nse_sme_rhp_1789823333.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/bench_mark_infotech_services_ltd_nse_sme_capital_structure_1789823334.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/bench_mark_infotech_services_ltd_nse_sme_anchor_1790252311.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "Fresh Offer of up to",
+          "shares": 3400000,
+          "sharesFormatted": "3,400,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Offer for Sale of up to",
+          "shares": 458000,
+          "sharesFormatted": "458,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "servation for Market Maker Portion\nUp to",
+          "shares": 193200,
+          "sharesFormatted": "193,200",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "r to Public\nNet Offer to Public of up to",
+          "shares": 3664800,
+          "sharesFormatted": "3,664,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "At least",
+          "shares": 1284000,
+          "sharesFormatted": "1,284,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "to Non-Institutional Investors\nAt least",
+          "shares": 550800,
+          "sharesFormatted": "550,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "ified Institutional Buyers\nNot more than",
+          "shares": 1830000,
+          "sharesFormatted": "1,830,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "/- consisting",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "consisting",
+          "shares": 1500000,
+          "sharesFormatted": "50,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Vineet Kumar Gupta",
+          "shares": 7590050,
+          "sharesFormatted": "5,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Nand Rani Gupta",
+          "shares": 5000,
+          "sharesFormatted": "5,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": ") Further issue of",
+          "shares": 57650,
+          "sharesFormatted": "40,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Juli Gupta",
+          "shares": 3282500,
+          "sharesFormatted": "22,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "ription\nto the\nMemorandum\nof Association",
+          "shares": 10000,
+          "sharesFormatted": "10,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": ")\nFurther\nIssue",
+          "shares": 57650,
+          "sharesFormatted": "40,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "N. A\nNon-Cash",
+          "shares": 1087265,
+          "sharesFormatted": "1,087,265",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Vivek Prasad",
+          "shares": 15000,
+          "sharesFormatted": "15,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Akshay Kumar",
+          "shares": 10000,
+          "sharesFormatted": "10,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": "Anand Gupta",
+          "shares": 12650,
+          "sharesFormatted": "12,650",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        },
+        {
+          "name": ") Bonus issue of",
+          "shares": 1076500,
+          "sharesFormatted": "1,076,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 90.91,
+          "discount": 90.91
+        }
+      ],
       "preIpoChecked": true,
-      "anchorDate": "September 24, 2026"
+      "anchorDate": "September 24, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Dudani Retail Ltd",
@@ -2307,13 +3669,75 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/dudani_retail_ltd_bse_sme_capital_structure_1790189974.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Appointed for",
-        "Ms. Neetu Yadav, aged about",
-        "BSE separately",
-        "Ms. Madhvi Sharma, aged about",
-        "Mr. Rahul Sharma, aged about",
-        "Refer Note"
-      ]
+        {
+          "name": "Appointed for",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 65.52,
+          "discount": 65.52
+        },
+        {
+          "name": "Ms. Neetu Yadav, aged about",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 65.52,
+          "discount": 65.52
+        },
+        {
+          "name": "BSE separately",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 65.52,
+          "discount": 65.52
+        },
+        {
+          "name": "Ms. Madhvi Sharma, aged about",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 65.52,
+          "discount": 65.52
+        },
+        {
+          "name": "Mr. Rahul Sharma, aged about",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 65.52,
+          "discount": 65.52
+        },
+        {
+          "name": "Refer Note",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 65.52,
+          "discount": 65.52
+        }
+      ],
+      "preIpoWaca": 10.0,
+      "preIpoChecked": true
     },
     {
       "companyName": "German Green Steel & Power Ltd",
@@ -2528,20 +3952,131 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shree_tnb_polymers_ltd_bse_sme_capital_structure_1790155898.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/shree_tnb_polymers_ltd_bse_sme_anchor_1790340669.pdf",
       "preIpoInvestors": [
-        "Vishwa Vatsal Kalariya and Mr",
-        "Ms. Jalpaben",
-        "Ms. Jignaben",
-        "Paresh Kumar Kaneria and Mr",
-        "Shilpaben Rasikbhai Bhalodi,",
-        "Jamnadas Damjibhai Kaneria and Mr",
-        "Malay Rasikbhai Bhalodi, on",
-        "Jamnadas Damjibhai Kaneria and Pareshbhai Kaneria,",
-        "Chandulal Hansraj Patel,",
-        "Mr. Malay Rasikbhai Bhalodi",
-        "Malay Rasikbhai Bhalodi,"
+        {
+          "name": "Vishwa Vatsal Kalariya and Mr",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Ms. Jalpaben",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Ms. Jignaben",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Paresh Kumar Kaneria and Mr",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Shilpaben Rasikbhai Bhalodi,",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Jamnadas Damjibhai Kaneria and Mr",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Malay Rasikbhai Bhalodi, on",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Jamnadas Damjibhai Kaneria and Pareshbhai Kaneria,",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Chandulal Hansraj Patel,",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Mr. Malay Rasikbhai Bhalodi",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        },
+        {
+          "name": "Malay Rasikbhai Bhalodi,",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 80.77,
+          "discount": 80.77
+        }
       ],
       "preIpoChecked": true,
-      "anchorDate": "September 25, 2026"
+      "anchorDate": "September 25, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Shivchem Agro Ltd",
@@ -2654,8 +4189,230 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/pind_hospitality_ltd_bse_sme_rhp_1790071510.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/pind_hospitality_ltd_bse_sme_capital_structure_1790071757.pdf",
       "anchorUrl": null,
-      "preIpoInvestors": [],
-      "preIpoChecked": true
+      "preIpoInvestors": [
+        {
+          "name": "ED HERRING PROSPECTUS \n \n \nIssue of upto",
+          "shares": 1800000,
+          "sharesFormatted": "1,800,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Reservation for Market Maker Portion",
+          "shares": 91200,
+          "sharesFormatted": "91,200",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Net Issue to the Public  \nUpto",
+          "shares": 1708800,
+          "sharesFormatted": "1,708,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Not more than",
+          "shares": 18000,
+          "sharesFormatted": "18,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Not less than",
+          "shares": 846000,
+          "sharesFormatted": "844,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "The Present Issue of upto",
+          "shares": 1800000,
+          "sharesFormatted": "1,800,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "consisting of",
+          "shares": 200000,
+          "sharesFormatted": "200,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Rupees Twenty lakhs only) \nconsisting of",
+          "shares": 200000,
+          "sharesFormatted": "200,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Rupees twenty \nlakhs only) consisting of",
+          "shares": 200000,
+          "sharesFormatted": "200,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "(Rupees Eight crores) consisting of",
+          "shares": 8000000,
+          "sharesFormatted": "8,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash \nSubscription \nto MOA(i)",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash  \nRights \nIssue(ii)",
+          "shares": 140000,
+          "sharesFormatted": "140,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash \nRights \nIssue(iii)",
+          "shares": 200000,
+          "sharesFormatted": "200,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash \nPreferential \nIssue (iv)",
+          "shares": 369582,
+          "sharesFormatted": "369,582",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": ".A. \nOther than \nCash \nBonus Issue \n(vi)",
+          "shares": 3598812,
+          "sharesFormatted": "3,598,812",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash \nPreferential \nIssue(vii)",
+          "shares": 3970812,
+          "sharesFormatted": "3,970,812",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash \nPreferential \nIssue (viii)",
+          "shares": 4084812,
+          "sharesFormatted": "4,084,812",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Cash \nPreferential \nIssue (ix)",
+          "shares": 4198812,
+          "sharesFormatted": "4,198,812",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "nitial Subscribers to MoA subscribed for",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        },
+        {
+          "name": "Anita Malhotra",
+          "shares": 1393014,
+          "sharesFormatted": "20,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 89.9,
+          "discount": 89.9
+        }
+      ],
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Shah Investor's Home Ltd.",
@@ -2736,52 +4493,57 @@
         {
           "name": "Upendra Trikamlal Shah",
           "shares": 3000000,
+          "sharesFormatted": "3,000,000",
           "buyPrice": 10,
           "acquisitionPrice": 10,
           "date": "Original Par Subscription (\u20b910)",
           "category": "Promoter",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -94
+          "discountPct": -94,
+          "discount": -94
         },
         {
           "name": "Purnima Upendra Shah",
           "shares": 3450000,
+          "sharesFormatted": "3,450,000",
           "buyPrice": 10,
           "acquisitionPrice": 10,
           "date": "Original Par Subscription (\u20b910)",
           "category": "Promoter",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -94
+          "discountPct": -94,
+          "discount": -94
         },
         {
           "name": "Tanmay Upendra Shah",
           "shares": 2505000,
+          "sharesFormatted": "2,505,000",
           "buyPrice": 10,
           "acquisitionPrice": 10,
           "date": "Original Par Subscription (\u20b910)",
           "category": "Promoter",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -94
+          "discountPct": -94,
+          "discount": -94
         },
         {
           "name": "Trupti Utpal Shah",
           "shares": 650000,
+          "sharesFormatted": "650,000",
           "buyPrice": 10,
           "acquisitionPrice": 10,
           "date": "Original Par Subscription (\u20b910)",
           "category": "Promoter Group",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -94
+          "discountPct": -94,
+          "discount": -94
         },
         {
           "name": "Rajesh Ramchandra Punjabi",
           "shares": 650000,
+          "sharesFormatted": "650,000",
           "buyPrice": 10,
           "acquisitionPrice": 10,
           "date": "Original Par Subscription (\u20b910)",
           "category": "Key Management Personnel",
-          "lockInExpiry": "2027-03-30",
-          "discountPct": -94
+          "discountPct": -94,
+          "discount": -94
         }
       ],
       "preIpoChecked": true,
@@ -2856,25 +4618,197 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/acme_universal_safezone_9_ltd_bse_sme_capital_structure_1790253786.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/acme_universal_safezone_9_ltd_bse_sme_anchor_1790340598.pdf",
       "preIpoInvestors": [
-        "KEY MANAGERIAL PERSONNEL AND SENIOR MANAGEMENT",
-        "any Contract, Agreements or",
-        "Kirti Patel aged",
-        "Qualified Institutional",
-        "Less than",
-        "SEBI, A DUE DILIGENCE",
-        "Up to (\u20b910)",
-        "Kirti Patel",
-        "More than",
-        "Executive Directors",
-        "ensure compulsory Market Making",
-        "Alok Tripathi",
-        "Gofran Ahmad Khan, aged",
-        "BE MADE OR",
-        "TAKE UP",
-        "Nitin Tiwari, aged",
-        "Ruchi Tiwari, aged"
+        {
+          "name": "KEY MANAGERIAL PERSONNEL AND SENIOR MANAGEMENT",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "any Contract, Agreements or",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Kirti Patel aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Qualified Institutional",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Less than",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "SEBI, A DUE DILIGENCE",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Up to (\u20b910)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Kirti Patel",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "More than",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Executive Directors",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "ensure compulsory Market Making",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Alok Tripathi",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Gofran Ahmad Khan, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "BE MADE OR",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "TAKE UP",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Nitin Tiwari, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        },
+        {
+          "name": "Ruchi Tiwari, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 85.92,
+          "discount": 85.92
+        }
       ],
-      "anchorDate": "September 25, 2026"
+      "anchorDate": "September 25, 2026",
+      "preIpoWaca": 10.0,
+      "preIpoChecked": true
     },
     {
       "companyName": "SRIT India Ltd.",
@@ -3110,22 +5044,174 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/black_opal_consultants_ltd_bse_sme_capital_structure_1790252138.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Pradeep Pasari, aged",
-        "Key Managerial Personnel and Senior Management",
-        "Up to",
-        "Sandeep Kumar Singh, aged",
-        "Good Corporate Governance practices based",
-        "Offer for Sale of (\u20b910)",
-        "CIRCULATION, AT LEAST",
-        "Mr. Sheikh Arfeen Ahmed, aged",
-        "SME Platform of BSE",
-        "Best Western Hotels, located",
-        "Mr. Prasoon Chauhan, aged",
-        "Delhi, Akshardham, East Delhi,",
-        "this Offer",
-        "Sangeeta Bhatia, aged",
-        "Mutual Funds"
-      ]
+        {
+          "name": "Pradeep Pasari, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Key Managerial Personnel and Senior Management",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Up to",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Sandeep Kumar Singh, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Good Corporate Governance practices based",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Offer for Sale of (\u20b910)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "CIRCULATION, AT LEAST",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Mr. Sheikh Arfeen Ahmed, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "SME Platform of BSE",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Best Western Hotels, located",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Mr. Prasoon Chauhan, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Delhi, Akshardham, East Delhi,",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "this Offer",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Sangeeta Bhatia, aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        },
+        {
+          "name": "Mutual Funds",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 94.92,
+          "discount": 94.92
+        }
+      ],
+      "preIpoWaca": 10.0,
+      "preIpoChecked": true
     },
     {
       "companyName": "Vivekanand Cotspin Ltd",
@@ -3188,9 +5274,231 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/vivekanand_cotspin_ltd_bse_sme_rhp_1789529495.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/vivekanand_cotspin_ltd_bse_sme_capital_structure_1789529496.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/vivekanand_cotspin_ltd_bse_sme_anchor_1789738829.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "/- each",
+          "shares": 2500,
+          "sharesFormatted": "2,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "issued \nfully paid up before the Issue.",
+          "shares": 1625,
+          "sharesFormatted": "1,625",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": ") \nFresh Issue of upto",
+          "shares": 6000000,
+          "sharesFormatted": "6,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "servation for Market Maker portion \nUpto",
+          "shares": 300000,
+          "sharesFormatted": "300,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "the Public \nNet Issue to Public of Upto",
+          "shares": 5700000,
+          "sharesFormatted": "5,700,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": ") \n \nNot more than",
+          "shares": 2850000,
+          "sharesFormatted": "2,850,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Not Less than",
+          "shares": 855000,
+          "sharesFormatted": "855,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Not less than",
+          "shares": 1995000,
+          "sharesFormatted": "1,995,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "ity Share capital after the \nIssue \nUpto",
+          "shares": 2225000,
+          "sharesFormatted": "2,225,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "(Rupees Fifteen Crore Only) divided into",
+          "shares": 1500000,
+          "sharesFormatted": "1,500,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "es Twenty Five Crore Only) divided \ninto",
+          "shares": 2500000,
+          "sharesFormatted": "2,500,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "in \nLakhs)  \nOn \nIncorporation",
+          "shares": 1500000,
+          "sharesFormatted": "1,500,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Cash \nSubscription \nto MOA(i)",
+          "shares": 1500000,
+          "sharesFormatted": "1,500,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": ")(ii)",
+          "shares": 1625000,
+          "sharesFormatted": "1,625,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "the Memorandum of Association subscribed",
+          "shares": 1500000,
+          "sharesFormatted": "1,500,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Nirav Bharatbhai Patel",
+          "shares": 3250000,
+          "sharesFormatted": "3,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Jasmin Vishnubhai Patel",
+          "shares": 3250000,
+          "sharesFormatted": "3,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Bharatbhai Prahaladbhai Patel",
+          "shares": 3249784,
+          "sharesFormatted": "3,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Vishnubhai Prahaladdas Patel",
+          "shares": 3249784,
+          "sharesFormatted": "3,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        },
+        {
+          "name": "Gautam Bharatkumar Patel",
+          "shares": 3250000,
+          "sharesFormatted": "3,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 72.97,
+          "discount": 72.97
+        }
+      ],
       "preIpoChecked": true,
-      "anchorPortion": "17,01,000 shares (\u20b96.29 Cr)"
+      "anchorPortion": "17,01,000 shares (\u20b96.29 Cr)",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Varmora Granito Ltd.",
@@ -3451,11 +5759,32 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/himalaya_nutravedics_ltd_bse_sme_capital_structure_1789622725.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/himalaya_nutravedics_ltd_bse_sme_anchor_1790000484.pdf",
       "preIpoInvestors": [
-        "KEY MANAGERIAL",
-        "BSE on whose SME Platform"
+        {
+          "name": "KEY MANAGERIAL",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.57,
+          "discount": 90.57
+        },
+        {
+          "name": "BSE on whose SME Platform",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 90.57,
+          "discount": 90.57
+        }
       ],
       "preIpoChecked": true,
-      "anchorDate": "September 21, 2026"
+      "anchorDate": "September 21, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Anand Seamless Ltd",
@@ -3496,10 +5825,31 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/anand_seamless_ltd_bse_sme_capital_structure_1789650972.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "We have",
-        "Mr. Kedar Mayank Choksi, son and"
+        {
+          "name": "We have",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        },
+        {
+          "name": "Mr. Kedar Mayank Choksi, son and",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 86.11,
+          "discount": 86.11
+        }
       ],
-      "preIpoChecked": true
+      "preIpoChecked": true,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Elevate Campuses Ltd.",
@@ -4236,9 +6586,231 @@
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/unitec_fibres_ltd_bse_sme_rhp_1789675459.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/unitec_fibres_ltd_bse_sme_capital_structure_1789675460.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/unitec_fibres_ltd_bse_sme_anchor_1790088678.pdf",
-      "preIpoInvestors": [],
+      "preIpoInvestors": [
+        {
+          "name": "/- each",
+          "shares": 1600,
+          "sharesFormatted": "1,600",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Prospectus  \n \n \n \nFresh Issue of up to",
+          "shares": 3916800,
+          "sharesFormatted": "3,916,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Up to",
+          "shares": 200000,
+          "sharesFormatted": "200,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Net issue to Public of up to",
+          "shares": 3716800,
+          "sharesFormatted": "3,716,800",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Of Which \n \n \n \nAt least",
+          "shares": 1305600,
+          "sharesFormatted": "1,305,600",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "At least",
+          "shares": 563200,
+          "sharesFormatted": "563,200",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Not more than",
+          "shares": 1848000,
+          "sharesFormatted": "1,848,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Lakhs divided into",
+          "shares": 7500000,
+          "sharesFormatted": "100,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "/- \nCash \nSubscription  \nto MOA (i)",
+          "shares": 10500,
+          "sharesFormatted": "10,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "/- \nCash \nFurther \nAllotment(ii)",
+          "shares": 1000000,
+          "sharesFormatted": "1,000,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "/\n- \nCash \nFurther \nAllotment(iii)",
+          "shares": 1269000,
+          "sharesFormatted": "1,269,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "/\n- \nCash \nFurther \nAllotment(iv)",
+          "shares": 1369000,
+          "sharesFormatted": "1,369,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "/\n- \nCash \nFurther \nAllotment(v)",
+          "shares": 1669000,
+          "sharesFormatted": "1,669,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Mr. Virander Behl",
+          "shares": 2420000,
+          "sharesFormatted": "3,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Ms. Devina Virander Behl",
+          "shares": 533877,
+          "sharesFormatted": "3,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Ms. Vibha Behl",
+          "shares": 145009,
+          "sharesFormatted": "3,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "(ii) Further Allotment of",
+          "shares": 989500,
+          "sharesFormatted": "989,500",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Ms. Nishi Binod Choubay",
+          "shares": 200000,
+          "sharesFormatted": "200,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Mr. Rajesh Seth",
+          "shares": 50000,
+          "sharesFormatted": "50,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        },
+        {
+          "name": "Ms. Seema Seth",
+          "shares": 100000,
+          "sharesFormatted": "100,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Early Shareholder",
+          "discountPct": 88.64,
+          "discount": 88.64
+        }
+      ],
       "preIpoChecked": true,
-      "anchorDate": "September 22, 2026"
+      "anchorDate": "September 22, 2026",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Liqvd Digital India Ltd",
@@ -4278,13 +6850,54 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/liqvd_digital_india_ltd_bse_sme_capital_structure_1789678220.pdf",
       "anchorUrl": null,
       "preIpoInvestors": [
-        "Bela Properties Private Limited",
-        "Maple Leaf Trading",
-        "Capital Structure",
-        "Concept Communication Limited"
+        {
+          "name": "Bela Properties Private Limited",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 81.48,
+          "discount": 81.48
+        },
+        {
+          "name": "Maple Leaf Trading",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 81.48,
+          "discount": 81.48
+        },
+        {
+          "name": "Capital Structure",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 81.48,
+          "discount": 81.48
+        },
+        {
+          "name": "Concept Communication Limited",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 81.48,
+          "discount": 81.48
+        }
       ],
       "preIpoChecked": true,
-      "lotSize": 2000
+      "lotSize": 2000,
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "Pooja Logistics Ltd",
@@ -5712,10 +8325,21 @@
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/skoffset_ltd_bse_sme_capital_structure_1789367298.pdf",
       "anchorUrl": "https://assets.ipopremium.in/images/ipo/skoffset_ltd_bse_sme_anchor_1790084977.pdf",
       "preIpoInvestors": [
-        "Priyanshu Agarwal hold"
+        {
+          "name": "Priyanshu Agarwal hold",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Pre-IPO Shareholder",
+          "discountPct": 92.0,
+          "discount": 92.0
+        }
       ],
       "preIpoChecked": true,
-      "anchorDate": "September 22,2025"
+      "anchorDate": "September 22,2025",
+      "preIpoWaca": 10.0
     },
     {
       "companyName": "A-One Steels India Ltd",
@@ -39636,30 +42260,201 @@
       "totalShares": 5560000,
       "rhpUrl": "https://www.bsesme.com/download/380603/SME_IPO%20InPrinciple/DRHP_SaffronSpecialityPapersLimited_20251231195818.pdf",
       "preIpoInvestors": [
-        "Sweta Agarwal aged",
-        "Village Aamne Near Indian Petrol Pump, Thane, Bhiwandi",
-        "Up to",
-        "Mutual Funds",
-        "Senapati Bapat Marg, Prabhadevi, Mumbai",
-        "Indian Petrol Pump, Thane, Bhiwandi",
-        "Rajesh Agarwal",
-        "Sweta Agarwal (\u20b910)",
-        "improvement in PAT Margin",
-        "Chairman &",
-        "RPML in",
-        "Patlipada, Thane west, Thane",
-        "Road, Andheri East, Mumbai",
-        "Abbas Presswala aged",
-        "Capital Structure. Further, single Form (\u20b910)",
-        "Sweta Agarwal, Harshiel Agarwal",
-        "Property at B (\u20b910)"
+        {
+          "name": "Sweta Agarwal aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Village Aamne Near Indian Petrol Pump, Thane, Bhiwandi",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Up to",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Mutual Funds",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Senapati Bapat Marg, Prabhadevi, Mumbai",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Indian Petrol Pump, Thane, Bhiwandi",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Rajesh Agarwal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Sweta Agarwal (\u20b910)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "improvement in PAT Margin",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Chairman &",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "RPML in",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Patlipada, Thane west, Thane",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Road, Andheri East, Mumbai",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Abbas Presswala aged",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Capital Structure. Further, single Form (\u20b910)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Sweta Agarwal, Harshiel Agarwal",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        },
+        {
+          "name": "Property at B (\u20b910)",
+          "shares": 100000,
+          "sharesFormatted": "1,00,000",
+          "buyPrice": 10.0,
+          "acquisitionPrice": 10.0,
+          "date": "Pre-IPO",
+          "category": "Promoter / Pre-IPO Holder",
+          "discountPct": 77.78,
+          "discount": 77.78
+        }
       ],
       "managementHighlights": [
         "\u2139\ufe0f No forward guidance, moat details, or interviews found on X or YouTube for Saffron Speciality Papers Ltd.."
       ],
       "capitalStructureUrl": null,
       "priceBand": "\u20b945",
-      "preIpoWaca": 2025
+      "preIpoWaca": 10.0,
+      "preIpoChecked": true
     },
     {
       "companyName": "Aastha Spintex Ltd.",
