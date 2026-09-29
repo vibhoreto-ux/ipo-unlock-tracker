@@ -2279,9 +2279,9 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             } else {
                 if (hasPreIpo) {
                     const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca);
-                    preIpoHtml = `<details><summary style="display:flex; justify-content:space-between; align-items:center;"><span>Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
+                    preIpoHtml = `<details open><summary style="display:flex; justify-content:space-between; align-items:center; cursor:pointer;"><span style="font-weight:700; color:#b45309;">🔥 Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
                 } else {
-                    preIpoHtml = `<details><summary>Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
+                    preIpoHtml = `<details><summary style="cursor:pointer;">Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
                 }
             }
 
@@ -2299,7 +2299,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                     return `<tr><td>${row.name}</td>${valueCells}</tr>`;
                 }).join('');
                 
-                peersHtml = `<details><summary>Peers</summary><div class="body"><table class="pi"><thead><tr>${thCells}</tr></thead><tbody>${tbodyRows}</tbody></table></div></details>`;
+                peersHtml = `<details><summary style="cursor:pointer;">Peers</summary><div class="body"><table class="pi"><thead><tr>${thCells}</tr></thead><tbody>${tbodyRows}</tbody></table></div></details>`;
             }
 
             let mgmtHtml = '';
@@ -2321,7 +2321,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                     }
                     return `<li>${text} ${tag}</li>`;
                 }).join('');
-                mgmtHtml = `<details open><summary>Top pointers & Guidance</summary><div class="body"><ul class="flags">${lis}</ul></div></details>`;
+                mgmtHtml = `<details open><summary style="cursor:pointer;">Top pointers & Guidance</summary><div class="body"><ul class="flags">${lis}</ul></div></details>`;
             }
 
             const badgeBoardClass = ipo.issueType === 'SME' ? 'b-board' : 'b-board';
@@ -2350,6 +2350,8 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
             const lotText = ipo.lotSize ? `${ipo.lotSize} shs` : null;
             const listingDateText = ipo.listingDate ? formatDateSimple(ipo.listingDate) : (ipo.allotmentDate && (ipo.allotmentDate.original || ipo.allotmentDate.adjusted) ? fmtDate(ipo.allotmentDate) : null);
+            const hasAnchors = ipo.anchorInvestors && ipo.anchorInvestors.length > 0;
+            const anchorDetailsTag = hasAnchors ? '<details open>' : '<details>';
 
             card.innerHTML = `
                 <div class="ctop">
@@ -2374,7 +2376,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 </div>
                 
                 ${mgmtHtml}
-                <details><summary>${anchorSummaryText}</summary><div class="body">${anchorsHtml}</div></details>
+                ${anchorDetailsTag}<summary style="font-weight:700; color:var(--primary); cursor:pointer;">${anchorSummaryText}</summary><div class="body">${anchorsHtml}</div></details>
                 ${preIpoHtml}
                 ${peersHtml}
                 ${docsHtml}

@@ -13,3 +13,5 @@ patch_*.py
 parse_*.py
 fix_*.py
 revert_*.py
+server.pid
+
