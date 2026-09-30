@@ -6290,16 +6290,25 @@
       },
       "anchorInvestors": [
         {
-          "name": "5,52,04.800 NAV CAPITAL VCC- 2 NAV CAPITAL EMERGING STAR FUND",
+          "name": "CP CAPITAL LIMITED",
+          "shares": 520800,
+          "amount": "\u20b95.52 Cr",
+          "percentage": "73.31%",
+          "bidPrice": 106,
+          "lockInExpiry": "2026-10-24",
+          "lockInExpiry90": "2026-12-23"
+        },
+        {
+          "name": "NAV CAPITAL VCC - NAV CAPITAL EMERGING STAR FUND",
           "shares": 189600,
-          "amount": "\u20b92.00 Cr",
+          "amount": "\u20b92.01 Cr",
           "percentage": "26.69%",
           "bidPrice": 106,
           "lockInExpiry": "2026-10-24",
           "lockInExpiry90": "2026-12-23"
         }
       ],
-      "anchorShares": 189600,
+      "anchorShares": 710400,
       "totalShares": 2499600,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/himalaya_nutravedics_ltd_bse_sme_rhp_1789556654.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/himalaya_nutravedics_ltd_bse_sme_capital_structure_1789622725.pdf",
