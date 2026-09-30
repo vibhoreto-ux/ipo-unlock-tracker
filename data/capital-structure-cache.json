@@ -10278,7 +10278,120 @@
         "lockInExpiry": "2026-10-30",
         "lockInExpiry90": "2026-12-29"
       }
-    ]
+    ],
+    "preIpoInvestors": [
+      {
+        "name": "Kedia Securities Private Limited",
+        "shares": 605063,
+        "buyPrice": 54.0,
+        "acquisitionPrice": 54.0,
+        "date": "September 16, 2026",
+        "category": "Pre-IPO Secondary Purchase",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -15.6,
+        "discount": -15.6
+      },
+      {
+        "name": "Zion Infraventure LLP",
+        "shares": 201687,
+        "buyPrice": 54.0,
+        "acquisitionPrice": 54.0,
+        "date": "September 16, 2026",
+        "category": "Pre-IPO Secondary Purchase",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -15.6,
+        "discount": -15.6
+      },
+      {
+        "name": "Kunal Ghanshyambhai Thakker",
+        "shares": 3087000,
+        "buyPrice": 2.7,
+        "acquisitionPrice": 2.7,
+        "date": "Subscription & Bonus (WACA \u20b92.70)",
+        "category": "Promoter",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -95.8,
+        "discount": -95.8
+      },
+      {
+        "name": "Ghanshyambhai Ranchhodbhai Thakkar",
+        "shares": 2817500,
+        "buyPrice": 2.71,
+        "acquisitionPrice": 2.71,
+        "date": "Subscription & Bonus (WACA \u20b92.71)",
+        "category": "Promoter",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -95.8,
+        "discount": -95.8
+      },
+      {
+        "name": "Preksha Kunal Thakkar",
+        "shares": 533313,
+        "buyPrice": 0.0,
+        "acquisitionPrice": 0.0,
+        "date": "Bonus & Transfers (WACA \u20b90.00)",
+        "category": "Promoter Group",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -100.0,
+        "discount": -100.0
+      },
+      {
+        "name": "Bhartiben Ghanshyambhai Thakkar",
+        "shares": 437937,
+        "buyPrice": 0.0,
+        "acquisitionPrice": 0.0,
+        "date": "Bonus & Transfers (WACA \u20b90.00)",
+        "category": "Promoter Group",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -100.0,
+        "discount": -100.0
+      },
+      {
+        "name": "Deval Ghanshyambhai Thakkar",
+        "shares": 175000,
+        "buyPrice": 0.0,
+        "acquisitionPrice": 0.0,
+        "date": "Bonus & Rights (WACA \u20b90.00)",
+        "category": "Promoter Group",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -100.0,
+        "discount": -100.0
+      },
+      {
+        "name": "Rajeshbhai Amratbhai Khaniya",
+        "shares": 70000,
+        "buyPrice": 1.43,
+        "acquisitionPrice": 1.43,
+        "date": "Rights & Bonus (WACA \u20b91.43)",
+        "category": "Pre-IPO Public Shareholder",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -97.8,
+        "discount": -97.8
+      },
+      {
+        "name": "Monika Sanjay Surati",
+        "shares": 70000,
+        "buyPrice": 1.43,
+        "acquisitionPrice": 1.43,
+        "date": "Rights & Bonus (WACA \u20b91.43)",
+        "category": "Pre-IPO Public Shareholder",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -97.8,
+        "discount": -97.8
+      },
+      {
+        "name": "Sanjay Ashokbhai Surati",
+        "shares": 70000,
+        "buyPrice": 1.43,
+        "acquisitionPrice": 1.43,
+        "date": "Rights & Bonus (WACA \u20b91.43)",
+        "category": "Pre-IPO Public Shareholder",
+        "lockInExpiry": "2027-09-28",
+        "discountPct": -97.8,
+        "discount": -97.8
+      }
+    ],
+    "preIpoWaca": 7.15
   },
   "moneyview": {
     "companyName": "Moneyview Ltd.",
