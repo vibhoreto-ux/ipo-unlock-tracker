@@ -3243,61 +3243,34 @@
       },
       "anchorInvestors": [
         {
-          "name": "Nine Alps Trust-Nine",
+          "name": "Nine Alps Trust - Nine Alps Opportunity Fund",
           "shares": 516000,
           "amount": "\u20b93.30 Cr",
           "percentage": "62.02%",
           "bidPrice": 64,
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
+          "lockInExpiry": "2026-10-30",
+          "lockInExpiry90": "2026-12-29"
         },
         {
-          "name": "Opportunity Fund",
-          "shares": 58000,
-          "amount": "\u20b91.01 Cr",
-          "percentage": "18.99%",
-          "bidPrice": 64,
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
-        },
-        {
-          "name": "Vira AIF Trust- Vira Bharat",
-          "shares": 58000,
-          "amount": "\u20b91.01 Cr",
-          "percentage": "18.99%",
-          "bidPrice": 64,
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
-        },
-        {
-          "name": "Opportunities Fund",
+          "name": "Vira AIF Trust - Vira Bharat Opportunities Fund",
           "shares": 158000,
           "amount": "\u20b91.01 Cr",
           "percentage": "18.99%",
           "bidPrice": 64,
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
+          "lockInExpiry": "2026-10-30",
+          "lockInExpiry90": "2026-12-29"
         },
         {
-          "name": "Arthasanchay Investment Trust",
+          "name": "Arthasanchay Investment Trust - Arthasanchay Growth Fund",
           "shares": 158000,
           "amount": "\u20b91.01 Cr",
           "percentage": "18.99%",
           "bidPrice": 64,
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
-        },
-        {
-          "name": "Arthasanchay Growth Fund",
-          "shares": 158000,
-          "amount": "\u20b90.08 Cr",
-          "percentage": "18.99%",
-          "bidPrice": 64,
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
+          "lockInExpiry": "2026-10-30",
+          "lockInExpiry90": "2026-12-29"
         }
       ],
-      "anchorShares": 1106000,
+      "anchorShares": 832000,
       "totalShares": 3000000,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/roopa_screen_ltd_bse_sme_rhp_1789994060.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/roopa_screen_ltd_bse_sme_capital_structure_1790084644.pdf",

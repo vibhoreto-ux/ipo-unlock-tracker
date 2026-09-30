@@ -10248,7 +10248,37 @@
     "openDate": "2026-09-23T18:30:00.000Z",
     "closeDate": "2026-09-27T18:30:00.000Z",
     "allotmentDate": "2026-09-28T18:30:00.000Z",
-    "listingDate": "2026-09-30T18:30:00.000Z"
+    "listingDate": "2026-09-30T18:30:00.000Z",
+    "anchorShares": 832000,
+    "anchorInvestors": [
+      {
+        "name": "Nine Alps Trust - Nine Alps Opportunity Fund",
+        "shares": 516000,
+        "amount": "\u20b93.30 Cr",
+        "percentage": "62.02%",
+        "bidPrice": 64,
+        "lockInExpiry": "2026-10-30",
+        "lockInExpiry90": "2026-12-29"
+      },
+      {
+        "name": "Vira AIF Trust - Vira Bharat Opportunities Fund",
+        "shares": 158000,
+        "amount": "\u20b91.01 Cr",
+        "percentage": "18.99%",
+        "bidPrice": 64,
+        "lockInExpiry": "2026-10-30",
+        "lockInExpiry90": "2026-12-29"
+      },
+      {
+        "name": "Arthasanchay Investment Trust - Arthasanchay Growth Fund",
+        "shares": 158000,
+        "amount": "\u20b91.01 Cr",
+        "percentage": "18.99%",
+        "bidPrice": 64,
+        "lockInExpiry": "2026-10-30",
+        "lockInExpiry90": "2026-12-29"
+      }
+    ]
   },
   "moneyview": {
     "companyName": "Moneyview Ltd.",
