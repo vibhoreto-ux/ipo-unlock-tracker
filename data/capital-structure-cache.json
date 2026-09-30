@@ -10410,7 +10410,11 @@
     "openDate": "2026-09-23T18:30:00.000Z",
     "closeDate": "2026-09-27T18:30:00.000Z",
     "allotmentDate": "2026-09-28T18:30:00.000Z",
-    "listingDate": "2026-09-30T18:30:00.000Z"
+    "listingDate": "2026-09-30T18:30:00.000Z",
+    "issueType": "Mainboard",
+    "exchange": "BSE / NSE",
+    "issueSize": "\u20b91,091.68 Cr",
+    "issueSizeCr": 1091.68
   },
   "peshwawheat": {
     "companyName": "Peshwa Wheat Ltd.",

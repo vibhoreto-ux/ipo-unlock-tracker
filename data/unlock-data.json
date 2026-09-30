@@ -2708,8 +2708,8 @@
     },
     {
       "companyName": "Moneyview Ltd.",
-      "issueType": "SME",
-      "exchange": "BSE SME",
+      "issueType": "Mainboard",
+      "exchange": "BSE / NSE",
       "allotmentDate": {
         "original": "2026-09-28T18:30:00.000Z",
         "adjusted": "2026-09-28T18:30:00.000Z",
@@ -2733,10 +2733,10 @@
         "isAdjusted": false
       },
       "preIPO": {
-        "expiryDate": "2027-09-28T18:30:00.000Z",
-        "originalDate": "2027-09-28T18:30:00.000Z",
+        "expiryDate": "2027-03-28T18:30:00.000Z",
+        "originalDate": "2027-03-28T18:30:00.000Z",
         "isAdjusted": false,
-        "type": "SME Pre-IPO (1 Yr)"
+        "type": "Mainboard Pre-IPO (6 Mo)"
       },
       "anchorInvestors": [
         {
@@ -3055,7 +3055,7 @@
           "lockInExpiry90": "2026-12-23"
         }
       ],
-      "anchorShares": 168899658,
+      "anchorShares": 96324729,
       "totalShares": 321082435,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/moneyview_ltd_mainboard_rhp_1789967000.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/moneyview_ltd_mainboard_capital_structure_1789970228.pdf",
@@ -3207,7 +3207,17 @@
       ],
       "preIpoChecked": true,
       "anchorDate": "September 23, 2026",
-      "preIpoWaca": 10
+      "preIpoWaca": 10,
+      "issueSize": "\u20b91,091.68 Cr",
+      "issueSizeCr": 1091.68,
+      "freshIssueCr": 750.0,
+      "ofsCr": 341.68,
+      "freshShares": 220588235,
+      "ofsShares": 100494200,
+      "totalIssueShares": 321082435,
+      "preIpoShares": 1539643033,
+      "postIpoShares": 1760231268,
+      "anchorAmountCr": 327.5
     },
     {
       "companyName": "Roopa Screen Ltd.",
