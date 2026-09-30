@@ -5265,33 +5265,33 @@
       "anchorInvestors": [
         {
           "name": "Viney Growth Fund",
-          "shares": 0,
+          "shares": 558400,
           "amount": "\u20b93.96 Cr",
-          "percentage": "",
-          "bidPrice": "71",
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
+          "percentage": "38.82%",
+          "bidPrice": 71,
+          "lockInExpiry": "2026-11-04",
+          "lockInExpiry90": "2027-01-03"
         },
         {
           "name": "Innovative Vision Fund",
-          "shares": 0,
+          "shares": 400000,
           "amount": "\u20b92.84 Cr",
-          "percentage": "",
-          "bidPrice": "71",
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
+          "percentage": "27.81%",
+          "bidPrice": 71,
+          "lockInExpiry": "2026-11-04",
+          "lockInExpiry90": "2027-01-03"
         },
         {
           "name": "Tiger Strategies Fund \u2013 I",
-          "shares": 0,
+          "shares": 480000,
           "amount": "\u20b93.41 Cr",
-          "percentage": "",
-          "bidPrice": "71",
-          "lockInExpiry": "2026-10-24",
-          "lockInExpiry90": "2026-12-23"
+          "percentage": "33.37%",
+          "bidPrice": 71,
+          "lockInExpiry": "2026-11-04",
+          "lockInExpiry90": "2027-01-03"
         }
       ],
-      "anchorShares": 0,
+      "anchorShares": 1438400,
       "totalShares": 5060800,
       "rhpUrl": "https://assets.ipopremium.in/images/ipo/acme_universal_safezone_9_ltd_bse_sme_rhp_1790253784.pdf",
       "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/acme_universal_safezone_9_ltd_bse_sme_capital_structure_1790253786.pdf",

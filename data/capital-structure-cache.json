@@ -9991,7 +9991,37 @@
     "openDate": "2026-09-27T18:30:00.000Z",
     "closeDate": "2026-09-29T18:30:00.000Z",
     "allotmentDate": "2026-09-30T18:30:00.000Z",
-    "listingDate": "2026-10-05T18:30:00.000Z"
+    "listingDate": "2026-10-05T18:30:00.000Z",
+    "anchorShares": 1438400,
+    "anchorInvestors": [
+      {
+        "name": "Viney Growth Fund",
+        "shares": 558400,
+        "amount": "\u20b93.96 Cr",
+        "percentage": "38.82%",
+        "bidPrice": 71,
+        "lockInExpiry": "2026-11-04",
+        "lockInExpiry90": "2027-01-03"
+      },
+      {
+        "name": "Innovative Vision Fund",
+        "shares": 400000,
+        "amount": "\u20b92.84 Cr",
+        "percentage": "27.81%",
+        "bidPrice": 71,
+        "lockInExpiry": "2026-11-04",
+        "lockInExpiry90": "2027-01-03"
+      },
+      {
+        "name": "Tiger Strategies Fund \u2013 I",
+        "shares": 480000,
+        "amount": "\u20b93.41 Cr",
+        "percentage": "33.37%",
+        "bidPrice": 71,
+        "lockInExpiry": "2026-11-04",
+        "lockInExpiry90": "2027-01-03"
+      }
+    ]
   },
   "shahinvestorshome": {
     "companyName": "Shah Investor's Home Ltd.",
