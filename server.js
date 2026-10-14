@@ -727,7 +727,7 @@ async function probeUpcomingData() {
             }
 
             // 3. Probe Pre-IPO Data
-            const isPreIpoMissing = !company.preIpoInvestors || company.preIpoInvestors.length === 0;
+            const isPreIpoMissing = (!company.preIpoInvestors || company.preIpoInvestors.length === 0) && !company.preIpoChecked;
             if (isPreIpoMissing) {
                 try {
                     const targetDoc = (company.capitalStructureUrl && company.capitalStructureUrl.toLowerCase().includes('capital_structure')) 

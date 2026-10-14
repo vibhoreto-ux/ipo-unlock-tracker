@@ -661,24 +661,29 @@ function pollForNLP(companyName, attempts = 0) {
 /**
  * Render a rich, styled table of pre-IPO investors with buy prices, dates, shares, and discount % vs IPO price.
  */
-function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
-    if (!investors || investors.length === 0) return '<span class="empty">0 Pre-IPOs</span>';
+function getValidPreIpoInvestors(investors) {
+    if (!Array.isArray(investors) || investors.length === 0) return [];
 
-    const junkRegex = /^(this offer|any applicant,??|any investor|foreign direct investment|mutual funds|alternate investment funds|schemes of arrangement|gift of|incorporat subscriber|reduction of|private limited|trading private|holdings private|advisory private|up private limited|amount to amount estimated|options vested|options exercised|name of|securities,?\s*allotted|capital existing in|capital build-up|padam were|khor ten chun aalam|funds?|category ii|chairman and|who is|pcc -|holds)$/i;
+    const junkRegex = /^(this offer|any applicant,??|any investor|foreign direct investment|mutual funds|alternate investment funds|schemes of arrangement|gift of|incorporat subscriber|reduction of|private limited|trading private|holdings private|advisory private|up private limited|amount to amount estimated|options vested|options exercised|name of|securities,?\s*allotted|capital existing in|capital build-up|padam were|khor ten chun aalam|funds?|category ii|chairman and|who is|pcc -|holds|upto|up to|fresh issue.*|bonus issue.*|offer for sale.*|offer of.*|divided into|reference no\.?|comprising.*|net issue.*|bonus allotment.*|the issue.*|into|nominal value|aggregate nominal.*)$/i;
 
-    // Strict filter: Exclude Promoters and text artifacts (Pre-IPO tab is only for Non-Promoters)
-    const nonPromoters = investors.filter(inv => {
+    return investors.filter(inv => {
         const name = typeof inv === 'string' ? inv : (inv.name || '');
         const cat = typeof inv === 'object' ? (inv.category || inv.type || '') : '';
         const date = typeof inv === 'object' ? (inv.date || '') : '';
         const text = `${name} ${cat} ${date}`.toLowerCase();
-        if (/\bpromoter\b/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee/i.test(cat)) return false;
-        if (/\bpromoters\b/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee/i.test(cat)) return false;
+        if (/\bpromoter\b/i.test(cat) && !/non[- ]promoter/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee|public|investor/i.test(cat)) return false;
+        if (/\bpromoters\b/i.test(cat) && !/non[- ]promoter/i.test(cat) && !/selling shareholder|bank|institution|placement|transferee|public|investor/i.test(cat)) return false;
         if (/\bfounding equity\b/i.test(cat)) return false;
         if (junkRegex.test(name.trim())) return false;
         if (/securities,?\s*allotted/i.test(name) || /capital existing in/i.test(name) || /capital build-up/i.test(name)) return false;
         return name.trim().length >= 3;
     });
+}
+
+function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
+    if (!investors || investors.length === 0) return '<span class="empty">0 Pre-IPOs</span>';
+
+    const nonPromoters = getValidPreIpoInvestors(investors);
 
     if (nonPromoters.length === 0) {
         return '<span class="empty" style="font-size:11px; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (100% Promoter / Group held prior to IPO).</span>';
@@ -1678,6 +1683,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
     if (navTrackerBtn) {
         navTrackerBtn.addEventListener('click', () => {
+            if (window.location.hash !== '#tracker') history.replaceState(null, '', '#tracker');
             switchView(navTrackerBtn, viewTracker);
             renderTable(); // ensure main table renders
         });
@@ -1685,6 +1691,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
     if (navUpcomingBtn) {
         navUpcomingBtn.addEventListener('click', () => {
+            if (window.location.hash !== '#upcoming') history.replaceState(null, '', '#upcoming');
             switchView(navUpcomingBtn, viewUpcomingIPOs);
             // If data not yet loaded, fetch silently (no Tracker UI changes) then render
             if (allCompanies.length === 0) {
@@ -1697,6 +1704,21 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             }
         });
     }
+
+    // Hash routing support for direct links (e.g. #upcoming, #circuit)
+    function handleHashRoute() {
+        const hash = window.location.hash.toLowerCase();
+        if (hash === '#upcoming') {
+            if (navUpcomingBtn) navUpcomingBtn.click();
+        } else if (hash === '#circuit' || hash === '#circuit-filter') {
+            if (navCircuitBtn) navCircuitBtn.click();
+        } else if (hash === '#tracker') {
+            if (navTrackerBtn) navTrackerBtn.click();
+        }
+    }
+    window.addEventListener('hashchange', handleHashRoute);
+    // Check initial hash route after DOM initialization
+    setTimeout(handleHashRoute, 0);
 
     // Wire Upcoming/Open checkbox filters
     const filterUpcomingBox = document.getElementById('filterUpcoming');
@@ -1770,6 +1792,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
     if (navCircuitBtn) {
         navCircuitBtn.addEventListener('click', () => {
+            if (window.location.hash !== '#circuit') history.replaceState(null, '', '#circuit');
             switchView(navCircuitBtn, viewCircuitFilter);
             loadCircuitFilterData();
         });
@@ -1957,6 +1980,10 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 fillClass += ' upcoming';
                 badgeClass = 'circuit-badge circuit-badge-upcoming';
                 badgeText = 'Upcoming';
+            } else if (item.isAbove250Cr) {
+                fillClass += ' imminent';
+                badgeClass = 'circuit-badge circuit-badge-imminent';
+                badgeText = `20% Active (Day ${item.daysCompleted}/10)`;
             } else if (item.isDay10Complete || item.daysRemaining === 0) {
                 fillClass += ' imminent';
                 badgeClass = 'circuit-badge circuit-badge-imminent';
@@ -1984,23 +2011,37 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             const day10Html = `
                 <div style="display:flex; flex-direction:column; gap:2px;">
                     <span style="font-weight:600; color:var(--text);">${day10Str}</span>
-                    <span style="font-size:10.5px; color:var(--text-muted);">Day 10 Conclusion</span>
+                    <span style="font-size:10.5px; color:var(--text-muted);">${item.isAbove250Cr ? 'T2T Exemption Check' : 'Day 10 Conclusion'}</span>
                 </div>
             `;
 
             // 20% Circuit Effective Date (Day 11 - Next Working Day)
             const circuit20Str = formatDateWithDay(item.circuit20Date);
             const isImminent = item.daysRemaining <= 3 && !isUpcoming;
-            const circuit20Html = `
-                <div class="circuit-effective-pill">
-                    <span class="circuit-flip-date" style="${isImminent ? 'color:#047857; font-weight:800;' : ''}">
-                        ${isImminent ? '🔥 ' : '🎯 '}${circuit20Str}
-                    </span>
-                    <span class="circuit-flip-note" style="${isImminent ? 'color:#059669; font-weight:700;' : ''}">
-                        ${isImminent ? '⚡ Relaxes to 20% Limit!' : 'Next Working Day (20% Limit)'}
-                    </span>
-                </div>
-            `;
+            let circuit20Html = '';
+            if (item.isAbove250Cr) {
+                circuit20Html = `
+                    <div class="circuit-effective-pill" style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.3); border-radius:8px; padding:4px 8px;">
+                        <span class="circuit-flip-date" style="color:#047857; font-weight:800; font-size:11.5px;">
+                            ⚡ 20% Active from Day 1
+                        </span>
+                        <span class="circuit-flip-note" style="color:#059669; font-weight:600; font-size:10px;">
+                            Issue ${item.issueSizeCr ? `₹${item.issueSizeCr} Cr ` : ''}(> ₹250 Cr • Group B / EQ)
+                        </span>
+                    </div>
+                `;
+            } else {
+                circuit20Html = `
+                    <div class="circuit-effective-pill">
+                        <span class="circuit-flip-date" style="${isImminent ? 'color:#047857; font-weight:800;' : ''}">
+                            ${isImminent ? '🔥 ' : '🎯 '}${circuit20Str}
+                        </span>
+                        <span class="circuit-flip-note" style="${isImminent ? 'color:#059669; font-weight:700;' : ''}">
+                            ${isImminent ? '⚡ Relaxes to 20% Limit!' : 'Next Working Day (20% Limit)'}
+                        </span>
+                    </div>
+                `;
+            }
 
             // Issue Price / CMP Cell
             let priceHtml = '';
@@ -2049,20 +2090,19 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        // Get all IPOs that haven't listed yet (listingDate >= today, or allotmentDate >= today, or no date)
+        // Get all IPOs that haven't listed yet (or listed today within 24h grace window)
+        const graceWindowMs = 24 * 60 * 60 * 1000;
         const allUpcomingIPOs = allCompanies.filter(c => {
             if (c.companyName && c.companyName.toLowerCase().includes('invit')) return false;
             const lDateStr = c.listingDate || null;
             const aDateStr = c.allotmentDate ? (c.allotmentDate.original || c.allotmentDate.adjusted) : null;
             if (lDateStr) {
                 const lDate = new Date(lDateStr);
-                lDate.setHours(0, 0, 0, 0);
-                return lDate >= today;
+                return (lDate.getTime() + graceWindowMs) >= today.getTime();
             }
             if (aDateStr) {
                 const aDate = new Date(aDateStr);
-                aDate.setHours(0, 0, 0, 0);
-                return aDate >= today;
+                return (aDate.getTime() + graceWindowMs) >= today.getTime();
             }
             return true;
         });
@@ -2238,7 +2278,8 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
             // Pre-IPO HTML: Special emphasis and open by default for Fixed Price
             let preIpoHtml = '';
-            const hasPreIpo = ipo.preIpoInvestors && ipo.preIpoInvestors.length > 0;
+            const validPreIpos = getValidPreIpoInvestors(ipo.preIpoInvestors);
+            const hasPreIpo = validPreIpos.length > 0;
             let docButtons = [];
             if (ipo.capitalStructureUrl && ipo.capitalStructureUrl.toLowerCase().includes('capital_structure')) {
                 docButtons.push(`<a href="${ipo.capitalStructureUrl}" target="_blank" class="doc-btn doc-btn-cap" style="font-size:10.5px; padding:2px 7px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-weight:600;"><i class="ph ph-file-text"></i> Capital Structure (PDF)</a>`);
@@ -2253,7 +2294,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
 
             if (isFixedPrice) {
                 const preIpoTable = hasPreIpo 
-                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca)}</div>`
+                    ? `<div class="pre-ipo-table-wrapper">${renderPreIpoTable(validPreIpos, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca)}</div>`
                     : `<span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">🛡️ 100% Promoter & Early Associate Held (0 external Pre-IPO round — zero pre-IPO selling overhang).</span>`;
 
                 preIpoHtml = `
@@ -2270,7 +2311,7 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                         </div>
                         <details open>
                             <summary style="font-weight:700; color:#b45309;">
-                                ${hasPreIpo ? `🔥 Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})` : `Pre-IPO Investors (0)`}
+                                ${hasPreIpo ? `🔥 Pre-IPO Investors & Shareholders (${validPreIpos.length})` : `Pre-IPO Investors (0)`}
                             </summary>
                             <div class="body">${preIpoTable}</div>
                         </details>
@@ -2278,8 +2319,8 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 `;
             } else {
                 if (hasPreIpo) {
-                    const tableHtml = renderPreIpoTable(ipo.preIpoInvestors, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca);
-                    preIpoHtml = `<details open><summary style="display:flex; justify-content:space-between; align-items:center; cursor:pointer;"><span style="font-weight:700; color:#b45309;">🔥 Pre-IPO Investors & Shareholders (${ipo.preIpoInvestors.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
+                    const tableHtml = renderPreIpoTable(validPreIpos, ipo.issuePrice, false, ipo.preIpoWaca || ipo.waca);
+                    preIpoHtml = `<details open><summary style="display:flex; justify-content:space-between; align-items:center; cursor:pointer;"><span style="font-weight:700; color:#b45309;">🔥 Pre-IPO Investors & Shareholders (${validPreIpos.length})</span> ${capDocBtn}</summary><div class="body"><div class="pre-ipo-table-wrapper">${tableHtml}</div></div></details>`;
                 } else {
                     preIpoHtml = `<details><summary style="cursor:pointer;">Pre-IPO Investors (0)</summary><div class="body"><span class="empty" style="font-size:0.85rem; color:var(--text-secondary); font-style:italic;">0 Non-Promoter Pre-IPO Investors (No external Pre-IPO round prior to IPO)</span></div></details>`;
                 }

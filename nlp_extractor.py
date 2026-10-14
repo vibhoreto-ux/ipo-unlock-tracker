@@ -317,13 +317,17 @@ def extract_preipo_names(pdf_bytes, company_name=None):
                 'tripura', 'arunachal', 'sikkim', 'goa', 'himachal', 'uttarakhand',
                 'jammu', 'kashmir', 'chandigarh', 'ladakh', 'delhi',
                 # Countries
-                'ireland', 'arabia', 'arabia', 'kingdom', 'japan', 'china', 'singapore',
+                'ireland', 'arabia', 'kingdom', 'japan', 'china', 'singapore',
                 'mauritius', 'cayman', 'islands',
-                # Generic legal / acquisition phrases
+                # Generic legal / acquisition / prospectus header phrases
                 'acquisition', 'land', 'transfer', 'consideration', 'allotment',
-                'diu', 'daman', 'congress', 'expo', 'up to',
+                'diu', 'daman', 'congress', 'expo', 'upto', 'fresh', 'bonus', 'offer',
+                'comprising', 'divided', 'reference', 'authorised', 'authorized', 'cumulative',
+                'subscribed', 'paid-up', 'nominal', 'ratio', 'aggregate', 'aggregating'
             ]
-            if any(kw in low.split() for kw in bad_kws): return False
+            words_in_name = low.split()
+            if any(kw in words_in_name for kw in bad_kws): return False
+            if any(phrase in low for phrase in ['up to', 'bonus issue', 'fresh issue', 'offer for sale', 'offer of', 'divided into', 'the issue', 'net issue']): return False
             
             words = [w for w in n.split() if w.strip()]
             cap_words = sum(1 for w in words if w and (w.istitle() or w.isupper() or w[0].isupper()))

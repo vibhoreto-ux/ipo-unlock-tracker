@@ -262,8 +262,8 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
 
     for (const c of companiesList) {
         if (!c) continue;
-        // Prioritize allotmentDate (which holds the verified listing date on the Tracker tab)
-        const rawDate = (c.allotmentDate && (c.allotmentDate.original || c.allotmentDate.adjusted || c.allotmentDate)) || c.listingDate;
+        // Prioritize actual listingDate if available, then fallback to allotmentDate
+        const rawDate = c.listingDate || (c.allotmentDate && (c.allotmentDate.original || c.allotmentDate.adjusted || c.allotmentDate));
         if (!rawDate) continue;
 
         const lDateClean = parseDateClean(rawDate);
@@ -292,8 +292,12 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
         const isTodayDay10 = (daysCompleted === 10 && todayStr === tenthTradingDayStr);
         const isDay10Complete = daysCompleted >= 10;
 
+        const issueSizeCr = (c.totalShares && c.issuePrice) ? Math.round(((c.totalShares * c.issuePrice) / 10000000) * 10) / 10 : null;
+        const isAbove250Cr = issueSizeCr !== null && issueSizeCr > 250 && (c.issueType === 'Mainboard');
+
         let statusText = `Day ${daysCompleted} of 10`;
-        if (isUpcomingListing) statusText = 'Upcoming Listing';
+        if (isAbove250Cr) statusText = `20% Active (> ₹250 Cr) • Day ${daysCompleted}/10`;
+        else if (isUpcomingListing) statusText = 'Upcoming Listing';
         else if (isTodayCircuitFlip) statusText = '⚡ 20% Circuit Effective Today';
         else if (isDay10Complete) statusText = '⚡ Day 10 Complete';
         else if (isTodayDay10) statusText = '🔥 Today is Day 10';
@@ -311,6 +315,9 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
             isTodayDay10,
             isDay10Complete,
             isTodayCircuitFlip,
+            issueSizeCr,
+            isAbove250Cr,
+            currentCircuitBand: isAbove250Cr ? '20%' : (isDay10Complete ? '20%' : '5%'),
             status: statusText,
             progressPct: Math.min(100, Math.round((daysCompleted / 10) * 100)),
             issuePrice: c.issuePrice || null,
