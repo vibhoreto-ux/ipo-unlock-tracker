@@ -1980,10 +1980,6 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
                 fillClass += ' upcoming';
                 badgeClass = 'circuit-badge circuit-badge-upcoming';
                 badgeText = 'Upcoming';
-            } else if (item.isAbove250Cr) {
-                fillClass += ' imminent';
-                badgeClass = 'circuit-badge circuit-badge-imminent';
-                badgeText = `20% Active (Day ${item.daysCompleted}/10)`;
             } else if (item.isDay10Complete || item.daysRemaining === 0) {
                 fillClass += ' imminent';
                 badgeClass = 'circuit-badge circuit-badge-imminent';
@@ -2011,37 +2007,23 @@ function renderPreIpoTable(investors, ipoPrice, isModal, companyWaca) {
             const day10Html = `
                 <div style="display:flex; flex-direction:column; gap:2px;">
                     <span style="font-weight:600; color:var(--text);">${day10Str}</span>
-                    <span style="font-size:10.5px; color:var(--text-muted);">${item.isAbove250Cr ? 'T2T Exemption Check' : 'Day 10 Conclusion'}</span>
+                    <span style="font-size:10.5px; color:var(--text-muted);">Day 10 Conclusion</span>
                 </div>
             `;
 
             // 20% Circuit Effective Date (Day 11 - Next Working Day)
             const circuit20Str = formatDateWithDay(item.circuit20Date);
             const isImminent = item.daysRemaining <= 3 && !isUpcoming;
-            let circuit20Html = '';
-            if (item.isAbove250Cr) {
-                circuit20Html = `
-                    <div class="circuit-effective-pill" style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.3); border-radius:8px; padding:4px 8px;">
-                        <span class="circuit-flip-date" style="color:#047857; font-weight:800; font-size:11.5px;">
-                            ⚡ 20% Active from Day 1
-                        </span>
-                        <span class="circuit-flip-note" style="color:#059669; font-weight:600; font-size:10px;">
-                            Issue ${item.issueSizeCr ? `₹${item.issueSizeCr} Cr ` : ''}(> ₹250 Cr • Group B / EQ)
-                        </span>
-                    </div>
-                `;
-            } else {
-                circuit20Html = `
-                    <div class="circuit-effective-pill">
-                        <span class="circuit-flip-date" style="${isImminent ? 'color:#047857; font-weight:800;' : ''}">
-                            ${isImminent ? '🔥 ' : '🎯 '}${circuit20Str}
-                        </span>
-                        <span class="circuit-flip-note" style="${isImminent ? 'color:#059669; font-weight:700;' : ''}">
-                            ${isImminent ? '⚡ Relaxes to 20% Limit!' : 'Next Working Day (20% Limit)'}
-                        </span>
-                    </div>
-                `;
-            }
+            const circuit20Html = `
+                <div class="circuit-effective-pill">
+                    <span class="circuit-flip-date" style="${isImminent ? 'color:#047857; font-weight:800;' : ''}">
+                        ${isImminent ? '🔥 ' : '🎯 '}${circuit20Str}
+                    </span>
+                    <span class="circuit-flip-note" style="${isImminent ? 'color:#059669; font-weight:700;' : ''}">
+                        ${isImminent ? '⚡ Relaxes to 20% Limit!' : 'Next Working Day (20% Limit)'}
+                    </span>
+                </div>
+            `;
 
             // Issue Price / CMP Cell
             let priceHtml = '';

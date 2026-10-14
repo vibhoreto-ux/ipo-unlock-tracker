@@ -923,38 +923,6 @@
       "preIpoChecked": true
     },
     {
-      "companyName": "Shah Investor&#039;s Home Ltd.",
-      "issueType": "Mainboard",
-      "exchange": "BSE, NSE",
-      "allotmentDate": {
-        "original": "2026-09-30T18:30:00.000Z",
-        "adjusted": "2026-09-30T18:30:00.000Z",
-        "isAdjusted": false
-      },
-      "chittorgarhUrl": null,
-      "issuePrice": 167,
-      "priceBand": "₹159–167",
-      "lotSize": 85,
-      "openDate": "2026-09-27T18:30:00.000Z",
-      "closeDate": "2026-09-29T18:30:00.000Z",
-      "listingDate": "2026-10-05T18:30:00.000Z",
-      "anchor30": null,
-      "anchor90": null,
-      "preIPO": null,
-      "anchorInvestors": [],
-      "anchorShares": 0,
-      "totalShares": 5399200,
-      "rhpUrl": "https://assets.ipopremium.in/images/ipo/shah_investors_home_ltd_mainboard_rhp_1790147129.pdf",
-      "capitalStructureUrl": "https://assets.ipopremium.in/images/ipo/shah_investors_home_ltd_mainboard_capital_structure_1790147452.pdf",
-      "anchorUrl": "https://assets.ipopremium.in/images/ipo/shah_investors_home_ltd_mainboard_anchor_1790342608.pdf",
-      "preIpoInvestors": [
-        "Rehaan Utpal",
-        "Trupti Utpal",
-        "Aashana Utpal"
-      ],
-      "preIpoChecked": true
-    },
-    {
       "companyName": "Jio Platforms Ltd.",
       "issueType": "Mainboard",
       "exchange": "BSE, NSE",
@@ -2730,6 +2698,18 @@
           "category": "Pre-IPO / Promoter Allottee",
           "discountPct": 94.01,
           "discount": 94.01
+        },
+        {
+          "name": "Rehaan Utpal",
+          "date": "Pre-IPO"
+        },
+        {
+          "name": "Trupti Utpal",
+          "date": "Pre-IPO"
+        },
+        {
+          "name": "Aashana Utpal",
+          "date": "Pre-IPO"
         }
       ],
       "preIpoChecked": true,

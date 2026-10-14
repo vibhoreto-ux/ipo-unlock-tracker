@@ -293,11 +293,18 @@ function getCircuitFilterIpos(companiesList = [], asOfDate = new Date()) {
         const isDay10Complete = daysCompleted >= 10;
 
         const issueSizeCr = (c.totalShares && c.issuePrice) ? Math.round(((c.totalShares * c.issuePrice) / 10000000) * 10) / 10 : null;
-        const isAbove250Cr = issueSizeCr !== null && issueSizeCr > 250 && (c.issueType === 'Mainboard');
+        const isAbove250Cr = (issueSizeCr !== null && issueSizeCr > 250) || (c.issueSizeCr && c.issueSizeCr > 250);
+
+        // SEBI 10-Day 5% T2T Exemption (CIR/MRD/DP/20/2012):
+        // Mainboard IPOs with issue size > ₹250 Cr list directly under Normal Rolling Settlement (BSE Group B / NSE EQ series)
+        // with the standard 20% circuit limit active from Day 1. They are NOT subject to the 10-day 5% T2T rule.
+        // Therefore, exclude all Mainboard IPOs with issue size > ₹250 Cr and unpriced drafts (!c.issuePrice).
+        if (c.issueType === 'Mainboard') {
+            if (isAbove250Cr || !c.issuePrice) continue;
+        }
 
         let statusText = `Day ${daysCompleted} of 10`;
-        if (isAbove250Cr) statusText = `20% Active (> ₹250 Cr) • Day ${daysCompleted}/10`;
-        else if (isUpcomingListing) statusText = 'Upcoming Listing';
+        if (isUpcomingListing) statusText = 'Upcoming Listing';
         else if (isTodayCircuitFlip) statusText = '⚡ 20% Circuit Effective Today';
         else if (isDay10Complete) statusText = '⚡ Day 10 Complete';
         else if (isTodayDay10) statusText = '🔥 Today is Day 10';
